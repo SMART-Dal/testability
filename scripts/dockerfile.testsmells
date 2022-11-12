@@ -1,0 +1,36 @@
+FROM ubuntu:22.04
+
+ARG personal_access_token
+ARG license_key
+
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+
+# Install depen
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y  git software-properties-common default-jdk-headless maven ant gradle python3 python3-dev gcc g++ wget
+
+WORKDIR /
+
+# Get repo_download.py
+COPY ./scripts/repos.csv ./repos.csv
+COPY ./scripts/repo_download.py ./repo_download.py
+COPY ./scripts/run.sh ./run.sh
+
+# Clone all repos in the container
+RUN mkdir repos
+RUN python3 repo_download.py --token ${personal_access_token}
+
+# Get testabilityDetector
+COPY ./scripts/testabilityDetector_runner.py ./testabilityDetector_runner.py
+COPY ./testabilityDetector ./testabilityDetector
+
+# Activate tool
+RUN java -jar /testabilityDetector/TestabilityDetector.jar -r ${license_key}
+
+# Collected data
+RUN mkdir /testabilityDetector_out
+RUN python3 testabilityDetector_runner.py
+
+# Generate data
+RUN bash run.sh

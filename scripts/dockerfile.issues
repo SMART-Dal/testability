@@ -1,0 +1,57 @@
+FROM ubuntu:22.04
+
+ARG personal_access_token
+ARG github_account
+ARG github_repo
+ARG label
+ARG license_key
+ARG branch
+
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+
+# Install deps
+RUN apt-get update && \
+  apt-get upgrade -y && \  
+  apt-get install -y default-jdk-headless maven ant gradle git software-properties-common python3 python3-dev gcc g++ python3-pip
+
+# Install PIP deps
+RUN pip install github3.py
+RUN pip install pydriller
+
+# Get required files
+COPY ./scripts/getIssues.py ./getIssues.py
+COPY ./scripts/testabilityDetector_runner.py ./testabilityDetector_runner.py
+COPY ./testabilityDetector ./testabilityDetector
+COPY ./scripts/run_issues.sh ./run_issues.sh
+COPY ./scripts/rq3 ./rq3
+
+# Change repo path for testabilityDetector_runner.py
+RUN sed -i "s/REPO_SOURCE_PATH\ =\ '\/repos'/REPO_SOURCE_PATH\ =\ '\/repos_for_bugs'/"  testabilityDetector_runner.py
+
+WORKDIR /
+
+# Add license
+RUN java -jar /testabilityDetector/TestabilityDetector.jar -r ${license_key}
+
+RUN mkdir /commits_and_bugs
+
+# Prepare directories and the corresponding project and clone it locally
+RUN mkdir /repos && \
+  cd repos && \
+  git clone https://github.com/${github_account}/${github_repo}.git
+
+RUN mkdir out temp
+
+WORKDIR /rq3
+
+# Set repo for analysis
+RUN echo ${github_repo} > rq3_repos.csv
+
+# Get commits
+RUN python3 identify_commits.py -b "${branch}"
+RUN awk -F"," '{print $2}' /out/${github_repo}/selected_commits.csv | sort | uniq > ../rq3_commits.csv
+
+WORKDIR /
+
+# Run whole script
+RUN bash run_issues.sh ${personal_access_token} ${github_repo} ${github_account} "${label}"

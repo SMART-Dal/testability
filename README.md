@@ -7,16 +7,18 @@ We conduct a large-scale empirical study on 1,115 Java repositories containing a
 
 The corresponding repository has the following directories:
 
-    * data (where one can find all of our data)
-    * manual_validation (all the data regarding the manual validation of our tool)
-    * scripts (all the code needed to replicate our experiment)
-    * survey (all the data regarding our survey study)
+* `data` (where one can find all of our data)
+* `manual_validation` (all the data regarding the manual validation of our tool)
+* `scripts` (all the code needed to replicate our experiment)
+* `survey` (all the data regarding our survey study)
 
 
 ## Download and analyze repositories
-- `scripts\repos.csv` contains selected repositories. `
+-  Run `repo_download.py` to download the selected repositories in `repos.csv`.
+- Analyze all the downloaded repositories using [DesigniteJava](https://www.designite-tools.com/designitejava/) (Enterprise edition). First, download the tool from its website and request a free academic license. After the license is registered, run `scripts\designite_runner.py` script.
+
 ## Collecting issues marked as bugs for RQ3 
-The `dockerfile.issues` creates an environment to run the DesigniteJava on one of the projects (selected based on high number of commits), 
+The `scripts\dockerfile.issues` creates an environment to run the DesigniteJava on one of the projects (selected based on high number of commits), 
 and collect data regarding testability smells and number of reported bug issues for the corresponding project.
 Execute as follows:
 
