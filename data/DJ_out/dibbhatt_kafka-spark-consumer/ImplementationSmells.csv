@@ -1,0 +1,58 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+dibbhatt_kafka-spark-consumer,consumer.kafka,KafkaConfig,KafkaConfig,Complex Method,Cyclomatic complexity of the method is 17,66
+dibbhatt_kafka-spark-consumer,consumer.kafka,Utils,setFetchRate,Long Statement,The length of the statement "String path=config._stateConf.get(Config.ZOOKEEPER_CONSUMER_PATH) + "/" + config._stateConf.get(Config.KAFKA_CONSUMER_ID)+ "/newrate";" is 134.,50
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkCoordinator,ZkCoordinator,Long Parameter List,The method has 7 parameters. ,58
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkCoordinator,ZkCoordinator,Magic Number,The method contains a magic number: 1000,58
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkCoordinator,refresh,Long Statement,The length of the statement "PartitionManager man=new PartitionManager(_connections`new ZkState((String)_config._stateConf.get(Config.ZOOKEEPER_CONSUMER_CONNECTION))`_kafkaconfig`id`_receiver`_restart`_messageHandler);" is 189.,88
+dibbhatt_kafka-spark-consumer,consumer.kafka,ReceiverLauncher,launch,Long Parameter List,The method has 5 parameters. ,47
+dibbhatt_kafka-spark-consumer,consumer.kafka,ReceiverLauncher,launch,Long Parameter List,The method has 5 parameters. ,60
+dibbhatt_kafka-spark-consumer,consumer.kafka,ReceiverLauncher,createStream,Long Parameter List,The method has 5 parameters. ,71
+dibbhatt_kafka-spark-consumer,consumer.kafka,ReceiverLauncher,assignReceiversToPartitions,Long Parameter List,The method has 7 parameters. ,125
+dibbhatt_kafka-spark-consumer,consumer.kafka,KafkaMessageHandler,handle,Long Parameter List,The method has 5 parameters. ,30
+dibbhatt_kafka-spark-consumer,consumer.kafka,ProcessedOffsetManager,persists,Long Statement,The length of the statement "JavaDStream<Tuple2<String`Iterable<Long>>> jpartitonOffset=new JavaDStream<Tuple2<String`Iterable<Long>>>(partitonOffset`tuple2ClassTag);" is 137.,80
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDController,calculateRate,Long Parameter List,The method has 6 parameters. ,44
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDController,calculateRate,Long Statement,The length of the statement "double revisedRate=(fixedRate - proportional * proportationalError - integral * historicalError - derivative * differentialError);" is 130.,44
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDController,calculateRate,Magic Number,The method contains a magic number: 1000,44
+dibbhatt_kafka-spark-consumer,consumer.kafka,Broker,Broker,Magic Number,The method contains a magic number: 9092,42
+dibbhatt_kafka-spark-consumer,consumer.kafka,Broker,fromString,Magic Number,The method contains a magic number: 2,69
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,newCurator,Magic Number,The method contains a magic number: 120000,47
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,newCurator,Magic Number,The method contains a magic number: 120000,47
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,newCurator,Magic Number,The method contains a magic number: 5,47
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,newCurator,Magic Number,The method contains a magic number: 1000,47
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,ZkState,Magic Number,The method contains a magic number: 120000,78
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,ZkState,Magic Number,The method contains a magic number: 120000,78
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,ZkState,Magic Number,The method contains a magic number: 5,78
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkState,ZkState,Magic Number,The method contains a magic number: 1000,78
+dibbhatt_kafka-spark-consumer,consumer.kafka,ReceiverStreamListener,ratePath,Long Statement,The length of the statement "return config._stateConf.get(Config.ZOOKEEPER_CONSUMER_PATH) + "/" + config._stateConf.get(Config.KAFKA_CONSUMER_ID)+ "/newrate";" is 129.,168
+dibbhatt_kafka-spark-consumer,consumer.kafka,ZkBrokerReader,ZkBrokerReader,Magic Number,The method contains a magic number: 1000L,43
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,PartitionManager,Long Parameter List,The method has 7 parameters. ,63
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,setZkCoordinator,Long Statement,The length of the statement "Map<Object`Object> data=(Map<Object`Object>)ImmutableMap.builder().put("version"`1).put("subscription"`ImmutableMap.of(_topic`1)).put("pattern"`"static").put("timestamp"`Long.toString(System.currentTimeMillis())).build();" is 221.,114
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,fill,Complex Method,Cyclomatic complexity of the method is 11,186
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,fill,Long Statement,The length of the statement "LOG.debug("PartitionManager sucessfully written offset {} for partition {} to BM"`_lastEnquedOffset`_partition.partition);" is 122.,186
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,fetchMessages,Long Statement,The length of the statement "LOG.warn("Got fetch request with offset out of range: {} for Topic {} partition {}"`_emittedToOffset`topic`_partition.partition);" is 129.,255
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,ratePath,Long Statement,The length of the statement "return _kafkaconfig._stateConf.get(Config.ZOOKEEPER_CONSUMER_PATH) + "/" + _kafkaconfig._stateConf.get(Config.KAFKA_CONSUMER_ID)+ "/newrate";" is 141.,304
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,zkPath,Long Statement,The length of the statement "return _stateConf.get(Config.ZOOKEEPER_CONSUMER_PATH) + "/" + _stateConf.get(Config.KAFKA_CONSUMER_ID)+ "/"+ type+ "/"+ _stateConf.get(Config.KAFKA_TOPIC)+ "/"+ _partition.getId();" is 180.,309
+dibbhatt_kafka-spark-consumer,consumer.kafka,PartitionManager,zkIdsPath,Long Statement,The length of the statement "return _stateConf.get(Config.ZOOKEEPER_CONSUMER_PATH) + "/" + _stateConf.get(Config.KAFKA_CONSUMER_ID)+ "/"+ type+ "/"+ _stateConf.get(Config.KAFKA_TOPIC)+ "/";" is 160.,315
+dibbhatt_kafka-spark-consumer,consumer.kafka,KafkaUtils,fetchMessages,Complex Conditional,The conditional expression e instanceof KafkaException || e instanceof ConnectException || e instanceof SocketTimeoutException|| e instanceof IOException|| e instanceof UnresolvedAddressException is complex.,66
+dibbhatt_kafka-spark-consumer,consumer.kafka,KafkaUtils,fetchMessages,Long Statement,The length of the statement "if (e instanceof KafkaException || e instanceof ConnectException || e instanceof SocketTimeoutException|| e instanceof IOException|| e instanceof UnresolvedAddressException) {" is 175.,66
+dibbhatt_kafka-spark-consumer,consumer.kafka,KafkaUtils,fetchMessages,Magic Number,The method contains a magic number: 2,66
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,setUp,Magic Number,The method contains a magic number: 500,39
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,setUp,Magic Number,The method contains a magic number: 1000,39
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,setUp,Magic Number,The method contains a magic number: 30000,39
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithProcessingDelay,Magic Number,The method contains a magic number: 1000,58
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithProcessingDelay,Magic Number,The method contains a magic number: 35000,58
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithProcessingDelay,Magic Number,The method contains a magic number: 414,58
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithSchedulingDelay,Magic Number,The method contains a magic number: 20000,72
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithSchedulingDelay,Magic Number,The method contains a magic number: 30000,72
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithSchedulingDelay,Magic Number,The method contains a magic number: 166,72
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithNoDelay,Magic Number,The method contains a magic number: 30000,86
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,testPIControllerWithNoDelay,Magic Number,The method contains a magic number: 500,86
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,getRate,Magic Number,The method contains a magic number: 10,100
+dibbhatt_kafka-spark-consumer,consumer.kafka,PIDControllerTest,onBatchSubmitted,Magic Number,The method contains a magic number: 10,111
+dibbhatt_kafka-spark-consumer,consumer.kafka.client,SampleConsumer,run,Long Statement,The length of the statement "JavaDStream<MessageAndMetadata<byte[]>> unionStreams=ReceiverLauncher.launch(jsc`props`numberOfReceivers`StorageLevel.MEMORY_ONLY());" is 133.,50
+dibbhatt_kafka-spark-consumer,consumer.kafka.client,SampleConsumer,run,Magic Number,The method contains a magic number: 30,50
+dibbhatt_kafka-spark-consumer,consumer.kafka.client,SampleConsumer,run,Magic Number,The method contains a magic number: 6,50
+dibbhatt_kafka-spark-consumer,consumer.kafka.client,KafkaReceiver,start,Magic Number,The method contains a magic number: 5000,69
+dibbhatt_kafka-spark-consumer,consumer.kafka.client,KafkaReceiver,uncaughtException,Magic Number,The method contains a magic number: 5000,80
+dibbhatt_kafka-spark-consumer,consumer.kafka.client,KafkaRangeReceiver,start,Magic Number,The method contains a magic number: 5000,76
+dibbhatt_kafka-spark-consumer,consumer.kafka.client,KafkaRangeReceiver,uncaughtException,Magic Number,The method contains a magic number: 5000,89

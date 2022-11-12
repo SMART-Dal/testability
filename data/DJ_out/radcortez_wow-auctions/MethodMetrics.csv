@@ -1,0 +1,95 @@
+Project Name,Package Name,Type Name,Method Name,LOC,CC,PC,Line no,IsTest,Main prod class tested,Production classes tested
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.itest,ProcessJobTest,prepareJob,11,1,0,20,1,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.itest,PrepareJobTest,prepareJob,9,1,0,22,1,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.auth,TokenApi,token,0,1,2,16,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.auth,TokenConfig,host,0,1,0,8,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.auth,TokenConfig,clientId,0,1,0,10,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.auth,TokenConfig,clientSecret,0,1,0,12,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.auth,TokenCache,getToken,3,1,2,13,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.auth,OAuthAuthenticator,filter,9,2,1,22,0,com.radcortez.wow.auctions.auth.TokenConfig,com.radcortez.wow.auctions.auth.TokenConfig; com.radcortez.wow.auctions.auth.TokenCache; com.radcortez.wow.auctions.auth.OAuthAuthenticator
+radcortez_wow-auctions,com.radcortez.wow.auctions.auth,OAuthAuthenticator,createBasicAuthHeaderValue,3,1,2,38,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.prepare,ConnectRealmsBatchlet,process,6,1,0,32,0,com.radcortez.wow.auctions.api.ConnectedRealmsApi,com.radcortez.wow.auctions.api.ConnectedRealmsApi; com.radcortez.wow.auctions.batch.prepare.ConnectRealmsBatchlet
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.prepare,ConnectRealmsBatchlet,createConnectedRealmFromUri,9,2,1,45,0,com.radcortez.wow.auctions.api.LocationApi,com.radcortez.wow.auctions.api.LocationApi; com.radcortez.wow.auctions.api.ConnectedRealm; com.radcortez.wow.auctions.api.ApiConfig
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.prepare,FolderCreationBatchlet,process,6,1,0,30,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.prepare,FolderCreationBatchlet,verifyAndCreateFolder,18,4,1,41,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.download,DownloadAuctionFileBatchlet,process,6,1,0,39,0,com.radcortez.wow.auctions.batch.process.download.DownloadAuctionFileBatchlet,com.radcortez.wow.auctions.batch.process.download.DownloadAuctionFileBatchlet
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.download,DownloadAuctionFileBatchlet,stop,2,1,0,51,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.download,DownloadAuctionFileBatchlet,downloadAuctionFile,19,2,0,54,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess; com.radcortez.wow.auctions.api.ConnectedRealmsApi; com.radcortez.wow.auctions.entity.AuctionFile
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.purge,PurgeRawAuctionDataBatchlet,process,4,1,0,17,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.purge,PurgeRawAuctionDataBatchlet,stop,2,1,0,25,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.purge,PurgeRawAuctionDataBatchletTest,setUp,3,1,0,31,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.purge,PurgeRawAuctionDataBatchletTest,testPurgeRawAuctionData,4,1,0,36,1,com.radcortez.wow.auctions.batch.process.purge.PurgeRawAuctionDataBatchlet,com.radcortez.wow.auctions.batch.process.purge.PurgeRawAuctionDataBatchlet
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process,AbstractAuctionFileProcess,init,6,2,0,22,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process,AbstractAuctionFileProcess,getContext,3,1,0,31,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReader,open,7,1,1,35,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess; com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReader,close,8,2,0,47,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReader,readItem,9,3,0,59,0,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReader,checkpointInfo,3,1,0,70,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReader,readAuctionItem,13,2,1,75,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReader,setParser,4,1,1,89,0,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReader,searchAuctions,9,3,0,94,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemWriter,writeItems,3,1,1,16,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemProcessor,processItem,5,1,1,16,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReaderTest,testReadItem,16,2,0,33,1,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader; com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess; com.radcortez.wow.auctions.batch.process.data.AuctionDataItemProcessor; com.radcortez.wow.auctions.batch.process.data.AuctionDataItemWriter; com.radcortez.wow.auctions.entity.Auction
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,ReadSampleAuctionDataTest,setUp,4,1,0,19,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,ReadSampleAuctionDataTest,testReadSampleAuctionDataTest,10,2,0,25,1,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.data,AuctionDataItemReaderAlternative,open,3,1,1,17,0,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader,com.radcortez.wow.auctions.batch.process.data.AuctionDataItemReader
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.move,MoveFileBatchlet,process,12,1,0,28,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.move,MoveFileBatchlet,stop,2,1,0,45,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,ProcessedAuctionsWriter,writeItems,3,1,1,16,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,ProcessedAuctionsReader,open,6,1,1,40,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,ProcessedAuctionsReader,close,6,1,0,67,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,ProcessedAuctionsReader,readItem,3,1,0,75,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,ProcessedAuctionsReader,checkpointInfo,3,1,0,80,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,ProcessedAuctionsProcessor,processItem,17,1,1,17,0,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,AuctionsProcessorTest,testProcessedAuctionsReader,8,1,0,30,1,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess; com.radcortez.wow.auctions.batch.process.statistics.ProcessedAuctionsReader
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,AuctionsProcessorTest,testProcessedAuctionsProcessor,9,2,0,41,1,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess,com.radcortez.wow.auctions.batch.process.AbstractAuctionFileProcess; com.radcortez.wow.auctions.batch.process.statistics.ProcessedAuctionsReader; com.radcortez.wow.auctions.batch.process.statistics.ProcessedAuctionsProcessor
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.process.statistics,AuctionsProcessorTest,assertAuctionItemStatistics,27,4,1,52,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ConnectedRealm,isDown,3,1,0,17,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ConnectedRealm,toEntity,3,1,1,21,0,com.radcortez.wow.auctions.mapper.ConnectedRealmMapper,com.radcortez.wow.auctions.mapper.ConnectedRealmMapper
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ApiConfig,host,0,1,0,8,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ApiConfig,locale,0,1,0,9,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ApiConfig,region,3,1,0,11,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ApiQueryParamFilter,filter,4,1,1,18,0,com.radcortez.wow.auctions.api.ApiConfig,com.radcortez.wow.auctions.api.ApiConfig
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ConnectedRealmsApi,index,0,1,0,15,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ConnectedRealmsApi,auctions,0,1,1,19,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,LocationApi,getConnectedRealm,0,1,1,13,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ApiProducer,connectedRealmsApi,3,1,0,20,0,com.radcortez.wow.auctions.api.ApiConfig,com.radcortez.wow.auctions.api.ApiConfig
+radcortez_wow-auctions,com.radcortez.wow.auctions.api,ApiProducer,locationApi,3,1,0,29,0,com.radcortez.wow.auctions.api.ApiConfig,com.radcortez.wow.auctions.api.ApiConfig
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapper,toEntity,0,1,2,19,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapper,toEntity,0,1,2,21,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapper,realm,0,1,1,26,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapperTest,toConnectedRealm,18,1,0,20,1,com.radcortez.wow.auctions.mapper.ConnectedRealmMapper,com.radcortez.wow.auctions.mapper.ConnectedRealmMapper
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapperTest,toConnectedRealmEntity,13,1,0,41,1,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapperImpl,toEntity,18,6,2,18,0,com.radcortez.wow.auctions.entity.ConnectedRealm,com.radcortez.wow.auctions.entity.ConnectedRealm; com.radcortez.wow.auctions.mapper.ConnectedRealmMapperImpl
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapperImpl,toEntity,28,7,2,41,0,com.radcortez.wow.auctions.entity.ConnectedRealm,com.radcortez.wow.auctions.entity.ConnectedRealm
+radcortez_wow-auctions,com.radcortez.wow.auctions.mapper,ConnectedRealmMapperImpl,realm,10,2,1,73,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealm,ConnectedRealm,7,1,5,44,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealm,addRealm,4,1,1,60,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealm,create,5,1,0,65,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealm,update,3,1,1,74,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,Folder,Folder,4,1,3,38,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,Folder,Folder,5,1,3,44,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,AuctionFile,AuctionFile,7,1,5,45,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,AuctionFile,create,4,1,0,60,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,Auction,create,4,1,0,36,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,Auction,findByConnectedRealm,3,1,1,41,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,AuctionStatistics,create,4,1,0,53,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,AuctionFileTest,create,7,1,0,16,1,com.radcortez.wow.auctions.entity.AuctionFile,com.radcortez.wow.auctions.entity.AuctionFile
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealmTest,create,13,1,0,23,1,com.radcortez.wow.auctions.entity.ConnectedRealm,com.radcortez.wow.auctions.entity.ConnectedRealm
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealmTest,listAll,4,1,0,51,1,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealmTest,find,11,1,0,57,1,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.entity,ConnectedRealmTest,update,15,1,0,69,1,com.radcortez.wow.auctions.entity.ConnectedRealm,com.radcortez.wow.auctions.entity.ConnectedRealm
+radcortez_wow-auctions,com.radcortez.wow.auctions,QuarkusDataSourceProvider,getDatasourceInfo,6,1,1,14,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch,JobOperatorInjectionTest,jobOperator,3,1,0,16,1,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getJobContext,35,1,0,17,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getJobName,3,1,0,24,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getTransientUserData,3,1,0,29,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,setTransientUserData,3,1,1,34,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getInstanceId,3,1,0,39,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getExecutionId,3,1,0,44,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getProperties,6,1,0,49,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getBatchStatus,3,1,0,57,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getExitStatus,3,1,0,62,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,setExitStatus,2,1,1,67,0,,
+radcortez_wow-auctions,com.radcortez.wow.auctions.batch.util,BatchUnitTestProducer,getString,7,2,1,74,0,,

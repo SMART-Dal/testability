@@ -1,0 +1,427 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+jordw_heftydb,com.jordanwilliams.heftydb.write,TableWriter,TableWriter,Long Parameter List,The method has 6 parameters. ,68
+jordw_heftydb,com.jordanwilliams.heftydb.write,TableWriter,TableWriter,Long Statement,The length of the statement "this.tableExecutor=new ThreadPoolExecutor(config.tableWriterThreads()`config.tableWriterThreads()`Long.MAX_VALUE`TimeUnit.DAYS`new LinkedBlockingQueue<Runnable>(config.tableWriterThreads())`new ThreadFactoryBuilder().setNameFormat("Table writer thread %d").build()`new ThreadPoolExecutor.CallerRunsPolicy());" is 308.,68
+jordw_heftydb,com.jordanwilliams.heftydb.write,TableWriter,writeMemoryTable,Long Statement,The length of the statement "final FileTableWriter.Task task=new FileTableWriter.Task.Builder().tableId(tableToWrite.id()).level(1).paths(paths).config(config).source(tableToWrite.ascendingIterator(snapshots.minimumRetainedId())).tupleCount(tableToWrite.tupleCount()).throttle(Throttle.MAX).callback(new FileTableWriter.Task.Callback(){" is 307.,128
+jordw_heftydb,com.jordanwilliams.heftydb.write,TableWriter,writeMemoryTable,Long Statement,The length of the statement "tables.swap(FileTable.open(tableToWrite.id()`paths`caches.recordBlockCache()`caches.indexBlockCache()`metrics)`tableToWrite);" is 125.,128
+jordw_heftydb,com.jordanwilliams.heftydb.write,TableWriter,finish,Long Statement,The length of the statement "tables.swap(FileTable.open(tableToWrite.id()`paths`caches.recordBlockCache()`caches.indexBlockCache()`metrics)`tableToWrite);" is 125.,133
+jordw_heftydb,com.jordanwilliams.heftydb.cache,TableBlockCache,TableBlockCache,Long Statement,The length of the statement "cache=new ConcurrentLinkedHashMap.Builder<Entry`T>().concurrencyLevel(CONCURRENCY_LEVEL).weigher(weigher).listener(new EvictionListener<Entry`T>(){" is 147.,85
+jordw_heftydb,com.jordanwilliams.heftydb.metrics,Metrics,Metrics,Long Statement,The length of the statement "this.reporter=Slf4jReporter.forRegistry(metrics).outputTo(logger).convertDurationsTo(TimeUnit.MILLISECONDS).convertRatesTo(TimeUnit.SECONDS).build();" is 149.,49
+jordw_heftydb,com.jordanwilliams.heftydb.metrics,Metrics,Metrics,Long Statement,The length of the statement "this.jmxReporter=JmxReporter.forRegistry(metrics).inDomain("HeftyDB @ " + config.tableDirectory().toString()).convertDurationsTo(TimeUnit.MILLISECONDS).convertRatesTo(TimeUnit.SECONDS).build();" is 193.,49
+jordw_heftydb,com.jordanwilliams.heftydb.data,Tuple,hashCode,Magic Number,The method contains a magic number: 31,124
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,Compactor,Long Identifier,The length of the field highPriorityCompactionTaskExecutor is 34.,132
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,Compactor,Long Parameter List,The method has 7 parameters. ,132
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,Compactor,Long Statement,The length of the statement "this.compactionExecutor=new ThreadPoolExecutor(config.tableCompactionThreads()`config.tableCompactionThreads()`Long.MAX_VALUE`TimeUnit.DAYS`new LinkedBlockingQueue<Runnable>(config.tableCompactionThreads())`new ThreadFactoryBuilder().setNameFormat("Compaction thread %d").build()`new ThreadPoolExecutor.CallerRunsPolicy());" is 323.,132
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,Compactor,Long Statement,The length of the statement "this.compactionTaskExecutor=new ThreadPoolExecutor(compactionTaskThreads`compactionTaskThreads`Long.MAX_VALUE`TimeUnit.DAYS`new LinkedBlockingQueue<Runnable>(config.tableCompactionThreads())`new ThreadFactoryBuilder().setNameFormat("Compaction task thread %d").build()`new ThreadPoolExecutor.CallerRunsPolicy());" is 312.,132
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,Compactor,Long Statement,The length of the statement "this.highPriorityCompactionTaskExecutor=new ThreadPoolExecutor(compactionTaskThreads`compactionTaskThreads`Long.MAX_VALUE`TimeUnit.DAYS`new LinkedBlockingQueue<Runnable>(config.tableCompactionThreads())`new ThreadFactoryBuilder().setNameFormat("High priority " + "compaction task thread %d").build()`new ThreadPoolExecutor.CallerRunsPolicy());" is 343.,132
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,Compactor,Magic Number,The method contains a magic number: 2,132
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,scheduleCompaction,Long Identifier,The length of the field highPriorityCompactionTaskExecutor is 34.,174
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,scheduleCompaction,Long Statement,The length of the statement "ThreadPoolExecutor taskExecutor=task.priority().equals(CompactionTask.Priority.HIGH) ? highPriorityCompactionTaskExecutor : compactionTaskExecutor;" is 147.,174
+jordw_heftydb,com.jordanwilliams.heftydb.compact,Compactor,scheduleCompaction,Long Statement,The length of the statement "metrics.histogram("compactor.concurrentTasks").update(highPriorityCompactionTaskExecutor.getActiveCount() + compactionTaskExecutor.getActiveCount());" is 149.,174
+jordw_heftydb,com.jordanwilliams.heftydb.compact,CompactionTask,hashCode,Magic Number,The method contains a magic number: 31,89
+jordw_heftydb,com.jordanwilliams.heftydb.compact,CompactionTask,hashCode,Magic Number,The method contains a magic number: 31,89
+jordw_heftydb,com.jordanwilliams.heftydb.compact.planner,SizeTieredCompactionPlanner,planCompaction,Long Statement,The length of the statement "compactionTasks.add(new CompactionTask(entry.getValue()`level + 1`level < 3 ? CompactionTask.Priority.HIGH : CompactionTask.Priority.NORMAL));" is 142.,43
+jordw_heftydb,com.jordanwilliams.heftydb.compact.planner,SizeTieredCompactionPlanner,planCompaction,Magic Number,The method contains a magic number: 3,43
+jordw_heftydb,com.jordanwilliams.heftydb.compact.planner,FullCompactionPlanner,planCompaction,Magic Number,The method contains a magic number: 2,37
+jordw_heftydb,com.jordanwilliams.heftydb.table.file,FileTable,FileTable,Long Parameter List,The method has 7 parameters. ,243
+jordw_heftydb,com.jordanwilliams.heftydb.table.file,FileTable,ascendingIterator,Long Statement,The length of the statement "return new LatestTupleIterator(snapshotId`new AscendingIterator(new AscendingBlockIterator(nextBlockOffset)`startRecordIterator`startTupleBlock));" is 146.,297
+jordw_heftydb,com.jordanwilliams.heftydb.table.file,FileTable,descendingIterator,Long Statement,The length of the statement "return new LatestTupleIterator(snapshotId`new DescendingIterator(new DescendingBlockIterator(nextBlockOffset)`startRecordIterator`startTupleBlock));" is 148.,316
+jordw_heftydb,com.jordanwilliams.heftydb.table.file,FileTable,hashCode,Magic Number,The method contains a magic number: 32,398
+jordw_heftydb,com.jordanwilliams.heftydb.table.file,FileTable,open,Long Parameter List,The method has 5 parameters. ,437
+jordw_heftydb,com.jordanwilliams.heftydb.table.file,FileTableWriter,FileTableWriter,Long Parameter List,The method has 6 parameters. ,172
+jordw_heftydb,com.jordanwilliams.heftydb.table.file,FileTableWriter,open,Long Parameter List,The method has 6 parameters. ,220
+jordw_heftydb,com.jordanwilliams.heftydb.table.memory,SkipListTupleMap,descendingIterator,Long Statement,The length of the statement "return new LatestTupleIterator(snapshotId`new CloseableIterator.Wrapper<Tuple>(tuples.descendingMap().values().iterator()));" is 124.,58
+jordw_heftydb,com.jordanwilliams.heftydb.table.memory,SkipListTupleMap,ascendingIterator,Long Statement,The length of the statement "return new LatestTupleIterator(snapshotId`new CloseableIterator.Wrapper<Tuple>(tuples.tailMap(key`true).values().iterator()));" is 126.,64
+jordw_heftydb,com.jordanwilliams.heftydb.table.memory,SkipListTupleMap,descendingIterator,Long Statement,The length of the statement "return new LatestTupleIterator(snapshotId`new CloseableIterator.Wrapper<Tuple>(tuples.headMap(key`true).descendingMap().values().iterator()));" is 142.,70
+jordw_heftydb,com.jordanwilliams.heftydb.table.memory,SynchronizedTupleMap,get,Long Statement,The length of the statement "return closestEntry.getKey().data().equals(key.data()) ? new Tuple(closestEntry.getKey()`closestEntry.getValue()) : null;" is 121.,131
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Long Statement,The length of the statement "return (((long)key[i + 0] & 0x00000000000000FFL) << 0) | (((long)key[i + 1] & 0x00000000000000FFL) << 8) | (((long)key[i + 2] & 0x00000000000000FFL) << 16)| (((long)key[i + 3] & 0x00000000000000FFL) << 24)| (((long)key[i + 4] & 0x00000000000000FFL) << 32)| (((long)key[i + 5] & 0x00000000000000FFL) << 40)| (((long)key[i + 6] & 0x00000000000000FFL) << 48)| (((long)key[i + 7] & 0x00000000000000FFL) << 56);" is 406.,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 8,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 2,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 16,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 3,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 24,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 4,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 32,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 5,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 40,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 6,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 48,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 7,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 0x00000000000000FFL,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,getblock,Magic Number,The method contains a magic number: 56,24
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,fmix,Magic Number,The method contains a magic number: 33,32
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,fmix,Magic Number,The method contains a magic number: 33,32
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,fmix,Magic Number,The method contains a magic number: 33,32
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Complex Method,Cyclomatic complexity of the method is 17,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x586dcd208f7cd3fdL,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x4cf5ad432745937fL,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 16,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 8,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 8,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 64,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 41,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 64,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 41,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 64,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x52dce729,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x38495ab5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x7b7d159c,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x6bce6396,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 15,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 15,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 14,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 48,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 14,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 13,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 40,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 13,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 12,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 32,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 12,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 11,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 24,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 11,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 10,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 16,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 10,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 9,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 8,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 9,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 8,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 8,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 7,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 56,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 7,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 6,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 48,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 6,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 40,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 32,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 24,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 16,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 8,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 64,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 41,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 64,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 41,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 64,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 23,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x52dce729,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x38495ab5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x7b7d159c,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,MurmurHash3,MurmurHash3_x64_64,Magic Number,The method contains a magic number: 0x6bce6396,42
+jordw_heftydb,com.jordanwilliams.heftydb.util,XORShiftRandom,nextInt,Magic Number,The method contains a magic number: 21,31
+jordw_heftydb,com.jordanwilliams.heftydb.util,XORShiftRandom,nextInt,Magic Number,The method contains a magic number: 35,31
+jordw_heftydb,com.jordanwilliams.heftydb.util,XORShiftRandom,nextInt,Magic Number,The method contains a magic number: 4,31
+jordw_heftydb,com.jordanwilliams.heftydb.util,XORShiftRandom,nextInt,Magic Number,The method contains a magic number: 21,39
+jordw_heftydb,com.jordanwilliams.heftydb.util,XORShiftRandom,nextInt,Magic Number,The method contains a magic number: 35,39
+jordw_heftydb,com.jordanwilliams.heftydb.util,XORShiftRandom,nextInt,Magic Number,The method contains a magic number: 4,39
+jordw_heftydb,com.jordanwilliams.heftydb.index,IndexWriter,writeIndexBlock,Long Statement,The length of the statement "IndexRecord metaIndexRecord=new IndexRecord(indexBlock.startRecord().startKey()`indexBlockOffset`indexBlockBuffer.capacity()`false);" is 132.,96
+jordw_heftydb,com.jordanwilliams.heftydb.index,IndexRecord,hashCode,Magic Number,The method contains a magic number: 31,88
+jordw_heftydb,com.jordanwilliams.heftydb.index,IndexRecord,hashCode,Magic Number,The method contains a magic number: 32,88
+jordw_heftydb,com.jordanwilliams.heftydb.index,IndexRecord,hashCode,Magic Number,The method contains a magic number: 31,88
+jordw_heftydb,com.jordanwilliams.heftydb.index,IndexRecord,hashCode,Magic Number,The method contains a magic number: 31,88
+jordw_heftydb,com.jordanwilliams.heftydb.index,IndexRecord,toString,Long Statement,The length of the statement "return "IndexRecord{" + "startKey=" + startKey + "` blockOffset="+ blockOffset+ "` blockSize="+ blockSize+ "` isLeaf="+ isLeaf+ '}';" is 132.,97
+jordw_heftydb,com.jordanwilliams.heftydb.read,MergingIterator,MergingIterator,Long Statement,The length of the statement "this.iteratorHeap=descending ? new PriorityQueue<ComparableIterator<T>>(iterators.size()`Collections.reverseOrder()) : new PriorityQueue<ComparableIterator<T>>();" is 162.,92
+jordw_heftydb,com.jordanwilliams.heftydb.read,LatestTupleIterator,fetchNextTuple,Long Statement,The length of the statement "boolean nextKeyEqualCurrent=currentKeyTuples.isEmpty() || next.key().data().equals(currentKeyTuples.last().key().data());" is 121.,75
+jordw_heftydb,com.jordanwilliams.heftydb.read,TableReader,ascendingIterator,Long Statement,The length of the statement "TableAggregationIterator tableAggregationIterator=new TableAggregationIterator(new MergingIterator<Tuple>(tableIterators)`snapshotId`tables`ascendingIteratorSource);" is 165.,126
+jordw_heftydb,com.jordanwilliams.heftydb.read,TableReader,descendingIterator,Long Statement,The length of the statement "TableAggregationIterator tableAggregationIterator=new TableAggregationIterator(new MergingIterator<Tuple>(true`tableIterators)`snapshotId`tables`descendingIteratorSource);" is 171.,145
+jordw_heftydb,com.jordanwilliams.heftydb.read,TableReader,ascendingIterator,Long Statement,The length of the statement "TableAggregationIterator tableAggregationIterator=new TableAggregationIterator(new MergingIterator<Tuple>(tableIterators)`snapshotId`tables`ascendingIteratorSource);" is 165.,164
+jordw_heftydb,com.jordanwilliams.heftydb.read,TableReader,descendingIterator,Long Statement,The length of the statement "TableAggregationIterator tableAggregationIterator=new TableAggregationIterator(new MergingIterator<Tuple>(true`tableIterators)`snapshotId`tables`descendingIteratorSource);" is 171.,183
+jordw_heftydb,com.jordanwilliams.heftydb.read,CompactionTupleIterator,fetchNextTuples,Long Statement,The length of the statement "boolean nextKeyEqualCurrent=currentKeyTuples.isEmpty() || next.key().data().equals(currentKeyTuples.last().key().data());" is 121.,76
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,BloomFilter,mightContain,Magic Number,The method contains a magic number: 32,89
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,MemoryPointer,toString,Long Statement,The length of the statement "return "MemoryPointer{" + "retainCount=" + retainCount + "` size="+ size+ "` address="+ address+ "` contents="+ toHexString(directBuffer)+ '}';" is 143.,84
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,MemoryPointer,toHexString,Magic Number,The method contains a magic number: 2,96
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,MemoryPointer,toHexString,Magic Number,The method contains a magic number: 0xFF,96
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,MemoryPointer,toHexString,Magic Number,The method contains a magic number: 2,96
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,MemoryPointer,toHexString,Magic Number,The method contains a magic number: 4,96
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,MemoryPointer,toHexString,Magic Number,The method contains a magic number: 2,96
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,MemoryPointer,toHexString,Magic Number,The method contains a magic number: 0x0F,96
+jordw_heftydb,com.jordanwilliams.heftydb.offheap,BitSet,bitCount,Magic Number,The method contains a magic number: 8,87
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,Config,Long Parameter List,The method has 13 parameters. ,138
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,equals,Complex Method,Cyclomatic complexity of the method is 16,209
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,equals,Long Statement,The length of the statement "if (compactionStrategy != null ? !compactionStrategy.equals(config.compactionStrategy) : config.compactionStrategy != null) return false;" is 137.,209
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,equals,Long Statement,The length of the statement "if (tableDirectory != null ? !tableDirectory.equals(config.tableDirectory) : config.tableDirectory != null) return false;" is 121.,209
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 32,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 32,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 32,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 31,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,hashCode,Magic Number,The method contains a magic number: 32,237
+jordw_heftydb,com.jordanwilliams.heftydb.db,Config,toString,Long Statement,The length of the statement "return "Config{" + "compactionStrategy=" + compactionStrategy + "` memoryTableSize="+ memoryTableSize+ "` tableBlockSize="+ tableBlockSize+ "` indexBlockSize="+ indexBlockSize+ "` tableWriterThreads="+ tableWriterThreads+ "` tableCompactionThreads="+ tableCompactionThreads+ "` tableCacheSize="+ tableCacheSize+ "` indexCacheSize="+ indexCacheSize+ "` autoPrintMetrics="+ printMetrics+ "` tableDirectory="+ tableDirectory+ "` logDirectory="+ logDirectory+ "` maxCompactionRate="+ maxCompactionRate+ "` maxWriteRate="+ maxWriteRate+ '}';" is 536.,255
+jordw_heftydb,com.jordanwilliams.heftydb.db,HeftyDB,HeftyDB,Long Parameter List,The method has 6 parameters. ,89
+jordw_heftydb,com.jordanwilliams.heftydb.db,HeftyDB,ascendingIterator,Long Statement,The length of the statement "return new InstrumentedScanIterator(new Record.TupleIterator(tableReader.ascendingIterator(new Key(key`snapshot.id())`snapshot.id())));" is 135.,134
+jordw_heftydb,com.jordanwilliams.heftydb.db,HeftyDB,descendingIterator,Long Statement,The length of the statement "return new InstrumentedScanIterator(new Record.TupleIterator(tableReader.descendingIterator(new Key(key`snapshot.id())`snapshot.id())));" is 136.,145
+jordw_heftydb,com.jordanwilliams.heftydb.db,DBState,DBState,Long Parameter List,The method has 5 parameters. ,38
+jordw_heftydb,com.jordanwilliams.heftydb.db,Snapshot,hashCode,Magic Number,The method contains a magic number: 32,60
+jordw_heftydb,com.jordanwilliams.heftydb.db,Record,hashCode,Magic Number,The method contains a magic number: 31,111
+jordw_heftydb,com.jordanwilliams.heftydb.db,Record,hashCode,Magic Number,The method contains a magic number: 31,111
+jordw_heftydb,com.jordanwilliams.heftydb.db,Record,toString,Long Statement,The length of the statement "return "Record{" + "key=" + ByteBuffers.toString(key) + "` value="+ ByteBuffers.toString(value)+ "` snapshot="+ snapshot+ '}';" is 126.,119
+jordw_heftydb,com.jordanwilliams.heftydb.db,DBInitializer,DBInitializer,Long Statement,The length of the statement "this.caches=new Caches(new TupleBlock.Cache(config.tableCacheSize()`metrics)`new IndexBlock.Cache(config.indexCacheSize()`metrics));" is 132.,49
+jordw_heftydb,com.jordanwilliams.heftydb.db,DBInitializer,writeTablesFromLogs,Long Statement,The length of the statement "FileTableWriter.Task tableWriterTask=new FileTableWriter.Task.Builder().tableId(id).config(config).paths(paths).level(1).tupleCount(memoryTable.tupleCount()).source(memoryTable.ascendingIterator(Long.MAX_VALUE)).build();" is 220.,87
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,generateKey,Magic Number,The method contains a magic number: 100,52
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Complex Method,Cyclomatic complexity of the method is 16,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Long Method,The method has 114 lines of code.,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Long Statement,The length of the statement "CloseableIterator<Record> scanIterator=db.ascendingIterator(ByteBuffers.fromString(nextKey)`new Snapshot(maxSnapshotId.get()));" is 127.,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Magic Number,The method contains a magic number: 1000,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Magic Number,The method contains a magic number: 10,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Magic Number,The method contains a magic number: 10,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Magic Number,The method contains a magic number: 1000,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Magic Number,The method contains a magic number: 30,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Magic Number,The method contains a magic number: 30,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,main,Magic Number,The method contains a magic number: 30,62
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,run,Long Statement,The length of the statement "CloseableIterator<Record> scanIterator=db.ascendingIterator(ByteBuffers.fromString(nextKey)`new Snapshot(maxSnapshotId.get()));" is 127.,143
+jordw_heftydb,com.jordanwilliams.heftydb.test.endurance,EnduranceTest,run,Magic Number,The method contains a magic number: 10,143
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,generateTestData,Magic Number,The method contains a magic number: 100,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,generateTestData,Magic Number,The method contains a magic number: 2,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,generateTestData,Magic Number,The method contains a magic number: 1000,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,generateTestData,Magic Number,The method contains a magic number: 20,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,generateTestData,Magic Number,The method contains a magic number: 255,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,generateTestData,Magic Number,The method contains a magic number: 255,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,apply,Magic Number,The method contains a magic number: 255,74
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedIntegrationTest,apply,Magic Number,The method contains a magic number: 255,79
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedTupleTest,generateTestRecords,Magic Number,The method contains a magic number: 100,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedTupleTest,generateTestRecords,Magic Number,The method contains a magic number: 1000,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedTupleTest,generateTestRecords,Magic Number,The method contains a magic number: 255,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedTupleTest,generateTestRecords,Magic Number,The method contains a magic number: 255,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedTupleTest,apply,Magic Number,The method contains a magic number: 255,70
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,ParameterizedTupleTest,apply,Magic Number,The method contains a magic number: 255,75
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,beforeTest,Magic Number,The method contains a magic number: 100,44
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,beforeTest,Magic Number,The method contains a magic number: 20,44
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,beforeTest,Magic Number,The method contains a magic number: 100,44
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,beforeTest,Magic Number,The method contains a magic number: 100,44
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,generateMoreTestRecords,Magic Number,The method contains a magic number: 100,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,generateMoreTestRecords,Magic Number,The method contains a magic number: 20,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,generateMoreTestRecords,Magic Number,The method contains a magic number: 100,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.base,TupleTest,generateMoreTestRecords,Magic Number,The method contains a magic number: 100,60
+jordw_heftydb,com.jordanwilliams.heftydb.test.helper,StopWatch,elapsedMicros,Magic Number,The method contains a magic number: 1000,31
+jordw_heftydb,com.jordanwilliams.heftydb.test.helper,StopWatch,elapsedMillis,Magic Number,The method contains a magic number: 1000000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.helper,StopWatch,elapsedSeconds,Magic Number,The method contains a magic number: 1000000000,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.helper,StopWatch,elapsedMinutes,Magic Number,The method contains a magic number: 60,43
+jordw_heftydb,com.jordanwilliams.heftydb.test.helper,PerformanceHelper,consoleReporter,Long Statement,The length of the statement "return ConsoleReporter.forRegistry(metrics).convertDurationsTo(TimeUnit.MICROSECONDS).convertRatesTo(TimeUnit.SECONDS).build();" is 127.,26
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,TupleGenerator,testRecords,Long Parameter List,The method has 5 parameters. ,38
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,TupleGenerator,testRecords,Long Parameter List,The method has 5 parameters. ,56
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,TupleGenerator,testRecords,Magic Number,The method contains a magic number: 16,76
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,TupleGenerator,testRecords,Magic Number,The method contains a magic number: 100,76
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testCaches,Long Statement,The length of the statement "return new Caches(new TupleBlock.Cache(32768000`new Metrics(testConfig()))`new IndexBlock.Cache(16384000`new Metrics(testConfig())));" is 133.,38
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testCaches,Magic Number,The method contains a magic number: 32768000,38
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testCaches,Magic Number,The method contains a magic number: 16384000,38
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,enduranceConfig,Long Statement,The length of the statement "return new Config.Builder().tableDirectory(TestFileHelper.TEMP_PATH).printMetrics(true).indexCacheSize(128000000).tableCacheSize(512000000).memoryTableSize(8192000).maxWriteRate(32768000).build();" is 196.,47
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,enduranceConfig,Magic Number,The method contains a magic number: 128000000,47
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,enduranceConfig,Magic Number,The method contains a magic number: 512000000,47
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,enduranceConfig,Magic Number,The method contains a magic number: 8192000,47
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,enduranceConfig,Magic Number,The method contains a magic number: 32768000,47
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,performanceConfig,Long Statement,The length of the statement "return new Config.Builder().tableDirectory(TestFileHelper.TEMP_PATH).indexCacheSize(128000000).tableCacheSize(512000000).tableBlockSize(1024).memoryTableSize(8192000).maxCompactionRate(32768000).build();" is 203.,52
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,performanceConfig,Magic Number,The method contains a magic number: 128000000,52
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,performanceConfig,Magic Number,The method contains a magic number: 512000000,52
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,performanceConfig,Magic Number,The method contains a magic number: 1024,52
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,performanceConfig,Magic Number,The method contains a magic number: 8192000,52
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,performanceConfig,Magic Number,The method contains a magic number: 32768000,52
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testConfig,Long Statement,The length of the statement "return builder.compactionStrategy(CompactionStrategies.NULL_COMPACTION_STRATEGY).memoryTableSize(16384).tableBlockSize(4096).indexBlockSize(4096).tableCacheSize(1024000).indexCacheSize(1024000).tableDirectory(TestFileHelper.TEMP_PATH).build();" is 243.,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testConfig,Magic Number,The method contains a magic number: 16384,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testConfig,Magic Number,The method contains a magic number: 4096,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testConfig,Magic Number,The method contains a magic number: 4096,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testConfig,Magic Number,The method contains a magic number: 1024000,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,ConfigGenerator,testConfig,Magic Number,The method contains a magic number: 1024000,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,KeyValueGenerator,testKey,Complex Conditional,The conditional expression next <= reuseWeight && reuseWeight != 0 && testKeys.size() > 0 is complex.,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,KeyValueGenerator,testKey,Magic Number,The method contains a magic number: 100,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.generator,KeyValueGenerator,testKey,Magic Number,The method contains a magic number: 16,56
+jordw_heftydb,com.jordanwilliams.heftydb.test.integration,ConcurrencyTest,dataIntegrityTest,Magic Number,The method contains a magic number: 10,44
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.write,RecordWriterPerformance,main,Long Statement,The length of the statement "TableWriter tableWriter=new TableWriter(state.config()`state.paths()`state.tables()`state.snapshots()`state.caches()`new Metrics(state.config()));" is 146.,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.write,RecordWriterPerformance,main,Magic Number,The method contains a magic number: 100,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexBlockPerformance,main,Magic Number,The method contains a magic number: 64000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexBlockPerformance,main,Magic Number,The method contains a magic number: 32,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexBlockPerformance,main,Magic Number,The method contains a magic number: 128,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexBlockPerformance,main,Magic Number,The method contains a magic number: 10000000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,TableBloomFilterPerformance,main,Magic Number,The method contains a magic number: 100,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,TableBloomFilterPerformance,main,Magic Number,The method contains a magic number: 0.01,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,TableBloomFilterPerformance,main,Magic Number,The method contains a magic number: 2,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 500000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 20,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 16,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 100,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 500000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 32000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 32000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 4096000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,IndexPerformance,main,Magic Number,The method contains a magic number: 1000000,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Long Statement,The length of the statement "FileTable fileTable=FileTable.open(1`paths`new TupleBlock.Cache(512000000`new Metrics(config))`new IndexBlock.Cache(16384000`new Metrics(config))`new Metrics(config));" is 167.,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Magic Number,The method contains a magic number: 100,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Magic Number,The method contains a magic number: 32768,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Magic Number,The method contains a magic number: 8192,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Magic Number,The method contains a magic number: 512000000,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Magic Number,The method contains a magic number: 16384000,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Magic Number,The method contains a magic number: 2,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,FileTablePerformance,main,Magic Number,The method contains a magic number: 1000000,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,RecordBlockPerformance,main,Magic Number,The method contains a magic number: 64000,32
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,RecordBlockPerformance,main,Magic Number,The method contains a magic number: 20,32
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,RecordBlockPerformance,main,Magic Number,The method contains a magic number: 16,32
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,RecordBlockPerformance,main,Magic Number,The method contains a magic number: 100,32
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.file,RecordBlockPerformance,main,Magic Number,The method contains a magic number: 10000000,32
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.memory,MemoryTablePerformance,main,Magic Number,The method contains a magic number: 100,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.table.memory,MemoryTablePerformance,main,Magic Number,The method contains a magic number: 10000000,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.offheap,MemoryPerformance,main,Magic Number,The method contains a magic number: 1000000,30
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.offheap,MemoryPerformance,main,Magic Number,The method contains a magic number: 16384,30
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.offheap,BlockCreationPerformance,main,Magic Number,The method contains a magic number: 64000,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.offheap,BlockCreationPerformance,main,Magic Number,The method contains a magic number: 32,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.offheap,BlockCreationPerformance,main,Magic Number,The method contains a magic number: 128,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.offheap,BlockCreationPerformance,main,Magic Number,The method contains a magic number: 10000000,36
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,WritePerformance,main,Long Statement,The length of the statement "Config config=new Config.Builder().directory(TestFileHelper.TEMP_PATH).memoryTableSize(16384000).tableCacheSize(512000000).indexCacheSize(64000000).tableBlockSize(16384).compactionStrategy(CompactionStrategies.SIZE_TIERED_COMPACTION_STRATEGY).indexBlockSize(32768).maxWriteRate(Integer.MAX_VALUE).build();" is 305.,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,WritePerformance,main,Magic Number,The method contains a magic number: 100,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,WritePerformance,main,Magic Number,The method contains a magic number: 16384000,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,WritePerformance,main,Magic Number,The method contains a magic number: 512000000,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,WritePerformance,main,Magic Number,The method contains a magic number: 64000000,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,WritePerformance,main,Magic Number,The method contains a magic number: 16384,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,WritePerformance,main,Magic Number,The method contains a magic number: 32768,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadWritePerformance,main,Long Statement,The length of the statement "Config config=new Config.Builder().directory(TestFileHelper.TEMP_PATH).compactionStrategy(CompactionStrategies.FULL_COMPACTION_STRATEGY).memoryTableSize(32768000).tableCacheSize(3276800).indexCacheSize(64000000).tableBlockSize(32768).indexBlockSize(65000).maxWriteRate(Integer.MAX_VALUE).build();" is 296.,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadWritePerformance,main,Magic Number,The method contains a magic number: 100,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadWritePerformance,main,Magic Number,The method contains a magic number: 32768000,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadWritePerformance,main,Magic Number,The method contains a magic number: 3276800,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadWritePerformance,main,Magic Number,The method contains a magic number: 64000000,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadWritePerformance,main,Magic Number,The method contains a magic number: 32768,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadWritePerformance,main,Magic Number,The method contains a magic number: 65000,39
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ScanPerformance,main,Magic Number,The method contains a magic number: 100,40
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadPerformance,main,Long Statement,The length of the statement "Config config=new Config.Builder().directory(TestFileHelper.TEMP_PATH).compactionStrategy(CompactionStrategies.SIZE_TIERED_COMPACTION_STRATEGY).tableCacheSize(512000000).indexCacheSize(64000000).maxWriteRate(Integer.MAX_VALUE).build();" is 235.,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadPerformance,main,Magic Number,The method contains a magic number: 512000000,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadPerformance,main,Magic Number,The method contains a magic number: 64000000,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.performance.db,ReadPerformance,main,Magic Number,The method contains a magic number: 10,37
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,TupleBlockTest,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,TupleBlockTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,TupleBlockTest,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,TupleBlockTest,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,findRecordExistsTest,Magic Number,The method contains a magic number: 2,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,findRecordExistsEndTest,Magic Number,The method contains a magic number: 5,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,descendingIteratorTest,Magic Number,The method contains a magic number: 5,85
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,rangeIteratorTest,Magic Number,The method contains a magic number: 2,95
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,rangeIteratorInexactTest,Magic Number,The method contains a magic number: 3,105
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,descendingRangeIteratorTest,Magic Number,The method contains a magic number: 3,115
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,TupleBlockTest,descendingRangeIteratorInexactTest,Magic Number,The method contains a magic number: 3,125
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,FileTableTest,openFileTable,Long Statement,The length of the statement "FileTableWriter.Task writerTask=new FileTableWriter.Task(1`1`paths`config`tuples.iterator()`tuples.size()`null`Throttle.MAX);" is 125.,123
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,FileTableTest,openFileTable,Magic Number,The method contains a magic number: 1024000,123
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.table.file,FileTableTest,openFileTable,Magic Number,The method contains a magic number: 1024000,123
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,bufferedAppendOffsetTest,Magic Number,The method contains a magic number: 100,40
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,bufferedAppendOffsetTest,Magic Number,The method contains a magic number: 100,40
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,bufferedAppendOffsetTest,Magic Number,The method contains a magic number: 100,40
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,bufferedAppendOffsetTest,Magic Number,The method contains a magic number: 39,40
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,mutableDataFileTest,Magic Number,The method contains a magic number: 2,58
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,mutableDataFilePrimitiveTest,Magic Number,The method contains a magic number: 4,84
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,mutableDataFilePrimitiveTest,Magic Number,The method contains a magic number: 8,84
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,mutableDataFilePrimitiveTest,Magic Number,The method contains a magic number: 4,84
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,mutableDataFilePrimitiveTest,Magic Number,The method contains a magic number: 8,84
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.io,FileIOTest,mutableDataFilePrimitiveTest,Magic Number,The method contains a magic number: 4,84
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.util,XORShiftRandomTest,randomTest,Magic Number,The method contains a magic number: 32,29
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.util,XORShiftRandomTest,randomTest,Magic Number,The method contains a magic number: 128,29
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.util,XORShiftRandomTest,randomTest,Magic Number,The method contains a magic number: 1024,29
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.util,XORShiftRandomTest,randomTest,Magic Number,The method contains a magic number: 32,29
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.util,XORShiftRandomTest,randomTest,Magic Number,The method contains a magic number: 1024,29
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockRandomTest,IndexBlockRandomTest,Magic Number,The method contains a magic number: 128,35
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexTest,createIndex,Magic Number,The method contains a magic number: 512,59
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexTest,createIndex,Magic Number,The method contains a magic number: 128,59
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexTest,createIndex,Magic Number,The method contains a magic number: 1024000,59
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,IndexBlockTest,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,findRecordExactMatchEndTest,Magic Number,The method contains a magic number: 4,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,findRecordExactMatchEndTest,Magic Number,The method contains a magic number: 4,63
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,findRecordTest,Magic Number,The method contains a magic number: 2,69
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,findRecordMidTest,Magic Number,The method contains a magic number: 3,75
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,findRecordEndTest,Magic Number,The method contains a magic number: 5,81
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,descendingIteratorTest,Magic Number,The method contains a magic number: 5,87
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,rangeIteratorTest,Magic Number,The method contains a magic number: 2,97
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,rangeIteratorInexactTest,Magic Number,The method contains a magic number: 3,107
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,descendingRangeIteratorTest,Magic Number,The method contains a magic number: 3,117
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.index,IndexBlockTest,descendingRangeIteratorInexactTest,Magic Number,The method contains a magic number: 3,127
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,CompactionTupleIteratorTest,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,basicFilterTest,Long Statement,The length of the statement "Iterator<Tuple> versionedIterator=new CompactionTupleIterator(2`new CloseableIterator.Wrapper<Tuple>(sourceTuples.iterator()));" is 127.,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,CompactionTupleIteratorTest,basicFilterTest,Magic Number,The method contains a magic number: 2,57
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,MergingIteratorTest,mergeTest,Long Statement,The length of the statement "MergingIterator<Integer> mergingIterator=new MergingIterator<Integer>(new CloseableIterator.Wrapper<Integer>(Ints.asList(ARRAY1).iterator())`new CloseableIterator.Wrapper<Integer>(Ints.asList(ARRAY2).iterator()));" is 213.,33
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 2,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 5,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 3,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,LatestTupleIteratorTest,Magic Number,The method contains a magic number: 4,42
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,filterRecordTest,Long Statement,The length of the statement "Iterator<Tuple> versionedIterator=new LatestTupleIterator(6`new CloseableIterator.Wrapper<Tuple>(sourceTuples.iterator()));" is 123.,56
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,filterRecordTest,Magic Number,The method contains a magic number: 6,56
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,respectSnapshotTest,Long Statement,The length of the statement "Iterator<Tuple> versionedIterator=new LatestTupleIterator(4`new CloseableIterator.Wrapper<Tuple>(sourceTuples.iterator()));" is 123.,67
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,LatestTupleIteratorTest,respectSnapshotTest,Magic Number,The method contains a magic number: 4,67
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,TableAggregationIteratorTest,changeTablesTests,Magic Number,The method contains a magic number: 100,41
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,TableAggregationIteratorTest,changingTablesTest,Long Statement,The length of the statement "TableAggregationIterator tableAggregationIterator=new TableAggregationIterator(ascendingTupleIterator(tables)`Long.MAX_VALUE`tables`ascendingIteratorSource(tables));" is 165.,48
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,TableAggregationIteratorTest,merge,Magic Number,The method contains a magic number: 255,89
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,TableAggregationIteratorTest,testTables,Magic Number,The method contains a magic number: 10,132
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,TableAggregationIteratorTest,testTable,Magic Number,The method contains a magic number: 100,142
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.read,TableAggregationIteratorTest,testTable,Magic Number,The method contains a magic number: 20,142
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,UnsafeAllocatorTest,allocateFreeTest,Magic Number,The method contains a magic number: 128,26
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,MemoryPointerTest,retainReleaseTest,Magic Number,The method contains a magic number: 256,26
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BloomFilterTest,readWriteTest,Magic Number,The method contains a magic number: 1000,30
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BloomFilterTest,readWriteTest,Magic Number,The method contains a magic number: 0.01,30
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BloomFilterTest,testKeys,Magic Number,The method contains a magic number: 1000,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BloomFilterTest,testKeys,Magic Number,The method contains a magic number: 255,46
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BitSetTest,getSetTest,Magic Number,The method contains a magic number: 256,28
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BitSetTest,getSetTest,Magic Number,The method contains a magic number: 256,28
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BitSetTest,getSetTest,Magic Number,The method contains a magic number: 256,28
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.offheap,BitSetTest,getSetTest,Magic Number,The method contains a magic number: 256,28
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.db,DBInitializerTest,existingStateTest,Long Statement,The length of the statement "FileTableWriter.Task writerTask=new FileTableWriter.Task(1`1`paths`config`tuples.iterator()`tuples.size()`null`Throttle.MAX);" is 125.,45
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.db,DBInitializerTest,existingStateTest,Magic Number,The method contains a magic number: 100,45
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.db,DBInitializerTest,existingStateLogTest,Long Statement,The length of the statement "FileTableWriter.Task writerTask=new FileTableWriter.Task(1`1`paths`config`tuples.iterator()`tuples.size()`null`Throttle.MAX);" is 125.,58
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.db,DBInitializerTest,existingStateLogTest,Magic Number,The method contains a magic number: 2,58
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.db,DBInitializerTest,existingStateLogTest,Magic Number,The method contains a magic number: 101,58
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.db,DBInitializerTest,existingStateLogTest,Magic Number,The method contains a magic number: 2,58
+jordw_heftydb,com.jordanwilliams.heftydb.test.unit.db,DBInitializerTest,existingStateLogTest,Magic Number,The method contains a magic number: 200,58

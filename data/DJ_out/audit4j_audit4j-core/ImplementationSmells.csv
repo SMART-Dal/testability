@@ -1,0 +1,238 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+audit4j_audit4j-core,org.audit4j.core,ObjectToJsonSerializer,toJson,Complex Conditional,The conditional expression object instanceof String || object instanceof Character || !object.equals(deidentifiedObj) is complex.,57
+audit4j_audit4j-core,org.audit4j.core,ObjectToJsonSerializer,isPrimitive,Complex Conditional,The conditional expression object instanceof String || object instanceof Number || object instanceof Boolean|| object instanceof Character is complex.,76
+audit4j_audit4j-core,org.audit4j.core,ObjectToJsonSerializer,deidentifyObject,Long Statement,The length of the statement "return DeIdentifyUtil.deidentify(String.valueOf(object)`deidentify.left()`deidentify.right()`deidentify.fromLeft()`deidentify.fromRight());" is 139.,90
+audit4j_audit4j-core,org.audit4j.core,Context,init,Complex Method,Cyclomatic complexity of the method is 12,102
+audit4j_audit4j-core,org.audit4j.core,Context,checkEnvironment,Long Statement,The length of the statement "Log.error("Your Java version ("`EnvUtil.getJavaVersion()`") is not supported for Audit4j. "`ErrorGuide.getGuide(ErrorGuide.JAVA_VERSION_ERROR));" is 144.,306
+audit4j_audit4j-core,org.audit4j.core,Context,initHandlers,Long Statement,The length of the statement "Log.error("There is a problem in the hander: "`handler.getClass().getName()`ErrorGuide.getGuide(ErrorGuide.HANDLER_ERROR));" is 123.,349
+audit4j_audit4j-core,org.audit4j.core,Context,initLayout,Long Statement,The length of the statement "Log.error("There is a problem in the layout: "`conf.getLayout().getClass().getName()`" you configured."`ErrorGuide.getGuide(ErrorGuide.LAYOUT_ERROR));" is 150.,373
+audit4j_audit4j-core,org.audit4j.core,Context,initStreams,Long Statement,The length of the statement "AsyncAnnotationAuditOutputStream asyncAnnotationStream=new AsyncAnnotationAuditOutputStream(new AuditProcessOutputStream(Context.getConfigContext())`annotationTransformer);" is 172.,391
+audit4j_audit4j-core,org.audit4j.core,Context,getDefaultAnnotationTransformer,Long Statement,The length of the statement "ObjectSerializerCommand serializerCommand=(ObjectSerializerCommand)PreConfigurationContext.getCommandByName("-objectSerializer");" is 129.,431
+audit4j_audit4j-core,org.audit4j.core,Configurations,resolveConfigFileAsStream,Complex Method,Cyclomatic complexity of the method is 8,86
+audit4j_audit4j-core,org.audit4j.core,Configurations,resolveConfigFileAsStream,Long Identifier,The length of the field ENVIRONMENT_CONFIG_VARIABLE_NAME is 32.,86
+audit4j_audit4j-core,org.audit4j.core,Configurations,resolveConfigFileAsStream,Long Identifier,The length of the field SYSTEM_PROPERTY_CONFIG_VARIABLE_NAME is 36.,86
+audit4j_audit4j-core,org.audit4j.core,Configurations,getProviderByFileExtention,Long Identifier,The length of the field CONFIG_EXTENTION_NOT_SUPPORTED_EXCEPTION_ID is 43.,176
+audit4j_audit4j-core,org.audit4j.core,Configurations,getEnvironemtVariableConfigFilePath,Long Identifier,The length of the field ENVIRONMENT_CONFIG_VARIABLE_NAME is 32.,198
+audit4j_audit4j-core,org.audit4j.core,Configurations,getSystemPropertyConfigFilePath,Long Identifier,The length of the field SYSTEM_PROPERTY_CONFIG_VARIABLE_NAME is 36.,222
+audit4j_audit4j-core,org.audit4j.core,ObjectToStringSerializer,toString,Complex Method,Cyclomatic complexity of the method is 16,56
+audit4j_audit4j-core,org.audit4j.core,ObjectToStringSerializer,toString,Long Statement,The length of the statement "primitiveValue=DeIdentifyUtil.deidentify(primitiveValue`deidentify.left()`deidentify.right()`deidentify.fromLeft()`deidentify.fromRight());" is 139.,56
+audit4j_audit4j-core,org.audit4j.core,ObjectToStringSerializer,toString,Long Statement,The length of the statement "paramValue=DeIdentifyUtil.deidentify(paramValue`deidentifyAnn.left()`deidentifyAnn.right()`deidentifyAnn.fromLeft()`deidentifyAnn.fromRight());" is 143.,56
+audit4j_audit4j-core,org.audit4j.core,ObjectToStringSerializer,isPrimitive,Complex Conditional,The conditional expression object instanceof String || object instanceof Number || object instanceof Boolean|| object instanceof Character is complex.,148
+audit4j_audit4j-core,org.audit4j.core,MovingAverage,getAverage,Magic Number,The method contains a magic number: 2,27
+audit4j_audit4j-core,org.audit4j.core,DefaultAnnotationTransformer,transformToEvent,Long Statement,The length of the statement "if (annotationEvent.getClazz().isAnnotationPresent(Audit.class) && !annotationEvent.getMethod().isAnnotationPresent(IgnoreAudit.class)) {" is 137.,57
+audit4j_audit4j-core,org.audit4j.core,DefaultAnnotationTransformer,transformToEvent,Long Statement,The length of the statement "else if (!annotationEvent.getClazz().isAnnotationPresent(Audit.class) && annotationEvent.getMethod().isAnnotationPresent(Audit.class)) {" is 136.,57
+audit4j_audit4j-core,org.audit4j.core,DefaultAnnotationTransformer,getFields,Complex Method,Cyclomatic complexity of the method is 8,116
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,toFields,Complex Method,Cyclomatic complexity of the method is 22,46
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,toFields,Long Statement,The length of the statement "primitiveValue=DeIdentifyUtil.deidentify(primitiveValue`deidentify.left()`deidentify.right()`deidentify.fromLeft()`deidentify.fromRight());" is 139.,46
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,toFields,Long Statement,The length of the statement "String internalLocalOjectName=localOjectName + CoreConstants.OPEN_BRACES_CHAR + "arg"+ i+ CoreConstants.CLOSE_BRACES_CHAR;" is 122.,46
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,toFields,Long Statement,The length of the statement "if (clazz.getComponentType().isPrimitive()) auditFields.add(new Field(internalLocalOjectName`String.valueOf(objVal)`objVal.getClass().getName()));" is 146.,46
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,toFields,Long Statement,The length of the statement "String internalLocalOjectName2=internalLocalOjectName + CoreConstants.OPEN_BRACES_CHAR + "arg"+ i+ CoreConstants.CLOSE_BRACES_CHAR;" is 131.,46
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,toFields,Long Statement,The length of the statement "auditFields.add(new Field(internalLocalOjectName2`String.valueOf(collectionObject)`collectionObject.getClass().getName()));" is 123.,46
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,toFields,Long Statement,The length of the statement "paramValue=DeIdentifyUtil.deidentify(paramValue`deidentifyAnn.left()`deidentifyAnn.right()`deidentifyAnn.fromLeft()`deidentifyAnn.fromRight());" is 143.,46
+audit4j_audit4j-core,org.audit4j.core,ObjectToFieldsSerializer,isPrimitive,Complex Conditional,The conditional expression object instanceof String || object instanceof Number || object instanceof Boolean|| object instanceof Character is complex.,169
+audit4j_audit4j-core,org.audit4j.core,ValidationManager,validateConfigurations,Long Statement,The length of the statement "Log.error("Handler should not be null` One or more handler implementation shuld be configured in the configuration"`ErrorGuide.getGuide(ErrorGuide.EMPTY_HANDLERS));" is 164.,62
+audit4j_audit4j-core,org.audit4j.core,ValidationManager,validateConfigurations,Long Statement,The length of the statement "Log.error("Layout should not be null` A layout implementation shuld be configured in the configuration"`ErrorGuide.getGuide(ErrorGuide.EMPTY_LAYOUT));" is 150.,62
+audit4j_audit4j-core,org.audit4j.core,ValidationManager,attemptToSerialize,Empty catch clause,The method has an empty catch block.,115
+audit4j_audit4j-core,org.audit4j.core,ConcurrentConfigurationContextTest,testGetRunStatus_1,Magic Number,The method contains a magic number: 3,222
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDeidentifyLeft,Magic Number,The method contains a magic number: 4,29
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDeidentifyRight,Magic Number,The method contains a magic number: 4,34
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDeidentifyFromRight,Magic Number,The method contains a magic number: 4,39
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDidentifyFromLeft,Magic Number,The method contains a magic number: 4,44
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDeidentifyMiddle,Magic Number,The method contains a magic number: 2,49
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDeidentifyMiddle,Magic Number,The method contains a magic number: 3,49
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDeidentifyEdge,Magic Number,The method contains a magic number: 2,54
+audit4j_audit4j-core,org.audit4j.core,DeIdentifyUtilTest,testDeidentifyEdge,Magic Number,The method contains a magic number: 3,54
+audit4j_audit4j-core,org.audit4j.core,Audit4jTestBase,getSampleAuditEvent,Long Statement,The length of the statement "builder.addTimestamp(new Date()).addActor(actor).addAction("myMethod").addOrigin("Origin").addField("myParam1Name"`"param1").addField("myParam2Name"`new Integer(2));" is 165.,22
+audit4j_audit4j-core,org.audit4j.core,Audit4jTestBase,getSampleAuditEvent,Magic Number,The method contains a magic number: 2,22
+audit4j_audit4j-core,org.audit4j.core,Audit4jTestBase,getSampleAuditEvent,Long Statement,The length of the statement "builder.addTimestamp(new Date()).addActor(actor).addAction(action).addOrigin("Origin").addField("myParam1Name"`"param1").addField("myParam2Name"`new Integer(2));" is 161.,30
+audit4j_audit4j-core,org.audit4j.core,Audit4jTestBase,getSampleAuditEvent,Magic Number,The method contains a magic number: 2,30
+audit4j_audit4j-core,org.audit4j.core,Audit4jTestBase,halt,Magic Number,The method contains a magic number: 100000,64
+audit4j_audit4j-core,org.audit4j.core,AnnotationTransformerTests,testtransformToEvent_IgnoreAudit,Magic Number,The method contains a magic number: 5,17
+audit4j_audit4j-core,org.audit4j.core,AnnotationTransformerTests,testtransformToEvent_Deidentify,Magic Number,The method contains a magic number: 5,49
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Conditional,The conditional expression left == 0 && right == 0 && fromLeft == 0 && fromRight == 0 is complex.,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Conditional,The conditional expression left > 0 && right == 0 && fromLeft == 0 && fromRight == 0 is complex.,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Conditional,The conditional expression left == 0 && right > 0 && fromLeft == 0 && fromRight == 0 is complex.,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Conditional,The conditional expression left > 0 && right > 0 && fromLeft == 0 && fromRight == 0 is complex.,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Conditional,The conditional expression left == 0 && right == 0 && fromLeft > 0 && fromRight == 0 is complex.,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Conditional,The conditional expression left == 0 && right == 0 && fromLeft == 0 && fromRight > 0 is complex.,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Conditional,The conditional expression left == 0 && right == 0 && fromLeft > 0 && fromRight > 0 is complex.,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Complex Method,Cyclomatic complexity of the method is 8,154
+audit4j_audit4j-core,org.audit4j.core.annotation,DeIdentifyUtil,deidentify,Long Parameter List,The method has 5 parameters. ,154
+audit4j_audit4j-core,org.audit4j.core.annotation,AuditFieldAnnotationAttribute,getAllFields,Long Statement,The length of the statement "paramValue=DeIdentifyUtil.deidentify(paramValue`deidentify.left()`deidentify.right()`deidentify.fromLeft()`deidentify.fromRight());" is 131.,38
+audit4j_audit4j-core,org.audit4j.core.annotation,AuditFieldAnnotationAttribute,getMarkedFields,Long Statement,The length of the statement "paramValue=DeIdentifyUtil.deidentify(paramValue`deidentify.left()`deidentify.right()`deidentify.fromLeft()`deidentify.fromRight());" is 131.,86
+audit4j_audit4j-core,org.audit4j.core.annotation,AuditAnnotationAttributesTests,hasAnnotation_Method,Long Statement,The length of the statement "annoMethod=MethodAnnotationMock.class.getMethod("testAnnotation_selection_all"`Integer.class`String.class`MethodAnnotationMock.class`Object.class`String.class);" is 160.,35
+audit4j_audit4j-core,org.audit4j.core.dto,EventBuilderTest,testEventBuilder,Long Statement,The length of the statement "builder.addActor("Actor").addAction("myMethod").addOrigin("Origin1").addField("myParam1Name"`"param1").addField("myParam2Name"`new Integer(2));" is 143.,12
+audit4j_audit4j-core,org.audit4j.core.dto,EventBuilderTest,testEventBuilder,Magic Number,The method contains a magic number: 2,12
+audit4j_audit4j-core,org.audit4j.core.command,CommandProcessor,process,Long Statement,The length of the statement "Log.error("There is a problem in the option you configured: "`entry.getKey()`ErrorGuide.getGuide(ErrorGuide.OPTION_ERROR));" is 123.,50
+audit4j_audit4j-core,org.audit4j.core.command,CommandProcessor,process,Long Statement,The length of the statement "Log.warn("Invalid command: "`command[0]`" Please check your configurations. "`ErrorGuide.getGuide(ErrorGuide.INVALID_COMMAND));" is 127.,74
+audit4j_audit4j-core,org.audit4j.core.command.impl,ScanAnnotatedCommand,getCommandDescription,Long Statement,The length of the statement "return "Scan annotations in initialization time and store the information. " + "These information will use later to speedup the event processing";" is 146.,59
+audit4j_audit4j-core,org.audit4j.core.web,ServletContextConfigSupportTest,testLoadConfig,Long Statement,The length of the statement "when(context.getInitParameter(ContextConfigParams.PARAM_HANDLERS)).thenReturn("org.audit4j.core.handler.ConsoleAuditHandler;org.audit4j.core.handler.file.FileAuditHandler;");" is 174.,14
+audit4j_audit4j-core,org.audit4j.core.handler.file,MemoryMappedFileWriter,init,Magic Number,The method contains a magic number: 10485760,56
+audit4j_audit4j-core,org.audit4j.core.handler.file,FileHandlerUtil,generateAuditArchiveFileName,Long Statement,The length of the statement "name.append("Audit_Archive-").append(AuditUtil.dateToString(date`"yyyy-MM-dd")).append(CoreConstants.AUDIT_ARCHIVE_EXTENTION);" is 126.,92
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Complex Method,Cyclomatic complexity of the method is 68,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Empty catch clause,The method has an empty catch block.,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Empty catch clause,The method has an empty catch block.,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Long Method,The method has 328 lines of code.,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 5,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 80,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 3,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 3,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 3,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 3,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 3,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 3,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 2,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 2,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,init,Magic Number,The method contains a magic number: 2,77
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,createListener,Magic Number,The method contains a magic number: 1000000,408
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FTPArchiveClient,bytesTransferred,Magic Number,The method contains a magic number: 1000000,424
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,ArchiveManager,extractArchiveDateCount,Magic Number,The method contains a magic number: 30,84
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,ArchiveManager,extractArchiveDateCount,Magic Number,The method contains a magic number: 2,84
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,ArchiveManager,extractArchiveDateCount,Magic Number,The method contains a magic number: 2,84
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,ArchiveManager,extractArchiveDateCount,Magic Number,The method contains a magic number: 365,84
+audit4j_audit4j-core,org.audit4j.core.handler.file.archive,FileArchiveJob,archive,Long Statement,The length of the statement "String archiveFileName=FileHandlerUtil.generateAuditArchiveFileName(FileHandlerUtil.substractDate(new Date()`archiveDateDiff));" is 127.,48
+audit4j_audit4j-core,org.audit4j.core.io,AuditEventOutputStream,write,Empty catch clause,The method has an empty catch block.,66
+audit4j_audit4j-core,org.audit4j.core.io,BatchProcessStreamTest,testSingleBatch,Magic Number,The method contains a magic number: 4,13
+audit4j_audit4j-core,org.audit4j.core.io,BatchProcessStreamTest,testMultipleBatches,Magic Number,The method contains a magic number: 4,27
+audit4j_audit4j-core,org.audit4j.core.io,BatchProcessStreamTest,testMultipleBatches,Magic Number,The method contains a magic number: 3,27
+audit4j_audit4j-core,org.audit4j.core.io,BatchProcessStreamTest,testMultipleBatches,Magic Number,The method contains a magic number: 2,27
+audit4j_audit4j-core,org.audit4j.core.io,BatchProcessStreamTest,testMultipleBatches,Magic Number,The method contains a magic number: 3,27
+audit4j_audit4j-core,org.audit4j.core.io,BatchProcessStreamTest,testCloseStream,Magic Number,The method contains a magic number: 4,54
+audit4j_audit4j-core,org.audit4j.core.layout,SimpleLayout,format,Long Statement,The length of the statement "buff.append(actionItem.getName()).append(CoreConstants.SPACE).append(actionItem.getType()).append(CoreConstants.COLON_CHAR).append(actionItem.getValue()).append(CoreConstants.COMMA_CHAR);" is 187.,47
+audit4j_audit4j-core,org.audit4j.core.util,StopWatch,getTotalTimeSeconds,Magic Number,The method contains a magic number: 1000.0,255
+audit4j_audit4j-core,org.audit4j.core.util,StopWatch,prettyPrint,Magic Number,The method contains a magic number: 5,294
+audit4j_audit4j-core,org.audit4j.core.util,StopWatch,prettyPrint,Magic Number,The method contains a magic number: 3,294
+audit4j_audit4j-core,org.audit4j.core.util,StopWatch,toString,Magic Number,The method contains a magic number: 100.0,324
+audit4j_audit4j-core,org.audit4j.core.util,EnvUtil,isJDK5,Magic Number,The method contains a magic number: 5,41
+audit4j_audit4j-core,org.audit4j.core.util,EnvUtil,isJDK6OrHigher,Magic Number,The method contains a magic number: 6,50
+audit4j_audit4j-core,org.audit4j.core.util,EnvUtil,isJDK7OrHigher,Magic Number,The method contains a magic number: 7,59
+audit4j_audit4j-core,org.audit4j.core.util,EnvUtil,isServletSpec3OrHigher,Magic Number,The method contains a magic number: 3,104
+audit4j_audit4j-core,org.audit4j.core.util,EnvUtil,hasConfigFileExists,Complex Conditional,The conditional expression AuditUtil.isFileExists(filePath + Configurations.YML_EXTENTION) || AuditUtil.isFileExists(filePath + Configurations.YAML_EXTENTION) || AuditUtil.isFileExists(filePath + Configurations.XML_EXTENTION) is complex.,128
+audit4j_audit4j-core,org.audit4j.core.util,EnvUtil,hasConfigFileExists,Long Statement,The length of the statement "if (AuditUtil.isFileExists(filePath + Configurations.YML_EXTENTION) || AuditUtil.isFileExists(filePath + Configurations.YAML_EXTENTION) || AuditUtil.isFileExists(filePath + Configurations.XML_EXTENTION)) {" is 205.,128
+audit4j_audit4j-core,org.audit4j.core.util,EncryptionUtil,generateKeyIfNotAvailable,Magic Number,The method contains a magic number: 65536,133
+audit4j_audit4j-core,org.audit4j.core.util,EncryptionUtil,generateKeyIfNotAvailable,Magic Number,The method contains a magic number: 128,133
+audit4j_audit4j-core,org.audit4j.core.util,ReflectUtil,getNewInstance,Long Statement,The length of the statement "catch ( NoSuchMethodException|SecurityException|InstantiationException|IllegalAccessException|IllegalArgumentException|InvocationTargetException e) {" is 149.,38
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,encodeLines,Long Parameter List,The method has 5 parameters. ,124
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,encodeLines,Magic Number,The method contains a magic number: 2,124
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,encode,Magic Number,The method contains a magic number: 2,174
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,encode,Magic Number,The method contains a magic number: 2,174
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,encode,Magic Number,The method contains a magic number: 2,174
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,encode,Magic Number,The method contains a magic number: 2,174
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,decodeLines,Complex Conditional,The conditional expression cValue != ' ' && cValue != '\r' && cValue != '\n' && cValue != '\t' is complex.,217
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,decode,Complex Conditional,The conditional expression i0Value > CONSTANT_127 || i1Value > CONSTANT_127 || i2Value > CONSTANT_127 || i3Value > CONSTANT_127 is complex.,255
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,decode,Complex Conditional,The conditional expression b0Value < 0 || b1Value < 0 || b2Value < 0 || b3Value < 0 is complex.,255
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,decode,Complex Method,Cyclomatic complexity of the method is 8,255
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,decode,Magic Number,The method contains a magic number: 2,255
+audit4j_audit4j-core,org.audit4j.core.util,Base64Coder,decode,Magic Number,The method contains a magic number: 2,255
+audit4j_audit4j-core,org.audit4j.core.util,StopWatchTest,testStopWatch_1,Long Statement,The length of the statement "assertEquals("StopWatch '': running time (millis) = 0\n-----------------------------------------\nms % Task name\n-----------------------------------------\n"`result.prettyPrint());" is 181.,21
+audit4j_audit4j-core,org.audit4j.core.util,StopWatchTest,testStopWatch_2,Long Statement,The length of the statement "assertEquals("StopWatch '': running time (millis) = 0\n-----------------------------------------\nms % Task name\n-----------------------------------------\n"`result.prettyPrint());" is 181.,47
+audit4j_audit4j-core,org.audit4j.core.util,StopWatchTest,testGetTotalTimeSeconds_1,Magic Number,The method contains a magic number: 0.1,335
+audit4j_audit4j-core,org.audit4j.core.util,ObjectToFieldsSerializerTest,testToFieldsObjectArray,Magic Number,The method contains a magic number: 10,42
+audit4j_audit4j-core,org.audit4j.core.util,ObjectToFieldsSerializerTest,testToFieldsObjectArray,Magic Number,The method contains a magic number: 20,42
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,data,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{6`"1.6.0_23"}`{7`"1.7.0_80"}`{8`"1.8.0_211"}`{9`"9.0.1"}`{10`"10.0.1"}`{11`"11.0.4"}`{12`"12"}});" is 134.,22
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Long Statement,The length of the statement "assertThat("java version " + javaVersion + " with description "+ javaSystemProperty+ " was not correctly detected as higher than java "+ version`JavaVersion.isJDK_N_OrHigher(version`javaSystemProperty)`is(version <= javaVersion));" is 230.,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 5,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 6,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 7,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 8,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 9,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 10,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 11,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 12,38
+audit4j_audit4j-core,org.audit4j.core.util,JavaVersionTest,canDetectWhetherJavaVersionIsHigherThanAGivenValue,Magic Number,The method contains a magic number: 13,38
+audit4j_audit4j-core,org.audit4j.core.util,ConcurrentTimelyBufferedArrayListTest,testList,Long Statement,The length of the statement "ConcurrentTimelyBufferedArrayList<String> list=new ConcurrentTimelyBufferedArrayList<>(10`new BufferedListener<String>(){" is 121.,10
+audit4j_audit4j-core,org.audit4j.core.util,ConcurrentTimelyBufferedArrayListTest,testList,Magic Number,The method contains a magic number: 10,10
+audit4j_audit4j-core,org.audit4j.core.extra.scannotation,IteratorFactory,create,Magic Number,The method contains a magic number: 4,21
+audit4j_audit4j-core,org.audit4j.core.extra.scannotation,IteratorFactory,create,Magic Number,The method contains a magic number: 2,21
+audit4j_audit4j-core,org.audit4j.core.extra.scannotation,AnnotationDB,scanMethods,Complex Method,Cyclomatic complexity of the method is 11,238
+audit4j_audit4j-core,org.audit4j.core.extra.scannotation,AnnotationDB,scanMethods,Long Statement,The length of the statement "ParameterAnnotationsAttribute paramsVisible=(ParameterAnnotationsAttribute)method.getAttribute(ParameterAnnotationsAttribute.visibleTag);" is 137.,238
+audit4j_audit4j-core,org.audit4j.core.extra.scannotation,AnnotationDB,scanMethods,Long Statement,The length of the statement "ParameterAnnotationsAttribute paramsInvisible=(ParameterAnnotationsAttribute)method.getAttribute(ParameterAnnotationsAttribute.invisibleTag);" is 141.,238
+audit4j_audit4j-core,org.audit4j.core.extra.scannotation,JarIterator,next,Complex Conditional,The conditional expression closed || (next == null && !initial) is complex.,58
+audit4j_audit4j-core,org.audit4j.core.extra.scannotation,JarIterator,close,Empty catch clause,The method has an empty catch block.,71
+audit4j_audit4j-core,org.audit4j.core.schedule,PeriodicTrigger,hashCode,Magic Number,The method contains a magic number: 17,120
+audit4j_audit4j-core,org.audit4j.core.schedule,PeriodicTrigger,hashCode,Magic Number,The method contains a magic number: 29,120
+audit4j_audit4j-core,org.audit4j.core.schedule,PeriodicTrigger,hashCode,Magic Number,The method contains a magic number: 37,120
+audit4j_audit4j-core,org.audit4j.core.schedule,PeriodicTrigger,hashCode,Magic Number,The method contains a magic number: 41,120
+audit4j_audit4j-core,org.audit4j.core.schedule,ThreadPoolTaskScheduler,setRemoveOnCancelPolicy,Long Identifier,The length of the field setRemoveOnCancelPolicyAvailable is 32.,66
+audit4j_audit4j-core,org.audit4j.core.schedule,ThreadPoolTaskScheduler,initializeExecutor,Long Identifier,The length of the field setRemoveOnCancelPolicyAvailable is 32.,99
+audit4j_audit4j-core,org.audit4j.core.schedule,ThreadPoolTaskScheduler,isRemoveOnCancelPolicy,Long Identifier,The length of the field setRemoveOnCancelPolicyAvailable is 32.,185
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,doNext,Long Statement,The length of the statement "throw new IllegalArgumentException("Invalid cron expression \"" + this.expression + "\" led to runaway search for next trigger");" is 129.,105
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,doNext,Magic Number,The method contains a magic number: 4,105
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,findNextDay,Long Parameter List,The method has 6 parameters. ,152
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,findNextDay,Magic Number,The method contains a magic number: 366,152
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,findNext,Long Parameter List,The method has 6 parameters. ,181
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Cron expression must consist of 6 fields (found %d in \"%s\")"`fields.length`expression));" is 140.,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 6,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 60,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 60,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 2,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 24,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 3,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 4,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 5,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 8,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 7,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,parse,Magic Number,The method contains a magic number: 7,223
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,setDaysOfMonth,Magic Number,The method contains a magic number: 31,265
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,setMonths,Magic Number,The method contains a magic number: 12,293
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,setMonths,Magic Number,The method contains a magic number: 13,293
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,setNumberHits,Long Statement,The length of the statement "throw new IllegalArgumentException("Incrementer has more than two fields: '" + field + "' in expression \""+ this.expression+ "\"");" is 132.,314
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,setNumberHits,Magic Number,The method contains a magic number: 2,314
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,getRange,Long Statement,The length of the statement "throw new IllegalArgumentException("Range has more than two fields: '" + field + "' in expression \""+ this.expression+ "\"");" is 126.,347
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,getRange,Long Statement,The length of the statement "throw new IllegalArgumentException("Range exceeds maximum (" + max + "): '"+ field+ "' in expression \""+ this.expression+ "\"");" is 129.,347
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,getRange,Long Statement,The length of the statement "throw new IllegalArgumentException("Range less than minimum (" + min + "): '"+ field+ "' in expression \""+ this.expression+ "\"");" is 131.,347
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,getRange,Magic Number,The method contains a magic number: 2,347
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,getRange,Magic Number,The method contains a magic number: 2,347
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,equals,Long Statement,The length of the statement "return cron.months.equals(this.months) && cron.daysOfMonth.equals(this.daysOfMonth) && cron.daysOfWeek.equals(this.daysOfWeek)&& cron.hours.equals(this.hours)&& cron.minutes.equals(this.minutes)&& cron.seconds.equals(this.seconds);" is 231.,393
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Long Statement,The length of the statement "return 37 + 17 * this.months.hashCode() + 29 * this.daysOfMonth.hashCode() + 37 * this.daysOfWeek.hashCode() + 41 * this.hours.hashCode() + 53 * this.minutes.hashCode() + 61 * this.seconds.hashCode();" is 200.,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Magic Number,The method contains a magic number: 37,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Magic Number,The method contains a magic number: 17,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Magic Number,The method contains a magic number: 29,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Magic Number,The method contains a magic number: 37,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Magic Number,The method contains a magic number: 41,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Magic Number,The method contains a magic number: 53,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronSequenceGenerator,hashCode,Magic Number,The method contains a magic number: 61,410
+audit4j_audit4j-core,org.audit4j.core.schedule,CronTrigger,equals,Long Statement,The length of the statement "return this == obj || (obj instanceof CronTrigger && this.sequenceGenerator.equals(((CronTrigger)obj).sequenceGenerator));" is 122.,78
+audit4j_audit4j-core,org.audit4j.core.schedule,TaskUtils,getDefaultErrorHandler,Long Identifier,The length of the field LOG_AND_SUPPRESS_ERROR_HANDLER is 30.,62
+audit4j_audit4j-core,org.audit4j.core.schedule,TaskUtils,getDefaultErrorHandler,Long Identifier,The length of the field LOG_AND_PROPAGATE_ERROR_HANDLER is 31.,62
+audit4j_audit4j-core,org.audit4j.core.schedule,ConcurrentTaskScheduler,setScheduledExecutor,Long Identifier,The length of the field managedScheduledExecutorServiceClass is 36.,122
+audit4j_audit4j-core,org.audit4j.core.schedule,ConcurrentTaskScheduler,setScheduledExecutor,Long Statement,The length of the statement "this.enterpriseConcurrentScheduler=managedScheduledExecutorServiceClass != null && managedScheduledExecutorServiceClass.isInstance(scheduledExecutor);" is 150.,122
+audit4j_audit4j-core,org.audit4j.core.schedule.util,StringUtils,countOccurrencesOf,Complex Conditional,The conditional expression str == null || sub == null || str.length() == 0 || sub.length() == 0 is complex.,370
+audit4j_audit4j-core,org.audit4j.core.schedule.util,StringUtils,replace,Complex Conditional,The conditional expression !hasLength(inString) || !hasLength(oldPattern) || newPattern == null is complex.,392
+audit4j_audit4j-core,org.audit4j.core.schedule.util,StringUtils,cleanPath,Complex Method,Cyclomatic complexity of the method is 10,638
+audit4j_audit4j-core,org.audit4j.core.schedule.util,StringUtils,parseLocaleString,Magic Number,The method contains a magic number: 2,713
+audit4j_audit4j-core,org.audit4j.core.schedule.util,StringUtils,validateLocalePart,Complex Conditional,The conditional expression ch != '_' && ch != ' ' && !Character.isLetterOrDigit(ch) is complex.,749
+audit4j_audit4j-core,org.audit4j.core.smoke,BatchSmokeTest,testSingleBatch,Magic Number,The method contains a magic number: 4,28
+audit4j_audit4j-core,org.audit4j.core.smoke,SmokeTest,smokeTestAuditEvent,Long Statement,The length of the statement "builder.addActor(actor).addAction("myMethod").addOrigin("Origin1").addField("myParam1Name"`"param1").addField("myParam2Name"`new Integer(2));" is 141.,22
+audit4j_audit4j-core,org.audit4j.core.smoke,SmokeTest,smokeTestAuditEvent,Magic Number,The method contains a magic number: 2,22
+audit4j_audit4j-core,org.audit4j.core.smoke,SmokeTest,smokeTestAuditEvent,Magic Number,The method contains a magic number: 4,22
+audit4j_audit4j-core,org.audit4j.core.smoke,SmokeTest,main,Long Statement,The length of the statement "builder.addActor("Dummy Actor").addAction("myMethod").addOrigin("Origin1").addField("myParam1Name"`"param1").addField("myParam2Name"`new Integer(2));" is 149.,48
+audit4j_audit4j-core,org.audit4j.core.smoke,SmokeTest,main,Magic Number,The method contains a magic number: 100000,48
+audit4j_audit4j-core,org.audit4j.core.smoke,SmokeTest,main,Magic Number,The method contains a magic number: 2,48
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,IgnoreAuditAnnotationTest,testIgnoreAuditAnnotation,Magic Number,The method contains a magic number: 5,22
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_all,Long Statement,The length of the statement "annoMethod=MethodAnnotationMock.class.getMethod("testAnnotation_selection_all"`Integer.class`String.class`MethodAnnotationMock.class`Object.class`String.class);" is 160.,21
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_all,Magic Number,The method contains a magic number: 5,21
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_all,Magic Number,The method contains a magic number: 2,21
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_all,Magic Number,The method contains a magic number: 3,21
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_all,Magic Number,The method contains a magic number: 4,21
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_marked,Long Statement,The length of the statement "annoMethod=MethodAnnotationMock.class.getMethod("testAnnotation_selection_marked"`Integer.class`String.class`MethodAnnotationMock.class`Object.class`String.class);" is 163.,51
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_marked,Magic Number,The method contains a magic number: 5,51
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_marked,Magic Number,The method contains a magic number: 2,51
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_marked,Magic Number,The method contains a magic number: 3,51
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,MethodAnnotationTest,testAnnotation_selection_marked,Magic Number,The method contains a magic number: 4,51
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,DeIdentifyAnnotationTest,testAnnotation_selection_marked_deidentify,Magic Number,The method contains a magic number: 5,20
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,DeIdentifyAnnotationTest,testAnnotation_selection_marked_deidentify_from_left,Magic Number,The method contains a magic number: 5,41
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,DeIdentifyAnnotationTest,testAnnotation_selection_marked_deidentify_from_right,Magic Number,The method contains a magic number: 5,62
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,ClassAnnotationTest,testAnnotation_selection_all,Magic Number,The method contains a magic number: 5,22
+audit4j_audit4j-core,org.audit4j.core.Int.event.annotation,ClassAnnotationTest,testAnnotation_complex,Magic Number,The method contains a magic number: 5,41
+audit4j_audit4j-core,org.audit4j.core.Int.filter,AuditEventFilterIntTest,testFilter_filter,Magic Number,The method contains a magic number: 2,24
+audit4j_audit4j-core,org.audit4j.core.Int.filter,AuditEventFilterIntTest,testFilter_not_filter,Magic Number,The method contains a magic number: 2,34
+audit4j_audit4j-core,org.audit4j.core.Mock,MethodAnnotationMock,testAnnotation_selection_all,Long Parameter List,The method has 5 parameters. ,11
+audit4j_audit4j-core,org.audit4j.core.Mock,MethodAnnotationMock,testAnnotation_selection_marked,Long Parameter List,The method has 5 parameters. ,21
+audit4j_audit4j-core,org.audit4j.core.Mock,MethodAnnotationMock,testAnnotation_selection_marked_deidentify_from_left,Magic Number,The method contains a magic number: 2,31
+audit4j_audit4j-core,org.audit4j.core.Mock,MethodAnnotationMock,testAnnotation_selection_marked_deidentify_from_right,Magic Number,The method contains a magic number: 2,35
+audit4j_audit4j-core,org.audit4j.core.Mock,TestSuperObjectMock,create,Magic Number,The method contains a magic number: 2,31
+audit4j_audit4j-core,org.audit4j.core.Mock,TestSuperObjectMock,create,Magic Number,The method contains a magic number: 3,31
+audit4j_audit4j-core,org.audit4j.core.Mock,TestSuperObjectMock,create,Magic Number,The method contains a magic number: 2,31
+audit4j_audit4j-core,org.audit4j.core.Mock,TestSuperObjectMock,create,Magic Number,The method contains a magic number: 3,31
+audit4j_audit4j-core,org.audit4j.core.Mock,TestSuperObjectMock,create,Magic Number,The method contains a magic number: 10,31

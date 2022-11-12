@@ -1,0 +1,738 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+mpetazzoni_ttorrent,com.turn.ttorrent.client,TorrentsStorage,remove,Empty catch clause,The method has an empty catch block.,91
+mpetazzoni_ttorrent,com.turn.ttorrent.client,TorrentsStorage,clear,Empty catch clause,The method has an empty catch block.,146
+mpetazzoni_ttorrent,com.turn.ttorrent.client,TorrentLoaderImpl,loadTorrent,Long Statement,The length of the statement "final SharedTorrent sharedTorrent=new SharedTorrent(torrentMetadata`loadedTorrent.getPieceStorage()`new RequestStrategyImplAnyInteresting()`loadedTorrent.getTorrentStatistic()`loadedTorrent.getEventDispatcher());" is 212.,18
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,SharedTorrent,Long Parameter List,The method has 5 parameters. ,104
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,hashSingleThread,Long Statement,The length of the statement "logger.debug("Analyzing local data for {} with {} threads..."`myTorrentMetadata.getDirectoryName()`TorrentCreator.HASHING_THREADS_COUNT);" is 137.,242
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,handlePeerChoked,Long Statement,The length of the statement "logger.trace("Peer {} choked` we now have {} outstanding " + "request(s): {}."`new Object[]{peer`this.requestedPieces.cardinality()`this.requestedPieces});" is 155.,429
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,getRequestsCollection,Complex Method,Cyclomatic complexity of the method is 9,477
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,getRequestsCollection,Long Identifier,The length of the field MAX_REQUESTED_PIECES_PER_TORRENT is 32.,477
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,getRequestsCollection,Long Statement,The length of the statement "boolean turnOnEndGame=completedAndValidated > getPiecesCount() * ENG_GAME_COMPLETION_RATIO || completedAndValidated > getPiecesCount() - END_GAME_STATIC_PIECES_COUNT;" is 166.,477
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,getRequestsCollection,Long Statement,The length of the statement "logger.info("Running end-game mode` currently available {}/{} pieces"`pieceStorage.getAvailablePieces().cardinality()`getPieceCount());" is 135.,477
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,getRequestsCollection,Magic Number,The method contains a magic number: 10,477
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,handlePieceAvailability,Complex Conditional,The conditional expression !peer.isChoked() && peer.isInteresting() && !peer.isDownloading() is complex.,545
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,handlePieceAvailability,Long Statement,The length of the statement "logger.trace("Peer {} contributes {} piece(s) [{}/{}/{}]."`new Object[]{peer`peer.getAvailablePieces().cardinality()`this.completedPieces.cardinality()`this.getAvailablePieces().cardinality()`this.pieces.length});" is 213.,545
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,handleBitfieldAvailability,Long Statement,The length of the statement "logger.debug("Peer {} contributes {} piece(s)` total pieces count: {}."`new Object[]{peer`availablePieces.cardinality()`myTorrentMetadata.getPiecesCount()});" is 157.,582
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,handlePieceCompleted,Long Statement,The length of the statement "logger.trace("We now have {} piece(s) and {} outstanding request(s): {}"`new Object[]{this.completedPieces.cardinality()`this.requestedPieces.cardinality()`this.requestedPieces});" is 179.,652
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,handlePeerDisconnected,Long Statement,The length of the statement "logger.debug("Peer {} went away with {} piece(s) [{}/{}]."`new Object[]{peer`availablePieces.cardinality()`this.completedPieces.cardinality()`this.pieces.length});" is 163.,679
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharedTorrent,handlePeerDisconnected,Long Statement,The length of the statement "logger.trace("We now have {} piece(s) and {} outstanding request(s): {}"`new Object[]{this.completedPieces.cardinality()`this.requestedPieces.cardinality()`this.requestedPieces});" is 179.,679
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Piece,_read,Long Statement,The length of the statement "throw new IllegalArgumentException("Piece#" + this.index + " overrun ("+ offset+ " + "+ length+ " > "+ this.length+ ") !");" is 123.,164
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,addTorrent,Long Statement,The length of the statement "final LoadedTorrentImpl loadedTorrent=new LoadedTorrentImpl(new TorrentStatistic()`metadataProvider`torrentMetadata`pieceStorage`eventDispatcher);" is 146.,195
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,addTorrent,Long Statement,The length of the statement "eventDispatcher.multicaster().validationComplete(pieceStorage.getAvailablePieces().cardinality()`torrentMetadata.getPiecesCount());" is 131.,195
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,getSelfPeers,Magic Number,The method contains a magic number: 4,370
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,start,Magic Number,The method contains a magic number: 6881,395
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,start,Magic Number,The method contains a magic number: 6889,395
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,start,Long Parameter List,The method has 5 parameters. ,414
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,start,Long Statement,The length of the statement "this.myConnectionManager=new ConnectionManager(this`new SystemTimeService()`myInConnectionAllower`myOutConnectionAllower`selectorFactory`mySendBufferSize`myReceiveBufferSize);" is 175.,414
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,start,Long Statement,The length of the statement "logger.info("BitTorrent client [{}] started and " + "listening at {}:{}..."`new Object[]{self.getShortHexPeerId()`self.getIp()`self.getPort()});" is 144.,414
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,start,Magic Number,The method contains a magic number: 4,414
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,stop,Magic Number,The method contains a magic number: 60,453
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,createSharingPeer,Long Parameter List,The method has 7 parameters. ,578
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,handleDiscoveredPeers,Complex Method,Cyclomatic complexity of the method is 10,614
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,handleDiscoveredPeers,Long Statement,The length of the statement "logger.debug("Got {} peer(s) ({}) for {} in tracker response"`new Object[]{peers.size()`Arrays.toString(peers.toArray())`hexInfoHash});" is 135.,614
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,handleDiscoveredPeers,Long Statement,The length of the statement "ConnectionListener connectionListener=new OutgoingConnectionListener(this`announceableTorrent.getTorrentHash()`peer.getIp()`peer.getPort());" is 140.,614
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,handleDiscoveredPeers,Long Statement,The length of the statement "boolean connectTaskAdded=this.myConnectionManager.offerConnect(new ConnectTask(peer.getIp()`peer.getPort()`connectionListener`new SystemTimeService().now()`Constants.DEFAULT_CONNECTION_TIMEOUT_MILLIS)`1`TimeUnit.SECONDS);" is 221.,614
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,validatePieceAsync,Complex Method,Cyclomatic complexity of the method is 12,736
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,validatePieceAsync,Long Statement,The length of the statement "if (remote.getTorrent().getHexInfoHash().equals(torrentHash) && !remote.getAvailablePieces().get(piece.getIndex())) remote.send(have);" is 134.,736
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManager,handlePeerDisconnected,Long Statement,The length of the statement "logger.trace("Peer {} disconnected` [{}/{}]."`new Object[]{peer`getConnectedPeers().size()`this.peersStorage.getSharingPeers().size()});" is 136.,811
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SharingPeerFactory,createSharingPeer,Long Parameter List,The method has 7 parameters. ,10
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Handshake,parse,Long Identifier,The length of the field BITTORRENT_PROTOCOL_IDENTIFIER is 30.,70
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Handshake,parse,Magic Number,The method contains a magic number: 8,70
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Handshake,parse,Magic Number,The method contains a magic number: 20,70
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Handshake,parse,Magic Number,The method contains a magic number: 20,70
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Handshake,craft,Long Identifier,The length of the field BITTORRENT_PROTOCOL_IDENTIFIER is 30.,112
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Handshake,craft,Long Statement,The length of the statement "ByteBuffer buffer=ByteBuffer.allocate(Handshake.BASE_HANDSHAKE_LENGTH + Handshake.BITTORRENT_PROTOCOL_IDENTIFIER.length());" is 123.,112
+mpetazzoni_ttorrent,com.turn.ttorrent.client,Handshake,craft,Magic Number,The method contains a magic number: 8,112
+mpetazzoni_ttorrent,com.turn.ttorrent.client,AnnounceableInformationImpl,AnnounceableInformationImpl,Long Parameter List,The method has 6 parameters. ,17
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SimpleClient,SimpleClient,Long Statement,The length of the statement "communicationManager=new CommunicationManager(Executors.newFixedThreadPool(workingExecutorSize)`Executors.newFixedThreadPool(validatorExecutorSize));" is 149.,27
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SimpleClient,stop,Magic Number,The method contains a magic number: 60,31
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SimpleClient,stop,Long Statement,The length of the statement "for ( ExecutorService executorService : Arrays.asList(communicationManager.getExecutor()`communicationManager.getPieceValidatorExecutor())) {" is 141.,35
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SimpleClient,stop,Long Statement,The length of the statement "throw new RuntimeException("Thread was interrupted` " + "shutdown methods are invoked but maybe tasks are not finished yet"`interruptedException);" is 146.,35
+mpetazzoni_ttorrent,com.turn.ttorrent.client,SimpleClient,stop,Long Statement,The length of the statement "if (anyFailedByTimeout) throw new RuntimeException("At least one executor was not fully shutdown because timeout was elapsed");" is 127.,35
+mpetazzoni_ttorrent,com.turn.ttorrent.client,LoadedTorrentImpl,LoadedTorrentImpl,Long Parameter List,The method has 5 parameters. ,21
+mpetazzoni_ttorrent,com.turn.ttorrent.client,LoadedTorrentImpl,createAnnounceableInformation,Long Statement,The length of the statement "return new AnnounceableInformationImpl(torrentStatistic.getUploadedBytes()`torrentStatistic.getDownloadedBytes()`torrentStatistic.getLeftBytes()`torrentHash`announceUrls`announce);" is 180.,58
+mpetazzoni_ttorrent,com.turn.ttorrent.client,LoadedTorrentImpl,toString,Long Statement,The length of the statement "return "LoadedTorrentImpl{" + "piece storage='" + pieceStorage + '\''+ "` metadata provider='"+ metadataProvider+ '\''+ '}';" is 124.,81
+mpetazzoni_ttorrent,com.turn.ttorrent.client,EventDispatcher,createNotifyer,Complex Method,Cyclomatic complexity of the method is 8,16
+mpetazzoni_ttorrent,com.turn.ttorrent.client,PeersStorageTest,testThatPeersStorageReturnNewCollection,Magic Number,The method contains a magic number: 6881,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client,PeersStorageTest,testThatPeersStorageReturnNewCollection,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client,PeersStorageTest,getMockSharingPeer,Long Statement,The length of the statement "return new SharingPeer("1"`1`null`mock(SharedTorrent.class)`null`mock(PeerActivityListener.class)`mock(ByteChannel.class)`"TO"`1234);" is 133.,50
+mpetazzoni_ttorrent,com.turn.ttorrent.client,PeersStorageTest,getMockSharingPeer,Magic Number,The method contains a magic number: 1234,50
+mpetazzoni_ttorrent,com.turn.ttorrent.client,PeersStorageTest,getAndRemoveSharingPeersTest,Magic Number,The method contains a magic number: 6881,60
+mpetazzoni_ttorrent,com.turn.ttorrent.client,EventDispatcherTest,testWithoutListeners,Magic Number,The method contains a magic number: 4,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client,EventDispatcherTest,testInvocation,Magic Number,The method contains a magic number: 5,53
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Long Statement,The length of the statement "@Override public SharingPeer createSharingPeer( String host` int port` ByteBuffer peerId` SharedTorrent torrent` ByteChannel channel` String clientIdentifier` int clientVersion){" is 178.,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Magic Number,The method contains a magic number: 10,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Magic Number,The method contains a magic number: 4,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Magic Number,The method contains a magic number: 1234,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Magic Number,The method contains a magic number: 100,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Magic Number,The method contains a magic number: 1025,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Magic Number,The method contains a magic number: 1024,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatSeederIsNotReceivedHaveMessages,Magic Number,The method contains a magic number: 15,83
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,createSharingPeer,Long Parameter List,The method has 7 parameters. ,89
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,createSharingPeer,Magic Number,The method contains a magic number: 1234,89
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,waitForSeederIsAnnounsedOnTracker,Magic Number,The method contains a magic number: 10,148
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,waitForSeederIsAnnounsedOnTracker,Magic Number,The method contains a magic number: 1000,148
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_multiple_files,Magic Number,The method contains a magic number: 50,160
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_multiple_files,Magic Number,The method contains a magic number: 513,160
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_multiple_files,Magic Number,The method contains a magic number: 1024,160
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_multiple_files,Magic Number,The method contains a magic number: 5,160
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_multiple_files,Magic Number,The method contains a magic number: 60,160
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_multiple_files,Magic Number,The method contains a magic number: 1000,160
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_multiple_files,Magic Number,The method contains a magic number: 5,160
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,condition,Magic Number,The method contains a magic number: 5,201
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testHungSeeder,Long Statement,The length of the statement "@Override public SharingPeer createSharingPeer( String host` int port` ByteBuffer peerId` SharedTorrent torrent` ByteChannel channel` String clientIdentifier` int clientVersion){" is 178.,239
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testHungSeeder,Magic Number,The method contains a magic number: 500,239
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testHungSeeder,Magic Number,The method contains a magic number: 1025,239
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testHungSeeder,Magic Number,The method contains a magic number: 1024,239
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testHungSeeder,Magic Number,The method contains a magic number: 10,239
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testHungSeeder,Magic Number,The method contains a magic number: 4,239
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,createSharingPeer,Long Parameter List,The method has 7 parameters. ,263
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,large_file_download,Magic Number,The method contains a magic number: 201,295
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,large_file_download,Magic Number,The method contains a magic number: 1025,295
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,large_file_download,Magic Number,The method contains a magic number: 1024,295
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManyLeechers,Magic Number,The method contains a magic number: 400,326
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManyLeechers,Magic Number,The method contains a magic number: 1025,326
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManyLeechers,Magic Number,The method contains a magic number: 1024,326
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManyLeechers,Magic Number,The method contains a magic number: 4,326
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Long Statement,The length of the statement "@Override public SharingPeer createSharingPeer( String host` int port` ByteBuffer peerId` SharedTorrent torrent` ByteChannel channel` String clientIdentifier` int clientVersion){" is 178.,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 2,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 10,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 4,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 1234,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 1024,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 20,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 1024,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,endgameModeTest,Magic Number,The method contains a magic number: 20,368
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,createSharingPeer,Long Parameter List,The method has 7 parameters. ,385
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,createSharingPeer,Magic Number,The method contains a magic number: 1234,385
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,more_than_one_seeder_for_same_torrent,Magic Number,The method contains a magic number: 5,426
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,more_than_one_seeder_for_same_torrent,Magic Number,The method contains a magic number: 100,426
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,more_than_one_seeder_for_same_torrent,Magic Number,The method contains a magic number: 1024,426
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Long Statement,The length of the statement "String hash=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath()).getHexInfoHash();" is 123.,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Long Statement,The length of the statement "final SharedTorrent sharedTorrent=leecher.getTorrentsStorage().putIfAbsentActiveTorrent(announceableTorrent.getTorrentHash().getHexInfoHash()`leecher.getTorrentLoader().loadTorrent(announceableTorrent));" is 203.,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 8,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 4,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 2,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 1025,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 1024,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 10,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 1000,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 10,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 1000,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 2,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 512,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatDownloadStatisticProvidedToTracker,Magic Number,The method contains a magic number: 1024,471
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,condition,Magic Number,The method contains a magic number: 2,532
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,no_full_seeder_test,Magic Number,The method contains a magic number: 48,543
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,no_full_seeder_test,Magic Number,The method contains a magic number: 1024,543
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,no_full_seeder_test,Magic Number,The method contains a magic number: 6,543
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,no_full_seeder_test,Magic Number,The method contains a magic number: 3,543
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,no_full_seeder_test,Magic Number,The method contains a magic number: 15,543
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 48,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 1024,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 6,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 7,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 10,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 1000,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 35,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 35,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 45,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 60,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 1000,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 10,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder_repair,Magic Number,The method contains a magic number: 1000,572
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Long Statement,The length of the statement "return seeder.getTorrentsStorage().activeTorrents().size() == 1 && leecher.getTorrentsStorage().activeTorrents().size() == 1;" is 125.,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Long Statement,The length of the statement "return seeder.getTorrentsStorage().activeTorrents().size() == 0 && leecher.getTorrentsStorage().activeTorrents().size() == 0;" is 125.,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Magic Number,The method contains a magic number: 100,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Magic Number,The method contains a magic number: 1025,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Magic Number,The method contains a magic number: 1024,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Magic Number,The method contains a magic number: 10,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Magic Number,The method contains a magic number: 1000,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Magic Number,The method contains a magic number: 10,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testThatTorrentsHaveLazyInitAndRemovingAfterDownload,Magic Number,The method contains a magic number: 1000,660
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,condition,Long Statement,The length of the statement "return seeder.getTorrentsStorage().activeTorrents().size() == 1 && leecher.getTorrentsStorage().activeTorrents().size() == 1;" is 125.,685
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,condition,Long Statement,The length of the statement "return seeder.getTorrentsStorage().activeTorrents().size() == 0 && leecher.getTorrentsStorage().activeTorrents().size() == 0;" is 125.,702
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder,Magic Number,The method contains a magic number: 48,716
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder,Magic Number,The method contains a magic number: 1024,716
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder,Magic Number,The method contains a magic number: 35,716
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder,Magic Number,The method contains a magic number: 10,716
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder,Magic Number,The method contains a magic number: 30,716
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,corrupted_seeder,Magic Number,The method contains a magic number: 1000,716
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,run,Magic Number,The method contains a magic number: 10,746
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,unlock_file_when_no_leechers,Magic Number,The method contains a magic number: 513,784
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,unlock_file_when_no_leechers,Magic Number,The method contains a magic number: 1024,784
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,unlock_file_when_no_leechers,Magic Number,The method contains a magic number: 7,784
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,unlock_file_when_no_leechers,Magic Number,The method contains a magic number: 15,784
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,unlock_file_when_no_leechers,Magic Number,The method contains a magic number: 1000,784
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,unlock_file_when_no_leechers,Magic Number,The method contains a magic number: 2,784
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,unlock_file_when_no_leechers,Magic Number,The method contains a magic number: 1000,784
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 513,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 1024,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 7,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 5,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 250,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 1000,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 3,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_many_times,Magic Number,The method contains a magic number: 1000,803
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Long Statement,The length of the statement "final String hexInfoHash=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath()).getHexInfoHash();" is 136.,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Long Statement,The length of the statement "PeerUID[] peerUids=new PeerUID[]{new PeerUID(new InetSocketAddress("127.0.0.1"`port++)`hexInfoHash)`new PeerUID(new InetSocketAddress("127.0.0.1"`port++)`hexInfoHash)`new PeerUID(new InetSocketAddress("127.0.0.1"`port)`hexInfoHash)};" is 233.,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Long Statement,The length of the statement "trackedPeerMap.put(uid`new TrackedPeer(trackedTorrent`"127.0.0.1"`port`ByteBuffer.wrap("id".getBytes(Constants.BYTE_ENCODING))));" is 129.,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 8,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 4,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 10,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 10,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 513,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 1024,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 34,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 6885,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 5000,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testConnectToAllDiscoveredPeers,Magic Number,The method contains a magic number: 10,821
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 513,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 1024,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 34,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 4,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 4,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 2,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 45,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 1000,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 2,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_io_error,Magic Number,The method contains a magic number: 1000,912
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,handlePieceCompleted,Magic Number,The method contains a magic number: 4,928
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,handlePieceCompleted,Magic Number,The method contains a magic number: 2,928
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_positive,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,949
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_positive,Magic Number,The method contains a magic number: 513,949
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_positive,Magic Number,The method contains a magic number: 1024,949
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_positive,Magic Number,The method contains a magic number: 24,949
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_positive,Magic Number,The method contains a magic number: 10,949
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_negative,Magic Number,The method contains a magic number: 513,965
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_negative,Magic Number,The method contains a magic number: 1024,965
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_negative,Magic Number,The method contains a magic number: 24,965
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_negative,Magic Number,The method contains a magic number: 4,965
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_negative,Magic Number,The method contains a magic number: 10,965
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_negative,Magic Number,The method contains a magic number: 7,965
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,handlePieceCompleted,Magic Number,The method contains a magic number: 10,987
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Empty catch clause,The method has an empty catch block.,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Empty catch clause,The method has an empty catch block.,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Magic Number,The method contains a magic number: 513,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Magic Number,The method contains a magic number: 1024,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Magic Number,The method contains a magic number: 24,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Magic Number,The method contains a magic number: 4,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Magic Number,The method contains a magic number: 500,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,download_uninterruptibly_timeout,Magic Number,The method contains a magic number: 7,1023
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,handlePieceCompleted,Empty catch clause,The method has an empty catch block.,1037
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,handlePieceCompleted,Magic Number,The method contains a magic number: 500,1037
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,canStartAndStopClientTwice,Magic Number,The method contains a magic number: 4,1064
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 5,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 513,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 1024,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 240,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 5,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 5,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 5,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 5,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 1000,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 3,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 1000,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,peer_dies_during_download,Magic Number,The method contains a magic number: 60,1080
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,run,Magic Number,The method contains a magic number: 5,1102
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,run,Magic Number,The method contains a magic number: 1000,1102
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,run,Magic Number,The method contains a magic number: 3,1102
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,run,Magic Number,The method contains a magic number: 1000,1102
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,torrentListenersPositiveTest,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,1126
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,torrentListenersPositiveTest,Magic Number,The method contains a magic number: 513,1126
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,torrentListenersPositiveTest,Magic Number,The method contains a magic number: 1024,1126
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,torrentListenersPositiveTest,Magic Number,The method contains a magic number: 24,1126
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,torrentListenersPositiveTest,Magic Number,The method contains a magic number: 5,1126
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,torrentListenersPositiveTest,Magic Number,The method contains a magic number: 10,1126
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testClosingPieceStorageWhenDownloading,Long Statement,The length of the statement "final PieceStorage seederStorage=FullyPieceStorageFactory.INSTANCE.createStorage(torrent`new FileStorage(dwnlFile`0`dwnlFile.length()));" is 136.,1169
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testClosingPieceStorageWhenDownloading,Long Statement,The length of the statement "final PieceStorage leecherStorage=EmptyPieceStorageFactory.INSTANCE.createStorage(torrent`new FileStorage(tempFiles.createTempFile()`0`dwnlFile.length()));" is 155.,1169
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testClosingPieceStorageWhenDownloading,Magic Number,The method contains a magic number: 513,1169
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testClosingPieceStorageWhenDownloading,Magic Number,The method contains a magic number: 1024,1169
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testClosingPieceStorageWhenDownloading,Magic Number,The method contains a magic number: 24,1169
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testClosingPieceStorageWhenDownloading,Magic Number,The method contains a magic number: 10,1169
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testListenersWithBadSeeder,Empty catch clause,The method has an empty catch block.,1215
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testListenersWithBadSeeder,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,1215
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testListenersWithBadSeeder,Magic Number,The method contains a magic number: 513,1215
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testListenersWithBadSeeder,Magic Number,The method contains a magic number: 1024,1215
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testListenersWithBadSeeder,Magic Number,The method contains a magic number: 240,1215
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testListenersWithBadSeeder,Magic Number,The method contains a magic number: 2,1215
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testListenersWithBadSeeder,Magic Number,The method contains a magic number: 15,1215
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Magic Number,The method contains a magic number: 513,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Magic Number,The method contains a magic number: 1024,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Magic Number,The method contains a magic number: 60,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Magic Number,The method contains a magic number: 30,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Magic Number,The method contains a magic number: 100,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Magic Number,The method contains a magic number: 10,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,interrupt_download,Magic Number,The method contains a magic number: 1000,1254
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,run,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath());" is 124.,1268
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,run,Magic Number,The method contains a magic number: 30,1268
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,test_connect_to_unknown_host,Magic Number,The method contains a magic number: 40,1295
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,test_connect_to_unknown_host,Magic Number,The method contains a magic number: 20,1295
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,test_connect_to_unknown_host,Magic Number,The method contains a magic number: 6881,1295
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,test_seeding_does_not_change_file_modification_date,Magic Number,The method contains a magic number: 1024,1316
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,test_seeding_does_not_change_file_modification_date,Magic Number,The method contains a magic number: 1000,1316
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,validateMultipleClientsResults,Long Parameter List,The method has 6 parameters. ,1353
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,validateMultipleClientsResults,Long Statement,The length of the statement "assertEquals(baseMD5`getFileMD5(file`md5)`String.format("MD5 hash is invalid. C:%s` O:%s "`file.getAbsolutePath()`baseFile.getAbsolutePath()));" is 143.,1353
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,validateMultipleClientsResults,Magic Number,The method contains a magic number: 75,1353
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,validateMultipleClientsResults,Magic Number,The method contains a magic number: 1000,1353
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Long Statement,The length of the statement "seeder.start(new InetAddress[]{InetAddress.getLocalHost()}`Constants.DEFAULT_ANNOUNCE_INTERVAL_SEC`null`new SelectorFactoryImpl()`serverChannelRegister);" is 153.,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Long Statement,The length of the statement "leecher.start(new InetAddress[]{InetAddress.getLocalHost()}`Constants.DEFAULT_ANNOUNCE_INTERVAL_SEC`null`new SelectorFactoryImpl()`serverChannelRegister);" is 154.,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Long Statement,The length of the statement "TorrentManager torrentManager=leecher.addTorrent(torrentFile.getAbsolutePath()`tempFiles.createTempDir().getAbsolutePath()`EmptyPieceStorageFactory.INSTANCE);" is 158.,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Magic Number,The method contains a magic number: 256,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Magic Number,The method contains a magic number: 1024,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Magic Number,The method contains a magic number: 1024,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Magic Number,The method contains a magic number: 15,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Magic Number,The method contains a magic number: 6881,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Magic Number,The method contains a magic number: 10000,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,testManySeeders,Magic Number,The method contains a magic number: 60,1383
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,createMultipleSeedersWithDifferentPieces,Long Parameter List,The method has 6 parameters. ,1412
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,startTracker,Magic Number,The method contains a magic number: 6969,1475
+mpetazzoni_ttorrent,com.turn.ttorrent.client,CommunicationManagerTest,startTracker,Magic Number,The method contains a magic number: 5,1475
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,SharingPeer,Long Parameter List,The method has 9 parameters. ,105
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,downloadPiece,Long Statement,The length of the statement "PeerMessage.RequestMessage request=PeerMessage.RequestMessage.craft(piece.getIndex()`lastRequestedOffset`Math.min((int)(piece.size() - lastRequestedOffset)`PeerMessage.RequestMessage.DEFAULT_REQUEST_SIZE));" is 206.,357
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,handleMessage,Complex Method,Cyclomatic complexity of the method is 21,467
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,handleMessage,Long Method,The method has 110 lines of code.,467
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,handleMessage,Long Statement,The length of the statement "logger.trace("Peer {} now has {} [{}/{}]."`new Object[]{this`havePiece`this.availablePieces.cardinality()`this.torrent.getPieceCount()});" is 137.,467
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,handleMessage,Long Statement,The length of the statement "logger.trace("Recorded bitfield from {} with {} " + "pieces(s) [{}/{}]."`new Object[]{this`bitfield.getBitfield().cardinality()`this.availablePieces.cardinality()`this.torrent.getPieceCount()});" is 194.,467
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,handleMessage,Long Statement,The length of the statement "logger.trace("Got request message for {} ({} {}@{}) from {}"`new Object[]{Arrays.toString(TorrentUtils.getTorrentFileNames(torrent).toArray())`request.getPiece()`request.getLength()`request.getOffset()`this});" is 209.,467
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,SharingPeer,handleMessage,Long Statement,The length of the statement "ByteBuffer bufferForMessage=PeerMessage.PieceMessage.createBufferWithHeaderForMessage(request.getPiece()`request.getOffset()`request.getLength());" is 146.,467
+mpetazzoni_ttorrent,com.turn.ttorrent.client.peer,Rate,get,Magic Number,The method contains a magic number: 1000.0f,55
+mpetazzoni_ttorrent,com.turn.ttorrent.client.strategy,EndGameStrategyImpl,selectPeer,Magic Number,The method contains a magic number: 0.8,78
+mpetazzoni_ttorrent,com.turn.ttorrent.client.strategy,RequestStrategyImplAnyInterestingTest,choosePieceTest,Magic Number,The method contains a magic number: 5,43
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,EmptyPieceStorageFactory,createStorage,Long Statement,The length of the statement "return new PieceStorageImpl(byteStorage`new BitSet(metadata.getPiecesCount())`metadata.getPiecesCount()`metadata.getPieceLength());" is 131.,14
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FairPieceStorageFactory,createStorage,Long Statement,The length of the statement "byte[] expectedHash=Arrays.copyOfRange(metadata.getPiecesHashes()`i * Constants.PIECE_HASH_SIZE`(i + 1) * Constants.PIECE_HASH_SIZE);" is 133.,24
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImpl,checkPieceIndex,Long Statement,The length of the statement "throw new IllegalArgumentException("Incorrect piece index " + pieceIndex + ". Piece index must be positive less than"+ piecesCount);" is 132.,41
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileStorage,open,Long Statement,The length of the statement "logger.debug("Opened byte storage file at {} ({}+{} byte(s))."`new Object[]{this.current.getAbsolutePath()`this.offset`this.size});" is 131.,70
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileStorage,close,Empty catch clause,The method has an empty catch block.,164
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileCollectionStorage,create,Long Statement,The length of the statement "throw new IOException("Unable to create directories " + actual.getParent() + " for storing torrent file "+ actual.getName());" is 125.,69
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FairPieceStorageFactoryTest,testCreatingStorageForLargeFile,Long Statement,The length of the statement "when(metadata.getFiles()).thenReturn(Collections.singletonList(new TorrentFile(Collections.singletonList("test.avi")`totalSize`"")));" is 133.,21
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FairPieceStorageFactoryTest,testCreatingStorageForLargeFile,Magic Number,The method contains a magic number: 1024,21
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FairPieceStorageFactoryTest,testCreatingStorageForLargeFile,Magic Number,The method contains a magic number: 1024,21
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FairPieceStorageFactoryTest,testCreatingStorageForLargeFile,Magic Number,The method contains a magic number: 3000,21
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FairPieceStorageFactoryTest,testCreatingStorageForLargeFile,Magic Number,The method contains a magic number: 2,21
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FairPieceStorageFactoryTest,testCreatingStorageForLargeFile,Magic Number,The method contains a magic number: 20,21
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileCollectionStorageTest,testSelect,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileCollectionStorageTest,testSelect,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileCollectionStorageTest,testSelect,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileCollectionStorageTest,testSelect,Magic Number,The method contains a magic number: 4,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,FileCollectionStorageTest,testSelect,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,setUp,Magic Number,The method contains a magic number: 12,23
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,setUp,Magic Number,The method contains a magic number: 8,23
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 3,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 4,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 3,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 3,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 3,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testStorage,Magic Number,The method contains a magic number: 2,36
+mpetazzoni_ttorrent,com.turn.ttorrent.client.storage,PieceStorageImplTest,testReadUnavailablePiece,Magic Number,The method contains a magic number: 45,75
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,Announce,forceAnnounce,Long Statement,The length of the statement "logger.info(String.format("Unable to force announce torrent %s on tracker %s."`torrent.getHexInfoHash()`String.valueOf(trackerUrl)));" is 133.,90
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,Announce,forceAnnounce,Long Statement,The length of the statement "logger.debug(String.format("Unable to force announce torrent %s on tracker %s."`torrent.getHexInfoHash()`String.valueOf(trackerUrl))`e);" is 136.,90
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,Announce,start,Empty catch clause,The method has an empty catch block.,106
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,Announce,stop,Empty catch clause,The method has an empty catch block.,151
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,Announce,run,Magic Number,The method contains a magic number: 1000,181
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,Announce,announceAllTorrents,Complex Method,Cyclomatic complexity of the method is 9,237
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,Announce,announceAllTorrents,Long Statement,The length of the statement "final Map<String`List<AnnounceableInformation>> torrentsGroupingByAnnounceUrl=new HashMap<String`List<AnnounceableInformation>>();" is 130.,237
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,UDPTrackerClient,announce,Complex Method,Cyclomatic complexity of the method is 9,142
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,UDPTrackerClient,announce,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5785a008,142
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,UDPTrackerClient,buildAnnounceRequest,Long Statement,The length of the statement "return UDPAnnounceRequestMessage.craft(this.connectionId`transactionId`torrent.getInfoHash()`peer.getPeerIdArray()`torrent.getDownloaded()`torrent.getUploaded()`torrent.getLeft()`event`peer.getAddress().getAddress()`0`AnnounceRequestMessage.DEFAULT_NUM_WANT`peer.getPort());" is 274.,268
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,UDPTrackerClient,recv,Magic Number,The method contains a magic number: 2,349
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,UDPTrackerClient,recv,Magic Number,The method contains a magic number: 1000,349
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClient,announceAllInterfaces,Long Statement,The length of the statement "throw new AnnounceException(String.format("Unable to announce tracker %s event %s for torrent %s and peers %s. Reason %s"`getTrackerURI()`event.getEventName()`torrent.getHexInfoHash()`Arrays.toString(myAddress.toArray())`e.getMessage())`e);" is 240.,70
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClient,logAnnounceRequest,Long Statement,The length of the statement "logger.debug("Announcing {} to tracker with {}U/{}D/{}L bytes..."`new Object[]{this.formatAnnounceEvent(event)`torrent.getUploaded()`torrent.getDownloaded()`torrent.getLeft()});" is 177.,107
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClient,logAnnounceRequest,Long Statement,The length of the statement "logger.debug("Simply announcing to tracker with {}U/{}D/{}L bytes..."`new Object[]{torrent.getUploaded()`torrent.getDownloaded()`torrent.getLeft()});" is 149.,107
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,announce,Magic Number,The method contains a magic number: 200,58
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,parse,Magic Number,The method contains a magic number: 200,86
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,multiAnnounce,Complex Method,Cyclomatic complexity of the method is 10,106
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,multiAnnounce,Magic Number,The method contains a magic number: 200,106
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,parse,Magic Number,The method contains a magic number: 200,128
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Complex Conditional,The conditional expression stat >= 300 && stat <= 307 && stat != 306 && stat != HttpURLConnection.HTTP_NOT_MODIFIED is complex.,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Complex Conditional,The conditional expression target == null || !(target.getProtocol().equals("http") || target.getProtocol().equals("https")) is complex.,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Complex Method,Cyclomatic complexity of the method is 9,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Magic Number,The method contains a magic number: 10000,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Magic Number,The method contains a magic number: 10000,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Magic Number,The method contains a magic number: 300,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Magic Number,The method contains a magic number: 307,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Magic Number,The method contains a magic number: 306,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,openConnectionCheckRedirects,Magic Number,The method contains a magic number: 5,246
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,HTTPTrackerClient,buildAnnounceRequest,Long Statement,The length of the statement "return HTTPAnnounceRequestMessage.craft(torrentInfo.getInfoHash()`peer.getPeerIdArray()`peer.getPort()`uploaded`downloaded`left`true`false`event`peer.getIp()`AnnounceRequestMessage.DEFAULT_NUM_WANT);" is 199.,298
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Long Statement,The length of the statement "client.multiAnnounce(AnnounceRequestMessage.RequestEvent.STARTED`false`Arrays.asList(secondTorrentLeech`firstTorrentLeech)`leecher);" is 132.,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Magic Number,The method contains a magic number: 6881,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Magic Number,The method contains a magic number: 6882,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Magic Number,The method contains a magic number: 6885,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Magic Number,The method contains a magic number: 10L,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Magic Number,The method contains a magic number: 10L,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Magic Number,The method contains a magic number: 2,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,multiAnnounceTest,Magic Number,The method contains a magic number: 2,47
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,startTracker,Magic Number,The method contains a magic number: 6969,89
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,startTracker,Magic Number,The method contains a magic number: 5,89
+mpetazzoni_ttorrent,com.turn.ttorrent.client.announce,TrackerClientTest,startTracker,Magic Number,The method contains a magic number: 10,89
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,WorkingReceiver,processAndGetNext,Complex Method,Cyclomatic complexity of the method is 9,43
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,WorkingReceiver,processAndGetNext,Long Statement,The length of the statement "logger.warn("Proposed limit of {} is larger than max message size {}"`PeerMessage.MESSAGE_LENGTH_FIELD_SIZE + this.pstrLength`MAX_MESSAGE_SIZE);" is 144.,43
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,WorkingReceiver,processAndGetNext,Long Statement,The length of the statement "logger.debug("torrent with hash {} for peer {} doesn't found in storage. Maybe somebody deletes it manually"`hexInfoHash`peer);" is 127.,43
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,WorkingReceiver,processAndGetNext,Long Statement,The length of the statement "currentThread.setName(oldName + " handle message for torrent " + myPeerUID.getTorrentHash()+ " peer: "+ peer.getHostIdentifier());" is 130.,43
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,WorkingReceiver,run,Long Statement,The length of the statement "currentThread.setName(oldName + " handle message for torrent " + myPeerUID.getTorrentHash()+ " peer: "+ peer.getHostIdentifier());" is 130.,130
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeSender,processAndGetNext,Long Statement,The length of the statement "logger.warn("can not craft handshake message. Self peer id is {}` torrent hash is {}"`Arrays.toString(self.getPeerIdArray())`Arrays.toString(myTorrentHash.getInfoHash()));" is 171.,34
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Complex Method,Cyclomatic complexity of the method is 10,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Empty catch clause,The method has an empty catch block.,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Empty catch clause,The method has an empty catch block.,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Long Method,The method has 102 lines of code.,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Long Statement,The length of the statement "final SharingPeer sharingPeer=myContext.createSharingPeer(myHostAddress`myPort`ByteBuffer.wrap(hs.getPeerId())`torrent`socketChannel`clientType`clientVersion);" is 159.,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Long Statement,The length of the statement "LoggerUtils.warnAndDebugDetails(logger`"unhandled exception {} in executor task (onConnectionEstablished)"`e.toString()`e);" is 123.,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Magic Number,The method contains a magic number: 8,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Magic Number,The method contains a magic number: 3,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Magic Number,The method contains a magic number: 3,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,processAndGetNext,Magic Number,The method contains a magic number: 7,42
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiver,run,Long Statement,The length of the statement "LoggerUtils.warnAndDebugDetails(logger`"unhandled exception {} in executor task (onConnectionEstablished)"`e.toString()`e);" is 123.,139
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,StateChannelListener,onConnectionEstablished,Long Statement,The length of the statement "this.myNext=new HandshakeReceiver(myContext`socketChannel.socket().getInetAddress().getHostAddress()`socketChannel.socket().getPort()`false);" is 141.,24
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,setUp,Magic Number,The method contains a magic number: 54645,56
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,setUp,Magic Number,The method contains a magic number: 45664,56
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,testReceiveHandshake,Long Identifier,The length of the identifier onConnectionEstablishedInvoker is 30.,82
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,testReceiveHandshake,Long Statement,The length of the statement "final SharedTorrent sharedTorrent=SharedTorrent.fromFile(torrentFile`FairPieceStorageFactory.INSTANCE.createStorage(torrent`FileCollectionStorage.create(torrent`tempFile.getParentFile()))`loadedTorrent.getTorrentStatistic());" is 225.,82
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,testReceiveHandshake,Long Statement,The length of the statement "when(myContext.createSharingPeer(any(String.class)`anyInt()`any(ByteBuffer.class)`any(SharedTorrent.class)`any(ByteChannel.class)`any(String.class)`anyInt())).thenReturn(new SharingPeer("127.0.0.1"`6881`ByteBuffer.wrap(peerId)`sharedTorrent`null`mock(PeerActivityListener.class)`server`"TO"`1234){" is 297.,82
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,testReceiveHandshake,Magic Number,The method contains a magic number: 1024,82
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,testReceiveHandshake,Magic Number,The method contains a magic number: 1024,82
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,testReceiveHandshake,Magic Number,The method contains a magic number: 6881,82
+mpetazzoni_ttorrent,com.turn.ttorrent.client.network,HandshakeReceiverTest,testReceiveHandshake,Magic Number,The method contains a magic number: 1234,82
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerServiceContainer,TrackerServiceContainer,Long Identifier,The length of the field myMultiAnnounceRequestProcessor is 31.,31
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerServiceContainer,handle,Long Identifier,The length of the field myMultiAnnounceRequestProcessor is 31.,37
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerServiceContainer,handle,Long Statement,The length of the statement "myRequestProcessor.process(request.getAddress().toString()`request.getClientAddress().getAddress().getHostAddress()`getRequestHandler(response));" is 145.,37
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerServiceContainer,handle,Long Statement,The length of the statement "myMultiAnnounceRequestProcessor.process(request.getContent()`request.getAddress().toString()`request.getClientAddress().getAddress().getHostAddress()`getRequestHandler(response));" is 179.,37
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerServiceContainer,handle,Magic Number,The method contains a magic number: 404,37
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,Tracker,Long Statement,The length of the statement "myTrackerServiceContainer=new TrackerServiceContainer(requestProcessor`new MultiAnnounceRequestProcessor(requestProcessor));" is 124.,89
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,Tracker,Magic Number,The method contains a magic number: 10,89
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,Tracker,Long Statement,The length of the statement "myTrackerServiceContainer=new TrackerServiceContainer(requestProcessor`new MultiAnnounceRequestProcessor(requestProcessor));" is 124.,99
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,start,Complex Conditional,The conditional expression myPeerCollectorThread == null || !myPeerCollectorThread.isAlive() || myPeerCollectorThread.getState() != Thread.State.NEW is complex.,145
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,start,Empty catch clause,The method has an empty catch block.,145
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,start,Empty catch clause,The method has an empty catch block.,145
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,start,Empty catch clause,The method has an empty catch block.,145
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,start,Long Statement,The length of the statement "if (myPeerCollectorThread == null || !myPeerCollectorThread.isAlive() || myPeerCollectorThread.getState() != Thread.State.NEW) {" is 128.,145
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,start,Magic Number,The method contains a magic number: 4,145
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,Tracker,stop,Empty catch clause,The method has an empty catch block.,195
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackedPeer,TrackedPeer,Long Parameter List,The method has 5 parameters. ,103
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackedPeer,isFresh,Magic Number,The method contains a magic number: 1000,183
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerRequestProcessor,process,Long Statement,The length of the statement "torrent=myTorrentsRepository.putIfAbsentAndUpdate(announceRequest.getHexInfoHash()`new TrackedTorrent(announceRequest.getInfoHash())`event`ByteBuffer.wrap(announceRequest.getPeerId())`announceRequest.getHexPeerId()`announceRequest.getIp()`announceRequest.getPort()`announceRequest.getUploaded()`announceRequest.getDownloaded()`announceRequest.getLeft());" is 354.,98
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerRequestProcessor,writeEmptyResponse,Long Statement,The length of the statement "announceResponse=HTTPAnnounceResponseMessage.craft(myAnnounceInterval`0`0`Collections.<Peer>emptyList()`announceRequest.getHexInfoHash());" is 138.,176
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerRequestProcessor,writeAnnounceResponse,Long Statement,The length of the statement "announceResponse=HTTPAnnounceResponseMessage.craft(isSeeder ? SEEDER_ANNOUNCE_INTERVAL : myAnnounceInterval`torrent.seeders()`torrent.leechers()`isSeeder ? Collections.<Peer>emptyList() : torrent.getSomePeers(peer)`torrent.getHexInfoHash());" is 241.,199
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerRequestProcessor,parseQuery,Magic Number,The method contains a magic number: 2,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerRequestProcessor,recordParam,Empty catch clause,The method has an empty catch block.,266
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackedTorrent,TrackedTorrent,Long Identifier,The length of the field DEFAULT_ANNOUNCE_INTERVAL_SECONDS is 33.,78
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackedTorrent,update,Long Parameter List,The method has 8 parameters. ,180
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepository,putIfAbsentAndUpdate,Long Parameter List,The method has 10 parameters. ,39
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessor,process,Long Statement,The length of the statement "requestHandler.serveResponse(isAnySuccess.get() ? Status.OK.getCode() : Status.BAD_REQUEST.getCode()`""`ByteBuffer.wrap(out.toByteArray()));" is 140.,30
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,PeerCollectorThread,run,Magic Number,The method contains a magic number: 1000,25
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,processCorrectTest,Long Statement,The length of the statement "final String urlTemplate=url.toString() + "?info_hash={hash}" + "&peer_id=ABCDEFGHIJKLMNOPQRST"+ "&ip={ip}"+ "&port={port}"+ "&downloaded=1234"+ "&left=0"+ "&event=started";" is 173.,45
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,processCorrectTest,Magic Number,The method contains a magic number: 5,45
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,processCorrectTest,Magic Number,The method contains a magic number: 6881,45
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,processCorrectTest,Magic Number,The method contains a magic number: 5,45
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,processCorrectTest,Magic Number,The method contains a magic number: 5,45
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,startTracker,Magic Number,The method contains a magic number: 6969,91
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,startTracker,Magic Number,The method contains a magic number: 5,91
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,MultiAnnounceRequestProcessorTest,startTracker,Magic Number,The method contains a magic number: 10,91
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,setUp,Magic Number,The method contains a magic number: 10,21
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsStoredInRepository,Magic Number,The method contains a magic number: 2,31
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Long Statement,The length of the statement "@Override public TrackedPeer update( AnnounceRequestMessage.RequestEvent event` ByteBuffer peerId` String hexPeerId` String ip` int port` long uploaded` long downloaded` long left) throws UnsupportedEncodingException {" is 218.,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Long Statement,The length of the statement "myTorrentsRepository.putIfAbsentAndUpdate(torrent.getHexInfoHash()`torrent`AnnounceRequestMessage.RequestEvent.STARTED`ByteBuffer.allocate(5)`"0"`"127.0.0.1"`6881`5`10`12);" is 172.,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 5,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 6881,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 5,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 10,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 12,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 6881,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 12,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 10,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testPutIfAbsentAndUpdate,Magic Number,The method contains a magic number: 5,48
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,update,Long Parameter List,The method has 8 parameters. ,52
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatCleanupDontLockAllTorrentsAndStorage,Long Statement,The length of the statement "myTorrentsRepository.putIfAbsentAndUpdate(secondTorrent.getHexInfoHash()`secondTorrent`AnnounceRequestMessage.RequestEvent.STARTED`ByteBuffer.allocate(5)`"0"`"127.0.0.1"`6881`0`0`1);" is 182.,71
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatCleanupDontLockAllTorrentsAndStorage,Magic Number,The method contains a magic number: 6881,71
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatCleanupDontLockAllTorrentsAndStorage,Magic Number,The method contains a magic number: 10,71
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatCleanupDontLockAllTorrentsAndStorage,Magic Number,The method contains a magic number: 5,71
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatCleanupDontLockAllTorrentsAndStorage,Magic Number,The method contains a magic number: 6881,71
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 10000,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 6881,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 5,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 15000,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 6882,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 5,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 2,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 17000,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 10,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 2,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 23000,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 10,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 40000,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TorrentsRepositoryTest,testThatTorrentsCanRemovedFromStorage,Magic Number,The method contains a magic number: 10,132
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerAnnounceTest,setUp,Magic Number,The method contains a magic number: 6969,17
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerAnnounceTest,setUp,Magic Number,The method contains a magic number: 5,17
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerAnnounceTest,setUp,Magic Number,The method contains a magic number: 10,17
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,testPeerWithManyInterfaces,Long Statement,The length of the statement "final String hexInfoHash=seeder.addTorrent(torrentFile.getAbsolutePath()`parentFiles.getAbsolutePath()).getHexInfoHash();" is 121.,78
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,testPeerWithManyInterfaces,Magic Number,The method contains a magic number: 10000,78
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Long Statement,The length of the statement "final InetSocketAddress c1Address=new InetSocketAddress(InetAddress.getLocalHost()`c1.getConnectionManager().getBindPort());" is 124.,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Long Statement,The length of the statement "final InetSocketAddress c2Address=new InetSocketAddress(InetAddress.getLocalHost()`c2.getConnectionManager().getBindPort());" is 124.,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Magic Number,The method contains a magic number: 10,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Magic Number,The method contains a magic number: 1000,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Magic Number,The method contains a magic number: 10,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Magic Number,The method contains a magic number: 1000,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Magic Number,The method contains a magic number: 2,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Magic Number,The method contains a magic number: 30,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_peer_shutdown,Magic Number,The method contains a magic number: 1000,214
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,condition,Magic Number,The method contains a magic number: 2,237
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Long Statement,The length of the statement "final String announceUrlC1="http://localhost:6969/announce?info_hash=%B9-8%04lv%D79H%E1LB%DF%99%2C%AF%25H%9D%08&peer_id=-TO0042-97ec308c9637&" + "port=" + peerPort + "&uploaded=0&downloaded=0&left=0&compact=1&no_peer_id=0&ip="+ peerHost;" is 237.,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Long Statement,The length of the statement "final InetSocketAddress c2Address=new InetSocketAddress(InetAddress.getLocalHost()`c2.getConnectionManager().getBindPort());" is 124.,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 5,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 6885,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 120,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 10,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 1000,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 2,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 30,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,tracker_removes_peer_after_timeout,Magic Number,The method contains a magic number: 1000,260
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,condition,Magic Number,The method contains a magic number: 2,288
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,startTracker,Magic Number,The method contains a magic number: 6969,348
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,startTracker,Magic Number,The method contains a magic number: 5,348
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,startTracker,Magic Number,The method contains a magic number: 10,348
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,completeTorrent,Long Statement,The length of the statement "return SharedTorrent.fromFile(torrentFile`FairPieceStorageFactory.INSTANCE.createStorage(torrentMetadata`FileCollectionStorage.create(torrentMetadata`parentFiles))`new TorrentStatistic());" is 188.,386
+mpetazzoni_ttorrent,com.turn.ttorrent.tracker,TrackerTest,incompleteTorrent,Long Statement,The length of the statement "return SharedTorrent.fromFile(torrentFile`FairPieceStorageFactory.INSTANCE.createStorage(torrentMetadata`FileCollectionStorage.create(torrentMetadata`destDir))`new TorrentStatistic());" is 184.,395
+mpetazzoni_ttorrent,com.turn.ttorrent,TempFiles,TempFiles,Long Statement,The length of the statement "throw new IllegalStateException("Temp directory is not a directory` was deleted by some process: " + myCurrentTempDir.getAbsolutePath() + "\njava.io.tmpdir: "+ FileUtils.getTempDirectory());" is 190.,29
+mpetazzoni_ttorrent,com.turn.ttorrent,TempFiles,createTempFile,Magic Number,The method contains a magic number: 8,77
+mpetazzoni_ttorrent,com.turn.ttorrent,TempFiles,createTempFile,Magic Number,The method contains a magic number: 1024,77
+mpetazzoni_ttorrent,com.turn.ttorrent,TempFiles,cleanup,Empty catch clause,The method has an empty catch block.,126
+mpetazzoni_ttorrent,com.turn.ttorrent,WaitFor,WaitFor,Magic Number,The method contains a magic number: 60,8
+mpetazzoni_ttorrent,com.turn.ttorrent,WaitFor,WaitFor,Magic Number,The method contains a magic number: 1000,8
+mpetazzoni_ttorrent,com.turn.ttorrent,WaitFor,WaitFor,Abstract Function Call From Constructor,The constructor WaitFor calls a virtual method condition.,12
+mpetazzoni_ttorrent,com.turn.ttorrent,WaitFor,WaitFor,Empty catch clause,The method has an empty catch block.,12
+mpetazzoni_ttorrent,com.turn.ttorrent,CommunicationManagerFactory,getClient,Long Statement,The length of the statement "final ExecutorService executorService=new ThreadPoolExecutor(DEFAULT_POOL_SIZE`DEFAULT_POOL_SIZE`0L`TimeUnit.MILLISECONDS`new LinkedBlockingQueue<Runnable>(4000));" is 163.,15
+mpetazzoni_ttorrent,com.turn.ttorrent,CommunicationManagerFactory,getClient,Long Statement,The length of the statement "final ExecutorService pieceValidatorExecutor=new ThreadPoolExecutor(DEFAULT_POOL_SIZE`DEFAULT_POOL_SIZE`0L`TimeUnit.MILLISECONDS`new LinkedBlockingQueue<Runnable>(400));" is 169.,15
+mpetazzoni_ttorrent,com.turn.ttorrent,CommunicationManagerFactory,getClient,Magic Number,The method contains a magic number: 4000,15
+mpetazzoni_ttorrent,com.turn.ttorrent,CommunicationManagerFactory,getClient,Magic Number,The method contains a magic number: 400,15
+mpetazzoni_ttorrent,com.turn.ttorrent,CommunicationManagerFactory,getClient,Magic Number,The method contains a magic number: 60,15
+mpetazzoni_ttorrent,com.turn.ttorrent,CommunicationManagerFactory,stop,Magic Number,The method contains a magic number: 60,25
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentSerializer,serialize,Long Statement,The length of the statement "if (metadata.getCreationDate().isPresent()) mapMetadata.put(CREATION_DATE_SEC`new BEValue(metadata.getCreationDate().get()));" is 125.,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParser,parse,Long Statement,The length of the statement "if (piecesHashes.length % Constants.PIECE_HASH_SIZE != 0) throw new InvalidBEncodingException("Incorrect size of pieces hashes");" is 129.,26
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParser,parse,Long Statement,The length of the statement "return new TorrentMetadataImpl(TorrentUtils.calculateSha1Hash(infoTableBytes)`trackers`announceUrl`creationDate`comment`createdBy`dirName`files`piecesCount`pieceLength`piecesHashes);" is 182.,26
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParser,parseFiles,Long Statement,The length of the statement "return Collections.singletonList(new TorrentFile(Collections.singletonList(name)`getRequiredValueOrThrowException(infoTable`FILE_LENGTH).getLong()`md5Sum == null ? null : md5Sum.getString()));" is 192.,89
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParser,getRequiredValueOrThrowException,Long Statement,The length of the statement "if (value == null) throw new InvalidBEncodingException("Invalid metadata format. Map doesn't contain required field " + key);" is 125.,155
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,create,Long Parameter List,The method has 5 parameters. ,145
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,create,Long Parameter List,The method has 6 parameters. ,169
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,create,Magic Number,The method contains a magic number: 1000,169
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,create,Complex Method,Cyclomatic complexity of the method is 9,177
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,create,Long Parameter List,The method has 7 parameters. ,177
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,hashFiles,Long Statement,The length of the statement "logger.debug("Hashed {} file(s) ({} bytes) in {} pieces ({} expected) in {}ms."`new Object[]{files.size()`length`results.size()`expectedPieces`String.format("%.1f"`elapsed / 1e6)});" is 181.,257
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,hashFiles,Magic Number,The method contains a magic number: 1e6,257
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentCreator,waitForHashesToCalculate,Long Statement,The length of the statement "throw new RuntimeException(String.format("very slow hashing: took more than %d seconds to calculate several pieces. Cancelling"`HASHING_TIMEOUT_SEC));" is 150.,345
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentStatistic,getPercentageDownloaded,Magic Number,The method contains a magic number: 100,62
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtils,byteArrayToHexString,Magic Number,The method contains a magic number: 2,20
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtils,byteArrayToHexString,Magic Number,The method contains a magic number: 0xFF,20
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtils,byteArrayToHexString,Magic Number,The method contains a magic number: 2,20
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtils,byteArrayToHexString,Magic Number,The method contains a magic number: 4,20
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtils,byteArrayToHexString,Magic Number,The method contains a magic number: 2,20
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtils,byteArrayToHexString,Magic Number,The method contains a magic number: 0x0F,20
+mpetazzoni_ttorrent,com.turn.ttorrent.common,Peer,getShortHexPeerId,Magic Number,The method contains a magic number: 6,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common,Peer,hashCode,Magic Number,The method contains a magic number: 31,221
+mpetazzoni_ttorrent,com.turn.ttorrent.common,Pair,hashCode,Magic Number,The method contains a magic number: 31,32
+mpetazzoni_ttorrent,com.turn.ttorrent.common,PeerUID,hashCode,Magic Number,The method contains a magic number: 31,34
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentMetadataImpl,TorrentMetadataImpl,Long Parameter List,The method has 11 parameters. ,24
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,testParseNullAnnounce,Magic Number,The method contains a magic number: 20,24
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,testParseNullAnnounce,Magic Number,The method contains a magic number: 512,24
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,testParseNullAnnounce,Magic Number,The method contains a magic number: 10,24
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,parseTest,Long Identifier,The length of the identifier torrentMetadataWithAnnounceList is 31.,40
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,parseTest,Magic Number,The method contains a magic number: 4,40
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,parseTest,Magic Number,The method contains a magic number: 100,40
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,parseTest,Magic Number,The method contains a magic number: 19,40
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,parseTest,Magic Number,The method contains a magic number: 4,40
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,badBEPFormatTest,Empty catch clause,The method has an empty catch block.,75
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentParserTest,missingRequiredFieldTest,Empty catch clause,The method has an empty catch block.,84
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexWithSingleByte,Magic Number,The method contains a magic number: 0xBC,35
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexWithLeadingZero,Magic Number,The method contains a magic number: 0x53,47
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexWithLeadingZero,Magic Number,The method contains a magic number: 0xFF,47
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexTrailingZero,Magic Number,The method contains a magic number: 0xAA,54
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexTrailingZero,Magic Number,The method contains a magic number: 0x45,54
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Long Statement,The length of the statement "assertEquals("0123456789ABCDEF"`TorrentUtils.byteArrayToHexString(new byte[]{(byte)0x01`(byte)0x23`(byte)0x45`(byte)0x67`(byte)0x89`(byte)0xAB`(byte)0xCD`(byte)0xEF}));" is 168.,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Magic Number,The method contains a magic number: 0x23,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Magic Number,The method contains a magic number: 0x45,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Magic Number,The method contains a magic number: 0x67,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Magic Number,The method contains a magic number: 0x89,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Magic Number,The method contains a magic number: 0xAB,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Magic Number,The method contains a magic number: 0xCD,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentUtilsTest,testBytesToHexAllSymbols,Magic Number,The method contains a magic number: 0xEF,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentTest,torrent_from_multiple_files,Long Statement,The length of the statement "final String[] fileNames=new String[]{"AccuRevCommon.jar"`"commons-io-cio2.5_3.jar"`"commons-io-cio2.5_3.jar.link"`"inDir/application.wadl"`"storage.version"};" is 159.,34
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentTest,torrent_from_multiple_files,Long Statement,The length of the statement "TorrentMetadata createdTorrent=TorrentCreator.create(parentDir`files`announceURI`null`createdBy`creationTimeSecs`TorrentCreator.DEFAULT_PIECE_LENGTH);" is 150.,34
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentTest,torrent_from_multiple_files,Long Statement,The length of the statement "assertTrue(Hex.encodeHexString(expectedBytesWin).equals(Hex.encodeHexString(actualBytes)) || Hex.encodeHexString(expectedBytesLinux).equals(Hex.encodeHexString(actualBytes)));" is 175.,34
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentTest,torrent_from_multiple_files,Magic Number,The method contains a magic number: 1376051000,34
+mpetazzoni_ttorrent,com.turn.ttorrent.common,TorrentTest,testFilenames,Long Statement,The length of the statement "String[] expectedFilenames=new String[]{"parentDir/AccuRevCommon.jar"`"parentDir/commons-io-cio2.5_3.jar"`"parentDir/commons-io-cio2.5_3.jar.link"`"parentDir/inDir/application.wadl"`"parentDir/storage.version"};" is 211.,59
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol,PeerMessage,parse,Complex Method,Cyclomatic complexity of the method is 13,136
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol,PeerMessage,parse,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@522d86e4,136
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,HTTPAnnounceResponseMessage,Long Parameter List,The method has 5 parameters. ,48
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,HTTPAnnounceResponseMessage,Long Parameter List,The method has 6 parameters. ,57
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,parse,Long Statement,The length of the statement "return new HTTPAnnounceResponseMessage(Constants.EMPTY_BUFFER`params.get("interval").getInt()`params.get("complete") != null ? params.get("complete").getInt() : 0`params.get("incomplete") != null ? params.get("incomplete").getInt() : 0`peers`params.get("torrentIdentifier").getString());" is 287.,87
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,parse,Long Statement,The length of the statement "return new HTTPAnnounceResponseMessage(Constants.EMPTY_BUFFER`params.get("interval").getInt()`params.get("complete") != null ? params.get("complete").getInt() : 0`params.get("incomplete") != null ? params.get("incomplete").getInt() : 0`peers);" is 243.,87
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,toPeerList,Magic Number,The method contains a magic number: 6,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,toPeerList,Magic Number,The method contains a magic number: 6,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,toPeerList,Magic Number,The method contains a magic number: 4,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,toPeerList,Magic Number,The method contains a magic number: 0xFF,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,toPeerList,Magic Number,The method contains a magic number: 8,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,toPeerList,Magic Number,The method contains a magic number: 0xFF,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,craft,Long Parameter List,The method has 5 parameters. ,190
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,craft,Magic Number,The method contains a magic number: 6,190
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessage,craft,Magic Number,The method contains a magic number: 4,190
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceRequestMessage,HTTPAnnounceRequestMessage,Long Parameter List,The method has 10 parameters. ,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceRequestMessage,buildAnnounceURL,Long Statement,The length of the statement "url.append(base.contains("?") ? "&" : "?").append("info_hash=").append(URLEncoder.encode(new String(this.getInfoHash()`Constants.BYTE_ENCODING)`Constants.BYTE_ENCODING)).append("&peer_id=").append(URLEncoder.encode(new String(this.getPeerId()`Constants.BYTE_ENCODING)`Constants.BYTE_ENCODING)).append("&port=").append(this.getPort()).append("&uploaded=").append(this.getUploaded()).append("&downloaded=").append(this.getDownloaded()).append("&left=").append(this.getLeft()).append("&compact=").append(this.isCompact() ? 1 : 0).append("&no_peer_id=").append(this.canOmitPeerId() ? 1 : 0);" is 587.,152
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceRequestMessage,parse,Complex Method,Cyclomatic complexity of the method is 13,190
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceRequestMessage,parse,Long Statement,The length of the statement "return new HTTPAnnounceRequestMessage(Constants.EMPTY_BUFFER`infoHash`new Peer(ip`port`ByteBuffer.wrap(peerId))`uploaded`downloaded`left`compact`noPeerId`event`numWant);" is 169.,190
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceRequestMessage,craft,Long Parameter List,The method has 11 parameters. ,274
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceRequestMessage,craft,Long Statement,The length of the statement "return new HTTPAnnounceRequestMessage(BEncoder.bencode(params)`infoHash`new Peer(ip`port`ByteBuffer.wrap(peerId))`uploaded`downloaded`left`compact`noPeerId`event`numWant);" is 171.,274
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPTrackerErrorMessage,parse,Long Statement,The length of the statement "return new HTTPTrackerErrorMessage(Constants.EMPTY_BUFFER`params.get("failure reason").getString(Constants.BYTE_ENCODING));" is 123.,50
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessageTest,parseTest,Long Statement,The length of the statement "HTTPAnnounceResponseMessage parsedResponse=(HTTPAnnounceResponseMessage)HTTPAnnounceResponseMessage.parse(new ByteArrayInputStream(BEncoder.bencode(trackerResponse).array()));" is 175.,21
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 5,21
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 6881,21
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 6,21
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.http,HTTPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 5,21
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPTrackerErrorMessage,parse,Long Identifier,The length of the field UDP_TRACKER_ERROR_MIN_MESSAGE_SIZE is 34.,62
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPTrackerErrorMessage,craft,Long Identifier,The length of the field UDP_TRACKER_ERROR_MIN_MESSAGE_SIZE is 34.,89
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPConnectResponseMessage,parse,Long Identifier,The length of the field UDP_CONNECT_RESPONSE_MESSAGE_SIZE is 33.,59
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPConnectResponseMessage,craft,Long Identifier,The length of the field UDP_CONNECT_RESPONSE_MESSAGE_SIZE is 33.,77
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,UDPAnnounceResponseMessage,Long Parameter List,The method has 6 parameters. ,46
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Long Identifier,The length of the field UDP_ANNOUNCE_RESPONSE_MIN_MESSAGE_SIZE is 38.,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Long Statement,The length of the statement "if (data.remaining() < UDP_ANNOUNCE_RESPONSE_MIN_MESSAGE_SIZE || (data.remaining() - UDP_ANNOUNCE_RESPONSE_MIN_MESSAGE_SIZE) % 6 != 0) {" is 136.,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Magic Number,The method contains a magic number: 6,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Magic Number,The method contains a magic number: 6,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Magic Number,The method contains a magic number: 4,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Magic Number,The method contains a magic number: 0xFF,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Magic Number,The method contains a magic number: 8,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,parse,Magic Number,The method contains a magic number: 0xFF,90
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,craft,Long Identifier,The length of the field UDP_ANNOUNCE_RESPONSE_MIN_MESSAGE_SIZE is 38.,133
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,craft,Long Parameter List,The method has 5 parameters. ,133
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,craft,Magic Number,The method contains a magic number: 6,133
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessage,craft,Magic Number,The method contains a magic number: 4,133
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,UDPAnnounceRequestMessage,Long Parameter List,The method has 13 parameters. ,52
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,parse,Long Identifier,The length of the field UDP_ANNOUNCE_REQUEST_MESSAGE_SIZE is 33.,160
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,parse,Long Statement,The length of the statement "return new UDPAnnounceRequestMessage(data`connectionId`transactionId`infoHash`peerId`downloaded`uploaded`left`event`ip`key`numWant`port);" is 137.,160
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,parse,Magic Number,The method contains a magic number: 20,160
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,parse,Magic Number,The method contains a magic number: 20,160
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,parse,Magic Number,The method contains a magic number: 4,160
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,craft,Long Identifier,The length of the field UDP_ANNOUNCE_REQUEST_MESSAGE_SIZE is 33.,218
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,craft,Long Parameter List,The method has 12 parameters. ,218
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,craft,Long Statement,The length of the statement "return new UDPAnnounceRequestMessage(data`connectionId`transactionId`infoHash`peerId`downloaded`uploaded`left`event`ip`key`numWant`(short)port);" is 144.,218
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,craft,Magic Number,The method contains a magic number: 20,218
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceRequestMessage,craft,Magic Number,The method contains a magic number: 20,218
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPConnectRequestMessage,parse,Long Identifier,The length of the field UDP_CONNECT_REQUEST_MESSAGE_SIZE is 32.,58
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPConnectRequestMessage,craft,Long Identifier,The length of the field UDP_CONNECT_REQUEST_MESSAGE_SIZE is 32.,80
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 3,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 20,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 6,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 3,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 5,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 2,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 6881,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 3,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 5,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.protocol.udp,UDPAnnounceResponseMessageTest,parseTest,Magic Number,The method contains a magic number: 2,19
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MultiThreadHashesCalculator,calculateHashes,Long Statement,The length of the statement "List<Long> sourcesSizes=CommonHashingCalculator.INSTANCE.processDataSources(sources`pieceSize`new CommonHashingCalculator.Processor(){" is 134.,40
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilder,doBuild,Complex Method,Cyclomatic complexity of the method is 12,319
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilder,doBuild,Long Statement,The length of the statement "throw new IllegalStateException("Missing required field 'name'. Use setDirectoryName() method for specifying name of torrent");" is 127.,319
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilder,doBuild,Long Statement,The length of the statement "HashingResult hashingResult=this.hashingResult == null ? piecesHashesCalculator.calculateHashes(dataSources`pieceLength) : this.hashingResult;" is 142.,319
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,SingleThreadHashesCalculator,calculateHashes,Long Statement,The length of the statement "List<Long> sourcesSizes=CommonHashingCalculator.INSTANCE.processDataSources(sources`pieceSize`new CommonHashingCalculator.Processor(){" is 134.,27
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,setUp,Long Statement,The length of the statement "implementations=Arrays.asList(new SingleThreadHashesCalculator()`new MultiThreadHashesCalculator(executor`3)`new MultiThreadHashesCalculator(executor`20)`new MultiThreadHashesCalculator(executor`1));" is 199.,44
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,setUp,Magic Number,The method contains a magic number: 4,44
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,setUp,Magic Number,The method contains a magic number: 3,44
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,setUp,Magic Number,The method contains a magic number: 20,44
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,tearDown,Magic Number,The method contains a magic number: 10,55
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testEmptySource,Long Statement,The length of the statement "HashingResult expected=new HashingResult(Collections.singletonList(TorrentUtils.calculateSha1Hash(new byte[]{1`2`3`4}))`asList(2L`0L`2L));" is 138.,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testEmptySource,Magic Number,The method contains a magic number: 2L,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testEmptySource,Magic Number,The method contains a magic number: 2L,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testEmptySource,Magic Number,The method contains a magic number: 512,61
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testStreamsAsPiece,Long Statement,The length of the statement "HashingResult expected=new HashingResult(asList(TorrentUtils.calculateSha1Hash(new byte[]{1`2`3`4})`TorrentUtils.calculateSha1Hash(new byte[]{5`6`7`8}))`asList(4L`4L));" is 168.,74
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testStreamsAsPiece,Magic Number,The method contains a magic number: 4L,74
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testStreamsAsPiece,Magic Number,The method contains a magic number: 4L,74
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testStreamsAsPiece,Magic Number,The method contains a magic number: 4,74
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testReadingNotFullyBuffer,Complex Method,Cyclomatic complexity of the method is 8,87
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testReadingNotFullyBuffer,Long Statement,The length of the statement "HashingResult expected=new HashingResult(asList(TorrentUtils.calculateSha1Hash(new byte[]{1`2`3`4`5})`TorrentUtils.calculateSha1Hash(new byte[]{6`7}))`Collections.singletonList(7L));" is 182.,87
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testReadingNotFullyBuffer,Magic Number,The method contains a magic number: 7L,87
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testReadingNotFullyBuffer,Magic Number,The method contains a magic number: 2,87
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testReadingNotFullyBuffer,Magic Number,The method contains a magic number: 5,87
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Long Statement,The length of the statement "HashingResult expected=new HashingResult(asList(TorrentUtils.calculateSha1Hash(new byte[]{0`1`2`3`4`5})`TorrentUtils.calculateSha1Hash(new byte[]{4`-1`-2`6`7`8})`TorrentUtils.calculateSha1Hash(new byte[]{9`10`1`2`3`4}))`asList(7L`2L`5L`4L));" is 241.,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Magic Number,The method contains a magic number: 2,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Magic Number,The method contains a magic number: 2,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Magic Number,The method contains a magic number: 7L,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Magic Number,The method contains a magic number: 2L,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Magic Number,The method contains a magic number: 5L,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Magic Number,The method contains a magic number: 4L,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testWithSmallSource,Magic Number,The method contains a magic number: 6,142
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testOneLargeSource,Magic Number,The method contains a magic number: 1024,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testOneLargeSource,Magic Number,The method contains a magic number: 1024,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testOneLargeSource,Magic Number,The method contains a magic number: 100,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testOneLargeSource,Magic Number,The method contains a magic number: 128,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,HashesCalculatorsTest,testOneLargeSource,Magic Number,The method contains a magic number: 1024,158
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testMultiFileModeWithOneFile,Long Statement,The length of the statement "Map<String`BEValue> map=new MetadataBuilder().setDirectoryName("root").addDataSource(new ByteArrayInputStream(new byte[]{1`2})`"path/some_file"`true).buildBEP().getMap();" is 170.,35
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testMultiFileModeWithOneFile,Magic Number,The method contains a magic number: 2,35
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testBuildWithSpecifiedHashes,Long Statement,The length of the statement ").setFilesInfo(Collections.singletonList(expectedHash)`Collections.singletonList("file")`Collections.singletonList(42L)).setPieceLength(512).setTracker("http://localhost:12346").buildBEP().getMap();" is 198.,58
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testBuildWithSpecifiedHashes,Magic Number,The method contains a magic number: 42L,58
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testBuildWithSpecifiedHashes,Magic Number,The method contains a magic number: 512,58
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testBuildWithSpecifiedHashes,Magic Number,The method contains a magic number: 42,58
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testSingleFile,Long Statement,The length of the statement "Map<String`BEValue> metadata=new MetadataBuilder().addDataSource(new ByteArrayInputStream(data)`"singleFile.txt"`true).setTracker("http://localhost:12346").buildBEP().getMap();" is 176.,82
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testSingleFile,Magic Number,The method contains a magic number: 512,82
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testSingleFile,Magic Number,The method contains a magic number: 1024,82
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testMultiFileWithOneFileValues,Long Statement,The length of the statement "Map<String`BEValue> metadata=new MetadataBuilder().addDataSource(new ByteArrayInputStream(data)`paths.get(0)`true).addDataSource(new ByteArrayInputStream(data)`paths.get(1)`true).setDirectoryName("downloadDirName").buildBEP().getMap();" is 235.,103
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testMultiFileWithOneFileValues,Magic Number,The method contains a magic number: 512,103
+mpetazzoni_ttorrent,com.turn.ttorrent.common.creation,MetadataBuilderTest,testMultiFileWithOneFileValues,Magic Number,The method contains a magic number: 1024,103
+mpetazzoni_ttorrent,com.turn.ttorrent.cli,ClientMain,main,Magic Number,The method contains a magic number: 1000,104
+mpetazzoni_ttorrent,com.turn.ttorrent.cli,ClientMain,main,Magic Number,The method contains a magic number: 2,104
+mpetazzoni_ttorrent,com.turn.ttorrent.cli,TorrentMain,main,Complex Conditional,The conditional expression Boolean.TRUE.equals(createFlag) && (otherArgs.length != 1 || announceURLs.isEmpty()) is complex.,80
+mpetazzoni_ttorrent,com.turn.ttorrent.cli,TorrentMain,main,Complex Method,Cyclomatic complexity of the method is 10,80
+mpetazzoni_ttorrent,com.turn.ttorrent.cli,TorrentMain,main,Magic Number,The method contains a magic number: 1024,80
+mpetazzoni_ttorrent,com.turn.ttorrent.cli,TorrentMain,main,Magic Number,The method contains a magic number: 2,80
+mpetazzoni_ttorrent,com.turn.ttorrent.cli,TrackerMain,main,Magic Number,The method contains a magic number: 2,53
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManager,ConnectionManager,Long Parameter List,The method has 7 parameters. ,41
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManager,initAndRunWorker,Long Statement,The length of the statement "myConnectionWorker=new ConnectionWorker(selector`Arrays.asList(new InvalidKeyProcessor()`new AcceptableKeyProcessor(selector`serverName`myTimeService`myIncomingConnectionAllower`socketTimeoutStorage`mySendBufferSize`myReceiveBufferSize)`new ConnectableKeyProcessor(selector`myTimeService`socketTimeoutStorage`mySendBufferSize`myReceiveBufferSize)`new ReadableKeyProcessor(serverName)`new WritableKeyProcessor())`DEFAULT_SELECTOR_SELECT_TIMEOUT_MILLIS`DEFAULT_CLEANUP_RUN_TIMEOUT_MILLIS`myTimeService`new CleanupKeyProcessor(myTimeService)`myOutgoingConnectionAllower);" is 568.,57
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectTask,ConnectTask,Long Parameter List,The method has 5 parameters. ,15
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorker,ConnectionWorker,Long Parameter List,The method has 7 parameters. ,38
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorker,ConnectionWorker,Magic Number,The method contains a magic number: 100,38
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorker,ConnectionWorker,Magic Number,The method contains a magic number: 5000,38
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorker,processWriteTasks,Long Statement,The length of the statement "writeTask.getListener().onWriteFailed(getDefaultWriteErrorMessageWithSuffix(socketChannel`"Channel is not open")`new ConnectionClosedException());" is 146.,115
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorker,processWriteTasks,Long Statement,The length of the statement "writeTask.getListener().onWriteFailed(getDefaultWriteErrorMessageWithSuffix(socketChannel`"Can not find key for the channel")`new ConnectionClosedException());" is 159.,115
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorker,processWriteTasks,Long Statement,The length of the statement "writeTask.getListener().onWriteFailed(getDefaultWriteErrorMessageWithSuffix(socketChannel`"Incorrect attachment instance for the key")`new ConnectionClosedException());" is 168.,115
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorker,processWriteTasks,Long Statement,The length of the statement "writeTask.getListener().onWriteFailed(getDefaultWriteErrorMessageWithSuffix(socketChannel`"Key is cancelled")`new ConnectionClosedException(e));" is 144.,115
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,setUp,Long Statement,The length of the statement "myConnectionManager=new ConnectionManager(myContext`new MockTimeService()`newConnectionAllower`newConnectionAllower`selectorFactory`new AtomicInteger()`new AtomicInteger());" is 173.,40
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,testThatDoubleInitThrowException,Magic Number,The method contains a magic number: 6881,60
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,testThatDoubleInitThrowException,Magic Number,The method contains a magic number: 6889,60
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,testThatDoubleInitThrowException,Magic Number,The method contains a magic number: 6881,60
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,testThatDoubleInitThrowException,Magic Number,The method contains a magic number: 6889,60
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 10,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 6881,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 6889,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 2,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 2,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 2,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 3,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 3,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 7575,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,canAcceptAndReadData,Magic Number,The method contains a magic number: 100,74
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,tearDown,Magic Number,The method contains a magic number: 10,177
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionManagerTest,tryAcquireOrFail,Magic Number,The method contains a magic number: 500,184
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorkerTest,testCleanupIsCalled,Long Statement,The length of the statement "ConnectionWorker connectionWorker=new ConnectionWorker(mockSelector`Arrays.asList(acceptProcessor`notAcceptProcessor)`10`0`new MockTimeService()`mock(CleanupProcessor.class)`mock(NewConnectionAllower.class));" is 208.,18
+mpetazzoni_ttorrent,com.turn.ttorrent.network,ConnectionWorkerTest,testCleanupIsCalled,Magic Number,The method contains a magic number: 10,18
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,WritableKeyProcessor,process,Long Statement,The length of the statement "processedTask.getListener().onWriteFailed("I/O error occurs on write to channel " + socketChannel`new ConnectionClosedException(e));" is 132.,19
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,ConnectableKeyProcessor,ConnectableKeyProcessor,Long Parameter List,The method has 5 parameters. ,30
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,ConnectableKeyProcessor,process,Long Statement,The length of the statement "ReadWriteAttachment keyAttachment=new ReadWriteAttachment(connectionListener`myTimeService.now()`myTimeoutStorage.getTimeoutMillis());" is 134.,42
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,AcceptableKeyProcessor,AcceptableKeyProcessor,Long Parameter List,The method has 7 parameters. ,24
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,AcceptableKeyProcessor,process,Long Statement,The length of the statement "ReadWriteAttachment keyAttachment=new ReadWriteAttachment(stateConnectionListener`myTimeService.now()`myTimeoutStorage.getTimeoutMillis());" is 139.,40
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,CleanupKeyProcessorTest,testSelected,Magic Number,The method contains a magic number: 10,39
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,CleanupKeyProcessorTest,testSelected,Magic Number,The method contains a magic number: 100,39
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,CleanupKeyProcessorTest,testCleanupWithoutClose,Magic Number,The method contains a magic number: 200,70
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,WritableKeyProcessorTest,testThatOnWriteDoneInvoked,Magic Number,The method contains a magic number: 10,41
+mpetazzoni_ttorrent,com.turn.ttorrent.network.keyProcessors,WritableKeyProcessorTest,checkThatWriteTaskDoesntRemovedIfBufferIsNotWrittenInOneStep,Magic Number,The method contains a magic number: 10,79
+mpetazzoni_ttorrent,com.turn.ttorrent.bcodec,BDecoder,bdecodeBytes,Magic Number,The method contains a magic number: 9,143
+mpetazzoni_ttorrent,com.turn.ttorrent.bcodec,BDecoder,bdecodeBytes,Magic Number,The method contains a magic number: 9,143
+mpetazzoni_ttorrent,com.turn.ttorrent.bcodec,BDecoder,bdecodeBytes,Magic Number,The method contains a magic number: 10,143
+mpetazzoni_ttorrent,com.turn.ttorrent.bcodec,BDecoder,bdecodeNumber,Complex Method,Cyclomatic complexity of the method is 9,174
+mpetazzoni_ttorrent,com.turn.ttorrent.bcodec,BDecoder,bdecodeNumber,Magic Number,The method contains a magic number: 256,174
+mpetazzoni_ttorrent,com.turn.ttorrent.bcodec,BDecoder,bdecodeNumber,Magic Number,The method contains a magic number: 9,174
+mpetazzoni_ttorrent,(default package),BDecoderTest,testDecodeNumbers,Magic Number,The method contains a magic number: 1234567,14
+mpetazzoni_ttorrent,(default package),BDecoderTest,testDecodeNumbers,Magic Number,The method contains a magic number: 100,14

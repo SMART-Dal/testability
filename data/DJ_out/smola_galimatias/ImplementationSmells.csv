@@ -1,0 +1,397 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+smola_galimatias,io.mola.galimatias.canonicalize,StripPartCanonicalizer,canonicalize,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2bf1d748,44
+smola_galimatias,io.mola.galimatias.canonicalize,RegexCanonicalizer,canonicalize,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2a447744,49
+smola_galimatias,io.mola.galimatias.canonicalize,RFC3986Canonicalizer,isSubdelim,Long Statement,The length of the statement "return c == '!' || c == '$' || c == '&' || c == '\'' || c == '(' || c == ')' || c == '*' || c == '+' || c == '`' || c == ';' || c == '=';" is 137.,64
+smola_galimatias,io.mola.galimatias.canonicalize,RFC2396Canonicalizer,isReserved,Long Statement,The length of the statement "return c == ';' || c == '/' || c == '?' || c == ':' || c == '@' || c == '&' || c == '=' || c == '+' || c == '$' || c == '`';" is 124.,69
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,canonicalize,Long Statement,The length of the statement "output=output.withUsername(decodeUnreserved(output.username())).withPassword(decodeUnreserved(output.password())).withPath(decodeUnreserved(output.path()));" is 156.,30
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Complex Conditional,The conditional expression c == '%' && input.length() > i + 2 && URLUtils.isASCIIHexDigit(input.charAt(i + 1)) && URLUtils.isASCIIHexDigit(input.charAt(i + 2)) is complex.,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Complex Conditional,The conditional expression URLUtils.isASCIIAlphanumeric(d) || d == 0x2D || d == 0x2E || d == 0x5F || d == 0x7E is complex.,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Long Statement,The length of the statement "if (c == '%' && input.length() > i + 2 && URLUtils.isASCIIHexDigit(input.charAt(i + 1)) && URLUtils.isASCIIHexDigit(input.charAt(i + 2))) {" is 139.,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 2,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 2,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 2,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 0x2D,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 0x2E,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 0x5F,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 0x7E,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 3,47
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizer,decodeUnreserved,Magic Number,The method contains a magic number: 2,47
+smola_galimatias,io.mola.galimatias.canonicalize,BaseURLCanonicalizer,canonicalize,Complex Conditional,The conditional expression (c == '%' && input.length() > offset + 2 && isASCIIHexDigit(input.charAt(offset + 1)) && isASCIIHexDigit(input.charAt(offset + 2))) || unencodedPredicate.test(c) is complex.,30
+smola_galimatias,io.mola.galimatias.canonicalize,BaseURLCanonicalizer,canonicalize,Long Statement,The length of the statement "if ((c == '%' && input.length() > offset + 2 && isASCIIHexDigit(input.charAt(offset + 1)) && isASCIIHexDigit(input.charAt(offset + 2))) || unencodedPredicate.test(c)) {" is 168.,30
+smola_galimatias,io.mola.galimatias.canonicalize,BaseURLCanonicalizer,canonicalize,Magic Number,The method contains a magic number: 2,30
+smola_galimatias,io.mola.galimatias.canonicalize,BaseURLCanonicalizer,canonicalize,Magic Number,The method contains a magic number: 2,30
+smola_galimatias,io.mola.galimatias.canonicalize,DecodeUnreservedCanonicalizerTest,test,Long Statement,The length of the statement "for ( final String[] pair : new String[][]{new String[]{"http://%41%5A%61%7A%30%39%2D%2E%5F%7E@example.com/"`"http://AZaz09-._~@example.com/"}`new String[]{"http://:%41%5A%61%7A%30%39%2D%2E%5F%7E@example.com/"`"http://:AZaz09-._~@example.com/"}`new String[]{"http://example.com/%41%5A%61%7A%30%39%2D%2E%5F%7E"`"http://example.com/AZaz09-._~"}`new String[]{"http://example.com/?%41%5A%61%7A%30%39%2D%2E%5F%7E"`"http://example.com/?AZaz09-._~"}`new String[]{"http://example.com/#%41%5A%61%7A%30%39%2D%2E%5F%7E"`"http://example.com/#AZaz09-._~"}}) {" is 546.,38
+smola_galimatias,io.mola.galimatias.canonicalize,RFC3986CanonicalizerTest,test,Long Statement,The length of the statement "for ( final String[] pair : new String[][]{new String[]{"http://example.com/^{}|[]`~"`"http://example.com/%5E%7B%7D%7C%5B%5D%60~"}`new String[]{"http://example.com/?^{}|[]`~"`"http://example.com/?%5E%7B%7D%7C%5B%5D%60~"}`new String[]{"http://example.com/#^{}|[]`~"`"http://example.com/#%5E%7B%7D%7C%5B%5D%60~"}}) {" is 314.,38
+smola_galimatias,io.mola.galimatias.canonicalize,RFC2396CanonicalizerTest,test,Long Statement,The length of the statement "for ( final String[] pair : new String[][]{new String[]{"http://example.com/^{}|[]`~"`"http://example.com/%5E%7B%7D%7C%5B%5D%60%7E"}`new String[]{"http://example.com/?^{}|[]`~"`"http://example.com/?%5E%7B%7D%7C%5B%5D%60%7E"}`new String[]{"http://example.com/#^{}|[]`~"`"http://example.com/#%5E%7B%7D%7C%5B%5D%60%7E"}}) {" is 320.,38
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Complex Method,Cyclomatic complexity of the method is 31,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Long Method,The method has 138 lines of code.,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 8,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 2,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 8,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 4,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 0x10,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 16,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 6,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 0x30,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 10,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 255,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 3,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 8,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 3,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 3,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 7,41
+smola_galimatias,io.mola.galimatias,IPv6Address,parseIPv6Address,Magic Number,The method contains a magic number: 8,41
+smola_galimatias,io.mola.galimatias,IPv6Address,toInetAddress,Magic Number,The method contains a magic number: 16,224
+smola_galimatias,io.mola.galimatias,IPv6Address,toInetAddress,Magic Number,The method contains a magic number: 2,224
+smola_galimatias,io.mola.galimatias,IPv6Address,toInetAddress,Magic Number,The method contains a magic number: 8,224
+smola_galimatias,io.mola.galimatias,IPv6Address,toInetAddress,Magic Number,The method contains a magic number: 0xFF,224
+smola_galimatias,io.mola.galimatias,IPv6Address,toInetAddress,Magic Number,The method contains a magic number: 2,224
+smola_galimatias,io.mola.galimatias,IPv6Address,toInetAddress,Magic Number,The method contains a magic number: 0xFF,224
+smola_galimatias,io.mola.galimatias,IPv6Address,fromInet6Address,Magic Number,The method contains a magic number: 8,244
+smola_galimatias,io.mola.galimatias,IPv6Address,fromInet6Address,Magic Number,The method contains a magic number: 2,244
+smola_galimatias,io.mola.galimatias,IPv6Address,fromInet6Address,Magic Number,The method contains a magic number: 0xFF,244
+smola_galimatias,io.mola.galimatias,IPv6Address,fromInet6Address,Magic Number,The method contains a magic number: 8,244
+smola_galimatias,io.mola.galimatias,IPv6Address,fromInet6Address,Magic Number,The method contains a magic number: 2,244
+smola_galimatias,io.mola.galimatias,IPv6Address,fromInet6Address,Magic Number,The method contains a magic number: 0x00FF,244
+smola_galimatias,io.mola.galimatias,IPv6Address,toString,Complex Method,Cyclomatic complexity of the method is 12,259
+smola_galimatias,io.mola.galimatias,IPv6Address,toString,Magic Number,The method contains a magic number: 40,259
+smola_galimatias,io.mola.galimatias,IPv6Address,toString,Magic Number,The method contains a magic number: 0xFFFF,259
+smola_galimatias,io.mola.galimatias,URL,URL,Long Parameter List,The method has 10 parameters. ,52
+smola_galimatias,io.mola.galimatias,URL,URL,Long Parameter List,The method has 10 parameters. ,62
+smola_galimatias,io.mola.galimatias,URL,queryParameter,Complex Method,Cyclomatic complexity of the method is 8,176
+smola_galimatias,io.mola.galimatias,URL,queryParameters,Complex Method,Cyclomatic complexity of the method is 8,215
+smola_galimatias,io.mola.galimatias,URL,file,Long Statement,The length of the statement "final StringBuilder output=new StringBuilder(((path != null) ? path.length() : 0) + ((query != null) ? query.length() + 1 : 0));" is 128.,262
+smola_galimatias,io.mola.galimatias,URL,relativize,Complex Method,Cyclomatic complexity of the method is 9,353
+smola_galimatias,io.mola.galimatias,URL,withUsername,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`newUserName`this.password`this.host`this.port`this.path`this.query`this.fragment`true);" is 130.,472
+smola_galimatias,io.mola.galimatias,URL,withPassword,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`this.username`newPassword`this.host`this.port`this.path`this.query`this.fragment`true);" is 130.,483
+smola_galimatias,io.mola.galimatias,URL,withHost,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`this.username`this.password`newHost`this.port`this.path`this.query`this.fragment`true);" is 130.,501
+smola_galimatias,io.mola.galimatias,URL,withPort,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`this.username`this.password`this.host`newPort`this.path`this.query`this.fragment`true);" is 130.,514
+smola_galimatias,io.mola.galimatias,URL,withQuery,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`this.username`this.password`this.host`this.port`this.path`null`this.fragment`true);" is 126.,534
+smola_galimatias,io.mola.galimatias,URL,withQuery,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`this.username`this.password`this.host`this.port`this.path`newQuery`this.fragment`true);" is 130.,534
+smola_galimatias,io.mola.galimatias,URL,withFragment,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`this.username`this.password`this.host`this.port`this.path`this.query`null`true);" is 123.,551
+smola_galimatias,io.mola.galimatias,URL,withFragment,Long Statement,The length of the statement "return new URL(this.scheme`this.schemeData`this.username`this.password`this.host`this.port`this.path`this.query`newFragment`true);" is 130.,551
+smola_galimatias,io.mola.galimatias,URL,toJavaURI,Long Statement,The length of the statement "return new URI(scheme()`(!"".equals(userInfo())) ? URLUtils.percentDecode(userInfo()) : null`(host() != null) ? host().toString() : null`port`(path() != null) ? URLUtils.percentDecode(path()) : null`(query() != null) ? URLUtils.percentDecode(query()) : null`(fragment() != null) ? URLUtils.percentDecode(fragment()) : null);" is 324.,571
+smola_galimatias,io.mola.galimatias,URL,toJavaURI,Long Statement,The length of the statement "return new URI(scheme()`URLUtils.percentDecode(schemeData()) + ((query() == null) ? "" : "?" + URLUtils.percentDecode(query()))`(fragment() != null) ? URLUtils.percentDecode(fragment()) : null);" is 194.,571
+smola_galimatias,io.mola.galimatias,URL,toString,Complex Method,Cyclomatic complexity of the method is 8,657
+smola_galimatias,io.mola.galimatias,URL,toHumanString,Complex Method,Cyclomatic complexity of the method is 9,699
+smola_galimatias,io.mola.galimatias,URL,equals,Long Statement,The length of the statement "return isHierarchical == other.isHierarchical && ((scheme == null) ? other.scheme == null : scheme.equals(other.scheme)) && ((schemeData == null) ? other.schemeData == null : schemeData.equals(other.schemeData)) && ((username == null) ? other.username == null : username.equals(other.username)) && ((password == null) ? other.password == null : password.equals(other.password)) && ((host == null) ? other.host == null : host.equals(other.host)) && port == other.port && ((path == null) ? other.host == null : path.equals(other.path)) && ((fragment == null) ? other.fragment == null : fragment.equals(other.fragment)) && ((query == null) ? other.query == null : query.equals(other.query));" is 688.,744
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,URL,hashCode,Magic Number,The method contains a magic number: 31,766
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 3,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 0xFF,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 2,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 8,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 0xFF00,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 16,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 0xFF0000,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 24,35
+smola_galimatias,io.mola.galimatias,IPv4Address,IPv4Address,Magic Number,The method contains a magic number: 0xFF000000,35
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Complex Method,Cyclomatic complexity of the method is 13,44
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Magic Number,The method contains a magic number: 4,44
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Magic Number,The method contains a magic number: 0x30,44
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Magic Number,The method contains a magic number: 10,44
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Magic Number,The method contains a magic number: 255,44
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Magic Number,The method contains a magic number: 3,44
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Magic Number,The method contains a magic number: 3,44
+smola_galimatias,io.mola.galimatias,IPv4Address,parseIPv4Address,Magic Number,The method contains a magic number: 4,44
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Long Statement,The length of the statement "return new byte[]{(byte)(address >> 24 & 0x00FF)`(byte)(address >> 16 & 0x00FF)`(byte)(address >> 8 & 0x00FF)`(byte)(address & 0x00FF)};" is 136.,119
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Magic Number,The method contains a magic number: 24,119
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Magic Number,The method contains a magic number: 0x00FF,119
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Magic Number,The method contains a magic number: 16,119
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Magic Number,The method contains a magic number: 0x00FF,119
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Magic Number,The method contains a magic number: 8,119
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Magic Number,The method contains a magic number: 0x00FF,119
+smola_galimatias,io.mola.galimatias,IPv4Address,getBytes,Magic Number,The method contains a magic number: 0x00FF,119
+smola_galimatias,io.mola.galimatias,IPv4Address,toString,Magic Number,The method contains a magic number: 0x00FF,128
+smola_galimatias,io.mola.galimatias,IPv4Address,toString,Magic Number,The method contains a magic number: 0x00FF,128
+smola_galimatias,io.mola.galimatias,IPv4Address,toString,Magic Number,The method contains a magic number: 2,128
+smola_galimatias,io.mola.galimatias,IPv4Address,toString,Magic Number,The method contains a magic number: 0x00FF,128
+smola_galimatias,io.mola.galimatias,IPv4Address,toString,Magic Number,The method contains a magic number: 3,128
+smola_galimatias,io.mola.galimatias,IPv4Address,toString,Magic Number,The method contains a magic number: 0x00FF,128
+smola_galimatias,io.mola.galimatias,URLParser,handleInvalidPercentEncodingError,Long Statement,The length of the statement "handleError(GalimatiasParseException.builder().withMessage("Percentage (\"%\") is not followed by two hexadecimal digits").withParseIssue(ParseIssue.INVALID_PERCENT_ENCODING).withPosition(idx).build());" is 202.,139
+smola_galimatias,io.mola.galimatias,URLParser,handleBackslashAsDelimiterError,Long Statement,The length of the statement "handleError(GalimatiasParseException.builder().withMessage("Backslash (\"\\\") used as path segment delimiter").withParseIssue(ParseIssue.BACKSLASH_AS_DELIMITER).withPosition(idx).build());" is 189.,147
+smola_galimatias,io.mola.galimatias,URLParser,handleIllegalWhitespaceError,Long Statement,The length of the statement "handleError(GalimatiasParseException.builder().withMessage("Tab` new line or carriage return found").withParseIssue(ParseIssue.ILLEGAL_WHITESPACE).withPosition(idx).build());" is 174.,155
+smola_galimatias,io.mola.galimatias,URLParser,handleIllegalCharacterError,Long Statement,The length of the statement "handleError(GalimatiasParseException.builder().withMessage(message).withParseIssue(ParseIssue.ILLEGAL_CHARACTER).withPosition(idx).build());" is 140.,163
+smola_galimatias,io.mola.galimatias,URLParser,handleFatalMissingSchemeError,Long Statement,The length of the statement "handleFatalError(GalimatiasParseException.builder().withMessage("Missing scheme").withPosition(idx).withParseIssue(ParseIssue.MISSING_SCHEME).build());" is 151.,182
+smola_galimatias,io.mola.galimatias,URLParser,handleFatalIllegalCharacterError,Long Statement,The length of the statement "handleFatalError(GalimatiasParseException.builder().withMessage(message).withParseIssue(ParseIssue.ILLEGAL_CHARACTER).withPosition(idx).build());" is 145.,190
+smola_galimatias,io.mola.galimatias,URLParser,handleFatalInvalidHostError,Long Statement,The length of the statement "handleFatalError(GalimatiasParseException.builder().withMessage("Invalid host: " + exception.getMessage()).withParseIssue(ParseIssue.INVALID_HOST).withPosition(idx).withCause(exception).build());" is 195.,199
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression isASCIIAlphanumeric(c) || c == '+' || c == '-' || c == '.' is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression relativeFlag && base != null && base.scheme().equals(scheme) is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression !isEOF && c != '%' && !isURLCodePoint(c) is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression !isEOF && c != 0x0009 && c != 0x000A && c != 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression !"file".equals(scheme) || !isASCIIAlpha(c) || (at(idx + 1) != ':' && at(idx + 1) != '|')|| (idx + 1 == endIdx - 1)|| (idx + 2 < endIdx && at(idx + 2) != '/' && at(idx + 2) != '\\' && at(idx + 2) != '?' && at(idx + 2) != '#') is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression otherChar == 0x0009 || otherChar == 0x000A || otherChar == 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression i + 2 >= buffer.length() || !isASCIIHexDigit(buffer.charAt(i + 1)) || !isASCIIHexDigit(buffer.charAt(i + 2)) is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression isEOF || c == '/' || c == '\\' || c == '?' || c == '#' is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression isEOF || c == '/' || c == '\\' || c == '?' || c == '#' is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression buffer.length() == 2 && isASCIIAlpha(buffer.charAt(0)) && (buffer.charAt(1) == ':' || buffer.charAt(1) == '|') is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression c == 0x0009 || c == 0x000A || c == 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression isEOF || c == '/' || c == '\\' || c == '?' || c == '#' is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression c == 0x0009 || c == 0x000A || c == 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression isEOF || c == '/' || c == '\\' || c == '?' || c == '#' is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression c == 0x0009 || c == 0x000A || c == 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression isEOF || c == '/' || c == '\\' || (stateOverride == null && (c == '?' || c == '#')) is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression ".%2e".equals(lowerCasedBuffer) || "%2e.".equals(lowerCasedBuffer) || "%2e%2e".equals(lowerCasedBuffer) is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression ".".equals(buffer.toString()) && c != '/' && c != '\\' is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression "file".equals(scheme) && pathSegments.isEmpty() && buffer.length() == 2 && isASCIIAlpha(buffer.charAt(0)) && buffer.charAt(1) == '|' is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression c == 0x0009 || c == 0x000A || c == 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression isEOF || (stateOverride == null && c == '#') is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression b < 0x21 || b > 0x7E || b == 0x22 || b == 0x23 || b == 0x3C || b == 0x3E || b == 0x60 is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression c == 0x0009 || c == 0x000A || c == 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Conditional,The conditional expression c == 0x0009 || c == 0x000A || c == 0x000D is complex.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Complex Method,Cyclomatic complexity of the method is 123,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Method,The method has 570 lines of code.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "List<String> pathSegments=(url == null || stateOverride == ParseURLState.RELATIVE_PATH_START) ? new ArrayList<String>() : url.pathSegments();" is 141.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "StringBuilder query=(url == null || url.query() == null || stateOverride == ParseURLState.QUERY) ? null : new StringBuilder(url.query());" is 137.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "StringBuilder fragment=(url == null || url.fragment() == null || stateOverride == ParseURLState.FRAGMENT) ? null : new StringBuilder(url.fragment());" is 149.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "schemeData.append((char)c).append(Character.toUpperCase(input.charAt(idx + 1))).append(Character.toUpperCase(input.charAt(idx + 2)));" is 133.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "if (!"file".equals(scheme) || !isASCIIAlpha(c) || (at(idx + 1) != ':' && at(idx + 1) != '|')|| (idx + 1 == endIdx - 1)|| (idx + 2 < endIdx && at(idx + 2) != '/' && at(idx + 2) != '\\' && at(idx + 2) != '?' && at(idx + 2) != '#')) {" is 231.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "if ("file".equals(scheme) && pathSegments.isEmpty() && buffer.length() == 2 && isASCIIAlpha(buffer.charAt(0)) && buffer.charAt(1) == '|') {" is 139.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "buffer.append((char)c).append(Character.toUpperCase(input.charAt(idx + 1))).append(Character.toUpperCase(input.charAt(idx + 2)));" is 129.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "buffer.append((char)c).append(Character.toUpperCase(input.charAt(idx + 1))).append(Character.toUpperCase(input.charAt(idx + 2)));" is 129.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "fragment.append((char)c).append(Character.toUpperCase(input.charAt(idx + 1))).append(Character.toUpperCase(input.charAt(idx + 2)));" is 131.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Long Statement,The length of the statement "return new URL(scheme`schemeData.toString()`username`password`host`port`pathSegments`(query == null) ? null : query.toString()`(fragment == null) ? null : fragment.toString()`relativeFlag);" is 189.,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0030,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x21,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x7E,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x22,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x23,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x3C,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x3E,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x60,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x0009,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000A,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 0x000D,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parse,Magic Number,The method contains a magic number: 2,211
+smola_galimatias,io.mola.galimatias,URLParser,parseUsername,Magic Number,The method contains a magic number: 2,859
+smola_galimatias,io.mola.galimatias,URLParser,parsePassword,Magic Number,The method contains a magic number: 2,871
+smola_galimatias,io.mola.galimatias,URLParser,utf8PercentEncode,Complex Method,Cyclomatic complexity of the method is 11,890
+smola_galimatias,io.mola.galimatias,URLParser,isInSimpleEncodeSet,Magic Number,The method contains a magic number: 0x0020,925
+smola_galimatias,io.mola.galimatias,URLParser,isInSimpleEncodeSet,Magic Number,The method contains a magic number: 0x007E,925
+smola_galimatias,io.mola.galimatias,Domain,parseDomain,Complex Method,Cyclomatic complexity of the method is 23,54
+smola_galimatias,io.mola.galimatias,Domain,parseDomain,Magic Number,The method contains a magic number: 0x0009,54
+smola_galimatias,io.mola.galimatias,Domain,parseDomain,Magic Number,The method contains a magic number: 0x000A,54
+smola_galimatias,io.mola.galimatias,Domain,parseDomain,Magic Number,The method contains a magic number: 0x000D,54
+smola_galimatias,io.mola.galimatias,Domain,parseDomain,Magic Number,The method contains a magic number: 0x0020,54
+smola_galimatias,io.mola.galimatias,Domain,splitWorker,Complex Conditional,The conditional expression match || preserveAllTokens && lastMatch is complex.,157
+smola_galimatias,io.mola.galimatias,Domain,splitWorker,Complex Method,Cyclomatic complexity of the method is 16,157
+smola_galimatias,io.mola.galimatias,NameValue,hashCode,Magic Number,The method contains a magic number: 31,60
+smola_galimatias,io.mola.galimatias,NameValue,hashCode,Magic Number,The method contains a magic number: 31,60
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Complex Conditional,The conditional expression c == '%' && (input.length() <= idx + 2 || !isASCIIHexDigit(input.charAt(idx + 1)) || !isASCIIHexDigit(input.charAt(idx + 2))) is complex.,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Complex Method,Cyclomatic complexity of the method is 8,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Long Statement,The length of the statement "if (c == '%' && (input.length() <= idx + 2 || !isASCIIHexDigit(input.charAt(idx + 1)) || !isASCIIHexDigit(input.charAt(idx + 2)))) {" is 132.,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Long Statement,The length of the statement "while (c == '%' && input.length() > idx + 2 && isASCIIHexDigit(input.charAt(idx + 1)) && isASCIIHexDigit(input.charAt(idx + 2))) {" is 130.,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 0x7F,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 2,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 2,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 0x7F,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 2,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 2,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 2,48
+smola_galimatias,io.mola.galimatias,URLUtils,percentDecode,Magic Number,The method contains a magic number: 3,48
+smola_galimatias,io.mola.galimatias,URLUtils,processIdnaInfo,Complex Method,Cyclomatic complexity of the method is 20,152
+smola_galimatias,io.mola.galimatias,URLUtils,processIdnaInfo,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@40fd518f,152
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIHexDigit,Magic Number,The method contains a magic number: 0x0041,222
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIHexDigit,Magic Number,The method contains a magic number: 0x0046,222
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIHexDigit,Magic Number,The method contains a magic number: 0x0061,222
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIHexDigit,Magic Number,The method contains a magic number: 0x0066,222
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIDigit,Magic Number,The method contains a magic number: 0x0030,226
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIDigit,Magic Number,The method contains a magic number: 0x0039,226
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIAlphaUppercase,Magic Number,The method contains a magic number: 0x0061,230
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIAlphaUppercase,Magic Number,The method contains a magic number: 0x007A,230
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIAlphaLowercase,Magic Number,The method contains a magic number: 0x0041,234
+smola_galimatias,io.mola.galimatias,URLUtils,isASCIIAlphaLowercase,Magic Number,The method contains a magic number: 0x005A,234
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Long Statement,The length of the statement "return isASCIIAlphanumeric(c) || c == '!' || c == '$' || c == '&' || c == '\'' || c == '(' || c == ')' || c == '*' || c == '+' || c == '`' || c == '-' || c == '.' || c == '/' || c == ':' || c == ';' || c == '=' || c == '?' || c == '@' || c == '_' || c == '~' || (c >= 0x00A0 && c <= 0xD7FF) || (c >= 0xE000 && c <= 0xFDCF) || (c >= 0xFDF0 && c <= 0xFFEF) || (c >= 0x10000 && c <= 0x1FFFD) || (c >= 0x20000 && c <= 0x2FFFD) || (c >= 0x30000 && c <= 0x3FFFD) || (c >= 0x40000 && c <= 0x4FFFD) || (c >= 0x50000 && c <= 0x5FFFD) || (c >= 0x60000 && c <= 0x6FFFD) || (c >= 0x70000 && c <= 0x7FFFD) || (c >= 0x80000 && c <= 0x8FFFD) || (c >= 0x90000 && c <= 0x9FFFD) || (c >= 0xA0000 && c <= 0xAFFFD) || (c >= 0xB0000 && c <= 0xBFFFD) || (c >= 0xC0000 && c <= 0xCFFFD) || (c >= 0xD0000 && c <= 0xDFFFD) || (c >= 0xE0000 && c <= 0xEFFFD) || (c >= 0xF0000 && c <= 0xFFFFD) || (c >= 0x100000 && c <= 0x10FFFD);" is 901.,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x00A0,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xD7FF,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xE000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xFDCF,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xFDF0,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xFFEF,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x10000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x1FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x20000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x2FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x30000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x3FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x40000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x4FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x50000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x5FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x60000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x6FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x70000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x7FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x80000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x8FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x90000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x9FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xA0000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xAFFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xB0000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xBFFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xC0000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xCFFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xD0000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xDFFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xE0000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xEFFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xF0000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0xFFFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x100000,246
+smola_galimatias,io.mola.galimatias,URLUtils,isURLCodePoint,Magic Number,The method contains a magic number: 0x10FFFD,246
+smola_galimatias,io.mola.galimatias,URLUtils,byteToHex,Magic Number,The method contains a magic number: 0xFF,290
+smola_galimatias,io.mola.galimatias,URLUtils,byteToHex,Magic Number,The method contains a magic number: 4,290
+smola_galimatias,io.mola.galimatias,URLUtils,byteToHex,Magic Number,The method contains a magic number: 0x0F,290
+smola_galimatias,io.mola.galimatias,URLUtils,hexToInt,Magic Number,The method contains a magic number: 16,296
+smola_galimatias,io.mola.galimatias,URLUtils,getDefaultPortForScheme,Complex Method,Cyclomatic complexity of the method is 8,321
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,parse,Complex Method,Cyclomatic complexity of the method is 10,61
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Complex Conditional,The conditional expression 0x2A == b || 0x2D == b || 0x2E == b || (0x30 <= b && b <= 0x39) || (0x41 <= b && b <= 0x5A) || 0x5F == b || (0x61 <= b && b <= 0x7A) is complex.,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Long Statement,The length of the statement "else if (0x2A == b || 0x2D == b || 0x2E == b || (0x30 <= b && b <= 0x39) || (0x41 <= b && b <= 0x5A) || 0x5F == b || (0x61 <= b && b <= 0x7A)) {" is 144.,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x20,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x20,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x2A,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x2D,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x2E,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x30,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x39,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x41,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x5A,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x5F,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x61,161
+smola_galimatias,io.mola.galimatias,FormURLEncodedParser,serialize,Magic Number,The method contains a magic number: 0x7A,161
+smola_galimatias,io.mola.galimatias,BadURLTest,strictTabsNewlines,Long Statement,The length of the statement "for ( String url : new String[]{"http://a%sb@example.com"`"http://a%sb:foo@example.com"`"http://foo:a%sb@example.com"`"http://a%sb.com"`"http://ab.com:2%s2"`"http://example.com/a%sb"`"http://example.com/?a%sb"`"http://exaple.com/#a%sb"`"file://host%sname/path"}) {" is 264.,132
+smola_galimatias,io.mola.galimatias,BadURLTest,strictUnencodedPercentage,Long Statement,The length of the statement "for ( String url : new String[]{"data:%s"`"http://%s@example.com"`"http://%s:foo@example.com"`"http://foo:%s@example.com"`"http://example.com/%s"`"http://example.com/?%s"`"http://exaple.com/#%s"}) {" is 198.,154
+smola_galimatias,io.mola.galimatias,URL2Test,testNoHost,Magic Number,The method contains a magic number: 80,103
+smola_galimatias,io.mola.galimatias,URL2Test,testNoHost,Magic Number,The method contains a magic number: 80,103
+smola_galimatias,io.mola.galimatias,URL2Test,testEmptyHostAndNoPath,Empty catch clause,The method has an empty catch block.,124
+smola_galimatias,io.mola.galimatias,URL2Test,testNoHostAndNoPath,Empty catch clause,The method has an empty catch block.,132
+smola_galimatias,io.mola.galimatias,URL2Test,testAtSignInUserInfo,Empty catch clause,The method has an empty catch block.,140
+smola_galimatias,io.mola.galimatias,URL2Test,testUserNoPasswordExplicitPort,Magic Number,The method contains a magic number: 8080,161
+smola_galimatias,io.mola.galimatias,URL2Test,testUserPasswordHostPort,Magic Number,The method contains a magic number: 8080,169
+smola_galimatias,io.mola.galimatias,URL2Test,testUserPasswordEmptyHostPort,Empty catch clause,The method has an empty catch block.,177
+smola_galimatias,io.mola.galimatias,URL2Test,testUserPasswordEmptyHostEmptyPort,Empty catch clause,The method has an empty catch block.,183
+smola_galimatias,io.mola.galimatias,URL2Test,testColonInFragment,Magic Number,The method contains a magic number: 80,260
+smola_galimatias,io.mola.galimatias,URL2Test,testEmptyPort,Magic Number,The method contains a magic number: 80,291
+smola_galimatias,io.mola.galimatias,URL2Test,testNonNumericPort,Empty catch clause,The method has an empty catch block.,296
+smola_galimatias,io.mola.galimatias,URL2Test,testNegativePort,Empty catch clause,The method has an empty catch block.,304
+smola_galimatias,io.mola.galimatias,URL2Test,testNegativePortEqualsPlaceholder,Empty catch clause,The method has an empty catch block.,312
+smola_galimatias,io.mola.galimatias,URL2Test,testMalformedUrlsRefusedByFirefoxAndChrome,Empty catch clause,The method has an empty catch block.,392
+smola_galimatias,io.mola.galimatias,URL2Test,testMalformedUrlsRefusedByFirefoxAndChrome,Empty catch clause,The method has an empty catch block.,392
+smola_galimatias,io.mola.galimatias,URL2Test,testMalformedUrlsRefusedByFirefoxAndChrome,Empty catch clause,The method has an empty catch block.,392
+smola_galimatias,io.mola.galimatias,URL2Test,testMalformedUrlsRefusedByFirefoxAndChrome,Empty catch clause,The method has an empty catch block.,392
+smola_galimatias,io.mola.galimatias,URL2Test,testMalformedUrlsRefusedByFirefoxAndChrome,Empty catch clause,The method has an empty catch block.,392
+smola_galimatias,io.mola.galimatias,URL2Test,testMalformedUrlsRefusedByFirefoxAndChrome,Empty catch clause,The method has an empty catch block.,392
+smola_galimatias,io.mola.galimatias,URL2Test,testParsingDotAsHostname,Empty catch clause,The method has an empty catch block.,571
+smola_galimatias,io.mola.galimatias,URL2Test,testSquareBracketsWithIPv4,Empty catch clause,The method has an empty catch block.,579
+smola_galimatias,io.mola.galimatias,URL2Test,testSquareBracketsWithHostname,Empty catch clause,The method has an empty catch block.,591
+smola_galimatias,io.mola.galimatias,URL2Test,testIPv6WithoutSquareBrackets,Empty catch clause,The method has an empty catch block.,603
+smola_galimatias,io.mola.galimatias,URL2Test,testIpv6WithSquareBrackets,Magic Number,The method contains a magic number: 2,615
+smola_galimatias,io.mola.galimatias,URL2Test,testEmptyAuthorityWithQuery,Empty catch clause,The method has an empty catch block.,649
+smola_galimatias,io.mola.galimatias,URL2Test,testEmptyAuthorityWithFragment,Empty catch clause,The method has an empty catch block.,657
+smola_galimatias,io.mola.galimatias,URL2Test,testPartContainsSpace,Empty catch clause,The method has an empty catch block.,679
+smola_galimatias,io.mola.galimatias,URL2Test,testPartContainsSpace,Empty catch clause,The method has an empty catch block.,679
+smola_galimatias,io.mola.galimatias,URL2Test,testPartContainsSpace,Empty catch clause,The method has an empty catch block.,679
+smola_galimatias,io.mola.galimatias,TestURLLoader,normalize,Magic Number,The method contains a magic number: 5,48
+smola_galimatias,io.mola.galimatias,TestURLLoader,normalize,Magic Number,The method contains a magic number: 16,48
+smola_galimatias,io.mola.galimatias,TestURLLoader,normalize,Magic Number,The method contains a magic number: 4,48
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Complex Method,Cyclomatic complexity of the method is 19,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Long Method,The method has 101 lines of code.,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 2,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 2,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 2,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 2,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 2,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 2,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 5,73
+smola_galimatias,io.mola.galimatias,TestURLLoader,loadTestURLs,Magic Number,The method contains a magic number: 5,73
+smola_galimatias,io.mola.galimatias,URLTest,userInfoWithUsernameAndPassword,Long Statement,The length of the statement "assertThat(testURL.parsedURL.userInfo()).isEqualTo(String.format("%s:%s"`testURL.parsedURL.username()`testURL.parsedURL.password()));" is 133.,88
+smola_galimatias,io.mola.galimatias,URLTest,withPort,Magic Number,The method contains a magic number: 80,241
+smola_galimatias,io.mola.galimatias,URLTest,withPort,Magic Number,The method contains a magic number: 80,241
+smola_galimatias,io.mola.galimatias,URLTest,withPortOpaque,Magic Number,The method contains a magic number: 80,249
+smola_galimatias,io.mola.galimatias,URLTest,isConvertibleToJavaURI,Complex Conditional,The conditional expression url.isHierarchical() && url.host() != null && (url.host() instanceof Domain) is complex.,329
+smola_galimatias,io.mola.galimatias,URLTest,internalURLParserChecks,Long Statement,The length of the statement "assertThat(new URLParser("ws"`URL.parse("http://example.com")`URLParser.ParseURLState.SCHEME).parse()).isEqualTo(URL.parse("http://example.com"));" is 146.,385
+smola_galimatias,io.mola.galimatias,URLTest,internalURLParserChecks,Long Statement,The length of the statement "assertThat(new URLParser("other.com:222"`URL.parse("http://example.com")`URLParser.ParseURLState.HOST).parse()).isEqualTo(URL.parse("http://other.com"));" is 153.,385
+smola_galimatias,io.mola.galimatias,URLTest,internalURLParserChecks,Long Statement,The length of the statement "assertThat(new URLParser("other.com/foo"`URL.parse("http://example.com")`URLParser.ParseURLState.HOST).parse()).isEqualTo(URL.parse("http://other.com"));" is 153.,385
+smola_galimatias,io.mola.galimatias,URLTest,internalURLParserChecks,Long Statement,The length of the statement "assertThat(new URLParser("other.com?foo"`URL.parse("http://example.com")`URLParser.ParseURLState.HOST).parse()).isEqualTo(URL.parse("http://other.com"));" is 153.,385
+smola_galimatias,io.mola.galimatias,URLTest,internalURLParserChecks,Long Statement,The length of the statement "assertThat(new URLParser("other.com#foo"`URL.parse("http://example.com")`URLParser.ParseURLState.HOST).parse()).isEqualTo(URL.parse("http://other.com"));" is 153.,385
+smola_galimatias,io.mola.galimatias,URLTest,internalURLParserChecks,Long Statement,The length of the statement "assertThat(new URLParser("22"`URL.parse("http://example.com")`URLParser.ParseURLState.PORT).parse()).isEqualTo(URL.parse("http://example.com:22"));" is 147.,385
+smola_galimatias,io.mola.galimatias,URLTest,toHumanStringIdempotence,Long Statement,The length of the statement "assertThat(Domain.parseDomain(domain.toString()`true).toString()).isEqualTo(Domain.parseDomain(domain.toString()).toHumanString());" is 131.,474
+smola_galimatias,io.mola.galimatias,URLTest,toHumanStringIdempotence,Long Statement,The length of the statement "assertThat(Domain.parseDomain(domain.toString()`true).toHumanString()).isEqualTo(Domain.parseDomain(domain.toString()).toHumanString());" is 136.,474
+smola_galimatias,io.mola.galimatias,GalimatiasParseExceptionTest,setsAllFieldsCorrectlyWhenBuilderIsUsed,Long Statement,The length of the statement "GalimatiasParseException exception=GalimatiasParseException.builder().withMessage(message).withParseIssue(parseIssue).withPosition(position).withCause(cause).build();" is 166.,70
+smola_galimatias,io.mola.galimatias,NameValueTest,nullsThrow,Empty catch clause,The method has an empty catch block.,41
+smola_galimatias,io.mola.galimatias,TestURL,toString,Long Statement,The length of the statement "return String.format("TestURL(rawURL=%s` rawBaseURL=%s` parsedURL=%s` parsedBaseURL=%s)"`rawURL`rawBaseURL`parsedURL`parsedBaseURL);" is 132.,43
+smola_galimatias,io.mola.galimatias,IPv6AddressTest,equals,Long Statement,The length of the statement "assertThat(IPv6Address.parseIPv6Address(TEST_ADDRESSES[0][0])).isNotEqualTo(IPv6Address.parseIPv6Address(TEST_ADDRESSES[1][0]));" is 128.,65
+smola_galimatias,io.mola.galimatias,ParseIssueTest,data,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{"www.example.com"`ParseIssue.MISSING_SCHEME`true}`{"http://www.example.com/%"`ParseIssue.INVALID_PERCENT_ENCODING`false}`{"http://www.example.com\\path"`ParseIssue.BACKSLASH_AS_DELIMITER`false}`{"http://us`er:pass@www.example.com/path"`ParseIssue.ILLEGAL_CHARACTER`false}`{"http://:\uD83D\uDCA9@example.com/bar"`ParseIssue.ILLEGAL_CHARACTER`false}`{"http://www.exam\tple.com/path"`ParseIssue.ILLEGAL_WHITESPACE`false}`{"http://user:pass@/path"`ParseIssue.INVALID_HOST`true}});" is 513.,38
+smola_galimatias,io.mola.galimatias,ParseIssueTest,handlesGalimiatiasParseExceptionWithCorrectParseIssue,Empty catch clause,The method has an empty catch block.,76
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,queryParameters,Empty catch clause,The method has an empty catch block.,49
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,queryParameters,Empty catch clause,The method has an empty catch block.,49
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,throwsNullPointerExceptions,Empty catch clause,The method has an empty catch block.,87
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,validConstructorString,Empty catch clause,The method has an empty catch block.,147
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,validConstructorList,Empty catch clause,The method has an empty catch block.,163
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,withNameValues,Long Statement,The length of the statement "assertThat(params.with(nameValue1.name()`nameValue1.value()).with(nameValue2.name()`nameValue2.value()).getAll(key)).isEqualTo(Arrays.asList("baz"));" is 149.,179
+smola_galimatias,io.mola.galimatias,URLSearchParamsTest,withAppendedNameValues,Long Statement,The length of the statement "assertThat(params.withAppended(nameValue1.name()`nameValue1.value()).withAppended(nameValue2.name()`nameValue2.value()).getAll(key)).isEqualTo(Arrays.asList("bar"`"baz"));" is 171.,196
+smola_galimatias,io.mola.galimatias.cli,CLI,printResult,Complex Method,Cyclomatic complexity of the method is 9,43
+smola_galimatias,io.mola.galimatias.cli,CLI,main,Magic Number,The method contains a magic number: 2,93

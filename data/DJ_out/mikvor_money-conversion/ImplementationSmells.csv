@@ -1,0 +1,339 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+mikvor_money-conversion,info.javaperformance.money,LongBitSet,bitSet,Magic Number,The method contains a magic number: 1024,58
+mikvor_money-conversion,info.javaperformance.money,MoneyFactory,checkPrecision,Long Statement,The length of the statement "if (precision < 0 || precision > MAX_ALLOWED_PRECISION) throw new IllegalArgumentException("Precision must be between 0 and " + MAX_ALLOWED_PRECISION);" is 151.,49
+mikvor_money-conversion,info.javaperformance.money,MoneyFactory,fromString0,Long Statement,The length of the statement "if (dotPos != -1 && value.indexOf('.'`dotPos + 1) != -1) throw new IllegalArgumentException("Unparseable String value has more than 1 decimal point: " + value);" is 160.,174
+mikvor_money-conversion,info.javaperformance.money,MoneyFactory,parseFast,Complex Method,Cyclomatic complexity of the method is 9,200
+mikvor_money-conversion,info.javaperformance.money,MoneyFactory,parseFast,Magic Number,The method contains a magic number: 10,200
+mikvor_money-conversion,info.javaperformance.money,MoneyFactory,fromBigDecimal,Magic Number,The method contains a magic number: 3,317
+mikvor_money-conversion,info.javaperformance.money,MoneyFactory,fromBigDecimal,Magic Number,The method contains a magic number: 10,317
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,toString,Complex Method,Cyclomatic complexity of the method is 9,48
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,toString,Magic Number,The method contains a magic number: 3,48
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,toString,Magic Number,The method contains a magic number: 10,48
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,toString,Magic Number,The method contains a magic number: 10,48
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,toString,Magic Number,The method contains a magic number: 10,48
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,toString,Magic Number,The method contains a magic number: 10,48
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,hashCode,Magic Number,The method contains a magic number: 32,129
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,hashCode,Magic Number,The method contains a magic number: 31,129
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,add,Complex Conditional,The conditional expression m_units >= 0 && other.m_units >= 0 && normUnitsRes < 0 is complex.,135
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,normalize,Magic Number,The method contains a magic number: 10,192
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,normalize,Magic Number,The method contains a magic number: 3,192
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,multiply,Long Statement,The length of the statement "if (unscaledLong.m_precision + m_precision <= MoneyFactory.MAX_ALLOWED_PRECISION) return new MoneyLong(unscaledLong.m_units`unscaledLong.m_precision + m_precision).normalize();" is 176.,245
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,multiply,Long Statement,The length of the statement "return MoneyFactory.fromBigDecimal(toBigDecimal().multiply(new BigDecimal(multiplier`MathContext.DECIMAL64)`MathContext.DECIMAL64));" is 132.,245
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,multiply,Magic Number,The method contains a magic number: 4,245
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,divide,Long Statement,The length of the statement "if (precision > MoneyFactory.MAX_ALLOWED_PRECISION) return new MoneyBigDecimal(toBigDecimal()).divide(divider`precision);" is 121.,283
+mikvor_money-conversion,info.javaperformance.money,MoneyLong,truncate,Long Statement,The length of the statement "return new MoneyLong(Math.round(m_units * MoneyFactory.MULTIPLIERS_NEG[m_precision - maximalPrecision])`maximalPrecision).normalize();" is 134.,316
+mikvor_money-conversion,info.javaperformance.money,MoneyBigDecimal,multiply,Long Statement,The length of the statement "return MoneyFactory.fromBigDecimal(m_value.multiply(new BigDecimal(multiplier`MathContext.DECIMAL64)`MathContext.DECIMAL64));" is 125.,111
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testLongConversions,Magic Number,The method contains a magic number: 10000,24
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testLongConversions,Magic Number,The method contains a magic number: 0.1,24
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testBDConversions,Magic Number,The method contains a magic number: 0.05,40
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testBDConversions,Magic Number,The method contains a magic number: 10000,40
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testBDConversions,Magic Number,The method contains a magic number: 0.1,40
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testFromUnits,Magic Number,The method contains a magic number: 10000,57
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testFromString,Empty catch clause,The method has an empty catch block.,72
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testFromString,Empty catch clause,The method has an empty catch block.,72
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testFromCharArray,Magic Number,The method contains a magic number: 100,130
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testFromByteArray,Magic Number,The method contains a magic number: 100,141
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,toCharArrayHelper,Magic Number,The method contains a magic number: 10,160
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,toCharArrayHelper,Magic Number,The method contains a magic number: 10,160
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,toByteArrayHelper,Magic Number,The method contains a magic number: 10,166
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,toByteArrayHelper,Magic Number,The method contains a magic number: 10,166
+mikvor_money-conversion,info.javaperformance.money,MoneyFactoryTest,testBigDecimals,Magic Number,The method contains a magic number: 22000,193
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd,Magic Number,The method contains a magic number: 0.2,25
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd,Magic Number,The method contains a magic number: 0.3,25
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd,Magic Number,The method contains a magic number: 0.5,25
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd,Magic Number,The method contains a magic number: 0.05,25
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd,Magic Number,The method contains a magic number: 0.25,25
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd,Magic Number,The method contains a magic number: 0.1,25
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 0.005,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 2,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 9.995,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 2,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 10.0,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 0.01,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 35.67,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 2,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 100.0,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 50,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 2,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 100.5,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 50,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 2,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 100.5,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 50.5,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testAdd2,Magic Number,The method contains a magic number: 2,44
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testEqualsHashcode,Magic Number,The method contains a magic number: 50.4,66
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testEqualsHashcode,Magic Number,The method contains a magic number: 2,66
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testEqualsHashcode,Magic Number,The method contains a magic number: 504,66
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testEqualsHashcode,Magic Number,The method contains a magic number: 50.4,66
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testEqualsHashcode,Magic Number,The method contains a magic number: 2,66
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testNegate,Magic Number,The method contains a magic number: 45.5,78
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testNegate,Magic Number,The method contains a magic number: 45.5,78
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testNegate,Magic Number,The method contains a magic number: 355.555,78
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testNegate,Magic Number,The method contains a magic number: 355.555,78
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testSubtract,Magic Number,The method contains a magic number: 45.5,91
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testSubtract,Magic Number,The method contains a magic number: 355.555,91
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testLongMultiply,Magic Number,The method contains a magic number: 45.5,102
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testLongMultiply,Magic Number,The method contains a magic number: 5,102
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testLongMultiply,Magic Number,The method contains a magic number: 45.55,102
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testLongMultiply,Magic Number,The method contains a magic number: 2,102
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testLongMultiply,Magic Number,The method contains a magic number: 1000000000,102
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testLongMultiply,Magic Number,The method contains a magic number: 2,102
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testLongMultiply,Magic Number,The method contains a magic number: 2,102
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 2.0,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 0.5,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 6,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 3.0,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 14,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 7.0,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 7.0,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDoubleMultiply,Magic Number,The method contains a magic number: 1000.75,142
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 6.6,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 2,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 3.3,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 2.0,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 3.3,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 10,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 3,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 0.66,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 3,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 2,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 15,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 2.0,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 2,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 3.3,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 6.0,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 6,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 3.0,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 15,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 66,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 2,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 2,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivide,Magic Number,The method contains a magic number: 0.3,178
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 10000,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 2,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 10,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 10,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 2,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 10.0,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 2,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testDivisionRounding,Magic Number,The method contains a magic number: 2.0,214
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 4,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 3,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 2,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 4,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 3,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 2,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 4,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 3,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 2,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 995,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 3,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 2,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 991,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 3,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateLong,Magic Number,The method contains a magic number: 2,231
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 123.456,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 4,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 3,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 2,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 123.123,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 4,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 3,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 2,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 123.003,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 4,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 3,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTruncateBd,Magic Number,The method contains a magic number: 2,261
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testCompareTo,Magic Number,The method contains a magic number: 20,285
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testCompareTo,Magic Number,The method contains a magic number: 200,285
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testCompareTo,Magic Number,The method contains a magic number: 2,285
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testCompareTo,Magic Number,The method contains a magic number: 400,285
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testCompareTo,Magic Number,The method contains a magic number: 2,285
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testCompareTo,Magic Number,The method contains a magic number: 4000,285
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testCompareTo,Magic Number,The method contains a magic number: 3,285
+mikvor_money-conversion,info.javaperformance.money,MoneyTest,testTicket11,Magic Number,The method contains a magic number: 5,298
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,OperationsTests,Magic Number,The method contains a magic number: 123,42
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,OperationsTests,Magic Number,The method contains a magic number: 100000,42
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,OperationsTests,Magic Number,The method contains a magic number: 2,42
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,OperationsTests,Magic Number,The method contains a magic number: 10000.0,42
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,runAllTests,Long Statement,The length of the statement "res.add(new TestResult("MoneyLong+MoneyBigDecimal"`Math.max(testLongToBigDecimalAddition(iters)`testLongToBigDecimalAddition(iters))));" is 135.,54
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,runAllTests,Long Statement,The length of the statement "res.add(new TestResult("MoneyBigDecimal+MoneyBigDecimal"`Math.max(testBdToBdAddition(iters)`testBdToBdAddition(iters))));" is 121.,54
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,runAllTests,Long Statement,The length of the statement "final TestResult multByLong=new TestResult("multiply(long)"`Math.max(testLongMultiplyLong(iters)`testLongMultiplyLong(iters)));" is 127.,54
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,runAllTests,Long Statement,The length of the statement "final TestResult multByDouble=new TestResult("multiply(double)"`Math.max(testLongMultiplyDouble(iters)`testLongMultiplyDouble(iters)));" is 135.,54
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,runAllTests,Long Statement,The length of the statement "final TestResult divideLong=new TestResult("divide(long)"`Math.max(testLongDivideLong(iters)`testLongDivideLong(iters)));" is 121.,54
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,runAllTests,Long Statement,The length of the statement "final TestResult divideDouble=new TestResult("divide(double)"`Math.max(testLongDivideDouble(iters)`testLongDivideDouble(iters)));" is 129.,54
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,runAllTests,Magic Number,The method contains a magic number: 7,54
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongAddition,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to add " + iters + " MoneyLong values = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 141.,109
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongAddition,Magic Number,The method contains a magic number: 1000.0,109
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongAddition,Magic Number,The method contains a magic number: 1000,109
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongAddition,Magic Number,The method contains a magic number: 20000,109
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongAddition,Magic Number,The method contains a magic number: 1000.0,109
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongToBigDecimalAddition,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to add " + iters + " MoneyLong to MoneyBigDecimal values = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 160.,126
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongToBigDecimalAddition,Magic Number,The method contains a magic number: 0.555,126
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongToBigDecimalAddition,Magic Number,The method contains a magic number: 1000.0,126
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongToBigDecimalAddition,Magic Number,The method contains a magic number: 1000,126
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongToBigDecimalAddition,Magic Number,The method contains a magic number: 20000,126
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongToBigDecimalAddition,Magic Number,The method contains a magic number: 1000.0,126
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdToBdAddition,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to add " + iters + " MoneyBigDecimal to MoneyBigDecimal values = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 166.,144
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdToBdAddition,Magic Number,The method contains a magic number: 0.555,144
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdToBdAddition,Magic Number,The method contains a magic number: 1000.0,144
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdToBdAddition,Magic Number,The method contains a magic number: 1000,144
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdToBdAddition,Magic Number,The method contains a magic number: 20000,144
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdToBdAddition,Magic Number,The method contains a magic number: 1000.0,144
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyLong,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to multiply " + iters + " MoneyLong values by Long = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 154.,162
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyLong,Magic Number,The method contains a magic number: 97,162
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyLong,Magic Number,The method contains a magic number: 1000.0,162
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyLong,Magic Number,The method contains a magic number: 1000,162
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyLong,Magic Number,The method contains a magic number: 20000,162
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyLong,Magic Number,The method contains a magic number: 1000.0,162
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyDouble,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to multiply " + iters + " MoneyLong values by Double = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 156.,178
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyDouble,Magic Number,The method contains a magic number: 97.5,178
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyDouble,Magic Number,The method contains a magic number: 1000.0,178
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyDouble,Magic Number,The method contains a magic number: 1000,178
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyDouble,Magic Number,The method contains a magic number: 20000,178
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongMultiplyDouble,Magic Number,The method contains a magic number: 1000.0,178
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyLong,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to multiply " + iters + " MoneyBigDecimal values by Long = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 160.,194
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyLong,Magic Number,The method contains a magic number: 97,194
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyLong,Magic Number,The method contains a magic number: 1000.0,194
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyLong,Magic Number,The method contains a magic number: 1000,194
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyLong,Magic Number,The method contains a magic number: 20000,194
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyLong,Magic Number,The method contains a magic number: 1000.0,194
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyDouble,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to multiply " + iters + " MoneyBigDecimal values by Double = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 162.,210
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyDouble,Magic Number,The method contains a magic number: 97.5,210
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyDouble,Magic Number,The method contains a magic number: 1000.0,210
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyDouble,Magic Number,The method contains a magic number: 1000,210
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyDouble,Magic Number,The method contains a magic number: 20000,210
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdMultiplyDouble,Magic Number,The method contains a magic number: 1000.0,210
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideLong,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to divide " + iters + " MoneyLong values by Long = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 152.,226
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideLong,Magic Number,The method contains a magic number: 97,226
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideLong,Magic Number,The method contains a magic number: 4,226
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideLong,Magic Number,The method contains a magic number: 1000.0,226
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideLong,Magic Number,The method contains a magic number: 1000,226
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideLong,Magic Number,The method contains a magic number: 20000,226
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideLong,Magic Number,The method contains a magic number: 1000.0,226
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideDouble,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to divide " + iters + " MoneyLong values by Double = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 154.,242
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideDouble,Magic Number,The method contains a magic number: 97.5,242
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideDouble,Magic Number,The method contains a magic number: 4,242
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideDouble,Magic Number,The method contains a magic number: 1000.0,242
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideDouble,Magic Number,The method contains a magic number: 1000,242
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideDouble,Magic Number,The method contains a magic number: 20000,242
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivideDouble,Magic Number,The method contains a magic number: 1000.0,242
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideLong,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to divide " + iters + " MoneyBigDecimal values by Long = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 158.,258
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideLong,Magic Number,The method contains a magic number: 97,258
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideLong,Magic Number,The method contains a magic number: 4,258
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideLong,Magic Number,The method contains a magic number: 1000.0,258
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideLong,Magic Number,The method contains a magic number: 1000,258
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideLong,Magic Number,The method contains a magic number: 20000,258
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideLong,Magic Number,The method contains a magic number: 1000.0,258
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideDouble,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to divide " + iters + " MoneyBigDecimal values by Double = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 160.,274
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideDouble,Magic Number,The method contains a magic number: 97.5,274
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideDouble,Magic Number,The method contains a magic number: 4,274
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideDouble,Magic Number,The method contains a magic number: 1000.0,274
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideDouble,Magic Number,The method contains a magic number: 1000,274
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideDouble,Magic Number,The method contains a magic number: 20000,274
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdDivideDouble,Magic Number,The method contains a magic number: 1000.0,274
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongTruncate,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to truncate " + iters + " MoneyLong values = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 146.,290
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongTruncate,Magic Number,The method contains a magic number: 1000.0,290
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongTruncate,Magic Number,The method contains a magic number: 1000,290
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongTruncate,Magic Number,The method contains a magic number: 20000,290
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongTruncate,Magic Number,The method contains a magic number: 1000.0,290
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdTruncate,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to truncate " + iters + " MoneyBigDecimal values = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 152.,306
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdTruncate,Magic Number,The method contains a magic number: 1000.0,306
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdTruncate,Magic Number,The method contains a magic number: 1000,306
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdTruncate,Magic Number,The method contains a magic number: 20000,306
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testBdTruncate,Magic Number,The method contains a magic number: 1000.0,306
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Long Statement,The length of the statement "if (iterations > 20000) System.out.println("Time to divide " + iterations + " MoneyLong values via the third branch = "+ time / 1000.0 + " sec; rate = " + rate + " Kops/sec");" is 175.,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 10000,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 2,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 10000,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 2,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 2,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 2.0,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 1000.0,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 1000,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 20000,322
+mikvor_money-conversion,info.javaperformance.money.performance,OperationsTests,testLongDivisionWithRound,Magic Number,The method contains a magic number: 1000.0,322
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,main,Magic Number,The method contains a magic number: 20000,29
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,main,Magic Number,The method contains a magic number: 10,29
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,main,Magic Number,The method contains a magic number: 1000,29
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,main,Magic Number,The method contains a magic number: 1000,29
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,runAllTests,Magic Number,The method contains a magic number: 10,33
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,runAllTests,Magic Number,The method contains a magic number: 3,33
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToDouble,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert MoneyLong to double " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " KOps/sec");" is 153.,57
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToDouble,Magic Number,The method contains a magic number: 1000,57
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToDouble,Magic Number,The method contains a magic number: 2,57
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToDouble,Magic Number,The method contains a magic number: 1000.0,57
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToDouble,Magic Number,The method contains a magic number: 1000,57
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToDouble,Magic Number,The method contains a magic number: 20000,57
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToDouble,Magic Number,The method contains a magic number: 1000.0,57
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToString,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert MoneyLong to String " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " KOps/sec");" is 153.,83
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToString,Magic Number,The method contains a magic number: 1000,83
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToString,Magic Number,The method contains a magic number: 2,83
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToString,Magic Number,The method contains a magic number: 1000.0,83
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToString,Magic Number,The method contains a magic number: 1000,83
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToString,Magic Number,The method contains a magic number: 20000,83
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToString,Magic Number,The method contains a magic number: 1000.0,83
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToBigDecimal,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert MoneyLong to BigDecimal " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " KOps/sec");" is 157.,107
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToBigDecimal,Magic Number,The method contains a magic number: 1000,107
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToBigDecimal,Magic Number,The method contains a magic number: 2,107
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToBigDecimal,Magic Number,The method contains a magic number: 1000.0,107
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToBigDecimal,Magic Number,The method contains a magic number: 1000,107
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToBigDecimal,Magic Number,The method contains a magic number: 20000,107
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testLongToBigDecimal,Magic Number,The method contains a magic number: 1000.0,107
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToDouble,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert MoneyBigDecimal to double " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " KOps/sec");" is 159.,131
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToDouble,Magic Number,The method contains a magic number: 1000,131
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToDouble,Magic Number,The method contains a magic number: 1000.0,131
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToDouble,Magic Number,The method contains a magic number: 1000.0,131
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToDouble,Magic Number,The method contains a magic number: 1000,131
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToDouble,Magic Number,The method contains a magic number: 20000,131
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToDouble,Magic Number,The method contains a magic number: 1000.0,131
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToString,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert MoneyBigDecimal to String " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " KOps/sec");" is 159.,155
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToString,Magic Number,The method contains a magic number: 1000,155
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToString,Magic Number,The method contains a magic number: 1000.0,155
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToString,Magic Number,The method contains a magic number: 1000.0,155
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToString,Magic Number,The method contains a magic number: 1000,155
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToString,Magic Number,The method contains a magic number: 20000,155
+mikvor_money-conversion,info.javaperformance.money.performance,ToConversionTests,testBigDecimalToString,Magic Number,The method contains a magic number: 1000.0,155
+mikvor_money-conversion,info.javaperformance.money.performance,TestGenerator,main,Magic Number,The method contains a magic number: 1000,28
+mikvor_money-conversion,info.javaperformance.money.performance,TestGenerator,getTable,Long Statement,The length of the statement "sb.append("<table border=\"1\">\n<tr><td>Test name</td><td>MoneyLong (Kops/sec)</td><td>MoneyBigDecimal (Kops/sec)</td></tr>\n");" is 129.,46
+mikvor_money-conversion,info.javaperformance.money.performance,TestGenerator,getTable,Long Statement,The length of the statement "for ( final TestResult r : results) sb.append("<tr><td>" + r.name + "</td><td>"+ r.longRate+ "</td><td>"+ r.bdRate+ "</td></tr>\n");" is 132.,46
+mikvor_money-conversion,info.javaperformance.money.performance,TestGenerator,getTable,Magic Number,The method contains a magic number: 2048,46
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,main,Magic Number,The method contains a magic number: 20000,29
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,main,Magic Number,The method contains a magic number: 10,29
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,main,Magic Number,The method contains a magic number: 1000,29
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,main,Magic Number,The method contains a magic number: 1000,29
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,runAllTests,Magic Number,The method contains a magic number: 4,33
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromDoubleConversion,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert from double " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " Kop/sec` cnt = "+ cnt);" is 157.,55
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromDoubleConversion,Magic Number,The method contains a magic number: 1000,55
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromDoubleConversion,Magic Number,The method contains a magic number: 10.0,55
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromDoubleConversion,Magic Number,The method contains a magic number: 1000.0,55
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromDoubleConversion,Magic Number,The method contains a magic number: 1000,55
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromDoubleConversion,Magic Number,The method contains a magic number: 20000,55
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromDoubleConversion,Magic Number,The method contains a magic number: 1000.0,55
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert from string (1 decimal digit) " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " Kop/sec` cnt = "+ cnt);" is 175.,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Magic Number,The method contains a magic number: 1000,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Magic Number,The method contains a magic number: 10,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Magic Number,The method contains a magic number: 10,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Magic Number,The method contains a magic number: 1000.0,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Magic Number,The method contains a magic number: 1000,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Magic Number,The method contains a magic number: 20000,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion1Digit,Magic Number,The method contains a magic number: 1000.0,83
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,four,Magic Number,The method contains a magic number: 4,111
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion4Digits,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert from string (4 decimal digit) " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " Kop/sec` cnt = "+ cnt);" is 175.,119
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion4Digits,Magic Number,The method contains a magic number: 1000,119
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion4Digits,Magic Number,The method contains a magic number: 1000.0,119
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion4Digits,Magic Number,The method contains a magic number: 1000,119
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion4Digits,Magic Number,The method contains a magic number: 20000,119
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromStringConversion4Digits,Magic Number,The method contains a magic number: 1000.0,119
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionIn3DigitsRange,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert from BigDecimal (1 decimal digit) " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " Kop/sec` cnt = "+ cnt);" is 179.,147
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionIn3DigitsRange,Magic Number,The method contains a magic number: 1000,147
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionIn3DigitsRange,Magic Number,The method contains a magic number: 1000.0,147
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionIn3DigitsRange,Magic Number,The method contains a magic number: 1000,147
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionIn3DigitsRange,Magic Number,The method contains a magic number: 20000,147
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionIn3DigitsRange,Magic Number,The method contains a magic number: 1000.0,147
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionOutOf3DigitsRange,Long Statement,The length of the statement "if (iters > 20000) System.out.println("Time to convert from BigDecimal (4 decimal digits) " + iters + " times = "+ (time / 1000.0)+ " sec` rate = "+ rate+ " Kop/sec` cnt = "+ cnt);" is 180.,180
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionOutOf3DigitsRange,Magic Number,The method contains a magic number: 1000,180
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionOutOf3DigitsRange,Magic Number,The method contains a magic number: 1000.0,180
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionOutOf3DigitsRange,Magic Number,The method contains a magic number: 1000,180
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionOutOf3DigitsRange,Magic Number,The method contains a magic number: 20000,180
+mikvor_money-conversion,info.javaperformance.money.performance,FromConversionTests,testFromBigDecimalConversionOutOf3DigitsRange,Magic Number,The method contains a magic number: 1000.0,180

@@ -1,0 +1,342 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimeBasedHdfsOutputPath,getBoomWriter,Long Statement,The length of the statement "LOG.info("[{}] Over max open boom file limit ({}/{}) closing LRU boom file: {}"`partitionId`outputFileMap.size()`config.getRunningConfig().getMaxOpenBoomFilesPerPartition()`oldestOutputFile.openFilePath);" is 204.,67
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimeBasedHdfsOutputPath,getBoomWriter,Magic Number,The method contains a magic number: 1000,67
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimeBasedHdfsOutputPath,closeOffShift,Long Statement,The length of the statement "LOG.info("[{}] Shift #{} file closed: {} ({} files still open"`partitionId`shiftNumber`entry.getValue().openFilePath`outputFileMap.size());" is 139.,122
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Complex Conditional,The conditional expression bytes[pos + 2] >= '0' && bytes[pos + 2] <= '9' && bytes[pos + 3] == ' ' is complex.,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 2,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 2,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 2,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 2,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 2,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 3,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 3,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParser,parseVersion,Magic Number,The method contains a magic number: 3,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,Worker,Long Statement,The length of the statement "super(config.getKaBoomCurator()`String.format("KaBoom Client ID=%d"`config.getKaboomId())`String.valueOf(config.getKaboomId()).getBytes()`config.zkPathPartitionAssignment(topicName`partition)`config.getRunningConfig().getAssignmentLockTimeout());" is 246.,201
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,Worker,Long Statement,The length of the statement "this.tsParseErrorsMeterTopic=MetricRegistrySingleton.getInstance().getMetricsRegistry().meter("kaboom:topic:" + topic + ":timestamp parse errors");" is 147.,201
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,Worker,Long Statement,The length of the statement "this.priParseErrorsMeterTopic=MetricRegistrySingleton.getInstance().getMetricsRegistry().meter("kaboom:topic:" + topic + ":PRI parse errors");" is 142.,201
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,Worker,Long Statement,The length of the statement "this.boomWritesMeterTopic=MetricRegistrySingleton.getInstance().getMetricsRegistry().meter("kaboom:topic:" + topic + ":boom writes");" is 133.,201
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,Worker,Long Statement,The length of the statement "this.boomWritesMeter=MetricRegistrySingleton.getInstance().getMetricsRegistry().meter("kaboom:partitions:" + partitionId + ":boom writes");" is 139.,201
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,Worker,Long Statement,The length of the statement "LOG.info("[{}] topic {} configuration (version {}) was updated to version {}` shutting down worker..."`partitionId`topicConfig.getId()`topicConfig.getVersion()`newTopicConfig.getVersion());" is 189.,201
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,Worker,Magic Number,The method contains a magic number: 1000,201
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,nodeChanged,Long Statement,The length of the statement "LOG.info("[{}] topic {} configuration (version {}) was updated to version {}` shutting down worker..."`partitionId`topicConfig.getId()`topicConfig.getVersion()`newTopicConfig.getVersion());" is 189.,235
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,getValue,Magic Number,The method contains a magic number: 1000,302
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Complex Method,Cyclomatic complexity of the method is 22,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Method,The method has 179 lines of code.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "consumer=new Consumer(config.getConsumerConfiguration()`"kaboom-" + hostname`getTopic()`getPartition()`currentShift.offset`MetricRegistrySingleton.getInstance().getMetricsRegistry());" is 183.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "LOG.info("[{}] Created worker with topic config version {} starting at offset {}."`getPartitionId()`topicConfig.getVersion()`currentShift.offset);" is 146.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "LOG.debug("[{}] skipping last offset {} since earlier than our requested offset 's and lower than high watermark {}"`getPartitionId()`consumer.getLastOffset()`highWatermark);" is 174.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "LOG.warn("[{}] offset {} is greater than high watermark {} and sinkToHighWatermark is {}` sinking to high watermark."`getPartitionId()`currentShift.offset`highWatermark`config.getRunningConfig().getSinkToHighWatermark());" is 221.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "LOG.error("[{}] offset {} is greater than high watermark {} and sinkToHighWatermark is {}` ignoring offset and skipping message."`getPartitionId()`currentShift.offset`highWatermark`config.getRunningConfig().getSinkToHighWatermark());" is 233.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "LOG.error("[{}] Offset anomaly! Expected:{}` Got {}` Consumer high watermark {}` latest {}` earliest {}"`partitionId`currentShift.offset`consumer.getLastOffset()`consumer.getHighWaterMark()`consumer.getLatestOffset()`consumer.getEarliestOffset());" is 247.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "LOG.info("[{}] Skipping offset as length - Offset is < 0: timestamp: {}` pos: {}` length: {}"`getPartitionId()`timestamp`pos`length);" is 133.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Long Statement,The length of the statement "hdfsOutputPath.getBoomWriter(currentShift.shiftNumber`timestamp`partitionId + "-" + currentShift.offset+ ".bm").writeLine(timestamp`bytes`pos`length - pos);" is 156.,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 1024,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 1024,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 100,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 0xFE,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 10,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 0xFF,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 2,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,run,Magic Number,The method contains a magic number: 1000,331
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Worker,shutdown,Long Statement,The length of the statement "LOG.info("[{}] Shutting down (abortting: {}) on shift number {} with offset={} and timestamp={} ({})"`partitionId`isAborting()`currentShift.shiftNumber`currentShift.offset`currentShift.maxMessageTimestamp`dateString(currentShift.maxMessageTimestamp));" is 251.,572
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Leader,refreshMetadata,Long Statement,The length of the statement "kaboomTopics=KaBoomTopic.getAll(kaboomClients`kafkaMetaData`config.getKaBoomCurator()`config.getZkRootPathTopicConfigs()`config.getZkRootPathPartitionAssignments()`config.getZkRootPathFlagAssignments());" is 203.,70
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Leader,pauseOnFirstDisconnectedAssignee,Long Statement,The length of the statement "String assignedClientId=new String(curator.getData().forPath(String.format("%s/%s"`config.getZkRootPathPartitionAssignments()`partitionId))`UTF8);" is 146.,100
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Leader,pauseOnFirstDisconnectedAssignee,Magic Number,The method contains a magic number: 1000,100
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Leader,takeLeadership,Complex Method,Cyclomatic complexity of the method is 8,122
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Leader,takeLeadership,Long Statement,The length of the statement "LOG.info("KaBoom client ID {} is the new leader` entering the {} calm down"`config.getKaboomId()`config.getRunningConfig().getNewLeaderCalmDownDelay());" is 152.,122
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Leader,takeLeadership,Long Statement,The length of the statement "idToKaBoomClient.get(assignedClientId).getAssignedPartitions().add(nameToKaBoomTopic.get(topicName).getKaBoomPartition(partitonId));" is 132.,122
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Leader,takeLeadership,Magic Number,The method contains a magic number: 2,122
+blackberry_KaBoom,com.blackberry.bdp.kaboom,IntParser,intFromBytes,Magic Number,The method contains a magic number: 10,23
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,StartupConfig,Long Identifier,The length of the field zkRootPathPartitionAssignments is 30.,120
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,StartupConfig,Long Statement,The length of the statement "zkRootPathPartitionAssignments=propsParser.parseString("kaboom.zk.root.path.partition.assignments"`zkRootPathPartitionAssignments);" is 131.,120
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,getProperties,Long Statement,The length of the statement "LOG.info("Loading configs from default properties file {}"`KaBoom.class.getClassLoader().getResource(defaultProperyFile));" is 122.,196
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,buildCuratorFramework,Long Statement,The length of the statement "newCurator=CuratorFrameworkFactory.builder().namespace(connStringAndPrefix[1]).connectString(connStringAndPrefix[0]).retryPolicy(retryPolicy).build();" is 150.,257
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,buildCuratorFramework,Magic Number,The method contains a magic number: 1000,257
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,buildCuratorFramework,Magic Number,The method contains a magic number: 3,257
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,buildCuratorFramework,Magic Number,The method contains a magic number: 2,257
+blackberry_KaBoom,com.blackberry.bdp.kaboom,StartupConfig,getZkRootPathPartitionAssignments,Long Identifier,The length of the field zkRootPathPartitionAssignments is 30.,415
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,authenticate,Complex Method,Cyclomatic complexity of the method is 12,96
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,authenticate,Long Method,The method has 113 lines of code.,96
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,authenticate,Long Statement,The length of the statement "Preconditions.checkState(prevUser == null || prevUser.equals(newUser)`"Cannot use multiple kerberos principals in the same agent. " + " Must restart agent to use new principal or keytab. " + "Previous = %s` New = %s"`prevUser`newUser);" is 235.,96
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,authenticate,Long Statement,The length of the statement "LOG.error("Authentication or file read error while attempting to " + "login as kerberos principal (" + principal + ") using "+ "keytab ("+ kerbKeytab+ "). Exception follows."`e);" is 178.,96
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,authenticate,Long Statement,The length of the statement "LOG.warn("UserGroupInformation.getCurrentUser().isLoginKeytabBased(): {}"`UserGroupInformation.getCurrentUser().isLoginKeytabBased());" is 134.,96
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,authenticate,Long Statement,The length of the statement "LOG.error("Unexpected error: Unable to get authenticated user after " + "apparent successful login! Exception follows."`e);" is 123.,96
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,kerberosLogin,Long Statement,The length of the statement "LOG.info("{}: Attempting kerberos login as principal ({}) from keytab " + "file ({})"`new Object[]{authenticator`principal`keytab});" is 132.,248
+blackberry_KaBoom,com.blackberry.bdp.kaboom,Authenticator,reauthenticate,Empty catch clause,The method has an empty catch block.,301
+blackberry_KaBoom,com.blackberry.bdp.kaboom,EvenLoadBalancer,run_balancer,Complex Method,Cyclomatic complexity of the method is 13,46
+blackberry_KaBoom,com.blackberry.bdp.kaboom,EvenLoadBalancer,run_balancer,Long Statement,The length of the statement "LOG.info("client {} target partiton load is {} and assigned partitons count is {}"`client.getId()`client.getTargetPartitionLoad()`client.getAssignedPartitions().size());" is 169.,46
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KerberosUser,hashCode,Magic Number,The method contains a magic number: 7,64
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KerberosUser,hashCode,Magic Number,The method contains a magic number: 41,64
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KerberosUser,hashCode,Magic Number,The method contains a magic number: 41,64
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Complex Method,Cyclomatic complexity of the method is 19,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Method,The method has 172 lines of code.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Statement,The length of the statement "gracefulWorkerShutdownMeter=MetricRegistrySingleton.getInstance().getMetricsRegistry().meter("kaboom:total:gracefully shutdown workers");" is 137.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Statement,The length of the statement "for ( String path : new String[]{config.getZkPathLeaderClientId()`config.getZkRootPathClients()`config.getZkRootPathPartitionAssignments()`config.getZkRootPathFlagAssignments()}) {" is 180.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Statement,The length of the statement "client=new KaBoomClient(config.getKaBoomCurator()`String.format("%s/%s"`config.getZkRootPathClients()`config.getKaboomId()));" is 125.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Statement,The length of the statement "final LeaderSelector leaderSelector=new LeaderSelector(config.getKaBoomCurator()`config.getZkPathLeaderClientId()`loadBalancer);" is 128.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Statement,The length of the statement "for ( String partitionId : client.getAssignments(config.getKaBoomCurator()`config.getZkRootPathPartitionAssignments())) {" is 121.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Statement,The length of the statement "LOG.info("KaBoom clientId {} assigned to partitonId {} and a new worker has been started"`config.getKaboomId()`partitionId);" is 124.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Long Statement,The length of the statement "LOG.info("Worker currently assigned to {} is no longer valid has been instructed to stop working"`worker.getPartitionId());" is 123.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,KaBoom,run,Magic Number,The method contains a magic number: 2,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,AsyncAssignee,AsyncAssignee,Long Parameter List,The method has 5 parameters. ,61
+blackberry_KaBoom,com.blackberry.bdp.kaboom,AsyncAssignee,AsyncAssignee,Long Statement,The length of the statement "if (!isAssigned()) throw new NotAssignedException(String.format("%s cannot setup worker when not assigned to %s"`workerName`zkAssignmentPath));" is 143.,61
+blackberry_KaBoom,com.blackberry.bdp.kaboom,AsyncAssignee,aquireAssignment,Long Statement,The length of the statement "if (!isAssigned()) throw new NotAssignedException(String.format("%s will not attempt to aquire lock when not assigned to %s"`workerName`zkAssignmentPath));" is 155.,79
+blackberry_KaBoom,com.blackberry.bdp.kaboom,AsyncAssignee,aquireAssignment,Long Statement,The length of the statement "throw new LockNotAcquiredException(String.format("%s failed to obtain lock on %s after waiting %d ms"`workerName`zkAssignmentPath`waitTimeMs));" is 143.,79
+blackberry_KaBoom,com.blackberry.bdp.kaboom,AsyncAssignee,watchConnection,Long Statement,The length of the statement "LOG.error("Worker {} cannot determine if still assigned {} after connection reconnected` stopping"`workerName`zkAssignmentPath`ex);" is 131.,142
+blackberry_KaBoom,com.blackberry.bdp.kaboom,AsyncAssignee,stateChanged,Long Statement,The length of the statement "LOG.error("Worker {} cannot determine if still assigned {} after connection reconnected` stopping"`workerName`zkAssignmentPath`ex);" is 131.,144
+blackberry_KaBoom,com.blackberry.bdp.kaboom,LocalLoadBalancer,run_balancer,Complex Method,Cyclomatic complexity of the method is 8,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,LocalLoadBalancer,run_balancer,Long Statement,The length of the statement "LOG.info("Non-local assignment {} to client {} (hostname: {}) deleted because leader's hostname is{}"`assignmentZkPath`assignedClient.getId()`assignedClient.getHostname()`leader.getHost());" is 189.,31
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseTZ,Complex Method,Cyclomatic complexity of the method is 8,99
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseTZ,Magic Number,The method contains a magic number: 2,99
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseTZ,Magic Number,The method contains a magic number: 2,99
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseTZ,Magic Number,The method contains a magic number: 2,99
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseTZ,Magic Number,The method contains a magic number: 2,99
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseTZ,Magic Number,The method contains a magic number: 2,99
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseTZ,Magic Number,The method contains a magic number: 2,99
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseFractions,Magic Number,The method contains a magic number: 100,144
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseFractions,Magic Number,The method contains a magic number: 2,144
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseFractions,Magic Number,The method contains a magic number: 10,144
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseFractions,Magic Number,The method contains a magic number: 3,144
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseSeconds,Magic Number,The method contains a magic number: 2,169
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseSeconds,Magic Number,The method contains a magic number: 2,169
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseMinute,Magic Number,The method contains a magic number: 2,179
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseMinute,Magic Number,The method contains a magic number: 2,179
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseHour,Magic Number,The method contains a magic number: 2,189
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseHour,Magic Number,The method contains a magic number: 2,189
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,areEqual,Long Parameter List,The method has 5 parameters. ,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,advance,Complex Conditional,The conditional expression b == ' ' || b == '-' || b == ':' || b == 'T' is complex.,215
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseDd,Magic Number,The method contains a magic number: 2,238
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseDd,Magic Number,The method contains a magic number: 2,238
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseMmm,Magic Number,The method contains a magic number: 3,255
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseMmm,Magic Number,The method contains a magic number: 3,255
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseMm,Magic Number,The method contains a magic number: 2,275
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseMm,Magic Number,The method contains a magic number: 2,275
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseYyyy,Magic Number,The method contains a magic number: 4,285
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParser,parseYyyy,Magic Number,The method contains a magic number: 4,285
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Identifier,The length of the field compressionRatioHistogramTopic is 30.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Identifier,The length of the field compressionRatioHistogramTotal is 30.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.hdfsFlushTimerTopic=MetricRegistrySingleton.getInstance().getMetricsRegistry().timer("kaboom:topic:" + topic + ":hdfs flush timer");" is 137.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.hdfsFlushTimerTotal=MetricRegistrySingleton.getInstance().getMetricsRegistry().timer("kaboom:total:hdfs flush timer");" is 123.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.compressionTimerTotal=MetricRegistrySingleton.getInstance().getMetricsRegistry().timer("kaboom:total:compression timer");" is 126.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.compressionTimerTopic=MetricRegistrySingleton.getInstance().getMetricsRegistry().timer("kaboom:topic:" + topic + ":compression timer");" is 140.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.compressionRatioHistogramTopic=MetricRegistrySingleton.getInstance().getMetricsRegistry().histogram("kaboom:topic:" + topic + ":compresssion ratio");" is 154.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.compressionRatioHistogramTotal=MetricRegistrySingleton.getInstance().getMetricsRegistry().histogram("kaboom:total:compression ratio");" is 139.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.hdfsFlushTimer=MetricRegistrySingleton.getInstance().getMetricsRegistry().timer("kaboom:partitions:" + this.partitionId + ":flush timer");" is 143.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.topicBytesWritten=MetricRegistrySingleton.getInstance().getMetricsRegistry().meter("kaboom:topic:" + topic + ":bytes written");" is 132.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Long Statement,The length of the statement "this.failedBlockWrites=MetricRegistrySingleton.getInstance().getMetricsRegistry().meter("kaboom:total:failed block writes");" is 124.,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,FastBoomWriter,Magic Number,The method contains a magic number: 16,95
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,periodicHdfsFlushPoll,Complex Conditional,The conditional expression getPeriodicHdfsFlushInterval() == null || getPeriodicHdfsFlushInterval() == 0 || msSinceLastHdfsFlush() < getPeriodicHdfsFlushInterval() is complex.,125
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,periodicHdfsFlushPoll,Long Statement,The length of the statement "if (getPeriodicHdfsFlushInterval() == null || getPeriodicHdfsFlushInterval() == 0 || msSinceLastHdfsFlush() < getPeriodicHdfsFlushInterval()) {" is 143.,125
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,periodicHdfsFlushPoll,Long Statement,The length of the statement "LOG.trace("Skipping forced log block write in periodic HDFS flush since log block buffer position is {}"`logBlockBuffer.position());" is 132.,125
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,periodicHdfsFlushPoll,Long Statement,The length of the statement "LOG.trace("A log block write was forced and likely incured a call to write the avro block because the avro block buffer position is now {}"`avroBlockBuffer.position());" is 168.,125
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeHeader,Magic Number,The method contains a magic number: 2L,174
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Complex Method,Cyclomatic complexity of the method is 10,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 63,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7FL,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x7F,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0x80,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 0xFF,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,encodeLong,Magic Number,The method contains a magic number: 7,202
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Complex Conditional,The conditional expression (logBlockBuffer.position() > 0 && second != logBlockSecond) || logLinesBytes.length - logLinesBuffer.position() < 10 + 10 + length is complex.,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Long Statement,The length of the statement "if ((logBlockBuffer.position() > 0 && second != logBlockSecond) || logLinesBytes.length - logLinesBuffer.position() < 10 + 10 + length) {" is 137.,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Long Statement,The length of the statement "LOG.trace("[{}] logBlockBuffer: CurPosition {}` InsertMessage-Offset {}` InsertMessage Length {}"`partitionId`logBlockBuffer.position()`offset`length);" is 151.,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Magic Number,The method contains a magic number: 1000l,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Magic Number,The method contains a magic number: 1000l,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Magic Number,The method contains a magic number: 10,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Magic Number,The method contains a magic number: 10,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Magic Number,The method contains a magic number: 10,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLine,Magic Number,The method contains a magic number: 10,244
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLogBlock,Long Statement,The length of the statement "LOG.trace("[{}] avroBlockBuffer adding logBlockBytes: CurPosition {}` insert length {}"`partitionId`avroBlockBuffer.position()`logBlockBuffer.position());" is 154.,306
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLogBlock,Long Statement,The length of the statement "LOG.trace("[{}] avroBlockBuffer adding logLineBytes: CurPosition {}` insert length {}"`partitionId`avroBlockBuffer.position()`logLinesBuffer.position());" is 153.,306
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeLogBlock,Magic Number,The method contains a magic number: 10,306
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Long Identifier,The length of the field compressionRatioHistogramTopic is 30.,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Long Identifier,The length of the field compressionRatioHistogramTotal is 30.,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Long Statement,The length of the statement "LOG.debug("[{}] Natively compressed {} bytes to {} bytes ({}% reduction)` compression level {}"`partitionId`avroBlockBuffer.position()`compressedSize`Math.round(100 - (100.0 * compressedSize / avroBlockBuffer.position()))`compressionLevel);" is 240.,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Long Statement,The length of the statement "LOG.trace("[{}] Expanding compression buffer {} -> {}"`partitionId`compressedBlockBytes.length`compressedBlockBytes.length * 2);" is 128.,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Long Statement,The length of the statement "LOG.debug("[{}] Compressed {} bytes to {} bytes ({}% reduction) in {} ms (native={}` compression level={})"`partitionId`avroBlockBuffer.position()`compressedSize`Math.round(100 - (100.0 * compressedSize / avroBlockBuffer.position()))`System.currentTimeMillis() - start`useNativeCompression`compressionLevel);" is 308.,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 256,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 1024,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100.0,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 2,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 2,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100.0,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100.0,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,FastBoomWriter,writeAvroBlock,Magic Number,The method contains a magic number: 100.0,336
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,getFacility,Magic Number,The method contains a magic number: 8,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,getPriority,Magic Number,The method contains a magic number: 8,42
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Complex Conditional,The conditional expression bytes[pos + 2] >= '0' && bytes[pos + 2] <= '9' && bytes[pos + 3] == '>' is complex.,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Complex Conditional,The conditional expression bytes[pos + 2] >= '0' && bytes[pos + 2] <= '9' && bytes[pos + 3] == '>' is complex.,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Complex Conditional,The conditional expression bytes[pos + 2] >= '0' && bytes[pos + 2] <= '8' && bytes[pos + 3] >= '0' && bytes[pos + 3] <= '9' && bytes[pos + 4] >= '>' is complex.,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Complex Conditional,The conditional expression bytes[pos + 2] == '9' && bytes[pos + 3] >= '0' && bytes[pos + 3] <= '1' && bytes[pos + 4] >= '>' is complex.,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Complex Method,Cyclomatic complexity of the method is 12,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Long Statement,The length of the statement "if (bytes[pos + 2] >= '0' && bytes[pos + 2] <= '8' && bytes[pos + 3] >= '0' && bytes[pos + 3] <= '9' && bytes[pos + 4] >= '>') {" is 128.,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 4,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 4,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 4,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 5,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 2,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 4,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 3,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParser,parsePri,Magic Number,The method contains a magic number: 5,48
+blackberry_KaBoom,com.blackberry.bdp.kaboom,EvenLoadBalancerTest,buildCuratorFramework,Magic Number,The method contains a magic number: 1000,39
+blackberry_KaBoom,com.blackberry.bdp.kaboom,EvenLoadBalancerTest,buildCuratorFramework,Magic Number,The method contains a magic number: 3,39
+blackberry_KaBoom,com.blackberry.bdp.kaboom,EvenLoadBalancerTest,testAssignmentConversion,Magic Number,The method contains a magic number: 1001,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testNonZeroOffet,Magic Number,The method contains a magic number: 10,29
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testNonZeroOffet,Magic Number,The method contains a magic number: 10,29
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testNonZeroOffet,Magic Number,The method contains a magic number: 1401731772219L,29
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308123L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 23,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308123L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 26,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308120L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 22,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308100L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 21,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 20,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 19,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308123L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 19,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308123L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 19,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 5,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 19,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399482308000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 20,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399478708000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 22,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399476908000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 24,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399476908000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 25,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 1399487708000L,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,TimestampParserTest,testParser,Magic Number,The method contains a magic number: 25,38
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParserTest,testSkipPri,Magic Number,The method contains a magic number: 999,24
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParserTest,testSkipPri,Magic Number,The method contains a magic number: 5,24
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,24
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,24
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,24
+blackberry_KaBoom,com.blackberry.bdp.kaboom,VersionParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,24
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 191,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 2,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 15,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 2,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 2,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 2,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 3,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 3,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 4,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,PriParserTest,testSkipPri,Magic Number,The method contains a magic number: 4,30
+blackberry_KaBoom,com.blackberry.bdp.kaboom,WorkerTest,buildCuratorFramework,Magic Number,The method contains a magic number: 1000,42
+blackberry_KaBoom,com.blackberry.bdp.kaboom,WorkerTest,buildCuratorFramework,Magic Number,The method contains a magic number: 3,42
+blackberry_KaBoom,com.blackberry.bdp.kaboom,WorkerTest,testCuratoringLocking,Magic Number,The method contains a magic number: 2,92
+blackberry_KaBoom,com.blackberry.bdp.kaboom,WorkerTest,testCuratoringLocking,Magic Number,The method contains a magic number: 10,92
+blackberry_KaBoom,com.blackberry.bdp.kaboom,WorkerTest,testCuratoringLocking,Magic Number,The method contains a magic number: 50,92
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,TimestampWorker,Long Parameter List,The method has 5 parameters. ,52
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Complex Method,Cyclomatic complexity of the method is 18,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Long Method,The method has 117 lines of code.,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Long Statement,The length of the statement "consumer=new Consumer(startupConfig.getConsumerConfiguration()`clientId`topic`partition`startOffset`MetricRegistrySingleton.getInstance().getMetricsRegistry());" is 160.,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Long Statement,The length of the statement "String error=String.format("[%s] Offset anomaly! Expected: %d` Got %d` Consumer high watermark %d` latest %d` earliest %d"`partitionId`offset`consumer.getLastOffset()`consumer.getHighWaterMark()`consumer.getLatestOffset()`consumer.getEarliestOffset());" is 252.,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Long Statement,The length of the statement "LOG.info("[{}] Skipping offset as length - Offset is < 0: timestamp: {}` pos: {}` length: {}"`partitionId`timestamp`pos`length);" is 128.,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Long Statement,The length of the statement "LOG.error("[{}] An exception occured while setting up this worker thread giving up and returing => error : {} "`partitionId`e);" is 127.,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Magic Number,The method contains a magic number: 0xFE,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Magic Number,The method contains a magic number: 10,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Magic Number,The method contains a magic number: 0xFF,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,run,Magic Number,The method contains a magic number: 2,71
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,TimestampWorker,getMsgWrittenPerSec,Magic Number,The method contains a magic number: 1000,247
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,UniqueTimestampFinder,run,Complex Conditional,The conditional expression topic == null || partition == null || startOffset == null || endOffset == null is complex.,60
+blackberry_KaBoom,com.blackberry.bdp.kaboom.timestamps,UniqueTimestampFinder,run,Long Statement,The length of the statement "LOG.info("Consuming topic {}` starting at {} ending on {} and writing {} as user {}"`this.topic`this.startOffset`this.endOffset);" is 129.,60
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,SimpleWorker,Long Parameter List,The method has 6 parameters. ,44
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Complex Method,Cyclomatic complexity of the method is 18,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Long Method,The method has 113 lines of code.,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Long Statement,The length of the statement "consumer=new Consumer(startupConfig.getConsumerConfiguration()`clientId`topic`partition`startOffset`MetricRegistrySingleton.getInstance().getMetricsRegistry());" is 160.,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Long Statement,The length of the statement "String error=String.format("[%s] Offset anomaly! Expected: %d` Got %d` Consumer high watermark %d` latest %d` earliest %d"`partitionId`offset`consumer.getLastOffset()`consumer.getHighWaterMark()`consumer.getLatestOffset()`consumer.getEarliestOffset());" is 252.,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Long Statement,The length of the statement "LOG.info("[{}] Skipping offset as length - Offset is < 0: timestamp: {}` pos: {}` length: {}"`partitionId`timestamp`pos`length);" is 128.,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Long Statement,The length of the statement "LOG.error("[{}] An exception occured while setting up this worker thread giving up and returing => error : {} "`partitionId`e);" is 127.,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Magic Number,The method contains a magic number: 1024,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Magic Number,The method contains a magic number: 1024,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Magic Number,The method contains a magic number: 0xFE,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Magic Number,The method contains a magic number: 10,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Magic Number,The method contains a magic number: 0xFF,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,run,Magic Number,The method contains a magic number: 2,65
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleWorker,getMsgWrittenPerSec,Magic Number,The method contains a magic number: 1000,229
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleKaBoom,run,Complex Conditional,The conditional expression proxyUser == null || topic == null || partition == null || startOffset == null || endOffset == null || boomFile == null is complex.,74
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleKaBoom,run,Long Method,The method has 101 lines of code.,74
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleKaBoom,run,Long Statement,The length of the statement "if (proxyUser == null || topic == null || partition == null || startOffset == null || endOffset == null || boomFile == null) {" is 126.,74
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleKaBoom,run,Long Statement,The length of the statement "LOG.info("Consuming topic {}` starting at {} ending on {} and writing {} as user {}"`this.topic`this.startOffset`this.endOffset`this.boomFile`this.proxyUser);" is 158.,74
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,SimpleKaBoom,run,Long Statement,The length of the statement "hdfsDataOut=(HdfsDataOutputStream)fs.create(new Path(boomFile)`startupConfig.getBoomFilePerms()`false`runningConfig.getBoomFileBufferSize()`runningConfig.getBoomFileReplicas()`runningConfig.getBoomFileBlocksize()`null);" is 219.,74
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,ResetAllOffsets,createCurator,Long Statement,The length of the statement "ResetAllOffsets.curator=CuratorFrameworkFactory.builder().namespace(connStringAndPrefix[1]).connectString(connStringAndPrefix[0]).retryPolicy(retryPolicy).build();" is 163.,49
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,ResetAllOffsets,createCurator,Magic Number,The method contains a magic number: 2,49
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,ResetAllOffsets,createCurator,Magic Number,The method contains a magic number: 1000,49
+blackberry_KaBoom,com.blackberry.bdp.simplekaboom,ResetAllOffsets,createCurator,Magic Number,The method contains a magic number: 3,49
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,refreshMetadata,Long Statement,The length of the statement "kaboomTopics=KaBoomTopic.getAll(kaboomClients`kafkaMetaData`config.getKaBoomCurator()`config.getZkRootPathTopicConfigs()`config.getZkRootPathPartitionAssignments()`config.getZkRootPathFlagAssignments());" is 203.,70
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Complex Method,Cyclomatic complexity of the method is 8,115
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Long Statement,The length of the statement "List<String> remotePartitions=counts.get(hostname).get("remote") != null ? counts.get(hostname).get("remote") : new ArrayList<String>();" is 136.,115
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Long Statement,The length of the statement "List<String> localPartitions=counts.get(hostname).get("local") != null ? counts.get(hostname).get("local") : new ArrayList<String>();" is 133.,115
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Long Statement,The length of the statement "System.out.println(String.format("host: %s consuming: %d local / %d remote (%s percent local)` producing: " + remoteProducers`hostname`localPartitions.size()`remotePartitions.size()`df.format(100.0 * ((float)localPartitions.size() / ((float)localPartitions.size() + (float)remotePartitions.size())))));" is 302.,115
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Long Statement,The length of the statement "System.out.println(String.format("\tremote partition %s lead broker is %s: "`partitionId`partitionIdToBroker.get(partitionId)));" is 128.,115
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Long Statement,The length of the statement "System.out.println(String.format("totals: %d total local` %d totalremote (%s total percent local)"`totalLocal`totalRemote`df.format(100.0 * ((float)totalLocal / ((float)totalLocal + (float)totalRemote)))));" is 206.,115
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Magic Number,The method contains a magic number: 100.0,115
+blackberry_KaBoom,com.blackberry.bdp.cli,AssignmentStats,report,Magic Number,The method contains a magic number: 100.0,115

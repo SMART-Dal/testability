@@ -1,0 +1,105 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+pprados_audit-reactive,com.octo.reactive.audit,URLTools,latencyURL,Long Statement,The length of the statement "return fileEx ? FactoryException.newFile(LOW`thisJoinPoint`fmsg) : FactoryException.newNetwork(MEDIUM`thisJoinPoint`fmsg);" is 122.,33
+pprados_audit-reactive,com.octo.reactive.audit,URLTools,lazyException,Long Statement,The length of the statement "return fileEx ? FactoryException.newFile(LOW`thisJoinPoint`fmsg) : FactoryException.newNetwork(MEDIUM`thisJoinPoint`fmsg);" is 122.,47
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,startup,Long Statement,The length of the statement "final String msg="Use reactive audit with " + FileTools.homeFile(url) + " at "+ new SimpleDateFormat("HH:mm:ss z yyyy").format(new Date());" is 139.,120
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,cpuAnalyze,Complex Method,Cyclomatic complexity of the method is 11,165
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,cpuAnalyze,Magic Number,The method contains a magic number: 2,165
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,cpuAnalyze,Magic Number,The method contains a magic number: 2,165
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,shutdown,Long Statement,The length of the statement "final StringBuilder buf=new StringBuilder(cr).append("\tTotal high =").append(high).append(cr).append("\tTotal medium =").append(medium).append(cr).append("\tTotal low =").append(low).append(cr).append("\tMax. // threads =").append(maxThreads).append(" (# of core:").append(Runtime.getRuntime().availableProcessors()).append(")").append(cr).append("\t# started thread=" + (cpuBean.getTotalStartedThreadCount() - systemThreadCount)).append(cr);" is 443.,245
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,isThreadNameMatch,Complex Method,Cyclomatic complexity of the method is 8,342
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,isStarted,Magic Number,The method contains a magic number: 1000,386
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,current,Long Statement,The length of the statement "return new Transaction().throwExceptions(throwExceptions).threadPattern(threadPattern.toString()).bootStrapDelay(bootstrapDelay);" is 129.,469
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,logIfNew,Complex Method,Cyclomatic complexity of the method is 9,507
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAudit,logIfNew,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@40cc8123,507
+pprados_audit-reactive,com.octo.reactive.audit,LoadParams,applyProperties,Long Statement,The length of the statement "tx.bootStrapMode(ReactiveAudit.BootStrapMode.valueOf(getValue(KEY_BOOTSTRAP_MODE`DEFAULT_BOOTSTRAP_MODE`prop).toUpperCase()));" is 126.,180
+pprados_audit-reactive,com.octo.reactive.audit,LoadParams,applyProperties,Long Statement,The length of the statement "tx.logOutput(getValue(KEY_LOG_OUTPUT`DEFAULT_LOG_OUTPUT`prop)`getValue(KEY_LOG_FORMAT`DEFAULT_LOG_FORMAT`prop)`getValue(KEY_LOG_SIZE`DEFAULT_LOG_SIZE`prop));" is 157.,180
+pprados_audit-reactive,com.octo.reactive.audit,FactoryException,newNetwork,Long Statement,The length of the statement "return new NetworkReactiveAuditException(latency`(msg == null) ? thisJoinPoint.getSignature().toString() : thisJoinPoint.getSignature().toString() + " " + msg);" is 160.,35
+pprados_audit-reactive,com.octo.reactive.audit,FactoryException,newFile,Long Statement,The length of the statement "return new FileReactiveAuditException(latency`(msg == null) ? thisJoinPoint.getSignature().toString() : thisJoinPoint.getSignature().toString() + " " + msg);" is 157.,48
+pprados_audit-reactive,com.octo.reactive.audit,AbstractAudit,logLatency,Complex Conditional,The conditional expression config.isStarted() && !config.isSuppressAudit() && isReactiveThread() is complex.,52
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,getUnsafe,Empty catch clause,The method has an empty catch block.,158
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,retryUpdate,Complex Conditional,The conditional expression (rs=cells) != null && (m=rs.length) > 0 && rs[j=(m - 1) & h] == null is complex.,229
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,retryUpdate,Complex Conditional,The conditional expression busy == 0 && cells == as && casBusy() is complex.,229
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,retryUpdate,Complex Method,Cyclomatic complexity of the method is 20,229
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,retryUpdate,Magic Number,The method contains a magic number: 13,229
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,retryUpdate,Magic Number,The method contains a magic number: 17,229
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,retryUpdate,Magic Number,The method contains a magic number: 5,229
+pprados_audit-reactive,com.octo.reactive.audit,Striped64,retryUpdate,Magic Number,The method contains a magic number: 2,229
+pprados_audit-reactive,com.octo.reactive.audit,LongAdder,add,Complex Conditional,The conditional expression (hc=threadHashCode.get()) == null || as == null || (n=as.length) < 1 || (a=as[(n - 1) & hc[0]]) == null || !(uncontended=a.cas(v=a.value`v + x)) is complex.,74
+pprados_audit-reactive,com.octo.reactive.audit,LongAdder,add,Long Statement,The length of the statement "if ((hc=threadHashCode.get()) == null || as == null || (n=as.length) < 1 || (a=as[(n - 1) & hc[0]]) == null || !(uncontended=a.cas(v=a.value`v + x))) retryUpdate(x`hc`uncontended);" is 180.,74
+pprados_audit-reactive,com.octo.reactive.audit,FileTools,isLastInputStreamWithLatency,Complex Method,Cyclomatic complexity of the method is 8,165
+pprados_audit-reactive,com.octo.reactive.audit,FileTools,isLastOutputStreamWithLatency,Empty catch clause,The method has an empty catch block.,234
+pprados_audit-reactive,com.octo.reactive.audit,FileTools,isLastOutputStreamWithLatency,Magic Number,The method contains a magic number: 2,234
+pprados_audit-reactive,com.octo.reactive.audit,FileTools,dumpChain,Empty catch clause,The method has an empty catch block.,374
+pprados_audit-reactive,com.octo.reactive.audit,FileTools,dumpChain,Empty catch clause,The method has an empty catch block.,470
+pprados_audit-reactive,com.octo.reactive.audit,FileTools,homeFile,Empty catch clause,The method has an empty catch block.,581
+pprados_audit-reactive,com.octo.reactive.audit,AuditLogFormat,format,Long Statement,The length of the statement "return String.format(format`dat`source`record.getLoggerName()`LoadParams.convLevelString(record.getLevel())`message`throwable);" is 127.,41
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,setAllParams,Long Statement,The length of the statement "config.begin().throwExceptions(true).threadPattern("").latencyFile("high").latencyNetwork("medium").latencyCPU("low").bootStrapDelay(10).commit();" is 146.,79
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,setAllParams,Long Statement,The length of the statement "config.begin().throwExceptions(false).threadPattern("abc").latencyFile("").latencyNetwork("").latencyCPU("").bootStrapDelay(0).commit();" is 136.,79
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,setAllParams,Magic Number,The method contains a magic number: 10,79
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,setAllParams,Magic Number,The method contains a magic number: 10,79
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,logIfNewThread,Magic Number,The method contains a magic number: 2,122
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,logIfNewLoop,Long Statement,The length of the statement "config.begin().threadPattern(".*").logOutput(LoadParams.DEFAULT_LOG_OUTPUT`LoadParams.DEFAULT_LOG_FORMAT`LoadParams.DEFAULT_LOG_SIZE).latencyFile("LOW").throwExceptions(false).commit();" is 185.,229
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,logIfNewLoop,Magic Number,The method contains a magic number: 5,229
+pprados_audit-reactive,com.octo.reactive.audit,ReactiveAuditTest,testPurgeStackTrace,Long Statement,The length of the statement "assertFalse((traceElement.getClassName().startsWith(auditPackageName) && !traceElement.getClassName().endsWith("Test")));" is 121.,387
+pprados_audit-reactive,com.octo.reactive.audit,LoadParamsTest,setSystemParams,Magic Number,The method contains a magic number: 10,35
+pprados_audit-reactive,com.octo.reactive.audit,TolerateLatencyTest,doubleCall,Magic Number,The method contains a magic number: 2,52
+pprados_audit-reactive,com.octo.reactive.audit,TolerateLatencyTest,run,Magic Number,The method contains a magic number: 2,58
+pprados_audit-reactive,com.octo.reactive.audit.javax.xml.parsers,SAXParserAudit,parse,Empty catch clause,The method has an empty catch block.,88
+pprados_audit-reactive,com.octo.reactive.audit.javax.xml.parsers,SAXParserAudit,parse,Empty catch clause,The method has an empty catch block.,88
+pprados_audit-reactive,com.octo.reactive.audit.javax.xml.parsers,SAXParserAudit,parse,Empty catch clause,The method has an empty catch block.,106
+pprados_audit-reactive,com.octo.reactive.audit.javax.xml.parsers,SAXParserAudit,parse,Empty catch clause,The method has an empty catch block.,106
+pprados_audit-reactive,com.octo.reactive.audit.javax.xml.parsers,DocumentBuilderAudit,parse,Empty catch clause,The method has an empty catch block.,43
+pprados_audit-reactive,com.octo.reactive.audit.javax.xml.parsers,DocumentBuilderAudit,parse,Empty catch clause,The method has an empty catch block.,43
+pprados_audit-reactive,com.octo.reactive.audit.java.rmi.server,RemoteRefTest,invoke,Long Statement,The length of the statement "@Override public java.rmi.server.RemoteCall newCall( RemoteObject obj` java.rmi.server.Operation[] op` int opnum` long hash) throws RemoteException {" is 149.,35
+pprados_audit-reactive,com.octo.reactive.audit.java.io,FlushableAudit,flush,Long Statement,The length of the statement "if ((thisJoinPoint.getTarget() instanceof FileOutputStream) || (thisJoinPoint.getTarget().getClass().getName().equals("java.net.SocketOutputStream"))) latency(HIGH`thisJoinPoint);" is 179.,32
+pprados_audit-reactive,com.octo.reactive.audit.java.io,CloseableAudit,close,Complex Method,Cyclomatic complexity of the method is 16,37
+pprados_audit-reactive,com.octo.reactive.audit.java.io,AuditedReaderTest,read_CharBuffer,Magic Number,The method contains a magic number: 12,62
+pprados_audit-reactive,com.octo.reactive.audit.java.io,CharArrayWriterTest,newWriter,Magic Number,The method contains a magic number: 10,27
+pprados_audit-reactive,com.octo.reactive.audit.java.io,CharArrayWriterTest,derived,Magic Number,The method contains a magic number: 10,34
+pprados_audit-reactive,com.octo.reactive.audit.java.io,BufferedOutputStreamTest,derived,Magic Number,The method contains a magic number: 10,49
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PushbackInputStreamTest,derived,Magic Number,The method contains a magic number: 10,46
+pprados_audit-reactive,com.octo.reactive.audit.java.io,ObjectOutputStreamTest,derived,Magic Number,The method contains a magic number: 10,49
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PrintStreamTest,derived,Magic Number,The method contains a magic number: 10,41
+pprados_audit-reactive,com.octo.reactive.audit.java.io,LineNumberInputStreamTest,derived,Magic Number,The method contains a magic number: 10,49
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PrintWriterTest,derived,Magic Number,The method contains a magic number: 10,45
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PrintWriterTest,print_i,Magic Number,The method contains a magic number: 3,98
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PrintWriterTest,printf_Locale_String_Object,Magic Number,The method contains a magic number: 3,110
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PrintWriterTest,println_i,Magic Number,The method contains a magic number: 3,147
+pprados_audit-reactive,com.octo.reactive.audit.java.io,CharArrayReaderTest,derived,Magic Number,The method contains a magic number: 10,34
+pprados_audit-reactive,com.octo.reactive.audit.java.io,ByteArrayOutputStreamTest,derived,Magic Number,The method contains a magic number: 10,34
+pprados_audit-reactive,com.octo.reactive.audit.java.io,OutputStreamWriterTest,derived,Magic Number,The method contains a magic number: 10,40
+pprados_audit-reactive,com.octo.reactive.audit.java.io,ObjectInputStreamTest,derived,Magic Number,The method contains a magic number: 100,52
+pprados_audit-reactive,com.octo.reactive.audit.java.io,BufferedInputStreamTest,derived,Magic Number,The method contains a magic number: 10,49
+pprados_audit-reactive,com.octo.reactive.audit.java.io,BufferedWriterTest,derived,Magic Number,The method contains a magic number: 10,49
+pprados_audit-reactive,com.octo.reactive.audit.java.io,SequenceInputStreamTest,derived,Magic Number,The method contains a magic number: 10,42
+pprados_audit-reactive,com.octo.reactive.audit.java.io,SequenceInputStreamTest,derived,Magic Number,The method contains a magic number: 10,42
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PipedReaderTest,derived,Magic Number,The method contains a magic number: 10,42
+pprados_audit-reactive,com.octo.reactive.audit.java.io,ByteArrayInputStreamTest,newInputStream,Magic Number,The method contains a magic number: 10,27
+pprados_audit-reactive,com.octo.reactive.audit.java.io,ByteArrayInputStreamTest,derived,Magic Number,The method contains a magic number: 10,34
+pprados_audit-reactive,com.octo.reactive.audit.java.io,StringWriterTest,newWriter,Magic Number,The method contains a magic number: 10,27
+pprados_audit-reactive,com.octo.reactive.audit.java.io,StringWriterTest,derived,Magic Number,The method contains a magic number: 10,34
+pprados_audit-reactive,com.octo.reactive.audit.java.io,PipedInputStreamTest,derived,Magic Number,The method contains a magic number: 10,35
+pprados_audit-reactive,com.octo.reactive.audit.java.io,ReaderTest,read_CharBuffer,Magic Number,The method contains a magic number: 12,93
+pprados_audit-reactive,com.octo.reactive.audit.java.lang,AppendableAudit,append,Complex Method,Cyclomatic complexity of the method is 16,37
+pprados_audit-reactive,com.octo.reactive.audit.java.lang,ObjectTest,wait_,Magic Number,The method contains a magic number: 5,25
+pprados_audit-reactive,com.octo.reactive.audit.java.net,DatagramSocketTest,receive,Magic Number,The method contains a magic number: 10,47
+pprados_audit-reactive,com.octo.reactive.audit.java.net,DatagramSocketTest,receive,Magic Number,The method contains a magic number: 10,47
+pprados_audit-reactive,com.octo.reactive.audit.java.net,DatagramSocketTest,send,Magic Number,The method contains a magic number: 10,61
+pprados_audit-reactive,com.octo.reactive.audit.java.net,DatagramSocketTest,send,Magic Number,The method contains a magic number: 10,61
+pprados_audit-reactive,com.octo.reactive.audit.java.net,SocketTest,sendUrgentData,Magic Number,The method contains a magic number: 255,201
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,AbstractChannelsAudit,latency,Long Statement,The length of the statement "final ReactiveAuditException ex=(thisJoinPoint.getTarget() instanceof FileChannel) ? FactoryException.newFile(latency`thisJoinPoint) : FactoryException.newNetwork(latency`thisJoinPoint);" is 186.,36
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,receive_b,Magic Number,The method contains a magic number: 10,59
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,receive_nb,Magic Number,The method contains a magic number: 10,72
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,send_b,Magic Number,The method contains a magic number: 10,86
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,send_nb,Magic Number,The method contains a magic number: 10,99
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,read_b,Magic Number,The method contains a magic number: 10,113
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,read_nb,Magic Number,The method contains a magic number: 10,126
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,write_b,Magic Number,The method contains a magic number: 10,140
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,DatagramChannelTest,write_nb,Magic Number,The method contains a magic number: 10,153
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,ScatteringByteChannelTest,read,Magic Number,The method contains a magic number: 10,76
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,ScatteringByteChannelTest,read_ii,Magic Number,The method contains a magic number: 10,90
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,GatheringByteChannelTest,write,Magic Number,The method contains a magic number: 10,42
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,SelectorTest,select_l,Magic Number,The method contains a magic number: 100,41
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,ServerSocketChannelTest,accept,Magic Number,The method contains a magic number: 9999,29
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,ReadableByteChannelTest,read,Magic Number,The method contains a magic number: 10,77
+pprados_audit-reactive,com.octo.reactive.audit.java.nio.channels,WritableByteChannelTest,write,Magic Number,The method contains a magic number: 10,76

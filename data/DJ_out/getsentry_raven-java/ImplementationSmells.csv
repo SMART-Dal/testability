@@ -1,0 +1,752 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,init,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Disabling profiling because no profiling traces dir path is defined in options.");" is 127.,65
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,init,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Disabling profiling because trace interval is set to %d milliseconds"`intervalMillis);" is 131.,65
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionStart,Complex Conditional,The conditional expression traceFilesDir == null || intervalUs == 0 || !traceFilesDir.exists() is complex.,98
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionStart,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Profiling is already active and was started by transaction %s"`activeTransaction.getSpanContext().getTraceId().toString());" is 168.,98
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionStart,Long Statement,The length of the statement "scheduledFinish=options.getExecutorService().schedule(() -> timedOutProfilingData=onTransactionFinish(transaction)`PROFILING_TIMEOUT_MILLIS);" is 141.,98
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionFinish,Complex Method,Cyclomatic complexity of the method is 10,148
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionFinish,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.ERROR`"Profiling data with id %s exists but doesn't match the closing transaction %s"`profilingData.getTraceId()`transaction.getSpanContext().getTraceId().toString());" is 203.,148
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionFinish,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.INFO`"Transaction %s finished` but profiling never started for it. Skipping"`transaction.getSpanContext().getTraceId().toString());" is 167.,148
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionFinish,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Transaction %s finished` but profiling was started by transaction %s. Skipping"`transaction.getSpanContext().getTraceId().toString()`finalActiveTransaction.getSpanContext().getTraceId().toString());" is 241.,148
+getsentry_raven-java,io.sentry.android.core,AndroidTransactionProfiler,onTransactionFinish,Long Statement,The length of the statement "return new ProfilingTraceData(traceFile`transaction`Long.toString(transactionDurationNanos)`buildInfoProvider.getSdkInfoVersion()`abis != null && abis.length > 0 ? abis[0] : ""`() -> CpuInfoUtils.getInstance().readMaxFrequencies()`buildInfoProvider.getManufacturer()`buildInfoProvider.getModel()`buildInfoProvider.getVersionRelease()`buildInfoProvider.isEmulator()`totalMem`options.getProguardUuid()`versionName`versionCode`options.getEnvironment());" is 450.,148
+getsentry_raven-java,io.sentry.android.core,ANRWatchDog,ANRWatchDog,Long Parameter List,The method has 5 parameters. ,39
+getsentry_raven-java,io.sentry.android.core,ANRWatchDog,ANRWatchDog,Long Parameter List,The method has 6 parameters. ,48
+getsentry_raven-java,io.sentry.android.core,ANRWatchDog,run,Complex Conditional,The conditional expression !reportInDebug && (Debug.isDebuggerConnected() || Debug.waitingForDebugger()) is complex.,65
+getsentry_raven-java,io.sentry.android.core,ANRWatchDog,run,Complex Method,Cyclomatic complexity of the method is 10,65
+getsentry_raven-java,io.sentry.android.core,AndroidTransportGate,isConnected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@f9aab8b,25
+getsentry_raven-java,io.sentry.android.core,BuildInfoProvider,isEmulator,Long Statement,The length of the statement "return (Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic")) || Build.FINGERPRINT.startsWith("generic") || Build.FINGERPRINT.startsWith("unknown")|| Build.HARDWARE.contains("goldfish")|| Build.HARDWARE.contains("ranchu")|| Build.MODEL.contains("google_sdk")|| Build.MODEL.contains("Emulator")|| Build.MODEL.contains("Android SDK built for x86")|| Build.MANUFACTURER.contains("Genymotion")|| Build.PRODUCT.contains("sdk_google")|| Build.PRODUCT.contains("google_sdk")|| Build.PRODUCT.contains("sdk")|| Build.PRODUCT.contains("sdk_x86")|| Build.PRODUCT.contains("vbox86p")|| Build.PRODUCT.contains("emulator")|| Build.PRODUCT.contains("simulator");" is 666.,45
+getsentry_raven-java,io.sentry.android.core,AppStartState,getAppStartInterval,Complex Conditional,The conditional expression appStartMillis == null || appStartEndMillis == null || coldStart == null is complex.,49
+getsentry_raven-java,io.sentry.android.core,UserInteractionIntegration,startTracking,Long Statement,The length of the statement "final SentryGestureListener gestureListener=new SentryGestureListener(activity`hub`options`isAndroidXScrollViewAvailable);" is 122.,40
+getsentry_raven-java,io.sentry.android.core,UserInteractionIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,106
+getsentry_raven-java,io.sentry.android.core,UserInteractionIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"UserInteractionIntegration enabled: %s"`this.options.isEnableUserInteractionBreadcrumbs());" is 139.,106
+getsentry_raven-java,io.sentry.android.core,UserInteractionIntegration,register,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.INFO`"androidx.core is not available` UserInteractionIntegration won't be installed");" is 122.,106
+getsentry_raven-java,io.sentry.android.core,EnvelopeFileObserver,onEvent,Long Statement,The length of the statement "logger.log(SentryLevel.DEBUG`"onEvent fired for EnvelopeFileObserver with event type %d on path: %s for file %s."`eventType`this.rootPath`relativePath);" is 152.,45
+getsentry_raven-java,io.sentry.android.core,AndroidLogger,log,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1dc9d71,32
+getsentry_raven-java,io.sentry.android.core,AndroidLogger,toLogcatLevel,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3e3dcb98,63
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,isEnableActivityLifecycleBreadcrumbs,Long Identifier,The length of the field enableActivityLifecycleBreadcrumbs is 34.,181
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableActivityLifecycleBreadcrumbs,Long Identifier,The length of the parameter enableActivityLifecycleBreadcrumbs is 34.,185
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableActivityLifecycleBreadcrumbs,Long Identifier,The length of the field enableActivityLifecycleBreadcrumbs is 34.,185
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,isEnableUserInteractionBreadcrumbs,Long Identifier,The length of the field enableUserInteractionBreadcrumbs is 32.,213
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableUserInteractionBreadcrumbs,Long Identifier,The length of the parameter enableUserInteractionBreadcrumbs is 32.,217
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableUserInteractionBreadcrumbs,Long Identifier,The length of the field enableUserInteractionBreadcrumbs is 32.,217
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,enableAllAutoBreadcrumbs,Long Identifier,The length of the field enableActivityLifecycleBreadcrumbs is 34.,221
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,enableAllAutoBreadcrumbs,Long Identifier,The length of the field enableUserInteractionBreadcrumbs is 32.,221
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,isEnableAutoActivityLifecycleTracing,Long Identifier,The length of the field enableAutoActivityLifecycleTracing is 34.,271
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableAutoActivityLifecycleTracing,Long Identifier,The length of the parameter enableAutoActivityLifecycleTracing is 34.,275
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableAutoActivityLifecycleTracing,Long Identifier,The length of the field enableAutoActivityLifecycleTracing is 34.,275
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,isEnableActivityLifecycleTracingAutoFinish,Long Identifier,The length of the field enableActivityLifecycleTracingAutoFinish is 40.,279
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableActivityLifecycleTracingAutoFinish,Long Identifier,The length of the parameter enableActivityLifecycleTracingAutoFinish is 40.,283
+getsentry_raven-java,io.sentry.android.core,SentryAndroidOptions,setEnableActivityLifecycleTracingAutoFinish,Long Identifier,The length of the field enableActivityLifecycleTracingAutoFinish is 40.,283
+getsentry_raven-java,io.sentry.android.core,AppLifecycleIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,32
+getsentry_raven-java,io.sentry.android.core,AppLifecycleIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"enableSessionTracking enabled: %s"`this.options.isEnableAutoSessionTracking());" is 127.,32
+getsentry_raven-java,io.sentry.android.core,AppLifecycleIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"enableAppLifecycleBreadcrumbs enabled: %s"`this.options.isEnableAppLifecycleBreadcrumbs());" is 139.,32
+getsentry_raven-java,io.sentry.android.core,AppLifecycleIntegration,register,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.INFO`"androidx.lifecycle is not available` AppLifecycleIntegration won't be installed"`e);" is 126.,32
+getsentry_raven-java,io.sentry.android.core,AppLifecycleIntegration,addObserver,Long Statement,The length of the statement "watcher=new LifecycleWatcher(hub`this.options.getSessionTrackingIntervalMillis()`this.options.isEnableAutoSessionTracking()`this.options.isEnableAppLifecycleBreadcrumbs());" is 172.,81
+getsentry_raven-java,io.sentry.android.core,TempSensorBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,37
+getsentry_raven-java,io.sentry.android.core,TempSensorBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"enableSystemEventsBreadcrumbs enabled: %s"`this.options.isEnableSystemEventBreadcrumbs());" is 138.,37
+getsentry_raven-java,io.sentry.android.core,TempSensorBreadcrumbsIntegration,onSensorChanged,Complex Conditional,The conditional expression values == null || values.length == 0 || values[0] == 0f is complex.,91
+getsentry_raven-java,io.sentry.android.core,SentryAndroid,init,Long Identifier,The length of the field SENTRY_FRAGMENT_INTEGRATION_CLASS_NAME is 38.,71
+getsentry_raven-java,io.sentry.android.core,SentryAndroid,init,Long Identifier,The length of the field SENTRY_TIMBER_INTEGRATION_CLASS_NAME is 36.,71
+getsentry_raven-java,io.sentry.android.core,SentryAndroid,init,Long Statement,The length of the statement "final boolean isFragmentAvailable=(isFragmentUpstreamAvailable && classLoader.isClassAvailable(SENTRY_FRAGMENT_INTEGRATION_CLASS_NAME`options));" is 144.,71
+getsentry_raven-java,io.sentry.android.core,SentryAndroid,init,Long Statement,The length of the statement "final boolean isTimberAvailable=(isTimberUpstreamAvailable && classLoader.isClassAvailable(SENTRY_TIMBER_INTEGRATION_CLASS_NAME`options));" is 138.,71
+getsentry_raven-java,io.sentry.android.core,SentryAndroid,deduplicateIntegrations,Complex Method,Cyclomatic complexity of the method is 10,130
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,ActivityLifecycleIntegration,Long Identifier,The length of the field isAllActivityCallbacksAvailable is 31.,67
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,85
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"ActivityLifecycleIntegration enabled: %s"`this.options.isEnableActivityLifecycleBreadcrumbs());" is 143.,85
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,addBreadcrumb,Complex Conditional,The conditional expression options != null && hub != null && options.isEnableActivityLifecycleBreadcrumbs() is complex.,124
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,stopPreviousTransactions,Long Identifier,The length of the field activitiesWithOngoingTransactions is 33.,144
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,startTracing,Complex Conditional,The conditional expression performanceEnabled && !isRunningTransaction(activity) && hub != null is complex.,152
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,startTracing,Complex Conditional,The conditional expression !(firstActivityCreated || appStartTime == null || coldStart == null) is complex.,152
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,startTracing,Complex Conditional,The conditional expression !(firstActivityCreated || appStartTime == null || coldStart == null) is complex.,152
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,startTracing,Long Identifier,The length of the field activitiesWithOngoingTransactions is 33.,152
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,startTracing,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Unable to track activity frames as the Activity %s has been destroyed."`activityName);" is 131.,152
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,startTracing,Long Statement,The length of the statement "ITransaction transaction=hub.startTransaction(new TransactionContext(activityName`TransactionNameSource.COMPONENT`UI_LOAD_OP)`transactionOptions);" is 146.,152
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,applyScope,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Transaction '%s' won't be bound to the Scope since there's one already in there."`transaction.getName());" is 148.,213
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,isRunningTransaction,Long Identifier,The length of the field activitiesWithOngoingTransactions is 33.,242
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,stopTracing,Long Identifier,The length of the field activitiesWithOngoingTransactions is 33.,246
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,onActivityResumed,Long Identifier,The length of the field isAllActivityCallbacksAvailable is 31.,300
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,onActivityResumed,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"App Start won't be reported because Process wasn't of foregroundImportance.");" is 121.,300
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,onActivityPostResumed,Long Identifier,The length of the field isAllActivityCallbacksAvailable is 31.,333
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,onActivityDestroyed,Long Identifier,The length of the field activitiesWithOngoingTransactions is 33.,359
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,getActivitiesWithOngoingTransactions,Long Identifier,The length of the field activitiesWithOngoingTransactions is 33.,384
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,isForegroundImportance,Empty catch clause,The method has an empty catch block.,420
+getsentry_raven-java,io.sentry.android.core,ActivityLifecycleIntegration,isForegroundImportance,Empty catch clause,The method has an empty catch block.,420
+getsentry_raven-java,io.sentry.android.core,AnrIntegration,register,Long Statement,The length of the statement "anrWatchDog=new ANRWatchDog(options.getAnrTimeoutIntervalMillis()`options.isAnrReportInDebug()`error -> reportANR(hub`options.getLogger()`error)`options.getLogger()`context);" is 174.,48
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,shouldApplyScopeData,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Event was cached so not applying data relevant to the current app execution/version: %s"`event.getEventId());" is 152.,149
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,getDevice,Complex Method,Cyclomatic complexity of the method is 8,280
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,setDeviceIO,Complex Method,Cyclomatic complexity of the method is 9,336
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,setDeviceIO,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@17a87f28,336
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,getBatteryLevel,Magic Number,The method contains a magic number: 100.0f,464
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,getBatteryTemperature,Magic Number,The method contains a magic number: 10,503
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,isExternalStorageMounted,Long Statement,The length of the statement "return (Environment.MEDIA_MOUNTED.equals(storageState) || Environment.MEDIA_MOUNTED_READ_ONLY.equals(storageState)) && !Environment.isExternalStorageEmulated();" is 160.,685
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,setAppPackageInfo,Complex Conditional,The conditional expression requestedPermissions != null && requestedPermissions.length > 0 && requestedPermissionsFlags != null && requestedPermissionsFlags.length > 0 is complex.,748
+getsentry_raven-java,io.sentry.android.core,DefaultAndroidEventProcessor,setAppPackageInfo,Long Statement,The length of the statement "if (requestedPermissions != null && requestedPermissions.length > 0 && requestedPermissionsFlags != null && requestedPermissionsFlags.length > 0) {" is 147.,748
+getsentry_raven-java,io.sentry.android.core,AppComponentsBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,34
+getsentry_raven-java,io.sentry.android.core,AppComponentsBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"AppComponentsBreadcrumbsIntegration enabled: %s"`this.options.isEnableAppComponentBreadcrumbs());" is 145.,34
+getsentry_raven-java,io.sentry.android.core,AppComponentsBreadcrumbsIntegration,onConfigurationChanged,Long Statement,The length of the statement "final Device.DeviceOrientation deviceOrientation=DeviceOrientations.getOrientation(context.getResources().getConfiguration().orientation);" is 138.,82
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Complex Method,Cyclomatic complexity of the method is 16,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field SESSION_TRACKING_TIMEOUT_INTERVAL_MILLIS is 40.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field BREADCRUMBS_ACTIVITY_LIFECYCLE_ENABLE is 37.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field BREADCRUMBS_APP_LIFECYCLE_ENABLE is 32.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field BREADCRUMBS_SYSTEM_EVENTS_ENABLE is 32.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field BREADCRUMBS_APP_COMPONENTS_ENABLE is 33.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field BREADCRUMBS_USER_INTERACTION_ENABLE is 35.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field UNCAUGHT_EXCEPTION_HANDLER_ENABLE is 33.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Identifier,The length of the field TRACES_ACTIVITY_AUTO_FINISH_ENABLE is 34.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "final boolean enableSessionTracking=readBool(metadata`logger`SESSION_TRACKING_ENABLE`options.isEnableAutoSessionTracking());" is 124.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setAnrTimeoutIntervalMillis(readLong(metadata`logger`ANR_TIMEOUT_INTERVAL_MILLIS`options.getAnrTimeoutIntervalMillis()));" is 129.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setSessionTrackingIntervalMillis(readLong(metadata`logger`SESSION_TRACKING_TIMEOUT_INTERVAL_MILLIS`options.getSessionTrackingIntervalMillis()));" is 152.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableActivityLifecycleBreadcrumbs(readBool(metadata`logger`BREADCRUMBS_ACTIVITY_LIFECYCLE_ENABLE`options.isEnableActivityLifecycleBreadcrumbs()));" is 158.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableAppLifecycleBreadcrumbs(readBool(metadata`logger`BREADCRUMBS_APP_LIFECYCLE_ENABLE`options.isEnableAppComponentBreadcrumbs()));" is 143.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableSystemEventBreadcrumbs(readBool(metadata`logger`BREADCRUMBS_SYSTEM_EVENTS_ENABLE`options.isEnableSystemEventBreadcrumbs()));" is 141.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableAppComponentBreadcrumbs(readBool(metadata`logger`BREADCRUMBS_APP_COMPONENTS_ENABLE`options.isEnableAppComponentBreadcrumbs()));" is 144.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableUserInteractionBreadcrumbs(readBool(metadata`logger`BREADCRUMBS_USER_INTERACTION_ENABLE`options.isEnableUserInteractionBreadcrumbs()));" is 152.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableUncaughtExceptionHandler(readBool(metadata`logger`UNCAUGHT_EXCEPTION_HANDLER_ENABLE`options.isEnableUncaughtExceptionHandler()));" is 146.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setCollectAdditionalContext(readBool(metadata`logger`COLLECT_ADDITIONAL_CONTEXT`options.isCollectAdditionalContext()));" is 127.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableAutoActivityLifecycleTracing(readBool(metadata`logger`TRACES_ACTIVITY_ENABLE`options.isEnableAutoActivityLifecycleTracing()));" is 143.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableActivityLifecycleTracingAutoFinish(readBool(metadata`logger`TRACES_ACTIVITY_AUTO_FINISH_ENABLE`options.isEnableActivityLifecycleTracingAutoFinish()));" is 167.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,applyMetadata,Long Statement,The length of the statement "options.setEnableUserInteractionTracing(readBool(metadata`logger`TRACES_UI_ENABLE`options.isEnableUserInteractionTracing()));" is 125.,80
+getsentry_raven-java,io.sentry.android.core,ManifestMetadataReader,getMetadata,Long Statement,The length of the statement "final ApplicationInfo app=context.getPackageManager().getApplicationInfo(context.getPackageName()`PackageManager.GET_META_DATA);" is 128.,379
+getsentry_raven-java,io.sentry.android.core,SystemEventsBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,79
+getsentry_raven-java,io.sentry.android.core,SystemEventsBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"SystemEventsBreadcrumbsIntegration enabled: %s"`this.options.isEnableSystemEventBreadcrumbs());" is 143.,79
+getsentry_raven-java,io.sentry.android.core,SentryPerformanceProvider,query,Long Parameter List,The method has 5 parameters. ,73
+getsentry_raven-java,io.sentry.android.core,EnvelopeFileObserverIntegration,register,Long Statement,The length of the statement "final OutboxSender outboxSender=new OutboxSender(hub`options.getEnvelopeReader()`options.getSerializer()`logger`options.getFlushTimeoutMillis());" is 145.,24
+getsentry_raven-java,io.sentry.android.core,ScreenshotEventProcessor,process,Complex Conditional,The conditional expression isActivityValid(activity) && activity.getWindow() != null && activity.getWindow().getDecorView() != null && activity.getWindow().getDecorView().getRootView() != null is complex.,54
+getsentry_raven-java,io.sentry.android.core,ScreenshotEventProcessor,process,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"attachScreenshot is disabled` ScreenshotEventProcessor isn't installed.");" is 122.,54
+getsentry_raven-java,io.sentry.android.core,ScreenshotEventProcessor,process,Long Statement,The length of the statement "if (isActivityValid(activity) && activity.getWindow() != null && activity.getWindow().getDecorView() != null && activity.getWindow().getDecorView().getRootView() != null) {" is 172.,54
+getsentry_raven-java,io.sentry.android.core,ActivityFramesTracker,setMetrics,Complex Conditional,The conditional expression totalFrames == 0 && slowFrames == 0 && frozenFrames == 0 is complex.,58
+getsentry_raven-java,io.sentry.android.core,ActivityFramesTracker,setMetrics,Complex Method,Cyclomatic complexity of the method is 8,58
+getsentry_raven-java,io.sentry.android.core,ActivityFramesTracker,setMetrics,Empty catch clause,The method has an empty catch block.,58
+getsentry_raven-java,io.sentry.android.core,ActivityFramesTracker,setMetrics,Magic Number,The method contains a magic number: 700,58
+getsentry_raven-java,io.sentry.android.core,ActivityFramesTracker,setMetrics,Magic Number,The method contains a magic number: 16,58
+getsentry_raven-java,io.sentry.android.core,PhoneStateBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,31
+getsentry_raven-java,io.sentry.android.core,PhoneStateBreadcrumbsIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"enableSystemEventBreadcrumbs enabled: %s"`this.options.isEnableSystemEventBreadcrumbs());" is 137.,31
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,init,Long Parameter List,The method has 5 parameters. ,50
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,init,Long Parameter List,The method has 6 parameters. ,74
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,init,Long Parameter List,The method has 7 parameters. ,101
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,init,Long Statement,The length of the statement "installDefaultIntegrations(context`options`buildInfoProvider`loadClass`activityFramesTracker`isFragmentAvailable`isTimberAvailable);" is 132.,101
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,installDefaultIntegrations,Long Parameter List,The method has 7 parameters. ,158
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,installDefaultIntegrations,Long Statement,The length of the statement "options.addIntegration(new SendCachedEnvelopeFireAndForgetIntegration(new SendFireAndForgetEnvelopeSender(() -> options.getCacheDirPath())));" is 141.,158
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,installDefaultIntegrations,Long Statement,The length of the statement "final Class<?> sentryNdkClass=isNdkAvailable(buildInfoProvider) ? loadClass.loadClass(SENTRY_NDK_CLASS_NAME`options.getLogger()) : null;" is 136.,158
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,installDefaultIntegrations,Long Statement,The length of the statement "options.addIntegration(new SendCachedEnvelopeFireAndForgetIntegration(new SendFireAndForgetOutboxSender(() -> options.getOutboxPath())));" is 137.,158
+getsentry_raven-java,io.sentry.android.core,AndroidOptionsInitializer,installDefaultIntegrations,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"ActivityLifecycle` FragmentLifecycle and UserInteraction Integrations need an Application class to be installed.");" is 160.,158
+getsentry_raven-java,io.sentry.android.core,LifecycleWatcher,LifecycleWatcher,Long Parameter List,The method has 5 parameters. ,47
+getsentry_raven-java,io.sentry.android.core,SentryInitProvider,query,Long Parameter List,The method has 5 parameters. ,47
+getsentry_raven-java,io.sentry.android.core,NdkIntegration,register,Long Statement,The length of the statement "this.options=Objects.requireNonNull((options instanceof SentryAndroidOptions) ? (SentryAndroidOptions)options : null`"SentryAndroidOptions is required");" is 153.,28
+getsentry_raven-java,io.sentry.android.core,NdkIntegration,close,Complex Conditional,The conditional expression options != null && options.isEnableNdk() && sentryNdkClass != null is complex.,81
+getsentry_raven-java,io.sentry.android.core,PerformanceAndroidEventProcessor,process,Complex Conditional,The conditional expression eventId != null && spanContext != null && spanContext.getOperation().contentEquals(UI_LOAD_OP) is complex.,53
+getsentry_raven-java,io.sentry.android.core.internal.util,CpuInfoUtils,readMaxFrequencies,Magic Number,The method contains a magic number: 1000,32
+getsentry_raven-java,io.sentry.android.core.internal.util,DeviceOrientations,getOrientation,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7e5ecccb,12
+getsentry_raven-java,io.sentry.android.core.internal.util,RootChecker,RootChecker,Long Statement,The length of the statement "this(context`buildInfoProvider`logger`new String[]{"/system/app/Superuser.apk"`"/sbin/su"`"/system/bin/su"`"/system/xbin/su"`"/data/local/xbin/su"`"/data/local/bin/su"`"/system/sd/xbin/su"`"/system/bin/failsafe/su"`"/data/local/su"`"/su/bin/su"`"/su/bin"`"/system/xbin/daemonsu"}`new String[]{"com.devadvance.rootcloak"`"com.devadvance.rootcloakplus"`"com.koushikdutta.superuser"`"com.thirdparty.superuser"`"eu.chainfire.supersu"`"com.noshufou.android.su"}`Runtime.getRuntime());" is 479.,34
+getsentry_raven-java,io.sentry.android.core.internal.util,RootChecker,RootChecker,Long Parameter List,The method has 6 parameters. ,67
+getsentry_raven-java,io.sentry.android.core.internal.util,RootChecker,checkRootPackages,Empty catch clause,The method has an empty catch block.,153
+getsentry_raven-java,io.sentry.android.core.internal.util,ConnectivityChecker,getConnectionType,Complex Method,Cyclomatic complexity of the method is 16,74
+getsentry_raven-java,io.sentry.android.core.internal.util,ConnectivityChecker,getConnectionType,Long Statement,The length of the statement "@SuppressWarnings("deprecation") final android.net.NetworkInfo activeNetworkInfo=connectivityManager.getActiveNetworkInfo();" is 124.,74
+getsentry_raven-java,io.sentry.android.core.internal.util,ConnectivityChecker,getConnectivityManager,Long Statement,The length of the statement "final ConnectivityManager connectivityManager=(ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);" is 122.,174
+getsentry_raven-java,io.sentry.android.core.internal.gestures,ViewUtils,findTarget,Magic Number,The method contains a magic number: 2,17
+getsentry_raven-java,io.sentry.android.core.internal.gestures,ViewUtils,isViewScrollable,Long Statement,The length of the statement "return (isJetpackScrollingView(view`isAndroidXAvailable) || AbsListView.class.isAssignableFrom(view.getClass()) || ScrollView.class.isAssignableFrom(view.getClass())) && view.getVisibility() == View.VISIBLE;" is 207.,82
+getsentry_raven-java,io.sentry.android.core.internal.gestures,ViewUtils,getResourceIdWithFallback,Magic Number,The method contains a magic number: 16,97
+getsentry_raven-java,io.sentry.android.core.internal.gestures,SentryGestureListener,onSingleTapUp,Long Statement,The length of the statement "@SuppressWarnings("Convert2MethodRef") final @Nullable View target=ViewUtils.findTarget(decorView`motionEvent.getX()`motionEvent.getY()`view -> ViewUtils.isViewTappable(view));" is 176.,93
+getsentry_raven-java,io.sentry.android.core.internal.gestures,SentryGestureListener,addBreadcrumb,Long Statement,The length of the statement "hub.addBreadcrumb(Breadcrumb.userInteraction(eventType`ViewUtils.getResourceIdWithFallback(target)`className`additionalData)`hint);" is 131.,179
+getsentry_raven-java,io.sentry.android.core.internal.gestures,SentryGestureListener,startTracing,Complex Conditional,The conditional expression target.equals(view) && eventType.equals(activeEventType) && !activeTransaction.isFinished() is complex.,202
+getsentry_raven-java,io.sentry.android.core.internal.gestures,SentryGestureListener,startTracing,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"The view with id: " + viewId + " already has an ongoing transaction assigned. Rescheduling finish");" is 143.,202
+getsentry_raven-java,io.sentry.android.core.internal.gestures,SentryGestureListener,startTracing,Long Statement,The length of the statement "final ITransaction transaction=hub.startTransaction(new TransactionContext(name`TransactionNameSource.COMPONENT`op)`transactionOptions);" is 136.,202
+getsentry_raven-java,io.sentry.android.core.internal.gestures,SentryGestureListener,applyScope,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Transaction '%s' won't be bound to the Scope since there's one already in there."`transaction.getName());" is 148.,300
+getsentry_raven-java,io.sentry.android.core.internal.gestures,SentryWindowCallback,SentryWindowCallback,Long Parameter List,The method has 5 parameters. ,36
+getsentry_raven-java,io.sentry.log4j2,SentryAppender,SentryAppender,Long Parameter List,The method has 9 parameters. ,51
+getsentry_raven-java,io.sentry.log4j2,SentryAppender,createAppender,Long Parameter List,The method has 7 parameters. ,75
+getsentry_raven-java,io.sentry.log4j2,SentryAppender,createAppender,Long Statement,The length of the statement "return new SentryAppender(name`filter`dsn`minimumBreadcrumbLevel`minimumEventLevel`debug`null`HubAdapter.getInstance()`contextTags != null ? contextTags.split("`") : null);" is 172.,75
+getsentry_raven-java,io.sentry.log4j2,SentryAppender,createEvent,Complex Method,Cyclomatic complexity of the method is 9,155
+getsentry_raven-java,io.sentry.log4j2,SentryAppender,createEvent,Long Statement,The length of the statement "final Map<String`String> contextData=CollectionUtils.filterMapEntries(loggingEvent.getContextData().toMap()`entry -> entry.getValue() != null);" is 143.,155
+getsentry_raven-java,io.sentry.logback,SentryAppender,createEvent,Complex Method,Cyclomatic complexity of the method is 9,82
+getsentry_raven-java,io.sentry.logback,SentryAppender,createEvent,Long Statement,The length of the statement "final Map<String`String> mdcProperties=CollectionUtils.filterMapEntries(loggingEvent.getMDCPropertyMap()`entry -> entry.getValue() != null);" is 140.,82
+getsentry_raven-java,(default package),MavenWrapperDownloader,main,Empty catch clause,The method has an empty catch block.,47
+getsentry_raven-java,(default package),MavenWrapperDownloader,main,Long Identifier,The length of the identifier mavenWrapperPropertyFileInputStream is 35.,47
+getsentry_raven-java,io.sentry.jul,SentryHandler,createEvent,Complex Method,Cyclomatic complexity of the method is 10,163
+getsentry_raven-java,io.sentry.jul,SentryHandler,createEvent,Empty catch clause,The method has an empty catch block.,163
+getsentry_raven-java,io.sentry.samples.console,Main,main,Magic Number,The method contains a magic number: 5000,18
+getsentry_raven-java,io.sentry.samples.console,Main,main,Magic Number,The method contains a magic number: 0.1,18
+getsentry_raven-java,io.sentry.samples.console,Main,main,Magic Number,The method contains a magic number: 0.5,18
+getsentry_raven-java,io.sentry.samples.console,Main,main,Magic Number,The method contains a magic number: 10,18
+getsentry_raven-java,io.sentry.samples.console,Main,main,Magic Number,The method contains a magic number: 100,18
+getsentry_raven-java,io.sentry.samples.console,Main,main,Magic Number,The method contains a magic number: 300,18
+getsentry_raven-java,io.sentry.samples.openfeign,Main,main,Magic Number,The method contains a magic number: 2L,15
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Long Method,The method has 116 lines of code.,31
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Long Statement,The length of the statement "try (final InputStream inputStream=getApplicationContext().getResources().openRawResource(R.raw.sentry);FileOutputStream outputStream=new FileOutputStream(imageFile)){" is 167.,31
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Long Statement,The length of the statement "try (final FileOutputStream fileOutputStream=new FileOutputStream(file);final OutputStreamWriter outputStreamWriter=new OutputStreamWriter(fileOutputStream);final Writer writer=new BufferedWriter(outputStreamWriter)){" is 217.,31
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Long Statement,The length of the statement "binding.captureException.setOnClickListener(view -> Sentry.captureException(new Exception(new Exception(new Exception("Some exception.")))));" is 141.,31
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Long Statement,The length of the statement "binding.openSampleFragment.setOnClickListener(view -> SampleFragment.newInstance().show(getSupportFragmentManager()`null));" is 123.,31
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Magic Number,The method contains a magic number: 1024,31
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Magic Number,The method contains a magic number: 1024,31
+getsentry_raven-java,io.sentry.samples.android,MainActivity,onCreate,Magic Number,The method contains a magic number: 10000,31
+getsentry_raven-java,io.sentry.samples.spring.web,PersonService,create,Empty catch clause,The method has an empty catch block.,30
+getsentry_raven-java,io.sentry.samples.spring.web,PersonService,create,Magic Number,The method contains a magic number: 100,30
+getsentry_raven-java,io.sentry.samples.spring.web,PersonController,person,Magic Number,The method contains a magic number: 10L,23
+getsentry_raven-java,io.sentry.samples.spring,SentryConfig,tracesSamplerCallback,Magic Number,The method contains a magic number: 0.5d,20
+getsentry_raven-java,io.sentry.samples.spring,SecurityConfiguration,userDetailsService,Long Statement,The length of the statement "final UserDetails user=User.builder().passwordEncoder(encoder::encode).username("user").password("password").roles("USER").build();" is 131.,27
+getsentry_raven-java,io.sentry.samples.jul,Main,main,Magic Number,The method contains a magic number: 445,13
+getsentry_raven-java,io.sentry.samples.logback,Main,main,Magic Number,The method contains a magic number: 445,11
+getsentry_raven-java,io.sentry.samples.log4j2,Main,main,Magic Number,The method contains a magic number: 445,11
+getsentry_raven-java,io.sentry.samples.netflix.dgs.graphql.types,Show,equals,Long Statement,The length of the statement "return java.util.Objects.equals(id`that.id) && java.util.Objects.equals(title`that.title) && java.util.Objects.equals(releaseYear`that.releaseYear);" is 148.,57
+getsentry_raven-java,io.sentry.samples.netflix.dgs,ShowsDatafetcher,shows,Long Statement,The length of the statement "return Arrays.asList(Show.newBuilder().id(1).title("Stranger Things").releaseYear(2015).build()`Show.newBuilder().id(2).title("Breaking Bad").releaseYear(2013).build());" is 169.,14
+getsentry_raven-java,io.sentry.samples.netflix.dgs,ShowsDatafetcher,shows,Magic Number,The method contains a magic number: 500,14
+getsentry_raven-java,io.sentry.samples.netflix.dgs,ShowsDatafetcher,shows,Magic Number,The method contains a magic number: 2015,14
+getsentry_raven-java,io.sentry.samples.netflix.dgs,ShowsDatafetcher,shows,Magic Number,The method contains a magic number: 2,14
+getsentry_raven-java,io.sentry.samples.netflix.dgs,ShowsDatafetcher,shows,Magic Number,The method contains a magic number: 2013,14
+getsentry_raven-java,io.sentry.samples.netflix.dgs,ShowsDatafetcher,newShows,Magic Number,The method contains a magic number: 500,22
+getsentry_raven-java,io.sentry.samples.spring.boot,PersonService,create,Long Statement,The length of the statement "return Mono.delay(Duration.ofMillis(100)).publishOn(Schedulers.boundedElastic()).doOnNext(__ -> Sentry.captureMessage("Creating person")).map(__ -> person);" is 156.,12
+getsentry_raven-java,io.sentry.samples.spring.boot,PersonService,create,Magic Number,The method contains a magic number: 100,12
+getsentry_raven-java,io.sentry.samples.spring.boot,TodoController,todoWebClient,Long Statement,The length of the statement "return webClient.get().uri("https://jsonplaceholder.typicode.com/todos/{id}"`id).retrieve().bodyToMono(Todo.class).block();" is 123.,25
+getsentry_raven-java,io.sentry.samples.spring.boot,CustomJob,execute,Magic Number,The method contains a magic number: 3,19
+getsentry_raven-java,io.sentry.samples.spring.boot,CustomJob,execute,Magic Number,The method contains a magic number: 1000L,19
+getsentry_raven-java,io.sentry.samples.spring.boot,CustomJob,execute,Magic Number,The method contains a magic number: 2000L,19
+getsentry_raven-java,io.sentry.samples.spring.boot,PersonService,create,Long Statement,The length of the statement "jdbcTemplate.update("insert into person (firstName` lastName) values (?` ?)"`person.getFirstName()`person.getLastName());" is 121.,24
+getsentry_raven-java,io.sentry.samples.spring.boot,SecurityConfiguration,userDetailsService,Long Statement,The length of the statement "final UserDetails user=User.builder().passwordEncoder(encoder::encode).username("user").password("password").roles("USER").build();" is 131.,25
+getsentry_raven-java,io.sentry.samples.servlet,SentryInitializer,contextInitialized,Magic Number,The method contains a magic number: 5000,12
+getsentry_raven-java,io.sentry.samples.servlet,SentryInitializer,contextDestroyed,Magic Number,The method contains a magic number: 5000,61
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,ApacheHttpClientTransport,Long Parameter List,The method has 5 parameters. ,52
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,send,Complex Method,Cyclomatic complexity of the method is 12,67
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,send,Long Statement,The length of the statement "final SentryEnvelope envelopeWithClientReport=options.getClientReportRecorder().attachReportToEnvelope(filteredEnvelope);" is 121.,67
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,send,Long Statement,The length of the statement "try (final ByteArrayOutputStream outputStream=new ByteArrayOutputStream();final GZIPOutputStream gzip=new GZIPOutputStream(outputStream)){" is 138.,67
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,send,Long Statement,The length of the statement "rateLimiter.updateRetryAfterLimits(rateLimits != null ? rateLimits.getValue() : null`retryAfter != null ? retryAfter.getValue() : null`response.getCode());" is 155.,67
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,send,Magic Number,The method contains a magic number: 200,67
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,send,Magic Number,The method contains a magic number: 400,67
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,send,Magic Number,The method contains a magic number: 429,67
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,completed,Long Statement,The length of the statement "rateLimiter.updateRetryAfterLimits(rateLimits != null ? rateLimits.getValue() : null`retryAfter != null ? retryAfter.getValue() : null`response.getCode());" is 155.,105
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,completed,Magic Number,The method contains a magic number: 200,105
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,completed,Magic Number,The method contains a magic number: 400,105
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransport,completed,Magic Number,The method contains a magic number: 429,105
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransportFactory,create,Long Statement,The length of the statement "final PoolingAsyncClientConnectionManager connectionManager=PoolingAsyncClientConnectionManagerBuilder.create().setPoolConcurrencyPolicy(PoolConcurrencyPolicy.LAX).setConnectionTimeToLive(connectionTimeToLive).setMaxConnTotal(options.getMaxQueueSize()).setMaxConnPerRoute(options.getMaxQueueSize()).build();" is 307.,34
+getsentry_raven-java,io.sentry.transport.apache,ApacheHttpClientTransportFactory,create,Long Statement,The length of the statement "final CloseableHttpAsyncClient httpclient=HttpAsyncClients.custom().setKeepAliveStrategy(DefaultConnectionKeepAliveStrategy.INSTANCE).setConnectionManager(connectionManager).setConnectionReuseStrategy(DefaultConnectionReuseStrategy.INSTANCE).setDefaultRequestConfig(RequestConfig.custom().setConnectTimeout(options.getConnectionTimeoutMillis()`TimeUnit.MILLISECONDS).setConnectionRequestTimeout(options.getConnectionTimeoutMillis()`TimeUnit.MILLISECONDS).setResponseTimeout(options.getReadTimeoutMillis()`TimeUnit.MILLISECONDS).build()).build();" is 545.,34
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,format,Magic Number,The method contains a magic number: 60,68
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,format,Magic Number,The method contains a magic number: 1000,68
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,format,Magic Number,The method contains a magic number: 60,68
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,format,Magic Number,The method contains a magic number: 60,68
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,format,Magic Number,The method contains a magic number: 1000,68
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,format,Magic Number,The method contains a magic number: 60,68
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Complex Conditional,The conditional expression c != 'Z' && c != '+' && c != '-' is complex.,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Complex Method,Cyclomatic complexity of the method is 20,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 4,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 2,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 2,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 2,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 2,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 2,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 59,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 63,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 59,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 3,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 2,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 10,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 100,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Magic Number,The method contains a magic number: 5,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parse,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4fd1932e,123
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parseInt,Complex Conditional,The conditional expression beginIndex < 0 || endIndex > value.length() || beginIndex > endIndex is complex.,300
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parseInt,Magic Number,The method contains a magic number: 10,300
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parseInt,Magic Number,The method contains a magic number: 10,300
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601Utils,parseInt,Magic Number,The method contains a magic number: 10,300
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateFormatString,Magic Number,The method contains a magic number: 2018,35
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateFormatString,Magic Number,The method contains a magic number: 25,35
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateFormatWithMilliseconds,Magic Number,The method contains a magic number: 1530209176870L,47
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateFormatWithTimezone,Magic Number,The method contains a magic number: 1530209176870L,56
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseWithDefaultTimezone,Magic Number,The method contains a magic number: 2018,65
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseWithDefaultTimezone,Magic Number,The method contains a magic number: 25,65
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseWithTimezone,Magic Number,The method contains a magic number: 2018,73
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseWithTimezone,Magic Number,The method contains a magic number: 25,73
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseWithTimezone,Magic Number,The method contains a magic number: 3,73
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseSpecialTimezone,Magic Number,The method contains a magic number: 2018,83
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseSpecialTimezone,Magic Number,The method contains a magic number: 25,83
+getsentry_raven-java,io.sentry.vendor.gson.internal.bind.util,ISO8601UtilsTest,testDateParseSpecialTimezone,Magic Number,The method contains a magic number: 3,83
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peek,Complex Method,Cyclomatic complexity of the method is 19,426
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1b54f4c3,426
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,doPeek,Complex Conditional,The conditional expression (pos < limit || fillBuffer(1)) && buffer[pos] == '>' is complex.,468
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,doPeek,Complex Method,Cyclomatic complexity of the method is 37,468
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,doPeek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@70352c48,468
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,doPeek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@78058e11,468
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,doPeek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3b8e2adc,468
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,doPeek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7402382,468
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,doPeek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5ece084e,468
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peekKeyword,Complex Conditional,The conditional expression (pos + length < limit || fillBuffer(length + 1)) && isLiteral(buffer[pos + length]) is complex.,604
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peekKeyword,Complex Method,Cyclomatic complexity of the method is 8,604
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peekNumber,Complex Conditional,The conditional expression last == NUMBER_CHAR_DIGIT && fitsInLong && (value != Long.MIN_VALUE || negative) && (value != 0 || false == negative) is complex.,648
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peekNumber,Complex Conditional,The conditional expression last == NUMBER_CHAR_DIGIT || last == NUMBER_CHAR_FRACTION_DIGIT || last == NUMBER_CHAR_EXP_DIGIT is complex.,648
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peekNumber,Complex Method,Cyclomatic complexity of the method is 24,648
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peekNumber,Magic Number,The method contains a magic number: 10,648
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,peekNumber,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@aef7080,648
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,isLiteral,Complex Method,Cyclomatic complexity of the method is 17,751
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,isLiteral,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@40fd63cb,751
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextString,Complex Method,Cyclomatic complexity of the method is 8,803
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextDouble,Complex Conditional,The conditional expression !lenient && (Double.isNaN(result) || Double.isInfinite(result)) is complex.,883
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextDouble,Complex Method,Cyclomatic complexity of the method is 8,883
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextLong,Complex Conditional,The conditional expression p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED is complex.,927
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextLong,Empty catch clause,The method has an empty catch block.,927
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextQuotedValue,Complex Method,Cyclomatic complexity of the method is 10,982
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextQuotedValue,Magic Number,The method contains a magic number: 2,982
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextQuotedValue,Magic Number,The method contains a magic number: 16,982
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextQuotedValue,Magic Number,The method contains a magic number: 2,982
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextQuotedValue,Magic Number,The method contains a magic number: 16,982
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextUnquotedValue,Complex Method,Cyclomatic complexity of the method is 23,1043
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextUnquotedValue,Magic Number,The method contains a magic number: 16,1043
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,skipUnquotedValue,Complex Method,Cyclomatic complexity of the method is 19,1129
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextInt,Complex Conditional,The conditional expression p == PEEKED_SINGLE_QUOTED || p == PEEKED_DOUBLE_QUOTED || p == PEEKED_UNQUOTED is complex.,1159
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextInt,Complex Method,Cyclomatic complexity of the method is 8,1159
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextInt,Empty catch clause,The method has an empty catch block.,1159
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,skipValue,Complex Method,Cyclomatic complexity of the method is 11,1229
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,push,Magic Number,The method contains a magic number: 2,1270
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,fillBuffer,Complex Conditional,The conditional expression lineNumber == 0 && lineStart == 0 && limit > 0 && buffer[0] == '\ufeff' is complex.,1280
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextNonWhitespace,Complex Conditional,The conditional expression c == ' ' || c == '\r' || c == '\t' is complex.,1314
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextNonWhitespace,Complex Method,Cyclomatic complexity of the method is 14,1314
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextNonWhitespace,Magic Number,The method contains a magic number: 2,1314
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextNonWhitespace,Magic Number,The method contains a magic number: 2,1314
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,nextNonWhitespace,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@46271465,1314
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,getPath,Complex Method,Cyclomatic complexity of the method is 11,1465
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Complex Method,Cyclomatic complexity of the method is 18,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 4,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 4,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 4,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 4,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 10,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 10,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 4,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Magic Number,The method contains a magic number: 4,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,readEscapeCharacter,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6885e897,1496
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,consumeNonExecutePrefix,Complex Conditional,The conditional expression buf[p] != ')' || buf[p + 1] != ']' || buf[p + 2] != '}' || buf[p + 3] != '\'' || buf[p + 4] != '\n' is complex.,1573
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,consumeNonExecutePrefix,Magic Number,The method contains a magic number: 5,1573
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,consumeNonExecutePrefix,Magic Number,The method contains a magic number: 5,1573
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,consumeNonExecutePrefix,Magic Number,The method contains a magic number: 2,1573
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,consumeNonExecutePrefix,Magic Number,The method contains a magic number: 3,1573
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,consumeNonExecutePrefix,Magic Number,The method contains a magic number: 4,1573
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReader,consumeNonExecutePrefix,Magic Number,The method contains a magic number: 5,1573
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriter,push,Magic Number,The method contains a magic number: 2,362
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriter,value,Complex Conditional,The conditional expression !lenient && (Double.isNaN(value) || Double.isInfinite(value)) is complex.,493
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriter,value,Complex Conditional,The conditional expression !lenient && (string.equals("-Infinity") || string.equals("Infinity") || string.equals("NaN")) is complex.,522
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriter,close,Complex Conditional,The conditional expression size > 1 || size == 1 && stack[size - 1] != NONEMPTY_DOCUMENT is complex.,556
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriter,string,Complex Method,Cyclomatic complexity of the method is 8,571
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriter,string,Magic Number,The method contains a magic number: 128,571
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriter,beforeValue,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@199ffe77,629
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testSkipArray,Magic Number,The method contains a magic number: 123,80
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testSkipArrayAfterPeek,Magic Number,The method contains a magic number: 123,92
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testInvalidJsonInput,Empty catch clause,The method has an empty catch block.,182
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNulls,Empty catch clause,The method has an empty catch block.,197
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testEmptyString,Empty catch clause,The method has an empty catch block.,206
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testEmptyString,Empty catch clause,The method has an empty catch block.,206
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testCharacterUnescaping,Long Statement,The length of the statement "String json="[\"a\"`" + "\"a\\\"\"`" + "\"\\\"\"`"+ "\":\"`"+ "\"`\"`"+ "\"\\b\"`"+ "\"\\f\"`"+ "\"\\n\"`"+ "\"\\r\"`"+ "\"\\t\"`"+ "\" \"`"+ "\"\\\\\"`"+ "\"{\"`"+ "\"}\"`"+ "\"[\"`"+ "\"]\"`"+ "\"\\u0000\"`"+ "\"\\u0019\"`"+ "\"\\u20AC\""+ "]";" is 246.,219
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testUnescapingInvalidCharacters,Empty catch clause,The method has an empty catch block.,265
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testUnescapingTruncatedCharacters,Empty catch clause,The method has an empty catch block.,276
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testUnescapingTruncatedSequence,Empty catch clause,The method has an empty catch block.,287
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDoubles,Long Statement,The length of the statement "String json="[-0.0`" + "1.0`" + "1.7976931348623157E308`"+ "4.9E-324`"+ "0.0`"+ "-0.5`"+ "2.2250738585072014E-308`"+ "3.141592653589793`"+ "2.718281828459045]";" is 160.,306
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDoubles,Magic Number,The method contains a magic number: 1.7976931348623157E308,306
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDoubles,Magic Number,The method contains a magic number: 4.9E-324,306
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDoubles,Magic Number,The method contains a magic number: 0.5,306
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDoubles,Magic Number,The method contains a magic number: 2.2250738585072014E-308,306
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDoubles,Magic Number,The method contains a magic number: 3.141592653589793,306
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDoubles,Magic Number,The method contains a magic number: 2.718281828459045,306
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNonFiniteDoubles,Empty catch clause,The method has an empty catch block.,331
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictQuotedNonFiniteDoubles,Empty catch clause,The method has an empty catch block.,342
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNonFiniteDoublesWithSkipValue,Empty catch clause,The method has an empty catch block.,375
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testLongs,Empty catch clause,The method has an empty catch block.,386
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testLongs,Empty catch clause,The method has an empty catch block.,386
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testNumberWithOctalPrefix,Empty catch clause,The method has an empty catch block.,419
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testNumberWithOctalPrefix,Empty catch clause,The method has an empty catch block.,419
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testNumberWithOctalPrefix,Empty catch clause,The method has an empty catch block.,419
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testNumberWithOctalPrefix,Empty catch clause,The method has an empty catch block.,419
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPeekingUnquotedStringsPrefixedWithBooleans,Empty catch clause,The method has an empty catch block.,457
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPeekingUnquotedStringsPrefixedWithIntegers,Empty catch clause,The method has an empty catch block.,517
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPeekLongMinValue,Magic Number,The method contains a magic number: -9223372036854775808L,530
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPeekLongMaxValue,Magic Number,The method contains a magic number: 9223372036854775807L,538
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testLongLargerThanMaxLongThatWrapsAround,Empty catch clause,The method has an empty catch block.,546
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testLongLargerThanMinLongThatWrapsAround,Empty catch clause,The method has an empty catch block.,558
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testPeekLargerThanLongMaxValue,Empty catch clause,The method has an empty catch block.,582
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testPeekLargerThanLongMinValue,Empty catch clause,The method has an empty catch block.,598
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testPeekLargerThanLongMinValue,Magic Number,The method contains a magic number: 9223372036854775809d,598
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,disabled_testHighPrecisionLong,Magic Number,The method contains a magic number: 9223372036854775806L,615
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPeekMuchLargerThanLongMinValue,Empty catch clause,The method has an empty catch block.,627
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPeekMuchLargerThanLongMinValue,Magic Number,The method contains a magic number: 92233720368547758080d,627
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testQuotedNumberWithEscape,Magic Number,The method contains a magic number: 1234,640
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testMissingValue,Empty catch clause,The method has an empty catch block.,661
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPrematureEndOfInput,Empty catch clause,The method has an empty catch block.,672
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPrematurelyClosed,Empty catch clause,The method has an empty catch block.,684
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPrematurelyClosed,Empty catch clause,The method has an empty catch block.,684
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testPrematurelyClosed,Empty catch clause,The method has an empty catch block.,684
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNextFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,714
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testIntegerMismatchFailuresDoNotAdvance,Empty catch clause,The method has an empty catch block.,774
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testIntegerMismatchFailuresDoNotAdvance,Magic Number,The method contains a magic number: 1.5d,774
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStringNullIsNotNull,Empty catch clause,The method has an empty catch block.,786
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testNullLiteralIsNotAString,Empty catch clause,The method has an empty catch block.,796
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNameValueSeparator,Empty catch clause,The method has an empty catch block.,806
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNameValueSeparator,Empty catch clause,The method has an empty catch block.,806
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNameValueSeparatorWithSkipValue,Empty catch clause,The method has an empty catch block.,840
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNameValueSeparatorWithSkipValue,Empty catch clause,The method has an empty catch block.,840
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictComments,Empty catch clause,The method has an empty catch block.,879
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictComments,Empty catch clause,The method has an empty catch block.,879
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictComments,Empty catch clause,The method has an empty catch block.,879
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictCommentsWithSkipValue,Empty catch clause,The method has an empty catch block.,922
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictCommentsWithSkipValue,Empty catch clause,The method has an empty catch block.,922
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictCommentsWithSkipValue,Empty catch clause,The method has an empty catch block.,922
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnquotedNames,Empty catch clause,The method has an empty catch block.,948
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnquotedNamesWithSkipValue,Empty catch clause,The method has an empty catch block.,965
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSingleQuotedNames,Empty catch clause,The method has an empty catch block.,975
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSingleQuotedNamesWithSkipValue,Empty catch clause,The method has an empty catch block.,992
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnquotedStrings,Empty catch clause,The method has an empty catch block.,1002
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnquotedStringsWithSkipValue,Empty catch clause,The method has an empty catch block.,1012
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSingleQuotedStrings,Empty catch clause,The method has an empty catch block.,1029
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSingleQuotedStringsWithSkipValue,Empty catch clause,The method has an empty catch block.,1046
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSemicolonDelimitedArray,Empty catch clause,The method has an empty catch block.,1056
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSemicolonDelimitedArrayWithSkipValue,Empty catch clause,The method has an empty catch block.,1075
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSemicolonDelimitedNameValuePair,Empty catch clause,The method has an empty catch block.,1086
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictSemicolonDelimitedNameValuePairWithSkipValue,Empty catch clause,The method has an empty catch block.,1107
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparators,Empty catch clause,The method has an empty catch block.,1119
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparators,Empty catch clause,The method has an empty catch block.,1119
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparators,Empty catch clause,The method has an empty catch block.,1119
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparators,Empty catch clause,The method has an empty catch block.,1119
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparatorsWithSkipValue,Empty catch clause,The method has an empty catch block.,1186
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparatorsWithSkipValue,Empty catch clause,The method has an empty catch block.,1186
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparatorsWithSkipValue,Empty catch clause,The method has an empty catch block.,1186
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictUnnecessaryArraySeparatorsWithSkipValue,Empty catch clause,The method has an empty catch block.,1186
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictMultipleTopLevelValues,Empty catch clause,The method has an empty catch block.,1222
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictMultipleTopLevelValuesWithSkipValue,Empty catch clause,The method has an empty catch block.,1244
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testTopLevelValueTypes,Magic Number,The method contains a magic number: 123,1255
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testTopLevelValueTypes,Magic Number,The method contains a magic number: 123.4,1255
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNonExecutePrefix,Empty catch clause,The method has an empty catch block.,1288
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictNonExecutePrefixWithSkipValue,Empty catch clause,The method has an empty catch block.,1297
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testLenientPartialNonExecutePrefix,Empty catch clause,The method has an empty catch block.,1322
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testBomForbiddenAsOtherCharacterInDocument,Empty catch clause,The method has an empty catch block.,1339
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testFailWithPositionGreaterThanBufferSize,Magic Number,The method contains a magic number: 8192,1354
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictVeryLongNumber,Empty catch clause,The method has an empty catch block.,1436
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictVeryLongNumber,Magic Number,The method contains a magic number: 8192,1436
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testLenientVeryLongNumber,Magic Number,The method contains a magic number: 8192,1446
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongUnquotedLiteral,Magic Number,The method contains a magic number: 8192,1456
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDeeplyNestedArrays,Long Statement,The length of the statement "JsonReader reader=new JsonReader(reader("[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]"));" is 125.,1465
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDeeplyNestedArrays,Long Statement,The length of the statement "assertEquals("$[0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0][0]" + "[0][0][0][0][0][0][0][0][0][0][0][0][0][0]"`reader.getPath());" is 160.,1465
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDeeplyNestedArrays,Magic Number,The method contains a magic number: 40,1465
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDeeplyNestedArrays,Magic Number,The method contains a magic number: 40,1465
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDeeplyNestedObjects,Magic Number,The method contains a magic number: 40,1480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDeeplyNestedObjects,Magic Number,The method contains a magic number: 40,1480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDeeplyNestedObjects,Magic Number,The method contains a magic number: 40,1480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStringEndingInSlash,Empty catch clause,The method has an empty catch block.,1503
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testDocumentWithCommentEndingInSlash,Empty catch clause,The method has an empty catch block.,1513
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStringWithLeadingSlash,Empty catch clause,The method has an empty catch block.,1523
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testUnterminatedObject,Empty catch clause,The method has an empty catch block.,1533
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongQuotedString,Magic Number,The method contains a magic number: 1024,1546
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongQuotedString,Magic Number,The method contains a magic number: 16,1546
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongUnquotedString,Magic Number,The method contains a magic number: 1024,1557
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongUnquotedString,Magic Number,The method contains a magic number: 16,1557
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongUnterminatedString,Empty catch clause,The method has an empty catch block.,1569
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongUnterminatedString,Magic Number,The method contains a magic number: 1024,1569
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testVeryLongUnterminatedString,Magic Number,The method contains a magic number: 16,1569
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testSkipVeryLongUnquotedString,Magic Number,The method contains a magic number: 8192,1585
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testSkipTopLevelUnquotedString,Magic Number,The method contains a magic number: 8192,1593
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testSkipVeryLongQuotedString,Magic Number,The method contains a magic number: 8192,1600
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testSkipTopLevelQuotedString,Magic Number,The method contains a magic number: 8192,1607
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testStrictExtraCommasInMaps,Empty catch clause,The method has an empty catch block.,1649
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testLenientExtraCommasInMaps,Empty catch clause,The method has an empty catch block.,1661
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,testUnterminatedStringFailure,Empty catch clause,The method has an empty catch block.,1722
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,assertDocument,Complex Method,Cyclomatic complexity of the method is 12,1738
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,assertDocument,Empty catch clause,The method has an empty catch block.,1738
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonReaderTest,assertDocument,Magic Number,The method contains a magic number: 123,1738
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testTopLevelValueTypes,Magic Number,The method contains a magic number: 123,34
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testTopLevelValueTypes,Magic Number,The method contains a magic number: 123.4,34
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testInvalidTopLevelTypes,Empty catch clause,The method has an empty catch block.,66
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testTwoNames,Empty catch clause,The method has an empty catch block.,77
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNameWithoutValue,Empty catch clause,The method has an empty catch block.,89
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testValueWithoutName,Empty catch clause,The method has an empty catch block.,101
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testMultipleTopLevelValues,Empty catch clause,The method has an empty catch block.,112
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testBadNestingObject,Empty catch clause,The method has an empty catch block.,123
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testBadNestingArray,Empty catch clause,The method has an empty catch block.,135
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNullName,Empty catch clause,The method has an empty catch block.,147
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNonFiniteDoubles,Empty catch clause,The method has an empty catch block.,180
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNonFiniteDoubles,Empty catch clause,The method has an empty catch block.,180
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNonFiniteDoubles,Empty catch clause,The method has an empty catch block.,180
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNonFiniteBoxedDoubles,Empty catch clause,The method has an empty catch block.,201
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNonFiniteBoxedDoubles,Empty catch clause,The method has an empty catch block.,201
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNonFiniteBoxedDoubles,Empty catch clause,The method has an empty catch block.,201
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDoubles,Long Statement,The length of the statement "assertEquals("[-0.0`" + "1.0`" + "1.7976931348623157E308`"+ "4.9E-324`"+ "0.0`"+ "-0.5`"+ "2.2250738585072014E-308`"+ "3.141592653589793`"+ "2.718281828459045]"`stringWriter.toString());" is 186.,246
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDoubles,Magic Number,The method contains a magic number: 0.5,246
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDoubles,Magic Number,The method contains a magic number: 2.2250738585072014E-308,246
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testNumbers,Long Statement,The length of the statement "assertEquals("[0`" + "9223372036854775808`" + "-9223372036854775809`"+ "3.141592653589793238462643383]"`stringWriter.toString());" is 129.,290
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testStrings,Long Statement,The length of the statement "assertEquals("[\"a\"`" + "\"a\\\"\"`" + "\"\\\"\"`"+ "\":\"`"+ "\"`\"`"+ "\"\\b\"`"+ "\"\\f\"`"+ "\"\\n\"`"+ "\"\\r\"`"+ "\"\\t\"`"+ "\" \"`"+ "\"\\\\\"`"+ "\"{\"`"+ "\"}\"`"+ "\"[\"`"+ "\"]\"`"+ "\"\\u0000\"`"+ "\"\\u0019\"]"`stringWriter.toString());" is 252.,336
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testObjectsInArrays,Magic Number,The method contains a magic number: 5,404
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testObjectsInArrays,Magic Number,The method contains a magic number: 6,404
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testArraysInObjects,Magic Number,The method contains a magic number: 5,421
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testArraysInObjects,Magic Number,The method contains a magic number: 6,421
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDeepNestingArrays,Magic Number,The method contains a magic number: 20,440
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDeepNestingArrays,Magic Number,The method contains a magic number: 20,440
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDeepNestingObjects,Long Statement,The length of the statement "assertEquals("{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":" + "{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{\"a\":{" + "}}}}}}}}}}}}}}}}}}}}}"`stringWriter.toString());" is 213.,452
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDeepNestingObjects,Magic Number,The method contains a magic number: 20,452
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testDeepNestingObjects,Magic Number,The method contains a magic number: 20,452
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintObject,Long Statement,The length of the statement "String expected="{\n" + " \"a\": true`\n" + " \"b\": false`\n"+ " \"c\": 5.0`\n"+ " \"e\": null`\n"+ " \"f\": [\n"+ " 6.0`\n"+ " 7.0\n"+ " ]`\n"+ " \"g\": {\n"+ " \"h\": 8.0`\n"+ " \"i\": 9.0\n"+ " }\n"+ "}";" is 208.,480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintObject,Magic Number,The method contains a magic number: 5.0,480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintObject,Magic Number,The method contains a magic number: 6.0,480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintObject,Magic Number,The method contains a magic number: 7.0,480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintObject,Magic Number,The method contains a magic number: 8.0,480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintObject,Magic Number,The method contains a magic number: 9.0,480
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintArray,Long Statement,The length of the statement "String expected="[\n" + " true`\n" + " false`\n"+ " 5.0`\n"+ " null`\n"+ " {\n"+ " \"a\": 6.0`\n"+ " \"b\": 7.0\n"+ " }`\n"+ " [\n"+ " 8.0`\n"+ " 9.0\n"+ " ]\n"+ "]";" is 166.,517
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintArray,Magic Number,The method contains a magic number: 5.0,517
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintArray,Magic Number,The method contains a magic number: 6.0,517
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintArray,Magic Number,The method contains a magic number: 7.0,517
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintArray,Magic Number,The method contains a magic number: 8.0,517
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testPrettyPrintArray,Magic Number,The method contains a magic number: 9.0,517
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testStrictWriterDoesNotPermitMultipleTopLevelValues,Empty catch clause,The method has an empty catch block.,566
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testClosedWriterThrowsOnStructure,Empty catch clause,The method has an empty catch block.,578
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testClosedWriterThrowsOnStructure,Empty catch clause,The method has an empty catch block.,578
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testClosedWriterThrowsOnStructure,Empty catch clause,The method has an empty catch block.,578
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testClosedWriterThrowsOnStructure,Empty catch clause,The method has an empty catch block.,578
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testClosedWriterThrowsOnName,Empty catch clause,The method has an empty catch block.,606
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testClosedWriterThrowsOnValue,Empty catch clause,The method has an empty catch block.,619
+getsentry_raven-java,io.sentry.vendor.gson.stream,JsonWriterTest,testClosedWriterThrowsOnFlush,Empty catch clause,The method has an empty catch block.,632
+getsentry_raven-java,io.sentry.vendor,Base64,decode,Magic Number,The method contains a magic number: 3,99
+getsentry_raven-java,io.sentry.vendor,Base64,decode,Magic Number,The method contains a magic number: 4,99
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 3,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 4,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 3,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 4,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 3,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 2,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 2,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 3,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 3,442
+getsentry_raven-java,io.sentry.vendor,Base64,encode,Magic Number,The method contains a magic number: 2,442
+getsentry_raven-java,io.sentry,Hub,validateOptions,Long Statement,The length of the statement "throw new IllegalArgumentException("Hub requires a DSN to be instantiated. Considering using the NoOpHub if no DSN is available.");" is 131.,56
+getsentry_raven-java,io.sentry,Hub,isCrashedLastRun,Long Statement,The length of the statement "return SentryCrashLastRunState.getInstance().isCrashedLastRun(options.getCacheDirPath()`!options.isEnableAutoSessionTracking());" is 128.,506
+getsentry_raven-java,io.sentry,Hub,captureTransaction,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Transaction: %s is not finished and this 'captureTransaction' call is a no-op."`transaction.getEventId());" is 151.,599
+getsentry_raven-java,io.sentry,Hub,captureTransaction,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Transaction %s was dropped due to sampling decision."`transaction.getEventId());" is 123.,599
+getsentry_raven-java,io.sentry,Hub,startTransaction,Long Statement,The length of the statement "return createTransaction(transactionContext`transactionOptions.getCustomSamplingContext()`transactionOptions.isBindToScope()`transactionOptions.getStartTimestamp()`transactionOptions.isWaitForChildren()`transactionOptions.getIdleTimeout()`transactionOptions.isTrimEnd()`transactionOptions.getTransactionFinishedCallback());" is 323.,656
+getsentry_raven-java,io.sentry,Hub,createTransaction,Long Parameter List,The method has 8 parameters. ,681
+getsentry_raven-java,io.sentry,Hub,createTransaction,Long Statement,The length of the statement "transaction=new SentryTracer(transactionContext`this`startTimestamp`waitForChildren`idleTimeout`trimEnd`transactionFinishedCallback);" is 133.,681
+getsentry_raven-java,io.sentry,SpanId,SpanId,Magic Number,The method contains a magic number: 16,21
+getsentry_raven-java,io.sentry,NoOpSentryClient,captureTransaction,Long Parameter List,The method has 5 parameters. ,46
+getsentry_raven-java,io.sentry,TransactionContext,fromSentryTrace,Long Statement,The length of the statement "return new TransactionContext(name`operation`sentryTrace.getTraceId()`new SpanId()`transactionNameSource`sentryTrace.getSpanId()`parentSampled == null ? null : new TracesSamplingDecision(parentSampled));" is 203.,30
+getsentry_raven-java,io.sentry,TransactionContext,TransactionContext,Long Parameter List,The method has 7 parameters. ,105
+getsentry_raven-java,io.sentry,Attachment,Attachment,Long Parameter List,The method has 5 parameters. ,140
+getsentry_raven-java,io.sentry,DateUtils,getDateTimeWithMillisPrecision,Magic Number,The method contains a magic number: 3,47
+getsentry_raven-java,io.sentry,DateUtils,getDateTimeWithMillisPrecision,Magic Number,The method contains a magic number: 3,47
+getsentry_raven-java,io.sentry,DateUtils,millisToSeconds,Magic Number,The method contains a magic number: 1000,86
+getsentry_raven-java,io.sentry,DateUtils,nanosToMillis,Magic Number,The method contains a magic number: 1000000,96
+getsentry_raven-java,io.sentry,SendFireAndForgetEnvelopeSender,create,Long Statement,The length of the statement "final EnvelopeSender envelopeSender=new EnvelopeSender(hub`options.getSerializer()`options.getLogger()`options.getFlushTimeoutMillis());" is 136.,22
+getsentry_raven-java,io.sentry,SentryThreadFactory,getCurrentThreads,Long Statement,The length of the statement "final boolean crashed=(thread == currentThread) || (mechanismThreadIds != null && mechanismThreadIds.contains(thread.getId()));" is 127.,65
+getsentry_raven-java,io.sentry,SentryThreadFactory,getSentryThread,Complex Conditional,The conditional expression options.isAttachStacktrace() && frames != null && !frames.isEmpty() is complex.,104
+getsentry_raven-java,io.sentry,UserFeedback,toString,Long Statement,The length of the statement "return "UserFeedback{" + "eventId=" + eventId + "` name='"+ name+ '\''+ "` email='"+ email+ '\''+ "` comments='"+ comments+ '\''+ '}';" is 134.,109
+getsentry_raven-java,io.sentry,IpAddressUtils,isDefault,Long Identifier,The length of the field DEFAULT_IP_ADDRESS_VALID_VALUES is 31.,16
+getsentry_raven-java,io.sentry,SentryStackTraceFactory,getStackFrames,Complex Conditional,The conditional expression className.startsWith("io.sentry.") && !className.startsWith("io.sentry.samples.") && !className.startsWith("io.sentry.mobile.") is complex.,25
+getsentry_raven-java,io.sentry,SentryStackTraceFactory,getStackFrames,Long Statement,The length of the statement "if (className.startsWith("io.sentry.") && !className.startsWith("io.sentry.samples.") && !className.startsWith("io.sentry.mobile.")) {" is 134.,25
+getsentry_raven-java,io.sentry,SentryStackTraceFactory,isInApp,Complex Method,Cyclomatic complexity of the method is 8,69
+getsentry_raven-java,io.sentry,EnvelopeReader,read,Complex Method,Cyclomatic complexity of the method is 16,27
+getsentry_raven-java,io.sentry,EnvelopeReader,read,Long Statement,The length of the statement "throw new IllegalArgumentException("Invalid envelope. Item at index '" + items.size() + "'. "+ "has no header delimiter.");" is 123.,27
+getsentry_raven-java,io.sentry,EnvelopeReader,read,Long Statement,The length of the statement "SentryEnvelopeItemHeader itemHeader=deserializeEnvelopeItemHeader(envelopeBytes`itemHeaderStartOffset`lineBreakIndex - itemHeaderStartOffset);" is 142.,27
+getsentry_raven-java,io.sentry,EnvelopeReader,read,Long Statement,The length of the statement "throw new IllegalArgumentException("Invalid length for item at index '" + items.size() + "'. "+ "Item is '"+ payloadEndOffsetExclusive+ "' bytes. There are '"+ envelopeBytes.length+ "' in the buffer.");" is 202.,27
+getsentry_raven-java,io.sentry,EnvelopeReader,read,Magic Number,The method contains a magic number: 1024,27
+getsentry_raven-java,io.sentry,DuplicateEventDetectionEventProcessor,process,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Duplicate Exception detected. Event %s will be discarded."`event.getEventId());" is 122.,22
+getsentry_raven-java,io.sentry,SentryClient,captureEvent,Complex Method,Cyclomatic complexity of the method is 15,71
+getsentry_raven-java,io.sentry,SentryClient,captureEvent,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Not sending session update for dropped event as it did not cause the session health to change.");" is 140.,71
+getsentry_raven-java,io.sentry,SentryClient,captureEvent,Long Statement,The length of the statement "final TraceContext traceContext=scope != null && scope.getTransaction() != null ? scope.getTransaction().traceContext() : null;" is 127.,71
+getsentry_raven-java,io.sentry,SentryClient,shouldSendSessionUpdateForDroppedEvent,Long Statement,The length of the statement "final boolean didSessionMoveToCrashedState=sessionAfterUpdate.getStatus() == Session.State.Crashed && sessionBeforeUpdate.getStatus() != Session.State.Crashed;" is 159.,200
+getsentry_raven-java,io.sentry,SentryClient,buildEnvelope,Long Parameter List,The method has 5 parameters. ,237
+getsentry_raven-java,io.sentry,SentryClient,buildEnvelope,Long Statement,The length of the statement "final SentryEnvelopeItem profilingTraceItem=SentryEnvelopeItem.fromProfilingTrace(profilingTraceData`options.getMaxTraceFileSize()`options.getSerializer());" is 156.,237
+getsentry_raven-java,io.sentry,SentryClient,processEvent,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.ERROR`e`"An exception occurred while processing event by processor: %s"`processor.getClass().getName());" is 140.,285
+getsentry_raven-java,io.sentry,SentryClient,processTransaction,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.ERROR`e`"An exception occurred while processing transaction by processor: %s"`processor.getClass().getName());" is 146.,319
+getsentry_raven-java,io.sentry,SentryClient,updateSessionData,Complex Method,Cyclomatic complexity of the method is 10,392
+getsentry_raven-java,io.sentry,SentryClient,captureTransaction,Complex Method,Cyclomatic complexity of the method is 10,495
+getsentry_raven-java,io.sentry,SentryClient,captureTransaction,Long Parameter List,The method has 5 parameters. ,495
+getsentry_raven-java,io.sentry,SentryClient,captureTransaction,Long Statement,The length of the statement "final SentryEnvelope envelope=buildEnvelope(transaction`filterForTransaction(getAttachments(hint))`null`traceContext`profilingTraceData);" is 137.,495
+getsentry_raven-java,io.sentry,SentryClient,applyScope,Complex Method,Cyclomatic complexity of the method is 13,606
+getsentry_raven-java,io.sentry,SentryClient,executeBeforeSend,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.ERROR`"The BeforeSend callback threw an exception. It will be added as breadcrumb and continue."`e);" is 136.,658
+getsentry_raven-java,io.sentry,ProfilingTraceData,ProfilingTraceData,Long Parameter List,The method has 15 parameters. ,87
+getsentry_raven-java,io.sentry,ProfilingTraceData,readDeviceCpuFrequencies,Empty catch clause,The method has an empty catch block.,310
+getsentry_raven-java,io.sentry,JsonObjectDeserializer,parse,Complex Method,Cyclomatic complexity of the method is 12,83
+getsentry_raven-java,io.sentry,JsonObjectDeserializer,handleArrayOrMapEnd,Complex Conditional,The conditional expression tokenName != null && arrayOrMapToken != null && tokenMap != null is complex.,127
+getsentry_raven-java,io.sentry,JsonObjectDeserializer,nextNumber,Empty catch clause,The method has an empty catch block.,171
+getsentry_raven-java,io.sentry,JsonObjectDeserializer,nextNumber,Empty catch clause,The method has an empty catch block.,171
+getsentry_raven-java,io.sentry,SendFireAndForgetOutboxSender,create,Long Statement,The length of the statement "final OutboxSender outboxSender=new OutboxSender(hub`options.getEnvelopeReader()`options.getSerializer()`options.getLogger()`options.getFlushTimeoutMillis());" is 158.,22
+getsentry_raven-java,io.sentry,SentryOptions,setSampleRate,Long Statement,The length of the statement "throw new IllegalArgumentException("The value " + sampleRate + " is not valid. Use null to disable or values > 0.0 and <= 1.0.");" is 129.,738
+getsentry_raven-java,io.sentry,SentryOptions,setTracesSampleRate,Long Statement,The length of the statement "throw new IllegalArgumentException("The value " + tracesSampleRate + " is not valid. Use null to disable or values between 0.0 and 1.0.");" is 138.,762
+getsentry_raven-java,io.sentry,SentryOptions,isEnableUncaughtExceptionHandler,Long Identifier,The length of the field enableUncaughtExceptionHandler is 30.,1032
+getsentry_raven-java,io.sentry,SentryOptions,setEnableUncaughtExceptionHandler,Long Identifier,The length of the parameter enableUncaughtExceptionHandler is 30.,1041
+getsentry_raven-java,io.sentry,SentryOptions,setEnableUncaughtExceptionHandler,Long Identifier,The length of the field enableUncaughtExceptionHandler is 30.,1041
+getsentry_raven-java,io.sentry,SentryOptions,setProfilesSampleRate,Long Statement,The length of the statement "throw new IllegalArgumentException("The value " + profilesSampleRate + " is not valid. Use null to disable or values between 0.0 and 1.0.");" is 140.,1558
+getsentry_raven-java,io.sentry,SentryOptions,merge,Complex Method,Cyclomatic complexity of the method is 22,1795
+getsentry_raven-java,io.sentry,JsonObjectSerializer,JsonObjectSerializer,Long Identifier,The length of the field jsonReflectionObjectSerializer is 30.,20
+getsentry_raven-java,io.sentry,JsonObjectSerializer,serialize,Complex Method,Cyclomatic complexity of the method is 12,24
+getsentry_raven-java,io.sentry,JsonObjectSerializer,serialize,Long Identifier,The length of the field jsonReflectionObjectSerializer is 30.,24
+getsentry_raven-java,io.sentry,TracesSampler,sample,Complex Method,Cyclomatic complexity of the method is 8,22
+getsentry_raven-java,io.sentry,TracesSampler,sample,Long Identifier,The length of the identifier samplingContextSamplingDecision is 31.,22
+getsentry_raven-java,io.sentry,TracesSampler,sample,Long Statement,The length of the statement "final TracesSamplingDecision samplingContextSamplingDecision=samplingContext.getTransactionContext().getSamplingDecision();" is 123.,22
+getsentry_raven-java,io.sentry,TracesSampler,sample,Long Statement,The length of the statement "return new TracesSamplingDecision(sample(tracesSampleRateFromOptions)`tracesSampleRateFromOptions`profilesSampled`profilesSampleRate);" is 134.,22
+getsentry_raven-java,io.sentry,Sentry,init,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Sentry has been already initialized. Previous configuration will be overwritten.");" is 128.,153
+getsentry_raven-java,io.sentry,Sentry,initConfigurations,Complex Method,Cyclomatic complexity of the method is 10,192
+getsentry_raven-java,io.sentry,CircularFifoQueue,CircularFifoQueue,Magic Number,The method contains a magic number: 32,58
+getsentry_raven-java,io.sentry,CircularFifoQueue,get,Long Statement,The length of the statement "throw new NoSuchElementException(String.format("The specified index (%1$d) is outside the available range [0` %2$d)"`Integer.valueOf(index)`Integer.valueOf(sz)));" is 162.,230
+getsentry_raven-java,io.sentry,TraceContext,TraceContext,Long Parameter List,The method has 8 parameters. ,36
+getsentry_raven-java,io.sentry,TraceContext,TraceContext,Long Statement,The length of the statement "this(transaction.getSpanContext().getTraceId()`new Dsn(sentryOptions.getDsn()).getPublicKey()`sentryOptions.getRelease()`sentryOptions.getEnvironment()`null`user != null ? getSegment(user) : null`isHighQualityTransactionName(transaction.getTransactionNameSource()) ? transaction.getName() : null`sampleRateToString(sampleRate(samplingDecision)));" is 346.,55
+getsentry_raven-java,io.sentry,TraceContext,serialize,Complex Method,Cyclomatic complexity of the method is 9,267
+getsentry_raven-java,io.sentry,SentryEnvelopeItemHeader,SentryEnvelopeItemHeader,Long Parameter List,The method has 5 parameters. ,49
+getsentry_raven-java,io.sentry,SentryEnvelopeItemHeader,SentryEnvelopeItemHeader,Long Parameter List,The method has 5 parameters. ,64
+getsentry_raven-java,io.sentry,SentryEvent,isCrashed,Complex Conditional,The conditional expression e.getMechanism() != null && e.getMechanism().isHandled() != null && !e.getMechanism().isHandled() is complex.,214
+getsentry_raven-java,io.sentry,SentryEvent,serialize,Complex Method,Cyclomatic complexity of the method is 12,257
+getsentry_raven-java,io.sentry,JsonReflectionObjectSerializer,serialize,Complex Method,Cyclomatic complexity of the method is 11,29
+getsentry_raven-java,io.sentry,UncaughtExceptionHandlerIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"UncaughtExceptionHandlerIntegration enabled: %s"`this.options.isEnableUncaughtExceptionHandler());" is 146.,42
+getsentry_raven-java,io.sentry,UncaughtExceptionHandlerIntegration,register,Long Statement,The length of the statement "this.options.getLogger().log(SentryLevel.DEBUG`"default UncaughtExceptionHandler class='" + currentHandler.getClass().getName() + "'");" is 135.,42
+getsentry_raven-java,io.sentry,UncaughtExceptionHandlerIntegration,uncaughtException,Long Statement,The length of the statement "final UncaughtExceptionHint exceptionHint=new UncaughtExceptionHint(options.getFlushTimeoutMillis()`options.getLogger());" is 121.,86
+getsentry_raven-java,io.sentry,UncaughtExceptionHandlerIntegration,uncaughtException,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Timed out waiting to flush event to disk before crashing. Event: %s"`event.getEventId());" is 134.,86
+getsentry_raven-java,io.sentry,Scope,executeBeforeBreadcrumb,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.ERROR`"The BeforeBreadcrumbCallback callback threw an exception. Exception details will be added to the breadcrumb."`e);" is 156.,287
+getsentry_raven-java,io.sentry,SentryRuntimeEventProcessor,process,Complex Conditional,The conditional expression runtime != null && runtime.getName() == null && runtime.getVersion() == null is complex.,34
+getsentry_raven-java,io.sentry,MainEventProcessor,MainEventProcessor,Long Statement,The length of the statement "final SentryStackTraceFactory sentryStackTraceFactory=new SentryStackTraceFactory(this.options.getInAppExcludes()`this.options.getInAppIncludes());" is 147.,36
+getsentry_raven-java,io.sentry,MainEventProcessor,shouldApplyScopeData,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.DEBUG`"Event was cached so not applying data relevant to the current app execution/version: %s"`event.getEventId());" is 152.,93
+getsentry_raven-java,io.sentry,MainEventProcessor,setThreads,Complex Conditional,The conditional expression options.isAttachStacktrace() && (eventExceptions == null || eventExceptions.isEmpty()) && !isCachedHint(hint) is complex.,220
+getsentry_raven-java,io.sentry,MainEventProcessor,setThreads,Complex Method,Cyclomatic complexity of the method is 8,220
+getsentry_raven-java,io.sentry,MainEventProcessor,setThreads,Long Statement,The length of the statement "else if (options.isAttachStacktrace() && (eventExceptions == null || eventExceptions.isEmpty()) && !isCachedHint(hint)) {" is 121.,220
+getsentry_raven-java,io.sentry,Baggage,extractKeyValuesFromBaggageString,Magic Number,The method contains a magic number: 2,46
+getsentry_raven-java,io.sentry,Baggage,toHeaderString,Long Statement,The length of the statement "logger.log(SentryLevel.ERROR`"Not adding baggage value %s as the total number of list members would exceed the maximum of %s."`key`MAX_BAGGAGE_LIST_MEMBER_COUNT);" is 162.,89
+getsentry_raven-java,io.sentry,Baggage,toHeaderString,Long Statement,The length of the statement "logger.log(SentryLevel.ERROR`"Not adding baggage value %s as the total header value length would exceed the maximum of %s."`key`MAX_BAGGAGE_STRING_LENGTH);" is 155.,89
+getsentry_raven-java,io.sentry,SentryExceptionFactory,getSentryException,Long Statement,The length of the statement "final String exceptionClassName=exceptionPackage != null ? fullClassName.replace(exceptionPackage.getName() + "."`"") : fullClassName;" is 134.,55
+getsentry_raven-java,io.sentry,SystemOutLogger,log,Long Statement,The length of the statement "System.out.println(String.format("%s: %s\n%s"`level`String.format(message`throwable.toString())`captureStackTrace(throwable)));" is 127.,27
+getsentry_raven-java,io.sentry,SystemOutLogger,log,Long Statement,The length of the statement "System.out.println(String.format("%s: %s \n %s\n%s"`level`String.format(message`args)`throwable.toString()`captureStackTrace(throwable)));" is 138.,50
+getsentry_raven-java,io.sentry,SentryTracer,SentryTracer,Long Parameter List,The method has 7 parameters. ,97
+getsentry_raven-java,io.sentry,SentryTracer,createChild,Long Statement,The length of the statement "hub.getOptions().getLogger().log(SentryLevel.WARNING`"Span operation: %s` description: %s dropped due to limit reached. Returning NoOpSpan."`operation`description);" is 164.,259
+getsentry_raven-java,io.sentry,SentryTracer,finish,Complex Conditional,The conditional expression !root.isFinished() && (!waitForChildren || hasAllChildrenFinished()) is complex.,291
+getsentry_raven-java,io.sentry,SentryTracer,finish,Complex Method,Cyclomatic complexity of the method is 13,291
+getsentry_raven-java,io.sentry,OutboxSender,OutboxSender,Long Parameter List,The method has 5 parameters. ,42
+getsentry_raven-java,io.sentry,OutboxSender,processEnvelope,Complex Method,Cyclomatic complexity of the method is 15,110
+getsentry_raven-java,io.sentry,OutboxSender,processEnvelope,Long Statement,The length of the statement "try (final Reader eventReader=new BufferedReader(new InputStreamReader(new ByteArrayInputStream(item.getData())`UTF_8))){" is 121.,110
+getsentry_raven-java,io.sentry,OutboxSender,processEnvelope,Long Statement,The length of the statement "final SentryEnvelope newEnvelope=new SentryEnvelope(envelope.getHeader().getEventId()`envelope.getHeader().getSdkVersion()`item);" is 129.,110
+getsentry_raven-java,io.sentry,OutboxSender,processEnvelope,Long Statement,The length of the statement "logger.log(SentryLevel.WARNING`"Timed out waiting for item type submission: %s"`item.getHeader().getType().getItemType());" is 122.,110
+getsentry_raven-java,io.sentry,OutboxSender,logUnexpectedEventId,Long Statement,The length of the statement "logger.log(SentryLevel.ERROR`"Item %d of has a different event id (%s) to the envelope header (%s)"`itemIndex`envelope.getHeader().getEventId()`eventId);" is 153.,260
+getsentry_raven-java,io.sentry,DirectoryProcessor,processDirectory,Long Statement,The length of the statement "logger.log(SentryLevel.DEBUG`"Processing %d items from cache dir %s"`filteredListFiles != null ? filteredListFiles.length : 0`directory.getAbsolutePath());" is 155.,25
+getsentry_raven-java,io.sentry,Session,Session,Long Parameter List,The method has 13 parameters. ,72
+getsentry_raven-java,io.sentry,Session,Session,Long Statement,The length of the statement "this(State.Ok`DateUtils.getCurrentDateTime()`DateUtils.getCurrentDateTime()`0`distinctId`UUID.randomUUID()`true`null`null`(user != null ? user.getIpAddress() : null)`null`environment`release);" is 192.,101
+getsentry_raven-java,io.sentry,Session,calculateDurationTime,Magic Number,The method contains a magic number: 1000,218
+getsentry_raven-java,io.sentry,Session,clone,Long Statement,The length of the statement "return new Session(status`started`timestamp`errorCount.get()`distinctId`sessionId`init`sequence`duration`ipAddress`userAgent`environment`release);" is 146.,284
+getsentry_raven-java,io.sentry,Session,serialize,Complex Method,Cyclomatic complexity of the method is 12,327
+getsentry_raven-java,io.sentry,Span,Span,Long Parameter List,The method has 5 parameters. ,51
+getsentry_raven-java,io.sentry,Span,Span,Long Parameter List,The method has 7 parameters. ,60
+getsentry_raven-java,io.sentry,ISentryClient,captureTransaction,Long Parameter List,The method has 5 parameters. ,228
+getsentry_raven-java,io.sentry,SpanContext,SpanContext,Long Parameter List,The method has 5 parameters. ,62
+getsentry_raven-java,io.sentry,SpanContext,SpanContext,Long Parameter List,The method has 7 parameters. ,71
+getsentry_raven-java,io.sentry,ExternalOptions,from,Complex Method,Cyclomatic complexity of the method is 10,44
+getsentry_raven-java,io.sentry,ExternalOptions,from,Long Statement,The length of the statement "logger.log(SentryLevel.WARNING`"Skipping setting %s as ignored-exception-for-type. Reason: %s does not extend Throwable"`ignoredExceptionType`ignoredExceptionType);" is 164.,44
+getsentry_raven-java,io.sentry,ExternalOptions,from,Long Statement,The length of the statement "logger.log(SentryLevel.WARNING`"Skipping setting %s as ignored-exception-for-type. Reason: %s class is not found"`ignoredExceptionType`ignoredExceptionType);" is 157.,44
+getsentry_raven-java,io.sentry,ExternalOptions,getEnableUncaughtExceptionHandler,Long Identifier,The length of the field enableUncaughtExceptionHandler is 30.,160
+getsentry_raven-java,io.sentry,ExternalOptions,setEnableUncaughtExceptionHandler,Long Identifier,The length of the parameter enableUncaughtExceptionHandler is 30.,164
+getsentry_raven-java,io.sentry,ExternalOptions,setEnableUncaughtExceptionHandler,Long Identifier,The length of the field enableUncaughtExceptionHandler is 30.,164
+getsentry_raven-java,io.sentry,RequestDetailsResolver,resolve,Long Statement,The length of the statement "final String authHeader="Sentry sentry_version=" + SentryClient.SENTRY_PROTOCOL_VERSION + "`"+ "sentry_client="+ options.getSentryClientName()+ "`"+ "sentry_key="+ publicKey+ (secretKey != null && secretKey.length() > 0 ? ("`sentry_secret=" + secretKey) : "");" is 260.,22
+getsentry_raven-java,io.sentry,SentryCrashLastRunState,isCrashedLastRun,Empty catch clause,The method has an empty catch block.,26
+getsentry_raven-java,io.sentry,SentryTraceHeader,SentryTraceHeader,Magic Number,The method contains a magic number: 2,25
+getsentry_raven-java,io.sentry,SentryTraceHeader,SentryTraceHeader,Magic Number,The method contains a magic number: 3,25
+getsentry_raven-java,io.sentry,SentryTraceHeader,SentryTraceHeader,Magic Number,The method contains a magic number: 2,25
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromSession,Long Statement,The length of the statement "try (final ByteArrayOutputStream stream=new ByteArrayOutputStream();final Writer writer=new BufferedWriter(new OutputStreamWriter(stream`UTF_8))){" is 146.,70
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromSession,Long Statement,The length of the statement "SentryEnvelopeItemHeader itemHeader=new SentryEnvelopeItemHeader(SentryItemType.Session`() -> cachedItem.getBytes().length`"application/json"`null);" is 148.,70
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromEvent,Long Statement,The length of the statement "try (final ByteArrayOutputStream stream=new ByteArrayOutputStream();final Writer writer=new BufferedWriter(new OutputStreamWriter(stream`UTF_8))){" is 146.,103
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromEvent,Long Statement,The length of the statement "SentryEnvelopeItemHeader itemHeader=new SentryEnvelopeItemHeader(SentryItemType.resolve(event)`() -> cachedItem.getBytes().length`"application/json"`null);" is 155.,103
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromUserFeedback,Long Statement,The length of the statement "try (final ByteArrayOutputStream stream=new ByteArrayOutputStream();final Writer writer=new BufferedWriter(new OutputStreamWriter(stream`UTF_8))){" is 146.,141
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromUserFeedback,Long Statement,The length of the statement "SentryEnvelopeItemHeader itemHeader=new SentryEnvelopeItemHeader(SentryItemType.UserFeedback`() -> cachedItem.getBytes().length`"application/json"`null);" is 153.,141
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromAttachment,Long Statement,The length of the statement "throw new SentryEnvelopeException(String.format("Dropping attachment with filename '%s'` because the " + "size of the passed bytes with %d bytes is bigger " + "than the maximum allowed attachment size of "+ "%d bytes."`attachment.getFilename()`attachment.getBytes().length`maxAttachmentSize));" is 293.,167
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromAttachment,Long Statement,The length of the statement "throw new SentryEnvelopeException(String.format("Couldn't attach the attachment %s.\n" + "Please check that either bytes or a path is set."`attachment.getFilename()));" is 167.,167
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromAttachment,Long Statement,The length of the statement "SentryEnvelopeItemHeader itemHeader=new SentryEnvelopeItemHeader(SentryItemType.Attachment`() -> cachedItem.getBytes().length`attachment.getContentType()`attachment.getFilename()`attachment.getAttachmentType());" is 211.,167
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromProfilingTrace,Long Statement,The length of the statement "throw new SentryEnvelopeException(String.format("Dropping profiling trace data` because the file '%s' doesn't exists"`traceFile.getName()));" is 140.,208
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromProfilingTrace,Long Statement,The length of the statement "try (final ByteArrayOutputStream stream=new ByteArrayOutputStream();final Writer writer=new BufferedWriter(new OutputStreamWriter(stream`UTF_8))){" is 146.,208
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromProfilingTrace,Long Statement,The length of the statement "SentryEnvelopeItemHeader itemHeader=new SentryEnvelopeItemHeader(SentryItemType.Profile`() -> cachedItem.getBytes().length`"application-json"`traceFile.getName());" is 163.,208
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,readBytesFromFile,Long Statement,The length of the statement "throw new SentryEnvelopeException(String.format("Reading the item %s failed` because the file located at the path is not a file."`pathname));" is 141.,256
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,readBytesFromFile,Long Statement,The length of the statement "throw new SentryEnvelopeException(String.format("Dropping item` because its size located at '%s' with %d bytes is bigger " + "than the maximum allowed size of %d bytes."`pathname`file.length()`maxFileLength));" is 209.,256
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,readBytesFromFile,Long Statement,The length of the statement "try (FileInputStream fileInputStream=new FileInputStream(pathname);BufferedInputStream inputStream=new BufferedInputStream(fileInputStream);ByteArrayOutputStream outputStream=new ByteArrayOutputStream()){" is 204.,256
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,readBytesFromFile,Magic Number,The method contains a magic number: 1024,256
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromClientReport,Long Statement,The length of the statement "try (final ByteArrayOutputStream stream=new ByteArrayOutputStream();final Writer writer=new BufferedWriter(new OutputStreamWriter(stream`UTF_8))){" is 146.,298
+getsentry_raven-java,io.sentry,SentryEnvelopeItem,fromClientReport,Long Statement,The length of the statement "SentryEnvelopeItemHeader itemHeader=new SentryEnvelopeItemHeader(SentryItemType.resolve(clientReport)`() -> cachedItem.getBytes().length`"application/json"`null);" is 162.,298
+getsentry_raven-java,io.sentry,DenyReadFileSecurityManager,checkPermission,Complex Conditional,The conditional expression permission instanceof FilePermission && permission.getName() != null && permission.getName().contains(pathname) is complex.,19
+getsentry_raven-java,io.sentry.cache,EnvelopeCache,store,Complex Method,Cyclomatic complexity of the method is 14,81
+getsentry_raven-java,io.sentry.cache,EnvelopeCache,store,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.ERROR`"Stream from path %s resulted in a null envelope."`currentSessionFile.getAbsolutePath());" is 131.,81
+getsentry_raven-java,io.sentry.cache,EnvelopeCache,store,Long Statement,The length of the statement "options.getLogger().log(WARNING`"Not adding Envelope to offline storage because it already exists: %s"`envelopeFile.getAbsolutePath());" is 135.,81
+getsentry_raven-java,io.sentry.cache,EnvelopeCache,writeSessionToDisk,Long Statement,The length of the statement "try (final OutputStream outputStream=new FileOutputStream(file);final Writer writer=new BufferedWriter(new OutputStreamWriter(outputStream`UTF_8))){" is 148.,300
+getsentry_raven-java,io.sentry.cache,EnvelopeCache,iterator,Long Statement,The length of the statement "options.getLogger().log(DEBUG`"Envelope file '%s' disappeared while converting all cached files to envelopes."`file.getAbsolutePath());" is 135.,369
+getsentry_raven-java,io.sentry.cache,CacheStrategy,isDirectoryValid,Complex Conditional,The conditional expression !directory.isDirectory() || !directory.canWrite() || !directory.canRead() is complex.,57
+getsentry_raven-java,io.sentry.cache,CacheStrategy,moveInitFlagIfNecessary,Complex Method,Cyclomatic complexity of the method is 13,120
+getsentry_raven-java,io.sentry.protocol,App,serialize,Complex Method,Cyclomatic complexity of the method is 11,149
+getsentry_raven-java,io.sentry.protocol,SentryException,serialize,Complex Method,Cyclomatic complexity of the method is 9,189
+getsentry_raven-java,io.sentry.protocol,Request,serialize,Complex Method,Cyclomatic complexity of the method is 11,210
+getsentry_raven-java,io.sentry.protocol,SentryStackFrame,serialize,Complex Method,Cyclomatic complexity of the method is 18,301
+getsentry_raven-java,io.sentry.protocol,Contexts,Contexts,Complex Method,Cyclomatic complexity of the method is 10,24
+getsentry_raven-java,io.sentry.protocol,OperatingSystem,serialize,Complex Method,Cyclomatic complexity of the method is 9,117
+getsentry_raven-java,io.sentry.protocol,Mechanism,serialize,Complex Method,Cyclomatic complexity of the method is 10,169
+getsentry_raven-java,io.sentry.protocol,User,serialize,Complex Method,Cyclomatic complexity of the method is 8,168
+getsentry_raven-java,io.sentry.protocol,SentrySpan,SentrySpan,Long Parameter List,The method has 10 parameters. ,64
+getsentry_raven-java,io.sentry.protocol,SentrySpan,serialize,Complex Method,Cyclomatic complexity of the method is 9,147
+getsentry_raven-java,io.sentry.protocol,SentrySpan,doubleToBigDecimal,Magic Number,The method contains a magic number: 6,183
+getsentry_raven-java,io.sentry.protocol,SentryId,fromStringSentryId,Long Statement,The length of the statement "throw new IllegalArgumentException("String representation of SentryId has either 32 (UUID no dashes) " + "or 36 characters long (completed UUID). Received: " + sentryIdString);" is 176.,51
+getsentry_raven-java,io.sentry.protocol,SentryId,fromStringSentryId,Magic Number,The method contains a magic number: 32,51
+getsentry_raven-java,io.sentry.protocol,SentryId,fromStringSentryId,Magic Number,The method contains a magic number: 8,51
+getsentry_raven-java,io.sentry.protocol,SentryId,fromStringSentryId,Magic Number,The method contains a magic number: 13,51
+getsentry_raven-java,io.sentry.protocol,SentryId,fromStringSentryId,Magic Number,The method contains a magic number: 18,51
+getsentry_raven-java,io.sentry.protocol,SentryId,fromStringSentryId,Magic Number,The method contains a magic number: 23,51
+getsentry_raven-java,io.sentry.protocol,SentryId,fromStringSentryId,Magic Number,The method contains a magic number: 36,51
+getsentry_raven-java,io.sentry.protocol,Gpu,serialize,Complex Method,Cyclomatic complexity of the method is 12,147
+getsentry_raven-java,io.sentry.protocol,Device,serialize,Complex Method,Cyclomatic complexity of the method is 34,465
+getsentry_raven-java,io.sentry.protocol,Device,serialize,Long Method,The method has 103 lines of code.,465
+getsentry_raven-java,io.sentry.protocol,SentryThread,serialize,Complex Method,Cyclomatic complexity of the method is 11,211
+getsentry_raven-java,io.sentry.protocol,SentryTransaction,SentryTransaction,Long Statement,The length of the statement "contexts.setTrace(new SpanContext(tracerContext.getTraceId()`tracerContext.getSpanId()`tracerContext.getParentSpanId()`tracerContext.getOperation()`tracerContext.getDescription()`tracerContext.getSamplingDecision()`tracerContext.getStatus()));" is 243.,57
+getsentry_raven-java,io.sentry.protocol,SentryTransaction,SentryTransaction,Long Parameter List,The method has 6 parameters. ,95
+getsentry_raven-java,io.sentry.protocol,SentryTransaction,doubleToBigDecimal,Magic Number,The method contains a magic number: 6,204
+getsentry_raven-java,io.sentry.protocol,DebugImage,serialize,Complex Method,Cyclomatic complexity of the method is 12,272
+getsentry_raven-java,io.sentry.config,PropertiesProvider,getDoubleProperty,Empty catch clause,The method has an empty catch block.,66
+getsentry_raven-java,io.sentry.config,PropertiesProvider,getLongProperty,Empty catch clause,The method has an empty catch block.,86
+getsentry_raven-java,io.sentry.util,LogUtils,logNotInstanceOf,Long Statement,The length of the statement "logger.log(SentryLevel.DEBUG`"%s is not %s"`sentrySdkHint != null ? sentrySdkHint.getClass().getCanonicalName() : "Hint"`expectedClass.getCanonicalName());" is 155.,12
+getsentry_raven-java,io.sentry.util,FileUtils,readText,Complex Conditional,The conditional expression file == null || !file.exists() || !file.isFile() || !file.canRead() is complex.,36
+getsentry_raven-java,io.sentry.util,StringUtils,removeSurrounding,Complex Conditional,The conditional expression str != null && delimiter != null && str.startsWith(delimiter) && str.endsWith(delimiter) is complex.,49
+getsentry_raven-java,io.sentry.util,StringUtils,byteCountToString,Magic Number,The method contains a magic number: 1000,66
+getsentry_raven-java,io.sentry.util,StringUtils,byteCountToString,Magic Number,The method contains a magic number: 1000,66
+getsentry_raven-java,io.sentry.util,StringUtils,byteCountToString,Magic Number,The method contains a magic number: 999_950,66
+getsentry_raven-java,io.sentry.util,StringUtils,byteCountToString,Magic Number,The method contains a magic number: 999_950,66
+getsentry_raven-java,io.sentry.util,StringUtils,byteCountToString,Magic Number,The method contains a magic number: 1000,66
+getsentry_raven-java,io.sentry.util,StringUtils,byteCountToString,Magic Number,The method contains a magic number: 1000.0,66
+getsentry_raven-java,io.sentry.util,StringUtils,calculateStringHash,Magic Number,The method contains a magic number: 16,84
+getsentry_raven-java,io.sentry.transport,QueuedThreadPoolExecutor,QueuedThreadPoolExecutor,Long Parameter List,The method has 5 parameters. ,28
+getsentry_raven-java,io.sentry.transport,QueuedThreadPoolExecutor,QueuedThreadPoolExecutor,Long Statement,The length of the statement "super(corePoolSize`corePoolSize`0L`TimeUnit.MILLISECONDS`new LinkedBlockingQueue<>()`threadFactory`rejectedExecutionHandler);" is 125.,28
+getsentry_raven-java,io.sentry.transport,AsyncHttpTransport,AsyncHttpTransport,Long Statement,The length of the statement "this(initExecutor(options.getMaxQueueSize()`options.getEnvelopeDiskCache()`options.getLogger())`options`rateLimiter`transportGate`new HttpConnection(options`requestDetails`rateLimiter));" is 186.,38
+getsentry_raven-java,io.sentry.transport,AsyncHttpTransport,AsyncHttpTransport,Long Parameter List,The method has 5 parameters. ,52
+getsentry_raven-java,io.sentry.transport,AsyncHttpTransport,send,Long Identifier,The length of the identifier envelopeThatMayIncludeClientReport is 34.,67
+getsentry_raven-java,io.sentry.transport,AsyncHttpTransport,send,Long Statement,The length of the statement "final Future<?> future=executor.submit(new EnvelopeSender(envelopeThatMayIncludeClientReport`hint`currentEnvelopeCache));" is 121.,67
+getsentry_raven-java,io.sentry.transport,AsyncHttpTransport,close,Long Statement,The length of the statement "options.getLogger().log(SentryLevel.WARNING`"Failed to shutdown the async connection async sender within 1 minute. Trying to force it now.");" is 141.,134
+getsentry_raven-java,io.sentry.transport,HttpConnection,open,Long Statement,The length of the statement "return (HttpURLConnection)(proxy == null ? requestDetails.getUrl().openConnection() : requestDetails.getUrl().openConnection(proxy));" is 133.,99
+getsentry_raven-java,io.sentry.transport,HttpConnection,send,Long Statement,The length of the statement "try (final OutputStream outputStream=connection.getOutputStream();final GZIPOutputStream gzip=new GZIPOutputStream(outputStream)){" is 130.,149
+getsentry_raven-java,io.sentry.transport,HttpConnection,closeAndDisconnect,Empty catch clause,The method has an empty catch block.,224
+getsentry_raven-java,io.sentry.transport,HttpConnection,getErrorMessageFromStream,Long Statement,The length of the statement "try (final InputStream errorStream=connection.getErrorStream();final BufferedReader reader=new BufferedReader(new InputStreamReader(errorStream`UTF_8))){" is 153.,239
+getsentry_raven-java,io.sentry.transport,RateLimiter,filter,Complex Method,Cyclomatic complexity of the method is 8,46
+getsentry_raven-java,io.sentry.transport,RateLimiter,getCategoryFromItemType,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1ffdfdb6,134
+getsentry_raven-java,io.sentry.transport,RateLimiter,updateRetryAfterLimits,Complex Method,Cyclomatic complexity of the method is 10,155
+getsentry_raven-java,io.sentry.transport,RateLimiter,updateRetryAfterLimits,Magic Number,The method contains a magic number: 429,155
+getsentry_raven-java,io.sentry.transport,RateLimiter,parseRetryAfterOrDefault,Empty catch clause,The method has an empty catch block.,240
+getsentry_raven-java,io.sentry.transport,RateLimiter,parseRetryAfterOrDefault,Long Identifier,The length of the field HTTP_RETRY_AFTER_DEFAULT_DELAY_MILLIS is 37.,240
+getsentry_raven-java,io.sentry.transport,RateLimiter,parseRetryAfterOrDefault,Magic Number,The method contains a magic number: 1000L,240
+getsentry_raven-java,io.sentry.transport,StdoutTransport,send,Empty catch clause,The method has an empty catch block.,18
+getsentry_raven-java,io.sentry.instrumentation.file,FileOutputStreamInitData,FileOutputStreamInitData,Long Parameter List,The method has 5 parameters. ,17
+getsentry_raven-java,io.sentry.clientreport,AtomicClientReportStorage,AtomicClientReportStorage,Long Statement,The length of the statement "modifyableEventCountsForInit.put(new ClientReportKey(discardReason.getReason()`category.getCategory())`new AtomicLong(0));" is 122.,19
+getsentry_raven-java,io.sentry.spring,SentryHubRegistrar,registerBeanDefinitions,Long Statement,The length of the statement "final AnnotationAttributes annotationAttributes=AnnotationAttributes.fromMap(importingClassMetadata.getAnnotationAttributes(EnableSentry.class.getName()));" is 155.,21
+getsentry_raven-java,io.sentry.spring,SentryInitBeanPostProcessor,postProcessAfterInitialization,Long Statement,The length of the statement "applicationContext.getBeanProvider(SentryOptions.BeforeBreadcrumbCallback.class).ifAvailable(options::setBeforeBreadcrumb);" is 123.,41
+getsentry_raven-java,io.sentry.spring,SentryInitBeanPostProcessor,postProcessAfterInitialization,Long Statement,The length of the statement "applicationContext.getBeanProvider(Sentry.OptionsConfiguration.class).ifAvailable(optionsConfiguration -> optionsConfiguration.configure(options));" is 147.,41
+getsentry_raven-java,io.sentry.spring,CachedBodyServletInputStream,isFinished,Empty catch clause,The method has an empty catch block.,19
+getsentry_raven-java,io.sentry.spring,SentrySpringFilter,resolveHttpServletRequest,Long Statement,The length of the statement "hub.getOptions().getLogger().log(SentryLevel.WARNING`"Failed to cache HTTP request body. Request body will not be attached to Sentry events."`e);" is 145.,105
+getsentry_raven-java,io.sentry.spring,SentrySpringFilter,qualifiesForCaching,Long Statement,The length of the statement "return maxRequestBodySize != RequestSize.NONE && contentLength != -1 && contentType != null && MimeType.valueOf(contentType).isCompatibleWith(MediaType.APPLICATION_JSON) && ((maxRequestBodySize == SMALL && contentLength < 1000) || (maxRequestBodySize == MEDIUM && contentLength < 10000) || maxRequestBodySize == ALWAYS);" is 320.,124
+getsentry_raven-java,io.sentry.spring,SentrySpringFilter,qualifiesForCaching,Magic Number,The method contains a magic number: 1000,124
+getsentry_raven-java,io.sentry.spring,SentrySpringFilter,qualifiesForCaching,Magic Number,The method contains a magic number: 10000,124
+getsentry_raven-java,io.sentry.spring.tracing,SentrySpanClientWebRequestFilter,filter,Long Identifier,The length of the identifier clientRequestWithSentryTraceHeader is 34.,32
+getsentry_raven-java,io.sentry.spring.tracing,SentrySpanClientWebRequestFilter,addBreadcrumb,Long Statement,The length of the statement "final Breadcrumb breadcrumb=Breadcrumb.http(request.url().toString()`request.method().name()`response != null ? response.rawStatusCode() : null);" is 145.,76
+getsentry_raven-java,io.sentry.spring.tracing,SentryTransactionPointcutConfiguration,sentryTransactionPointcut,Long Statement,The length of the statement "return new ComposablePointcut(new AnnotationClassFilter(SentryTransaction.class`true)).union(new AnnotationMatchingPointcut(null`SentryTransaction.class));" is 155.,17
+getsentry_raven-java,io.sentry.spring.tracing,SentrySpanPointcutConfiguration,sentrySpanPointcut,Long Statement,The length of the statement "return new ComposablePointcut(new AnnotationClassFilter(SentrySpan.class`true)).union(new AnnotationMatchingPointcut(null`SentrySpan.class));" is 141.,17
+getsentry_raven-java,io.sentry.spring.tracing,SentryTransactionAdvice,invoke,Long Statement,The length of the statement "@Nullable SentryTransaction sentryTransaction=AnnotationUtils.findAnnotation(mostSpecificMethod`SentryTransaction.class);" is 121.,34
+getsentry_raven-java,io.sentry.spring.tracing,SentryTransactionAdvice,invoke,Long Statement,The length of the statement "final ITransaction transaction=hub.startTransaction(new TransactionContext(nameAndSource.name`nameAndSource.source`operation)`transactionOptions);" is 146.,34
+getsentry_raven-java,io.sentry.spring.tracing,SentryTracingFilter,startTransaction,Long Statement,The length of the statement "final TransactionContext contexts=TransactionContext.fromSentryTrace(name`TransactionNameSource.URL`"http.server"`new SentryTraceHeader(sentryTraceHeader));" is 156.,107
+getsentry_raven-java,io.sentry.spring.tracing,SentrySpanAdvice,resolveSpanOperation,Long Statement,The length of the statement "return sentrySpan == null || StringUtils.isEmpty(sentrySpan.value()) ? targetClass.getSimpleName() + "." + method.getName() : sentrySpan.value();" is 145.,66
+getsentry_raven-java,io.sentry.android.ndk,INativeScope,addBreadcrumb,Long Parameter List,The method has 6 parameters. ,16
+getsentry_raven-java,io.sentry.android.ndk,NativeScope,addBreadcrumb,Long Parameter List,The method has 6 parameters. ,34
+getsentry_raven-java,io.sentry.android.ndk,NativeScope,nativeAddBreadcrumb,Long Parameter List,The method has 6 parameters. ,53
+getsentry_raven-java,io.sentry.openfeign,SentryFeignClient,addBreadcrumb,Complex Conditional,The conditional expression response != null && response.body() != null && response.body().length() != null is complex.,95
+getsentry_raven-java,io.sentry.openfeign,SentryFeignClient,addBreadcrumb,Long Statement,The length of the statement "final Breadcrumb breadcrumb=Breadcrumb.http(request.url()`request.httpMethod().name()`response != null ? response.status() : null);" is 131.,95
+getsentry_raven-java,io.sentry.spring.boot,SentryLogbackInitializer,onApplicationEvent,Long Statement,The length of the statement "Optional.ofNullable(sentryProperties.getLogging().getMinimumBreadcrumbLevel()).map(slf4jLevel -> Level.toLevel(slf4jLevel.name())).ifPresent(sentryAppender::setMinimumBreadcrumbLevel);" is 184.,35
+getsentry_raven-java,io.sentry.spring.boot,SentryLogbackInitializer,onApplicationEvent,Long Statement,The length of the statement "Optional.ofNullable(sentryProperties.getLogging().getMinimumEventLevel()).map(slf4jLevel -> Level.toLevel(slf4jLevel.name())).ifPresent(sentryAppender::setMinimumEventLevel);" is 174.,35
+getsentry_raven-java,io.sentry.spring.boot,InAppIncludesResolver,resolveInAppIncludes,Long Statement,The length of the statement "return beansWithAnnotation.values().stream().map(bean -> bean.getClass().getPackage().getName()).collect(Collectors.toList());" is 126.,25

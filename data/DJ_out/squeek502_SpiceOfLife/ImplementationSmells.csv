@@ -1,0 +1,739 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+squeek502_SpiceOfLife,squeek.spiceoflife.compat,PacketDispatcherNetty,sendToAllAround,Long Statement,The length of the statement "NetworkRegistry.TargetPoint targetPoint=new NetworkRegistry.TargetPoint(packetTarget.dimension`packetTarget.x`packetTarget.y`packetTarget.z`packetTarget.range);" is 160.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.compat,PacketDispatcherNetty,sendToAllAround,Long Statement,The length of the statement "NetworkRegistry.TargetPoint targetPoint=new NetworkRegistry.TargetPoint(packetTarget.dimension`packetTarget.x`packetTarget.y`packetTarget.z`packetTarget.range);" is 160.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,getNewFoodQueue,Long Statement,The length of the statement "else if (ModConfig.USE_TIME_QUEUE) return new FixedTimeQueue((long)ModConfig.FOOD_HISTORY_LENGTH * MiscHelper.TICKS_PER_DAY);" is 125.,64
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,addFood,Complex Conditional,The conditional expression ModConfig.GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS && !wasGivenFoodJournal && isAtThreshold is complex.,86
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,writeToNBTData,Complex Method,Cyclomatic complexity of the method is 10,281
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,writeToNBTData,Long Statement,The length of the statement "if (!player.getEntityData().hasKey(EntityPlayer.PERSISTED_NBT_TAG)) player.getEntityData().setTag(EntityPlayer.PERSISTED_NBT_TAG`rootPersistentCompound);" is 153.,281
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,readFromNBTData,Complex Conditional,The conditional expression (data != null && data.hasKey(TAG_KEY)) || rootPersistentCompound.hasKey(TAG_KEY) is complex.,326
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,readFromNBTData,Long Statement,The length of the statement "NBTTagCompound nbtHistory=ModConfig.FOOD_HISTORY_PERSISTS_THROUGH_DEATH ? persistentCompound.getCompoundTag("History") : nonPersistentCompound.getCompoundTag("History");" is 169.,326
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodEaten,writeToNBTData,Long Statement,The length of the statement "if (foodValues != null && foodValues.saturationModifier != 0) nbtFood.setFloat("Saturation"`foodValues.saturationModifier);" is 123.,53
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getFoodEatingSpeed,Long Statement,The length of the statement "if (ModConfig.FOOD_EATING_DURATION_MAX > 0) event.setDuration(Math.min(event.getDuration()`ModConfig.FOOD_EATING_DURATION_MAX));" is 128.,43
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getFoodGroupModifier,Long Statement,The length of the statement "BigDecimal result=effectiveFoodModifier.expression.with("count"`new BigDecimal(count)).and("cur_history_length"`new BigDecimal(historySize)).and("food_hunger_value"`new BigDecimal(foodValues.hunger)).and("food_saturation_mod"`new BigDecimal(foodValues.saturationModifier)).and("cur_hunger"`new BigDecimal(foodHistory.player.getFoodStats().getFoodLevel())).and("cur_saturation"`new BigDecimal(foodHistory.player.getFoodStats().getSaturationLevel())).and("total_food_eaten"`new BigDecimal(foodHistory.totalFoodsEatenAllTime)).and("max_history_length"`new BigDecimal(ModConfig.FOOD_HISTORY_LENGTH)).and("hunger_count"`new BigDecimal(totalFoodValues.hunger)).and("saturation_count"`new BigDecimal(totalFoodValues.saturationModifier)).and("food_group_count"`new BigDecimal(FoodGroupRegistry.getFoodGroupsForFood(food).size())).and("distinct_food_groups_eaten"`new BigDecimal(foodHistory.getDistinctFoodGroups().size())).and("total_food_groups"`new BigDecimal(FoodGroupRegistry.numFoodGroups())).and("exact_count"`new BigDecimal(foodHistory.getFoodCountIgnoringFoodGroups(food))).eval();" is 1081.,93
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getFoodModifier,Long Statement,The length of the statement "if (ModConfig.FOOD_EATEN_THRESHOLD > 0 && foodHistory.totalFoodsEatenAllTime < ModConfig.FOOD_EATEN_THRESHOLD) return 1f;" is 121.,125
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getModifiedFoodValues,Long Statement,The length of the statement "if (hunger < 0 && ModConfig.AFFECT_NEGATIVE_FOOD_HUNGER_VALUES) hunger=(int)ModConfig.FOOD_HUNGER_ROUNDING_MODE.round(hunger * (2 - modifier));" is 143.,153
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getModifiedFoodValues,Magic Number,The method contains a magic number: 2,153
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getModifiedFoodValues,Magic Number,The method contains a magic number: 2,153
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,onPlayerLogin,Complex Conditional,The conditional expression !foodHistory.wasGivenFoodJournal && (ModConfig.GIVE_FOOD_JOURNAL_ON_START || (ModConfig.GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS && ModConfig.FOOD_EATEN_THRESHOLD == 0)) is complex.,77
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,onPlayerLogin,Long Statement,The length of the statement "if (!foodHistory.wasGivenFoodJournal && (ModConfig.GIVE_FOOD_JOURNAL_ON_START || (ModConfig.GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS && ModConfig.FOOD_EATEN_THRESHOLD == 0))) {" is 176.,77
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,syncFoodHistory,Long Statement,The length of the statement "PacketDispatcher.get().sendTo(new PacketFoodEatenAllTime(foodHistory.totalFoodsEatenAllTime)`(EntityPlayerMP)foodHistory.player);" is 129.,154
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,addFoodEatenByPlayer,Long Statement,The length of the statement "if (!player.world.isRemote && player instanceof EntityPlayerMP) PacketDispatcher.get().sendTo(new PacketFoodHistory(foodEaten)`(EntityPlayerMP)player);" is 151.,160
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,getNewFoodQueue,Long Statement,The length of the statement "else if (ModConfig.USE_TIME_QUEUE) return new FixedTimeQueue((long)ModConfig.FOOD_HISTORY_LENGTH * MiscHelper.TICKS_PER_DAY);" is 125.,64
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,addFood,Complex Conditional,The conditional expression ModConfig.GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS && !wasGivenFoodJournal && isAtThreshold is complex.,86
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,writeToNBTData,Complex Method,Cyclomatic complexity of the method is 10,281
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,writeToNBTData,Long Statement,The length of the statement "if (!player.getEntityData().hasKey(EntityPlayer.PERSISTED_NBT_TAG)) player.getEntityData().setTag(EntityPlayer.PERSISTED_NBT_TAG`rootPersistentCompound);" is 153.,281
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,readFromNBTData,Complex Conditional,The conditional expression (data != null && data.hasKey(TAG_KEY)) || rootPersistentCompound.hasKey(TAG_KEY) is complex.,326
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodHistory,readFromNBTData,Long Statement,The length of the statement "NBTTagCompound nbtHistory=ModConfig.FOOD_HISTORY_PERSISTS_THROUGH_DEATH ? persistentCompound.getCompoundTag("History") : nonPersistentCompound.getCompoundTag("History");" is 169.,326
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodEaten,writeToNBTData,Long Statement,The length of the statement "if (foodValues != null && foodValues.saturationModifier != 0) nbtFood.setFloat("Saturation"`foodValues.saturationModifier);" is 123.,53
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getFoodEatingSpeed,Long Statement,The length of the statement "if (ModConfig.FOOD_EATING_DURATION_MAX > 0) event.setDuration(Math.min(event.getDuration()`ModConfig.FOOD_EATING_DURATION_MAX));" is 128.,43
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getFoodGroupModifier,Long Statement,The length of the statement "BigDecimal result=effectiveFoodModifier.expression.with("count"`new BigDecimal(count)).and("cur_history_length"`new BigDecimal(historySize)).and("food_hunger_value"`new BigDecimal(foodValues.hunger)).and("food_saturation_mod"`new BigDecimal(foodValues.saturationModifier)).and("cur_hunger"`new BigDecimal(foodHistory.player.getFoodStats().getFoodLevel())).and("cur_saturation"`new BigDecimal(foodHistory.player.getFoodStats().getSaturationLevel())).and("total_food_eaten"`new BigDecimal(foodHistory.totalFoodsEatenAllTime)).and("max_history_length"`new BigDecimal(ModConfig.FOOD_HISTORY_LENGTH)).and("hunger_count"`new BigDecimal(totalFoodValues.hunger)).and("saturation_count"`new BigDecimal(totalFoodValues.saturationModifier)).and("food_group_count"`new BigDecimal(FoodGroupRegistry.getFoodGroupsForFood(food).size())).and("distinct_food_groups_eaten"`new BigDecimal(foodHistory.getDistinctFoodGroups().size())).and("total_food_groups"`new BigDecimal(FoodGroupRegistry.numFoodGroups())).and("exact_count"`new BigDecimal(foodHistory.getFoodCountIgnoringFoodGroups(food))).eval();" is 1081.,93
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getFoodModifier,Long Statement,The length of the statement "if (ModConfig.FOOD_EATEN_THRESHOLD > 0 && foodHistory.totalFoodsEatenAllTime < ModConfig.FOOD_EATEN_THRESHOLD) return 1f;" is 121.,125
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getModifiedFoodValues,Long Statement,The length of the statement "if (hunger < 0 && ModConfig.AFFECT_NEGATIVE_FOOD_HUNGER_VALUES) hunger=(int)ModConfig.FOOD_HUNGER_ROUNDING_MODE.round(hunger * (2 - modifier));" is 143.,153
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getModifiedFoodValues,Magic Number,The method contains a magic number: 2,153
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodModifier,getModifiedFoodValues,Magic Number,The method contains a magic number: 2,153
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,onPlayerLogin,Complex Conditional,The conditional expression !foodHistory.wasGivenFoodJournal && (ModConfig.GIVE_FOOD_JOURNAL_ON_START || (ModConfig.GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS && ModConfig.FOOD_EATEN_THRESHOLD == 0)) is complex.,77
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,onPlayerLogin,Long Statement,The length of the statement "if (!foodHistory.wasGivenFoodJournal && (ModConfig.GIVE_FOOD_JOURNAL_ON_START || (ModConfig.GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS && ModConfig.FOOD_EATEN_THRESHOLD == 0))) {" is 176.,77
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,syncFoodHistory,Long Statement,The length of the statement "PacketDispatcher.get().sendTo(new PacketFoodEatenAllTime(foodHistory.totalFoodsEatenAllTime)`(EntityPlayerMP)foodHistory.player);" is 129.,154
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker,FoodTracker,addFoodEatenByPlayer,Long Statement,The length of the statement "if (!player.world.isRemote && player instanceof EntityPlayerMP) PacketDispatcher.get().sendTo(new PacketFoodHistory(foodEaten)`(EntityPlayerMP)player);" is 151.,160
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroupConfig,writeExampleFoodGroup,Long Statement,The length of the statement "InputStream exampleFoodGroupInputStream=FoodGroupConfig.class.getClassLoader().getResourceAsStream(exampleFoodGroupRelativePath);" is 129.,28
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,initFromConfig,Complex Method,Cyclomatic complexity of the method is 14,51
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,initFromConfig,Long Statement,The length of the statement "if (foodStringsByType == null) throw new RuntimeException(toString() + " food group (" + identifier+ ".json) missing required \"food\" property");" is 146.,51
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,isFoodIncluded,Long Statement,The length of the statement "return !isFoodExcluded(food) && matchingItemHashes.contains(OreDictionaryHelper.getItemStackHash(food)) || matchingItemHashes.contains(OreDictionaryHelper.getWildCardItemStackHash(food));" is 187.,126
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,isFoodExcluded,Long Statement,The length of the statement "return excludedItemHashes.contains(OreDictionaryHelper.getItemStackHash(food)) || excludedItemHashes.contains(OreDictionaryHelper.getWildCardItemStackHash(food));" is 162.,131
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,getItemFromString,Magic Number,The method contains a magic number: 2,194
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,getItemFromString,Magic Number,The method contains a magic number: 2,194
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,getItemFromString,Magic Number,The method contains a magic number: 2,194
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroupConfig,writeExampleFoodGroup,Long Statement,The length of the statement "InputStream exampleFoodGroupInputStream=FoodGroupConfig.class.getClassLoader().getResourceAsStream(exampleFoodGroupRelativePath);" is 129.,28
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,initFromConfig,Complex Method,Cyclomatic complexity of the method is 14,51
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,initFromConfig,Long Statement,The length of the statement "if (foodStringsByType == null) throw new RuntimeException(toString() + " food group (" + identifier+ ".json) missing required \"food\" property");" is 146.,51
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,isFoodIncluded,Long Statement,The length of the statement "return !isFoodExcluded(food) && matchingItemHashes.contains(OreDictionaryHelper.getItemStackHash(food)) || matchingItemHashes.contains(OreDictionaryHelper.getWildCardItemStackHash(food));" is 187.,126
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,isFoodExcluded,Long Statement,The length of the statement "return excludedItemHashes.contains(OreDictionaryHelper.getItemStackHash(food)) || excludedItemHashes.contains(OreDictionaryHelper.getWildCardItemStackHash(food));" is 162.,131
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,getItemFromString,Magic Number,The method contains a magic number: 2,194
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,getItemFromString,Magic Number,The method contains a magic number: 2,194
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.foodgroups,FoodGroup,getItemFromString,Magic Number,The method contains a magic number: 2,194
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.commands,CommandResetHistory,execute,Long Statement,The length of the statement "else notifyCommandListener(commandSender`this`"Unexpected error (null food history) while resetting 'The Spice of Life' mod data for " + playerToReset.getName());" is 162.,34
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.commands,CommandResetHistory,getTabCompletions,Magic Number,The method contains a magic number: 2,58
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.commands,CommandResetHistory,execute,Long Statement,The length of the statement "else notifyCommandListener(commandSender`this`"Unexpected error (null food history) while resetting 'The Spice of Life' mod data for " + playerToReset.getName());" is 162.,34
+squeek502_SpiceOfLife,squeek.spiceoflife.foodtracker.commands,CommandResetHistory,getTabCompletions,Magic Number,The method contains a magic number: 2,58
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,InventoryHelper,getInventoryFromTile,Long Statement,The length of the statement "if (tile.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY`side)) return tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY`side);" is 154.,32
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,InventoryHelper,removeRandomSingleItemFromInventory,Long Statement,The length of the statement "if (!inventory.getStackInSlot(randomNonEmptySlotIndex).isEmpty()) return inventory.extractItem(randomNonEmptySlotIndex`1`false);" is 128.,103
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,MealPrioritizationHelper,findBestFoodForPlayerToEat,Magic Number,The method contains a magic number: 20,108
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,MovementHelper,getDidJumpLastTick,Magic Number,The method contains a magic number: 2,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,FileHelper,copyFile,Magic Number,The method contains a magic number: 4096,30
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColor,Complex Conditional,The conditional expression (max > min && val > max) || (min > max && val < max) is complex.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColor,Complex Conditional,The conditional expression (max > min && val < min) || (min > max && val > min) is complex.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColor,Long Statement,The length of the statement "else if ((max > min && val > max) || (min > max && val < max)) return TextFormatting.WHITE.toString() + TextFormatting.BOLD;" is 124.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 24,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 16,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 8,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Long Statement,The length of the statement "int[] color=new int[]{(int)(maxColor[0] * f2 + minColor[0] * f1)`(int)(maxColor[1] * f2 + minColor[1] * f1)`(int)(maxColor[2] * f2 + minColor[2] * f1)};" is 152.,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 0x1ED6B1,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 2,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 2,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 2,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 255,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getBooleanColor,Magic Number,The method contains a magic number: 2,69
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,OreDictionaryHelper,getItemStackHash,Magic Number,The method contains a magic number: 16,12
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,KeyHelper,isCtrlKeyDown,Long Statement,The length of the statement "if (!isCtrlKeyDown && Minecraft.IS_RUNNING_ON_MAC) isCtrlKeyDown=Keyboard.isKeyDown(Keyboard.KEY_LMETA) || Keyboard.isKeyDown(Keyboard.KEY_RMETA);" is 146.,8
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,FoodHelper,getSaturationModifierFromIncrement,Magic Number,The method contains a magic number: 2f,49
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,openGuiOfItemStack,Long Statement,The length of the statement "player.openGui(ModSpiceOfLife.instance`GuiIds.FOOD_CONTAINER.ordinal()`player.world`(int)player.posX`(int)player.posY`(int)player.posZ);" is 136.,33
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getServerGuiElement,Long Parameter List,The method has 6 parameters. ,47
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getClientGuiElement,Long Parameter List,The method has 6 parameters. ,53
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getSidedGuiElement,Long Parameter List,The method has 7 parameters. ,59
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getSidedGuiElement,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3ce42d3d,59
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,StringHelper,getQuantityDescriptor,Long Statement,The length of the statement "return quantity == 1 ? I18n.format("spiceoflife.quantity.one.time") : (quantity == 2 ? I18n.format("spiceoflife.quantity.two.times"`quantity) : I18n.format("spiceoflife.quantity.x.times"`quantity));" is 198.,12
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,StringHelper,getQuantityDescriptor,Magic Number,The method contains a magic number: 2,12
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,StringHelper,hungerHistoryLength,Magic Number,The method contains a magic number: 2f,58
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,InventoryHelper,getInventoryFromTile,Long Statement,The length of the statement "if (tile.hasCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY`side)) return tile.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY`side);" is 154.,32
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,InventoryHelper,removeRandomSingleItemFromInventory,Long Statement,The length of the statement "if (!inventory.getStackInSlot(randomNonEmptySlotIndex).isEmpty()) return inventory.extractItem(randomNonEmptySlotIndex`1`false);" is 128.,103
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,MealPrioritizationHelper,findBestFoodForPlayerToEat,Magic Number,The method contains a magic number: 20,108
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,MovementHelper,getDidJumpLastTick,Magic Number,The method contains a magic number: 2,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,FileHelper,copyFile,Magic Number,The method contains a magic number: 4096,30
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColor,Complex Conditional,The conditional expression (max > min && val > max) || (min > max && val < max) is complex.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColor,Complex Conditional,The conditional expression (max > min && val < min) || (min > max && val > min) is complex.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColor,Long Statement,The length of the statement "else if ((max > min && val > max) || (min > max && val < max)) return TextFormatting.WHITE.toString() + TextFormatting.BOLD;" is 124.,24
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 24,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 16,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 8,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,fromRGBA,Magic Number,The method contains a magic number: 255,37
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Long Statement,The length of the statement "int[] color=new int[]{(int)(maxColor[0] * f2 + minColor[0] * f1)`(int)(maxColor[1] * f2 + minColor[1] * f1)`(int)(maxColor[2] * f2 + minColor[2] * f1)};" is 152.,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 0x1ED6B1,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 2,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 2,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 2,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getRelativeColorInt,Magic Number,The method contains a magic number: 255,42
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,ColorHelper,getBooleanColor,Magic Number,The method contains a magic number: 2,69
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,OreDictionaryHelper,getItemStackHash,Magic Number,The method contains a magic number: 16,12
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,KeyHelper,isCtrlKeyDown,Long Statement,The length of the statement "if (!isCtrlKeyDown && Minecraft.IS_RUNNING_ON_MAC) isCtrlKeyDown=Keyboard.isKeyDown(Keyboard.KEY_LMETA) || Keyboard.isKeyDown(Keyboard.KEY_RMETA);" is 146.,8
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,FoodHelper,getSaturationModifierFromIncrement,Magic Number,The method contains a magic number: 2f,49
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,openGuiOfItemStack,Long Statement,The length of the statement "player.openGui(ModSpiceOfLife.instance`GuiIds.FOOD_CONTAINER.ordinal()`player.world`(int)player.posX`(int)player.posY`(int)player.posZ);" is 136.,33
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getServerGuiElement,Long Parameter List,The method has 6 parameters. ,47
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getClientGuiElement,Long Parameter List,The method has 6 parameters. ,53
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getSidedGuiElement,Long Parameter List,The method has 7 parameters. ,59
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,GuiHelper,getSidedGuiElement,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3b7d0530,59
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,StringHelper,getQuantityDescriptor,Long Statement,The length of the statement "return quantity == 1 ? I18n.format("spiceoflife.quantity.one.time") : (quantity == 2 ? I18n.format("spiceoflife.quantity.two.times"`quantity) : I18n.format("spiceoflife.quantity.x.times"`quantity));" is 198.,12
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,StringHelper,getQuantityDescriptor,Magic Number,The method contains a magic number: 2,12
+squeek502_SpiceOfLife,squeek.spiceoflife.helpers,StringHelper,hungerHistoryLength,Magic Number,The method contains a magic number: 2f,58
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_ENABLED_CONFIG_VAL is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_FORMULA_STRING_NAME is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_FORMULA_STRING_DEFAULT is 36.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_FORMULA_STRING_COMMENT is 36.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH is 35.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH_NAME is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH_DEFAULT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH_COMMENT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_NAME is 42.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_DEFAULT is 45.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_COMMENT is 45.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field USE_FOOD_GROUPS_AS_WHITELISTS_NAME is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field USE_FOOD_GROUPS_AS_WHITELISTS_DEFAULT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field USE_FOOD_GROUPS_AS_WHITELISTS_COMMENT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_HUNGER_VALUES_NAME is 30.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_HUNGER_VALUES_DEFAULT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_HUNGER_VALUES_COMMENT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_NAME is 39.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_DEFAULT is 42.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_COMMENT is 42.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS_NAME is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS_DEFAULT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS_COMMENT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS is 41.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_NAME is 46.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_DEFAULT is 49.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_COMMENT is 49.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_SPEED_MODIFIER_NAME is 31.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_SPEED_MODIFIER_DEFAULT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_SPEED_MODIFIER_COMMENT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_DURATION_MAX_DEFAULT is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_DURATION_MAX_COMMENT is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF is 30.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF_NAME is 35.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF_DEFAULT is 38.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF_COMMENT is 38.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_START_NAME is 31.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_START_DEFAULT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_START_COMMENT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_NAME is 45.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_DEFAULT is 48.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_COMMENT is 48.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD is 35.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_NAME is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_DEFAULT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_COMMENT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_MAX_STACKSIZE_NAME is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_MAX_STACKSIZE_DEFAULT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_MAX_STACKSIZE_COMMENT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_NAME is 30.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_DEFAULT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_COMMENT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS_NAME is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS_DEFAULT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS_COMMENT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_MODIFIER_ENABLED_CONFIG_VAL=config.get(CATEGORY_MAIN`FOOD_MODIFIER_ENABLED_NAME`FOOD_MODIFIER_ENABLED_DEFAULT`FOOD_MODIFIER_ENABLED_COMMENT).getBoolean(FOOD_MODIFIER_ENABLED_DEFAULT);" is 188.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "Property FOOD_MODIFIER_PROPERTY=config.get(CATEGORY_SERVER`FOOD_MODIFIER_FORMULA_STRING_NAME`FOOD_MODIFIER_FORMULA_STRING_DEFAULT`FOOD_MODIFIER_FORMULA_STRING_COMMENT);" is 168.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "if (FOOD_MODIFIER_PROPERTY.getString().equals("MAX(0` (1 - count/12))^MAX(0` food_hunger_value-ROUND(MAX(0` 1 - count/12)` 0))")) FOOD_MODIFIER_PROPERTY.set(FOOD_MODIFIER_FORMULA_STRING_DEFAULT);" is 195.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_HISTORY_LENGTH=config.get(CATEGORY_SERVER`FOOD_HISTORY_LENGTH_NAME`FOOD_HISTORY_LENGTH_DEFAULT`FOOD_HISTORY_LENGTH_COMMENT).getInt(FOOD_HISTORY_LENGTH_DEFAULT);" is 165.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_HISTORY_PERSISTS_THROUGH_DEATH=config.get(CATEGORY_SERVER`FOOD_HISTORY_PERSISTS_THROUGH_DEATH_NAME`FOOD_HISTORY_PERSISTS_THROUGH_DEATH_DEFAULT`FOOD_HISTORY_PERSISTS_THROUGH_DEATH_COMMENT).getBoolean(FOOD_HISTORY_PERSISTS_THROUGH_DEATH_DEFAULT);" is 249.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_EATEN_THRESHOLD=config.get(CATEGORY_SERVER`FOOD_EATEN_THRESHOLD_NAME`FOOD_EATEN_THRESHOLD_DEFAULT`FOOD_EATEN_THRESHOLD_COMMENT).getInt(FOOD_EATEN_THRESHOLD_DEFAULT);" is 170.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD=config.get(CATEGORY_SERVER`CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_NAME`CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_DEFAULT`CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_COMMENT).getBoolean(CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_DEFAULT);" is 259.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "USE_FOOD_GROUPS_AS_WHITELISTS=config.get(CATEGORY_SERVER`USE_FOOD_GROUPS_AS_WHITELISTS_NAME`USE_FOOD_GROUPS_AS_WHITELISTS_DEFAULT`USE_FOOD_GROUPS_AS_WHITELISTS_COMMENT).getBoolean(USE_FOOD_GROUPS_AS_WHITELISTS_DEFAULT);" is 219.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_FOOD_HUNGER_VALUES=config.get(CATEGORY_SERVER`AFFECT_FOOD_HUNGER_VALUES_NAME`AFFECT_FOOD_HUNGER_VALUES_DEFAULT`AFFECT_FOOD_HUNGER_VALUES_COMMENT).getBoolean(AFFECT_FOOD_HUNGER_VALUES_DEFAULT);" is 199.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_NEGATIVE_FOOD_HUNGER_VALUES=config.get(CATEGORY_SERVER`AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_NAME`AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_DEFAULT`AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_COMMENT).getBoolean(AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_DEFAULT);" is 244.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_FOOD_SATURATION_MODIFIERS=config.get(CATEGORY_SERVER`AFFECT_FOOD_SATURATION_MODIFIERS_NAME`AFFECT_FOOD_SATURATION_MODIFIERS_DEFAULT`AFFECT_FOOD_SATURATION_MODIFIERS_COMMENT).getBoolean(AFFECT_FOOD_SATURATION_MODIFIERS_DEFAULT);" is 234.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS=config.get(CATEGORY_SERVER`AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_NAME`AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_DEFAULT`AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_COMMENT).getBoolean(AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_DEFAULT);" is 279.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_EATING_SPEED_MODIFIER=(float)config.get(CATEGORY_SERVER`FOOD_EATING_SPEED_MODIFIER_NAME`FOOD_EATING_SPEED_MODIFIER_DEFAULT`FOOD_EATING_SPEED_MODIFIER_COMMENT).getDouble(FOOD_EATING_SPEED_MODIFIER_DEFAULT);" is 210.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_EATING_DURATION_MAX=config.get(CATEGORY_SERVER`FOOD_EATING_DURATION_MAX_NAME`FOOD_EATING_DURATION_MAX_DEFAULT`FOOD_EATING_DURATION_MAX_COMMENT).getInt(FOOD_EATING_DURATION_MAX_DEFAULT);" is 190.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "USE_HUNGER_QUEUE=config.get(CATEGORY_SERVER`USE_HUNGER_QUEUE_NAME`USE_HUNGER_QUEUE_DEFAULT`USE_HUNGER_QUEUE_COMMENT).getBoolean(USE_HUNGER_QUEUE_DEFAULT);" is 154.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "USE_TIME_QUEUE=config.get(CATEGORY_SERVER`USE_TIME_QUEUE_NAME`USE_TIME_QUEUE_DEFAULT`USE_TIME_QUEUE_COMMENT).getBoolean(USE_TIME_QUEUE_DEFAULT);" is 144.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "PROGRESS_TIME_WHILE_LOGGED_OFF=config.get(CATEGORY_SERVER`PROGRESS_TIME_WHILE_LOGGED_OFF_NAME`PROGRESS_TIME_WHILE_LOGGED_OFF_DEFAULT`PROGRESS_TIME_WHILE_LOGGED_OFF_COMMENT).getBoolean(PROGRESS_TIME_WHILE_LOGGED_OFF_DEFAULT);" is 224.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "GIVE_FOOD_JOURNAL_ON_START=config.get(CATEGORY_SERVER`GIVE_FOOD_JOURNAL_ON_START_NAME`GIVE_FOOD_JOURNAL_ON_START_DEFAULT`GIVE_FOOD_JOURNAL_ON_START_COMMENT).getBoolean(GIVE_FOOD_JOURNAL_ON_START_DEFAULT);" is 204.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS=config.get(CATEGORY_SERVER`GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_NAME`GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_DEFAULT`GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_COMMENT).getBoolean(GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_DEFAULT);" is 274.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD=(float)config.get(CATEGORY_SERVER`FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_NAME`FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_DEFAULT`FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_COMMENT).getDouble(FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_DEFAULT);" is 255.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_CONTAINERS_MAX_STACKSIZE=config.get(CATEGORY_SERVER`FOOD_CONTAINERS_MAX_STACKSIZE_NAME`FOOD_CONTAINERS_MAX_STACKSIZE_DEFAULT`FOOD_CONTAINERS_MAX_STACKSIZE_COMMENT).getInt(FOOD_CONTAINERS_MAX_STACKSIZE_DEFAULT);" is 215.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_HUNGER_ROUNDING_MODE_STRING=config.get(CATEGORY_SERVER`FOOD_HUNGER_ROUNDING_MODE_NAME`FOOD_HUNGER_ROUNDING_MODE_DEFAULT`FOOD_HUNGER_ROUNDING_MODE_COMMENT).getString();" is 172.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "LEFT_CLICK_OPENS_FOOD_CONTAINERS=config.get(CATEGORY_CLIENT`LEFT_CLICK_OPENS_FOOD_CONTAINERS_NAME`LEFT_CLICK_OPENS_FOOD_CONTAINERS_DEFAULT`LEFT_CLICK_OPENS_FOOD_CONTAINERS_COMMENT).getBoolean(LEFT_CLICK_OPENS_FOOD_CONTAINERS_DEFAULT);" is 234.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,setRoundingMode,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,366
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,setRoundingMode,Long Statement,The length of the statement "ModSpiceOfLife.Log.warn("Rounding mode '" + FOOD_HUNGER_ROUNDING_MODE_STRING + "' not recognized; defaulting to 'round'");" is 122.,366
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_MODIFIER_ENABLED_CONFIG_VAL is 32.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH is 35.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD is 37.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS is 32.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS is 41.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF is 30.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD is 35.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH is 35.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD is 37.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS is 32.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS is 41.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF is 30.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD is 35.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModSpiceOfLife,preInit,Long Statement,The length of the statement "@Override public void readNBT( Capability<IFoodHistory> capability` IFoodHistory instance` EnumFacing side` NBTBase nbt){" is 121.,44
+squeek502_SpiceOfLife,squeek.spiceoflife,ModSpiceOfLife,postInit,Long Statement,The length of the statement "FMLInterModComms.sendRuntimeMessage(ModInfo.MODID`"VersionChecker"`"addVersionCheck"`"http://www.ryanliptak.com/minecraft/versionchecker/squeek502/SpiceOfLife");" is 161.,90
+squeek502_SpiceOfLife,squeek.spiceoflife,ModContent,registerItems,Magic Number,The method contains a magic number: 6,20
+squeek502_SpiceOfLife,squeek.spiceoflife,ModContent,registerItems,Magic Number,The method contains a magic number: 3,20
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_ENABLED_CONFIG_VAL is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_FORMULA_STRING_NAME is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_FORMULA_STRING_DEFAULT is 36.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_MODIFIER_FORMULA_STRING_COMMENT is 36.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH is 35.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH_NAME is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH_DEFAULT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH_COMMENT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_NAME is 42.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_DEFAULT is 45.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_COMMENT is 45.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field USE_FOOD_GROUPS_AS_WHITELISTS_NAME is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field USE_FOOD_GROUPS_AS_WHITELISTS_DEFAULT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field USE_FOOD_GROUPS_AS_WHITELISTS_COMMENT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_HUNGER_VALUES_NAME is 30.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_HUNGER_VALUES_DEFAULT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_HUNGER_VALUES_COMMENT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_NAME is 39.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_DEFAULT is 42.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_COMMENT is 42.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS_NAME is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS_DEFAULT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS_COMMENT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS is 41.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_NAME is 46.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_DEFAULT is 49.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_COMMENT is 49.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_SPEED_MODIFIER_NAME is 31.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_SPEED_MODIFIER_DEFAULT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_SPEED_MODIFIER_COMMENT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_DURATION_MAX_DEFAULT is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_EATING_DURATION_MAX_COMMENT is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF is 30.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF_NAME is 35.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF_DEFAULT is 38.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF_COMMENT is 38.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_START_NAME is 31.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_START_DEFAULT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_START_COMMENT is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_NAME is 45.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_DEFAULT is 48.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_COMMENT is 48.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD is 35.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_NAME is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_DEFAULT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_COMMENT is 43.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_MAX_STACKSIZE_NAME is 34.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_MAX_STACKSIZE_DEFAULT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_CONTAINERS_MAX_STACKSIZE_COMMENT is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_NAME is 30.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_DEFAULT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_COMMENT is 33.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS is 32.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS_NAME is 37.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS_DEFAULT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Identifier,The length of the field LEFT_CLICK_OPENS_FOOD_CONTAINERS_COMMENT is 40.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_MODIFIER_ENABLED_CONFIG_VAL=config.get(CATEGORY_MAIN`FOOD_MODIFIER_ENABLED_NAME`FOOD_MODIFIER_ENABLED_DEFAULT`FOOD_MODIFIER_ENABLED_COMMENT).getBoolean(FOOD_MODIFIER_ENABLED_DEFAULT);" is 188.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "Property FOOD_MODIFIER_PROPERTY=config.get(CATEGORY_SERVER`FOOD_MODIFIER_FORMULA_STRING_NAME`FOOD_MODIFIER_FORMULA_STRING_DEFAULT`FOOD_MODIFIER_FORMULA_STRING_COMMENT);" is 168.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "if (FOOD_MODIFIER_PROPERTY.getString().equals("MAX(0` (1 - count/12))^MAX(0` food_hunger_value-ROUND(MAX(0` 1 - count/12)` 0))")) FOOD_MODIFIER_PROPERTY.set(FOOD_MODIFIER_FORMULA_STRING_DEFAULT);" is 195.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_HISTORY_LENGTH=config.get(CATEGORY_SERVER`FOOD_HISTORY_LENGTH_NAME`FOOD_HISTORY_LENGTH_DEFAULT`FOOD_HISTORY_LENGTH_COMMENT).getInt(FOOD_HISTORY_LENGTH_DEFAULT);" is 165.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_HISTORY_PERSISTS_THROUGH_DEATH=config.get(CATEGORY_SERVER`FOOD_HISTORY_PERSISTS_THROUGH_DEATH_NAME`FOOD_HISTORY_PERSISTS_THROUGH_DEATH_DEFAULT`FOOD_HISTORY_PERSISTS_THROUGH_DEATH_COMMENT).getBoolean(FOOD_HISTORY_PERSISTS_THROUGH_DEATH_DEFAULT);" is 249.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_EATEN_THRESHOLD=config.get(CATEGORY_SERVER`FOOD_EATEN_THRESHOLD_NAME`FOOD_EATEN_THRESHOLD_DEFAULT`FOOD_EATEN_THRESHOLD_COMMENT).getInt(FOOD_EATEN_THRESHOLD_DEFAULT);" is 170.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD=config.get(CATEGORY_SERVER`CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_NAME`CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_DEFAULT`CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_COMMENT).getBoolean(CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD_DEFAULT);" is 259.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "USE_FOOD_GROUPS_AS_WHITELISTS=config.get(CATEGORY_SERVER`USE_FOOD_GROUPS_AS_WHITELISTS_NAME`USE_FOOD_GROUPS_AS_WHITELISTS_DEFAULT`USE_FOOD_GROUPS_AS_WHITELISTS_COMMENT).getBoolean(USE_FOOD_GROUPS_AS_WHITELISTS_DEFAULT);" is 219.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_FOOD_HUNGER_VALUES=config.get(CATEGORY_SERVER`AFFECT_FOOD_HUNGER_VALUES_NAME`AFFECT_FOOD_HUNGER_VALUES_DEFAULT`AFFECT_FOOD_HUNGER_VALUES_COMMENT).getBoolean(AFFECT_FOOD_HUNGER_VALUES_DEFAULT);" is 199.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_NEGATIVE_FOOD_HUNGER_VALUES=config.get(CATEGORY_SERVER`AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_NAME`AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_DEFAULT`AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_COMMENT).getBoolean(AFFECT_NEGATIVE_FOOD_HUNGER_VALUES_DEFAULT);" is 244.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_FOOD_SATURATION_MODIFIERS=config.get(CATEGORY_SERVER`AFFECT_FOOD_SATURATION_MODIFIERS_NAME`AFFECT_FOOD_SATURATION_MODIFIERS_DEFAULT`AFFECT_FOOD_SATURATION_MODIFIERS_COMMENT).getBoolean(AFFECT_FOOD_SATURATION_MODIFIERS_DEFAULT);" is 234.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS=config.get(CATEGORY_SERVER`AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_NAME`AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_DEFAULT`AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_COMMENT).getBoolean(AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS_DEFAULT);" is 279.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_EATING_SPEED_MODIFIER=(float)config.get(CATEGORY_SERVER`FOOD_EATING_SPEED_MODIFIER_NAME`FOOD_EATING_SPEED_MODIFIER_DEFAULT`FOOD_EATING_SPEED_MODIFIER_COMMENT).getDouble(FOOD_EATING_SPEED_MODIFIER_DEFAULT);" is 210.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_EATING_DURATION_MAX=config.get(CATEGORY_SERVER`FOOD_EATING_DURATION_MAX_NAME`FOOD_EATING_DURATION_MAX_DEFAULT`FOOD_EATING_DURATION_MAX_COMMENT).getInt(FOOD_EATING_DURATION_MAX_DEFAULT);" is 190.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "USE_HUNGER_QUEUE=config.get(CATEGORY_SERVER`USE_HUNGER_QUEUE_NAME`USE_HUNGER_QUEUE_DEFAULT`USE_HUNGER_QUEUE_COMMENT).getBoolean(USE_HUNGER_QUEUE_DEFAULT);" is 154.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "USE_TIME_QUEUE=config.get(CATEGORY_SERVER`USE_TIME_QUEUE_NAME`USE_TIME_QUEUE_DEFAULT`USE_TIME_QUEUE_COMMENT).getBoolean(USE_TIME_QUEUE_DEFAULT);" is 144.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "PROGRESS_TIME_WHILE_LOGGED_OFF=config.get(CATEGORY_SERVER`PROGRESS_TIME_WHILE_LOGGED_OFF_NAME`PROGRESS_TIME_WHILE_LOGGED_OFF_DEFAULT`PROGRESS_TIME_WHILE_LOGGED_OFF_COMMENT).getBoolean(PROGRESS_TIME_WHILE_LOGGED_OFF_DEFAULT);" is 224.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "GIVE_FOOD_JOURNAL_ON_START=config.get(CATEGORY_SERVER`GIVE_FOOD_JOURNAL_ON_START_NAME`GIVE_FOOD_JOURNAL_ON_START_DEFAULT`GIVE_FOOD_JOURNAL_ON_START_COMMENT).getBoolean(GIVE_FOOD_JOURNAL_ON_START_DEFAULT);" is 204.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS=config.get(CATEGORY_SERVER`GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_NAME`GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_DEFAULT`GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_COMMENT).getBoolean(GIVE_FOOD_JOURNAL_ON_DIMINISHING_RETURNS_DEFAULT);" is 274.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD=(float)config.get(CATEGORY_SERVER`FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_NAME`FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_DEFAULT`FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_COMMENT).getDouble(FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD_DEFAULT);" is 255.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_CONTAINERS_MAX_STACKSIZE=config.get(CATEGORY_SERVER`FOOD_CONTAINERS_MAX_STACKSIZE_NAME`FOOD_CONTAINERS_MAX_STACKSIZE_DEFAULT`FOOD_CONTAINERS_MAX_STACKSIZE_COMMENT).getInt(FOOD_CONTAINERS_MAX_STACKSIZE_DEFAULT);" is 215.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "FOOD_HUNGER_ROUNDING_MODE_STRING=config.get(CATEGORY_SERVER`FOOD_HUNGER_ROUNDING_MODE_NAME`FOOD_HUNGER_ROUNDING_MODE_DEFAULT`FOOD_HUNGER_ROUNDING_MODE_COMMENT).getString();" is 172.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,init,Long Statement,The length of the statement "LEFT_CLICK_OPENS_FOOD_CONTAINERS=config.get(CATEGORY_CLIENT`LEFT_CLICK_OPENS_FOOD_CONTAINERS_NAME`LEFT_CLICK_OPENS_FOOD_CONTAINERS_DEFAULT`LEFT_CLICK_OPENS_FOOD_CONTAINERS_COMMENT).getBoolean(LEFT_CLICK_OPENS_FOOD_CONTAINERS_DEFAULT);" is 234.,292
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,setRoundingMode,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,366
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,setRoundingMode,Long Statement,The length of the statement "ModSpiceOfLife.Log.warn("Rounding mode '" + FOOD_HUNGER_ROUNDING_MODE_STRING + "' not recognized; defaulting to 'round'");" is 122.,366
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_MODIFIER_ENABLED_CONFIG_VAL is 32.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH is 35.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD is 37.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS is 32.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS is 41.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF is 30.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,pack,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD is 35.,394
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field FOOD_HISTORY_PERSISTS_THROUGH_DEATH is 35.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD is 37.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field AFFECT_FOOD_SATURATION_MODIFIERS is 32.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field AFFECT_NEGATIVE_FOOD_SATURATION_MODIFIERS is 41.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field PROGRESS_TIME_WHILE_LOGGED_OFF is 30.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field FOOD_HUNGER_ROUNDING_MODE_STRING is 32.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModConfig,unpack,Long Identifier,The length of the field FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD is 35.,419
+squeek502_SpiceOfLife,squeek.spiceoflife,ModSpiceOfLife,preInit,Long Statement,The length of the statement "@Override public void readNBT( Capability<IFoodHistory> capability` IFoodHistory instance` EnumFacing side` NBTBase nbt){" is 121.,44
+squeek502_SpiceOfLife,squeek.spiceoflife,ModSpiceOfLife,postInit,Long Statement,The length of the statement "FMLInterModComms.sendRuntimeMessage(ModInfo.MODID`"VersionChecker"`"addVersionCheck"`"http://www.ryanliptak.com/minecraft/versionchecker/squeek502/SpiceOfLife");" is 161.,90
+squeek502_SpiceOfLife,squeek.spiceoflife,ModContent,registerItems,Magic Number,The method contains a magic number: 6,20
+squeek502_SpiceOfLife,squeek.spiceoflife,ModContent,registerItems,Magic Number,The method contains a magic number: 3,20
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedHungerQueue,Magic Number,The method contains a magic number: 30,20
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedHungerQueue,Magic Number,The method contains a magic number: 12,20
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedSizeQueue,Magic Number,The method contains a magic number: 30,32
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedSizeQueue,Magic Number,The method contains a magic number: 12,32
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 30,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 29,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 12,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 29,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 12,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 30,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 29,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 12,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 29,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestFixedQueues,testFixedTimeQueue,Magic Number,The method contains a magic number: 12,44
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Long Statement,The length of the statement "List<InventoryFoodInfo> testDiminished=Arrays.asList(nonDiminishedFood`highHungerDiminishedFood`diminishedFood`undiminishableFood);" is 131.,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 3,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 0.5f,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 12,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 0.5f,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 0.5f,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 3,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 0.5f,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 0.75f,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 0.5f,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 2,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitDiminished,Magic Number,The method contains a magic number: 3,50
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 12,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 0.5f,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 6,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 0.5f,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 5,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 0.5f,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 4,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 0.5f,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 3,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 0.5f,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 5,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 2,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 3,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitHunger,Magic Number,The method contains a magic number: 4,67
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 5,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 1.5f,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 5,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 5,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 0.5f,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 12,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 12,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 0.5f,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 5,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 2,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 3,86
+squeek502_SpiceOfLife,squeek.spiceoflife,TestMealPrioritization,testBestFitSaturation,Magic Number,The method contains a magic number: 4,86
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getNutritionalValueString,Magic Number,The method contains a magic number: 100f,64
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "String prefix=(foodGroup != null ? foodGroup.formatString(TextFormatting.ITALIC.toString() + foodGroup) + ' ' : "") + TextFormatting.RESET.toString() + TextFormatting.DARK_AQUA.toString()+ TextFormatting.ITALIC;" is 211.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "String nutritionalValue=shouldShowNutritionalValue ? TextFormatting.DARK_GRAY + " [" + getNutritionalValueString(FoodModifier.getFoodGroupModifier(foodHistory`itemStack`foodGroup))+ TextFormatting.DARK_GRAY+ ']' : "";" is 217.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "if (count > 0) eatenRecently=I18n.format("spiceoflife.tooltip.eaten.recently" + (ModConfig.USE_HUNGER_QUEUE ? ".hunger" : (ModConfig.USE_TIME_QUEUE ? ".time" : ""))`StringHelper.getQuantityDescriptor(count)`ModConfig.USE_HUNGER_QUEUE ? StringHelper.hungerHistoryLength(ModConfig.FOOD_HISTORY_LENGTH) : ModConfig.FOOD_HISTORY_LENGTH);" is 333.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "return prefix + (foodGroup != null ? StringHelper.decapitalize(eatenRecently`StringHelper.getMinecraftLocale()) : eatenRecently) + nutritionalValue;" is 148.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Complex Conditional,The conditional expression ModConfig.FOOD_MODIFIER_ENABLED && event.getEntityPlayer() != null && !event.getItemStack().isEmpty() && FoodHelper.isValidFood(event.getItemStack()) is complex.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Complex Conditional,The conditional expression canDiminish && (foodOrItsFoodGroupsEatenRecently || foodModifier != 1) is complex.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Complex Method,Cyclomatic complexity of the method is 8,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Identifier,The length of the identifier foodOrItsFoodGroupsEatenRecently is 32.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "if (ModConfig.FOOD_MODIFIER_ENABLED && event.getEntityPlayer() != null && !event.getItemStack().isEmpty() && FoodHelper.isValidFood(event.getItemStack())) {" is 156.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "String foodGroupString=visibleFoodGroups.size() > 1 ? I18n.format("spiceoflife.tooltip.food.groups") : I18n.format("spiceoflife.tooltip.food.group");" is 149.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + foodGroupString+ TextFormatting.GRAY+ TextFormatting.ITALIC+ joinedFoodGroups);" is 165.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + I18n.format("spiceoflife.tooltip.food.until.enabled.1"));" is 143.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + I18n.format("spiceoflife.tooltip.food.until.enabled.2"`timesUntilMeetsThreshold`timesUntilMeetsThreshold == 1 ? I18n.format("spiceoflife.tooltip.times.singular") : I18n.format("spiceoflife.tooltip.times.plural")));" is 300.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "if (canDiminish && (foodOrItsFoodGroupsEatenRecently || foodModifier != 1)) toolTipStringsToAdd.add(0`TextFormatting.GRAY + I18n.format("spiceoflife.tooltip.nutritional.value") + getNutritionalValueString(foodModifier)+ (foodValues.hunger == 0 && foodModifier != 0f ? TextFormatting.DARK_RED + " (" + foodValues.hunger+ ' '+ I18n.format("spiceoflife.tooltip.hunger")+ ')' : ""));" is 379.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "if (shouldShowPressShift) toolTipStringsToAdd.add(bulletPoint + TextFormatting.DARK_GRAY + I18n.format("spiceoflife.tooltip.hold.key.for.details"`TextFormatting.YELLOW.toString() + TextFormatting.ITALIC + "Shift"+ TextFormatting.RESET+ TextFormatting.DARK_GRAY));" is 263.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(prefix + getEatenRecentlyTooltip(foodHistory`event.getItemStack()`foodGroup`shouldShowNutritionalValue));" is 129.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Long Statement,The length of the statement "this.buttonList.add(buttonPrevPage=new WidgetButtonNextPage(1`(this.width - this.bookImageWidth) / 2 + 38`2 + 154`false));" is 122.,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Long Statement,The length of the statement "this.buttonList.add(buttonNextPage=new WidgetButtonNextPage(2`(this.width - this.bookImageWidth) / 2 + 120`2 + 154`true));" is 122.,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Long Statement,The length of the statement "if (!ModConfig.CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD || foodHistory.totalFoodsEatenAllTime >= ModConfig.FOOD_EATEN_THRESHOLD) {" is 127.,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 38,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 154,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 120,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 154,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 3,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 55,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 16,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,getExpiresInString,Long Statement,The length of the statement "String singularOrPlural=foodsUntilExpire == 1 ? I18n.format("spiceoflife.tooltip.times.singular") : I18n.format("spiceoflife.tooltip.times.plural");" is 148.,100
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,isMouseInsideBox,Long Parameter List,The method has 6 parameters. ,138
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Complex Method,Cyclomatic complexity of the method is 12,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "fontRenderer.drawString(pageIndicator`x + this.bookImageWidth - this.fontRenderer.getStringWidth(pageIndicator) - 44`y + 16`0);" is 127.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "if (!ModConfig.CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD || FoodHistory.get(mc.player).totalFoodsEatenAllTime >= ModConfig.FOOD_EATEN_THRESHOLD) {" is 142.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "if (foodEatenWidget.foodEaten.itemStack != ItemStack.EMPTY) drawItemStack(foodEatenWidget.foodEaten.itemStack`localX`localY);" is 125.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "List<String> splitExpiresIn=fontRenderer.listFormattedStringToWidth(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + getExpiresInString(foodEatenWidget.foodEaten)`150);" is 181.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "this.drawHoveringText(Collections.singletonList(I18n.format("spiceoflife.gui.alltime.food.eaten"))`mouseX`mouseY`fontRenderer);" is 127.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 44,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 5,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 158,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 0xa0a0a0,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 32,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2.5f,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 32,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2.5f,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 150,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 116,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 0x404040,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 116,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 0x404040,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawItemStack,Magic Number,The method contains a magic number: 100.0F,242
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawItemStack,Magic Number,The method contains a magic number: 100.0F,242
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,actionPerformed,Magic Number,The method contains a magic number: 2,251
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,actionPerformed,Magic Number,The method contains a magic number: 3,251
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,GuiFoodContainer,Magic Number,The method contains a magic number: 133,23
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,initGui,Magic Number,The method contains a magic number: 2,31
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,initGui,Magic Number,The method contains a magic number: 2,31
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 8,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 6,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 4210752,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 8,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 96,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 3,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 4210752,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerBackgroundLayer,Long Statement,The length of the statement "drawTexturedModalRect(xStart + x`yStart + slotsY`GuiHelper.STANDARD_GUI_WIDTH`0`GuiHelper.STANDARD_SLOT_WIDTH`GuiHelper.STANDARD_SLOT_WIDTH);" is 141.,56
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getNutritionalValueString,Magic Number,The method contains a magic number: 100f,64
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "String prefix=(foodGroup != null ? foodGroup.formatString(TextFormatting.ITALIC.toString() + foodGroup) + ' ' : "") + TextFormatting.RESET.toString() + TextFormatting.DARK_AQUA.toString()+ TextFormatting.ITALIC;" is 211.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "String nutritionalValue=shouldShowNutritionalValue ? TextFormatting.DARK_GRAY + " [" + getNutritionalValueString(FoodModifier.getFoodGroupModifier(foodHistory`itemStack`foodGroup))+ TextFormatting.DARK_GRAY+ ']' : "";" is 217.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "if (count > 0) eatenRecently=I18n.format("spiceoflife.tooltip.eaten.recently" + (ModConfig.USE_HUNGER_QUEUE ? ".hunger" : (ModConfig.USE_TIME_QUEUE ? ".time" : ""))`StringHelper.getQuantityDescriptor(count)`ModConfig.USE_HUNGER_QUEUE ? StringHelper.hungerHistoryLength(ModConfig.FOOD_HISTORY_LENGTH) : ModConfig.FOOD_HISTORY_LENGTH);" is 333.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,getEatenRecentlyTooltip,Long Statement,The length of the statement "return prefix + (foodGroup != null ? StringHelper.decapitalize(eatenRecently`StringHelper.getMinecraftLocale()) : eatenRecently) + nutritionalValue;" is 148.,69
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Complex Conditional,The conditional expression ModConfig.FOOD_MODIFIER_ENABLED && event.getEntityPlayer() != null && !event.getItemStack().isEmpty() && FoodHelper.isValidFood(event.getItemStack()) is complex.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Complex Conditional,The conditional expression canDiminish && (foodOrItsFoodGroupsEatenRecently || foodModifier != 1) is complex.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Complex Method,Cyclomatic complexity of the method is 8,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Identifier,The length of the identifier foodOrItsFoodGroupsEatenRecently is 32.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "if (ModConfig.FOOD_MODIFIER_ENABLED && event.getEntityPlayer() != null && !event.getItemStack().isEmpty() && FoodHelper.isValidFood(event.getItemStack())) {" is 156.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "String foodGroupString=visibleFoodGroups.size() > 1 ? I18n.format("spiceoflife.tooltip.food.groups") : I18n.format("spiceoflife.tooltip.food.group");" is 149.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + foodGroupString+ TextFormatting.GRAY+ TextFormatting.ITALIC+ joinedFoodGroups);" is 165.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + I18n.format("spiceoflife.tooltip.food.until.enabled.1"));" is 143.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + I18n.format("spiceoflife.tooltip.food.until.enabled.2"`timesUntilMeetsThreshold`timesUntilMeetsThreshold == 1 ? I18n.format("spiceoflife.tooltip.times.singular") : I18n.format("spiceoflife.tooltip.times.plural")));" is 300.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "if (canDiminish && (foodOrItsFoodGroupsEatenRecently || foodModifier != 1)) toolTipStringsToAdd.add(0`TextFormatting.GRAY + I18n.format("spiceoflife.tooltip.nutritional.value") + getNutritionalValueString(foodModifier)+ (foodValues.hunger == 0 && foodModifier != 0f ? TextFormatting.DARK_RED + " (" + foodValues.hunger+ ' '+ I18n.format("spiceoflife.tooltip.hunger")+ ')' : ""));" is 379.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "if (shouldShowPressShift) toolTipStringsToAdd.add(bulletPoint + TextFormatting.DARK_GRAY + I18n.format("spiceoflife.tooltip.hold.key.for.details"`TextFormatting.YELLOW.toString() + TextFormatting.ITALIC + "Shift"+ TextFormatting.RESET+ TextFormatting.DARK_GRAY));" is 263.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,TooltipHandler,onItemTooltip,Long Statement,The length of the statement "toolTipStringsToAdd.add(prefix + getEatenRecentlyTooltip(foodHistory`event.getItemStack()`foodGroup`shouldShowNutritionalValue));" is 129.,82
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Long Statement,The length of the statement "this.buttonList.add(buttonPrevPage=new WidgetButtonNextPage(1`(this.width - this.bookImageWidth) / 2 + 38`2 + 154`false));" is 122.,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Long Statement,The length of the statement "this.buttonList.add(buttonNextPage=new WidgetButtonNextPage(2`(this.width - this.bookImageWidth) / 2 + 120`2 + 154`true));" is 122.,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Long Statement,The length of the statement "if (!ModConfig.CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD || foodHistory.totalFoodsEatenAllTime >= ModConfig.FOOD_EATEN_THRESHOLD) {" is 127.,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 38,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 154,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 120,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 154,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 3,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 55,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 2,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,initGui,Magic Number,The method contains a magic number: 16,57
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,getExpiresInString,Long Statement,The length of the statement "String singularOrPlural=foodsUntilExpire == 1 ? I18n.format("spiceoflife.tooltip.times.singular") : I18n.format("spiceoflife.tooltip.times.plural");" is 148.,100
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,isMouseInsideBox,Long Parameter List,The method has 6 parameters. ,138
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Complex Method,Cyclomatic complexity of the method is 12,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "fontRenderer.drawString(pageIndicator`x + this.bookImageWidth - this.fontRenderer.getStringWidth(pageIndicator) - 44`y + 16`0);" is 127.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "if (!ModConfig.CLEAR_HISTORY_ON_FOOD_EATEN_THRESHOLD || FoodHistory.get(mc.player).totalFoodsEatenAllTime >= ModConfig.FOOD_EATEN_THRESHOLD) {" is 142.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "if (foodEatenWidget.foodEaten.itemStack != ItemStack.EMPTY) drawItemStack(foodEatenWidget.foodEaten.itemStack`localX`localY);" is 125.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "List<String> splitExpiresIn=fontRenderer.listFormattedStringToWidth(TextFormatting.DARK_AQUA.toString() + TextFormatting.ITALIC + getExpiresInString(foodEatenWidget.foodEaten)`150);" is 181.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Long Statement,The length of the statement "this.drawHoveringText(Collections.singletonList(I18n.format("spiceoflife.gui.alltime.food.eaten"))`mouseX`mouseY`fontRenderer);" is 127.,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 44,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 5,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 158,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 0xa0a0a0,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 32,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2.5f,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 32,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 2.5f,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 150,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 116,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 0x404040,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 36,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 16,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 116,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawScreen,Magic Number,The method contains a magic number: 0x404040,143
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawItemStack,Magic Number,The method contains a magic number: 100.0F,242
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,drawItemStack,Magic Number,The method contains a magic number: 100.0F,242
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,actionPerformed,Magic Number,The method contains a magic number: 2,251
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiScreenFoodJournal,actionPerformed,Magic Number,The method contains a magic number: 3,251
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,GuiFoodContainer,Magic Number,The method contains a magic number: 133,23
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,initGui,Magic Number,The method contains a magic number: 2,31
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,initGui,Magic Number,The method contains a magic number: 2,31
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 8,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 6,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 4210752,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 8,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 96,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 3,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerForegroundLayer,Magic Number,The method contains a magic number: 4210752,47
+squeek502_SpiceOfLife,squeek.spiceoflife.gui,GuiFoodContainer,drawGuiContainerBackgroundLayer,Long Statement,The length of the statement "drawTexturedModalRect(xStart + x`yStart + slotsY`GuiHelper.STANDARD_GUI_WIDTH`0`GuiHelper.STANDARD_SLOT_WIDTH`GuiHelper.STANDARD_SLOT_WIDTH);" is 141.,56
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,getDisplayName,Magic Number,The method contains a magic number: 93,26
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,hungerBarsNeeded,Magic Number,The method contains a magic number: 2f,52
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Complex Method,Cyclomatic complexity of the method is 8,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Long Statement,The length of the statement "mc.fontRenderer.drawString(getDisplayName()`x`y`ColorHelper.getRelativeColorInt(foodEaten.foodValues.hunger`0`defaultFoodValues.hunger));" is 137.,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Long Statement,The length of the statement "else if (foodEaten.foodValues.hunger > i + 1 || defaultFoodValues.hunger == foodEaten.foodValues.hunger) drawTexturedModalRect(x`y`16`27`9`9);" is 142.,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 2,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 2,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 16,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 34,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 16,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 124,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 34,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 115,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 106,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 61,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 52,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonSortDirection,WidgetButtonSortDirection,Magic Number,The method contains a magic number: 11,23
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonSortDirection,WidgetButtonSortDirection,Magic Number,The method contains a magic number: 8,23
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonSortDirection,drawButton,Magic Number,The method contains a magic number: 2,29
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,WidgetButtonNextPage,Magic Number,The method contains a magic number: 23,19
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,WidgetButtonNextPage,Magic Number,The method contains a magic number: 13,19
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 192,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 23,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 13,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 23,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 13,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,getDisplayName,Magic Number,The method contains a magic number: 93,26
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,hungerBarsNeeded,Magic Number,The method contains a magic number: 2f,52
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Complex Method,Cyclomatic complexity of the method is 8,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Long Statement,The length of the statement "mc.fontRenderer.drawString(getDisplayName()`x`y`ColorHelper.getRelativeColorInt(foodEaten.foodValues.hunger`0`defaultFoodValues.hunger));" is 137.,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Long Statement,The length of the statement "else if (foodEaten.foodValues.hunger > i + 1 || defaultFoodValues.hunger == foodEaten.foodValues.hunger) drawTexturedModalRect(x`y`16`27`9`9);" is 142.,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 2,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 2,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 16,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 34,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 16,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 124,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 34,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 115,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 106,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 61,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 52,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 27,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetFoodEaten,draw,Magic Number,The method contains a magic number: 9,67
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonSortDirection,WidgetButtonSortDirection,Magic Number,The method contains a magic number: 11,23
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonSortDirection,WidgetButtonSortDirection,Magic Number,The method contains a magic number: 8,23
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonSortDirection,drawButton,Magic Number,The method contains a magic number: 2,29
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,WidgetButtonNextPage,Magic Number,The method contains a magic number: 23,19
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,WidgetButtonNextPage,Magic Number,The method contains a magic number: 13,19
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 192,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 23,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 13,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 23,25
+squeek502_SpiceOfLife,squeek.spiceoflife.gui.widget,WidgetButtonNextPage,drawButton,Magic Number,The method contains a magic number: 13,25
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodJournal,giveToPlayer,Magic Number,The method contains a magic number: 0.5f,57
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodJournal,giveToPlayer,Magic Number,The method contains a magic number: 0.5f,57
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodJournal,giveToPlayer,Magic Number,The method contains a magic number: 0.5f,57
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,tryPullFoodFrom,Long Statement,The length of the statement "List<InventoryFoodInfo> foodsToPull=MealPrioritizationHelper.findBestFoodsForPlayerAccountingForVariety(player`inventory);" is 122.,176
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Complex Conditional,The conditional expression !world.isRemote && ownerEntity instanceof EntityPlayer && isOpen(itemStack)&& !isEmpty(itemStack) is complex.,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Long Parameter List,The method has 5 parameters. ,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Long Statement,The length of the statement "ItemStack itemToDrop=InventoryHelper.removeRandomSingleItemFromInventory(getInventory(itemStack).getItemHandler()`random);" is 122.,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Magic Number,The method contains a magic number: 2f,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,addInformation,Long Statement,The length of the statement "if (ModConfig.FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD > 0) toolTip.add(TextFormatting.GOLD.toString() + TextFormatting.ITALIC + I18n.format("spiceoflife.tooltip.can.spill.food"));" is 175.,229
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onItemUseFirst,Long Parameter List,The method has 8 parameters. ,247
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onEntitySwing,Complex Conditional,The conditional expression entityLiving.world.isRemote && ModConfig.LEFT_CLICK_OPENS_FOOD_CONTAINERS && MiscHelper.isMouseOverNothing() is complex.,300
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,getMaxItemUseDuration,Magic Number,The method contains a magic number: 32,312
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onItemUseFinish,Magic Number,The method contains a magic number: 32,318
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodJournal,giveToPlayer,Magic Number,The method contains a magic number: 0.5f,57
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodJournal,giveToPlayer,Magic Number,The method contains a magic number: 0.5f,57
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodJournal,giveToPlayer,Magic Number,The method contains a magic number: 0.5f,57
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,tryPullFoodFrom,Long Statement,The length of the statement "List<InventoryFoodInfo> foodsToPull=MealPrioritizationHelper.findBestFoodsForPlayerAccountingForVariety(player`inventory);" is 122.,176
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Complex Conditional,The conditional expression !world.isRemote && ownerEntity instanceof EntityPlayer && isOpen(itemStack)&& !isEmpty(itemStack) is complex.,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Long Parameter List,The method has 5 parameters. ,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Long Statement,The length of the statement "ItemStack itemToDrop=InventoryHelper.removeRandomSingleItemFromInventory(getInventory(itemStack).getItemHandler()`random);" is 122.,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onUpdate,Magic Number,The method contains a magic number: 2f,205
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,addInformation,Long Statement,The length of the statement "if (ModConfig.FOOD_CONTAINERS_CHANCE_TO_DROP_FOOD > 0) toolTip.add(TextFormatting.GOLD.toString() + TextFormatting.ITALIC + I18n.format("spiceoflife.tooltip.can.spill.food"));" is 175.,229
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onItemUseFirst,Long Parameter List,The method has 8 parameters. ,247
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onEntitySwing,Complex Conditional,The conditional expression entityLiving.world.isRemote && ModConfig.LEFT_CLICK_OPENS_FOOD_CONTAINERS && MiscHelper.isMouseOverNothing() is complex.,300
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,getMaxItemUseDuration,Magic Number,The method contains a magic number: 32,312
+squeek502_SpiceOfLife,squeek.spiceoflife.items,ItemFoodContainer,onItemUseFinish,Magic Number,The method contains a magic number: 32,318
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,FoodContainerInventory,findMatchingClientItemStack,Long Statement,The length of the statement "ItemStack matchingFoodContainer=openFoodContainer.findFoodContainerWithUUID(itemFoodContainer.getUUID(itemStackFoodContainer));" is 127.,42
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,NBTInventory,isInventoryFull,Long Statement,The length of the statement "if (itemStack.isEmpty() || itemStack.getCount() < Math.min(getInventoryStackLimit()`itemStack.getMaxStackSize())) return false;" is 127.,95
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,NBTInventory,setInventorySlotContents,Long Statement,The length of the statement "if (!itemStack.isEmpty() && itemStack.getCount() > getInventoryStackLimit()) itemStack.setCount(getInventoryStackLimit());" is 122.,164
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,NBTInventory,getInventoryStackLimit,Magic Number,The method contains a magic number: 64,207
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlots,Long Parameter List,The method has 5 parameters. ,39
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Long Parameter List,The method has 5 parameters. ,54
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Long Parameter List,The method has 6 parameters. ,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Long Statement,The length of the statement "this.addSlotToContainer(slotClass.getConstructor(IInventory.class`int.class`int.class`int.class).newInstance(inventory`getNextSlotIndex()`xStart + col * 18`yStart + row * 18));" is 176.,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Magic Number,The method contains a magic number: 18,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Magic Number,The method contains a magic number: 18,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 8,91
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 3,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 18,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 18,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 18,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 58,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,slotClick,Complex Conditional,The conditional expression clickTypeIn == ClickType.SWAP && dragType >= 0 && dragType < 9 is complex.,119
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,slotClick,Magic Number,The method contains a magic number: 9,119
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,slotClick,Magic Number,The method contains a magic number: 9,119
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,transferStackInSlot,Long Identifier,The length of the field allowShiftClickToMultipleSlots is 30.,137
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 2f,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 2f,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 19,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 51,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,isFoodContainerWithUUID,Long Statement,The length of the statement "return !itemStack.isEmpty() && itemStack.getItem() instanceof ItemFoodContainer && ((ItemFoodContainer)itemStack.getItem()).getUUID(itemStack).equals(uuid);" is 156.,90
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,FoodContainerInventory,findMatchingClientItemStack,Long Statement,The length of the statement "ItemStack matchingFoodContainer=openFoodContainer.findFoodContainerWithUUID(itemFoodContainer.getUUID(itemStackFoodContainer));" is 127.,42
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,NBTInventory,isInventoryFull,Long Statement,The length of the statement "if (itemStack.isEmpty() || itemStack.getCount() < Math.min(getInventoryStackLimit()`itemStack.getMaxStackSize())) return false;" is 127.,95
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,NBTInventory,setInventorySlotContents,Long Statement,The length of the statement "if (!itemStack.isEmpty() && itemStack.getCount() > getInventoryStackLimit()) itemStack.setCount(getInventoryStackLimit());" is 122.,164
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,NBTInventory,getInventoryStackLimit,Magic Number,The method contains a magic number: 64,207
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlots,Long Parameter List,The method has 5 parameters. ,39
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Long Parameter List,The method has 5 parameters. ,54
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Long Parameter List,The method has 6 parameters. ,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Long Statement,The length of the statement "this.addSlotToContainer(slotClass.getConstructor(IInventory.class`int.class`int.class`int.class).newInstance(inventory`getNextSlotIndex()`xStart + col * 18`yStart + row * 18));" is 176.,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Magic Number,The method contains a magic number: 18,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addSlotsOfType,Magic Number,The method contains a magic number: 18,59
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 8,91
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 3,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 18,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 18,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 9,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 18,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,addPlayerInventorySlots,Magic Number,The method contains a magic number: 58,96
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,slotClick,Complex Conditional,The conditional expression clickTypeIn == ClickType.SWAP && dragType >= 0 && dragType < 9 is complex.,119
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,slotClick,Magic Number,The method contains a magic number: 9,119
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,slotClick,Magic Number,The method contains a magic number: 9,119
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerGeneric,transferStackInSlot,Long Identifier,The length of the field allowShiftClickToMultipleSlots is 30.,137
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 2f,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 2f,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 19,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,ContainerFoodContainer,Magic Number,The method contains a magic number: 51,21
+squeek502_SpiceOfLife,squeek.spiceoflife.inventory,ContainerFoodContainer,isFoodContainerWithUUID,Long Statement,The length of the statement "return !itemStack.isEmpty() && itemStack.getItem() instanceof ItemFoodContainer && ((ItemFoodContainer)itemStack.getItem()).getUUID(itemStack).equals(uuid);" is 156.,90
+squeek502_SpiceOfLife,squeek.spiceoflife.network,PacketFoodGroup,processInWorldThread,Long Statement,The length of the statement "if (++foodGroupsRecieved > totalFoodGroups) throw new RuntimeException("Recieved more food groups than should exist (recieved: " + foodGroupsRecieved + "` total: "+ totalFoodGroups+ ')');" is 187.,47
+squeek502_SpiceOfLife,squeek.spiceoflife.network,PacketFoodGroup,processInWorldThread,Long Statement,The length of the statement "if (++foodGroupsRecieved > totalFoodGroups) throw new RuntimeException("Recieved more food groups than should exist (recieved: " + foodGroupsRecieved + "` total: "+ totalFoodGroups+ ')');" is 187.,47
+squeek502_SpiceOfLife,squeek.spiceoflife.network.simpleimpl,BetterSimpleNetworkWrapper,sendToAllAround,Long Statement,The length of the statement "channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.ALLAROUNDPOINT);" is 123.,111
+squeek502_SpiceOfLife,squeek.spiceoflife.network.simpleimpl,BetterSimpleNetworkWrapper,sendToAllAround,Long Statement,The length of the statement "channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.ALLAROUNDPOINT);" is 123.,111

@@ -1,0 +1,75 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+ebay_oink,org.pig.oink.rest,IllegalArgumentMapper,toResponse,Long Statement,The length of the statement "logger.error("IllegalArgumentException when calling " + request.getRequestURL().toString() + " ! Message: "+ exception.getMessage());" is 133.,49
+ebay_oink,org.pig.oink.rest,IllegalArgumentMapper,toResponse,Long Statement,The length of the statement "return Response.status(HttpURLConnection.HTTP_NOT_FOUND).entity(exception.getMessage()).type(MediaType.TEXT_PLAIN).build();" is 123.,49
+ebay_oink,org.pig.oink.rest,IOExceptionMapper,toResponse,Long Statement,The length of the statement "logger.error("FileNotFoundException when calling " + request.getRequestURL().toString() + " ! Message: "+ exception.getMessage());" is 130.,50
+ebay_oink,org.pig.oink.rest,IOExceptionMapper,toResponse,Long Statement,The length of the statement "return Response.status(HttpURLConnection.HTTP_NOT_FOUND).entity(exception.getMessage()).type(MediaType.TEXT_PLAIN).build();" is 123.,50
+ebay_oink,org.pig.oink.rest,PigResource,registerJar,Magic Number,The method contains a magic number: 400,62
+ebay_oink,org.pig.oink.rest,PigResource,registerScript,Long Statement,The length of the statement "return Response.status(HttpURLConnection.HTTP_BAD_REQUEST).entity("Bad Request. Either DUMP command is used or STORE is used without '$output'").build();" is 153.,102
+ebay_oink,org.pig.oink.rest,PigResource,getOutput,Magic Number,The method contains a magic number: 404,213
+ebay_oink,org.pig.oink.rest,IllegalStateMapper,conflictResponse,Long Statement,The length of the statement "String jsonBody="{" + "\"message\":\"File already exists. Try again after performing the fix.\"`\n" + "\"fix\":\"DELETE %s\"\n"+ "}";" is 133.,76
+ebay_oink,org.pig.oink.rest,IllegalStateMapper,conflictResponse,Long Statement,The length of the statement "return Response.status(HttpURLConnection.HTTP_CONFLICT).entity(String.format(jsonBody`request.getRequestURL().toString())).type(MediaType.APPLICATION_JSON).build();" is 164.,76
+ebay_oink,org.pig.oink.rest,TestPigResource,setUp,Magic Number,The method contains a magic number: 10,57
+ebay_oink,org.pig.oink.rest,TestPigResource,testRegisterScript,Magic Number,The method contains a magic number: 200,74
+ebay_oink,org.pig.oink.rest,TestPigResource,testRegisterScript,Magic Number,The method contains a magic number: 400,74
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetScript,Magic Number,The method contains a magic number: 200,98
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetScript,Magic Number,The method contains a magic number: 200,98
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetScript,Magic Number,The method contains a magic number: 404,98
+ebay_oink,org.pig.oink.rest,TestPigResource,testUnRegisterScript,Magic Number,The method contains a magic number: 200,121
+ebay_oink,org.pig.oink.rest,TestPigResource,testUnRegisterScript,Magic Number,The method contains a magic number: 200,121
+ebay_oink,org.pig.oink.rest,TestPigResource,testRegisterJar,Magic Number,The method contains a magic number: 200,139
+ebay_oink,org.pig.oink.rest,TestPigResource,testUnRegisterJar,Magic Number,The method contains a magic number: 200,156
+ebay_oink,org.pig.oink.rest,TestPigResource,testUnRegisterJar,Magic Number,The method contains a magic number: 200,156
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetJar,Magic Number,The method contains a magic number: 200,174
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetJar,Magic Number,The method contains a magic number: 200,174
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetJar,Magic Number,The method contains a magic number: 404,174
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetRequest,Magic Number,The method contains a magic number: 200,197
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStats,Magic Number,The method contains a magic number: 15,235
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStats,Magic Number,The method contains a magic number: 14,235
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStats,Magic Number,The method contains a magic number: 5,235
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStats,Magic Number,The method contains a magic number: 200,235
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetOutpu,Magic Number,The method contains a magic number: 200,266
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStatus,Magic Number,The method contains a magic number: 15,297
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStatus,Magic Number,The method contains a magic number: 14,297
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStatus,Magic Number,The method contains a magic number: 5,297
+ebay_oink,org.pig.oink.rest,TestPigResource,testGetStatus,Magic Number,The method contains a magic number: 200,297
+ebay_oink,org.pig.oink.operation,TestPigEventListener,testPigEventListener,Magic Number,The method contains a magic number: 50,47
+ebay_oink,org.pig.oink.operation,TestPigEventListener,testPigEventListener,Magic Number,The method contains a magic number: 50,47
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,write,Long Statement,The length of the statement "throw new WebApplicationException(Response.status(500).entity("Unable to connect to Hadoop FileSytem. Please try again later").build());" is 136.,46
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,write,Long Statement,The length of the statement "throw new WebApplicationException(Response.status(500).entity("Unable to retrieve file from Hadoop FileSystem").build());" is 121.,46
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,write,Magic Number,The method contains a magic number: 500,46
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,write,Magic Number,The method contains a magic number: 1024,46
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,write,Magic Number,The method contains a magic number: 500,46
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,isAvailable,Long Statement,The length of the statement "throw new WebApplicationException(Response.status(500).entity("Unable to connect to Hadoop FileSytem. Please try again later").build());" is 136.,76
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,isAvailable,Magic Number,The method contains a magic number: 500,76
+ebay_oink,org.pig.oink.operation.impl,StreamingBinOutputImpl,isAvailable,Magic Number,The method contains a magic number: 500,76
+ebay_oink,org.pig.oink.operation.impl,PigJobServerImpl,registerFile,Magic Number,The method contains a magic number: 1024,114
+ebay_oink,org.pig.oink.operation.impl,PigEventListener,jobFailedNotification,Long Statement,The length of the statement "logger.info("Job " + jobStats.getJobId() + " completed with status "+ jobStats.getState()+ " for request "+ requestId+ " with error "+ jobStats.getErrorMessage());" is 163.,61
+ebay_oink,org.pig.oink.operation.impl,SubmitTask,run,Long Statement,The length of the statement "String encodedStats=new String(Base64.encodeBase64URLSafeString(gson.toJson(requestStats`PigRequestStats.class).getBytes()));" is 125.,57
+ebay_oink,org.pig.oink.operation.impl,SubmitTask,run,Magic Number,The method contains a magic number: 100,57
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 123,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 1234,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 5,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 123,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 1234,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 5,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 12,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 123,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 10,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 12,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 123,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 10,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 100,27
+ebay_oink,org.pig.oink.bean,TestRequestStats,testRequestStats,Magic Number,The method contains a magic number: 100,27
+ebay_oink,org.pig.oink.common.service,EndNotificationService,sendEmail,Long Parameter List,The method has 5 parameters. ,28
+ebay_oink,org.pig.oink.common.service.impl,HttpNotification,run,Magic Number,The method contains a magic number: 3,44
+ebay_oink,org.pig.oink.common.service.impl,HttpNotification,run,Magic Number,The method contains a magic number: 30000,44
+ebay_oink,org.pig.oink.common.service.impl,HttpNotification,run,Magic Number,The method contains a magic number: 30000,44
+ebay_oink,org.pig.oink.common.service.impl,EmailNotification,EmailNotification,Long Parameter List,The method has 5 parameters. ,41
+ebay_oink,org.pig.oink.common.service.impl,EndNotificationServiceImpl,sendEmail,Long Parameter List,The method has 5 parameters. ,39
+ebay_oink,org.pig.oink.common.service.impl,TestEndNotificationServiceImpl,testHttpNotification,Magic Number,The method contains a magic number: 1000,44
+ebay_oink,org.pig.oink.common.service.impl,MockServlet,doGet,Magic Number,The method contains a magic number: 200,34
+ebay_oink,org.pig.oink.common.service.impl,MockServlet,doGet,Magic Number,The method contains a magic number: 200,34
+ebay_oink,org.pig.oink.common.config,TestPropertyLoader,testPropertyLoader,Empty catch clause,The method has an empty catch block.,25
+ebay_oink,org.pig.oink.common.config,TestPropertyLoader,testPropertyLoader,Empty catch clause,The method has an empty catch block.,25
+ebay_oink,org.pig.oink.testutils,ServletTestContext,stopServer,Empty catch clause,The method has an empty catch block.,115
+ebay_oink,org.pig.oink.testutils,ServletTestContext,stopServer,Empty catch clause,The method has an empty catch block.,115

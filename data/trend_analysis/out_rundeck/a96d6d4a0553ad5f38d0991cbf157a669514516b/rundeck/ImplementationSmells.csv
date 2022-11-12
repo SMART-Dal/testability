@@ -1,0 +1,869 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+rundeck,com.dtolabs.launcher,Check,main,Magic Number,The method contains a magic number: 2,91
+rundeck,com.dtolabs.launcher,Check,testBaseFiles,Long Statement,The length of the statement "final String[] requiredFiles=new String[]{"framework.properties"`"project.properties"`"log4j.properties"`"preferences.properties"`"profile"};" is 141.,173
+rundeck,com.dtolabs.launcher,Check,testEtcFrameworkProperties,Long Statement,The length of the statement "final String[] requiredProps={"java.home"`"rdeck.home"`"rdeck.base"`"framework.rdeck.base"`"framework.rdeck.dir"`"framework.email.tolist"`"framework.email.from"`"framework.email.replyto"`"framework.email.mailhost"`"framework.email.mailport"`"framework.email.user"`"framework.email.password"`"framework.email.ssl"`"framework.email.failonerror"`"framework.log.format"`"framework.server.username"`"framework.server.password"`"framework.ssh.keypath"`"framework.ssh.user"`"framework.ssh.timeout"`"framework.log.dispatch.console.format"`"framework.server.url"`"framework.rundeck.url"`"framework.rdeck.version"`"framework.authorization.class"`"framework.authentication.class"`"framework.centraldispatcher.classname"`"framework.nodeauthentication.classname"`"framework.projects.dir"`"framework.etc.dir"`"framework.var.dir"`"framework.logs.dir"`"framework.src.dir"`"framework.nodes.file.name"`"framework.server.hostname"`"framework.node.name"`"framework.node.hostname"`"framework.node"`"framework.node.type"};" is 1000.,349
+rundeck,com.dtolabs.launcher,Check,testEtcFrameworkProperties,Long Statement,The length of the statement "reqdefaults.setProperty("framework.nodeauthentication.classname"`"com.dtolabs.rundeck.core.authentication.DefaultNodeAuthResolutionStrategy");" is 142.,349
+rundeck,com.dtolabs.launcher,Check,testPropertiesFile,Long Parameter List,The method has 6 parameters. ,438
+rundeck,com.dtolabs.launcher,Check,testPropertiesFile,Complex Conditional,The conditional expression testProperties.containsKey(s) || (null != existKeys && existKeys.contains(s)) is complex.,457
+rundeck,com.dtolabs.launcher,Check,testPropertiesFile,Complex Method,Cyclomatic complexity of the method is 11,457
+rundeck,com.dtolabs.launcher,Check,testPropertiesFile,Long Parameter List,The method has 8 parameters. ,457
+rundeck,com.dtolabs.launcher,Check,reportError,Complex Conditional,The conditional expression !requiredParams.isQuietFlag() && (invalidated || requiredParams.isDebugFlag()) is complex.,772
+rundeck,com.dtolabs.launcher,Check,reportMissing,Complex Conditional,The conditional expression !requiredParams.isQuietFlag() && (invalidated || requiredParams.isDebugFlag()) is complex.,783
+rundeck,com.dtolabs.launcher,Check,parse,Complex Conditional,The conditional expression args[i].startsWith("-") && !args[i].startsWith("--") && args[i].length() > 2 is complex.,992
+rundeck,com.dtolabs.launcher,Check,parse,Complex Method,Cyclomatic complexity of the method is 21,992
+rundeck,com.dtolabs.launcher,Check,parse,Magic Number,The method contains a magic number: 2,992
+rundeck,com.dtolabs.launcher,MainReporter,reportError,Complex Conditional,The conditional expression !requiredParams.isQuietFlag() && (invalidated || requiredParams.isDebugFlag()) is complex.,772
+rundeck,com.dtolabs.launcher,MainReporter,reportMissing,Complex Conditional,The conditional expression !requiredParams.isQuietFlag() && (invalidated || requiredParams.isDebugFlag()) is complex.,783
+rundeck,com.dtolabs.launcher,RequiredParams,parse,Complex Conditional,The conditional expression args[i].startsWith("-") && !args[i].startsWith("--") && args[i].length() > 2 is complex.,992
+rundeck,com.dtolabs.launcher,RequiredParams,parse,Complex Method,Cyclomatic complexity of the method is 21,992
+rundeck,com.dtolabs.launcher,RequiredParams,parse,Magic Number,The method contains a magic number: 2,992
+rundeck,com.dtolabs.launcher,Preferences,generate,Complex Conditional,The conditional expression (null == ENV_JAVA_HOME || "".equals(ENV_JAVA_HOME)) && (null == JAVA_HOME || "".equals(JAVA_HOME)) is complex.,55
+rundeck,com.dtolabs.launcher,Preferences,generate,Complex Method,Cyclomatic complexity of the method is 14,55
+rundeck,com.dtolabs.launcher,Preferences,generate,Long Identifier,The length of the field RUNDECK_DEFAULTS_PROPERTIES_NAME is 32.,55
+rundeck,com.dtolabs.launcher,Preferences,convert2PropName,Magic Number,The method contains a magic number: 2,217
+rundeck,com.dtolabs.launcher,Setup,newImpl,Complex Method,Cyclomatic complexity of the method is 11,129
+rundeck,com.dtolabs.launcher,Setup,newImpl,Long Statement,The length of the statement "for ( final String prop : new String[]{"framework.var.dir"`"framework.tmp.dir"`"framework.logs.dir"`"framework.etc.dir"`"framework.projects.dir"}) {" is 148.,129
+rundeck,com.dtolabs.launcher,Setup,newImpl,Long Statement,The length of the statement "final String expandpath=path.replaceAll("\\$\\{framework\\.var\\.dir\\}"`frameworkProps.getProperty("framework.var.dir"));" is 122.,129
+rundeck,com.dtolabs.launcher,Setup,newImpl,Long Statement,The length of the statement "final CreateAction createAction=new CreateAction(this`Framework.getInstance(basedir.getAbsolutePath())`BaseAction.createArgs(prefs.getProperty("project.default.name")`true)`CreateAction.createArgs(false));" is 205.,129
+rundeck,com.dtolabs.launcher,Setup,getOptParam,Long Statement,The length of the statement "if (args[arg_i + 1].startsWith("-")) throw new SetupException("arg: " + args[arg_i] + " does not have a parameter` instead was provided: "+ args[arg_i + 1]);" is 157.,352
+rundeck,com.dtolabs.launcher,Setup,parse,Complex Method,Cyclomatic complexity of the method is 11,370
+rundeck,com.dtolabs.launcher,Setup,validate,Complex Method,Cyclomatic complexity of the method is 12,408
+rundeck,com.dtolabs.launcher,Parameters,getOptParam,Long Statement,The length of the statement "if (args[arg_i + 1].startsWith("-")) throw new SetupException("arg: " + args[arg_i] + " does not have a parameter` instead was provided: "+ args[arg_i + 1]);" is 157.,352
+rundeck,com.dtolabs.launcher,Parameters,parse,Complex Method,Cyclomatic complexity of the method is 11,370
+rundeck,com.dtolabs.launcher,Parameters,validate,Complex Method,Cyclomatic complexity of the method is 12,408
+rundeck,com.dtolabs.launcher,CheckTest,testRequiredParamsParse,Long Method,The method has 168 lines of code.,53
+rundeck,com.dtolabs.launcher,CheckTest,testtestPropertiesFile,Long Method,The method has 125 lines of code.,245
+rundeck,com.dtolabs.launcher.check,CheckerImplTest,testCheckPropertyValues,Magic Number,The method contains a magic number: 2,60
+rundeck,com.dtolabs.launcher.check,CheckerImplTest,testCheckPropertiesExist,Magic Number,The method contains a magic number: 2,128
+rundeck,com.dtolabs.shared.reports,ReportAgent,logTypeInfo,Long Parameter List,The method has 6 parameters. ,51
+rundeck,com.dtolabs.shared.reports,ReportAgent,logObjectInfo,Long Parameter List,The method has 8 parameters. ,87
+rundeck,com.dtolabs.shared.reports,ReportAgent,objectInfoMemento,Long Parameter List,The method has 8 parameters. ,162
+rundeck,com.dtolabs.shared.reports,ReportAgent,logCommandInfo,Long Parameter List,The method has 10 parameters. ,199
+rundeck,com.dtolabs.shared.reports,ReportAgent,logCommandInfo,Long Parameter List,The method has 12 parameters. ,236
+rundeck,com.dtolabs.shared.reports,ReportAgent,logCommandInfo,Long Statement,The length of the statement "logCommandInfo(maprefUri`project`author`entName`entType`commandName`controllerName`action`actionType`nodename`reportId`message`null`null`null);" is 143.,236
+rundeck,com.dtolabs.shared.reports,ReportAgent,logCommandInfo,Complex Method,Cyclomatic complexity of the method is 9,279
+rundeck,com.dtolabs.shared.reports,ReportAgent,logCommandInfo,Long Parameter List,The method has 15 parameters. ,279
+rundeck,com.dtolabs.shared.reports,ReportAgent,logExecInfo,Long Parameter List,The method has 11 parameters. ,362
+rundeck,com.dtolabs.shared.reports,ReportAgent,logPatternInfo,Long Parameter List,The method has 6 parameters. ,429
+rundeck,com.dtolabs.shared.reports,ReportAgent,logProjectInfo,Long Parameter List,The method has 5 parameters. ,466
+rundeck,com.dtolabs.shared.resources,ResourceXMLGenerator,generate,Complex Method,Cyclomatic complexity of the method is 11,184
+rundeck,com.dtolabs.shared.resources,ResourceXMLGenerator,generate,Long Statement,The length of the statement "final Document doc=DocumentFactory.getInstance().createDocument().addDocType("project"`DTD_PROJECT_DOCUMENT_1_0_EN`"project.dtd");" is 130.,184
+rundeck,com.dtolabs.shared.resources,ResourceXMLParser,createEntityResolver,Long Statement,The length of the statement "System.err.println("couldn't load resource " + PROJECT_DTD_RESOURCE_PATH + ":"+ ResourceXMLParser.class.getClassLoader().getResource(PROJECT_DTD_RESOURCE_PATH));" is 161.,117
+rundeck,com.dtolabs.shared.resources,ResourceXMLParser,resolveEntity,Long Statement,The length of the statement "System.err.println("couldn't load resource " + PROJECT_DTD_RESOURCE_PATH + ":"+ ResourceXMLParser.class.getClassLoader().getResource(PROJECT_DTD_RESOURCE_PATH));" is 161.,119
+rundeck,com.dtolabs.shared.resources,ResourceXMLParser,parseEnt,Long Statement,The length of the statement "log4j.warn("Parsed duplicate resource definition (" + ent.getId() + "): "+ reportNodeErrorLocation(node)+ ". file: "+ file.getAbsolutePath());" is 142.,145
+rundeck,com.dtolabs.shared.resources,ResourceXMLParser,parseEntProperties,Long Statement,The length of the statement "throw new ResourceXMLParserException("Unexpected entity declaration: " + node.getName() + ": "+ reportNodeErrorLocation(node));" is 127.,271
+rundeck,com.dtolabs.shared.resources,ResourceXMLParser,hashCode,Magic Number,The method contains a magic number: 31,519
+rundeck,com.dtolabs.shared.resources,ResourceXMLParser,hashCode,Magic Number,The method contains a magic number: 31,519
+rundeck,com.dtolabs.shared.resources,ResourceXMLParser,hashCode,Magic Number,The method contains a magic number: 31,519
+rundeck,com.dtolabs.shared.resources,Entity,hashCode,Magic Number,The method contains a magic number: 31,519
+rundeck,com.dtolabs.shared.resources,Entity,hashCode,Magic Number,The method contains a magic number: 31,519
+rundeck,com.dtolabs.shared.resources,Entity,hashCode,Magic Number,The method contains a magic number: 31,519
+rundeck,com.dtolabs.shared.resources,TestResourceXMLGenerator,testResourceXMLGenerator,Long Method,The method has 115 lines of code.,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLGenerator,testSettings,Magic Number,The method contains a magic number: 2,196
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Long Method,The method has 529 lines of code.,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Long Statement,The length of the statement "assertEquals("wrong resources.replace"`"false"`deploymentEntity.getProperty(ResourceXMLConstants.RESOURCES_REPLACE_PROP));" is 122.,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 4,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 10,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 4,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 15,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 5,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 4,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 2,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 3,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 3,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 2,73
+rundeck,com.dtolabs.shared.resources,TestResourceXMLParser,testParse,Magic Number,The method contains a magic number: 2,73
+rundeck,com.dtolabs.rundeck.core.cli,CLIUtils,generateArgline,Complex Conditional,The conditional expression arg.indexOf(" ") >= 0 && !(0 == arg.indexOf("'") && (arg.length() - 1) == arg.lastIndexOf("'")) is complex.,51
+rundeck,com.dtolabs.rundeck.core.cli,CLIUtils,splitArgLine,Magic Number,The method contains a magic number: 2,85
+rundeck,com.dtolabs.rundeck.core.cli,CLIUtils,splitArgLine,Magic Number,The method contains a magic number: 2,85
+rundeck,com.dtolabs.rundeck.core.cli,CLIUtils,splitArgLine,Magic Number,The method contains a magic number: 3,85
+rundeck,com.dtolabs.rundeck.core.cli,CLIUtils,splitArgLine,Magic Number,The method contains a magic number: 3,85
+rundeck,com.dtolabs.rundeck.core.cli,NodeDispatcher,executeNodedispatch,Long Parameter List,The method has 6 parameters. ,39
+rundeck,com.dtolabs.rundeck.core.cli,BaseTool,BaseTool,Abstract Function Call From Constructor,The constructor BaseTool calls a virtual method isUseHelpOption.,63
+rundeck,com.dtolabs.rundeck.core.cli,BaseTool,help,Magic Number,The method contains a magic number: 80,159
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Complex Conditional,The conditional expression thread.isInterrupted() || thread instanceof ExecutionServiceThread && ((ExecutionServiceThread)thread).isAborted() is complex.,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Complex Conditional,The conditional expression thread.isInterrupted() || thread instanceof ExecutionServiceThread && ((ExecutionServiceThread)thread).isAborted() is complex.,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Complex Conditional,The conditional expression null != failedListener && nodeNames.isEmpty() && !interrupted is complex.,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Complex Method,Cyclomatic complexity of the method is 22,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Long Method,The method has 119 lines of code.,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Long Parameter List,The method has 6 parameters. ,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Long Statement,The length of the statement "project.log("executeNodeDispatch: number of nodes to dispatch to: " + nodes.size() + "` (threadcount="+ threadcount+ ")"`Project.MSG_DEBUG);" is 140.,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Long Statement,The length of the statement "project.log("preparing for parallel execution...(keepgoing? " + keepgoing + "` threads: "+ threadcount+ ")"`Project.MSG_DEBUG);" is 127.,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Long Statement,The length of the statement "if (thread.isInterrupted() || thread instanceof ExecutionServiceThread && ((ExecutionServiceThread)thread).isAborted()) {" is 121.,53
+rundeck,com.dtolabs.rundeck.core.cli,DefaultNodeDispatcher,executeNodedispatch,Long Statement,The length of the statement "if (thread.isInterrupted() || thread instanceof ExecutionServiceThread && ((ExecutionServiceThread)thread).isAborted()) {" is 121.,53
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,parseArgs,Complex Conditional,The conditional expression cli.hasOption('z') || (System.getProperties().containsKey("rdeck.cli.terse") && "true".equalsIgnoreCase(System.getProperty("rdeck.cli.terse"))) is complex.,177
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,parseArgs,Complex Method,Cyclomatic complexity of the method is 24,177
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,parseArgs,Long Statement,The length of the statement "if (cli.hasOption('z') || (System.getProperties().containsKey("rdeck.cli.terse") && "true".equalsIgnoreCase(System.getProperty("rdeck.cli.terse")))) {" is 150.,177
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,parseArgs,Long Statement,The length of the statement "final FrameworkProject project=(FrameworkProject)framework.getFrameworkProjectMgr().listFrameworkProjects().iterator().next();" is 126.,177
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,generateExecLine,Complex Method,Cyclomatic complexity of the method is 14,294
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,run,Complex Conditional,The conditional expression (null == argsDeferred || 0 == argsDeferred.length) && null == getScript() && null == getServerScriptFilePath() && !isInlineScript() is complex.,381
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,run,Complex Conditional,The conditional expression null == t.getMessage() || argVerbose || "true".equals(System.getProperty("rdeck.traceExceptions")) is complex.,381
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,run,Complex Conditional,The conditional expression null != nfe.getNodeset() && nfe.getNodeset().size() > 0 && null == failedNodes is complex.,381
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,run,Long Statement,The length of the statement "if ((null == argsDeferred || 0 == argsDeferred.length) && null == getScript() && null == getServerScriptFilePath() && !isInlineScript()) {" is 138.,381
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Complex Conditional,The conditional expression null != executionItem.getDispatchedScript().getNodeSet() && null != executionItem.getDispatchedScript().getNodeSet().getInclude() && executionItem.getDispatchedScript().getNodeSet().getInclude().getTags() != null is complex.,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Complex Method,Cyclomatic complexity of the method is 9,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Long Identifier,The length of the field FRAMEWORK_LOG_RUNDECK_EXEC_CONSOLE_FORMAT is 41.,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Long Statement,The length of the statement "final ExecutionListener executionListener=new CLIExecutionListener(blistener`FailedNodesFilestore.createListener(getFailedNodes())`this`this`argTerse`logformat);" is 161.,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Long Statement,The length of the statement "if (null != executionItem.getDispatchedScript().getNodeSet() && null != executionItem.getDispatchedScript().getNodeSet().getInclude() && executionItem.getDispatchedScript().getNodeSet().getInclude().getTags() != null) {" is 219.,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Long Statement,The length of the statement "ReportAgent.logExecInfo(executionItem.getDispatchedScript().getFrameworkProject()`user`"dispatch"`com.dtolabs.shared.reports.Constants.ActionType.SUCCEED`getFramework().getFrameworkNodeName()`null`resultString`tags`script`startDate`new Date());" is 244.,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Long Statement,The length of the statement "final String failureString=null != result ? (null != result.getResultObject() ? result.getResultObject().toString() : null != result && result.getException() != null ? result.getException().getMessage() : "") : "action failed: result was null";" is 244.,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,runAction,Long Statement,The length of the statement "ReportAgent.logExecInfo(executionItem.getDispatchedScript().getFrameworkProject()`user`"dispatch"`com.dtolabs.shared.reports.Constants.ActionType.FAIL`getFramework().getFrameworkNodeName()`null`failureString`tags`script`startDate`new Date());" is 242.,481
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,createNodeSet,Long Parameter List,The method has 6 parameters. ,612
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,help,Long Statement,The length of the statement "formatter.printHelp(80`"dispatch [-h] [-v] [-V] [-q] [-p project] " + "[-I nodes] [-X xnodes] " + "[--threadcount <1>] [--keepgoing] "+ "[--queue] "+ "[[-S] | [-s <>] | [-- command-args]]"`null`options`"Examples:\n" + "| dispatch\n | => Prints all nodes\n" + "| dispatch -p default -- whoami\n | => Runs the whoami command on all nodes\n"+ "| dispatch -X node1 -- uptime\n | => Runs the uptime command on all nodes except node1\n"+ "| dispatch -s myscript.sh\n | => Copies and then runs myscript.sh to matcing nodes\n"+ "\n"+ "[RUNDECK version " + VersionConstants.VERSION + " ("+ VersionConstants.BUILD+ ")]");" is 611.,671
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,help,Magic Number,The method contains a magic number: 80,671
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,configurePrintStream,Long Statement,The length of the statement "throw new CoreException("Cannot configure print stream to a file. " + "Path does not exist or is not a directory: " + logpath);" is 127.,760
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,filterNodes,Complex Conditional,The conditional expression null != getNodeSet() && !(getNodeSet().getExclude().isBlank() && getNodeSet().getInclude().isBlank()) is complex.,1113
+rundeck,com.dtolabs.rundeck.core.cli,ExecTool,executeNodedispatch,Long Parameter List,The method has 6 parameters. ,1206
+rundeck,com.dtolabs.rundeck.core.cli,AbstractAction,filterNodes,Complex Conditional,The conditional expression null != getNodeSet() && !(getNodeSet().getExclude().isBlank() && getNodeSet().getInclude().isBlank()) is complex.,1113
+rundeck,com.dtolabs.rundeck.core.cli,CLIExecutionListener,CLIExecutionListener,Long Parameter List,The method has 5 parameters. ,73
+rundeck,com.dtolabs.rundeck.core.cli,CLIExecutionListener,CLIExecutionListener,Long Parameter List,The method has 6 parameters. ,83
+rundeck,com.dtolabs.rundeck.core.cli,CLIExecutionListener,shouldlog,Long Statement,The length of the statement "return null == this.loggerParams || (loggerParams.isQuiet() && level <= Constants.WARN_LEVEL || this.loggerParams.isVerbose() && level <= Constants.VERBOSE_LEVEL || this.loggerParams.isDebug() && level <= Constants.DEBUG_LEVEL);" is 228.,94
+rundeck,com.dtolabs.rundeck.core.cli,NodeFilterOptions,addOptions,Long Identifier,The length of the field FILTER_EXCLUDE_PRECEDENCE_LONG is 30.,92
+rundeck,com.dtolabs.rundeck.core.cli,NodeFilterOptions,addOptions,Long Statement,The length of the statement "options.addOption(FILTER_EXCLUDE_PRECEDENCE_OPT`FILTER_EXCLUDE_PRECEDENCE_LONG`true`"true/false. if true` exclusion filters have precedence over inclusion filters");" is 165.,92
+rundeck,com.dtolabs.rundeck.core.cli,NodeFilterOptions,parseArgs,Complex Method,Cyclomatic complexity of the method is 10,107
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testParseNodeDispatchArgs,Magic Number,The method contains a magic number: 2,137
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testParseNodeDispatchArgs,Magic Number,The method contains a magic number: 2,137
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testParseNodeDispatchArgs,Magic Number,The method contains a magic number: 2,137
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testListAction,Magic Number,The method contains a magic number: 2,225
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Long Method,The method has 144 lines of code.,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Long Statement,The length of the statement "main.parseArgs(new String[]{"-p"`TEST_EXEC_TOOL_PROJECT`"-s"`testScriptFile.getAbsolutePath()`"--"`"test"`"args"`"with a space"});" is 130.,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Magic Number,The method contains a magic number: 3,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Magic Number,The method contains a magic number: 2,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Magic Number,The method contains a magic number: 2,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Magic Number,The method contains a magic number: 3,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Magic Number,The method contains a magic number: 2,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testRunAction,Magic Number,The method contains a magic number: 2,342
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testCreateNodeSet,Long Method,The method has 102 lines of code.,579
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testCreateNodeSet,Long Statement,The length of the statement "main.parseArgs(new String[]{"-p"`TEST_EXEC_TOOL_PROJECT`"-C"`"2"`"-I"`"ahostname"`"-X"`"tags=blaoen"`"-I"`"os-family=test"`"-X"`"os-version=3"});" is 145.,579
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testCreateNodeSet,Long Statement,The length of the statement "main.parseArgs(new String[]{"-p"`TEST_EXEC_TOOL_PROJECT`"--filter-exclude-precedence"`"false"`"-C"`"2"`"-X"`"ahostname"`"-I"`"tags=blaoen"});" is 141.,579
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testCreateNodeSet,Long Statement,The length of the statement "main.parseArgs(new String[]{"-p"`TEST_EXEC_TOOL_PROJECT`"--filter-exclude-precedence"`"true"`"-C"`"2"`"-I"`"ahostname"`"-X"`"tags=blaoen"});" is 140.,579
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testCreateNodeSet,Magic Number,The method contains a magic number: 2,579
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testCreateNodeSet,Magic Number,The method contains a magic number: 2,579
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,toString,Long Statement,The length of the statement "return "testCentralDispatcher{" + "killCalled=" + killCalled + "` queueCommandCalled="+ queueCommandCalled+ "` queueScriptCalled="+ queueScriptCalled+ "` listDispatcherCalled="+ listDispatcherCalled+ "` passedinId='"+ passedinId+ '\''+ "` passedinScript="+ passedinScript+ '}';" is 277.,786
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testQueueOption,Long Statement,The length of the statement "assertEquals("unexpected value: " + test.passedinScript.getServerScriptFilePath()`"src/test/com/dtolabs/rundeck/core/cli/test-dispatch-script.txt"`test.passedinScript.getServerScriptFilePath());" is 194.,799
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testQueueOption,Long Statement,The length of the statement "main.run(new String[]{"-p"`"testProject"`"-K"`"-C"`"2"`"-I"`"hostname1"`"-X"`"tags=baloney"`"-Q"`"--"`"shell"`"command"`"string"});" is 131.,799
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testQueueOption,Magic Number,The method contains a magic number: 3,799
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testQueueOption,Magic Number,The method contains a magic number: 2,799
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testQueueOption,Magic Number,The method contains a magic number: 2,799
+rundeck,com.dtolabs.rundeck.core.cli,TestExecTool,testQueueOption,Magic Number,The method contains a magic number: 2,799
+rundeck,com.dtolabs.rundeck.core.cli,testCentralDispatcher,toString,Long Statement,The length of the statement "return "testCentralDispatcher{" + "killCalled=" + killCalled + "` queueCommandCalled="+ queueCommandCalled+ "` queueScriptCalled="+ queueScriptCalled+ "` listDispatcherCalled="+ listDispatcherCalled+ "` passedinId='"+ passedinId+ '\''+ "` passedinScript="+ passedinScript+ '}';" is 277.,786
+rundeck,com.dtolabs.rundeck.core.cli,TestCLIUtils,testSplitArgLine,Long Statement,The length of the statement "assertEquals("incorrect argline"`Arrays.asList("-test1"`"something else")`CLIUtils.splitArgLine("-test1 \"something else\""));" is 126.,54
+rundeck,com.dtolabs.rundeck.core.cli,TestCLIUtils,testSplitArgLine,Long Statement,The length of the statement "assertEquals("incorrect argline"`Arrays.asList("-test1"`"something else")`CLIUtils.splitArgLine("-test1 'something else'"));" is 124.,54
+rundeck,com.dtolabs.rundeck.core.cli,TestCLIUtils,testSplitArgLine,Long Statement,The length of the statement "assertEquals("incorrect argline"`Arrays.asList("-test1"`"something else"`"-test2"`"another"`"-test3"`"what if")`CLIUtils.splitArgLine("-test1 'something else' -test2 another -test3 \"what if\""));" is 196.,54
+rundeck,com.dtolabs.rundeck.core.cli,TestCLIUtils,testSplitArgLine,Long Statement,The length of the statement "assertEquals("incorrect argline"`Arrays.asList("-test1"`"value"`"--something='else'")`CLIUtils.splitArgLine("-test1 value --something='else'"));" is 144.,54
+rundeck,com.dtolabs.rundeck.core.cli,TestCLIUtils,testSplitArgLine,Long Statement,The length of the statement "assertEquals("incorrect argline"`Arrays.asList("-test1"`"value"`"--something='else'")`CLIUtils.splitArgLine("-test1 value \"--something='else'\""));" is 148.,54
+rundeck,com.dtolabs.rundeck.core.cli,TestCLIUtils,testSplitArgLine,Long Statement,The length of the statement "assertEquals("incorrect argline"`Arrays.asList("-test1"`"value"`"--something=\"else\"")`CLIUtils.splitArgLine("-test1 value '--something=\"else\"'"));" is 150.,54
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,main,Magic Number,The method contains a magic number: 2,353
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,addOptions,Long Statement,The length of the statement "options.addOption(FILE_OPTION`FILE_OPTION_LONG`true`"File path. For list action` path to store the job definitions found in XML. For load action` path to an XML file to upload.");" is 179.,433
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,addOptions,Long Statement,The length of the statement "options.addOption(FORMAT_OPTION`FORMAT_OPTION_LONG`true`"Format for input/output file. One of: " + Arrays.toString(JobDefinitionFileFormat.values()));" is 150.,433
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,parseArgs,Long Statement,The length of the statement "throw new CLIToolOptionsException("Invalid format: " + cli.getOptionValue(FORMAT_OPTION) + "` must be one of: "+ Arrays.toString(JobDefinitionFileFormat.values()));" is 164.,441
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,addOptions,Long Statement,The length of the statement "options.addOption(DUPLICATE_OPTION`DUPLICATE_OPTION_LONG`true`"Duplicate job behavior option. When loading jobs` treat definitions that already exist on the server in the given manner: 'update' existing jobs`'skip' the uploaded definitions` or 'create' them anyway. (load action. default: update)");" is 299.,464
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,parseArgs,Long Statement,The length of the statement "throw new CLIToolOptionsException("Illegal value for --" + DUPLICATE_OPTION_LONG + ": '"+ dupeopt+ "'` must be one of: "+ Arrays.toString(StoredJobsRequestDuplicateOption.values()));" is 182.,469
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,validate,Complex Method,Cyclomatic complexity of the method is 8,482
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,validate,Long Statement,The length of the statement "throw new CLIToolOptionsException("load action: -" + FILE_OPTION + "/--"+ FILE_OPTION_LONG+ " option: File does not exist: "+ argFile.getAbsolutePath());" is 153.,482
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,addOptions,Long Statement,The length of the statement "options.addOption(GROUP_OPTION`GROUP_OPTION_LONG`true`"Group name. List jobs within this group or sub-group (list action)");" is 124.,519
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,addOptions,Long Statement,The length of the statement "options.addOption(IDLIST_OPTION`IDLIST_OPTION_LONG`true`"Job ID List. List Jobs with these IDs explicitly. Comma-separated` e.g.: 1`2`3. (list action)");" is 153.,519
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,parseArgs,Long Statement,The length of the statement "throw new CLIToolOptionsException("Invalid action: " + args[0] + "` must be one of: "+ Arrays.toString(Actions.values()));" is 122.,555
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,go,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@8bd89e2,578
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,getHelpString,Long Statement,The length of the statement "return "rd-jobs [<action>] [options...]: list Jobs on the server` or upload Jobs to the server from a file\n" + "\tList action (default):\n" + "rd-jobs [list] [query options] : list jobs matching the query` or all available\n"+ "rd-jobs [list] --name <name> : Match jobs with the given name\n"+ "rd-jobs [list] [query options] --file <output> : Save matched Jobs to output file as XML\n"+ "rd-jobs [list] [query options] --file <output> --format <xml|yaml> : Save matched Jobs to output file as XML or YAML\n"+ "\tLoad action:\n"+ "rd-jobs load --file <file> : load jobs stored in XML file\n"+ "rd-jobs load --file <file> -F yaml : load jobs stored in YAML file";" is 663.,596
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,loadAction,Complex Method,Cyclomatic complexity of the method is 11,608
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,listAction,Long Statement,The length of the statement "result=framework.getCentralDispatcherMgr().listStoredJobs(this`null != argFile ? new FileOutputStream(argFile) : null`format);" is 126.,662
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,logStoredJobItem,Complex Conditional,The conditional expression isArgVerbose() && null != item.getGroup() && !"".equals(item.getGroup()) is complex.,696
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,logStoredJobItem,Complex Conditional,The conditional expression isArgVerbose() && null != item.getDescription() && !"".equals(item.getDescription()) is complex.,696
+rundeck,com.dtolabs.rundeck.core.cli.jobs,JobsTool,logStoredJobItem,Long Statement,The length of the statement "log(MessageFormat.format("\t{0} {1}{2}{3}{4}{5}"`"-"`isArgVerbose() && null != item.getGroup() ? item.getGroup() + "/" : ""`item.getName()`null != item.getJobId() ? " [" + item.getJobId() + "]" : ""`null != item.getUrl() ? " <" + item.getUrl() + ">" : ""`null != message ? " : " + message : ""));" is 296.,710
+rundeck,com.dtolabs.rundeck.core.cli.jobs,CommonOptions,addOptions,Long Statement,The length of the statement "options.addOption(FILE_OPTION`FILE_OPTION_LONG`true`"File path. For list action` path to store the job definitions found in XML. For load action` path to an XML file to upload.");" is 179.,433
+rundeck,com.dtolabs.rundeck.core.cli.jobs,CommonOptions,addOptions,Long Statement,The length of the statement "options.addOption(FORMAT_OPTION`FORMAT_OPTION_LONG`true`"Format for input/output file. One of: " + Arrays.toString(JobDefinitionFileFormat.values()));" is 150.,433
+rundeck,com.dtolabs.rundeck.core.cli.jobs,CommonOptions,parseArgs,Long Statement,The length of the statement "throw new CLIToolOptionsException("Invalid format: " + cli.getOptionValue(FORMAT_OPTION) + "` must be one of: "+ Arrays.toString(JobDefinitionFileFormat.values()));" is 164.,441
+rundeck,com.dtolabs.rundeck.core.cli.jobs,LoadOptions,addOptions,Long Statement,The length of the statement "options.addOption(DUPLICATE_OPTION`DUPLICATE_OPTION_LONG`true`"Duplicate job behavior option. When loading jobs` treat definitions that already exist on the server in the given manner: 'update' existing jobs`'skip' the uploaded definitions` or 'create' them anyway. (load action. default: update)");" is 299.,464
+rundeck,com.dtolabs.rundeck.core.cli.jobs,LoadOptions,parseArgs,Long Statement,The length of the statement "throw new CLIToolOptionsException("Illegal value for --" + DUPLICATE_OPTION_LONG + ": '"+ dupeopt+ "'` must be one of: "+ Arrays.toString(StoredJobsRequestDuplicateOption.values()));" is 182.,469
+rundeck,com.dtolabs.rundeck.core.cli.jobs,LoadOptions,validate,Complex Method,Cyclomatic complexity of the method is 8,482
+rundeck,com.dtolabs.rundeck.core.cli.jobs,LoadOptions,validate,Long Statement,The length of the statement "throw new CLIToolOptionsException("load action: -" + FILE_OPTION + "/--"+ FILE_OPTION_LONG+ " option: File does not exist: "+ argFile.getAbsolutePath());" is 153.,482
+rundeck,com.dtolabs.rundeck.core.cli.jobs,ListOptions,addOptions,Long Statement,The length of the statement "options.addOption(GROUP_OPTION`GROUP_OPTION_LONG`true`"Group name. List jobs within this group or sub-group (list action)");" is 124.,519
+rundeck,com.dtolabs.rundeck.core.cli.jobs,ListOptions,addOptions,Long Statement,The length of the statement "options.addOption(IDLIST_OPTION`IDLIST_OPTION_LONG`true`"Job ID List. List Jobs with these IDs explicitly. Comma-separated` e.g.: 1`2`3. (list action)");" is 153.,519
+rundeck,com.dtolabs.rundeck.core.cli.jobs,TestJobsTool,testRun,Long Method,The method has 148 lines of code.,119
+rundeck,com.dtolabs.rundeck.core.cli.jobs,TestJobsTool,testRun,Long Statement,The length of the statement "tool.run(new String[]{"list"`"-f"`t.getAbsolutePath()`"-" + JobsTool.FORMAT_OPTION`JobDefinitionFileFormat.yaml.getName()});" is 124.,119
+rundeck,com.dtolabs.rundeck.core.cli.jobs,TestJobsTool,testParseArgs,Long Method,The method has 124 lines of code.,313
+rundeck,com.dtolabs.rundeck.core.cli.jobs,TestJobsTool,testParseArgs,Long Statement,The length of the statement "assertTrue("wrong message:" + e.getMessage()`e.getMessage().startsWith("load action: -f/--file option: File does not exist"));" is 126.,313
+rundeck,com.dtolabs.rundeck.core.cli.util,MvnPomInfoTool,parseArgs,Magic Number,The method contains a magic number: 2,256
+rundeck,com.dtolabs.rundeck.core.cli.util,MvnPomInfoTool,parseArgs,Magic Number,The method contains a magic number: 2,256
+rundeck,com.dtolabs.rundeck.core.cli.util,MvnPomInfoTool,parseArgs,Magic Number,The method contains a magic number: 2,256
+rundeck,com.dtolabs.rundeck.core.cli.util,MvnPomInfoTool,help,Magic Number,The method contains a magic number: 80,295
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testRun,Long Statement,The length of the statement "assertEquals("incorrect basedir"`testbase.getAbsolutePath()`dom.selectSingleNode("/packages/@basedir").getStringValue());" is 121.,42
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testRun,Long Statement,The length of the statement "assertEquals("incorrect basedir"`testbase.getAbsolutePath()`dom.selectSingleNode("/packages/@basedir").getStringValue());" is 121.,42
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testRun,Magic Number,The method contains a magic number: 2,42
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testParseArgs,Magic Number,The method contains a magic number: 2,147
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testParseArgs,Magic Number,The method contains a magic number: 2,147
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testProcess,Magic Number,The method contains a magic number: 2,238
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testProcess,Magic Number,The method contains a magic number: 4,238
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testProcess,Magic Number,The method contains a magic number: 4,238
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testProcess,Magic Number,The method contains a magic number: 4,238
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testGenerateData,Long Statement,The length of the statement "assertEquals("incorrect basedir"`testbase.getAbsolutePath()`dom.selectSingleNode("/packages/@basedir").getStringValue());" is 121.,304
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testGenerateData,Long Statement,The length of the statement "assertEquals("incorrect basedir"`testbase.getAbsolutePath()`dom.selectSingleNode("/packages/@basedir").getStringValue());" is 121.,304
+rundeck,com.dtolabs.rundeck.core.cli.util,TestMvnPomInfoTool,testGenerateData,Magic Number,The method contains a magic number: 2,304
+rundeck,com.dtolabs.rundeck.core.cli.project,BaseAction,BaseAction,Long Statement,The length of the statement "FWK_PROP_FILE=new File(Constants.getFrameworkConfigDir(framework.getBaseDir().getAbsolutePath())`"framework.properties");" is 121.,48
+rundeck,com.dtolabs.rundeck.core.cli.project,BaseAction,parseBaseActionArgs,Long Statement,The length of the statement "throw new ProjectToolException("Error: CreateAction: project names can only contain these characters: " + PROJECT_NAME_REGEX);" is 126.,71
+rundeck,com.dtolabs.rundeck.core.cli.project,ProjectTool,run,Complex Conditional,The conditional expression null == t.getMessage() || verbose || "true".equals(System.getProperty("rdeck.traceExceptions")) is complex.,97
+rundeck,com.dtolabs.rundeck.core.cli.project,ProjectTool,help,Long Statement,The length of the statement "formatter.printHelp(80`"rd-project [options]"`"options:"`options`"Examples:\n" + "\trd-project -p project --action create; # Initialize project\n" + "\trd-project -p project --action install; # Install resources and their modules\n"+ "\trd-project -p project --action install --pview; # Install resources and their modules and process view files\n"+ "\trd-project -p project --action pview; # Install process view files for deployed resources\n"+ "\trd-project -p project --action purge ; # purges all resources\n"+ "\n");" is 522.,128
+rundeck,com.dtolabs.rundeck.core.cli.project,ProjectTool,help,Magic Number,The method contains a magic number: 80,128
+rundeck,com.dtolabs.rundeck.core.cli.project,ProjectTool,initArgs,Long Statement,The length of the statement "throw new ProjectToolException("--name argument is not a valid name or expression: \"" + cli.getOptionValue('n') + "\""`e);" is 123.,187
+rundeck,com.dtolabs.rundeck.core.cli.queue,QueueTool,main,Magic Number,The method contains a magic number: 2,149
+rundeck,com.dtolabs.rundeck.core.cli.queue,QueueTool,getHelpString,Long Statement,The length of the statement "return "rd-queue <action> : list the executions running in the queue or kill a running execution\n" + "rd-queue [list] : list the executions running in the queue [default]\n" + "rd-queue kill --eid <id> : kill an execution running in the queue\n";" is 247.,190
+rundeck,com.dtolabs.rundeck.core.cli.queue,QueueTool,go,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@575fb099,305
+rundeck,com.dtolabs.rundeck.core.cli.queue,TestQueueTool,testRun,Long Statement,The length of the statement "public Collection<IStoredJobLoadResult> loadJobs( ILoadJobsRequest request` java.io.File input` JobDefinitionFileFormat format) throws CentralDispatcherException {" is 163.,142
+rundeck,com.dtolabs.rundeck.core.cli.queue,TestQueueTool,testRun,Long Statement,The length of the statement "public Collection<IStoredJob> listStoredJobs( IStoredJobsQuery query` OutputStream output` JobDefinitionFileFormat format) throws CentralDispatcherException {" is 158.,142
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,main,Magic Number,The method contains a magic number: 2,108
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,addOptions,Long Statement,The length of the statement "options.addOption(JOB_OPTION`JOB_OPTION_LONG`true`"Job identifier (group and name). Run a Job specified by Job name and optional group` e.g: 'Group Name/Job Name'. ");" is 167.,228
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,validate,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@63c4590b,251
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,validateRunAction,Long Statement,The length of the statement "throw new CLIToolOptionsException("run action: -" + Options.JOB_OPTION + "/--"+ Options.JOB_OPTION_LONG+ " option or -"+ Options.ID_OPTION+ "/--"+ Options.ID_OPTION_LONG+ " is required");" is 187.,262
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,validateRunAction,Long Statement,The length of the statement "throw new CLIToolOptionsException("run action: -" + Options.JOB_OPTION + "/--"+ Options.JOB_OPTION_LONG+ " option and -"+ Options.ID_OPTION+ "/--"+ Options.ID_OPTION_LONG+ " cannot be combined` please specify only one.");" is 221.,262
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,validateRunAction,Long Statement,The length of the statement "throw new CLIToolOptionsException("run action: -" + Options.ID_OPTION + "/--"+ Options.ID_OPTION_LONG+ " must be a valid ID number.");" is 134.,262
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,parseArgs,Long Statement,The length of the statement "throw new CLIToolOptionsException("Invalid action: " + args[0] + "` must be one of: "+ Arrays.toString(Actions.values()));" is 122.,289
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,go,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2c9e41cb,312
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,jobrunAction,Magic Number,The method contains a magic number: 2,328
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,jobrunAction,Magic Number,The method contains a magic number: 3,328
+rundeck,com.dtolabs.rundeck.core.cli.run,RunTool,getHelpString,Long Statement,The length of the statement "return "run : start running a Job on the server\n" + "run -i <id>: Run a job by ID immediately\n" + "run -j <group/name>: Run a job by Name immediately. Group must be specified if name is not unique.\n"+ "run -I <include> -X <exclude> [-i/-j ...]: Specify node filters and run a Job\n"+ "run -i <id> -- <arguments...>: Specify commandline arguments to the Job";" is 361.,413
+rundeck,com.dtolabs.rundeck.core.cli.run,Options,addOptions,Long Statement,The length of the statement "options.addOption(JOB_OPTION`JOB_OPTION_LONG`true`"Job identifier (group and name). Run a Job specified by Job name and optional group` e.g: 'Group Name/Job Name'. ");" is 167.,228
+rundeck,com.dtolabs.rundeck.core.cli.run,Options,validate,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@63c4590b,251
+rundeck,com.dtolabs.rundeck.core.cli.run,Options,validateRunAction,Long Statement,The length of the statement "throw new CLIToolOptionsException("run action: -" + Options.JOB_OPTION + "/--"+ Options.JOB_OPTION_LONG+ " option or -"+ Options.ID_OPTION+ "/--"+ Options.ID_OPTION_LONG+ " is required");" is 187.,262
+rundeck,com.dtolabs.rundeck.core.cli.run,Options,validateRunAction,Long Statement,The length of the statement "throw new CLIToolOptionsException("run action: -" + Options.JOB_OPTION + "/--"+ Options.JOB_OPTION_LONG+ " option and -"+ Options.ID_OPTION+ "/--"+ Options.ID_OPTION_LONG+ " cannot be combined` please specify only one.");" is 221.,262
+rundeck,com.dtolabs.rundeck.core.cli.run,Options,validateRunAction,Long Statement,The length of the statement "throw new CLIToolOptionsException("run action: -" + Options.ID_OPTION + "/--"+ Options.ID_OPTION_LONG+ " must be a valid ID number.");" is 134.,262
+rundeck,com.dtolabs.rundeck.core.dispatcher,NoCentralDispatcher,queueDispatcherScript,Long Statement,The length of the statement "throw new CentralDispatcherException("Operation unsupported: No central dispatcher class is configured: " + Framework.CENTRALDISPATCHER_CLS_PROP);" is 146.,48
+rundeck,com.dtolabs.rundeck.core.dispatcher,NoCentralDispatcher,queueDispatcherJob,Long Statement,The length of the statement "throw new CentralDispatcherException("Operation unsupported: No central dispatcher class is configured: " + Framework.CENTRALDISPATCHER_CLS_PROP);" is 146.,53
+rundeck,com.dtolabs.rundeck.core.dispatcher,NoCentralDispatcher,listDispatcherQueue,Long Statement,The length of the statement "throw new CentralDispatcherException("Operation unsupported: No central dispatcher class is configured: " + Framework.CENTRALDISPATCHER_CLS_PROP);" is 146.,58
+rundeck,com.dtolabs.rundeck.core.dispatcher,NoCentralDispatcher,killDispatcherExecution,Long Statement,The length of the statement "throw new CentralDispatcherException("Operation unsupported: No central dispatcher class is configured: " + Framework.CENTRALDISPATCHER_CLS_PROP);" is 146.,63
+rundeck,com.dtolabs.rundeck.core.dispatcher,NoCentralDispatcher,listStoredJobs,Long Statement,The length of the statement "throw new CentralDispatcherException("Operation unsupported: No central dispatcher class is configured: " + Framework.CENTRALDISPATCHER_CLS_PROP);" is 146.,68
+rundeck,com.dtolabs.rundeck.core.dispatcher,NoCentralDispatcher,loadJobs,Long Statement,The length of the statement "throw new CentralDispatcherException("Operation unsupported: No central dispatcher class is configured: " + Framework.CENTRALDISPATCHER_CLS_PROP);" is 146.,75
+rundeck,com.dtolabs.rundeck.core.dispatcher,DataContextUtils,replaceDataReferences,Complex Conditional,The conditional expression null != key && null != nm && null != data.get(key) && null != data.get(key).get(nm) is complex.,81
+rundeck,com.dtolabs.rundeck.core.dispatcher,DataContextUtils,replaceDataReferences,Magic Number,The method contains a magic number: 2,81
+rundeck,com.dtolabs.rundeck.core.dispatcher,DispatchedScriptImpl,DispatchedScriptImpl,Long Parameter List,The method has 7 parameters. ,47
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestCentralDispatcherMgrFactory,testCreateDefault,Long Statement,The length of the statement "CentralDispatcherMgrFactory test1=CentralDispatcherMgrFactory.create(getFrameworkInstance().getProperty("framework.centraldispatcher.classname")`getFrameworkInstance());" is 169.,61
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceDataReferencesArray,Magic Number,The method contains a magic number: 2,119
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceDataReferencesArray,Magic Number,The method contains a magic number: 2,119
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceDataReferencesArray,Magic Number,The method contains a magic number: 2,119
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceDataReferencesArray,Magic Number,The method contains a magic number: 2,119
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Empty catch clause,The method has an empty catch block.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Empty catch clause,The method has an empty catch block.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Empty catch clause,The method has an empty catch block.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Long Method,The method has 108 lines of code.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Long Statement,The length of the statement "File temp=DataContextUtils.replaceTokensInScript("test script some data @test.data@\n" + "test line 2 some data @test.data2@\n"`new HashMap<String`Map<String`String>>()`fwk);" is 174.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Long Statement,The length of the statement "File temp=DataContextUtils.replaceTokensInScript("test script some data @test.data@\n" + "test line 2 some data @test.data2@\n"`data`fwk);" is 138.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Long Statement,The length of the statement "File temp=DataContextUtils.replaceTokensInScript("test script some data @test.data@\n" + "test line 2 some data @test.data2@\n"`data`fwk);" is 138.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInScript,Long Statement,The length of the statement "File temp=DataContextUtils.replaceTokensInScript("test script some data @test.data@\n" + "test line 2 some data @test.data2@\n"`data`fwk);" is 138.,183
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInFile,Empty catch clause,The method has an empty catch block.,321
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInFile,Empty catch clause,The method has an empty catch block.,321
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInFile,Empty catch clause,The method has an empty catch block.,321
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testReplaceTokensInFile,Long Method,The method has 111 lines of code.,321
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testNodeData,Magic Number,The method contains a magic number: 10,458
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testNodeData,Magic Number,The method contains a magic number: 10,458
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testNodeData,Magic Number,The method contains a magic number: 10,458
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testNodeData,Magic Number,The method contains a magic number: 10,458
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testAddContext,Long Statement,The length of the statement "final Map<String`Map<String`String>> map=DataContextUtils.addContext("test1"`new HashMap<String`String>()`new HashMap<String`Map<String`String>>());" is 148.,530
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testAddContext,Magic Number,The method contains a magic number: 2,530
+rundeck,com.dtolabs.rundeck.core.dispatcher,TestDataContextUtils,testAddContext,Magic Number,The method contains a magic number: 2,530
+rundeck,com.dtolabs.rundeck.core.tasks.dispatch,NodeExecutionStatusTask,execute,Complex Method,Cyclomatic complexity of the method is 8,44
+rundeck,com.dtolabs.rundeck.core.tasks.net,ExtSSHExec,execute,Complex Method,Cyclomatic complexity of the method is 15,179
+rundeck,com.dtolabs.rundeck.core.tasks.net,ExtSSHExec,executeCommand,Complex Method,Cyclomatic complexity of the method is 18,258
+rundeck,com.dtolabs.rundeck.core.tasks.net,ExtSSHExec,executeCommand,Empty catch clause,The method has an empty catch block.,258
+rundeck,com.dtolabs.rundeck.core.tasks.net,ExtSSHExec,executeCommand,Long Method,The method has 111 lines of code.,258
+rundeck,com.dtolabs.rundeck.core.tasks.net,ExtSSHExec,run,Empty catch clause,The method has an empty catch block.,308
+rundeck,com.dtolabs.rundeck.core.tasks.net,SSHTaskBuilder,build,Complex Conditional,The conditional expression (null == nodeentry.getUsername() && !nodeentry.containsUserName()) && (project.getProperties().containsKey(SSH_USER_PROP) && !"".equals(project.getProperty(SSH_USER_PROP).trim())) is complex.,50
+rundeck,com.dtolabs.rundeck.core.tasks.net,SSHTaskBuilder,build,Long Parameter List,The method has 6 parameters. ,50
+rundeck,com.dtolabs.rundeck.core.tasks.net,SSHTaskBuilder,build,Long Statement,The length of the statement "if ((null == nodeentry.getUsername() && !nodeentry.containsUserName()) && (project.getProperties().containsKey(SSH_USER_PROP) && !"".equals(project.getProperty(SSH_USER_PROP).trim()))) {" is 186.,50
+rundeck,com.dtolabs.rundeck.core.tasks.net,SSHTaskBuilder,build,Long Statement,The length of the statement "project.log("Deprecated: Defaulted SSH username to " + project.getProperty(SSH_USER_PROP) + " when executing "+ project.getName()+ ". "+ "Manage the node information in nodes.properties for node: "+ nodeentry.getNodename());" is 224.,50
+rundeck,com.dtolabs.rundeck.core.authorization,JndiConfigParser,parse,Long Statement,The length of the statement "return new JndiConfig(lookup(CONNECTTION_NAME)`lookup(CONNECTION_PASS)`lookup(CONNECTION_URL)`lookup(ROLE_BASE)`lookup(ROLE_NAME)`lookup(ROLE_MEMBER)`lookup(USER_BASE)`lookup(USER_NAME_RDN));" is 191.,62
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Complex Method,Cyclomatic complexity of the method is 15,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Long Statement,The length of the statement "throw new NumberFormatException(type + ": " + new Integer(unit).toString()+ " cannot be greater than "+ max+ " or less than "+ min);" is 132.,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Long Statement,The length of the statement "throw new NumberFormatException(type + ": " + new Integer(unit).toString()+ " cannot be greater than "+ max+ " or less than "+ min);" is 132.,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Long Statement,The length of the statement "throw new NumberFormatException(type + ": " + new Integer(unit0).toString()+ " cannot be greater than "+ max+ " or less than "+ min);" is 133.,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Long Statement,The length of the statement "throw new NumberFormatException(type + ": " + new Integer(unit1).toString()+ " cannot be greater than "+ max+ " or less than "+ min);" is 133.,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Magic Number,The method contains a magic number: 6,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Magic Number,The method contains a magic number: 6,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Magic Number,The method contains a magic number: 23,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Magic Number,The method contains a magic number: 59,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,checkExp,Magic Number,The method contains a magic number: 2,85
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,TimeanddayExp,Long Statement,The length of the statement "this(TimeanddayExp.parseDayExp(timeandday)`TimeanddayExp.parseHourExp(timeandday)`TimeanddayExp.parseMinuteExp(timeandday));" is 124.,190
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,TimeanddayExp,Long Statement,The length of the statement "if (null == minuteExp || "".equals(minuteExp)) throw new NumberFormatException("minute expression is null or empty string");" is 124.,206
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,parseMinuteExp,Magic Number,The method contains a magic number: 2,254
+rundeck,com.dtolabs.rundeck.core.authorization,TimeanddayExp,matchTime,Complex Method,Cyclomatic complexity of the method is 8,308
+rundeck,com.dtolabs.rundeck.core.authorization,BaseAclsAuthorization,authorize,Long Parameter List,The method has 6 parameters. ,127
+rundeck,com.dtolabs.rundeck.core.authorization,BaseAclsAuthorization,authorize,Long Statement,The length of the statement "logger.debug("authorize()` user: " + user + "` "+ " project: "+ project+ "` "+ " deploymentType: "+ resourceType+ "` "+ " deploymentName: "+ resourceName+ "` "+ " module: "+ module+ "` "+ " command: "+ commandName);" is 215.,127
+rundeck,com.dtolabs.rundeck.core.authorization,BaseAclsAuthorization,authorize,Long Statement,The length of the statement "final String timeandday=new TimeanddayExp(new Integer(day).toString()`new Integer(hour).toString()`new Integer(minute).toString()).toString();" is 142.,127
+rundeck,com.dtolabs.rundeck.core.authorization,BaseAclsAuthorization,authorizeScript,Long Statement,The length of the statement "final String timeandday=new TimeanddayExp(new Integer(day).toString()`new Integer(hour).toString()`new Integer(minute).toString()).toString();" is 142.,206
+rundeck,com.dtolabs.rundeck.core.authorization,JndiAuthorization,JndiAuthorization,Long Statement,The length of the statement "throw new AuthorizationException("Caught NameNotFoundException` error: " + e.getMessage() + "` Unable to connect to JNDI Server: "+ cfg.getConnectionUrl()+ " with connectionName: "+ cfg.getConnectionName());" is 207.,58
+rundeck,com.dtolabs.rundeck.core.authorization,JndiAuthorization,determineUserRoles,Long Statement,The length of the statement "throw new AuthorizationException("Caught NamingException` error: " + e.getMessage() + "` Unable to obtain role memberships for user: "+ user);" is 142.,92
+rundeck,com.dtolabs.rundeck.core.authorization,TestPolicies,testPoliciesStructural,Magic Number,The method contains a magic number: 6,59
+rundeck,com.dtolabs.rundeck.core.authorization,TestPolicies,testListAllRoles,Magic Number,The method contains a magic number: 6,90
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,setUp,Long Statement,The length of the statement "legacyvalidationAuthorization=new SAREAuthorization(TestPolicies.getPath("com/dtolabs/rundeck/core/authorization/legacyconv"));" is 127.,48
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testInvalidParameters,Empty catch clause,The method has an empty catch block.,58
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testInvalidParameters,Empty catch clause,The method has an empty catch block.,58
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testAdminModulePrivileges,Long Statement,The length of the statement "assertTrue("'default' does not have access to 'foo/bar/adhocScript' to 'EXECUTE' with no environment specified."`authorization.evaluate(resource`subject`action`null).isAuthorized());" is 182.,68
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testAdminModulePrivileges,Long Statement,The length of the statement "assertTrue("'default' does not have access to 'foo/bar/adhocScript' to 'EXECUTE' with no environment specified."`authorization.evaluate(resource`subject`action`null).isAuthorized());" is 182.,68
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testXML1Validation,Long Statement,The length of the statement "assertTrue("Policy didn't match` XML1 Validation for admin to do anything."`legacyvalidationAuthorization.evaluate(declareModule("Monkey"`"barbaz")`createSubject("testXML1Validation"`"admin")`"READ"`environment).isAuthorized());" is 228.,92
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testNoModuleAccess,Long Statement,The length of the statement "assertFalse("Policy should not match because the admin-no-module cannot run modules."`legacyvalidationAuthorization.evaluate(declareModule("Monkey"`"barbaz")`createSubject("testNoModuleAccess"`"admin-no-module")`"READ"`environment).isAuthorized());" is 248.,100
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testNoScriptAccess,Long Statement,The length of the statement "assertFalse("Policy should not have matched: group admin-no-script` does not have script access."`legacyvalidationAuthorization.evaluate(resource`createSubject("testNoScriptAccess"`"admin-no-script")`"READ"`environment).isAuthorized());" is 236.,109
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testNoScriptAccess,Long Statement,The length of the statement "assertFalse("Policy should not have matched: group admin-no-script` does not have" + " script access. Omitted group from resource request."`legacyvalidationAuthorization.evaluate(resource`createSubject("testNoScriptAccess"`"admin-no-script")`"READ"`environment).isAuthorized());" is 278.,109
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testInvalidInput,Empty catch clause,The method has an empty catch block.,131
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testInvalidInput,Empty catch clause,The method has an empty catch block.,131
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testInvalidInput,Long Statement,The length of the statement "assertEquals("Expecting to see a code indicating that a property on the resource is missing."`Code.REJECTED_COMMAND_NOT_MATCHED`decision.explain().getCode());" is 158.,131
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testActionAuthorization,Long Statement,The length of the statement "assertEquals("Decision for successful authoraztion for action: workflow_run does not match` but should."`Code.GRANTED_ACTIONS_AND_COMMANDS_MATCHED`decision.explain().getCode());" is 177.,159
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testActionAuthorization,Long Statement,The length of the statement "assertEquals("Decision does not contain the proper explanation. "`Code.REJECTED_COMMAND_NOT_MATCHED`decision.explain().getCode());" is 130.,159
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testActionAuthorization,Long Statement,The length of the statement "assertEquals("my_wacky_action reason does not match."`Code.GRANTED_ACTIONS_AND_COMMANDS_MATCHED`decision.explain().getCode());" is 126.,159
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testActionAuthorization,Magic Number,The method contains a magic number: 100,159
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,testActionAuthorization,Magic Number,The method contains a magic number: 10,159
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,off_testProjectEnvironment,Long Statement,The length of the statement "assertTrue("Policy did not match the Lion context."`authorization.evaluate(resource`subject`"READ"`environment).isAuthorized());" is 128.,217
+rundeck,com.dtolabs.rundeck.core.authorization,TestSAREAuthorization,off_testProjectEnvironment,Long Statement,The length of the statement "assertFalse("Policy should not match the Lion context."`authorization.evaluate(resource`subject`"READ"`environment).isAuthorized());" is 132.,217
+rundeck,com.dtolabs.rundeck.core.authorization.providers,PoliciesCache,loadNextDocument,Empty catch clause,The method has an empty catch block.,121
+rundeck,com.dtolabs.rundeck.core.authorization.providers,cacheIterator,loadNextDocument,Empty catch clause,The method has an empty catch block.,121
+rundeck,com.dtolabs.rundeck.core.authorization.providers,Policies,count,Empty catch clause,The method has an empty catch block.,85
+rundeck,com.dtolabs.rundeck.core.authorization.providers,Policies,includes,Complex Method,Cyclomatic complexity of the method is 15,188
+rundeck,com.dtolabs.rundeck.core.authorization.providers,Context,includes,Complex Method,Cyclomatic complexity of the method is 15,188
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,internalEvaluate,Complex Method,Cyclomatic complexity of the method is 12,76
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,internalEvaluate,Long Statement,The length of the statement "throw new IllegalArgumentException("Resource does not identify any resource because it's an empty resource property or null.");" is 127.,76
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,internalEvaluate,Long Statement,The length of the statement "throw new IllegalArgumentException("Resource definition cannot contain null value. Corresponding key: " + entry.getKey());" is 122.,76
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,internalEvaluate,Long Statement,The length of the statement "return authorize(false`"No action provided."`Code.REJECTED_NO_ACTION_PROVIDED`resource`subject`action`environment`System.currentTimeMillis() - start);" is 150.,76
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,internalEvaluate,Long Statement,The length of the statement "return authorize(false`"No context matches subject or environment"`Code.REJECTED_NO_SUBJECT_OR_ENV_FOUND`resource`subject`action`environment`System.currentTimeMillis() - start);" is 177.,76
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,internalEvaluate,Long Statement,The length of the statement "return authorize(false`"No resource or action matched."`Code.REJECTED_NO_RESOURCE_OR_ACTION_MATCH`resource`subject`action`environment`System.currentTimeMillis() - start);" is 170.,76
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,authorize,Long Parameter List,The method has 8 parameters. ,176
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,createAuthorize,Complex Method,Cyclomatic complexity of the method is 8,195
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,createAuthorize,Long Parameter List,The method has 7 parameters. ,195
+rundeck,com.dtolabs.rundeck.core.authorization.providers,SAREAuthorization,toString,Complex Method,Cyclomatic complexity of the method is 8,206
+rundeck,com.dtolabs.rundeck.core.authorization.providers,PoliciesDocument,matchedContexts,Complex Method,Cyclomatic complexity of the method is 9,140
+rundeck,com.dtolabs.rundeck.core.authorization.providers,TestPoliciesCache,testIterator,Magic Number,The method contains a magic number: 2,76
+rundeck,com.dtolabs.rundeck.core.authorization.providers,TestPoliciesDocument,testPoliciesDocument,Magic Number,The method contains a magic number: 5.0,85
+rundeck,com.dtolabs.rundeck.core.authorization.providers,TestPoliciesDocument,testPoliciesDocument,Magic Number,The method contains a magic number: 6,85
+rundeck,com.dtolabs.rundeck.core.jndi,Jndi,Jndi,Long Parameter List,The method has 8 parameters. ,235
+rundeck,com.dtolabs.rundeck.core.jndi,Jndi,Jndi,Magic Number,The method contains a magic number: 11,235
+rundeck,com.dtolabs.rundeck.core.jndi,Jndi,Jndi,Long Statement,The length of the statement "this(cfg.getConnectionName()`cfg.getConnectionPassword()`cfg.getConnectionUrl()`cfg.getRoleBase()`cfg.getRoleNameRDN()`cfg.getRoleMemberRDN()`cfg.getUserBase()`cfg.getUserNameRDN());" is 182.,274
+rundeck,com.dtolabs.rundeck.core.jndi,Jndi,getRoles,Complex Method,Cyclomatic complexity of the method is 8,375
+rundeck,com.dtolabs.rundeck.core.jndi,JndiConfig,JndiConfig,Long Parameter List,The method has 8 parameters. ,27
+rundeck,com.dtolabs.rundeck.core.common,NodesYamlParser,parse,Complex Method,Cyclomatic complexity of the method is 8,69
+rundeck,com.dtolabs.rundeck.core.common,Nodes,createParser,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@48883f23,184
+rundeck,com.dtolabs.rundeck.core.common,Nodes,filterNodes,Complex Conditional,The conditional expression null != entry && (null == nodeSet || !nodeSet.shouldExclude(entry)) is complex.,203
+rundeck,com.dtolabs.rundeck.core.common,NodesYamlGenerator,representJavaBeanProperty,Complex Method,Cyclomatic complexity of the method is 8,114
+rundeck,com.dtolabs.rundeck.core.common,MyRepresenter,representJavaBeanProperty,Complex Method,Cyclomatic complexity of the method is 8,114
+rundeck,com.dtolabs.rundeck.core.common,FrameworkResourceParent,getChild,Long Statement,The length of the statement "throw new NoSuchResourceException("Framework resource not found: '" + name + "'"+ ". basedir: "+ getBaseDir().getAbsolutePath()`this);" is 134.,55
+rundeck,com.dtolabs.rundeck.core.common,FrameworkResourceParent,getChildren,Empty catch clause,The method has an empty catch block.,72
+rundeck,com.dtolabs.rundeck.core.common,NodeEntryImpl,toString,Long Statement,The length of the statement "return "NodeEntryImpl{" + "nodename=" + nodename + "`hostname="+ hostname+ "`type="+ type+ "`osName="+ osName+ "`osArch="+ osArch+ "`osFamily="+ osFamily+ "`osVersion="+ osVersion+ "`username="+ username+ "`tags="+ tags+ "`attributes="+ attributes+ "}";" is 253.,162
+rundeck,com.dtolabs.rundeck.core.common,FrameworkProject,FrameworkProject,Long Statement,The length of the statement "throw new FrameworkResourceException("error while creating project structure. " + "failed creating directory: " + etcDir.getAbsolutePath()`this);" is 145.,65
+rundeck,com.dtolabs.rundeck.core.common,FrameworkProject,generateResourcesFile,Long Statement,The length of the statement "getLogger().error("Unable to generate resources file. Unrecognized extension for dest file: " + resfile.getAbsolutePath());" is 123.,113
+rundeck,com.dtolabs.rundeck.core.common,FrameworkProject,getNodesResourceFilePath,Long Identifier,The length of the field PROJECT_RESOURCES_FILE_PROPERTY is 31.,214
+rundeck,com.dtolabs.rundeck.core.common,FrameworkProject,updateNodesResourceFile,Long Identifier,The length of the field PROJECT_RESOURCES_URL_PROPERTY is 30.,270
+rundeck,com.dtolabs.rundeck.core.common,FrameworkProject,shouldUpdateNodesResourceFile,Long Identifier,The length of the field PROJECT_RESOURCES_URL_PROPERTY is 30.,283
+rundeck,com.dtolabs.rundeck.core.common,FrameworkProject,generateProjectPropertiesFile,Long Statement,The length of the statement "propTask.setFile(new File(Constants.getFrameworkProperties(getFrameworkProjectMgr().getFramework().getBaseDir().getAbsolutePath())));" is 133.,336
+rundeck,com.dtolabs.rundeck.core.common,NodesXMLParser,fillNode,Complex Method,Cyclomatic complexity of the method is 9,83
+rundeck,com.dtolabs.rundeck.core.common,Framework,initialize,Long Statement,The length of the statement "authorizationMgr=AuthorizationMgrFactory.create(lookup.getProperty(AUTHORIZE_CLS_PROP)`this`getConfigDir()).getAuthorizationMgr();" is 130.,97
+rundeck,com.dtolabs.rundeck.core.common,Framework,Framework,Complex Method,Cyclomatic complexity of the method is 11,199
+rundeck,com.dtolabs.rundeck.core.common,Framework,Framework,Long Parameter List,The method has 5 parameters. ,199
+rundeck,com.dtolabs.rundeck.core.common,Framework,Framework,Long Statement,The length of the statement "throw new NullPointerException("rdeck_base_dir was not set in constructor and system property rdeck.base was not defined");" is 123.,199
+rundeck,com.dtolabs.rundeck.core.common,Framework,Framework,Long Statement,The length of the statement "final String projectsBaseDir=null == projects_base_dir ? getBaseDir() + Constants.FILE_SEP + "projects" : projects_base_dir;" is 124.,199
+rundeck,com.dtolabs.rundeck.core.common,Framework,Framework,Long Statement,The length of the statement "logger.debug("creating new Framework instance." + " rdeck_base_dir=" + getBaseDir() + "` projects_base_dir="+ projectsBaseDir);" is 127.,199
+rundeck,com.dtolabs.rundeck.core.common,Framework,Framework,Long Statement,The length of the statement "if (!getBaseDir().exists()) throw new IllegalArgumentException("rdeck_base directory does not exist. " + rdeck_base_dir);" is 121.,199
+rundeck,com.dtolabs.rundeck.core.common,Framework,Framework,Long Statement,The length of the statement "if (!projectsBase.exists()) throw new IllegalArgumentException("project base directory does not exist. " + projectsBaseDir);" is 124.,199
+rundeck,com.dtolabs.rundeck.core.common,Framework,getInstanceOrCreate,Complex Conditional,The conditional expression null != project && null == fw && null != project.getProperty("rdeck.base") is complex.,312
+rundeck,com.dtolabs.rundeck.core.common,Framework,getInstanceOrCreate,Long Statement,The length of the statement "fw=Framework.getInstance(project.getProperty("rdeck.base")`project.getProperty("modules.dir")`project.getProperty("projects.dir"));" is 131.,312
+rundeck,com.dtolabs.rundeck.core.common,Framework,getInstance,Long Statement,The length of the statement "Framework instance=new Framework(rdeck_base_dir`null`Constants.getFrameworkProjectsDir(rdeck_base_dir)`authenticator`authorization);" is 132.,352
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlGenerator,testGenerate,Empty catch clause,The method has an empty catch block.,58
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlGenerator,testGenerate,Long Statement,The length of the statement "assertEquals("test1:\n" + " description: test description\n" + " hostname: testhostname\n"+ " nodename: test1\n"+ " osArch: an os arch\n"+ " osFamily: an os fam\n"+ " osName: an os name\n"+ " osVersion: an os vers\n"+ " tags: ''\n"+ " username: someUser\n"`outputString);" is 271.,58
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlGenerator,testGenerate,Long Statement,The length of the statement "assertEquals("strongbad:\n" + " description: Rundeck server node\n" + " hostname: strongbad\n"+ " nodename: strongbad\n"+ " osArch: x86_64\n"+ " osFamily: unix\n"+ " osName: Mac OS X\n"+ " osVersion: 10.6.5\n"+ " tags: dev` rundeck` ops\n"+ " username: alexh\n"`outputString);" is 276.,58
+rundeck,com.dtolabs.rundeck.core.common,TestFramework,testConstruction,Long Statement,The length of the statement "assertEquals("basedir did not match: " + framework.getBaseDir().getAbsolutePath()`new File(getBaseDir()).getAbsolutePath()`framework.getBaseDir().getAbsolutePath());" is 165.,64
+rundeck,com.dtolabs.rundeck.core.common,TestFramework,testAllowUserInput,Long Statement,The length of the statement "assertTrue("Ant property not set to enable user input"`"false".equals(p.getProperty("framework.userinput.disabled")) || null == p.getProperty("framework.userinput.disabled"));" is 175.,87
+rundeck,com.dtolabs.rundeck.core.common,TestFramework,testAllowUserInput,Long Statement,The length of the statement "assertTrue("Input Handler shouldn't be configured"`null == p.getInputHandler() || !(p.getInputHandler() instanceof Framework.FailInputHandler));" is 144.,87
+rundeck,com.dtolabs.rundeck.core.common,TestFramework,testAllowUserInput,Long Statement,The length of the statement "assertTrue("Input Handler shouldn't be configured"`null == p.getInputHandler() || !(p.getInputHandler() instanceof Framework.FailInputHandler));" is 144.,87
+rundeck,com.dtolabs.rundeck.core.common,TestFramework,testAllowUserInput,Long Statement,The length of the statement "assertTrue("Input Handler shouldn't be configured"`null == p.getInputHandler() || !(p.getInputHandler() instanceof Framework.FailInputHandler));" is 144.,87
+rundeck,com.dtolabs.rundeck.core.common,TestFramework,testIsLocal,Long Statement,The length of the statement "assertTrue("framework node should be local"`framework.isLocalNode(NodeEntryImpl.create(frameworkHostname`frameworkNodename)));" is 126.,159
+rundeck,com.dtolabs.rundeck.core.common,TestFramework,testIsLocal,Long Statement,The length of the statement "assertTrue("should have matched based on the common node name value"`framework.isLocalNode(NodeEntryImpl.create("blahahostname"`frameworkNodename)));" is 149.,159
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlRoundtrip,testRoundtripObjToObj,Magic Number,The method contains a magic number: 3,59
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkResourceParent,testLoadChild,Long Statement,The length of the statement "assertTrue("Child was not correct class (" + child.getClass().getName() + ")"`child instanceof FrameworkResourceParentImpl);" is 124.,93
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkResourceParent,testListChildNames,Magic Number,The method contains a magic number: 2,181
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkResourceParent,testListChildNames,Magic Number,The method contains a magic number: 3,181
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParse,Empty catch clause,The method has an empty catch block.,57
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParse,Long Method,The method has 123 lines of code.,57
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParse,Long Statement,The length of the statement "ByteArrayInputStream is=new ByteArrayInputStream(("test: \n" + " hostname: test\n" + " description: a description\n"+ " tags: a` b` c\n"+ " osArch: x86_64\n"+ " osFamily: unix\n"+ " osVersion: 10.6.5\n"+ " osName: Mac OS X\n"+ " username: a user\n"+ " nodename: bill\n"+ " attributes: test\n"+ " settings: test2\n"+ " type: blahtype\n"+ " frameworkProject: ignored\n").getBytes());" is 381.,57
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParse,Long Statement,The length of the statement "ByteArrayInputStream is=new ByteArrayInputStream(("test: \n" + " nodename: bill\n" + " hostname: test\n"+ " tags: [ a` b` c ]\n").getBytes());" is 142.,57
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParse,Long Statement,The length of the statement "ByteArrayInputStream is=new ByteArrayInputStream(("ubuntu: {description: \"Ubuntu server node\"` hostname: \"192.168.1.101\"`" + " osFamily: \"unix\"` osName: \"Linux\"` username: \"demo\"` tags: \"dev\"}").getBytes());" is 219.,57
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParse,Magic Number,The method contains a magic number: 3,57
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParse,Magic Number,The method contains a magic number: 3,57
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParseInvalid,Long Statement,The length of the statement "ByteArrayInputStream is=new ByteArrayInputStream(("test: \n" + " nodename: bill\n" + " hostname: test\n"+ " username: {test:value` a:b}\n").getBytes());" is 152.,214
+rundeck,com.dtolabs.rundeck.core.common,TestNodesYamlParser,testParseInvalid,Long Statement,The length of the statement "ByteArrayInputStream is=new ByteArrayInputStream(("test: \n" + " nodename: bill\n" + " hostname: test\n"+ " username: !!java.io.File [woops.txt]\n").getBytes());" is 161.,214
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testConstruction,Long Statement,The length of the statement "final FrameworkProjectMgr mgr=FrameworkProjectMgr.create("projectMgr"`new File(getFrameworkProjectsBase())`getFrameworkInstance());" is 131.,68
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testConstruction,Long Statement,The length of the statement "assertEquals("expected 1 projects listed. number found: " + mgr.listFrameworkProjects().size() + " projects="+ mgr.listChildNames()`1`mgr.listFrameworkProjects().size());" is 170.,68
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testChildCouldBeLoaded,Long Statement,The length of the statement "final FrameworkProjectMgr mgr=FrameworkProjectMgr.create("projectMgr"`new File(getFrameworkProjectsBase())`getFrameworkInstance());" is 131.,79
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testListChildNames,Long Statement,The length of the statement "final FrameworkProjectMgr mgr=FrameworkProjectMgr.create("projectMgr"`new File(getFrameworkProjectsBase())`getFrameworkInstance());" is 131.,91
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testLoadChild,Long Statement,The length of the statement "final FrameworkProjectMgr mgr=FrameworkProjectMgr.create("projectMgr"`new File(getFrameworkProjectsBase())`getFrameworkInstance());" is 131.,104
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testCreateRemoveDepot,Long Statement,The length of the statement "final IFrameworkProjectMgr mgr=FrameworkProjectMgr.create("projectMgr"`new File(getFrameworkProjectsBase())`getFrameworkInstance());" is 132.,144
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testCreateRemoveDepot,Long Statement,The length of the statement "assertEquals("getFrameworkProject did not return the expected project instance"`d1.getName()`mgr.getFrameworkProject("Depot1").getName());" is 138.,144
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testCreateRemoveDepot,Long Statement,The length of the statement "assertEquals("getFrameworkProject did not return the expected project instance"`d1.getParent()`mgr.getFrameworkProject("Depot1").getParent());" is 142.,144
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testCreateRemoveDepot,Magic Number,The method contains a magic number: 2,144
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testAddRemoveFrameworkProject,Long Statement,The length of the statement "final FrameworkProjectMgr mgr=FrameworkProjectMgr.create("projectMgr"`new File(getFrameworkProjectsBase())`getFrameworkInstance());" is 131.,161
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProjectMgr,testAddRemoveFrameworkProject,Long Statement,The length of the statement "assertTrue("existsFrameworkProject did not return true for a type that should exist"`mgr.existsFrameworkProject("Depot1"));" is 123.,161
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testNodesXML,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,67
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testNodesXML,Magic Number,The method contains a magic number: 2,67
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testNodesXML,Magic Number,The method contains a magic number: 2,67
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testFilterNodesXML,Long Method,The method has 142 lines of code.,120
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testFilterNodesXML,Long Statement,The length of the statement "FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 148.,120
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testFilterNodesXML,Long Statement,The length of the statement "project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 131.,120
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testFilterNodesXML,Magic Number,The method contains a magic number: 2,120
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testGetNodeByHostnameXML,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,288
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testHasNodeByHostnameXML,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,306
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testGetNodeXML,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,316
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testHasNodeXML,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,333
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testGetNodeEntriesXML,Long Statement,The length of the statement "FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 148.,343
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testGetNodeEntriesXML,Magic Number,The method contains a magic number: 2,343
+rundeck,com.dtolabs.rundeck.core.common,TestNodes,testGetNodeEntriesXML,Magic Number,The method contains a magic number: 2,343
+rundeck,com.dtolabs.rundeck.core.common,TestNodesXMLParser,testParse,Empty catch clause,The method has an empty catch block.,74
+rundeck,com.dtolabs.rundeck.core.common,TestNodesXMLParser,testParse,Magic Number,The method contains a magic number: 2,74
+rundeck,com.dtolabs.rundeck.core.common,TestNodesXMLParser,testParse,Magic Number,The method contains a magic number: 3,74
+rundeck,com.dtolabs.rundeck.core.common,TestNodesXMLParser,testParseSettings,Magic Number,The method contains a magic number: 3,142
+rundeck,com.dtolabs.rundeck.core.common,TestNodesXMLParser,testParseSettings,Magic Number,The method contains a magic number: 2,142
+rundeck,com.dtolabs.rundeck.core.common,TestNodesXMLParser,testParseSettings,Magic Number,The method contains a magic number: 3,142
+rundeck,com.dtolabs.rundeck.core.common,TestNodesXMLParser,testParseEditRemoteUrl,Magic Number,The method contains a magic number: 3,173
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProject,testConstruction,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,74
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProject,testChildCouldBeLoaded,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,87
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProject,testListChildNames,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,103
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProject,testProperties,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,122
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProject,testGetNodes,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,145
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProject,testGetNodes,Magic Number,The method contains a magic number: 2,145
+rundeck,com.dtolabs.rundeck.core.common,TestFrameworkProject,testGenerateProjectPropertiesFile,Long Statement,The length of the statement "final FrameworkProject project=FrameworkProject.create(PROJECT_NAME`new File(getFrameworkProjectsBase())`getFrameworkInstance().getFrameworkProjectMgr());" is 154.,159
+rundeck,com.dtolabs.rundeck.core.execution,ExecutionUtils,getMessageLogLevel,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4644ee54,36
+rundeck,com.dtolabs.rundeck.core.execution,BaseExecutionService,executorForItemClass,Long Statement,The length of the statement "throw new ExecutionException("Unable to create Executor for the ExecutioItem's class: " + aClass.getName() + ": No Executor class registered for this item type");" is 162.,65
+rundeck,com.dtolabs.rundeck.core.execution,TestBaseExecutionService,setUp,Long Statement,The length of the statement "baseExecutionService=new ExecutionServiceImpl(ExecutionServiceFactory.defaultExecutorClasses`new HashMap<Class<? extends ExecutionItem>`Executor>()`getFrameworkInstance());" is 172.,45
+rundeck,com.dtolabs.rundeck.core.execution,TestBaseExecutionService,testDefaultExecutorInstances,Long Statement,The length of the statement "baseExecutionService=new ExecutionServiceImpl(ExecutionServiceFactory.defaultExecutorClasses`map`getFrameworkInstance());" is 121.,109
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileUtils,setExecutePermissions,Empty catch clause,The method has an empty catch block.,157
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,doAction,Complex Method,Cyclomatic complexity of the method is 10,90
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,doAction,Long Method,The method has 100 lines of code.,90
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,doAction,Long Statement,The length of the statement "debug("number of nodes to dispatch to: " + c.size() + "` (threadcount="+ getContext().getNodeSet().getThreadCount()+ ")");" is 122.,90
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,doAction,Long Statement,The length of the statement "final String fwkUser=null != singleNode ? singleNode.extractUserName() : getFramework().getAuthenticationMgr().getUserInfoWithoutPrompt().getUsername();" is 152.,90
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,doAction,Long Statement,The length of the statement "final String thrNode=DefaultNodeDispatcher.getThreadLocalForProject(DefaultNodeDispatcher.NODE_NAME_LOCAL_REF_ID`CommandAction.this.project);" is 141.,90
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,doAction,Long Statement,The length of the statement "final String thrUser=DefaultNodeDispatcher.getThreadLocalForProject(DefaultNodeDispatcher.NODE_USER_LOCAL_REF_ID`CommandAction.this.project);" is 141.,90
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,doAction,Long Statement,The length of the statement "nodeDispatcher.executeNodedispatch(project`c`getContext().getNodeSet().getThreadCount()`getContext().getNodeSet().isKeepgoing()`null != listener ? listener.getFailedNodesListener() : null`new NodeCallableFactory(){" is 214.,90
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,getMap,Long Statement,The length of the statement "final String thrNode=DefaultNodeDispatcher.getThreadLocalForProject(DefaultNodeDispatcher.NODE_NAME_LOCAL_REF_ID`CommandAction.this.project);" is 141.,136
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,getMap,Long Statement,The length of the statement "final String thrUser=DefaultNodeDispatcher.getThreadLocalForProject(DefaultNodeDispatcher.NODE_USER_LOCAL_REF_ID`CommandAction.this.project);" is 141.,136
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,createLocalCommandProxy,Long Statement,The length of the statement "final Map<String`Map<String`String>> dataContext=DataContextUtils.addContext("node"`DataContextUtils.nodeData(nodeentry)`getContext().getDataContext());" is 152.,242
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,createLocalCommandProxy,Long Statement,The length of the statement "return createLocalCommandProxy(nodeentry`project`parameterGenerator.generate(nodeentry`isCommandAction()`null`newargs)`dataContext);" is 132.,242
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,createRemoteCommandProxy,Long Statement,The length of the statement "debug("ssh timeout property '" + Constants.SSH_TIMEOUT_PROP + "' had a non integer value: "+ val+ " defaulting to: 0 (forever)");" is 129.,331
+rundeck,com.dtolabs.rundeck.core.execution.script,CommandAction,createRemoteCommandProxy,Long Statement,The length of the statement "final Map<String`Map<String`String>> dataContext=DataContextUtils.addContext("node"`DataContextUtils.nodeData(nodeentry)`getContext().getDataContext());" is 152.,331
+rundeck,com.dtolabs.rundeck.core.execution.script,ExecTaskParameterGeneratorImpl,generate,Complex Method,Cyclomatic complexity of the method is 9,38
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileAction,createRemoteCommandProxy,Long Statement,The length of the statement "else if ("windows".equalsIgnoreCase(nodeentry.getOsFamily().trim()) || "cygwin".equalsIgnoreCase(nodeentry.getOsFamily().trim())) {" is 131.,126
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileAction,createRemoteCommandProxy,Long Statement,The length of the statement "throw new CoreException("Could not create a remote command proxy for node: " + nodeentry.getNodename() + " Unrecognized os family: "+ nodeentry.getOsFamily());" is 159.,126
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileAction,createRemoteCommandProxy,Long Statement,The length of the statement "final Map<String`Map<String`String>> dataContext=DataContextUtils.addContext("node"`DataContextUtils.nodeData(nodeentry)`origContext);" is 134.,126
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileAction,createRemoteCommandProxy,Long Statement,The length of the statement "logger.debug("temp file for node " + nodeentry.getNodename() + ": "+ temp.getAbsolutePath()+ "` datacontext: "+ dataContext);" is 125.,126
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileAction,createRemoteCommandProxy,Long Statement,The length of the statement "seq.addTask(createEchoVerbose("copying scriptfile: '" + temp.getAbsolutePath() + "' to: '"+ nodeentry.getNodename()+ ":"+ remotefile+ "'"`project));" is 148.,126
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileAction,createLocalCommandProxy,Long Statement,The length of the statement "final Map<String`Map<String`String>> dataContext=DataContextUtils.addContext("node"`DataContextUtils.nodeData(nodeentry)`getContext().getDataContext());" is 152.,218
+rundeck,com.dtolabs.rundeck.core.execution.script,ScriptfileAction,createLocalCommandProxy,Long Statement,The length of the statement "return createLocalCommandProxy(nodeentry`project`getParameterGenerator().generate(nodeentry`isCommandAction()`temp`newargs)`dataContext);" is 137.,218
+rundeck,com.dtolabs.rundeck.core.execution.script,ActionFactory,createAction,Complex Conditional,The conditional expression null != context.getScript() || null != context.getServerScriptFilePath() || null != context.getScriptAsStream() is complex.,39
+rundeck,com.dtolabs.rundeck.core.execution.script,TestActionFactory,testCreateAction,Long Method,The method has 113 lines of code.,65
+rundeck,com.dtolabs.rundeck.core.execution.script,TestActionFactory,testCreateAction,Long Statement,The length of the statement "IDispatchedScript context=new DispatchedScriptImpl(nodeset`"TestCtlExec"`null`new FileInputStream(testScriptFile)`null`null`1);" is 127.,65
+rundeck,com.dtolabs.rundeck.core.execution.script,TestActionFactory,testCreateAction,Long Statement,The length of the statement "IDispatchedScript context=new DispatchedScriptImpl(nodeset`"TestCtlExec"`null`null`testScriptFile.getAbsolutePath()`null`1);" is 124.,65
+rundeck,com.dtolabs.rundeck.core.execution.script,TestExecTaskParameterGenerator,testGenerateScript,Long Statement,The length of the statement "assertEquals("Wrong argline for local command"`"/c \"" + testScriptFile.getAbsolutePath() + " test args something\""`params.getCommandargline());" is 145.,161
+rundeck,com.dtolabs.rundeck.core.execution.script,TestCommandAction,testDoAction,Long Statement,The length of the statement "public void executeNodedispatch( Project project` Collection<INodeEntry> nodes` int threadcount` boolean keepgoing` FailedNodesListener failedListener` NodeCallableFactory factory){" is 181.,147
+rundeck,com.dtolabs.rundeck.core.execution.script,TestCommandAction,testDoAction,Long Statement,The length of the statement "public void executeNodedispatch( Project project` Collection<INodeEntry> nodes` int threadcount` boolean keepgoing` FailedNodesListener failedListener` NodeCallableFactory factory){" is 181.,147
+rundeck,com.dtolabs.rundeck.core.execution.script,TestCommandAction,executeNodedispatch,Long Parameter List,The method has 6 parameters. ,159
+rundeck,com.dtolabs.rundeck.core.execution.script,TestCommandAction,executeNodedispatch,Long Parameter List,The method has 6 parameters. ,193
+rundeck,com.dtolabs.rundeck.core.authentication,NodeAuthResolutionStrategyFactory,createNodeAuthResolutionStrategy,Long Statement,The length of the statement "throw new IllegalArgumentException("A null or empty java class name was specified for the framework.nodeauthentication.classname.");" is 132.,39
+rundeck,com.dtolabs.rundeck.core.authentication,DefaultNodeAuthResolutionStrategy,fetchUsername,Long Statement,The length of the statement "throw new CoreException("Could not set a default for the remote connection username. Reason: " + Constants.SSH_USER_PROP + " property not defined or is blank in framework.properties");" is 184.,71
+rundeck,com.dtolabs.rundeck.core.authentication,DefaultNodeAuthResolutionStrategy,fetchUsername,Long Statement,The length of the statement "logger.debug("DefaultNodeAuthResolutionStrategy fetching username from the " + "framework.properties setting: " + Constants.SSH_USER_PROP);" is 139.,71
+rundeck,com.dtolabs.rundeck.core.authentication,DefaultNodeAuthResolutionStrategy,fetchPassword,Long Statement,The length of the statement "logger.warn("DefaultNodeAuthResolutionStrategy unexpectedly asked to " + "fetch password for node " + nodeEntry.getNodename() + ". Returning null for password.");" is 162.,90
+rundeck,com.dtolabs.rundeck.core.authentication,CLIPrompter,readPasswd,Complex Method,Cyclomatic complexity of the method is 10,85
+rundeck,com.dtolabs.rundeck.core.authentication,CLIPrompter,readPasswd,Magic Number,The method contains a magic number: 128,85
+rundeck,com.dtolabs.rundeck.core.authentication,CLIPrompter,readPasswd,Magic Number,The method contains a magic number: 128,85
+rundeck,com.dtolabs.rundeck.core.authentication,CLIPrompter,readPasswd,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@624fe009,85
+rundeck,com.dtolabs.rundeck.core.authentication,TestNodeAuthResolutionStrategyFactory,testCreate,Long Statement,The length of the statement "INodeAuthResolutionStrategy nodeAuth=NodeAuthResolutionStrategyFactory.create(getFrameworkInstance().getProperty("framework.nodeauthentication.classname")`getFrameworkInstance());" is 179.,39
+rundeck,com.dtolabs.rundeck.core.authentication,TestNodeAuthResolutionStrategyFactory,testCreate,Long Statement,The length of the statement "assertTrue("expected an instance of INodeAuthResolutionStrategy but it was a: " + nodeAuth.getClass().getName()`nodeAuth instanceof INodeAuthResolutionStrategy);" is 161.,39
+rundeck,com.dtolabs.rundeck.core.authentication,TestDefaultNodeAuthResolutionStrategy,testCreate,Long Statement,The length of the statement "assertTrue("result from create wasn't an instance of DefaultNodeAuthResolutionStrategy"`nodeAuth instanceof DefaultNodeAuthResolutionStrategy);" is 143.,45
+rundeck,com.dtolabs.rundeck.core.authentication,TestDefaultNodeAuthResolutionStrategy,testCreate,Long Statement,The length of the statement "assertFalse("Should have returned false for isPasswordBasedAuthentication"`nodeAuth.isPasswordBasedAuthentication(nodeentry));" is 126.,45
+rundeck,com.dtolabs.rundeck.core.authentication,TestDefaultNodeAuthResolutionStrategy,testFetchUsername,Long Statement,The length of the statement "assertEquals("Unexpected username fetched: " + username`getFrameworkInstance().getProperty("framework.ssh.user")`username);" is 123.,57
+rundeck,com.dtolabs.rundeck.core.authentication,TestDefaultNodeAuthResolutionStrategy,testFetchUsername,Long Statement,The length of the statement "assertEquals("Unexpected username fetched: " + nodeAuth.fetchUsername(nodeentry)`"barney"`nodeAuth.fetchUsername(nodeentry));" is 125.,57
+rundeck,com.dtolabs.rundeck.core.authentication,TestDefaultNodeAuthResolutionStrategy,testFetchUsername,Long Statement,The length of the statement "assertEquals("Unexpected username fetched: " + nodeAuth.fetchUsername(nodeentry)`"flintstone"`nodeAuth.fetchUsername(nodeentry));" is 129.,57
+rundeck,com.dtolabs.rundeck.core.utils,PropertyUtil,lineExpand,Complex Conditional,The conditional expression dollar == true && lp == true && rp == true is complex.,87
+rundeck,com.dtolabs.rundeck.core.utils,PropertyUtil,lineExpand,Complex Conditional,The conditional expression dollar == false && lp == false && rp == false is complex.,87
+rundeck,com.dtolabs.rundeck.core.utils,PropertyUtil,lineExpand,Complex Conditional,The conditional expression dollar == true && lp == true && rp == false is complex.,87
+rundeck,com.dtolabs.rundeck.core.utils,PropertyUtil,lineExpand,Complex Method,Cyclomatic complexity of the method is 24,87
+rundeck,com.dtolabs.rundeck.core.utils,PropertyUtil,lineExpand,Long Statement,The length of the statement "if (null == sb.toString() || "".equals(sb.toString())) throw new PropertyUtilException("null string return:" + keyString);" is 122.,87
+rundeck,com.dtolabs.rundeck.core.utils,Base64,isBase64,Complex Conditional,The conditional expression b[i] == (byte)'\r' || b[i] == (byte)'\n' || b[i] == (byte)' ' is complex.,48
+rundeck,com.dtolabs.rundeck.core.utils,Base64,isBase64,Complex Method,Cyclomatic complexity of the method is 11,48
+rundeck,com.dtolabs.rundeck.core.utils,Base64,isBase64,Magic Number,The method contains a magic number: 4,48
+rundeck,com.dtolabs.rundeck.core.utils,Base64,isBase64,Magic Number,The method contains a magic number: 2,48
+rundeck,com.dtolabs.rundeck.core.utils,Base64,isBase64,Magic Number,The method contains a magic number: 4,48
+rundeck,com.dtolabs.rundeck.core.utils,Base64,hex,Magic Number,The method contains a magic number: 0x00FFL,95
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 3,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 3,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 3,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 3,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 4,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 3,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 0xFC,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 2,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 0x03,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 4,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 0x00F0,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 4,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 2,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 3,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 64,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 64,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 0x0F,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 2,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 2,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 0x00C0,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 6,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 3,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 64,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 2,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,encode,Magic Number,The method contains a magic number: 0x3F,99
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Complex Method,Cyclomatic complexity of the method is 8,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 4,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 3,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 64,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 2,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 64,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 4,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0x3F,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 2,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0x30,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 4,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0xFF,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 2,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 4,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0x0F,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 4,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 2,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0x3C,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 2,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0xFF,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 4,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 2,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0x03,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 6,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 3,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0x3F,171
+rundeck,com.dtolabs.rundeck.core.utils,Base64,decode,Magic Number,The method contains a magic number: 0xFF,171
+rundeck,com.dtolabs.rundeck.core.utils,FileLogger,writeToFile,Empty catch clause,The method has an empty catch block.,146
+rundeck,com.dtolabs.rundeck.core.utils,OptsUtil,burst,Magic Number,The method contains a magic number: 3,39
+rundeck,com.dtolabs.rundeck.core.utils,OptsUtil,burst,Magic Number,The method contains a magic number: 3,39
+rundeck,com.dtolabs.rundeck.core.utils,JARVerifier,verifySingleJarFile,Complex Method,Cyclomatic complexity of the method is 11,128
+rundeck,com.dtolabs.rundeck.core.utils,JARVerifier,verifySingleJarFile,Magic Number,The method contains a magic number: 8192,128
+rundeck,com.dtolabs.rundeck.core.utils,JARVerifier,isTrusted,Empty catch clause,The method has an empty catch block.,204
+rundeck,com.dtolabs.rundeck.core.utils,JARVerifier,getChainRoots,Magic Number,The method contains a magic number: 3,243
+rundeck,com.dtolabs.rundeck.core.utils,FileUtils,fileCopy,Complex Conditional,The conditional expression !dest.exists() || (dest.exists() && overwrite) is complex.,30
+rundeck,com.dtolabs.rundeck.core.utils,FileUtils,copyFileStreams,Magic Number,The method contains a magic number: 1024,51
+rundeck,com.dtolabs.rundeck.core.utils,FileUtils,copyDirectory,Magic Number,The method contains a magic number: 1024,162
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,isBlank,Long Statement,The length of the statement "return (null == getInclude() || getInclude().isBlank()) && (null == getExclude() || getExclude().isBlank()) && null == getSingleNodeName();" is 139.,109
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,validate,Complex Conditional,The conditional expression null != failedNodesfile && failedNodesfile.getName().startsWith("${") && failedNodesfile.getName().endsWith("}") is complex.,180
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,matchesInputSet,Complex Method,Cyclomatic complexity of the method is 13,232
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,matchRegexOrEquals,Complex Conditional,The conditional expression testregex.length() >= 2 && testregex.indexOf('/') == 0 && testregex.lastIndexOf('/') == testregex.length() - 1 is complex.,295
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,matchRegexOrEquals,Empty catch clause,The method has an empty catch block.,295
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,matchRegexOrEquals,Magic Number,The method contains a magic number: 2,295
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,populateSetSelector,Complex Method,Cyclomatic complexity of the method is 10,347
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,toString,Complex Conditional,The conditional expression null != getAttributes() && getAttributes().size() > 0 || null != getAttributeSet() && null != getProject() is complex.,430
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,toString,Complex Method,Cyclomatic complexity of the method is 12,430
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,isBlank,Long Statement,The length of the statement "return isBlank(hostname) && isBlank(osfamily) && isBlank(osarch)&& isBlank(osname)&& isBlank(tags)&& isBlank(osversion)&& isBlank(name)&& isBlank(type)&& (null == attributes || 0 == attributes.size())&& isBlank(getAttributesMap());" is 231.,475
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,matches,Long Statement,The length of the statement "return !isBlank() && matchOrBlank(hostname`entry.getHostname()) && matchOrBlank(name`entry.getNodename())&& matchOrBlank(type`entry.getType())&& matchOrBlank(tags`entry.getTags())&& matchOrBlank(osfamily`entry.getOsFamily())&& matchOrBlank(osarch`entry.getOsArch())&& matchOrBlank(osname`entry.getOsName())&& matchOrBlank(osversion`entry.getOsVersion())&& matchOrBlank(getAttributesMap()`entry.getAttributes());" is 411.,502
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,getAttributesMap,Complex Conditional,The conditional expression null != attributeSet && null != attributeSet.getPrefix() && null != getProject() is complex.,610
+rundeck,com.dtolabs.rundeck.core.utils,NodeSet,getAttributesMap,Complex Method,Cyclomatic complexity of the method is 8,610
+rundeck,com.dtolabs.rundeck.core.utils,SetSelector,toString,Complex Conditional,The conditional expression null != getAttributes() && getAttributes().size() > 0 || null != getAttributeSet() && null != getProject() is complex.,430
+rundeck,com.dtolabs.rundeck.core.utils,SetSelector,toString,Complex Method,Cyclomatic complexity of the method is 12,430
+rundeck,com.dtolabs.rundeck.core.utils,SetSelector,isBlank,Long Statement,The length of the statement "return isBlank(hostname) && isBlank(osfamily) && isBlank(osarch)&& isBlank(osname)&& isBlank(tags)&& isBlank(osversion)&& isBlank(name)&& isBlank(type)&& (null == attributes || 0 == attributes.size())&& isBlank(getAttributesMap());" is 231.,475
+rundeck,com.dtolabs.rundeck.core.utils,SetSelector,matches,Long Statement,The length of the statement "return !isBlank() && matchOrBlank(hostname`entry.getHostname()) && matchOrBlank(name`entry.getNodename())&& matchOrBlank(type`entry.getType())&& matchOrBlank(tags`entry.getTags())&& matchOrBlank(osfamily`entry.getOsFamily())&& matchOrBlank(osarch`entry.getOsArch())&& matchOrBlank(osname`entry.getOsName())&& matchOrBlank(osversion`entry.getOsVersion())&& matchOrBlank(getAttributesMap()`entry.getAttributes());" is 411.,502
+rundeck,com.dtolabs.rundeck.core.utils,SetSelector,getAttributesMap,Complex Conditional,The conditional expression null != attributeSet && null != attributeSet.getPrefix() && null != getProject() is complex.,610
+rundeck,com.dtolabs.rundeck.core.utils,SetSelector,getAttributesMap,Complex Method,Cyclomatic complexity of the method is 8,610
+rundeck,com.dtolabs.rundeck.core.utils,ExecToolCommandLogger,logLevelToString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4fa99236,131
+rundeck,com.dtolabs.rundeck.core.utils,CommandListener,setCommandContext,Complex Method,Cyclomatic complexity of the method is 9,75
+rundeck,com.dtolabs.rundeck.core.utils,CommandListener,setEntityContext,Complex Method,Cyclomatic complexity of the method is 8,116
+rundeck,com.dtolabs.rundeck.core.utils,CommandListener,buildFinished,Magic Number,The method contains a magic number: 1000,166
+rundeck,com.dtolabs.rundeck.core.utils,CommandListener,buildFinished,Magic Number,The method contains a magic number: 1000,166
+rundeck,com.dtolabs.rundeck.core.utils,CommandListener,messageLogged,Complex Method,Cyclomatic complexity of the method is 9,235
+rundeck,com.dtolabs.rundeck.core.utils,CommandListener,messageLogged,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@25b293b3,235
+rundeck,com.dtolabs.rundeck.core.utils,TestFormattedOutputStream,testWrite,Long Statement,The length of the statement "formattedOutputStream=new FormattedOutputStream(new LogReformatter("%node : %user : %command : %level : %message"`(Map<String`String>)null)`baos);" is 146.,56
+rundeck,com.dtolabs.rundeck.core.utils,TestFormattedOutputStream,testWrite,Long Statement,The length of the statement "formattedOutputStream=new FormattedOutputStream(new LogReformatter("%node : %user : %command : %level : %message"`(Map<String`String>)null)`baos);" is 146.,56
+rundeck,com.dtolabs.rundeck.core.utils,TestFormattedOutputStream,testWrite,Long Statement,The length of the statement "formattedOutputStream=new FormattedOutputStream(new LogReformatter("%command: %message [%level]"`(Map<String`String>)null)`baos);" is 129.,56
+rundeck,com.dtolabs.rundeck.core.utils,TestFileUtils,testFileRename,Long Statement,The length of the statement "assertEquals("file sizes did not match. " + "infile size=" + infileSize + "` destfile size="+ destfile.length()`infileSize`destfile.length());" is 142.,61
+rundeck,com.dtolabs.rundeck.core.utils,TestFileUtils,testFileRename,Long Statement,The length of the statement "assertEquals("file mtime did not match. " + "infile mtime=" + infileMtime + "` destfile mtime="+ destfile.lastModified()`infileMtime`destfile.lastModified());" is 158.,61
+rundeck,com.dtolabs.rundeck.core.utils,TestPropertyLookup,testFetchProperties,Magic Number,The method contains a magic number: 3,64
+rundeck,com.dtolabs.rundeck.core.utils,TestPropertyLookup,testConstructionWithDefaults,Long Statement,The length of the statement "assertEquals("merged properties should be the same size as defaults"`authoratitive.countProperties()`defaults.getPropertiesMap().size());" is 137.,81
+rundeck,com.dtolabs.rundeck.core.utils,TestNodeSet,testNodeSet,Empty catch clause,The method has an empty catch block.,108
+rundeck,com.dtolabs.rundeck.core.utils,TestNodeSet,testNodeSet,Empty catch clause,The method has an empty catch block.,108
+rundeck,com.dtolabs.rundeck.core.utils,TestNodeSet,testNodeSet,Magic Number,The method contains a magic number: 3,108
+rundeck,com.dtolabs.rundeck.core.utils,TestNodeSet,testNodeSet,Magic Number,The method contains a magic number: 3,108
+rundeck,com.dtolabs.rundeck.core.utils,TestNodeSet,testSetSelectorValues,Long Method,The method has 137 lines of code.,138
+rundeck,com.dtolabs.rundeck.core.utils,TestNodeSet,testSetSelectorValues,Magic Number,The method contains a magic number: 3,138
+rundeck,com.dtolabs.rundeck.core.utils,TestNodeSet,testShouldExclude,Long Method,The method has 568 lines of code.,469
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 2,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 2,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 3,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 3,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 2,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 2,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 3,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 3,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 2,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 2,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 3,36
+rundeck,com.dtolabs.rundeck.core.utils,TestOptsUtil,testBurst,Magic Number,The method contains a magic number: 3,36
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,initAssert,Magic Number,The method contains a magic number: 3,58
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,initAssert,Magic Number,The method contains a magic number: 3,58
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,initAssert,Magic Number,The method contains a magic number: 3,58
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,initAssert,Magic Number,The method contains a magic number: 2,58
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,initAssert,Magic Number,The method contains a magic number: 2,58
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,initAssert,Magic Number,The method contains a magic number: 2,58
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testMerge,Magic Number,The method contains a magic number: 6,111
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testMerge,Magic Number,The method contains a magic number: 6,111
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testMerge,Magic Number,The method contains a magic number: 5,111
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testMerge,Magic Number,The method contains a magic number: 5,111
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testMerge,Magic Number,The method contains a magic number: 5,111
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testMerge,Magic Number,The method contains a magic number: 5,111
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testSubtract,Magic Number,The method contains a magic number: 3,156
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testSubtract,Magic Number,The method contains a magic number: 3,156
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testSubtract,Magic Number,The method contains a magic number: 2,156
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testSubtract,Magic Number,The method contains a magic number: 2,156
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testSubtract,Magic Number,The method contains a magic number: 2,156
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testSubtract,Magic Number,The method contains a magic number: 2,156
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testDifference,Magic Number,The method contains a magic number: 6,204
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testDifference,Magic Number,The method contains a magic number: 6,204
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testDifference,Magic Number,The method contains a magic number: 4,204
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testDifference,Magic Number,The method contains a magic number: 4,204
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testDifference,Magic Number,The method contains a magic number: 4,204
+rundeck,com.dtolabs.rundeck.core.utils,TestStringArrayUtil,testDifference,Magic Number,The method contains a magic number: 4,204
+rundeck,com.dtolabs.rundeck.core.utils,Utility,seekBack,Complex Method,Cyclomatic complexity of the method is 10,41
+rundeck,com.dtolabs.client.services,StoredJobImpl,StoredJobImpl,Long Parameter List,The method has 5 parameters. ,41
+rundeck,com.dtolabs.client.services,StoredJobImpl,create,Long Parameter List,The method has 5 parameters. ,49
+rundeck,com.dtolabs.client.services,StoredJobLoadResultImpl,StoredJobLoadResultImpl,Long Parameter List,The method has 9 parameters. ,41
+rundeck,com.dtolabs.client.services,StoredJobLoadResultImpl,createLoadResult,Long Parameter List,The method has 9 parameters. ,51
+rundeck,com.dtolabs.client.services,JobDefinitionSerializer,addScriptDispatch,Complex Method,Cyclomatic complexity of the method is 8,81
+rundeck,com.dtolabs.client.services,JobDefinitionSerializer,addScriptDispatch,Magic Number,The method contains a magic number: 10240,81
+rundeck,com.dtolabs.client.services,JobDefinitionSerializer,addNodefilters,Complex Conditional,The conditional expression null != nodeset && (null != nodeset.getInclude() && !nodeset.getInclude().isBlank() || null != nodeset.getExclude() && !nodeset.getExclude().isBlank()) is complex.,132
+rundeck,com.dtolabs.client.services,JobDefinitionSerializer,addNodefilters,Complex Method,Cyclomatic complexity of the method is 8,132
+rundeck,com.dtolabs.client.services,JobDefinitionSerializer,addNodefilters,Long Statement,The length of the statement "if (null != nodeset && (null != nodeset.getInclude() && !nodeset.getInclude().isBlank() || null != nodeset.getExclude() && !nodeset.getExclude().isBlank())) {" is 158.,132
+rundeck,com.dtolabs.client.services,JobDefinitionSerializer,addNodefilters,Long Statement,The length of the statement "filters.addAttribute("excludeprecedence"`Boolean.toString(nodeset.getExclude().isDominant() || !nodeset.getInclude().isDominant()));" is 132.,132
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,submitQueueRequest,Long Statement,The length of the statement "final String message=null != node1.selectSingleNode("message") ? node1.selectSingleNode("message").getStringValue() : null;" is 123.,118
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,validateResponse,Complex Method,Cyclomatic complexity of the method is 9,325
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,validateResponse,Long Statement,The length of the statement "throw new CentralDispatcherServerRequestException("Response content unexpectedly empty. " + (response.getResponseMessage() != null ? response.getResponseMessage() : ""));" is 170.,325
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,listStoredJobs,Complex Method,Cyclomatic complexity of the method is 19,420
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,listStoredJobs,Long Method,The method has 109 lines of code.,420
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,validateJobsResponseYAML,Complex Method,Cyclomatic complexity of the method is 8,547
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,validateJobsResponseYAML,Long Statement,The length of the statement "throw new CentralDispatcherServerRequestException("Expected YAML response` unexpected content type: " + response.getResultContentType());" is 137.,547
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,addNodeSetParams,Complex Method,Cyclomatic complexity of the method is 13,665
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,loadJobs,Complex Method,Cyclomatic complexity of the method is 11,722
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,loadJobs,Long Statement,The length of the statement "final String error=null != node1.selectSingleNode("error") ? node1.selectSingleNode("error").getStringValue() : "Failed";" is 121.,722
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,loadJobs,Long Statement,The length of the statement "final String error=null != node1.selectSingleNode("error") ? node1.selectSingleNode("error").getStringValue() : "Skipped";" is 122.,722
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,parseStoredJobResult,Empty catch clause,The method has an empty catch block.,816
+rundeck,com.dtolabs.client.services,RundeckCentralDispatcher,parseStoredJobResult,Long Statement,The length of the statement "final String description=null != node1.selectSingleNode("description") ? node1.selectSingleNode("description").getStringValue() : null;" is 135.,816
+rundeck,com.dtolabs.client.services,ServerService,makeRundeckRequest,Long Statement,The length of the statement "final WebserviceHttpClient hc=WebserviceHttpClientFactory.getInstance().getWebserviceHttpClient(jcUrl + urlPath`jcBasePath`connParams.getUsername()`connParams.getPassword()`queryParams`uploadFile`"xmlBatch");" is 208.,80
+rundeck,com.dtolabs.client.services,TestRundeckCentralDispatcher,testAddNodeSetParams,Long Method,The method has 160 lines of code.,56
+rundeck,com.dtolabs.client.services,TestRundeckCentralDispatcher,testAddNodeSetParams,Magic Number,The method contains a magic number: 19,56
+rundeck,com.dtolabs.client.services,TestRundeckCentralDispatcher,testAddNodeSetParams,Magic Number,The method contains a magic number: 2,56
+rundeck,com.dtolabs.client.services,TestRundeckCentralDispatcher,testAddNodeSetParams,Magic Number,The method contains a magic number: 2,56
+rundeck,com.dtolabs.client.services,TestRundeckCentralDispatcher,testAddNodeSetParams,Magic Number,The method contains a magic number: 2,56
+rundeck,com.dtolabs.client.services,TestRundeckCentralDispatcher,testAddNodeSetParams,Magic Number,The method contains a magic number: 2,56
+rundeck,com.dtolabs.client.services,JobDefinitionSerializerTest,testSerializeScript,Long Method,The method has 212 lines of code.,107
+rundeck,com.dtolabs.client.services,JobDefinitionSerializerTest,testSerializeScript,Long Statement,The length of the statement "assertEquals("#!/bin/bash\n" + "\n" + "echo this is a test\n"+ "uptime\n"`document.selectSingleNode("/joblist/job/script").getText());" is 134.,107
+rundeck,com.dtolabs.client.services,JobDefinitionSerializerTest,testSerializeScript,Long Statement,The length of the statement "assertEquals("#!/bin/bash\n" + "\n" + "echo this is a test\n"+ "uptime\n"`document.selectSingleNode("/joblist/job/script").getText());" is 134.,107
+rundeck,com.dtolabs.client.services,JobDefinitionSerializerTest,testSerializeScript,Magic Number,The method contains a magic number: 3,107
+rundeck,com.dtolabs.client.services,JobDefinitionSerializerTest,getNodeSet,Magic Number,The method contains a magic number: 3,204
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 5 parameters. ,51
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 7 parameters. ,63
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Statement,The length of the statement "return new WebserviceHttpClientChannel(urlSpec`new WebserviceFormAuthenticator(basePath`username`password)`query`uploadFile`fileparam);" is 135.,63
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 9 parameters. ,78
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Statement,The length of the statement "return new WebserviceHttpClientChannel(urlSpec`new WebserviceFormAuthenticator(basePath`username`password)`query`uploadFile`fileparam`destination`expectedContentType);" is 167.,78
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 7 parameters. ,98
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Statement,The length of the statement "return new WebserviceHttpClientChannel(urlSpec`new WebserviceFormAuthenticator(basePath`username`password)`query`destination`expectedContentType);" is 146.,98
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 5 parameters. ,137
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 7 parameters. ,156
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 9 parameters. ,177
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientFactory,getWebserviceHttpClient,Long Parameter List,The method has 7 parameters. ,203
+rundeck,com.dtolabs.client.utils,Default,getWebserviceHttpClient,Long Parameter List,The method has 5 parameters. ,51
+rundeck,com.dtolabs.client.utils,Default,getWebserviceHttpClient,Long Parameter List,The method has 7 parameters. ,63
+rundeck,com.dtolabs.client.utils,Default,getWebserviceHttpClient,Long Statement,The length of the statement "return new WebserviceHttpClientChannel(urlSpec`new WebserviceFormAuthenticator(basePath`username`password)`query`uploadFile`fileparam);" is 135.,63
+rundeck,com.dtolabs.client.utils,Default,getWebserviceHttpClient,Long Parameter List,The method has 9 parameters. ,78
+rundeck,com.dtolabs.client.utils,Default,getWebserviceHttpClient,Long Statement,The length of the statement "return new WebserviceHttpClientChannel(urlSpec`new WebserviceFormAuthenticator(basePath`username`password)`query`uploadFile`fileparam`destination`expectedContentType);" is 167.,78
+rundeck,com.dtolabs.client.utils,Default,getWebserviceHttpClient,Long Parameter List,The method has 7 parameters. ,98
+rundeck,com.dtolabs.client.utils,Default,getWebserviceHttpClient,Long Statement,The length of the statement "return new WebserviceHttpClientChannel(urlSpec`new WebserviceFormAuthenticator(basePath`username`password)`query`destination`expectedContentType);" is 146.,98
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientChannel,WebserviceHttpClientChannel,Long Parameter List,The method has 5 parameters. ,84
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientChannel,WebserviceHttpClientChannel,Long Parameter List,The method has 5 parameters. ,107
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientChannel,WebserviceHttpClientChannel,Long Parameter List,The method has 7 parameters. ,128
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientChannel,getRequestEntity,Long Statement,The length of the statement "final Part[] parts=new Part[]{new FilePart(null != getFileparam() ? getFileparam() : "uploadFile"`uploadFile.getName()`uploadFile)};" is 132.,154
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientChannel,postMakeRequest,Long Statement,The length of the statement "responseMessage=getResponseHeader(Constants.X_RUNDECK_RESULT_HEADER) != null ? getResponseHeader(Constants.X_RUNDECK_RESULT_HEADER).getValue() : getReasonCode();" is 161.,220
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientChannel,postMakeRequest,Magic Number,The method contains a magic number: 200,220
+rundeck,com.dtolabs.client.utils,WebserviceHttpClientChannel,postMakeRequest,Magic Number,The method contains a magic number: 300,220
+rundeck,com.dtolabs.client.utils,BasicAuthenticator,needsReAuthentication,Magic Number,The method contains a magic number: 300,68
+rundeck,com.dtolabs.client.utils,BasicAuthenticator,needsReAuthentication,Magic Number,The method contains a magic number: 400,68
+rundeck,com.dtolabs.client.utils,BaseHttpClientChannel,BaseHttpClientChannel,Long Parameter List,The method has 5 parameters. ,78
+rundeck,com.dtolabs.client.utils,HttpClientChannel,makeRequest,Complex Conditional,The conditional expression null != destinationStream && resultCode >= 200 && resultCode < 300 is complex.,284
+rundeck,com.dtolabs.client.utils,HttpClientChannel,makeRequest,Complex Method,Cyclomatic complexity of the method is 15,284
+rundeck,com.dtolabs.client.utils,HttpClientChannel,makeRequest,Long Statement,The length of the statement "throw new HttpClientException("Unauthorized Action: " + (null != method.getResponseHeader(Constants.X_RUNDECK_ACTION_UNAUTHORIZED_HEADER) ? method.getResponseHeader(Constants.X_RUNDECK_ACTION_UNAUTHORIZED_HEADER).getValue() : reasonCode));" is 239.,284
+rundeck,com.dtolabs.client.utils,HttpClientChannel,makeRequest,Magic Number,The method contains a magic number: 200,284
+rundeck,com.dtolabs.client.utils,HttpClientChannel,makeRequest,Magic Number,The method contains a magic number: 300,284
+rundeck,com.dtolabs.client.utils,HttpClientChannel,makeRequest,Magic Number,The method contains a magic number: 10240,284
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Complex Conditional,The conditional expression (res == HttpStatus.SC_MOVED_TEMPORARILY) || (res == HttpStatus.SC_MOVED_PERMANENTLY) || (res == HttpStatus.SC_SEE_OTHER)|| (res == HttpStatus.SC_TEMPORARY_REDIRECT) is complex.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Complex Conditional,The conditional expression isFollowLoginRedirect() && ((res == HttpStatus.SC_MOVED_TEMPORARILY) || (res == HttpStatus.SC_MOVED_PERMANENTLY) || (res == HttpStatus.SC_SEE_OTHER)|| (res == HttpStatus.SC_TEMPORARY_REDIRECT)) is complex.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Complex Method,Cyclomatic complexity of the method is 18,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Long Method,The method has 101 lines of code.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Long Statement,The length of the statement "if (get.getResponseHeader("WWW-Authenticate") != null && get.getResponseHeader("WWW-Authenticate").getValue().matches("^Basic.*")) {" is 132.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Long Statement,The length of the statement "throw new HttpClientException("Form-based login received UNAUTHORIZED` but didn't recognize it as Basic authentication: unable to get a session");" is 146.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Long Statement,The length of the statement "if ((res == HttpStatus.SC_MOVED_TEMPORARILY) || (res == HttpStatus.SC_MOVED_PERMANENTLY) || (res == HttpStatus.SC_SEE_OTHER)|| (res == HttpStatus.SC_TEMPORARY_REDIRECT)) {" is 171.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Long Statement,The length of the statement "login.setRequestBody(new NameValuePair[]{new NameValuePair(JAVA_USER_PARAM`getUsername())`new NameValuePair(JAVA_PASS_PARAM`getPassword())});" is 141.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Long Statement,The length of the statement "if (isFollowLoginRedirect() && ((res == HttpStatus.SC_MOVED_TEMPORARILY) || (res == HttpStatus.SC_MOVED_PERMANENTLY) || (res == HttpStatus.SC_SEE_OTHER)|| (res == HttpStatus.SC_TEMPORARY_REDIRECT))) {" is 200.,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,authenticate,Magic Number,The method contains a magic number: 1024,132
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,hasSessionCookie,Long Statement,The length of the statement "final Cookie[] initcookies=cookiespec.match(reqUrl.getHost()`reqUrl.getPort() > 0 ? reqUrl.getPort() : 80`basePath`HTTP_SECURE_PROTOCOL.equalsIgnoreCase(reqUrl.getProtocol())`state.getCookies());" is 195.,283
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,hasSessionCookie,Long Statement,The length of the statement "if (JAVA_SESSION_COOKIE_NAME.equals(initcookies[i].getName()) || JAVA_SESSION_COOKIE_PATTERN.matcher(initcookies[i].getName()).matches()) {" is 139.,283
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,hasSessionCookie,Magic Number,The method contains a magic number: 80,283
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,needsReAuthentication,Complex Conditional,The conditional expression resultCode >= 300 && resultCode < 400 && method.getResponseHeader("Location") != null is complex.,317
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,needsReAuthentication,Complex Conditional,The conditional expression logNdx >= 0 && (qNdx < 0 || logNdx < qNdx) is complex.,317
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,needsReAuthentication,Magic Number,The method contains a magic number: 300,317
+rundeck,com.dtolabs.client.utils,BaseFormAuthenticator,needsReAuthentication,Magic Number,The method contains a magic number: 400,317
+rundeck,com.dtolabs.utils,PropertiesUtil,stringFromProperties,Magic Number,The method contains a magic number: 2048,45
+rundeck,com.dtolabs.utils,Mapper,zip,Complex Conditional,The conditional expression includeNull || o != null && p != null is complex.,168
+rundeck,com.dtolabs.utils,Mapper,zip,Complex Conditional,The conditional expression includeNull || o != null && p != null is complex.,229
+rundeck,com.dtolabs.utils,Mapper,mapEntries,Complex Conditional,The conditional expression includeNull || (o != null && nk != null) is complex.,448
+rundeck,com.dtolabs.utils,Format,filesize,Magic Number,The method contains a magic number: 1024,108
+rundeck,com.dtolabs.utils,Format,filesize,Magic Number,The method contains a magic number: 1024,108
+rundeck,com.dtolabs.utils,Format,main,Magic Number,The method contains a magic number: 450,129
+rundeck,com.dtolabs.utils,Format,main,Magic Number,The method contains a magic number: 71,129
+rundeck,com.dtolabs.utils,Format,main,Magic Number,The method contains a magic number: 1024,129
+rundeck,com.dtolabs.utils,Format,main,Magic Number,The method contains a magic number: 4,129
+rundeck,com.dtolabs.utils,Format,main,Magic Number,The method contains a magic number: 1024,129
+rundeck,com.dtolabs.utils,Streams,copyStream,Magic Number,The method contains a magic number: 10240,38
+rundeck,com.dtolabs.rundeck,RunServer,run,Magic Number,The method contains a magic number: 100,67
+rundeck,com.dtolabs.rundeck,RunServer,warnNoSSLConfig,Long Statement,The length of the statement "System.err.println("WARNING: HTTPS is not enabled` specify -Drundeck.ssl.config=" + basedir + "/server/config/ssl.properties to enable.");" is 138.,102
+rundeck,com.dtolabs.rundeck,RunServer,configureSSLConnector,Magic Number,The method contains a magic number: 30000,128
+rundeck,com.dtolabs.rundeck,RunServer,init,Long Statement,The length of the statement "System.err.println("Could not load specified rundeck.ssl.config file: " + System.getProperty(RUNDECK_SSL_CONFIG) + ": "+ e.getMessage());" is 137.,203
+rundeck,com.dtolabs.rundeck,RunServer,parseArgs,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck,RunServer,parseArgs,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck,ZipUtil,extractZip,Long Parameter List,The method has 5 parameters. ,77
+rundeck,com.dtolabs.rundeck,ZipUtil,extractZip,Long Parameter List,The method has 5 parameters. ,92
+rundeck,com.dtolabs.rundeck,ZipUtil,extractZip,Complex Method,Cyclomatic complexity of the method is 11,117
+rundeck,com.dtolabs.rundeck,ZipUtil,extractZip,Long Parameter List,The method has 5 parameters. ,117
+rundeck,com.dtolabs.rundeck,ZipUtil,copyStream,Magic Number,The method contains a magic number: 1024,208
+rundeck,com.dtolabs.rundeck,ZipUtil,copyStream,Magic Number,The method contains a magic number: 4,208
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Identifier,The length of the field SYS_PROP_RUNDECK_LAUNCHER_DEBUG is 31.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Identifier,The length of the field SYS_PROP_RUNDECK_LAUNCHER_REWRITE is 33.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option baseDir=OptionBuilder.withLongOpt("basedir").hasArg().withDescription("The basedir").withArgName("PATH").create('b');" is 124.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option serverDir=OptionBuilder.withLongOpt("serverdir").hasArg().withDescription("The base directory for the server").withArgName("PATH").create();" is 147.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option binDir=OptionBuilder.withLongOpt("bindir").hasArg().withArgName("PATH").withDescription("The install directory for the tools used by users.").create('x');" is 161.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option sbinDir=OptionBuilder.withLongOpt("sbindir").hasArg().withArgName("PATH").withDescription("The install directory for the tools used by administrators.").create('s');" is 172.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option configDir=OptionBuilder.withLongOpt("configdir").hasArg().withArgName("PATH").withDescription("The location of the configuration.").create('c');" is 151.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option dataDir=OptionBuilder.withLongOpt("datadir").hasArg().withArgName("PATH").withDescription("The location of Rundeck's runtime data.").create();" is 149.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option projectDir=OptionBuilder.withLongOpt("projectdir").hasArg().withArgName("PATH").withDescription("The location of Rundeck's project data.").create('p');" is 158.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,ExpandRunServer,Long Statement,The length of the statement "Option skipInstall=OptionBuilder.withLongOpt("skipinstall").withDescription("Skip the extraction of the utilities from the launcher.").create();" is 144.,113
+rundeck,com.dtolabs.rundeck,ExpandRunServer,run,Long Statement,The length of the statement "formatter.printHelp("java [JAVA_OPTIONS] -jar rundeck-launcher.jar "`"\nRun the rundeck server` installing the " + "necessary components if they do not exist.\n"`options`"\nhttp://rundeck.org\n"`true);" is 201.,212
+rundeck,com.dtolabs.rundeck,ExpandRunServer,copyToolLibs,Long Statement,The length of the statement "throw new RuntimeException("Rundeck Core jar file manifest attribute \"Rundeck-Tools-Dependencies\" was not found: " + coreJar.getAbsolutePath());" is 146.,322
+rundeck,com.dtolabs.rundeck,ExpandRunServer,extractBin,Long Statement,The length of the statement "ZipUtil.extractZip(coreJar.getAbsolutePath()`destDir`"com/dtolabs/rundeck/core/cli/templates"`"com/dtolabs/rundeck/core/cli/templates/");" is 137.,356
+rundeck,com.dtolabs.rundeck,ExpandRunServer,getHostname,Empty catch clause,The method has an empty catch block.,528
+rundeck,com.dtolabs.rundeck,ExpandRunServer,execute,Long Parameter List,The method has 5 parameters. ,572
+rundeck,com.dtolabs.rundeck,ExpandRunServer,execute,Long Statement,The length of the statement "System.setProperty("rundeck.config.location"`new File(configDir`configuration.getProperty("rundeck.config.name")).getAbsolutePath());" is 133.,572
+rundeck,com.dtolabs.rundeck,ExpandRunServer,execute,Long Statement,The length of the statement "System.setProperty("java.security.auth.login.config"`new File(configDir`configuration.getProperty("loginmodule.conf.name")).getAbsolutePath());" is 143.,572
+rundeck,com.dtolabs.rundeck,ExpandRunServer,execute,Magic Number,The method contains a magic number: 500,572
+rundeck,com.dtolabs.rundeck.jetty.jaas,JNDILoginModule,context,Magic Number,The method contains a magic number: 11,137
+rundeck,com.dtolabs.rundeck.jetty.jaas,JNDILoginModule,authbindContext,Magic Number,The method contains a magic number: 11,152
+rundeck,com.dtolabs.rundeck.jetty.jaas,PropertyFileLoginModule,loadProperties,Complex Conditional,The conditional expression username != null && username.length() > 0 && credentials != null && credentials.length() > 0 is complex.,66
+rundeck,com.dtolabs.rundeck.jetty.jaas,PropertyFileLoginModule,loadProperties,Complex Method,Cyclomatic complexity of the method is 12,66
+rundeck,com.dtolabs.rundeck.jetty.jaas,JettyCachingLdapLoginModule,doRFC2254Encoding,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@38e070a4,254
+rundeck,com.dtolabs.rundeck.jetty.jaas,JettyCachingLdapLoginModule,getUserRolesByDn,Complex Conditional,The conditional expression dirContext == null || _roleBaseDn == null || _roleMemberAttribute == null || _roleObjectClass == null is complex.,356
+rundeck,com.dtolabs.rundeck.jetty.jaas,JettyCachingLdapLoginModule,login,Complex Method,Cyclomatic complexity of the method is 9,400
+rundeck,com.dtolabs.rundeck.jetty.jaas,JettyCachingLdapLoginModule,login,Long Statement,The length of the statement "Log.info("Login attempts: " + loginAttempts + "` Hits: "+ userInfoCacheHits+ "` Ratio: "+ percentHit.format((double)userInfoCacheHits / loginAttempts * 100f)+ "%.");" is 165.,400
+rundeck,com.dtolabs.rundeck.jetty.jaas,JettyCachingLdapLoginModule,login,Magic Number,The method contains a magic number: 100f,400
+rundeck,com.dtolabs.rundeck.jetty.jaas,JettyCachingLdapLoginModule,initialize,Long Statement,The length of the statement "_reportStatistics=Boolean.parseBoolean(String.valueOf(getOption(options`"reportStatistics"`Boolean.toString(_reportStatistics))));" is 130.,566
+rundeck,com.dtolabs.rundeck.jetty.jaas,JettyCachingLdapLoginModule,initialize,Long Statement,The length of the statement "Log.warn("Unable to parse cacheDurationMillis to a number: " + cacheDurationSetting`". Using default: " + _cacheDuration`e);" is 124.,566
+rundeck,com.dtolabs.rundeck.jetty.jaas,AbstractLoginModule,configureCallbacks,Magic Number,The method contains a magic number: 2,199
+rundeck,com.dtolabs.rundeck.services,InputServer,run,Empty catch clause,The method has an empty catch block.,70
+rundeck,com.dtolabs.rundeck.services,InputServer,run,Empty catch clause,The method has an empty catch block.,70
+rundeck,com.dtolabs.rundeck.services,InputServer,begin,Magic Number,The method contains a magic number: 5000,97
+rundeck,com.dtolabs.rundeck.services,worker,run,Empty catch clause,The method has an empty catch block.,70
+rundeck,com.dtolabs.rundeck.services,worker,run,Empty catch clause,The method has an empty catch block.,70
+rundeck,com.dtolabs.rundeck.execution,WorkflowExecutionItemImpl,WorkflowExecutionItemImpl,Long Parameter List,The method has 6 parameters. ,45
+rundeck,com.dtolabs.rundeck.execution,NodeFirstWorkflowStrategy,executeWorkflow,Long Statement,The length of the statement "nodeDispatcher.executeNodedispatch(new Project()`nodes`baseNodeSet.getThreadCount()`baseNodeSet.isKeepgoing()`listener.getFailedNodesListener()`this);" is 150.,64
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,itemForWFCmdItem,Complex Conditional,The conditional expression null != cmd.getAdhocFilepath() || null != cmd.getAdhocLocalString() || null != cmd.getAdhocRemoteString() is complex.,62
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,itemForWFCmdItem,Long Parameter List,The method has 6 parameters. ,62
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,createScriptContext,Complex Conditional,The conditional expression null == cmd.getAdhocRemoteString() && null == cmd.getAdhocLocalString() && null != cmd.getAdhocFilepath() is complex.,119
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,createScriptContext,Long Parameter List,The method has 5 parameters. ,119
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWFItem,Long Parameter List,The method has 9 parameters. ,196
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWFItem,Long Statement,The length of the statement "final ExecutionItem newExecItem=itemForWFCmdItem(cmd`item.getProject()`nodeSet`item.getUser()`item.getLoglevel()`item.getDataContext());" is 136.,196
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWFItem,Long Statement,The length of the statement "listener.log(Constants.VERBOSE_LEVEL`c + ": wf item failed: " + org.apache.tools.ant.util.StringUtils.getStackTrace(exc));" is 122.,196
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWFItem,Long Statement,The length of the statement "throw new WorkflowAction.WorkflowStepFailureException("Step " + c + " of the workflow threw exception: "+ exc.getMessage()`exc`c);" is 130.,196
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWFItem,Long Statement,The length of the statement "failedList.add("Step " + c + " failed: "+ (null != wfstepthrowable ? wfstepthrowable.getMessage() : (null != result && null != result.getException() ? result.getException() : (null != result ? result.getResultObject() : "no result"))));" is 236.,196
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWFItem,Long Statement,The length of the statement "throw new WorkflowAction.WorkflowStepFailureException("Step " + c + " of the workflow threw an exception: "+ result.getException().getMessage()`result.getException()`c);" is 169.,196
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWFItem,Long Statement,The length of the statement "throw new WorkflowAction.WorkflowStepFailureException("Step " + c + " of the workflow failed with result: "+ (result != null ? result.getResultObject() : null)`result`c);" is 170.,196
+rundeck,com.dtolabs.rundeck.execution,BaseWorkflowStrategy,executeWorkflowItemsForNodeSet,Long Parameter List,The method has 5 parameters. ,282
+rundeck,com.dtolabs.rundeck.execution,WorkflowImpl,toString,Long Statement,The length of the statement "return "WorkflowImpl{" + "commands=" + commands + "` threadcount="+ threadcount+ "` keepgoing="+ keepgoing+ "` strategy="+ strategy+ '}';" is 137.,72
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,toString,Long Statement,The length of the statement "return "testWorkflowCmdItem{" + "returnProperty='" + returnProperty + '\''+ "` ifString='"+ ifString+ '\''+ "` unlessString='"+ unlessString+ '\''+ "` equalsString='"+ equalsString+ '\''+ "` project='"+ project+ '\''+ "` argString='"+ argString+ '\''+ "` user='"+ user+ '\''+ "` nodeKeepgoing="+ nodeKeepgoing+ "` nodeThreadcount="+ nodeThreadcount+ "` adhocRemoteString='"+ adhocRemoteString+ '\''+ "` adhocLocalString='"+ adhocLocalString+ '\''+ "` adhocFilepath='"+ adhocFilepath+ '\''+ "` adhocExecution="+ adhocExecution+ '}';" is 531.,208
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Complex Method,Cyclomatic complexity of the method is 9,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Method,The method has 543 lines of code.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"user1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"user1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"user1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("unexpected exception type: " + cause1.getClass().getName()`cause1 instanceof WorkflowAction.WorkflowStepFailureException);" is 134.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("unexpected cause exception type: " + cause1.getCause()`cause1.getCause() instanceof IllegalArgumentException);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"user1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("unexpected exception type" + result.getException()`result.getException() instanceof WorkflowAction.WorkflowStepFailureException);" is 141.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("unexpected cause exception type: " + result.getException().getCause()`result.getException().getCause() instanceof IllegalArgumentException);" is 152.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof JobExecutionItem);" is 123.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof JobExecutionItem);" is 123.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(1) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(2) instanceof JobExecutionItem);" is 123.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(1) instanceof JobExecutionItem);" is 123.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(1) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(1) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("unexpected exception message" + result`result.getException().getMessage().startsWith("Some steps in the workflow failed: "));" is 137.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(1) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(2) instanceof JobExecutionItem);" is 123.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "final WorkflowExecutionItemImpl executionItem=new WorkflowExecutionItemImpl(workflow`nodeset`"User1"`1`TEST_PROJECT`null);" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("unexpected exception message" + result`cause1.getMessage().startsWith("Some steps in the workflow failed: "));" is 122.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(0) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(1) instanceof DispatchedScriptExecutionItem);" is 136.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Long Statement,The length of the statement "assertTrue("wrong exec item type for workflow item"`executionService.executionItemList.get(2) instanceof JobExecutionItem);" is 123.,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 3,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 3,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 3,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 3,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,testExecuteWorkflow,Magic Number,The method contains a magic number: 2,236
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,executeItem,Magic Number,The method contains a magic number: 2,673
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,executeItem,Magic Number,The method contains a magic number: 2,747
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,executeItem,Magic Number,The method contains a magic number: 2,830
+rundeck,com.dtolabs.rundeck.execution,WorkflowActionTests,executeItem,Magic Number,The method contains a magic number: 2,910
+rundeck,com.dtolabs.rundeck.execution,testWorkflowCmdItem,toString,Long Statement,The length of the statement "return "testWorkflowCmdItem{" + "returnProperty='" + returnProperty + '\''+ "` ifString='"+ ifString+ '\''+ "` unlessString='"+ unlessString+ '\''+ "` equalsString='"+ equalsString+ '\''+ "` project='"+ project+ '\''+ "` argString='"+ argString+ '\''+ "` user='"+ user+ '\''+ "` nodeKeepgoing="+ nodeKeepgoing+ "` nodeThreadcount="+ nodeThreadcount+ "` adhocRemoteString='"+ adhocRemoteString+ '\''+ "` adhocLocalString='"+ adhocLocalString+ '\''+ "` adhocFilepath='"+ adhocFilepath+ '\''+ "` adhocExecution="+ adhocExecution+ '}';" is 531.,208

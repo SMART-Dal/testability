@@ -1,0 +1,798 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+xerial_sqlite-jdbc,org.sqlite,Collation,create,Magic Number,The method contains a magic number: 255,47
+xerial_sqlite-jdbc,org.sqlite,ExtendedCommand,parse,Magic Number,The method contains a magic number: 5,27
+xerial_sqlite-jdbc,org.sqlite,ExtendedCommand,parse,Magic Number,The method contains a magic number: 6,27
+xerial_sqlite-jdbc,org.sqlite,ExtendedCommand,parse,Magic Number,The method contains a magic number: 6,27
+xerial_sqlite-jdbc,org.sqlite,ExtendedCommand,parse,Magic Number,The method contains a magic number: 7,27
+xerial_sqlite-jdbc,org.sqlite,ExtendedCommand,removeQuotation,Complex Conditional,The conditional expression (s.startsWith("\"") && s.endsWith("\"")) || (s.startsWith("'") && s.endsWith("'")) is complex.,47
+xerial_sqlite-jdbc,org.sqlite,ExtendedCommand,removeQuotation,Long Statement,The length of the statement "if ((s.startsWith("\"") && s.endsWith("\"")) || (s.startsWith("'") && s.endsWith("'"))) return s.substring(1`s.length() - 1);" is 125.,47
+xerial_sqlite-jdbc,org.sqlite,SQLiteDataSource,setReadUncommited,Long Identifier,The length of the parameter useReadUncommitedIsolationMode is 30.,319
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnection,setTransactionIsolation,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5ac80203,162
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnection,open,Complex Conditional,The conditional expression !fileName.isEmpty() && !":memory:".equals(fileName) && !fileName.startsWith("file:")&& !fileName.contains("mode=memory") is complex.,187
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnection,open,Long Statement,The length of the statement "if (!fileName.isEmpty() && !":memory:".equals(fileName) && !fileName.startsWith("file:")&& !fileName.contains("mode=memory")) {" is 127.,187
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnection,extractResource,Magic Number,The method contains a magic number: 8192,265
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnection,extractPragmasFromFilename,Complex Method,Cyclomatic complexity of the method is 8,473
+xerial_sqlite-jdbc,org.sqlite,SQLiteConfig,apply,Complex Method,Cyclomatic complexity of the method is 11,108
+xerial_sqlite-jdbc,org.sqlite,SQLiteConfig,apply,Long Statement,The length of the statement "sqliteConn.setLimit(SQLiteLimits.SQLITE_LIMIT_FUNCTION_ARG`parseLimitPragma(Pragma.LIMIT_FUNCTION_ARG`DEFAULT_MAX_FUNCTION_ARG));" is 129.,108
+xerial_sqlite-jdbc,org.sqlite,SQLiteConfig,apply,Long Statement,The length of the statement "sqliteConn.setLimit(SQLiteLimits.SQLITE_LIMIT_LIKE_PATTERN_LENGTH`parseLimitPragma(Pragma.LIMIT_LIKE_PATTERN_LENGTH`-1));" is 121.,108
+xerial_sqlite-jdbc,org.sqlite,SQLiteConfig,apply,Long Statement,The length of the statement "sqliteConn.setLimit(SQLiteLimits.SQLITE_LIMIT_SQL_LENGTH`parseLimitPragma(Pragma.LIMIT_SQL_LENGTH`DEFAULT_MAX_SQL_LENGTH));" is 123.,108
+xerial_sqlite-jdbc,org.sqlite,SQLiteConfig,apply,Long Statement,The length of the statement "sqliteConn.setLimit(SQLiteLimits.SQLITE_LIMIT_PAGE_COUNT`parseLimitPragma(Pragma.LIMIT_PAGE_COUNT`DEFAULT_MAX_PAGE_COUNT));" is 123.,108
+xerial_sqlite-jdbc,org.sqlite,SQLiteConfig,setReadUncommited,Long Identifier,The length of the parameter useReadUncommitedIsolationMode is 30.,821
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnectionConfig,fromPragmaTable,Long Statement,The length of the statement "return new SQLiteConnectionConfig(SQLiteConfig.DateClass.getDateClass(pragmaTable.getProperty(SQLiteConfig.Pragma.DATE_CLASS.pragmaName`SQLiteConfig.DateClass.INTEGER.name()))`SQLiteConfig.DatePrecision.getPrecision(pragmaTable.getProperty(SQLiteConfig.Pragma.DATE_PRECISION.pragmaName`SQLiteConfig.DatePrecision.MILLISECONDS.name()))`pragmaTable.getProperty(SQLiteConfig.Pragma.DATE_STRING_FORMAT.pragmaName`DEFAULT_DATE_STRING_FORMAT)`Connection.TRANSACTION_SERIALIZABLE`SQLiteConfig.TransactionMode.getMode(pragmaTable.getProperty(SQLiteConfig.Pragma.TRANSACTION_MODE.pragmaName`SQLiteConfig.TransactionMode.DEFERRED.name()))`true);" is 635.,23
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnectionConfig,SQLiteConnectionConfig,Long Parameter List,The method has 6 parameters. ,44
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnectionConfig,copyConfig,Long Statement,The length of the statement "return new SQLiteConnectionConfig(dateClass`datePrecision`dateStringFormat`transactionIsolation`transactionMode`autoCommit);" is 124.,59
+xerial_sqlite-jdbc,org.sqlite,SQLiteConnectionConfig,getDateMultiplier,Magic Number,The method contains a magic number: 1000L,69
+xerial_sqlite-jdbc,org.sqlite,SQLiteException,SQLiteException,Magic Number,The method contains a magic number: 0xff,32
+xerial_sqlite-jdbc,org.sqlite,Function,create,Long Parameter List,The method has 5 parameters. ,86
+xerial_sqlite-jdbc,org.sqlite,Function,create,Magic Number,The method contains a magic number: 127,86
+xerial_sqlite-jdbc,org.sqlite,Function,create,Magic Number,The method contains a magic number: 255,86
+xerial_sqlite-jdbc,org.sqlite,Function,checkContext,Complex Conditional,The conditional expression conn == null || conn.getDatabase() == null || context == 0 is complex.,287
+xerial_sqlite-jdbc,org.sqlite,Function,checkValue,Complex Conditional,The conditional expression conn == null || conn.getDatabase() == null || value == 0 is complex.,294
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoader,extractAndLoadLibraryFile,Complex Method,Cyclomatic complexity of the method is 8,181
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoader,extractAndLoadLibraryFile,Magic Number,The method contains a magic number: 8192,181
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoader,loadSQLiteNativeLibrary,Complex Method,Cyclomatic complexity of the method is 14,313
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoader,loadSQLiteNativeLibrary,Long Statement,The length of the statement "throw new Exception(String.format("No native library found for os.name=%s` os.arch=%s` paths=[%s]"`OSInfo.getOSName()`OSInfo.getArchName()`StringUtils.join(triedPaths`File.pathSeparator)));" is 189.,313
+xerial_sqlite-jdbc,org.sqlite,MultipleClassLoaderTest,multipleClassLoader,Magic Number,The method contains a magic number: 4,69
+xerial_sqlite-jdbc,org.sqlite,MultipleClassLoaderTest,multipleClassLoader,Magic Number,The method contains a magic number: 4,69
+xerial_sqlite-jdbc,org.sqlite,MultipleClassLoaderTest,multipleClassLoader,Magic Number,The method contains a magic number: 10,69
+xerial_sqlite-jdbc,org.sqlite,MultipleClassLoaderTest,multipleClassLoader,Magic Number,The method contains a magic number: 3,69
+xerial_sqlite-jdbc,org.sqlite,MultipleClassLoaderTest,multipleClassLoader,Magic Number,The method contains a magic number: 4,69
+xerial_sqlite-jdbc,org.sqlite,MultipleClassLoaderTest,addJarEntry,Complex Method,Cyclomatic complexity of the method is 8,131
+xerial_sqlite-jdbc,org.sqlite,MultipleClassLoaderTest,addJarEntry,Magic Number,The method contains a magic number: 8192,131
+xerial_sqlite-jdbc,org.sqlite,BusyHandlerTest,workWork,Magic Number,The method contains a magic number: 5,71
+xerial_sqlite-jdbc,org.sqlite,BusyHandlerTest,basicBusyHandler,Magic Number,The method contains a magic number: 3,80
+xerial_sqlite-jdbc,org.sqlite,BusyHandlerTest,testUnregister,Magic Number,The method contains a magic number: 3,117
+xerial_sqlite-jdbc,org.sqlite,ErrorMessageTest,writeProtected,Long Statement,The length of the statement "Exception exception=assertThrows(SQLException.class`() -> finalStmt.executeUpdate("insert into sample values(2` \"bar\")"));" is 124.,95
+xerial_sqlite-jdbc,org.sqlite,ErrorMessageTest,cantOpenDir,Long Statement,The length of the statement "Exception exception=assertThrows(SQLException.class`() -> DriverManager.getConnection("jdbc:sqlite:" + dir.getAbsolutePath()));" is 127.,121
+xerial_sqlite-jdbc,org.sqlite,ErrorMessageTest,cantOpenDir,Long Statement,The length of the statement "assertTrue(exception.getMessage().contains("[SQLITE_CANTOPEN]") || exception.getMessage().contains("[SQLITE_CANTOPEN_ISDIR]"));" is 127.,121
+xerial_sqlite-jdbc,org.sqlite,ErrorMessageTest,unknownErrorExceptionMessageShouldContainOriginalErrorCode,Magic Number,The method contains a magic number: 1234567890,164
+xerial_sqlite-jdbc,org.sqlite,UDFTest,calling,Magic Number,The method contains a magic number: 4,40
+xerial_sqlite-jdbc,org.sqlite,UDFTest,calling,Magic Number,The method contains a magic number: 4,40
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 4,46
+xerial_sqlite-jdbc,org.sqlite,UDFTest,returning,Magic Number,The method contains a magic number: 4,55
+xerial_sqlite-jdbc,org.sqlite,UDFTest,returning,Magic Number,The method contains a magic number: 4,55
+xerial_sqlite-jdbc,org.sqlite,UDFTest,returning,Magic Number,The method contains a magic number: 20,55
+xerial_sqlite-jdbc,org.sqlite,UDFTest,returning,Magic Number,The method contains a magic number: 4,55
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 4,61
+xerial_sqlite-jdbc,org.sqlite,UDFTest,accessArgs,Magic Number,The method contains a magic number: 15,79
+xerial_sqlite-jdbc,org.sqlite,UDFTest,multipleArgs,Magic Number,The method contains a magic number: 9,98
+xerial_sqlite-jdbc,org.sqlite,UDFTest,multipleArgs,Magic Number,The method contains a magic number: 2,98
+xerial_sqlite-jdbc,org.sqlite,UDFTest,multipleArgs,Magic Number,The method contains a magic number: 12,98
+xerial_sqlite-jdbc,org.sqlite,UDFTest,returnTypes,Magic Number,The method contains a magic number: 0.0001,126
+xerial_sqlite-jdbc,org.sqlite,UDFTest,returnArgDouble,Magic Number,The method contains a magic number: 0.0001,222
+xerial_sqlite-jdbc,org.sqlite,UDFTest,trigger,Magic Number,The method contains a magic number: 5,279
+xerial_sqlite-jdbc,org.sqlite,UDFTest,aggregate,Magic Number,The method contains a magic number: 2,298
+xerial_sqlite-jdbc,org.sqlite,UDFTest,window,Long Statement,The length of the statement "ResultSet rs=stat.executeQuery("select mySum(x) over (order by x rows between 1 preceding and 1 following) from t order by x;");" is 128.,329
+xerial_sqlite-jdbc,org.sqlite,UDFTest,window,Magic Number,The method contains a magic number: 3,329
+xerial_sqlite-jdbc,org.sqlite,UDFTest,window,Magic Number,The method contains a magic number: 6,329
+xerial_sqlite-jdbc,org.sqlite,UDFTest,window,Magic Number,The method contains a magic number: 9,329
+xerial_sqlite-jdbc,org.sqlite,UDFTest,window,Magic Number,The method contains a magic number: 12,329
+xerial_sqlite-jdbc,org.sqlite,UDFTest,window,Magic Number,The method contains a magic number: 9,329
+xerial_sqlite-jdbc,org.sqlite,UDFTest,destroy,Magic Number,The method contains a magic number: 9,384
+xerial_sqlite-jdbc,org.sqlite,UDFTest,destroy,Magic Number,The method contains a magic number: 9,384
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 9,390
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Long Statement,The length of the statement "ResultSet rs=stat.executeQuery("select f1() + f2() + f3() + f4() + f5() + f6()" + " + f7() + f8() + f9() + f10() + f11();");" is 124.,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 2,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 3,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 4,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 5,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 6,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 7,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 8,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 9,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 10,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 11,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 2,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 3,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 4,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 5,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 6,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 7,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 8,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 9,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 10,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,manyfunctions,Magic Number,The method contains a magic number: 11,402
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 2,417
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 3,426
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 4,435
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 5,444
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 6,453
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 7,462
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 8,471
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 9,480
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 10,489
+xerial_sqlite-jdbc,org.sqlite,UDFTest,xFunc,Magic Number,The method contains a magic number: 11,498
+xerial_sqlite-jdbc,org.sqlite,UDFTest,multipleThreads,Magic Number,The method contains a magic number: 1000,513
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testSetAndRemoveUpdateHook,Magic Number,The method contains a magic number: 1000,36
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testSetAndRemoveUpdateHook,Magic Number,The method contains a magic number: 1000,36
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testMultiConnectionHook,Magic Number,The method contains a magic number: 1000,85
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testMultiConnectionHook,Magic Number,The method contains a magic number: 1000,85
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testMultiInsertAndCommit,Magic Number,The method contains a magic number: 100,134
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testMultiInsertAndCommit,Magic Number,The method contains a magic number: 1000,134
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testMultiInsertAndCommit,Magic Number,The method contains a magic number: 100,134
+xerial_sqlite-jdbc,org.sqlite,ListenerTest,testMultiInsertAndCommit,Magic Number,The method contains a magic number: 100,134
+xerial_sqlite-jdbc,org.sqlite,ExtensionTest,extFTS3,Magic Number,The method contains a magic number: 2,35
+xerial_sqlite-jdbc,org.sqlite,ExtensionTest,extFTS5,Magic Number,The method contains a magic number: 2,50
+xerial_sqlite-jdbc,org.sqlite,ExtensionTest,extFunctions,Magic Number,The method contains a magic number: 0.707106781186548,65
+xerial_sqlite-jdbc,org.sqlite,ExtensionTest,extFunctions,Magic Number,The method contains a magic number: 0.000000000000001,65
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_array_length_Test1,Magic Number,The method contains a magic number: 4,147
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_array_length_Test2,Magic Number,The method contains a magic number: 4,156
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_array_length_Test5,Magic Number,The method contains a magic number: 3,188
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_extract_Test4,Magic Number,The method contains a magic number: 7,246
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_extract_Test7,Long Statement,The length of the statement "ResultSet rs=conn.createStatement().executeQuery("select json_extract('{\"a\":2`\"c\":[4`5`{\"f\":7}]}'` '$.x'` '$.a')");" is 121.,282
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_each_Test2,Long Statement,The length of the statement "String q="SELECT name FROM user WHERE phone LIKE '705-%'" + " UNION" + " SELECT user.name"+ " FROM user` json_each(user.phone)"+ " WHERE json_valid(user.phone)"+ " AND json_each.value LIKE '704-%'";" is 198.,639
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test1,Long Statement,The length of the statement "String q="SELECT big.rowid` fullkey` value" + " FROM big` json_tree(big.json)" + " WHERE json_tree.type NOT IN ('object'` 'array')";" is 132.,668
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test1,Magic Number,The method contains a magic number: 2,668
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test1,Magic Number,The method contains a magic number: 2,668
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test1,Magic Number,The method contains a magic number: 3,668
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test1,Magic Number,The method contains a magic number: 2,668
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test1,Magic Number,The method contains a magic number: 4,668
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test1,Magic Number,The method contains a magic number: 3,668
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test2,Magic Number,The method contains a magic number: 2,695
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test2,Magic Number,The method contains a magic number: 2,695
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test2,Magic Number,The method contains a magic number: 3,695
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test2,Magic Number,The method contains a magic number: 2,695
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test2,Magic Number,The method contains a magic number: 4,695
+xerial_sqlite-jdbc,org.sqlite,JSON1Test,json_tree_Test2,Magic Number,The method contains a magic number: 3,695
+xerial_sqlite-jdbc,org.sqlite,QueryTest,nullQuery,Empty catch clause,The method has an empty catch block.,37
+xerial_sqlite-jdbc,org.sqlite,QueryTest,setFloatTest,Magic Number,The method contains a magic number: 3.141597f,69
+xerial_sqlite-jdbc,org.sqlite,QueryTest,setFloatTest,Magic Number,The method contains a magic number: 3.0f,69
+xerial_sqlite-jdbc,org.sqlite,QueryTest,setFloatTest,Magic Number,The method contains a magic number: 0.0000001,69
+xerial_sqlite-jdbc,org.sqlite,QueryTest,notEmptyBlob,Magic Number,The method contains a magic number: 5,163
+xerial_sqlite-jdbc,org.sqlite,QueryTest,concatTest,Long Statement,The length of the statement "ResultSet rs=statement.executeQuery("select group_concat(ifnull(shortname` name)) from mxp` person where mxp.mid=2 and mxp.pid=person.id and mxp.type='T'");" is 156.,229
+xerial_sqlite-jdbc,org.sqlite,QueryTest,concatTest,Long Statement,The length of the statement "rs=statement.executeQuery("select group_concat(ifnull(shortname` name)) from mxp` person where mxp.mid=1 and mxp.pid=person.id and mxp.type='T'");" is 146.,229
+xerial_sqlite-jdbc,org.sqlite,QueryTest,concatTest,Long Statement,The length of the statement "PreparedStatement ps=conn.prepareStatement("select group_concat(ifnull(shortname` name)) from mxp` person where mxp.mid=? and mxp.pid=person.id and mxp.type='T'");" is 163.,229
+xerial_sqlite-jdbc,org.sqlite,QueryTest,concatTest,Magic Number,The method contains a magic number: 30,229
+xerial_sqlite-jdbc,org.sqlite,QueryTest,concatTest,Magic Number,The method contains a magic number: 2,229
+xerial_sqlite-jdbc,org.sqlite,QueryTest,concatTest,Magic Number,The method contains a magic number: 2,229
+xerial_sqlite-jdbc,org.sqlite,QueryTest,clobTest,Empty catch clause,The method has an empty catch block.,308
+xerial_sqlite-jdbc,org.sqlite,QueryTest,clobTest,Empty catch clause,The method has an empty catch block.,308
+xerial_sqlite-jdbc,org.sqlite,QueryTest,clobTest,Magic Number,The method contains a magic number: 2,308
+xerial_sqlite-jdbc,org.sqlite,QueryTest,clobTest,Magic Number,The method contains a magic number: 3,308
+xerial_sqlite-jdbc,org.sqlite,QueryTest,clobTest,Magic Number,The method contains a magic number: 3,308
+xerial_sqlite-jdbc,org.sqlite,QueryTest,github720_Incorrect_Update_Count_After_Deleting_Many_Rows,Magic Number,The method contains a magic number: 50000,347
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,failedUpdatedPreventedFutureRollback,Magic Number,The method contains a magic number: 10,77
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,failedUpdatedPreventedFutureRollback,Magic Number,The method contains a magic number: 2,77
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,failedUpdatedPreventedFutureRollback,Magic Number,The method contains a magic number: 3,77
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiConn,Magic Number,The method contains a magic number: 6,147
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiConn,Magic Number,The method contains a magic number: 6,147
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 6,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 7,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 2,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 3,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 4,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 5,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 6,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 7,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 2,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 3,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 4,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,multiRollback,Magic Number,The method contains a magic number: 5,221
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,secondConnWillWait,Magic Number,The method contains a magic number: 100,274
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,secondConnWillWait,Magic Number,The method contains a magic number: 5000,274
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,secondConnMustTimeout,Magic Number,The method contains a magic number: 10,314
+xerial_sqlite-jdbc,org.sqlite,TransactionTest,runUpdates,Magic Number,The method contains a magic number: 2,398
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,query,Magic Number,The method contains a magic number: 30,62
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,query,Magic Number,The method contains a magic number: 2,62
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,function,Magic Number,The method contains a magic number: 2,85
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,function,Magic Number,The method contains a magic number: 3,85
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,function,Magic Number,The method contains a magic number: 4,85
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,function,Magic Number,The method contains a magic number: 5,85
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,test,Empty catch clause,The method has an empty catch block.,111
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,test,Magic Number,The method contains a magic number: 32,111
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,test,Magic Number,The method contains a magic number: 32,111
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,test,Magic Number,The method contains a magic number: 10,111
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,test,Magic Number,The method contains a magic number: 3,111
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,test,Magic Number,The method contains a magic number: 32,111
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,run,Empty catch clause,The method has an empty catch block.,120
+xerial_sqlite-jdbc,org.sqlite,SQLiteJDBCLoaderTest,run,Magic Number,The method contains a magic number: 10,120
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,update,Magic Number,The method contains a magic number: 3,59
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,update,Magic Number,The method contains a magic number: 5,59
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,update,Magic Number,The method contains a magic number: 7,59
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,update,Magic Number,The method contains a magic number: 15,59
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,multiUpdate,Magic Number,The method contains a magic number: 10,79
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,singleRowRS,Magic Number,The method contains a magic number: 0.0001,103
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,twoRowRS,Magic Number,The method contains a magic number: 2,117
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,twoRowRS,Magic Number,The method contains a magic number: 0.0001,117
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,twoRowRS,Magic Number,The method contains a magic number: 0.0001,117
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 7,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 8,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 15,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 16,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 25,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 2,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,set,Magic Number,The method contains a magic number: 3,150
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,colNameAccess,Magic Number,The method contains a magic number: 2,229
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,colNameAccess,Magic Number,The method contains a magic number: 3,229
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,colNameAccess,Magic Number,The method contains a magic number: 0.0001,229
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,insert1000,Magic Number,The method contains a magic number: 1000,246
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,insert1000,Magic Number,The method contains a magic number: 1000,246
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 2,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 3,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 4,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 5,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 6,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 7,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 7,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 2,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 0.0001f,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 3,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 0.0001d,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 4,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 5,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 6,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 7,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 7,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 2,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 3,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 4,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 5,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 6,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 7,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 2,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 3,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 4,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 5,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 6,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,getObject,Magic Number,The method contains a magic number: 7,263
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Long Statement,The length of the statement "ResultSet rs=stat.executeQuery("select '" + utf01 + "'`'"+ utf02+ "'`'"+ utf03+ "'`'"+ utf04+ "'`'"+ utf05+ "'`'"+ utf06+ "'`'"+ utf07+ "'`'"+ utf08+ "';");" is 156.,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 2,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 3,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 4,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 5,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 6,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 7,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 8,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 2,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 3,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 4,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 5,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 6,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 7,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 8,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 2,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 3,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 4,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 5,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 6,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 7,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 8,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 2,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 3,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 4,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 5,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 6,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 7,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 8,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 2,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 3,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 4,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 5,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 6,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 7,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,utf,Magic Number,The method contains a magic number: 8,325
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 10,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 2,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 3,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 4,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 10,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 2,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 0.0001,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 3,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 4,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batch,Magic Number,The method contains a magic number: 0.0001,394
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batchOneParam,Magic Number,The method contains a magic number: 10,460
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batchOneParam,Magic Number,The method contains a magic number: 10,460
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batchZeroParams,Magic Number,The method contains a magic number: 10,476
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,batchZeroParams,Magic Number,The method contains a magic number: 10,476
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,paramMetaData,Magic Number,The method contains a magic number: 4,491
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 3,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 2,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 3,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 2,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 2,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 3,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 3,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,metaData,Magic Number,The method contains a magic number: 3,497
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,date1,Magic Number,The method contains a magic number: 987654321,517
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,date2,Magic Number,The method contains a magic number: 1092941466000L,533
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,changeSchema,Magic Number,The method contains a magic number: 1000,548
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 9,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 10,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 2,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 9,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 2,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 10,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 2,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 9,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,reusingSetValues,Magic Number,The method contains a magic number: 2,572
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,clearParameters,Magic Number,The method contains a magic number: 2,597
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,preparedStatementShouldNotThrowIfNotAllParamsSet,Magic Number,The method contains a magic number: 3,632
+xerial_sqlite-jdbc,org.sqlite,PrepStmtTest,preparedStatementShouldNotThrowIfNotAllParamsSet,Magic Number,The method contains a magic number: 2,632
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,readOnly,Empty catch clause,The method has an empty catch block.,59
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,openJARResource,Long Statement,The length of the statement "Connection conn=DriverManager.getConnection(String.format("jdbc:sqlite::resource:jar:%s!/sample.db"`testJAR.toURI().toURL()));" is 126.,202
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,concurrentClose,Magic Number,The method contains a magic number: 512,230
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,copyToTemp,Magic Number,The method contains a magic number: 8192,257
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,URIFilenames,Magic Number,The method contains a magic number: 100,279
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,URIFilenames,Magic Number,The method contains a magic number: 100,279
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,URIFilenames,Magic Number,The method contains a magic number: 200,279
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,setPragmasFromURI,Long Statement,The length of the statement "Connection conn=DriverManager.getConnection(String.format("jdbc:sqlite:%s?journal_mode=WAL&synchronous=OFF&journal_size_limit=500"`testDB));" is 140.,316
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,setPragmasFromURI,Magic Number,The method contains a magic number: 500,316
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,errorOnEmptyPragmaValueInURI,Long Statement,The length of the statement "assertThrows(SQLException.class`() -> DriverManager.getConnection("jdbc:sqlite:file::memory:?journal_mode=&synchronous="));" is 123.,376
+xerial_sqlite-jdbc,org.sqlite,ConnectionTest,useLastSpecifiedPragmaValueInURI,Long Statement,The length of the statement "Connection conn=DriverManager.getConnection(String.format("jdbc:sqlite:%s?journal_mode=WAL&journal_mode=MEMORY&journal_mode=TRUNCATE"`testDB));" is 143.,408
+xerial_sqlite-jdbc,org.sqlite,FetchSizeTest,testFetchSize,Magic Number,The method contains a magic number: 2,34
+xerial_sqlite-jdbc,org.sqlite,FetchSizeTest,testFetchSize,Magic Number,The method contains a magic number: 3,34
+xerial_sqlite-jdbc,org.sqlite,FetchSizeTest,testFetchSize,Magic Number,The method contains a magic number: 4,34
+xerial_sqlite-jdbc,org.sqlite,FetchSizeTest,testFetchSize,Magic Number,The method contains a magic number: 5,34
+xerial_sqlite-jdbc,org.sqlite,FetchSizeTest,testFetchSize,Magic Number,The method contains a magic number: 2,34
+xerial_sqlite-jdbc,org.sqlite,StatementTest,executeUpdate,Long Statement,The length of the statement "assertEquals(stat.executeUpdate("update s1 set c1 = 21 where c1 = 11;" + "update s1 set c1 = 22 where c1 = 12;" + "update s1 set c1 = 23 where c1 = 13")`2);" is 156.,45
+xerial_sqlite-jdbc,org.sqlite,StatementTest,executeUpdate,Long Statement,The length of the statement "assertEquals(stat.executeUpdate("delete from s1 where c1 = 21;" + "delete from s1 where c1 = 22;" + "delete from s1 where c1 = 23")`2);" is 135.,45
+xerial_sqlite-jdbc,org.sqlite,StatementTest,executeUpdate,Magic Number,The method contains a magic number: 3,45
+xerial_sqlite-jdbc,org.sqlite,StatementTest,executeUpdate,Magic Number,The method contains a magic number: 3,45
+xerial_sqlite-jdbc,org.sqlite,StatementTest,executeUpdate,Magic Number,The method contains a magic number: 2,45
+xerial_sqlite-jdbc,org.sqlite,StatementTest,executeUpdate,Magic Number,The method contains a magic number: 2,45
+xerial_sqlite-jdbc,org.sqlite,StatementTest,executeUpdate,Magic Number,The method contains a magic number: 2,45
+xerial_sqlite-jdbc,org.sqlite,StatementTest,singleRowRS,Magic Number,The method contains a magic number: 0.001,82
+xerial_sqlite-jdbc,org.sqlite,StatementTest,twoRowRS,Magic Number,The method contains a magic number: 9,93
+xerial_sqlite-jdbc,org.sqlite,StatementTest,twoRowRS,Magic Number,The method contains a magic number: 7,93
+xerial_sqlite-jdbc,org.sqlite,StatementTest,colNameAccess,Magic Number,The method contains a magic number: 2,139
+xerial_sqlite-jdbc,org.sqlite,StatementTest,nullsForGetObject,Magic Number,The method contains a magic number: 2,177
+xerial_sqlite-jdbc,org.sqlite,StatementTest,nullsForGetObject,Magic Number,The method contains a magic number: 2,177
+xerial_sqlite-jdbc,org.sqlite,StatementTest,insert1000,Magic Number,The method contains a magic number: 1000,200
+xerial_sqlite-jdbc,org.sqlite,StatementTest,insert1000,Magic Number,The method contains a magic number: 1000,200
+xerial_sqlite-jdbc,org.sqlite,StatementTest,batch,Magic Number,The method contains a magic number: 8,226
+xerial_sqlite-jdbc,org.sqlite,StatementTest,getGeneratedKeys,Magic Number,The method contains a magic number: 2,259
+xerial_sqlite-jdbc,org.sqlite,StatementTest,isBeforeFirst,Magic Number,The method contains a magic number: 2,283
+xerial_sqlite-jdbc,org.sqlite,StatementTest,multipleStatements,Long Statement,The length of the statement "stat.executeUpdate("create table person (id integer` name string); " + "insert into person values(1` 'leo'); insert into person values(2` 'yui');");" is 148.,379
+xerial_sqlite-jdbc,org.sqlite,StatementTest,bytesTest,Long Identifier,The length of the identifier resultBytesAfterConversionToString is 34.,395
+xerial_sqlite-jdbc,org.sqlite,StatementTest,defaultDateTimeTest,Magic Number,The method contains a magic number: 2,433
+xerial_sqlite-jdbc,org.sqlite,StatementTest,maxRows,Magic Number,The method contains a magic number: 2,447
+xerial_sqlite-jdbc,org.sqlite,StatementTest,maxRows,Magic Number,The method contains a magic number: 2,447
+xerial_sqlite-jdbc,org.sqlite,StatementTest,setFetchDirectionBadArgument,Magic Number,The method contains a magic number: 999,525
+xerial_sqlite-jdbc,org.sqlite,PreparedStatementThreadTest,beforeAll,Magic Number,The method contains a magic number: 2,28
+xerial_sqlite-jdbc,org.sqlite,PreparedStatementThreadTest,testPreparedStmtConcurrentCloseSegFault,Magic Number,The method contains a magic number: 100,38
+xerial_sqlite-jdbc,org.sqlite,PreparedStatementThreadTest,testPreparedStmtConcurrentCloseConnSegFault,Magic Number,The method contains a magic number: 100,55
+xerial_sqlite-jdbc,org.sqlite,PreparedStatementThreadTest,testRace,Empty catch clause,The method has an empty catch block.,77
+xerial_sqlite-jdbc,org.sqlite,PreparedStatementThreadTest,testRace,Magic Number,The method contains a magic number: 2,77
+xerial_sqlite-jdbc,org.sqlite,PreparedStatementThreadTest,testRace,Magic Number,The method contains a magic number: 100,77
+xerial_sqlite-jdbc,org.sqlite,PreparedStatementThreadTest,testRace,Magic Number,The method contains a magic number: 5,77
+xerial_sqlite-jdbc,org.sqlite,SQLiteDataSourceTest,enumParam,Magic Number,The method contains a magic number: 2,30
+xerial_sqlite-jdbc,org.sqlite,SQLiteDataSourceTest,encoding,Long Statement,The length of the statement "String[] configArray=new String[]{"UTF8"`"UTF-8"`"UTF_8"`"UTF16"`"UTF-16"`"UTF_16"`"UTF_16LE"`"UTF-16LE"`"UTF16_LITTLE_ENDIAN"`"UTF_16BE"`"UTF-16BE"`"UTF16_BIG_ENDIAN"};" is 169.,57
+xerial_sqlite-jdbc,org.sqlite,SQLiteDataSourceTest,encoding,Magic Number,The method contains a magic number: 3,57
+xerial_sqlite-jdbc,org.sqlite,ResultSetTest,testTableColumnUpperNowFindLowerCaseColumn,Magic Number,The method contains a magic number: 2,59
+xerial_sqlite-jdbc,org.sqlite,ResultSetTest,testTableColumnUpperNowFindUpperCaseColumn,Magic Number,The method contains a magic number: 2,66
+xerial_sqlite-jdbc,org.sqlite,ResultSetTest,testTableColumnUpperNowFindMixedCaseColumn,Magic Number,The method contains a magic number: 2,73
+xerial_sqlite-jdbc,org.sqlite,ResultSetTest,testTableColumnMixedNowFindLowerCaseColumn,Magic Number,The method contains a magic number: 3,80
+xerial_sqlite-jdbc,org.sqlite,ResultSetTest,testTableColumnMixedNowFindUpperCaseColumn,Magic Number,The method contains a magic number: 3,87
+xerial_sqlite-jdbc,org.sqlite,ResultSetTest,testTableColumnMixedNowFindMixedCaseColumn,Magic Number,The method contains a magic number: 3,94
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getColumns,Magic Number,The method contains a magic number: 24,123
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,numberOfgetImportedKeysCols,Long Statement,The length of the statement "stat.executeUpdate("create table child1 (id1 integer` id2 integer` foreign key(id1) references parent(id1)` foreign key(id2) references parent(id2))");" is 151.,214
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,numberOfgetExportedKeysCols,Long Statement,The length of the statement "stat.executeUpdate("create table child1 (id1 integer` id2 integer`\r\n foreign\tkey(id1) references parent(id1)` foreign key(id2) references parent(id2))");" is 156.,269
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getExportedKeysColsForNamedKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE Child2 (Id1 INTEGER` DATA2 INTEGER` CONSTRAINT FK_Child2 FOREIGN KEY(Id1) REFERENCES Parent2(Id1))");" is 134.,320
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysMultipleColumns,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE PONE ( ID_FIRST_ONE INTEGER NOT NULL` ID_SECOND_ONE INTEGER NOT NULL` ADDITIONAL_ONE TEXT` CONSTRAINT PONE_PK PRIMARY KEY (ID_FIRST_ONE` ID_SECOND_ONE) )");" is 189.,367
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysMultipleColumns,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE PTWO ( ID_FIRST_TWO INTEGER NOT NULL` ID_SECOND_TWO INTEGER NOT NULL` ADDITIONAL_TWO TEXT` CONSTRAINT PTWO_PK PRIMARY KEY (ID_FIRST_TWO` ID_SECOND_TWO) )");" is 189.,367
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysMultipleColumns,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE CHILD ( ID_CHILD INTEGER NOT NULL` ID_CHILD_TO_ONE INTEGER NOT NULL` ID_CHILD_TO_TWO INTEGER NOT NULL` CONSTRAINT CHILD_PK PRIMARY KEY (ID_CHILD` ID_CHILD_TO_ONE)` CONSTRAINT PONE_FK01 FOREIGN KEY (ID_CHILD` ID_CHILD_TO_ONE) REFERENCES PONE (ID_FIRST_ONE` ID_SECOND_ONE) ON DELETE CASCADE` CONSTRAINT PTWO_FK02 FOREIGN KEY (ID_CHILD` ID_CHILD_TO_TWO) REFERENCES PTWO (ID_FIRST_TWO` ID_SECOND_TWO) )");" is 434.,367
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysColsForNamedKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE Child2 (Id1 INTEGER` DATA2 INTEGER` " + "CONSTRAINT FK_Child2 FOREIGN KEY(Id1) REFERENCES Parent2(Id1))");" is 139.,415
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysColsForMixedCaseDefinition,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE CHILD1 (ID1 INTEGER` DATA2 INTEGER` " + "CONSTRAINT FK_Parent1 FOREIGN KEY(ID1) REFERENCES Parent1(Id1))");" is 140.,463
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysColsForMultipleImports,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE CHILD1 (ID1 INTEGER` ID2 INTEGER` " + "CONSTRAINT FK_PARENT1 FOREIGN KEY(ID1) REFERENCES PARENT1(ID1)` " + "CONSTRAINT FK_PARENT2 FOREIGN KEY(ID2) REFERENCES PARENT2(ID2))");" is 207.,490
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysColsForMultipleImports,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE CHILD2 (ID3 INTEGER` ID4 INTEGER` " + "FOREIGN KEY(ID3) REFERENCES PARENT3(ID3)` " + "CONSTRAINT FK_PARENT4 FOREIGN KEY(ID4) REFERENCES PARENT4(ID4))");" is 185.,490
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysCols2,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE Authors (Id INTEGER NOT NULL` Name VARCHAR(20) NOT NULL` " + "CONSTRAINT PK_Authors PRIMARY KEY (Id)`" + " CONSTRAINT CHECK_UPPERCASE_Name CHECK (Name=UPPER(Name)))");" is 200.,558
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysCols2,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE Books (Id INTEGER NOT NULL` Title VARCHAR(255) NOT NULL` PreviousEditionId INTEGER`" + "CONSTRAINT PK_Books PRIMARY KEY (Id)` " + "CONSTRAINT FK_PreviousEdition FOREIGN KEY(PreviousEditionId) REFERENCES Books (Id))");" is 250.,558
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,getImportedKeysCols2,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE BookAuthors (BookId INTEGER NOT NULL` AuthorId INTEGER NOT NULL` " + "CONSTRAINT FK_Y_Book FOREIGN KEY (BookId) REFERENCES Books (Id)` " + "CONSTRAINT FK_Z_Author FOREIGN KEY (AuthorId) REFERENCES Authors (Id)) ");" is 247.,558
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 10,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 2,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 3,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 4,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 5,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 6,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 7,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 8,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 9,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTables,Magic Number,The method contains a magic number: 10,672
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 18,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 2,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 3,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 4,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 5,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 6,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 7,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 8,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 9,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 10,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 11,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 12,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 13,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 14,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 15,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 16,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 17,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTypeInfo,Magic Number,The method contains a magic number: 18,736
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 24,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 2,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 3,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 4,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 5,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 6,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 7,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 8,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 9,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 10,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 11,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 12,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 13,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 14,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 15,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 16,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 17,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 18,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 19,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 20,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 21,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 22,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 23,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumns,Magic Number,The method contains a magic number: 24,762
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedures,Magic Number,The method contains a magic number: 8,800
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedures,Magic Number,The method contains a magic number: 2,800
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedures,Magic Number,The method contains a magic number: 3,800
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedures,Magic Number,The method contains a magic number: 7,800
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedures,Magic Number,The method contains a magic number: 8,800
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 13,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 2,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 3,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 4,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 5,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 6,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 7,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 8,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 9,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 10,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 11,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 12,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetProcedurColumns,Magic Number,The method contains a magic number: 13,814
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetSchemas,Magic Number,The method contains a magic number: 2,835
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetSchemas,Magic Number,The method contains a magic number: 2,835
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 8,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 2,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 3,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 4,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 5,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 6,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 7,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetColumnPrivileges,Magic Number,The method contains a magic number: 8,854
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTablePrivileges,Magic Number,The method contains a magic number: 7,870
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTablePrivileges,Magic Number,The method contains a magic number: 2,870
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTablePrivileges,Magic Number,The method contains a magic number: 3,870
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTablePrivileges,Magic Number,The method contains a magic number: 4,870
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTablePrivileges,Magic Number,The method contains a magic number: 5,870
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTablePrivileges,Magic Number,The method contains a magic number: 6,870
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetTablePrivileges,Magic Number,The method contains a magic number: 7,870
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 8,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 2,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 3,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 4,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 5,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 6,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 7,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetBestRowIdentifier,Magic Number,The method contains a magic number: 8,885
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 8,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 2,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 3,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 4,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 5,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 6,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 7,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetVersionColumns,Magic Number,The method contains a magic number: 8,901
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("create table pk4 (col1` col2` col3` col4` " + "\r\nCONSTraint\r\nnamed primary\r\n\t\t key (col3` col2 ));");" is 129.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE `Pk6` (`Col1`` `Col2`` `Col3`` `Col4`` CONSTRAINT `NamedPk` PRIMARY KEY (`Col3`` `Col2`));");" is 126.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE `Pk10` (`Col1`` `Col2`` `Col3`` `Col4`` CONSTRAINT `NamedPk`PRIMARY KEY (`Col3`` `Col2`));");" is 126.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE `Pk11` (`Col1`` `Col2`` `Col3`` `Col4`` CONSTRAINT `NamedPk` PRIMARY KEY(`Col3`` `Col2`));");" is 126.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE `Pk12` (`Col1`` `Col2`` `Col3`` `Col4`` CONSTRAINT`NamedPk`PRIMARY KEY(`Col3```Col2`));");" is 123.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE \"Pk13\" (\"Col1\"` \"Col2\"` \"Col3\"` \"Col4\"` CONSTRAINT \"NamedPk\" PRIMARY KEY(\"Col3\"`\"Col2\"));");" is 141.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE \"Pk14\" (\"Col1\"` \"Col2\"` \"Col3\"` \"Col4\"` PRIMARY KEY(\"Col3\")` FOREIGN KEY (\"Col1\") REFERENCES \"pk1\" (\"col1\"))");" is 162.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Long Statement,The length of the statement "stat.executeUpdate("CREATE TABLE \"Pk15\" (\"Col1\"` \"Col2\"` \"Col3\"` \"Col4\"` PRIMARY KEY(\"Col3\"` \"Col2\")` FOREIGN KEY (\"Col1\") REFERENCES \"pk1\" (\"col1\"))");" is 172.,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Magic Number,The method contains a magic number: 6,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Magic Number,The method contains a magic number: 2,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Magic Number,The method contains a magic number: 3,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Magic Number,The method contains a magic number: 4,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Magic Number,The method contains a magic number: 5,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetPrimaryKeys,Magic Number,The method contains a magic number: 6,1037
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetExportedKeys,Long Statement,The length of the statement "stat.executeUpdate("create table REFERRING (ID integer` RID integer` constraint fk\r\n foreign\tkey\r\n(RID) references REFERRED(id))");" is 136.,1167
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetUDTs,Magic Number,The method contains a magic number: 7,1225
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetUDTs,Magic Number,The method contains a magic number: 2,1225
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetUDTs,Magic Number,The method contains a magic number: 3,1225
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetUDTs,Magic Number,The method contains a magic number: 4,1225
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetUDTs,Magic Number,The method contains a magic number: 5,1225
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetUDTs,Magic Number,The method contains a magic number: 6,1225
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,columnOrderOfgetUDTs,Magic Number,The method contains a magic number: 7,1225
+xerial_sqlite-jdbc,org.sqlite,DBMetaDataTest,version,Long Statement,The length of the statement "try (InputStream resourceAsStream=DBMetaDataTest.class.getResourceAsStream("/META-INF/maven/org.xerial/sqlite-jdbc/VERSION")){" is 126.,1287
+xerial_sqlite-jdbc,org.sqlite,InsertQueryTest,insertAndQuery,Magic Number,The method contains a magic number: 10,108
+xerial_sqlite-jdbc,org.sqlite,InsertQueryTest,insertAndQuery,Magic Number,The method contains a magic number: 2,108
+xerial_sqlite-jdbc,org.sqlite,InsertQueryTest,insertAndQuery,Magic Number,The method contains a magic number: 3,108
+xerial_sqlite-jdbc,org.sqlite,InsertQueryTest,insertAndQuery,Magic Number,The method contains a magic number: 2,108
+xerial_sqlite-jdbc,org.sqlite,InsertQueryTest,insertAndQuery,Magic Number,The method contains a magic number: 2,108
+xerial_sqlite-jdbc,org.sqlite,InsertQueryTest,insertAndQuery,Magic Number,The method contains a magic number: 3,108
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,connect,Long Statement,The length of the statement "stat.executeUpdate("create table People (pid integer primary key autoincrement` " + " firstname string(255)` surname string(25`5)` dob date);");" is 144.,24
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 3,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 2,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 3,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 2,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 3,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 2,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 3,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 2,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columns,Magic Number,The method contains a magic number: 3,48
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Long Statement,The length of the statement "stat.executeUpdate("create table tbl (col1 INT` col2 INTEGER` col3 TINYINT` " + "col4 SMALLINT` col5 MEDIUMINT` col6 BIGINT` col7 UNSIGNED BIG INT` " + "col8 INT2` col9 INT8` col10 CHARACTER(20)` col11 VARCHAR(255)` "+ "col12 VARYING CHARACTER(255)` col13 NCHAR(55)` "+ "col14 NATIVE CHARACTER(70)` col15 NVARCHAR(100)` col16 TEXT` "+ "col17 CLOB` col18 BLOB` col19 REAL` col20 DOUBLE` "+ "col21 DOUBLE PRECISION` col22 FLOAT` col23 NUMERIC` "+ "col24 DECIMAL(10`5)` col25 BOOLEAN` col26 DATE` col27 DATETIME` "+ "col28 TIMESTAMP` col29 CHAR(70)` col30 TEXT)");" is 561.,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Long Statement,The length of the statement "stat.executeUpdate("insert into tbl values (1` 2` 3` 4` 5` 6` 7` 8` 9`" + "'c'` 'varchar'` 'varying'` 'n'` 'n'`'nvarchar'` 'text'` 'clob'`" + "null` 1.1` 1.2` 1.3` 1.4` 1.5` 1.6` 0` 12345` 123456` 0` 'char'` 'some text')");" is 223.,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Long Statement,The length of the statement "meta=stat.executeQuery("select col1` col2` col3` col4` col5` col6` col7` col8` col9` " + "col10` col11` col12` col13` col14` col15` col16` col17` col18` " + "col19` col20` col21` col22` col23` col24` col25` col26` col27` "+ "col28` col29` col30` "+ "cast(col1 as boolean) from tbl").getMetaData();" is 297.,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 2,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 3,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 4,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 5,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 6,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 7,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 8,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 9,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 10,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 11,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 12,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 13,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 14,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 15,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 16,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 17,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 18,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 19,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 20,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 21,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 22,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 23,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 24,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 25,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 26,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 27,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 28,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 29,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 30,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 31,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 10,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 24,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 5,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,columnTypes,Magic Number,The method contains a magic number: 24,65
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,differentRS,Magic Number,The method contains a magic number: 4,134
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,differentRS,Magic Number,The method contains a magic number: 2,134
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,differentRS,Magic Number,The method contains a magic number: 3,134
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,differentRS,Magic Number,The method contains a magic number: 4,134
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,badCatalogIndex,Magic Number,The method contains a magic number: 4,150
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,badColumnIndex,Magic Number,The method contains a magic number: 4,155
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,scale,Magic Number,The method contains a magic number: 2,160
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,scale,Magic Number,The method contains a magic number: 5,160
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,scale,Magic Number,The method contains a magic number: 3,160
+xerial_sqlite-jdbc,org.sqlite,RSMetaDataTest,tableName,Magic Number,The method contains a magic number: 2,166
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 6,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 7,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 2,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 3,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 4,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 5,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 6,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 7,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 2,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 3,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 4,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,multiRollback,Magic Number,The method contains a magic number: 5,112
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,release,Magic Number,The method contains a magic number: 2,165
+xerial_sqlite-jdbc,org.sqlite,SavepointTest,release,Magic Number,The method contains a magic number: 2,165
+xerial_sqlite-jdbc,org.sqlite,ResultSetWithoutResultsTest,testQueryIsReset,Magic Number,The method contains a magic number: 3,17
+xerial_sqlite-jdbc,org.sqlite,ResultSetWithoutResultsTest,testStmtWithResult,Magic Number,The method contains a magic number: 123,36
+xerial_sqlite-jdbc,org.sqlite,SQLiteConfigTest,toProperites,Long Statement,The length of the statement "assertEquals(SQLiteConfig.DatePrecision.SECONDS.name()`properties.getProperty(SQLiteConfig.Pragma.DATE_PRECISION.getPragmaName()));" is 131.,11
+xerial_sqlite-jdbc,org.sqlite,ProgressHandlerTest,workWork,Magic Number,The method contains a magic number: 100,31
+xerial_sqlite-jdbc,org.sqlite,CollationTest,reverseCollation,Long Statement,The length of the statement "assertArrayEquals(Arrays.stream(expected).distinct().sorted().toArray()`received.stream().distinct().sorted().toArray());" is 121.,39
+xerial_sqlite-jdbc,org.sqlite,CollationTest,unicodeCollation,Long Statement,The length of the statement "assertArrayEquals(Arrays.stream(expected).distinct().sorted().toArray()`received.stream().distinct().sorted().toArray());" is 121.,71
+xerial_sqlite-jdbc,org.sqlite,CollationTest,validateSpecialCharactersAreCorrectlyPassedToJava,Long Statement,The length of the statement "assertArrayEquals(Arrays.stream(expected).distinct().sorted().toArray()`received.stream().distinct().sorted().toArray());" is 121.,159
+xerial_sqlite-jdbc,org.sqlite,BackupTest,backupAndRestore,Magic Number,The method contains a magic number: 2,25
+xerial_sqlite-jdbc,org.sqlite,BackupTest,memoryToDisk,Magic Number,The method contains a magic number: 10000,55
+xerial_sqlite-jdbc,org.sqlite.javax,SQLitePooledConnection,getConnection,Complex Method,Cyclomatic complexity of the method is 10,84
+xerial_sqlite-jdbc,org.sqlite.javax,SQLitePooledConnection,getConnection,Long Statement,The length of the statement "handleConn=(Connection)Proxy.newProxyInstance(getClass().getClassLoader()`new Class[]{Connection.class}`new InvocationHandler(){" is 128.,84
+xerial_sqlite-jdbc,org.sqlite.javax,SQLitePooledConnection,invoke,Complex Method,Cyclomatic complexity of the method is 9,96
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3PreparedStatement,addBatch,Magic Number,The method contains a magic number: 2,93
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3PreparedStatement,setObject,Complex Method,Cyclomatic complexity of the method is 11,287
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3PreparedStatement,setCharacterStream,Magic Number,The method contains a magic number: 8192,334
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getJDBCMajorVersion,Magic Number,The method contains a magic number: 2,89
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getSQLKeywords,Long Statement,The length of the statement "return "ABORT`ACTION`AFTER`ANALYZE`ATTACH`AUTOINCREMENT`BEFORE`" + "CASCADE`CONFLICT`DATABASE`DEFERRABLE`DEFERRED`DESC`DETACH`" + "EXCLUSIVE`EXPLAIN`FAIL`GLOB`IGNORE`INDEX`INDEXED`INITIALLY`INSTEAD`ISNULL`"+ "KEY`LIMIT`NOTNULL`OFFSET`PLAN`PRAGMA`QUERY`"+ "RAISE`REGEXP`REINDEX`RENAME`REPLACE`RESTRICT`"+ "TEMP`TEMPORARY`TRANSACTION`VACUUM`VIEW`VIRTUAL";" is 353.,269
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getAttributes,Long Statement,The length of the statement "getAttributes=conn.prepareStatement("select null as TYPE_CAT` null as TYPE_SCHEM` " + "null as TYPE_NAME` null as ATTR_NAME` null as DATA_TYPE` " + "null as ATTR_TYPE_NAME` null as ATTR_SIZE` null as DECIMAL_DIGITS` "+ "null as NUM_PREC_RADIX` null as NULLABLE` null as REMARKS` null as ATTR_DEF` "+ "null as SQL_DATA_TYPE` null as SQL_DATETIME_SUB` null as CHAR_OCTET_LENGTH` "+ "null as ORDINAL_POSITION` null as IS_NULLABLE` null as SCOPE_CATALOG` "+ "null as SCOPE_SCHEMA` null as SCOPE_TABLE` null as SOURCE_DATA_TYPE limit 0;");" is 534.,792
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getBestRowIdentifier,Long Parameter List,The method has 5 parameters. ,812
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getBestRowIdentifier,Long Statement,The length of the statement "getBestRowIdentifier=conn.prepareStatement("select null as SCOPE` null as COLUMN_NAME` " + "null as DATA_TYPE` null as TYPE_NAME` null as COLUMN_SIZE` " + "null as BUFFER_LENGTH` null as DECIMAL_DIGITS` null as PSEUDO_COLUMN limit 0;");" is 236.,812
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumnPrivileges,Long Statement,The length of the statement "getColumnPrivileges=conn.prepareStatement("select null as TABLE_CAT` null as TABLE_SCHEM` " + "null as TABLE_NAME` null as COLUMN_NAME` null as GRANTOR` null as GRANTEE` " + "null as PRIVILEGE` null as IS_GRANTABLE limit 0;");" is 226.,829
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Complex Method,Cyclomatic complexity of the method is 16,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Empty catch clause,The method has an empty catch block.,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Empty catch clause,The method has an empty catch block.,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Long Method,The method has 118 lines of code.,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Long Statement,The length of the statement "sql.append("select null as TABLE_CAT` null as TABLE_SCHEM` tblname as TABLE_NAME` ").append("cn as COLUMN_NAME` ct as DATA_TYPE` tn as TYPE_NAME` 2000000000 as COLUMN_SIZE` ").append("2000000000 as BUFFER_LENGTH` 10 as DECIMAL_DIGITS` 10 as NUM_PREC_RADIX` ").append("colnullable as NULLABLE` null as REMARKS` colDefault as COLUMN_DEF` ").append("0 as SQL_DATA_TYPE` 0 as SQL_DATETIME_SUB` 2000000000 as CHAR_OCTET_LENGTH` ").append("ordpos as ORDINAL_POSITION` (case colnullable when 0 then 'NO' when 1 then 'YES' else '' end)").append(" as IS_NULLABLE` null as SCOPE_CATLOG` null as SCOPE_SCHEMA` ").append("null as SCOPE_TABLE` null as SOURCE_DATA_TYPE` ").append("(case colautoincrement when 0 then 'NO' when 1 then 'YES' else '' end) as IS_AUTOINCREMENT` ").append("'' as IS_GENERATEDCOLUMN from (");" is 805.,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Long Statement,The length of the statement "rsColAutoinc=statColAutoinc.executeQuery("SELECT LIKE('%autoincrement%'` LOWER(sql)) FROM sqlite_master " + "WHERE LOWER(name) = LOWER('" + escape(tableName) + "') AND TYPE IN ('table'` 'view')");" is 196.,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Long Statement,The length of the statement "sql.append("select ").append(i + 1).append(" as ordpos` ").append(colNullable).append(" as colnullable`").append("'").append(colJavaType).append("' as ct` ").append("'").append(tableName).append("' as tblname` ").append("'").append(escape(colName)).append("' as cn` ").append("'").append(escape(colType)).append("' as tn` ").append(quote(colDefault == null ? null : escape(colDefault))).append(" as colDefault`").append(colAutoIncrement).append(" as colautoincrement");" is 469.,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Long Statement,The length of the statement "sql.append("select null as ordpos` null as colnullable` null as ct` null as tblname` null as cn` null as tn` null as colDefault` null as colautoincrement) limit 0;");" is 166.,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 700,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 3,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 2,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 3,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 4,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 5,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 6,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getColumns,Magic Number,The method contains a magic number: 2,851
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getCrossReference,Long Parameter List,The method has 6 parameters. ,1087
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getCrossReference,Long Statement,The length of the statement "query.append("select ").append(quote(pc)).append(" as PKTABLE_CAT` ").append(quote(ps)).append(" as PKTABLE_SCHEM` ").append(quote(pt)).append(" as PKTABLE_NAME` ").append("'' as PKCOLUMN_NAME` ").append(quote(fc)).append(" as FKTABLE_CAT` ").append(quote(fs)).append(" as FKTABLE_SCHEM` ").append(quote(ft)).append(" as FKTABLE_NAME` ").append("'' as FKCOLUMN_NAME` -1 as KEY_SEQ` 3 as UPDATE_RULE` 3 as DELETE_RULE` '' as FK_NAME` '' as PK_NAME` ").append(Integer.toString(DatabaseMetaData.importedKeyInitiallyDeferred)).append(" as DEFERRABILITY limit 0 ");" is 560.,1087
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getPrimaryKeys,Long Statement,The length of the statement "sql.append("select null as TABLE_CAT` null as TABLE_SCHEM` '").append(escape(table)).append("' as TABLE_NAME` cn as COLUMN_NAME` ks as KEY_SEQ` pk as PK_NAME from (");" is 167.,1144
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getPrimaryKeys,Long Statement,The length of the statement "sql.append("select ").append(pkName).append(" as pk` '").append(escape(unquoteIdentifier(columns[i]))).append("' as cn` ").append(i + 1).append(" as ks");" is 154.,1144
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getPrimaryKeys,Magic Number,The method contains a magic number: 512,1144
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getExportedKeys,Complex Method,Cyclomatic complexity of the method is 13,1193
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getExportedKeys,Empty catch clause,The method has an empty catch block.,1193
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getExportedKeys,Long Statement,The length of the statement "exportedKeysQuery.append(count > 0 ? " union all select " : "select ").append(Integer.toString(keySeq)).append(" as ks` '").append(escape(tbl)).append("' as fkt` '").append(escape(FKColName)).append("' as fcn` '").append(escape(PKColName)).append("' as pcn` '").append(escape(pkName)).append("' as pkn` ").append(RULE_MAP.get(foreignKey.getOnUpdate())).append(" as ur` ").append(RULE_MAP.get(foreignKey.getOnDelete())).append(" as dr` ");" is 438.,1193
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getExportedKeys,Long Statement,The length of the statement "sql.append("select ").append(catalog).append(" as PKTABLE_CAT` ").append(schema).append(" as PKTABLE_SCHEM` ").append(quote(target)).append(" as PKTABLE_NAME` ").append(hasImportedKey ? "pcn" : "''").append(" as PKCOLUMN_NAME` ").append(catalog).append(" as FKTABLE_CAT` ").append(schema).append(" as FKTABLE_SCHEM` ").append(hasImportedKey ? "fkt" : "''").append(" as FKTABLE_NAME` ").append(hasImportedKey ? "fcn" : "''").append(" as FKCOLUMN_NAME` ").append(hasImportedKey ? "ks" : "-1").append(" as KEY_SEQ` ").append(hasImportedKey ? "ur" : "3").append(" as UPDATE_RULE` ").append(hasImportedKey ? "dr" : "3").append(" as DELETE_RULE` ").append(hasImportedKey ? "fkn" : "''").append(" as FK_NAME` ").append(hasImportedKey ? "pkn" : "''").append(" as PK_NAME` ").append(Integer.toString(DatabaseMetaData.importedKeyInitiallyDeferred)).append(" as DEFERRABILITY ");" is 868.,1193
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getExportedKeys,Magic Number,The method contains a magic number: 512,1193
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getExportedKeys,Magic Number,The method contains a magic number: 512,1193
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,appendDummyForeignKeyList,Long Statement,The length of the statement "sql.append("select -1 as ks` '' as ptn` '' as fcn` '' as pcn` ").append(DatabaseMetaData.importedKeyNoAction).append(" as ur` ").append(DatabaseMetaData.importedKeyNoAction).append(" as dr` ").append(" '' as fkn` ").append(" '' as pkn ").append(") limit 0;");" is 259.,1350
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Long Statement,The length of the statement "sql.append("select ").append(quote(catalog)).append(" as PKTABLE_CAT` ").append(quote(schema)).append(" as PKTABLE_SCHEM` ").append("ptn as PKTABLE_NAME` pcn as PKCOLUMN_NAME` ").append(quote(catalog)).append(" as FKTABLE_CAT` ").append(quote(schema)).append(" as FKTABLE_SCHEM` ").append(quote(table)).append(" as FKTABLE_NAME` ").append("fcn as FKCOLUMN_NAME` ks as KEY_SEQ` ur as UPDATE_RULE` dr as DELETE_RULE` fkn as FK_NAME` pkn as PK_NAME` ").append(Integer.toString(DatabaseMetaData.importedKeyInitiallyDeferred)).append(" as DEFERRABILITY from (");" is 557.,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Long Statement,The length of the statement "sql.append("select ").append(keySeq).append(" as ks`").append("'").append(escape(PKTabName)).append("' as ptn` '").append(escape(FKColName)).append("' as fcn` '").append(escape(PKColName)).append("' as pcn`").append("case '").append(escape(updateRule)).append("'").append(" when 'NO ACTION' then ").append(DatabaseMetaData.importedKeyNoAction).append(" when 'CASCADE' then ").append(DatabaseMetaData.importedKeyCascade).append(" when 'RESTRICT' then ").append(DatabaseMetaData.importedKeyRestrict).append(" when 'SET NULL' then ").append(DatabaseMetaData.importedKeySetNull).append(" when 'SET DEFAULT' then ").append(DatabaseMetaData.importedKeySetDefault).append(" end as ur` ").append("case '").append(escape(deleteRule)).append("'").append(" when 'NO ACTION' then ").append(DatabaseMetaData.importedKeyNoAction).append(" when 'CASCADE' then ").append(DatabaseMetaData.importedKeyCascade).append(" when 'RESTRICT' then ").append(DatabaseMetaData.importedKeyRestrict).append(" when 'SET NULL' then ").append(DatabaseMetaData.importedKeySetNull).append(" when 'SET DEFAULT' then ").append(DatabaseMetaData.importedKeySetDefault).append(" end as dr` ").append(fkName == null ? "''" : quote(fkName)).append(" as fkn` ").append(pkName == null ? "''" : quote(pkName)).append(" as pkn");" is 1283.,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Magic Number,The method contains a magic number: 700,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Magic Number,The method contains a magic number: 2,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Magic Number,The method contains a magic number: 3,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Magic Number,The method contains a magic number: 4,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Magic Number,The method contains a magic number: 5,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Magic Number,The method contains a magic number: 6,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getImportedKeys,Magic Number,The method contains a magic number: 7,1362
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getIndexInfo,Long Parameter List,The method has 5 parameters. ,1477
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getIndexInfo,Long Statement,The length of the statement "sql.append("select null as TABLE_CAT` null as TABLE_SCHEM` '").append(escape(table)).append("' as TABLE_NAME` un as NON_UNIQUE` null as INDEX_QUALIFIER` n as INDEX_NAME` ").append(Integer.toString(DatabaseMetaData.tableIndexOther)).append(" as TYPE` op as ORDINAL_POSITION` ").append("cn as COLUMN_NAME` null as ASC_OR_DESC` 0 as CARDINALITY` 0 as PAGES` null as FILTER_CONDITION from (");" is 389.,1477
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getIndexInfo,Long Statement,The length of the statement "sqlRow.append("select ").append(Integer.toString(1 - (Integer)currentIndex.get(1))).append(" as un`'").append(escape(indexName)).append("' as n`").append(Integer.toString(rs.getInt(1) + 1)).append(" as op`");" is 208.,1477
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getIndexInfo,Magic Number,The method contains a magic number: 500,1477
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getIndexInfo,Magic Number,The method contains a magic number: 2,1477
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getIndexInfo,Magic Number,The method contains a magic number: 3,1477
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getIndexInfo,Magic Number,The method contains a magic number: 3,1477
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getProcedureColumns,Long Statement,The length of the statement "getProcedureColumns=conn.prepareStatement("select null as PROCEDURE_CAT` " + "null as PROCEDURE_SCHEM` null as PROCEDURE_NAME` null as COLUMN_NAME` " + "null as COLUMN_TYPE` null as DATA_TYPE` null as TYPE_NAME` null as PRECISION` "+ "null as LENGTH` null as SCALE` null as RADIX` null as NULLABLE` "+ "null as REMARKS limit 0;");" is 330.,1558
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getProcedures,Long Statement,The length of the statement "getProcedures=conn.prepareStatement("select null as PROCEDURE_CAT` null as PROCEDURE_SCHEM` " + "null as PROCEDURE_NAME` null as UNDEF1` null as UNDEF2` null as UNDEF3` " + "null as REMARKS` null as PROCEDURE_TYPE limit 0;");" is 225.,1576
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getSuperTables,Long Statement,The length of the statement "getSuperTables=conn.prepareStatement("select null as TABLE_CAT` null as TABLE_SCHEM` " + "null as TABLE_NAME` null as SUPERTABLE_NAME limit 0;");" is 145.,1591
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getSuperTypes,Long Statement,The length of the statement "getSuperTypes=conn.prepareStatement("select null as TYPE_CAT` null as TYPE_SCHEM` " + "null as TYPE_NAME` null as SUPERTYPE_CAT` null as SUPERTYPE_SCHEM` " + "null as SUPERTYPE_NAME limit 0;");" is 193.,1605
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getTablePrivileges,Long Statement,The length of the statement "getTablePrivileges=conn.prepareStatement("select null as TABLE_CAT` " + "null as TABLE_SCHEM` null as TABLE_NAME` null as GRANTOR` null " + "GRANTEE` null as PRIVILEGE` null as IS_GRANTABLE limit 0;");" is 201.,1620
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getTableTypes,Long Statement,The length of the statement "String sql="SELECT 'TABLE' AS TABLE_TYPE " + "UNION " + "SELECT 'VIEW' AS TABLE_TYPE "+ "UNION "+ "SELECT 'SYSTEM TABLE' AS TABLE_TYPE "+ "UNION "+ "SELECT 'GLOBAL TEMPORARY' AS TABLE_TYPE;";" is 191.,1705
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getTypeInfo,Long Statement,The length of the statement "getTypeInfo=conn.prepareStatement("select " + "tn as TYPE_NAME` " + "dt as DATA_TYPE` "+ "0 as PRECISION` "+ "null as LITERAL_PREFIX` "+ "null as LITERAL_SUFFIX` "+ "null as CREATE_PARAMS` " + DatabaseMetaData.typeNullable + " as NULLABLE` "+ "1 as CASE_SENSITIVE` "+ DatabaseMetaData.typeSearchable+ " as SEARCHABLE` "+ "0 as UNSIGNED_ATTRIBUTE` "+ "0 as FIXED_PREC_SCALE` "+ "0 as AUTO_INCREMENT` "+ "null as LOCAL_TYPE_NAME` "+ "0 as MINIMUM_SCALE` "+ "0 as MAXIMUM_SCALE` "+ "0 as SQL_DATA_TYPE` "+ "0 as SQL_DATETIME_SUB` "+ "10 as NUM_PREC_RADIX from ("+ " select 'BLOB' as tn` "+ Types.BLOB+ " as dt union"+ " select 'NULL' as tn` "+ Types.NULL+ " as dt union"+ " select 'REAL' as tn` "+ Types.REAL+ " as dt union"+ " select 'TEXT' as tn` "+ Types.VARCHAR+ " as dt union"+ " select 'INTEGER' as tn` "+ Types.INTEGER+ " as dt"+ ") order by TYPE_NAME;");" is 859.,1725
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getUDTs,Long Statement,The length of the statement "getUDTs=conn.prepareStatement("select null as TYPE_CAT` null as TYPE_SCHEM` " + "null as TYPE_NAME` null as CLASS_NAME` null as DATA_TYPE` null as REMARKS` " + "null as BASE_TYPE "+ "limit 0;");" is 194.,1773
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,getVersionColumns,Long Statement,The length of the statement "getVersionColumns=conn.prepareStatement("select null as SCOPE` null as COLUMN_NAME` " + "null as DATA_TYPE` null as TYPE_NAME` null as COLUMN_SIZE` " + "null as BUFFER_LENGTH` null as DECIMAL_DIGITS` null as PSEUDO_COLUMN limit 0;");" is 233.,1791
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,unquoteIdentifier,Complex Conditional,The conditional expression name.length() > 2 && ((name.startsWith("`") && name.endsWith("`")) || (name.startsWith("\"") && name.endsWith("\"")) || (name.startsWith("[") && name.endsWith("]"))) is complex.,2132
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,unquoteIdentifier,Long Statement,The length of the statement "if (name.length() > 2 && ((name.startsWith("`") && name.endsWith("`")) || (name.startsWith("\"") && name.endsWith("\"")) || (name.startsWith("[") && name.endsWith("]")))) {" is 172.,2132
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3DatabaseMetaData,unquoteIdentifier,Magic Number,The method contains a magic number: 2,2132
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3Statement,getUpdateCount,Complex Conditional,The conditional expression !pointer.isClosed() && !rs.isOpen() && !resultsWaiting&& pointer.safeRunInt(DB::column_count) == 0 is complex.,132
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3Statement,getUpdateCount,Long Statement,The length of the statement "if (!pointer.isClosed() && !rs.isOpen() && !resultsWaiting&& pointer.safeRunInt(DB::column_count) == 0) return db.changes();" is 124.,132
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3Statement,addBatch,Magic Number,The method contains a magic number: 10,141
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3Statement,addBatch,Magic Number,The method contains a magic number: 2,141
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3Statement,setQueryTimeout,Magic Number,The method contains a magic number: 1000,214
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3Statement,setFetchDirection,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7ab9dadb,259
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3Connection,setReadOnly,Long Statement,The length of the statement "throw new SQLException("Cannot change read-only flag after establishing a connection." + " Use SQLiteConfig#setReadOnly and SQLiteConfig.createConnection().");" is 159.,74
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,next,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@fd51b33,53
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,setFetchSize,Complex Conditional,The conditional expression 0 > rows || (maxRows != 0 && rows > maxRows) is complex.,97
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getDate,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6b6906bd,243
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getDate,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6995a048,272
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getTime,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5dced0a3,383
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getTime,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7ae544aa,412
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getTimestamp,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@599ae9a5,454
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getTimestamp,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1d49853e,484
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getObject,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@36a915fc,529
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Complex Conditional,The conditional expression "BIGINT".equals(typeName) || "INT8".equals(typeName) || "UNSIGNED BIG INT".equals(typeName) is complex.,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Complex Conditional,The conditional expression valueType == SQLITE_INTEGER || "INT".equals(typeName) || "INTEGER".equals(typeName) || "MEDIUMINT".equals(typeName) is complex.,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Complex Conditional,The conditional expression "CHARACTER".equals(typeName) || "NCHAR".equals(typeName) || "NATIVE CHARACTER".equals(typeName)|| "CHAR".equals(typeName) is complex.,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Complex Conditional,The conditional expression valueType == SQLITE_TEXT || "VARCHAR".equals(typeName) || "VARYING CHARACTER".equals(typeName) || "NVARCHAR".equals(typeName) || "TEXT".equals(typeName) is complex.,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Complex Method,Cyclomatic complexity of the method is 23,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Long Statement,The length of the statement "if (valueType == SQLITE_INTEGER || "INT".equals(typeName) || "INTEGER".equals(typeName) || "MEDIUMINT".equals(typeName)) {" is 122.,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Long Statement,The length of the statement "if ("CHARACTER".equals(typeName) || "NCHAR".equals(typeName) || "NATIVE CHARACTER".equals(typeName)|| "CHAR".equals(typeName)) {" is 128.,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnType,Long Statement,The length of the statement "if (valueType == SQLITE_TEXT || "VARCHAR".equals(typeName) || "VARYING CHARACTER".equals(typeName) || "NVARCHAR".equals(typeName) || "TEXT".equals(typeName)) {" is 159.,628
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getColumnTypeName,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@66b9c797,728
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,getScale,Magic Number,The method contains a magic number: 2,781
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,isAutoIncrement,Magic Number,The method contains a magic number: 2,823
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 0.5,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 2299161,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 1867216.25,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 36524.25,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 4.0,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 1524,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 122.1,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 365.25,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 365.25,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 30.6001,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 13.5,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 13,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 2.5,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 4716,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 4715,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 30.6001,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 24,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 24,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 60,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 60,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 60,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 60,891
+xerial_sqlite-jdbc,org.sqlite.jdbc3,JDBC3ResultSet,julianDateToCalendar,Magic Number,The method contains a magic number: 1000,891
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,FastDateParser,Magic Number,The method contains a magic number: 80,106
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,FastDateParser,Magic Number,The method contains a magic number: 100,106
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,FastDateParser,Magic Number,The method contains a magic number: 100,106
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,init,Long Statement,The length of the statement "throw new IllegalArgumentException("Failed to parse \"" + pattern + "\" ; gave up at index "+ patternMatcher.regionStart());" is 124.,142
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,hashCode,Magic Number,The method contains a magic number: 13,244
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,hashCode,Magic Number,The method contains a magic number: 13,244
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,parse,Long Statement,The length of the statement "throw new ParseException("(The " + locale + " locale does not support dates before 1868 AD)\n"+ "Unparseable date: \""+ normalizedSource+ "\" does not match "+ parsePattern.pattern()`0);" is 186.,291
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,parse,Magic Number,The method contains a magic number: 19,291
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,escapeRegex,Complex Method,Cyclomatic complexity of the method is 8,357
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,escapeRegex,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6860cd24,357
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,adjustYear,Magic Number,The method contains a magic number: 100,419
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,getStrategy,Complex Method,Cyclomatic complexity of the method is 24,488
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,getStrategy,Magic Number,The method contains a magic number: 2,488
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,getStrategy,Magic Number,The method contains a magic number: 3,488
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,getStrategy,Magic Number,The method contains a magic number: 2,488
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,getStrategy,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@39d1c563,488
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,getCache,Magic Number,The method contains a magic number: 3,557
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,getLocaleSpecificStrategy,Long Statement,The length of the statement "strategy=field == Calendar.ZONE_OFFSET ? new TimeZoneStrategy(locale) : new CaseInsensitiveTextStrategy(field`definingCalendar`locale);" is 135.,572
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,setCalendar,Magic Number,The method contains a magic number: 100,730
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,modify,Magic Number,The method contains a magic number: 24,899
+xerial_sqlite-jdbc,org.sqlite.date,FastDateParser,modify,Magic Number,The method contains a magic number: 12,906
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Complex Method,Cyclomatic complexity of the method is 32,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 2,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 4,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 4,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 4,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 3,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 2,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 4,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 4,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Magic Number,The method contains a magic number: 2,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parsePattern,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@47a93150,149
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parseToken,Complex Conditional,The conditional expression c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z' is complex.,287
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parseToken,Complex Conditional,The conditional expression !inLiteral && (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z') is complex.,287
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,parseToken,Complex Method,Cyclomatic complexity of the method is 8,287
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,selectNumberRule,Magic Number,The method contains a magic number: 2,345
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,selectNumberRule,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6f04c34d,345
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,hashCode,Magic Number,The method contains a magic number: 13,523
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,hashCode,Magic Number,The method contains a magic number: 13,523
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,appendDigits,Magic Number,The method contains a magic number: 10,558
+xerial_sqlite-jdbc,org.sqlite.date,FastDatePrinter,appendDigits,Magic Number,The method contains a magic number: 10,558
+xerial_sqlite-jdbc,org.sqlite.util,OSInfo,isAlpineLinux,Empty catch clause,The method has an empty catch block.,137
+xerial_sqlite-jdbc,org.sqlite.util,OSInfo,resolveArmArchType,Complex Method,Cyclomatic complexity of the method is 11,154
+xerial_sqlite-jdbc,org.sqlite.util,OSInfo,resolveArmArchType,Empty catch clause,The method has an empty catch block.,154
+xerial_sqlite-jdbc,org.sqlite.util,OSInfo,resolveArmArchType,Long Statement,The length of the statement "String[] cmdarray={"/bin/sh"`"-c"`"find '" + javaHome + "' -name 'libjvm.so' | head -1 | xargs readelf -A | "+ "grep 'Tag_ABI_VFP_args: VFP registers'"};" is 153.,154
+xerial_sqlite-jdbc,org.sqlite.util,OSInfo,resolveArmArchType,Long Statement,The length of the statement "System.err.println("WARNING! readelf not found. Cannot check if running on an armhf system` armel architecture will be presumed.");" is 131.,154
+xerial_sqlite-jdbc,org.sqlite.util,ProcessRunner,getProcessOutput,Magic Number,The method contains a magic number: 32,24
+xerial_sqlite-jdbc,org.sqlite.util,OSInfoTest,folderPath,Magic Number,The method contains a magic number: 2,61
+xerial_sqlite-jdbc,org.sqlite.core,CoreDatabaseMetaData,close,Complex Method,Cyclomatic complexity of the method is 20,67
+xerial_sqlite-jdbc,org.sqlite.core,CoreResultSet,close,Complex Conditional,The conditional expression stmt.pointer.isClosed() || (!open && !closeStmt) is complex.,116
+xerial_sqlite-jdbc,org.sqlite.core,DB,exec,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1e32a64,178
+xerial_sqlite-jdbc,org.sqlite.core,DB,sqlbind,Complex Method,Cyclomatic complexity of the method is 9,835
+xerial_sqlite-jdbc,org.sqlite.core,DB,execute,Magic Number,The method contains a magic number: 0xFF,926
+xerial_sqlite-jdbc,org.sqlite.core,DB,execute,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@36ae1de6,926
+xerial_sqlite-jdbc,org.sqlite.core,DB,execute,Magic Number,The method contains a magic number: 0xFF,954
+xerial_sqlite-jdbc,org.sqlite.core,DB,execute,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@388389d2,979
+xerial_sqlite-jdbc,org.sqlite.core,DB,onUpdate,Magic Number,The method contains a magic number: 18,1055
+xerial_sqlite-jdbc,org.sqlite.core,DB,onUpdate,Magic Number,The method contains a magic number: 9,1055
+xerial_sqlite-jdbc,org.sqlite.core,DB,onUpdate,Magic Number,The method contains a magic number: 23,1055
+xerial_sqlite-jdbc,org.sqlite.core,DB,onUpdate,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@71d43b24,1055
+xerial_sqlite-jdbc,org.sqlite.core,CorePreparedStatement,getUpdateCount,Complex Conditional,The conditional expression pointer.isClosed() || resultsWaiting || rs.isOpen() is complex.,75
+xerial_sqlite-jdbc,org.sqlite.core,CorePreparedStatement,setDateByMilliseconds,Magic Number,The method contains a magic number: 86400000.0,102
+xerial_sqlite-jdbc,org.sqlite.core,CorePreparedStatement,setDateByMilliseconds,Magic Number,The method contains a magic number: 2440587.5,102
+xerial_sqlite-jdbc,org.sqlite.core,CorePreparedStatement,setDateByMilliseconds,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@69fc8f70,102
+xerial_sqlite-jdbc,(default package),Sample,main,Magic Number,The method contains a magic number: 30,9

@@ -1,0 +1,212 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,RedisStorage,Long Parameter List,The method has 5 parameters. ,29
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,storeTrigger,Complex Method,Cyclomatic complexity of the method is 10,183
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,storeTrigger,Long Statement,The length of the statement "Response<Boolean> jobPausedResponse=pipe.sismember(redisSchema.pausedJobGroupsSet()`redisSchema.jobGroupSetKey(trigger.getJobKey()));" is 133.,183
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,storeCalendar,Long Parameter List,The method has 5 parameters. ,276
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,removeCalendar,Long Statement,The length of the statement "throw new JobPersistenceException(String.format("There are triggers pointing to calendar %s` so it cannot be removed."`calendarName));" is 134.,318
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,getJobKeys,Complex Method,Cyclomatic complexity of the method is 9,340
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,getTriggerKeys,Complex Method,Cyclomatic complexity of the method is 9,378
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,getTriggerKeys,Long Statement,The length of the statement "if (matcher.getCompareWithOperator().evaluate(redisSchema.triggerGroup(triggerGroupSetKey)`matcher.getCompareToValue())) {" is 122.,378
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,pauseTrigger,Long Statement,The length of the statement "final long nextFireTime=nextFireTimeResponse.get() == null || nextFireTimeResponse.get().isEmpty() ? -1 : Long.parseLong(nextFireTimeResponse.get());" is 149.,439
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,pauseTriggers,Complex Method,Cyclomatic complexity of the method is 9,473
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,pauseTriggers,Long Statement,The length of the statement "if (matcher.getCompareWithOperator().evaluate(redisSchema.triggerGroup(triggerGroupSetKey)`matcher.getCompareToValue())) {" is 122.,473
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,pauseJobs,Complex Method,Cyclomatic complexity of the method is 9,515
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,pauseJobs,Long Statement,The length of the statement "if (groupMatcher.getCompareWithOperator().evaluate(redisSchema.jobGroup(jobGroupSetKey)`groupMatcher.getCompareToValue())) {" is 124.,515
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,resumeTrigger,Long Statement,The length of the statement "Response<Double> isPausedBlocked=pipe.zscore(redisSchema.triggerStateKey(RedisTriggerState.PAUSED_BLOCKED)`triggerHashKey);" is 123.,557
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,resumeTriggers,Long Statement,The length of the statement "if (matcher.getCompareWithOperator().evaluate(redisSchema.triggerGroup(triggerGroupSetKey)`matcher.getCompareToValue())) {" is 122.,594
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,resumeTriggers,Long Statement,The length of the statement "resumedTriggerGroups.addAll(resumeTriggers(GroupMatcher.triggerGroupEquals(redisSchema.triggerGroup(triggerGroupSetKey))`jedis));" is 129.,594
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,triggersFired,Complex Method,Cyclomatic complexity of the method is 15,657
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,triggersFired,Long Statement,The length of the statement "Response<Double> triggerAcquiredResponse=pipe.zscore(redisSchema.triggerStateKey(RedisTriggerState.ACQUIRED)`triggerHashKey);" is 125.,657
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,triggersFired,Long Statement,The length of the statement "TriggerFiredBundle triggerFiredBundle=new TriggerFiredBundle(job`trigger`calendar`false`new Date()`previousFireTime`previousFireTime`nextFireDate);" is 147.,657
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,triggersFired,Long Statement,The length of the statement "logger.trace("Firing trigger " + trigger.getKey() + " for job "+ job.getKey()+ " for which concurrent execution is disallowed. Adding job to blocked jobs set.");" is 161.,657
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,triggersFired,Long Statement,The length of the statement "logger.trace("Setting state of trigger " + trigger.getKey() + " for non-concurrent job "+ job.getKey()+ " to PAUSED_BLOCKED.");" is 127.,657
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,triggersFired,Long Statement,The length of the statement "logger.debug(String.format("Releasing trigger %s with next fire time %s. Setting state to WAITING."`triggerHashKey`nextFireTime));" is 130.,657
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisStorage,triggeredJobComplete,Complex Method,Cyclomatic complexity of the method is 18,760
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisJobStore,initialize,Complex Method,Cyclomatic complexity of the method is 8,142
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisJobStore,initialize,Long Statement,The length of the statement "ObjectMapper mapper=new ObjectMapper().addMixIn(CronTrigger.class`CronTriggerMixin.class).addMixIn(SimpleTrigger.class`TriggerMixin.class).addMixIn(JobDetail.class`JobDetailMixin.class).addMixIn(HolidayCalendar.class`HolidayCalendarMixin.class).setSerializationInclusion(JsonInclude.Include.NON_NULL);" is 301.,142
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisJobStore,initialize,Long Statement,The length of the statement "jedisCluster=new JedisClusterCommandsWrapper(new JedisCluster(nodes`this.conTimeout`this.soTimeout`this.conRetries`this.password`jedisPoolConfig));" is 147.,142
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisJobStore,initialize,Long Statement,The length of the statement "jedisPool=new JedisSentinelPool(masterGroupName`nodesAsStrings`jedisPoolConfig`Protocol.DEFAULT_TIMEOUT`password`database);" is 123.,142
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisJobStore,getEstimatedTimeToReleaseAndAcquireTrigger,Magic Number,The method contains a magic number: 100,238
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,RedisClusterStorage,Long Parameter List,The method has 5 parameters. ,27
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,storeTrigger,Complex Method,Cyclomatic complexity of the method is 9,116
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,storeTrigger,Long Statement,The length of the statement "Boolean jobPausedResponse=jedis.sismember(redisSchema.pausedJobGroupsSet()`redisSchema.jobGroupSetKey(trigger.getJobKey()));" is 124.,116
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,storeCalendar,Long Parameter List,The method has 5 parameters. ,259
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,removeCalendar,Long Statement,The length of the statement "throw new JobPersistenceException(String.format("There are triggers pointing to calendar %s` so it cannot be removed."`calendarName));" is 134.,300
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,getJobKeys,Complex Method,Cyclomatic complexity of the method is 9,321
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,getTriggerKeys,Complex Method,Cyclomatic complexity of the method is 9,357
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,getTriggerKeys,Long Statement,The length of the statement "if (matcher.getCompareWithOperator().evaluate(redisSchema.triggerGroup(triggerGroupSetKey)`matcher.getCompareToValue())) {" is 122.,357
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,pauseTrigger,Long Statement,The length of the statement "final long nextFireTime=nextFireTimeResponse == null || nextFireTimeResponse.isEmpty() ? -1 : Long.parseLong(nextFireTimeResponse);" is 131.,415
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,pauseTriggers,Complex Method,Cyclomatic complexity of the method is 9,447
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,pauseTriggers,Long Statement,The length of the statement "if (matcher.getCompareWithOperator().evaluate(redisSchema.triggerGroup(triggerGroupSetKey)`matcher.getCompareToValue())) {" is 122.,447
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,pauseJobs,Complex Method,Cyclomatic complexity of the method is 9,487
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,pauseJobs,Long Statement,The length of the statement "if (groupMatcher.getCompareWithOperator().evaluate(redisSchema.jobGroup(jobGroupSetKey)`groupMatcher.getCompareToValue())) {" is 124.,487
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,resumeTriggers,Long Statement,The length of the statement "if (matcher.getCompareWithOperator().evaluate(redisSchema.triggerGroup(triggerGroupSetKey)`matcher.getCompareToValue())) {" is 122.,562
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,resumeTriggers,Long Statement,The length of the statement "resumedTriggerGroups.addAll(resumeTriggers(GroupMatcher.triggerGroupEquals(redisSchema.triggerGroup(triggerGroupSetKey))`jedis));" is 129.,562
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,triggersFired,Complex Method,Cyclomatic complexity of the method is 11,621
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,triggersFired,Long Statement,The length of the statement "TriggerFiredBundle triggerFiredBundle=new TriggerFiredBundle(job`trigger`calendar`false`new Date()`previousFireTime`previousFireTime`trigger.getNextFireTime());" is 160.,621
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,triggersFired,Long Statement,The length of the statement "logger.debug(String.format("Releasing trigger %s with next fire time %s. Setting state to WAITING."`triggerHashKey`nextFireTime));" is 130.,621
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisClusterStorage,triggeredJobComplete,Complex Method,Cyclomatic complexity of the method is 18,705
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,AbstractRedisStorage,Long Parameter List,The method has 5 parameters. ,62
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,waitForLock,Magic Number,The method contains a magic number: 75,95
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,waitForLock,Magic Number,The method contains a magic number: 125,95
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,retrieveTrigger,Long Statement,The length of the statement "throw new JobPersistenceException(String.format("Could not find class %s for trigger."`triggerMap.get(TRIGGER_CLASS))`e);" is 121.,272
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,retrieveTrigger,Long Statement,The length of the statement "operableTrigger.setFireInstanceId(schedulerInstanceId + "-" + operableTrigger.getKey()+ "-"+ operableTrigger.getStartTime().getTime());" is 135.,272
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,storeCalendar,Long Parameter List,The method has 5 parameters. ,369
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,applyMisfire,Complex Conditional,The conditional expression nextFireTime == null || nextFireTime.getTime() > misfireTime || trigger.getMisfireInstruction() == Trigger.MISFIRE_INSTRUCTION_IGNORE_MISFIRE_POLICY is complex.,553
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,applyMisfire,Long Statement,The length of the statement "if (nextFireTime == null || nextFireTime.getTime() > misfireTime || trigger.getMisfireInstruction() == Trigger.MISFIRE_INSTRUCTION_IGNORE_MISFIRE_POLICY) {" is 155.,553
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,applyMisfire,Long Statement,The length of the statement "setTriggerState(RedisTriggerState.COMPLETED`(double)System.currentTimeMillis()`redisSchema.triggerHashKey(trigger.getKey())`jedis);" is 131.,553
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,releaseOrphanedTriggers,Long Statement,The length of the statement "logger.debug(String.format("Changing state of orphaned trigger %s from %s to %s."`triggerTuple.getElement()`currentState`newState));" is 132.,666
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,isBlockedJob,Long Statement,The length of the statement "return jedis.sismember(redisSchema.blockedJobsSet()`jobHashKey) && isActiveInstance(jedis.get(redisSchema.jobBlockedKey(jobKey))`jedis);" is 136.,763
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,lockTrigger,Long Statement,The length of the statement "return jedis.set(redisSchema.triggerLockKey(triggerKey)`schedulerInstanceId`SetParams.setParams().nx().px(TRIGGER_LOCK_TIMEOUT)).equals("OK");" is 142.,784
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,acquireNextTriggers,Complex Method,Cyclomatic complexity of the method is 13,794
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,acquireNextTriggers,Long Identifier,The length of the identifier acquiredJobHashKeysForNoConcurrentExec is 38.,794
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,acquireNextTriggers,Long Statement,The length of the statement "logger.trace("Current time is {}. Attempting to acquire triggers firing no later than {}"`System.currentTimeMillis()`(noLaterThan + timeWindow));" is 145.,794
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,AbstractRedisStorage,acquireNextTriggers,Long Statement,The length of the statement "for ( Tuple triggerTuple : jedis.zrangeByScoreWithScores(redisSchema.triggerStateKey(RedisTriggerState.WAITING)`0`(double)(noLaterThan + timeWindow)`0`maxCount)) {" is 163.,794
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisJobStoreSchema,jobKey,Magic Number,The method contains a magic number: 2,92
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore,RedisJobStoreSchema,triggerKey,Magic Number,The method contains a magic number: 2,144
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrangeByScore,Long Parameter List,The method has 5 parameters. ,469
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrangeByScore,Long Parameter List,The method has 5 parameters. ,479
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrevrangeByScore,Long Parameter List,The method has 5 parameters. ,484
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrangeByScoreWithScores,Long Parameter List,The method has 5 parameters. ,499
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrevrangeByScore,Long Parameter List,The method has 5 parameters. ,504
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrangeByScoreWithScores,Long Parameter List,The method has 5 parameters. ,519
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrevrangeByScoreWithScores,Long Parameter List,The method has 5 parameters. ,524
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrevrangeByScoreWithScores,Long Parameter List,The method has 5 parameters. ,529
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrangeByLex,Long Parameter List,The method has 5 parameters. ,559
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,zrevrangeByLex,Long Parameter List,The method has 5 parameters. ,569
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,georadius,Long Parameter List,The method has 5 parameters. ,714
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,georadiusReadonly,Long Parameter List,The method has 5 parameters. ,719
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,georadius,Long Parameter List,The method has 6 parameters. ,724
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,georadiusReadonly,Long Parameter List,The method has 6 parameters. ,729
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,georadiusByMember,Long Parameter List,The method has 5 parameters. ,744
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,georadiusByMemberReadonly,Long Parameter List,The method has 5 parameters. ,749
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,xadd,Long Parameter List,The method has 5 parameters. ,795
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,xpending,Long Parameter List,The method has 6 parameters. ,840
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.jobstore.jedis,JedisClusterCommandsWrapper,xclaim,Long Parameter List,The method has 8 parameters. ,855
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,TriggeredJobCompleteTest,triggeredJobCompletePersist,Long Statement,The length of the statement "JobDetail jobPersist=JobBuilder.newJob(TestJobPersist.class).withIdentity("testJobPersist1"`"jobGroupPersist1").usingJobData("timeout"`42).withDescription("I am describing a job!").build();" is 189.,97
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,TriggeredJobCompleteTest,triggeredJobCompletePersist,Magic Number,The method contains a magic number: 42,97
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,TriggeredJobCompleteTest,triggeredJobCompleteNonConcurrent,Long Statement,The length of the statement "JobDetail job=JobBuilder.newJob(TestJobNonConcurrent.class).withIdentity("testJobNonConcurrent1"`"jobGroupNonConcurrent1").usingJobData("timeout"`42).withDescription("I am describing a job!").build();" is 200.,113
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,TriggeredJobCompleteTest,triggeredJobCompleteNonConcurrent,Magic Number,The method contains a magic number: 42,113
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,storeTrigger,Long Statement,The length of the statement "assertTrue("The trigger hash key is not a member of the triggers set."`jedis.sismember(schema.triggersSet()`triggerHashKey));" is 125.,38
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,storeTrigger,Long Statement,The length of the statement "assertTrue("The trigger group set key is not a member of the trigger group set."`jedis.sismember(schema.triggerGroupsSet()`schema.triggerGroupSetKey(trigger.getKey())));" is 169.,38
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggersForJob,Magic Number,The method contains a magic number: 2,116
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getNumberOfTriggers,Magic Number,The method contains a magic number: 4,130
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerKeys,Long Statement,The length of the statement "assertThat(triggerKeys`containsInAnyOrder(new TriggerKey("trigger2"`"group1")`new TriggerKey("trigger1"`"group1")`new TriggerKey("trigger4"`"triggergroup1")));" is 159.,143
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerKeys,Magic Number,The method contains a magic number: 2,143
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerKeys,Magic Number,The method contains a magic number: 5,143
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerKeys,Magic Number,The method contains a magic number: 3,143
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerGroupNames,Magic Number,The method contains a magic number: 3,174
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerState,Long Statement,The length of the statement "AbstractRedisStorage storageDriver=new RedisStorage(new RedisJobStoreSchema()`new ObjectMapper()`signaler`"scheduler1"`2000);" is 125.,193
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerState,Magic Number,The method contains a magic number: 2000,193
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getTriggerState,Magic Number,The method contains a magic number: 500,193
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseTrigger,Long Statement,The length of the statement "AbstractRedisStorage storageDriver=new RedisStorage(new RedisJobStoreSchema()`new ObjectMapper()`signaler`"scheduler1"`2000);" is 125.,219
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseTrigger,Magic Number,The method contains a magic number: 2000,219
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseTrigger,Magic Number,The method contains a magic number: 500,219
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseTrigger,Magic Number,The method contains a magic number: 500,219
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseTrigger,Magic Number,The method contains a magic number: 500,219
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseTriggersStartsWith,Magic Number,The method contains a magic number: 2,272
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseTriggersEndsWith,Magic Number,The method contains a magic number: 2,290
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getPausedTriggerGroups,Magic Number,The method contains a magic number: 2,419
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,getPausedTriggerGroups,Magic Number,The method contains a magic number: 2,419
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseAndResumeAll,Magic Number,The method contains a magic number: 2,441
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseAndResumeAll,Magic Number,The method contains a magic number: 2,441
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseAndResumeAll,Magic Number,The method contains a magic number: 2,441
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,pauseAndResumeAll,Magic Number,The method contains a magic number: 2,441
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Long Statement,The length of the statement "assertThat("acquired trigger should be locked"`jedis.get(schema.triggerLockKey(schema.triggerKey(triggerHashKey)))`notNullValue());" is 131.,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Long Statement,The length of the statement "assertThat("non-acquired trigger should not be locked"`jedis.get(schema.triggerLockKey(schema.triggerKey(triggerHashKey)))`nullValue());" is 136.,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Long Statement,The length of the statement "Set<? extends OperableTrigger> triggers=(Set<? extends OperableTrigger>)new ArrayList<>(jobsAndTriggers.entrySet()).get(0).getValue();" is 134.,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 2,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 2,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 2,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 2,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 1000,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 500,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 4000,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 13,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,triggersFired,Magic Number,The method contains a magic number: 4,474
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreTriggerTest,replaceTrigger,Magic Number,The method contains a magic number: 2,523
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreCalendarTest,storeCalendar,Long Statement,The length of the statement "Map<String`Object> calendarJson=mapper.readValue(calendarMap.get("calendar_json")`new TypeReference<HashMap<String`Object>>(){" is 126.,29
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreCalendarTest,getNumberOfCalendars,Magic Number,The method contains a magic number: 2,81
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreCalendarTest,getCalendarNames,Magic Number,The method contains a magic number: 2,92
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,SingleThreadedIntegrationTest,testMisfireListener,Long Statement,The length of the statement "scheduler.getListenerManager().addTriggerListener(new MisfireListener(waiter)`NameMatcher.triggerNameEquals(triggerName));" is 122.,20
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,SingleThreadedIntegrationTest,testMisfireListener,Magic Number,The method contains a magic number: 2500,20
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,SingleThreadedIntegrationTest,testSingleExecution,Long Statement,The length of the statement "SimpleTrigger trigger=TriggerBuilder.newTrigger().withSchedule(simpleSchedule().withRepeatCount(0).withIntervalInMilliseconds(200)).build();" is 140.,43
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,SingleThreadedIntegrationTest,testSingleExecution,Long Statement,The length of the statement "scheduler.getListenerManager().addTriggerListener(new CompleteListener(waiter)`NameMatcher.triggerNameEquals(trigger.getKey().getName()));" is 138.,43
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,SingleThreadedIntegrationTest,testSingleExecution,Magic Number,The method contains a magic number: 200,43
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,SingleThreadedIntegrationTest,testSingleExecution,Magic Number,The method contains a magic number: 2000,43
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 2,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 2,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 2,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 2,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 2,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 4,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 8,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisJobStoreTest,clearAllSchedulingData,Magic Number,The method contains a magic number: 16,34
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiThreadedIntegrationTest,testCompleteListener,Long Statement,The length of the statement "scheduler.getListenerManager().addTriggerListener(new CompleteListener(waiter)`NameMatcher.triggerNameEquals(triggerName));" is 123.,30
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiThreadedIntegrationTest,testCompleteListener,Magic Number,The method contains a magic number: 1500,30
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiThreadedIntegrationTest,testTriggerData,Long Statement,The length of the statement "scheduler.getListenerManager().addTriggerListener(new CompleteListener(waiter)`NameMatcher.triggerNameEquals(triggerName));" is 123.,47
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiThreadedIntegrationTest,testTriggerData,Magic Number,The method contains a magic number: 1500,47
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiThreadedIntegrationTest,testDisallowConcurrent,Long Statement,The length of the statement "scheduler.getListenerManager().addTriggerListener(new CompleteListener(waiter)`NameMatcher.triggerNameEquals(trigger1.getKey().getName()));" is 139.,72
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiThreadedIntegrationTest,testDisallowConcurrent,Magic Number,The method contains a magic number: 6000,72
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiThreadedIntegrationTest,testDisallowConcurrent,Magic Number,The method contains a magic number: 2,72
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,TestUtils,createCronTrigger,Long Statement,The length of the statement "return TriggerBuilder.newTrigger().withIdentity(name`group).withSchedule(CronScheduleBuilder.cronSchedule(cron)).build();" is 121.,30
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,removeJobs,Magic Number,The method contains a magic number: 2,112
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,removeJobs,Magic Number,The method contains a magic number: 2,112
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,removeJobs,Magic Number,The method contains a magic number: 2,112
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,removeJobs,Magic Number,The method contains a magic number: 2,112
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,removeJobs,Magic Number,The method contains a magic number: 2,112
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,removeJobs,Magic Number,The method contains a magic number: 3,112
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,getNumberOfJobs,Magic Number,The method contains a magic number: 3,134
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,getJobKeys,Long Statement,The length of the statement "assertThat(jobKeys`containsInAnyOrder(new JobKey("job1"`"group1")`new JobKey("job2"`"group1")`new JobKey("job4"`"awesomegroup1")`new JobKey("job3"`"group2")));" is 159.,145
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,getJobKeys,Long Statement,The length of the statement "assertThat(jobKeys`containsInAnyOrder(new JobKey("job1"`"group1")`new JobKey("job2"`"group1")`new JobKey("job4"`"awesomegroup1")));" is 131.,145
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,getJobKeys,Magic Number,The method contains a magic number: 2,145
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,getJobKeys,Magic Number,The method contains a magic number: 4,145
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,getJobKeys,Magic Number,The method contains a magic number: 3,145
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,getJobGroupNames,Magic Number,The method contains a magic number: 2,176
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,pauseJobsEquals,Magic Number,The method contains a magic number: 2,214
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,pauseJobsEquals,Magic Number,The method contains a magic number: 2,214
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,pauseJobsEquals,Magic Number,The method contains a magic number: 2,214
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,pauseJobsEquals,Magic Number,The method contains a magic number: 2,214
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,pauseJobsStartsWith,Long Statement,The length of the statement "storeJobAndTriggers(job1`getCronTrigger("trigger1"`"triggerGroup1"`job1.getKey())`getCronTrigger("trigger2"`"triggerGroup1"`job1.getKey()));" is 140.,238
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,pauseJobsContains,Magic Number,The method contains a magic number: 2,284
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEquals,Magic Number,The method contains a magic number: 2,338
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEquals,Magic Number,The method contains a magic number: 2,338
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEquals,Magic Number,The method contains a magic number: 2,338
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEquals,Magic Number,The method contains a magic number: 2,338
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEndsWith,Magic Number,The method contains a magic number: 2,376
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEndsWith,Magic Number,The method contains a magic number: 2,376
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEndsWith,Magic Number,The method contains a magic number: 2,376
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,StoreJobTest,resumeJobsEndsWith,Magic Number,The method contains a magic number: 2,376
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,setUpRedis,Magic Number,The method contains a magic number: 2000,56
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getJobDetail,Long Statement,The length of the statement "return JobBuilder.newJob(TestJob.class).withIdentity(name`group).usingJobData("timeout"`42).withDescription("I am describing a job!").build();" is 142.,95
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getJobDetail,Magic Number,The method contains a magic number: 42,95
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getCronTrigger,Long Statement,The length of the statement "return (CronTriggerImpl)TriggerBuilder.newTrigger().forJob("testJob"`"testGroup").withIdentity("testTrigger"`"testTriggerGroup").withSchedule(CronScheduleBuilder.cronSchedule(cron)).usingJobData("timeout"`5).withDescription("A description!").build();" is 250.,103
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getCronTrigger,Magic Number,The method contains a magic number: 5,103
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getCronTrigger,Long Statement,The length of the statement "CronTriggerImpl trigger=(CronTriggerImpl)TriggerBuilder.newTrigger().forJob(jobKey).withIdentity(name`group).withSchedule(CronScheduleBuilder.cronSchedule(cron)).usingJobData("timeout"`5).withDescription("A description!").build();" is 230.,118
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getCronTrigger,Magic Number,The method contains a magic number: 5,118
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getCalendar,Magic Number,The method contains a magic number: 7,133
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,BaseTest,getJobsAndTriggers,Long Parameter List,The method has 5 parameters. ,146
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisSentinelJobStoreTest,setUpRedis,Long Statement,The length of the statement "redisCluster=RedisCluster.builder().sentinelPorts(sentinels).quorumSize(2).serverPorts(group1).replicationGroup("master1"`1).serverPorts(group2).replicationGroup("master2"`1).ephemeralServers().replicationGroup("master3"`1).build();" is 232.,32
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisSentinelJobStoreTest,setUpRedis,Magic Number,The method contains a magic number: 2,32
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisSentinelJobStoreTest,setUpRedis,Magic Number,The method contains a magic number: 2000,32
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisSentinelJobStoreTest,setUpRedis,Magic Number,The method contains a magic number: 20,32
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,RedisSentinelJobStoreTest,setUpRedis,Magic Number,The method contains a magic number: 2000,32
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,schedulerConfig,Long Statement,The length of the statement "config.setProperty(StdSchedulerFactory.PROP_SCHED_INSTANCE_ID_GENERATOR_CLASS`SimpleInstanceIdGenerator.class.getName());" is 121.,70
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testMultipleSchedulers,Long Statement,The length of the statement "scheduler.getListenerManager().addTriggerListener(new CompleteListener(waiter)`NameMatcher.triggerNameEquals(triggerName));" is 123.,79
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testMultipleSchedulers,Long Statement,The length of the statement "scheduler2.getListenerManager().addTriggerListener(new CompleteListener(waiter)`NameMatcher.triggerNameEquals(triggerName));" is 124.,79
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testMultipleSchedulers,Magic Number,The method contains a magic number: 5,79
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testMultipleSchedulers,Magic Number,The method contains a magic number: 1500,79
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testMultipleSchedulers,Magic Number,The method contains a magic number: 1500,79
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testDeadScheduler,Long Statement,The length of the statement "JobDetail job=createJob(SchedulerIDCheckingJob.class`"testJob"`"group").getJobBuilder().usingJobData("sleep"`15_000L).build();" is 126.,125
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testDeadScheduler,Long Statement,The length of the statement "jedis.hset(schema.lastInstanceActiveTime()`scheduler.getSchedulerInstanceId()`String.valueOf(System.currentTimeMillis() - 5 * 60_000));" is 135.,125
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testDeadScheduler,Magic Number,The method contains a magic number: 15_000L,125
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testDeadScheduler,Magic Number,The method contains a magic number: 1500,125
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testDeadScheduler,Magic Number,The method contains a magic number: 5,125
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testDeadScheduler,Magic Number,The method contains a magic number: 60_000,125
+jlinn_quartz-redis-jobstore,net.joelinn.quartz,MultiSchedulerIntegrationTest,testDeadScheduler,Magic Number,The method contains a magic number: 1500,125
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.mixin,CronTriggerMixinTest,serialization,Long Statement,The length of the statement "CronTrigger trigger=TriggerBuilder.newTrigger().forJob("testJob"`"testGroup").withIdentity("testTrigger"`"testTriggerGroup").withSchedule(CronScheduleBuilder.cronSchedule(cron)).usingJobData("timeout"`5).withDescription("A description!").build();" is 246.,33
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.mixin,CronTriggerMixinTest,serialization,Magic Number,The method contains a magic number: 5,33
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.mixin,JobDetailMixinTest,serializeJobDetail,Long Statement,The length of the statement "JobDetail testJob=JobBuilder.newJob(TestJob.class).withIdentity("testJob"`"testGroup").usingJobData("timeout"`42).withDescription("I am describing a job!").build();" is 164.,33
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.mixin,JobDetailMixinTest,serializeJobDetail,Magic Number,The method contains a magic number: 42,33
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.mixin,SimpleTriggerMixinTest,serialization,Long Statement,The length of the statement "SimpleTrigger trigger=TriggerBuilder.newTrigger().forJob("testJob"`"testGroup").withIdentity("testTrigger"`"testTriggerGroup").usingJobData("timeout"`5).withDescription("A description!").withSchedule(SimpleScheduleBuilder.repeatHourlyForever()).build();" is 253.,33
+jlinn_quartz-redis-jobstore,net.joelinn.quartz.mixin,SimpleTriggerMixinTest,serialization,Magic Number,The method contains a magic number: 5,33

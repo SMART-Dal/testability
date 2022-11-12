@@ -1,0 +1,215 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.sample.resources,HelloResource,askMe,Long Statement,The length of the statement "ListenableFuture<WebSocketResponseMessage> response=context.getClient().sendRequest("GET"`"/hello"`new LinkedList<>()`Optional.empty());" is 136.,61
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.sample.auth,HelloAccountWebSocketAuthenticator,authenticate,Complex Conditional,The conditional expression usernames == null || usernames.size() == 0 || passwords == null || passwords.size() == 0 is complex.,21
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.sample,Server,run,Long Statement,The length of the statement "WebSocketEnvironment webSocketEnvironment=new WebSocketEnvironment(environment`serverConfiguration.getWebSocketConfiguration());" is 128.,20
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.sample,Server,run,Long Statement,The length of the statement "environment.jersey().register(new AuthDynamicFeature(new BasicCredentialAuthFilter.Builder<HelloAccount>().setAuthenticator(helloBasicAuthenticator).setPrincipal(HelloAccount.class).buildAuthFilter()));" is 202.,20
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testAuthenticatedQueries,Long Statement,The length of the statement "SynchronousClient client=new SynchronousClient(new URI("ws://localhost:" + RULE.getLocalPort() + "/websocket/?login=moxie&password=insecure"));" is 143.,23
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testAuthenticatedQueries,Magic Number,The method contains a magic number: 5000,23
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testAuthenticatedQueries,Magic Number,The method contains a magic number: 5000,23
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testAuthenticatedQueries,Magic Number,The method contains a magic number: 200,23
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testAuthenticatedQueries,Magic Number,The method contains a magic number: 5000,23
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testAuthenticatedQueries,Magic Number,The method contains a magic number: 200,23
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testBadAuthentication,Long Statement,The length of the statement "SynchronousClient client=new SynchronousClient(new URI("ws://localhost:" + RULE.getLocalPort() + "/websocket/?login=moxie&password=wrongpassword"));" is 148.,43
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testBadAuthentication,Magic Number,The method contains a magic number: 5000,43
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testBadAuthentication,Magic Number,The method contains a magic number: 403,43
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testMissingAuthentication,Magic Number,The method contains a magic number: 5000,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testMissingAuthentication,Magic Number,The method contains a magic number: 5000,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testMissingAuthentication,Magic Number,The method contains a magic number: 200,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testMissingAuthentication,Magic Number,The method contains a magic number: 5000,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testMissingAuthentication,Magic Number,The method contains a magic number: 401,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testMissingAuthentication,Magic Number,The method contains a magic number: 5000,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,HelloServerTest,testMissingAuthentication,Magic Number,The method contains a magic number: 200,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketClient,hardDisconnectQuietly,Empty catch clause,The method has an empty catch block.,94
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,WebSocketResourceProvider,Long Parameter List,The method has 6 parameters. ,72
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,onWebSocketError,Magic Number,The method contains a magic number: 1011,100
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,onWebSocketBinary,Magic Number,The method contains a magic number: 1018,106
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,onWebSocketBinary,Magic Number,The method contains a magic number: 1018,106
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,onWebSocketBinary,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6492f863,106
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,handleRequest,Long Statement,The length of the statement "logger.warn("Servlet Error: " + requestMessage.getVerb() + " "+ requestMessage.getPath()+ "\n"+ requestMessage.getBody()`e);" is 124.,148
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,handleRequest,Magic Number,The method contains a magic number: 500,148
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProvider,sendErrorResponse,Long Statement,The length of the statement "WebSocketMessage response=messageFactory.createResponse(requestMessage.getRequestId()`error.getStatus()`"Error response"`headers`Optional.<byte[]>empty());" is 155.,188
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderFactory,createWebSocket,Long Statement,The length of the statement "return new WebSocketResourceProvider(this.environment.getJerseyServletContainer()`this.environment.getRequestLog()`authenticated`this.environment.getMessageFactory()`Optional.ofNullable(this.environment.getConnectListener())`this.environment.getIdleTimeoutMillis());" is 266.,80
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testOnConnect,Long Statement,The length of the statement "WebSocketResourceProvider provider=new WebSocketResourceProvider(contextHandler`requestLog`null`new ProtobufWebSocketMessageFactory()`Optional.empty()`30000);" is 158.,28
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testOnConnect,Long Statement,The length of the statement "when(authenticator.authenticate(request)).thenReturn(new WebSocketAuthenticator.AuthenticationResult<>(Optional.of("fooz")`true));" is 130.,28
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testOnConnect,Magic Number,The method contains a magic number: 30000,28
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testRouteMessage,Long Statement,The length of the statement "WebSocketResourceProvider provider=new WebSocketResourceProvider(servlet`requestLog`Optional.of((WebSocketAuthenticator)authenticator)`new ProtobufWebSocketMessageFactory()`Optional.empty()`30000);" is 197.,52
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testRouteMessage,Long Statement,The length of the statement "when(authenticator.authenticate(request)).thenReturn(new WebSocketAuthenticator.AuthenticationResult<>(Optional.of("foo")`true));" is 129.,52
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testRouteMessage,Long Statement,The length of the statement "byte[] message=new ProtobufWebSocketMessageFactory().createRequest(Optional.of(111L)`"GET"`"/bar"`new LinkedList<String>()`Optional.of("hello world!".getBytes())).toByteArray();" is 177.,52
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testRouteMessage,Magic Number,The method contains a magic number: 30000,52
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderTest,testRouteMessage,Magic Number,The method contains a magic number: 111L,52
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderFactoryTest,testUnauthorized,Long Statement,The length of the statement "when(authenticator.authenticate(eq(request))).thenReturn(new WebSocketAuthenticator.AuthenticationResult<>(Optional.empty()`true));" is 131.,23
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket,WebSocketResourceProviderFactoryTest,testValidAuthorization,Long Statement,The length of the statement "when(authenticator.authenticate(eq(request))).thenReturn(new WebSocketAuthenticator.AuthenticationResult<>(Optional.of(account)`true));" is 135.,43
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.client,Client,main,Magic Number,The method contains a magic number: 10000,27
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.client,Client,onReceivedRequest,Magic Number,The method contains a magic number: 200,51
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.client,Client,onConnected,Magic Number,The method contains a magic number: 2,76
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.client,Client,onConnected,Magic Number,The method contains a magic number: 3,76
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,getEncodedLengthWithoutPadding,Magic Number,The method contains a magic number: 3,436
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,getEncodedLengthWithoutPadding,Magic Number,The method contains a magic number: 3,436
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,getEncodedLengthWithoutPadding,Magic Number,The method contains a magic number: 2,436
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,getEncodedLengthWithoutPadding,Magic Number,The method contains a magic number: 3,436
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,getEncodedLengthWithoutPadding,Magic Number,The method contains a magic number: 4,436
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,getEncodedBytesForTarget,Magic Number,The method contains a magic number: 3,446
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,getEncodedBytesForTarget,Magic Number,The method contains a magic number: 4,446
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Long Parameter List,The method has 6 parameters. ,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 8,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 16,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 6,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 6,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode3to4,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2541f33f,475
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 3,549
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 4,549
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 3,549
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 3,573
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 4,573
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 3,573
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 4,573
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encode,Magic Number,The method contains a magic number: 0xFF,573
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,626
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,626
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,626
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,626
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesWithoutPadding,Magic Number,The method contains a magic number: 2,732
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesWithoutPadding,Magic Number,The method contains a magic number: 2,732
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Complex Method,Cyclomatic complexity of the method is 11,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Empty catch clause,The method has an empty catch block.,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Empty catch clause,The method has an empty catch block.,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Empty catch clause,The method has an empty catch block.,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Cannot have offset of %d and length of %d with array of length %d"`off`len`source.length));" is 141.,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 2,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,892
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Long Parameter List,The method has 5 parameters. ,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Source array with length %d cannot have offset of %d and still process four bytes."`source.length`srcOffset));" is 160.,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Destination array with length %d cannot have offset of %d and still store three bytes."`destination.length`destOffset));" is 170.,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((DECODABET[source[srcOffset]] & 0xFF) << 18) | ((DECODABET[source[srcOffset + 1]] & 0xFF) << 12) | ((DECODABET[source[srcOffset + 2]] & 0xFF) << 6);" is 161.,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((DECODABET[source[srcOffset]] & 0xFF) << 18) | ((DECODABET[source[srcOffset + 1]] & 0xFF) << 12) | ((DECODABET[source[srcOffset + 2]] & 0xFF) << 6)| ((DECODABET[source[srcOffset + 3]] & 0xFF));" is 206.,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 18,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 18,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 8,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 18,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 8,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,1022
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Complex Method,Cyclomatic complexity of the method is 10,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Source array with length %d cannot have offset of %d and process %d bytes."`source.length`off`len));" is 150.,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Long Statement,The length of the statement "throw new IllegalArgumentException("Base64-encoded string must have at least four characters` but length specified was " + len);" is 128.,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 4,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 3,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 4,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 4,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 0x7f,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 3,1149
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeWithoutPadding,Magic Number,The method contains a magic number: 4,1248
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeWithoutPadding,Magic Number,The method contains a magic number: 2,1248
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeWithoutPadding,Magic Number,The method contains a magic number: 3,1248
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Complex Conditional,The conditional expression (bytes != null) && (bytes.length >= 4) && (!dontGunzip) is complex.,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Empty catch clause,The method has an empty catch block.,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Empty catch clause,The method has an empty catch block.,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Empty catch clause,The method has an empty catch block.,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 4,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 0xff,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 8,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 0xff00,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decode,Magic Number,The method contains a magic number: 2048,1260
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeToObject,Empty catch clause,The method has an empty catch block.,1351
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeToObject,Empty catch clause,The method has an empty catch block.,1351
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeToObject,Long Statement,The length of the statement "@Override public Class<?> resolveClass( java.io.ObjectStreamClass streamClass) throws java.io.IOException` ClassNotFoundException {" is 131.,1351
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeToFile,Empty catch clause,The method has an empty catch block.,1421
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeToFile,Empty catch clause,The method has an empty catch block.,1458
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeFromFile,Empty catch clause,The method has an empty catch block.,1492
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeFromFile,Magic Number,The method contains a magic number: 4096,1492
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeFromFile,Empty catch clause,The method has an empty catch block.,1553
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeFromFile,Magic Number,The method contains a magic number: 1.4,1553
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeFromFile,Magic Number,The method contains a magic number: 40,1553
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeFromFile,Magic Number,The method contains a magic number: 4096,1553
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,encodeFileToFile,Empty catch clause,The method has an empty catch block.,1604
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.util,Base64,decodeFileToFile,Empty catch clause,The method has an empty catch block.,1632
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.setup,WebSocketEnvironment,WebSocketEnvironment,Magic Number,The method contains a magic number: 60000,48
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.servlet,NullServletResponse,getStatus,Magic Number,The method contains a magic number: 200,90
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.servlet,WebSocketServletResponse,flushBuffer,Long Statement,The length of the statement "byte[] response=messageFactory.createResponse(responseBuilder.getRequestId()`responseBuilder.getStatusCode()`responseBuilder.getMessage()`new LinkedList<>()`Optional.ofNullable(body)).toByteArray();" is 198.,193
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.servlet,WebSocketServletRequest,getServerPort,Magic Number,The method contains a magic number: 8080,360
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.servlet,WebSocketServletRequest,getRemotePort,Magic Number,The method contains a magic number: 31337,418
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.servlet,WebSocketServletRequest,getLocalPort,Magic Number,The method contains a magic number: 8080,433
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.session,WebSocketSessionContext,addListener,Magic Number,The method contains a magic number: 1000,53
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages,WebSocketMessageFactory,createRequest,Long Parameter List,The method has 5 parameters. ,29
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages,WebSocketMessageFactory,createResponse,Long Parameter List,The method has 5 parameters. ,34
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_textsecure_WebSocketRequestMessage_descriptor is 61.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_textsecure_WebSocketRequestMessage_fieldAccessorTable is 69.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_textsecure_WebSocketResponseMessage_descriptor is 62.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_textsecure_WebSocketResponseMessage_fieldAccessorTable is 70.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_textsecure_WebSocketMessage_descriptor is 54.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_textsecure_WebSocketMessage_fieldAccessorTable is 62.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Statement,The length of the statement "internal_static_textsecure_WebSocketRequestMessage_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_textsecure_WebSocketRequestMessage_descriptor`new java.lang.String[]{"Verb"`"Path"`"Headers"`"Body"`"Id"});" is 253.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Statement,The length of the statement "internal_static_textsecure_WebSocketResponseMessage_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_textsecure_WebSocketResponseMessage_descriptor`new java.lang.String[]{"Id"`"Status"`"Message"`"Headers"`"Body"});" is 260.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Long Statement,The length of the statement "internal_static_textsecure_WebSocketMessage_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_textsecure_WebSocketMessage_descriptor`new java.lang.String[]{"Type"`"Request"`"Response"});" is 231.,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,SubProtocol,assignDescriptors,Magic Number,The method contains a magic number: 2,2810
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketRequestMessage,getHeaders,Complex Conditional,The conditional expression tokenized.length == 2 && tokenized[0] != null && tokenized[1] != null is complex.,62
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketRequestMessage,getHeaders,Magic Number,The method contains a magic number: 2,62
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketResponseMessage,getHeaders,Complex Conditional,The conditional expression tokenized.length == 2 && tokenized[0] != null && tokenized[1] != null is complex.,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketResponseMessage,getHeaders,Magic Number,The method contains a magic number: 2,57
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketMessageFactory,createRequest,Long Parameter List,The method has 5 parameters. ,37
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketMessageFactory,createRequest,Long Statement,The length of the statement "SubProtocol.WebSocketRequestMessage.Builder requestMessage=SubProtocol.WebSocketRequestMessage.newBuilder().setVerb(verb).setPath(path);" is 136.,37
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketMessageFactory,createRequest,Long Statement,The length of the statement "SubProtocol.WebSocketMessage message=SubProtocol.WebSocketMessage.newBuilder().setType(SubProtocol.WebSocketMessage.Type.REQUEST).setRequest(requestMessage).build();" is 165.,37
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketMessageFactory,createResponse,Long Parameter List,The method has 5 parameters. ,69
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketMessageFactory,createResponse,Long Statement,The length of the statement "SubProtocol.WebSocketResponseMessage.Builder responseMessage=SubProtocol.WebSocketResponseMessage.newBuilder().setId(requestId).setStatus(status).setMessage(messageString);" is 172.,69
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketMessageFactory,createResponse,Long Statement,The length of the statement "SubProtocol.WebSocketMessage message=SubProtocol.WebSocketMessage.newBuilder().setType(SubProtocol.WebSocketMessage.Type.RESPONSE).setResponse(responseMessage).build();" is 168.,69
+WhisperSystems_WebSocket-Resources,org.whispersystems.websocket.messages.protobuf,ProtobufWebSocketMessage,ProtobufWebSocketMessage,Complex Conditional,The conditional expression !message.getResponse().hasId() || !message.getResponse().hasStatus() || !message.getResponse().hasMessage() is complex.,30

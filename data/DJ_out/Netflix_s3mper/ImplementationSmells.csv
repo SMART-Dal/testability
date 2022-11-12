@@ -1,0 +1,59 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,DeleteWriterTask,call,Complex Method,Cyclomatic complexity of the method is 8,59
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,DeleteWriterTask,call,Long Statement,The length of the statement "log.debug(String.format("delete: %2d` queue_size: %5d` max_rate: %4.1f"`keys.size()`deleteQueue.size()`limiter.getRate()));" is 123.,59
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,DeleteWriterTask,call,Magic Number,The method contains a magic number: 500,59
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,TimeseriesScannerTask,TimeseriesScannerTask,Long Parameter List,The method has 5 parameters. ,48
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,TimeseriesScannerTask,call,Long Statement,The length of the statement "log.info(format("scanned: %d` added: %d` queue_size: %d` current_date: %s"`scanCount`deleteCount`deleteQueue.size()`new Date(epoch)));" is 134.,55
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,TimeseriesScannerTask,call,Magic Number,The method contains a magic number: 2,55
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,TimeseriesScannerTask,call,Magic Number,The method contains a magic number: 2,55
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,PathScannerTask,PathScannerTask,Long Parameter List,The method has 5 parameters. ,49
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,PathScannerTask,call,Long Statement,The length of the statement "log.info(String.format("Total scanned: %d` matched: %d` added: %d` queue size: %d` consumed capacity: %f` max rate: %f"`scanTotal`matched`result.getCount()`deleteQueue.size()`result.getConsumedCapacityUnits()`limiter.getRate()));" is 229.,56
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,MetastoreJanitor,deleteTimeseries,Long Statement,The length of the statement "log.info(format("read_units=%d` write_units=%d` queue_size=%d` scan_threads=%d` delete_threads=%d"`scanLimit`deleteLimit`queueSize`scanThreads`deleteThreads));" is 159.,102
+Netflix_s3mper,com.netflix.bdp.s3mper.metastore.impl,MetastoreJanitor,deletePaths,Long Statement,The length of the statement "log.info(format("read_units=%d` write_units=%d` queue_size=%d` scan_threads=%d` delete_threads=%d"`scanLimit`deleteLimit`queueSize`scanThreads`deleteThreads));" is 159.,130
+Netflix_s3mper,com.netflix.bdp.s3mper.common,ExponentialBackoffAlgorithm,next,Magic Number,The method contains a magic number: 2,40
+Netflix_s3mper,com.netflix.bdp.s3mper.cli,S3mper,run,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3de4f936,43
+Netflix_s3mper,com.netflix.bdp.s3mper.cli,S3mper,processSQS,Magic Number,The method contains a magic number: 2,105
+Netflix_s3mper,com.netflix.bdp.s3mper.cli,S3mper,processSQS,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@252459b2,105
+Netflix_s3mper,com.netflix.bdp.s3mper.alert.impl,AlertJanitor,delete,Long Statement,The length of the statement "deleteRequests.add(new DeleteMessageBatchRequestEntry().withId(m.getMessageId()).withReceiptHandle(m.getReceiptHandle()));" is 122.,127
+Netflix_s3mper,com.netflix.bdp.s3mper.alert.impl,AlertJanitor,main,Magic Number,The method contains a magic number: 2,168
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspect,initialize,Long Statement,The length of the statement "Class<?> dispatcherImpl=conf.getClass("s3mper.dispatcher.impl"`com.netflix.bdp.s3mper.alert.impl.CloudWatchAlertDispatcher.class);" is 130.,84
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspect,metastoreCheck,Complex Method,Cyclomatic complexity of the method is 20,233
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspect,metastoreCheck,Long Statement,The length of the statement "log.info(format("Proceeding with incomplete listing at ratio %f (%f as acceptable). Still missing paths: %s"`ratio`fileThreshold`missingPaths));" is 144.,233
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspect,metastoreCheck,Long Statement,The length of the statement "log.info(format("Rechecking consistency in %d (ms). Files missing %d. Missing paths: %s"`delay`missingPaths.size()`missingPaths));" is 130.,233
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspect,metastoreDelete,Complex Method,Cyclomatic complexity of the method is 8,426
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,setUpClass,Magic Number,The method contains a magic number: 10,66
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,setUpClass,Magic Number,The method contains a magic number: 1000,66
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,setUp,Magic Number,The method contains a magic number: 10,109
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,setUp,Magic Number,The method contains a magic number: 1000,109
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testFileCreateMethods,Magic Number,The method contains a magic number: 4096,135
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testFileCreateMethods,Magic Number,The method contains a magic number: 4096,135
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testFileCreateMethods,Magic Number,The method contains a magic number: 4096,135
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testFileCreateMethods,Magic Number,The method contains a magic number: 100000000,135
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testFileCreateMethods,Magic Number,The method contains a magic number: 4096,135
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testFileCreateMethods,Magic Number,The method contains a magic number: 100000000,135
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testWritePerformace,Magic Number,The method contains a magic number: 10,262
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testWritePerformace,Magic Number,The method contains a magic number: 5,262
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testAlerts,Magic Number,The method contains a magic number: 5,295
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testAlerts,Magic Number,The method contains a magic number: 1000,295
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecursiveDelete,Complex Method,Cyclomatic complexity of the method is 8,325
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecursiveDelete,Magic Number,The method contains a magic number: 5,325
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecursiveDelete,Magic Number,The method contains a magic number: 5,325
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecursiveDelete,Magic Number,The method contains a magic number: 5000,325
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecursiveDelete,Magic Number,The method contains a magic number: 5000,325
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecursiveDelete,Magic Number,The method contains a magic number: 5,325
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecursiveDelete,Magic Number,The method contains a magic number: 5,325
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testTimeout,Magic Number,The method contains a magic number: 5,385
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testTimeout,Magic Number,The method contains a magic number: 4,385
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testTimeout,Magic Number,The method contains a magic number: 1000,385
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testTimeoutAlerts,Magic Number,The method contains a magic number: 10,417
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecheckBackoff,Empty catch clause,The method has an empty catch block.,426
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecheckBackoff,Magic Number,The method contains a magic number: 10,426
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testDeleteMarkerListing,Magic Number,The method contains a magic number: 3,472
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testThreshold,Magic Number,The method contains a magic number: 0.5f,489
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testThreshold,Magic Number,The method contains a magic number: 10000,489
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testThreshold,Magic Number,The method contains a magic number: 2,489
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecoveryMessage,Empty catch clause,The method has an empty catch block.,514
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecoveryMessage,Magic Number,The method contains a magic number: 10000,514
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,testRecoveryMessage,Magic Number,The method contains a magic number: 1500,514
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,run,Empty catch clause,The method has an empty catch block.,528
+Netflix_s3mper,com.netflix.bdp.s3mper.listing,ConsistentListingAspectTest,run,Magic Number,The method contains a magic number: 1500,528

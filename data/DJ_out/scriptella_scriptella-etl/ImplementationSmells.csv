@@ -1,0 +1,620 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+scriptella_scriptella-etl,scriptella.tools.ant,EtlTemplateTaskTest,test,Empty catch clause,The method has an empty catch block.,36
+scriptella_scriptella-etl,scriptella.tools.ant,EtlTemplateTaskTest,test,Magic Number,The method contains a magic number: 2,36
+scriptella_scriptella-etl,scriptella.tools.template,DataMigrator,appendColumnNames,Long Parameter List,The method has 5 parameters. ,115
+scriptella_scriptella-etl,scriptella.tools.template,DataMigrator,sortTables,Complex Method,Cyclomatic complexity of the method is 13,132
+scriptella_scriptella-etl,scriptella.tools.template,DataMigrator,sortTables,Magic Number,The method contains a magic number: 10,132
+scriptella_scriptella-etl,scriptella.tools.template,DataMigrator,getTablesMatrix,Magic Number,The method contains a magic number: 2,201
+scriptella_scriptella-etl,scriptella.tools.template,DataMigrator,getTablesMatrix,Magic Number,The method contains a magic number: 10,201
+scriptella_scriptella-etl,scriptella.tools.template,TemplateManager,defineName,Magic Number,The method contains a magic number: 10,92
+scriptella_scriptella-etl,scriptella.tools.template,TemplateManagerTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.tools.launcher,EtlLauncher,format,Magic Number,The method contains a magic number: 2,84
+scriptella_scriptella-etl,scriptella.tools.launcher,EtlLauncher,launch,Complex Method,Cyclomatic complexity of the method is 17,131
+scriptella_scriptella-etl,scriptella.tools.launcher,EtlLauncherTest,testFile,Long Statement,The length of the statement "assertEquals(EtlLauncher.ErrorCode.OK`launcher.launch(new String[]{getBasedir() + "src/test/scriptella/tools/launcher/EtlLauncherTest"}));" is 138.,81
+scriptella_scriptella-etl,scriptella.tools.launcher,EtlLauncherTest,testJmx,Magic Number,The method contains a magic number: 2,87
+scriptella_scriptella-etl,scriptella.tools.launcher,EtlLauncherTest,call,Magic Number,The method contains a magic number: 2,97
+scriptella_scriptella-etl,scriptella.jdbc,GenericDriver,loadDrivers,Long Statement,The length of the statement "throw new JdbcException("Couldn't find appropriate jdbc driver : " + drivers[0] + ". Please check class path settings"`throwable);" is 130.,54
+scriptella_scriptella-etl,scriptella.jdbc,ParametersParser,evaluate,Empty catch clause,The method has an empty catch block.,58
+scriptella_scriptella-etl,scriptella.jdbc,ParametersParser,evaluate,Empty catch clause,The method has an empty catch block.,58
+scriptella_scriptella-etl,scriptella.jdbc,ParametersParser,evaluate,Magic Number,The method contains a magic number: 5,58
+scriptella_scriptella-etl,scriptella.jdbc,ParametersParser,evaluate,Magic Number,The method contains a magic number: 9,58
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Complex Method,Cyclomatic complexity of the method is 15,106
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Long Identifier,The length of the field STATEMENT_SEPARATOR_SINGLELINE_KEY is 34.,106
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Long Identifier,The length of the field TRANSACTION_ISOLATION_READ_COMMITTED is 36.,106
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Long Identifier,The length of the field TRANSACTION_ISOLATION_READ_UNCOMMITTED is 38.,106
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Long Identifier,The length of the field TRANSACTION_ISOLATION_REPEATABLE_READ is 37.,106
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Long Identifier,The length of the field TRANSACTION_ISOLATION_SERIALIZABLE is 34.,106
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Long Statement,The length of the statement "throw new ConfigurationException("Invalid " + TRANSACTION_ISOLATION_KEY + " connection property value: "+ isolationStr+ ". Valid values are: "+ TRANSACTION_ISOLATION_READ_COMMITTED+ "` "+ TRANSACTION_ISOLATION_READ_UNCOMMITTED+ "` "+ TRANSACTION_ISOLATION_REPEATABLE_READ+ "` "+ TRANSACTION_ISOLATION_SERIALIZABLE+ " or a numeric value according to java.sql.Connection transaction isolation constants");" is 403.,106
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnection,init,Magic Number,The method contains a magic number: 64,106
+scriptella_scriptella-etl,scriptella.jdbc,SqlExecutor,logExecutedStatement,Complex Method,Cyclomatic complexity of the method is 8,156
+scriptella_scriptella-etl,scriptella.jdbc,SqlParserBase,handleStatement,Complex Method,Cyclomatic complexity of the method is 9,86
+scriptella_scriptella-etl,scriptella.jdbc,JdbcUtils,closeSilent,Empty catch clause,The method has an empty catch block.,34
+scriptella_scriptella-etl,scriptella.jdbc,JdbcUtils,closeSilent,Empty catch clause,The method has an empty catch block.,47
+scriptella_scriptella-etl,scriptella.jdbc,JdbcUtils,closeSilent,Empty catch clause,The method has an empty catch block.,60
+scriptella_scriptella-etl,scriptella.jdbc,SqlReaderTokenizer,nextStatement,Complex Conditional,The conditional expression (currentChar == sep0) && ((newLineMode && whitespacesOnly) || defaultMode) is complex.,64
+scriptella_scriptella-etl,scriptella.jdbc,SqlReaderTokenizer,nextStatement,Complex Method,Cyclomatic complexity of the method is 18,64
+scriptella_scriptella-etl,scriptella.jdbc,SqlReaderTokenizer,nextStatement,Magic Number,The method contains a magic number: 32,64
+scriptella_scriptella-etl,scriptella.jdbc,SqlReaderTokenizer,seekEndLineComment,Magic Number,The method contains a magic number: 2,177
+scriptella_scriptella-etl,scriptella.jdbc,SqlReaderTokenizer,seekEndCStyleComment,Complex Conditional,The conditional expression firstChar && !keepFormat && n != '+' is complex.,201
+scriptella_scriptella-etl,scriptella.jdbc,SqlReaderTokenizer,seekEndCStyleComment,Magic Number,The method contains a magic number: 2,201
+scriptella_scriptella-etl,scriptella.jdbc,JdbcTypesConverter,getObject,Complex Method,Cyclomatic complexity of the method is 9,55
+scriptella_scriptella-etl,scriptella.jdbc,JdbcTypesConverter,setObject,Complex Method,Cyclomatic complexity of the method is 8,92
+scriptella_scriptella-etl,scriptella.jdbc,SQLParserBaseTest,test,Long Statement,The length of the statement "String s="-not skipped\n/*+ HintOrComment*/\n" + " \n" + " CREATE TABLE Test (\n"+ " ID INT`\n"+ " $VALUE VARCHAR(255)\n"+ " );\n"+ " ${extra}\n"+ " insert into test(id` value) values (?1` '?justatext');\n"+ " insert into test(id` value) values (?value`'A test?{justatext}');\n"+ " insert into test(id` value) values (3`?text);\n"+ " //comment$justatext ?{justatext} ?justatext\n";" is 381.,31
+scriptella_scriptella-etl,scriptella.jdbc,SQLParserBaseTest,test,Long Statement,The length of the statement "final String[] expected={"-not skipped\n/*+ HintOrComment*/\nCREATE TABLE Test (\n" + " ID INT`\n" + " $/VALUE/ VARCHAR(255)\n"+ " )"`" $/extra/" + " insert into test(id` value) values (?/1/` '?justatext')"`" insert into test(id` value) values (?/value/`'A test?{justatext}')"`" insert into test(id` value) values (3`?/text/)"`" //comment$justatext ?{justatext} ?justatext\n"};" is 377.,31
+scriptella_scriptella-etl,scriptella.jdbc,CachedSqlTokenizerTest,test,Magic Number,The method contains a magic number: 10000,31
+scriptella_scriptella-etl,scriptella.jdbc,CachedSqlTokenizerTest,test,Magic Number,The method contains a magic number: 3,31
+scriptella_scriptella-etl,scriptella.jdbc,SqlTokenizerPerfTest,test,Magic Number,The method contains a magic number: 20000,32
+scriptella_scriptella-etl,scriptella.jdbc,SqlTokenizerPerfTest,testNewLineSeparator,Magic Number,The method contains a magic number: 20000,41
+scriptella_scriptella-etl,scriptella.jdbc,StatementCacheTest,setUp,Magic Number,The method contains a magic number: 100,39
+scriptella_scriptella-etl,scriptella.jdbc,StatementCacheTest,testGrowth,Magic Number,The method contains a magic number: 105,74
+scriptella_scriptella-etl,scriptella.jdbc,StatementCacheTest,testGrowth,Magic Number,The method contains a magic number: 5,74
+scriptella_scriptella-etl,scriptella.jdbc,StatementCacheTest,testUsual,Magic Number,The method contains a magic number: 20,106
+scriptella_scriptella-etl,scriptella.jdbc,StatementCacheTest,testUsual,Magic Number,The method contains a magic number: 20,106
+scriptella_scriptella-etl,scriptella.jdbc,StatementCacheTest,testUsual,Magic Number,The method contains a magic number: 20,106
+scriptella_scriptella-etl,scriptella.jdbc,StatementCacheTest,testUsual,Magic Number,The method contains a magic number: 20,106
+scriptella_scriptella-etl,scriptella.jdbc,SqlTokenizerTest,testComments,Long Statement,The length of the statement "String s="insert into table values 1`?v--$comment\n;" + "-notacomment$v/**fdfdfd$comment\n$comment.v$$???\n;;;*/;stmt${var};\n" + "//$comment";" is 143.,56
+scriptella_scriptella-etl,scriptella.jdbc,SqlTokenizerITest,test,Long Statement,The length of the statement "final Set<String> expectedSyb=new HashSet<String>(Arrays.asList(new String[]{"quoted go is ignored\n" + " go\n" + " "`"333"`"444"}));" is 133.,35
+scriptella_scriptella-etl,scriptella.jdbc,StatementCachePerfTest,setUp,Magic Number,The method contains a magic number: 100,65
+scriptella_scriptella-etl,scriptella.jdbc,StatementCachePerfTest,runStatements,Magic Number,The method contains a magic number: 150,87
+scriptella_scriptella-etl,scriptella.jdbc,StatementCachePerfTest,runStatements,Magic Number,The method contains a magic number: 150,87
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnectionITest,test,Magic Number,The method contains a magic number: 4,34
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnectionITest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.jdbc,JdbcConnectionITest,test,Magic Number,The method contains a magic number: 3,34
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedPrepared,Magic Number,The method contains a magic number: 5,38
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedPrepared,Magic Number,The method contains a magic number: 2,38
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedPrepared,Magic Number,The method contains a magic number: 3,38
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedPrepared,Magic Number,The method contains a magic number: 3,38
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedPrepared,Magic Number,The method contains a magic number: 5,38
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedPrepared,Magic Number,The method contains a magic number: 3,38
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedSimple,Magic Number,The method contains a magic number: 3,81
+scriptella_scriptella-etl,scriptella.jdbc,StatementWrapperTest,testBatchedSimple,Magic Number,The method contains a magic number: 2,81
+scriptella_scriptella-etl,scriptella.jdbc,ParametersParserTest,testInvalid,Empty catch clause,The method has an empty catch block.,50
+scriptella_scriptella-etl,scriptella.spi,DialectIdentifier,hashCode,Magic Number,The method contains a magic number: 29,78
+scriptella_scriptella-etl,scriptella.spi,ConnectionParameters,toString,Long Statement,The length of the statement "return "ConnectionParameters{" + propertiesSource + "` url='"+ url+ '\''+ "` user='"+ user+ '\''+ (password == null ? "" : "` password='" + StringUtils.getMaskedPassword(password) + '\'')+ "` schema='"+ schema+ '\''+ "` catalog='"+ catalog+ '\''+ '}';" is 251.,324
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testPropertiesParsing,Magic Number,The method contains a magic number: 10,38
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testPropertiesParsing,Magic Number,The method contains a magic number: 10,38
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testPropertiesParsing,Magic Number,The method contains a magic number: 10,38
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testPropertiesParsing,Magic Number,The method contains a magic number: 10,38
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testPropertiesParsing,Magic Number,The method contains a magic number: 20,38
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testGetUrlQueryMap,Long Statement,The length of the statement "ConnectionParameters cp=new ConnectionParameters(new MockConnectionEl(map`"jdbc:demo?p1=v1&p2=v2")`MockDriverContext.INSTANCE);" is 127.,75
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testGetUrlQueryMap,Magic Number,The method contains a magic number: 2,75
+scriptella_scriptella-etl,scriptella.spi,ConnectionParametersTest,testGetUrlQueryMap,Magic Number,The method contains a magic number: 2,75
+scriptella_scriptella-etl,scriptella.configuration,XmlElement,getXPath,Complex Method,Cyclomatic complexity of the method is 9,67
+scriptella_scriptella-etl,scriptella.configuration,XmlElement,getXPath,Magic Number,The method contains a magic number: 100,67
+scriptella_scriptella-etl,scriptella.configuration,XmlElement,getBooleanAttribute,Complex Conditional,The conditional expression "true".equalsIgnoreCase(a) || "1".equalsIgnoreCase(a) || "on".equalsIgnoreCase(a)|| "yes".equalsIgnoreCase(a) is complex.,199
+scriptella_scriptella-etl,scriptella.configuration,XmlElement,getBooleanAttribute,Complex Conditional,The conditional expression "false".equalsIgnoreCase(a) || "0".equalsIgnoreCase(a) || "off".equalsIgnoreCase(a)|| "no".equalsIgnoreCase(a) is complex.,199
+scriptella_scriptella-etl,scriptella.configuration,XmlElement,getBooleanAttribute,Long Statement,The length of the statement "throw new ConfigurationException("Unrecognized value '" + a + "' of boolean attribute "+ attribute+ ". Valid values: yes/no` true/false` 1/0` on/off"`this);" is 156.,199
+scriptella_scriptella-etl,scriptella.configuration,QueryEl,loadScriptingElements,Long Statement,The length of the statement "final List<XmlElement> elements=element.getChildren(new HashSet<String>(Arrays.asList(QueryEl.TAG_NAME`ScriptEl.TAG_NAME)));" is 124.,51
+scriptella_scriptella-etl,scriptella.configuration,XmlConfigurableBase,setPatternProperty,Long Statement,The length of the statement "throw new ConfigurationException("Attribute " + attribute + " requires valid regular expression` but was: "+ ptrStr`e`element);" is 127.,72
+scriptella_scriptella-etl,scriptella.configuration,XmlConfigurableBase,setPatternProperty,Long Statement,The length of the statement "final Method method=getClass().getMethod("set" + Character.toUpperCase(property.charAt(0)) + property.substring(1)`Pattern.class);" is 130.,72
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationFactory,createConfiguration,Long Statement,The length of the statement "HierarchicalParametersCallback params=new HierarchicalParametersCallback(externalParameters == null ? NullParametersCallback.INSTANCE : externalParameters`null);" is 161.,101
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationFactory,resolveEntity,Long Statement,The length of the statement "throw new IllegalStateException("Scriptella required DTD resource " + RES_PATH + " not found on classpath. Please check scriptella.jar and its content.");" is 154.,132
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationFactory,messageFor,Magic Number,The method contains a magic number: 32,153
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationEl,validateScriptingElements,Long Statement,The length of the statement "throw new ConfigurationException("Connection ID is required if more than one connection specified in ETL script."`element);" is 123.,91
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationEl,validateScriptingElements,Complex Conditional,The conditional expression allowedConSize == 1 && seConnectionId != null && !allowedConIds.contains(seConnectionId) is complex.,107
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationEl,validateScriptingElements,Complex Conditional,The conditional expression allowedConSize > 1 && seConnectionId == null && scriptingElements == elements is complex.,107
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationEl,validateScriptingElements,Complex Conditional,The conditional expression allowedConSize > 1 && seConnectionId != null && !allowedConIds.contains(seConnectionId) is complex.,107
+scriptella_scriptella-etl,scriptella.configuration,ConfigurationEl,toString,Long Statement,The length of the statement "return "ConfigurationEl{" + "connections=" + connections + "` scriptingElements="+ scriptingElements+ "` properties="+ parametersCallback+ "` documentUrl="+ documentUrl+ "}";" is 174.,129
+scriptella_scriptella-etl,scriptella.configuration,ValidationTest,testConnectionId,Empty catch clause,The method has an empty catch block.,28
+scriptella_scriptella-etl,scriptella.configuration,ValidationTest,testConnectionId,Empty catch clause,The method has an empty catch block.,28
+scriptella_scriptella-etl,scriptella.configuration,DialectBasedContentElTest,test,Long Statement,The length of the statement "String xml="<query>" + " \nDef1<!--Comment -->De<!--Comment2-->f2\n" + "<dialect name=\"d1\">D<!--Comment-->1</dialect>"+ "<![CDATA[De]]>f3"+ "<dialect name=\"d2\"><!--Commend-->D2</dialect>"+ "<!--Comment-->\nDef4<!--Comment--> "+ "</query>";" is 243.,34
+scriptella_scriptella-etl,scriptella.configuration,DialectBasedContentElTest,test,Magic Number,The method contains a magic number: 5,34
+scriptella_scriptella-etl,scriptella.configuration,DialectBasedContentElTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.configuration,DialectBasedContentElTest,test,Magic Number,The method contains a magic number: 3,34
+scriptella_scriptella-etl,scriptella.configuration,DialectBasedContentElTest,test,Magic Number,The method contains a magic number: 4,34
+scriptella_scriptella-etl,scriptella.configuration,XIncludeTest,test,Magic Number,The method contains a magic number: 4,41
+scriptella_scriptella-etl,scriptella.configuration,XIncludeTest,test,Magic Number,The method contains a magic number: 2,41
+scriptella_scriptella-etl,scriptella.configuration,XIncludeTest,test,Magic Number,The method contains a magic number: 3,41
+scriptella_scriptella-etl,scriptella.configuration,DynamicIncludeITest,test,Magic Number,The method contains a magic number: 2,35
+scriptella_scriptella-etl,scriptella.configuration,XmlElementTest,testGetXPath,Long Statement,The length of the statement "String xml="<etl>\n" + " <query connection-id=\"db1\">\n" + " query1"+ " <script connection-id=\"db2\">\n"+ " SCRIPT1"+ " </script>\n"+ " </query>\n"+ " <query connection-id=\"db3\">\n"+ " query2"+ " <script connection-id=\"db4\">\n"+ " script2"+ " </script>\n"+ " </query>\n"+ "\n"+ "</etl>";" is 293.,47
+scriptella_scriptella-etl,scriptella.configuration,XmlElementTest,testGetXPathById,Long Statement,The length of the statement "String xml="<etl>\n" + " <query connection-id=\"db1\">\n" + " query1\n"+ " <script connection-id=\"db2\">\n"+ " SCRIPT1\n"+ " </script>\n"+ " </query>\n"+ " <query connection-id=\"db3\" id=\"query2\">\n"+ " query2\n"+ " <query connection-id=\"db1\" id=\"query3\">\n"+ " query3\n"+ " <script connection-id=\"db4\">\n"+ " script2\n"+ " </script>\n"+ " </query>\n"+ " </query>\n"+ "\n"+ "</etl>";" is 393.,70
+scriptella_scriptella-etl,scriptella.expression,PropertiesSubstitutor,substitute,Complex Method,Cyclomatic complexity of the method is 13,98
+scriptella_scriptella-etl,scriptella.expression,PropertiesSubstitutor,firstCandidate,Magic Number,The method contains a magic number: 2,251
+scriptella_scriptella-etl,scriptella.expression,PropertiesSubstitutorPerfTest,test,Magic Number,The method contains a magic number: 1000,30
+scriptella_scriptella-etl,scriptella.expression,PropertiesSubstitutorPerfTest,test,Magic Number,The method contains a magic number: 100000,30
+scriptella_scriptella-etl,scriptella.expression,LineIteratorTest,testMinimal,Empty catch clause,The method has an empty catch block.,34
+scriptella_scriptella-etl,scriptella.expression,LineIteratorTest,testIllegalUsage,Empty catch clause,The method has an empty catch block.,74
+scriptella_scriptella-etl,scriptella.expression,LineIteratorTest,testIllegalUsage,Empty catch clause,The method has an empty catch block.,74
+scriptella_scriptella-etl,scriptella.expression,LineIteratorTest,testSkip,Magic Number,The method contains a magic number: 2,125
+scriptella_scriptella-etl,scriptella.expression,LineIteratorTest,testSkip,Magic Number,The method contains a magic number: 2,125
+scriptella_scriptella-etl,scriptella.expression,LineIteratorTest,testSkip,Magic Number,The method contains a magic number: 3,125
+scriptella_scriptella-etl,scriptella.expression,LineIteratorPerfTest,test,Long Statement,The length of the statement "String line="demo text line;demo text line;demo text line;demo text line;demo text line;demo text line;demo text line;\n" + "demo text line2;demo text line2;demo text line2;demo text line2;demo text line2;demo text line2;\n";" is 225.,30
+scriptella_scriptella-etl,scriptella.expression,LineIteratorPerfTest,test,Magic Number,The method contains a magic number: 10,30
+scriptella_scriptella-etl,scriptella.expression,LineIteratorPerfTest,test,Magic Number,The method contains a magic number: 10000,30
+scriptella_scriptella-etl,scriptella.text,TypedPropertiesSource,getBooleanProperty,Complex Conditional,The conditional expression "true".equalsIgnoreCase(s) || "1".equalsIgnoreCase(s) || "on".equalsIgnoreCase(s)|| "yes".equalsIgnoreCase(s) is complex.,101
+scriptella_scriptella-etl,scriptella.text,TypedPropertiesSource,getBooleanProperty,Complex Conditional,The conditional expression "false".equalsIgnoreCase(s) || "0".equalsIgnoreCase(s) || "off".equalsIgnoreCase(s)|| "no".equalsIgnoreCase(s) is complex.,101
+scriptella_scriptella-etl,scriptella.text,TypedPropertiesSource,getCharsetProperty,Long Statement,The length of the statement "throw new ConfigurationException("Specified encoding " + enc + " is not supported. Supported encodings are "+ Charset.availableCharsets().keySet());" is 148.,132
+scriptella_scriptella-etl,scriptella.text,TypedPropertiesSource,getLocaleProperty,Magic Number,The method contains a magic number: 2,154
+scriptella_scriptella-etl,scriptella.text,TypedPropertiesSource,getLocaleProperty,Magic Number,The method contains a magic number: 2,154
+scriptella_scriptella-etl,scriptella.text,PropertyFormatInfo,setProperty,Complex Method,Cyclomatic complexity of the method is 10,147
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testParse,Magic Number,The method contains a magic number: 1.1d,37
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testParse,Magic Number,The method contains a magic number: 0.001,37
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testParse,Magic Number,The method contains a magic number: 1.1d,37
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testParse,Magic Number,The method contains a magic number: 0.001,37
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testParseDefaultNullStr,Magic Number,The method contains a magic number: 1.1d,51
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testParseDefaultNullStr,Magic Number,The method contains a magic number: 0.001,51
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testFormat,Magic Number,The method contains a magic number: 1.1,72
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testFormat,Magic Number,The method contains a magic number: 1.1,72
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testFormatDefaultNullStr,Magic Number,The method contains a magic number: 1.1,86
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testFormatDefaultNullStr,Magic Number,The method contains a magic number: 1.1,86
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testFormattingCallback,Magic Number,The method contains a magic number: 1.1,120
+scriptella_scriptella-etl,scriptella.text,PropertyFormatterTest,testDefaults,Magic Number,The method contains a magic number: 2,153
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testNumberFormat,Magic Number,The method contains a magic number: 1.1,21
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testNumberFormat,Magic Number,The method contains a magic number: 1.23,21
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testNumberFormat,Magic Number,The method contains a magic number: 0.0001,21
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testChoiceFormat,Magic Number,The method contains a magic number: 3,39
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testDateFormat,Empty catch clause,The method has an empty catch block.,50
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testDateFormat,Empty catch clause,The method has an empty catch block.,50
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testTimestampFormat,Empty catch clause,The method has an empty catch block.,79
+scriptella_scriptella-etl,scriptella.text,PropertyFormatTest,testPad,Magic Number,The method contains a magic number: 5,99
+scriptella_scriptella-etl,scriptella.text,TypedPropertiesSourceTest,testParseBooleanProperty,Empty catch clause,The method has an empty catch block.,30
+scriptella_scriptella-etl,scriptella.text,PropertyFormatInfoTest,testDefaults,Magic Number,The method contains a magic number: 10,92
+scriptella_scriptella-etl,scriptella.text,PropertyFormatInfoTest,testDefaults,Magic Number,The method contains a magic number: 20,92
+scriptella_scriptella-etl,scriptella.text,PropertyFormatInfoTest,testDefaults,Magic Number,The method contains a magic number: 10,92
+scriptella_scriptella-etl,scriptella.text,PropertyFormatInfoTest,testDefaults,Magic Number,The method contains a magic number: 20,92
+scriptella_scriptella-etl,scriptella.execution,JmxEtlManager,getThroughput,Magic Number,The method contains a magic number: 1000,60
+scriptella_scriptella-etl,scriptella.execution,JmxEtlManager,cancel,Complex Conditional,The conditional expression etlThread != null && etlThread.isAlive() && !etlThread.isInterrupted() is complex.,178
+scriptella_scriptella-etl,scriptella.execution,EtlExecutor,execute,Magic Number,The method contains a magic number: 5,164
+scriptella_scriptella-etl,scriptella.execution,EtlExecutor,execute,Magic Number,The method contains a magic number: 85,221
+scriptella_scriptella-etl,scriptella.execution,EtlExecutor,execute,Magic Number,The method contains a magic number: 100,221
+scriptella_scriptella-etl,scriptella.execution,EtlExecutor,execute,Magic Number,The method contains a magic number: 100,221
+scriptella_scriptella-etl,scriptella.execution,EtlExecutor,prepare,Magic Number,The method contains a magic number: 100,232
+scriptella_scriptella-etl,scriptella.execution,EtlExecutor,prepare,Magic Number,The method contains a magic number: 9,232
+scriptella_scriptella-etl,scriptella.execution,EtlExecutor,prepare,Magic Number,The method contains a magic number: 100,232
+scriptella_scriptella-etl,scriptella.execution,EtlExecutorException,EtlExecutorException,Complex Conditional,The conditional expression (lastProvider == null || lastElementLocation == null) && cause != null && cause.getMessage() != null is complex.,42
+scriptella_scriptella-etl,scriptella.execution,EtlExecutorException,EtlExecutorException,Complex Method,Cyclomatic complexity of the method is 12,42
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatistics,toString,Complex Method,Cyclomatic complexity of the method is 12,80
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatistics,toString,Magic Number,The method contains a magic number: 1024,80
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatistics,toString,Magic Number,The method contains a magic number: 1000000,80
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatistics,appendTotalTimeDuration,Magic Number,The method contains a magic number: 1000d,174
+scriptella_scriptella-etl,scriptella.execution,JmxEtlManagerITest,test,Magic Number,The method contains a magic number: 2,36
+scriptella_scriptella-etl,scriptella.execution,JmxEtlManagerITest,showProgress,Magic Number,The method contains a magic number: 2,44
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 3,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 12,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 4,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 2,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test,Magic Number,The method contains a magic number: 3,34
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test2,Magic Number,The method contains a magic number: 2,74
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test2,Magic Number,The method contains a magic number: 4,74
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test2,Magic Number,The method contains a magic number: 2,74
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test2,Magic Number,The method contains a magic number: 2,74
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 2,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 2,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 2,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 9,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 4,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 2,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 2,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 2,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,test3,Magic Number,The method contains a magic number: 2,107
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,testTotalTime,Magic Number,The method contains a magic number: 288727350,143
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,testTotalTime,Magic Number,The method contains a magic number: 3605001,143
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,testTotalTime,Magic Number,The method contains a magic number: 800,143
+scriptella_scriptella-etl,scriptella.execution,ExecutionStatisticsTest,testTotalTime,Magic Number,The method contains a magic number: 1000,143
+scriptella_scriptella-etl,scriptella.execution,CancellationTest,test,Magic Number,The method contains a magic number: 200,35
+scriptella_scriptella-etl,scriptella.execution,CancellationTest,test,Magic Number,The method contains a magic number: 1000,35
+scriptella_scriptella-etl,scriptella.execution,CancellationTest,run,Magic Number,The method contains a magic number: 200,41
+scriptella_scriptella-etl,scriptella.execution,JmxEtlManagerTest,testRegistration,Empty catch clause,The method has an empty catch block.,43
+scriptella_scriptella-etl,scriptella.execution,JmxEtlManagerTest,testCancelAll,Magic Number,The method contains a magic number: 3,76
+scriptella_scriptella-etl,scriptella.execution,LazyInitConnectionTest,test,Empty catch clause,The method has an empty catch block.,39
+scriptella_scriptella-etl,scriptella.util,IOUtils,toString,Magic Number,The method contains a magic number: 4096,98
+scriptella_scriptella-etl,scriptella.util,IOUtils,toByteArray,Magic Number,The method contains a magic number: 4096,137
+scriptella_scriptella-etl,scriptella.util,IOUtils,asBuffered,Long Identifier,The length of the field DEFAULT_BUFFER_SIZE_FOR_STRINGS is 31.,216
+scriptella_scriptella-etl,scriptella.util,StringUtils,isDecimalInt,Magic Number,The method contains a magic number: 0x30,88
+scriptella_scriptella-etl,scriptella.util,StringUtils,isDecimalInt,Magic Number,The method contains a magic number: 0x39,88
+scriptella_scriptella-etl,scriptella.util,StringUtils,consoleFormat,Magic Number,The method contains a magic number: 10000,114
+scriptella_scriptella-etl,scriptella.util,StringUtils,removePrefix,Complex Conditional,The conditional expression prefix != null && string != null && string.startsWith(prefix) is complex.,150
+scriptella_scriptella-etl,scriptella.util,CollectionUtils,compare,Magic Number,The method contains a magic number: 0x20,39
+scriptella_scriptella-etl,scriptella.util,CollectionUtils,compare,Magic Number,The method contains a magic number: 0x20,39
+scriptella_scriptella-etl,scriptella.util,UrlPathTokenizerTest,testWin,Long Statement,The length of the statement "String[] expected=new String[]{"file:/c:/docs/1.jar"`"file:/c:/docs/lib/second.jar"`"file:/c:/third.jar"`"http://5.jar"`"file:/file name"};" is 139.,30
+scriptella_scriptella-etl,scriptella.util,UrlPathTokenizerTest,testUnix,Long Statement,The length of the statement "String[] expected=new String[]{"file:/var/1.jar"`"file:/var/lib/second.jar"`"file:/var/third.jar"`"http://5.jar"`"http://ftp:/user"};" is 133.,43
+scriptella_scriptella-etl,scriptella.util,UrlPathTokenizerTest,testAbsolutePathConversion,Magic Number,The method contains a magic number: 3,56
+scriptella_scriptella-etl,scriptella.util,UrlPathTokenizerTest,testAbsolutePathConversion,Magic Number,The method contains a magic number: 2,56
+scriptella_scriptella-etl,scriptella.util,UrlPathTokenizerTest,testAbsolutePathConversion,Magic Number,The method contains a magic number: 3,56
+scriptella_scriptella-etl,scriptella.util,UrlPathTokenizerTest,testAbsolutePathConversion,Magic Number,The method contains a magic number: 2,56
+scriptella_scriptella-etl,scriptella.util,PropertiesMapTest,testLoad,Magic Number,The method contains a magic number: 2,30
+scriptella_scriptella-etl,scriptella.util,PropertiesMapTest,testPut,Magic Number,The method contains a magic number: 2,42
+scriptella_scriptella-etl,scriptella.util,StringUtilsTest,testIsDecimalInteger,Magic Number,The method contains a magic number: 1000,46
+scriptella_scriptella-etl,scriptella.util,StringUtilsTest,testIsDecimalInteger,Magic Number,The method contains a magic number: 1000,46
+scriptella_scriptella-etl,scriptella.util,StringUtilsTest,testPad,Magic Number,The method contains a magic number: 3,86
+scriptella_scriptella-etl,scriptella.util,StringUtilsTest,testPad,Magic Number,The method contains a magic number: 3,86
+scriptella_scriptella-etl,scriptella.util,StringUtilsTest,testPad,Magic Number,The method contains a magic number: 2,86
+scriptella_scriptella-etl,scriptella.util,StringUtilsTest,testPad,Magic Number,The method contains a magic number: 2,86
+scriptella_scriptella-etl,scriptella.util,StringUtilsTest,testPad,Magic Number,The method contains a magic number: 2,86
+scriptella_scriptella-etl,scriptella.util,ColumnsMapPerfTest,setUp,Magic Number,The method contains a magic number: 200,38
+scriptella_scriptella-etl,scriptella.util,ColumnsMapPerfTest,testNamedSearch,Magic Number,The method contains a magic number: 250,46
+scriptella_scriptella-etl,scriptella.util,ColumnsMapPerfTest,testIndexedSearch,Magic Number,The method contains a magic number: 250,57
+scriptella_scriptella-etl,scriptella.util,ColumnsMapPerfTest,testFill,Magic Number,The method contains a magic number: 700,69
+scriptella_scriptella-etl,scriptella.util,RepeatingInputStream,read,Magic Number,The method contains a magic number: 0xff,37
+scriptella_scriptella-etl,scriptella.util,IOUtilsTest,testResolve,Empty catch clause,The method has an empty catch block.,48
+scriptella_scriptella-etl,scriptella.util,ColumnsMapTest,test,Empty catch clause,The method has an empty catch block.,27
+scriptella_scriptella-etl,scriptella.util,ColumnsMapTest,test,Magic Number,The method contains a magic number: 2,27
+scriptella_scriptella-etl,scriptella.util,ColumnsMapTest,test,Magic Number,The method contains a magic number: 4,27
+scriptella_scriptella-etl,scriptella.util,ColumnsMapTest,test,Magic Number,The method contains a magic number: 2,27
+scriptella_scriptella-etl,scriptella.util,ColumnsMapTest,test,Magic Number,The method contains a magic number: 4,27
+scriptella_scriptella-etl,scriptella.util,ColumnsMapTest,test,Magic Number,The method contains a magic number: 4,27
+scriptella_scriptella-etl,scriptella.util,ColumnsMapTest,test,Magic Number,The method contains a magic number: 3,27
+scriptella_scriptella-etl,scriptella.util,ExceptionUtilsTest,testThrowUnchecked,Empty catch clause,The method has an empty catch block.,37
+scriptella_scriptella-etl,scriptella.core,DriverClassLoader,getClassBytes,Magic Number,The method contains a magic number: 1024,84
+scriptella_scriptella-etl,scriptella.core,DriverClassLoader,getClassBytes,Magic Number,The method contains a magic number: 1024,84
+scriptella_scriptella-etl,scriptella.core,ConnectionManager,ConnectionManager,Long Statement,The length of the statement "throw new ConfigurationException("Driver class " + c.getDriver() + " not found for "+ connectionParameters+ ".Please check if the class name is correct and required libraries available on classpath"`e);" is 202.,49
+scriptella_scriptella-etl,scriptella.core,ScriptExecutor,onError,Long Statement,The length of the statement "log.log(Level.INFO`StringUtils.consoleFormat("Script " + getLocation() + " failed: "+ t+ "\nUsing onError handler: "+ onErrorEl));" is 130.,72
+scriptella_scriptella-etl,scriptella.core,OnErrorHandler,onError,Complex Conditional,The conditional expression msg != null && (t.getMessage() == null || !msg.matcher(t.getMessage()).find()) is complex.,54
+scriptella_scriptella-etl,scriptella.core,OnErrorHandler,onError,Complex Method,Cyclomatic complexity of the method is 10,54
+scriptella_scriptella-etl,scriptella.core,Session,Session,Long Statement,The length of the statement "progressCallback.step(1`"Lazy-init specified for connection " + (c.getId() == null ? "" : c.getId()) + " - initialization deferred.");" is 134.,46
+scriptella_scriptella-etl,scriptella.core,Session,Session,Long Statement,The length of the statement "progressCallback.step(1`"Initialized connection " + id + connection.toString()+ "` "+ connection.getDialectIdentifier()+ "` properties "+ c.getProperties());" is 157.,46
+scriptella_scriptella-etl,scriptella.core,Session,Session,Magic Number,The method contains a magic number: 50,46
+scriptella_scriptella-etl,scriptella.core,Session,Session,Magic Number,The method contains a magic number: 50,46
+scriptella_scriptella-etl,scriptella.core,IfInterceptor,execute,Long Statement,The length of the statement "LOG.log(Level.WARNING`"Unable to evaluate if condition \"" + expression.getExpression() + "\" for script "+ location+ ": "+ e.getMessage()`e);" is 142.,55
+scriptella_scriptella-etl,scriptella.core,EtlVariableTest,testText,Magic Number,The method contains a magic number: 2,66
+scriptella_scriptella-etl,scriptella.core,EtlVariableTest,testText,Magic Number,The method contains a magic number: 2,66
+scriptella_scriptella-etl,scriptella.core,EtlVariableTest,testText,Magic Number,The method contains a magic number: 2,66
+scriptella_scriptella-etl,scriptella.core,EtlVariableTest,testText,Magic Number,The method contains a magic number: 2,66
+scriptella_scriptella-etl,scriptella.interactive,SwingProgressIndicator,show,Magic Number,The method contains a magic number: 100,35
+scriptella_scriptella-etl,scriptella.interactive,SwingProgressIndicator,show,Magic Number,The method contains a magic number: 400,35
+scriptella_scriptella-etl,scriptella.interactive,ConsoleProgressIndicator,show,Magic Number,The method contains a magic number: 32,40
+scriptella_scriptella-etl,scriptella.interactive,ConsoleProgressIndicator,show,Magic Number,The method contains a magic number: 100,40
+scriptella_scriptella-etl,scriptella,DialectsTest,test,Magic Number,The method contains a magic number: 3,37
+scriptella_scriptella-etl,scriptella,DialectsTest,test,Magic Number,The method contains a magic number: 4,37
+scriptella_scriptella-etl,scriptella,DialectsTest,test,Magic Number,The method contains a magic number: 5,37
+scriptella_scriptella-etl,scriptella,DialectsTest,test,Magic Number,The method contains a magic number: 6,37
+scriptella_scriptella-etl,scriptella,DialectsTest,test,Magic Number,The method contains a magic number: 7,37
+scriptella_scriptella-etl,scriptella,DialectsTest,test,Magic Number,The method contains a magic number: 9,37
+scriptella_scriptella-etl,scriptella,DialectsTest,test,Magic Number,The method contains a magic number: 11,37
+scriptella_scriptella-etl,scriptella,DialectsTest,test2,Magic Number,The method contains a magic number: 2,55
+scriptella_scriptella-etl,scriptella,TxTest,test,Magic Number,The method contains a magic number: 3,38
+scriptella_scriptella-etl,scriptella,FilePropertiesTest,test,Magic Number,The method contains a magic number: 3,41
+scriptella_scriptella-etl,scriptella,FilePropertiesTest,processRow,Magic Number,The method contains a magic number: 3,63
+scriptella_scriptella-etl,scriptella,OnErrorTest,test,Magic Number,The method contains a magic number: 2,39
+scriptella_scriptella-etl,scriptella,OnErrorTest,test,Magic Number,The method contains a magic number: 3,39
+scriptella_scriptella-etl,scriptella,OnErrorTest,test,Magic Number,The method contains a magic number: 4,39
+scriptella_scriptella-etl,scriptella,OnErrorTest,test,Magic Number,The method contains a magic number: 5,39
+scriptella_scriptella-etl,scriptella,ConditionsTest,test,Magic Number,The method contains a magic number: 3,39
+scriptella_scriptella-etl,scriptella,ConditionsTest,test,Magic Number,The method contains a magic number: 4,39
+scriptella_scriptella-etl,scriptella,ConditionsTest,test,Magic Number,The method contains a magic number: 3,39
+scriptella_scriptella-etl,scriptella,SQLParametersTest,testSubstitution,Magic Number,The method contains a magic number: 2,37
+scriptella_scriptella-etl,scriptella,SQLParametersTest,processRow,Magic Number,The method contains a magic number: 2,49
+scriptella_scriptella-etl,scriptella,DBTableCopyTest,test,Magic Number,The method contains a magic number: 3,34
+scriptella_scriptella-etl,scriptella,DBTableCopyTest,test,Magic Number,The method contains a magic number: 3,34
+scriptella_scriptella-etl,scriptella,DBTableCopyTest,processRow,Magic Number,The method contains a magic number: 3,47
+scriptella_scriptella-etl,scriptella,DBTableCopyTest,test2,Empty catch clause,The method has an empty catch block.,60
+scriptella_scriptella-etl,scriptella,DBTableCopyTest,test2,Magic Number,The method contains a magic number: 3,60
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,test,Magic Number,The method contains a magic number: 50000,44
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,test,Magic Number,The method contains a magic number: 50000,44
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,getInputStream,Magic Number,The method contains a magic number: 50000,52
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,getContentLength,Magic Number,The method contains a magic number: 50000,60
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,testCompare,Magic Number,The method contains a magic number: 20000,69
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,testBulkUpdates,Magic Number,The method contains a magic number: 50000,119
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,testBulkUpdates,Magic Number,The method contains a magic number: 50000,119
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,getInputStream,Magic Number,The method contains a magic number: 50000,131
+scriptella_scriptella-etl,scriptella,SQLSupportPerfTest,getContentLength,Magic Number,The method contains a magic number: 50000,139
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionTest,testExecuteScript,Magic Number,The method contains a magic number: 10,41
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionTest,testExecuteQuery,Magic Number,The method contains a magic number: 5,49
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionTest,testExecuteQuery,Magic Number,The method contains a magic number: 5,49
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionTest,processRow,Magic Number,The method contains a magic number: 5,53
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlDriverITest,test,Magic Number,The method contains a magic number: 10,37
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlDriverITest,notify,Magic Number,The method contains a magic number: 10,50
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlQueryITest,test,Magic Number,The method contains a magic number: 2,51
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlQueryITest,test,Magic Number,The method contains a magic number: 3,51
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlQueryITest,test,Magic Number,The method contains a magic number: 2,51
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionPerfTest,testExecuteScript,Magic Number,The method contains a magic number: 200,35
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionPerfTest,testExecuteQuery,Magic Number,The method contains a magic number: 10,47
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionPerfTest,testExecuteQuery,Magic Number,The method contains a magic number: 20000,47
+scriptella_scriptella-etl,scriptella.driver.jexl,JexlConnectionPerfTest,testNotExistingVariableInALoop,Magic Number,The method contains a magic number: 200,65
+scriptella_scriptella-etl,scriptella.driver.hsqldb,LobsITest,test,Long Statement,The length of the statement "fail("Blob temp files must be removed after ETL completes` but the following files were found " + Arrays.toString(files));" is 122.,32
+scriptella_scriptella-etl,scriptella.driver.hsqldb,ShutdownOnExitTest,assertDatabaseShutdown,Magic Number,The method contains a magic number: 94,65
+scriptella_scriptella-etl,scriptella.driver.auto,Driver,connect,Long Statement,The length of the statement "throw new ConfigurationException("Unable to automatically discover driver for url " + connectionParameters.getUrl() + ". Please explicitly specify a \"driver\" connection attribute.");" is 184.,66
+scriptella_scriptella-etl,scriptella.driver.auto,AutodiscoveryITest,test,Magic Number,The method contains a magic number: 2,31
+scriptella_scriptella-etl,scriptella.driver.auto,AutoDriverTest,test,Empty catch clause,The method has an empty catch block.,34
+scriptella_scriptella-etl,scriptella.driver.auto,AutoDriverTest,test,Empty catch clause,The method has an empty catch block.,34
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutor,XPathQueryExecutor,Long Parameter List,The method has 6 parameters. ,52
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test,Long Statement,The length of the statement "XPathQueryExecutor exec=new XPathQueryExecutor(context`doc`res`new XPathExpressionCompiler()`new AbstractConnection.StatementCounter()`true);" is 141.,49
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test,Magic Number,The method contains a magic number: 2,49
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test,Magic Number,The method contains a magic number: 2,49
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test,Magic Number,The method contains a magic number: 3,49
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,processRow,Magic Number,The method contains a magic number: 2,55
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,processRow,Magic Number,The method contains a magic number: 2,55
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test2,Long Statement,The length of the statement "XPathQueryExecutor exec=new XPathQueryExecutor(context`doc`res`new XPathExpressionCompiler()`new AbstractConnection.StatementCounter()`false);" is 142.,70
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test2,Long Statement,The length of the statement "exec=new XPathQueryExecutor(context`doc`res`new XPathExpressionCompiler()`new AbstractConnection.StatementCounter()`false);" is 123.,70
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test2,Magic Number,The method contains a magic number: 2,70
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathQueryExecutorTest,test2,Magic Number,The method contains a magic number: 2,70
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQuery,Long Statement,The length of the statement "ConnectionParameters cp=new ConnectionParameters(new MockConnectionEl(props`getClass().getResource("excel.xml").toString())`MockDriverContext.INSTANCE);" is 152.,43
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQuery,Magic Number,The method contains a magic number: 200,43
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQuery,Magic Number,The method contains a magic number: 600,43
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQueryLargeDOM,Long Statement,The length of the statement "XPathQueryExecutor qe=new XPathQueryExecutor(new ThreadLocal<Node>()`doc`new StringResource("/table/row[@id mod 2=0]")`new XPathExpressionCompiler()`new AbstractConnection.StatementCounter()`false);" is 198.,65
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQueryLargeDOM,Magic Number,The method contains a magic number: 4000,65
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQueryLargeDOM,Magic Number,The method contains a magic number: 20,65
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQueryLargeDOM,Magic Number,The method contains a magic number: 2,65
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,testQueryLargeDOM,Magic Number,The method contains a magic number: 2000,65
+scriptella_scriptella-etl,scriptella.driver.xpath,XPathConnectionPerfTest,processRow,Magic Number,The method contains a magic number: 2,83
+scriptella_scriptella-etl,scriptella.driver.shell,ShellCommandRunner,ShellCommandRunner,Magic Number,The method contains a magic number: 2,45
+scriptella_scriptella-etl,scriptella.driver.shell,ShellCommandRunner,exec,Long Identifier,The length of the field finishedProcessingStreamsSignal is 31.,51
+scriptella_scriptella-etl,scriptella.driver.shell,ShellCommandRunner,exec,Magic Number,The method contains a magic number: 2,51
+scriptella_scriptella-etl,scriptella.driver.shell,ShellCommandRunner,waitForAndCheckExceptions,Long Identifier,The length of the field finishedProcessingStreamsSignal is 31.,86
+scriptella_scriptella-etl,scriptella.driver.shell,ShellCommandRunner,executeAfterStdoutStderrConsumed,Long Identifier,The length of the field finishedProcessingStreamsSignal is 31.,103
+scriptella_scriptella-etl,scriptella.driver.shell,ShellConnection,executeQuery,Long Statement,The length of the statement "new ShellQueryExecutor(q`new PropertiesSubstitutor(parametersCallback)`getConnectionParameters()).execute(queryCallback`counter);" is 129.,72
+scriptella_scriptella-etl,scriptella.driver.shell,ShellCommandRunnerTest,testExec,Empty catch clause,The method has an empty catch block.,31
+scriptella_scriptella-etl,scriptella.driver.text,TextConnection,executeQuery,Long Statement,The length of the statement "new TextQueryExecutor(q`new PropertiesSubstitutor(parametersCallback)`getConnectionParameters()).execute(in`queryCallback`counter);" is 131.,78
+scriptella_scriptella-etl,scriptella.driver.text,AbstractTextConnection,newOutputWriter,Long Statement,The length of the statement "return url == null ? ConsoleAdapters.getConsoleWriter(encoding) : IOUtils.getWriter(IOUtils.getOutputStream(url)`encoding);" is 123.,106
+scriptella_scriptella-etl,scriptella.driver.text,TextConnectionPerfTest,setUp,Magic Number,The method contains a magic number: 10000,47
+scriptella_scriptella-etl,scriptella.driver.text,TextConnectionPerfTest,getInputStream,Magic Number,The method contains a magic number: 10000,52
+scriptella_scriptella-etl,scriptella.driver.text,TextConnectionPerfTest,testQuery,Magic Number,The method contains a magic number: 10,69
+scriptella_scriptella-etl,scriptella.driver.text,TextConnectionPerfTest,testQuery,Magic Number,The method contains a magic number: 10000,69
+scriptella_scriptella-etl,scriptella.driver.text,TextConnectionPerfTest,testScript,Long Statement,The length of the statement "con.executeScript(new StringResource("\"$col1\"`\"col2\"`\"col3\"\n\"${col21}\"`\"col22\"`\"col23\"")`MockParametersCallbacks.SIMPLE);" is 134.,98
+scriptella_scriptella-etl,scriptella.driver.text,TextConnectionPerfTest,testScript,Magic Number,The method contains a magic number: 10000,98
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,test,Long Statement,The length of the statement "TextQueryExecutor tq=new TextQueryExecutor(new StringReader("$severity: (\\w+).*")`new PropertiesSubstitutor(new ParametersCallback(){" is 134.,37
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testEmptyQuery,Long Statement,The length of the statement "TextQueryExecutor tq=new TextQueryExecutor(new StringReader("")`new PropertiesSubstitutor(MockParametersCallbacks.UNSUPPORTED)`cp);" is 131.,69
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testQueryMultiline,Long Statement,The length of the statement "TextQueryExecutor tq=new TextQueryExecutor(new StringReader("line2\nline4")`new PropertiesSubstitutor(MockParametersCallbacks.UNSUPPORTED)`cp);" is 143.,89
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testQueryMultiline,Magic Number,The method contains a magic number: 2,89
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testLongContent,Long Statement,The length of the statement "TextQueryExecutor tq=new TextQueryExecutor(new StringReader(".*(match).*")`new PropertiesSubstitutor(MockParametersCallbacks.SIMPLE)`cp);" is 137.,113
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testLongContent,Magic Number,The method contains a magic number: 64000,113
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testSkipLines,Long Statement,The length of the statement "TextQueryExecutor e=new TextQueryExecutor(new StringReader("([^\\t]*)\\t+([^\\t]*)")`new PropertiesSubstitutor(MockParametersCallbacks.NULL)`cp);" is 145.,141
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testSkipLines,Magic Number,The method contains a magic number: 2,141
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryExecutorTest,testNullString,Long Statement,The length of the statement "TextQueryExecutor e=new TextQueryExecutor(new StringReader("([^\\t]*)\\t+([^\\t]*)")`new PropertiesSubstitutor(MockParametersCallbacks.NULL)`cp);" is 145.,170
+scriptella_scriptella-etl,scriptella.driver.text,TextFormattingITest,test,Long Statement,The length of the statement "return new ByteArrayInputStream(("10`Ten`Ten`12-07-2012 10:00`10.1\n" + "11` Eleven ` Eleven ` 12-07-2012 11:00`-null-").getBytes());" is 133.,36
+scriptella_scriptella-etl,scriptella.driver.text,TextFormattingITest,test,Long Statement,The length of the statement "String expectedResult="1/One/One/11-07-2012 22:33/-null-\n" + "2/Two/ Two /11-07-2012 20:00/2.10\n" + "3/Three/ Three /11-07-2012 20:00/3.10\n"+ "10/Ten/Ten/12-07-2012 10:00/10.10\n"+ "11/Eleven/ Eleven /12-07-2012 11:00/-null-\n";" is 231.,36
+scriptella_scriptella-etl,scriptella.driver.text,TextFormattingITest,getInputStream,Long Statement,The length of the statement "return new ByteArrayInputStream(("10`Ten`Ten`12-07-2012 10:00`10.1\n" + "11` Eleven ` Eleven ` 12-07-2012 11:00`-null-").getBytes());" is 133.,40
+scriptella_scriptella-etl,scriptella.driver.text,TextQueryITest,test,Long Statement,The length of the statement "assertEquals("11` 0123456789\n" + "22` 01234 \n" + "33` 0123456789\n"+ "44` 012345678 \n"+ "55` 0123456789\n"+ "77` \n"`new String(out.toByteArray()));" is 151.,67
+scriptella_scriptella-etl,scriptella.driver.text,TextScriptExecutorTest,test,Magic Number,The method contains a magic number: 2,36
+scriptella_scriptella-etl,scriptella.driver.h2,H2ScriptTest,test,Magic Number,The method contains a magic number: 4,39
+scriptella_scriptella-etl,scriptella.driver.h2,H2ScriptTest,test,Magic Number,The method contains a magic number: 2,39
+scriptella_scriptella-etl,scriptella.driver.h2,H2ScriptTest,test,Magic Number,The method contains a magic number: 4,39
+scriptella_scriptella-etl,scriptella.driver.h2,H2ScriptTest,test,Magic Number,The method contains a magic number: 4,39
+scriptella_scriptella-etl,scriptella.driver.h2,H2ScriptTest,test,Magic Number,The method contains a magic number: 2,39
+scriptella_scriptella-etl,scriptella.driver.h2,H2ScriptTest,test,Magic Number,The method contains a magic number: 3,39
+scriptella_scriptella-etl,scriptella.driver.scriptella,ScriptellaDriverPerfTest,test,Magic Number,The method contains a magic number: 150,33
+scriptella_scriptella-etl,scriptella.driver.script,MissingQueryNextCallDetector,detectMissingQueryNextCall,Long Statement,The length of the statement "LOG.warning("query.next() was never called in query " + resource + ". Nested elements will not be executed. See querying example at http://goo.gl/LrOZS");" is 154.,47
+scriptella_scriptella-etl,scriptella.driver.script,ParametersCallbackMap,containsKey,Long Statement,The length of the statement "return (localVariables != null && localVariables.containsKey(key)) || (parentParameters.getParameter((String)key) != null);" is 123.,94
+scriptella_scriptella-etl,scriptella.driver.script,ScriptEngineWrapper,newBindingsParametersCallback,Long Statement,The length of the statement "return nashornScriptEngine ? new NashornBindingsParametersCallback(parentParameters`queryCallback) : new BindingsParametersCallback(parentParameters`queryCallback);" is 164.,62
+scriptella_scriptella-etl,scriptella.driver.script,ScriptEngineWrapper,newBindingsParametersCallback,Long Statement,The length of the statement "return nashornScriptEngine ? new NashornBindingsParametersCallback(parentParameters) : new BindingsParametersCallback(parentParameters);" is 136.,67
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnection,ScriptConnection,Long Statement,The length of the statement "throw new ConfigurationException("Specified " + LANGUAGE + "="+ lang+ " not supported. Available values are: "+ getAvailableEngines(scriptEngineManager));" is 154.,75
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnection,ScriptConnection,Long Statement,The length of the statement "LOG.info("Engine " + engine.getFactory().getEngineName() + " does not support compilation. Running in interpreted mode.");" is 122.,75
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnection,ScriptConnection,Long Statement,The length of the statement "LOG.warning("Nashorn JavaScript Engine is not fully supported. \n" + "See https://github.com/scriptella/scriptella-etl/issues/2 for status and workarounds.");" is 158.,75
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnection,executeQuery,Long Statement,The length of the statement "final BindingsParametersCallback bindingsParametersCallback=engineWrapper.newBindingsParametersCallback(parametersCallback`queryCallback);" is 138.,136
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionPerfTest,testExecuteScript,Magic Number,The method contains a magic number: 100,36
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionPerfTest,testExecuteQuery,Magic Number,The method contains a magic number: 10,48
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionPerfTest,testExecuteQuery,Magic Number,The method contains a magic number: 10000,48
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testExecuteScript,Long Statement,The length of the statement "Assert.assertTrue("ScriptException is expected to be the cause` but was " + e.getCause()`e.getCause() instanceof ScriptException);" is 130.,52
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testExecuteScript,Magic Number,The method contains a magic number: 10,52
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testConfiguration,Empty catch clause,The method has an empty catch block.,74
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testConfiguration,Long Statement,The length of the statement "new Driver().connect(new MockConnectionParameters(Collections.singletonMap(ScriptConnection.LANGUAGE`"nusuchlanguage")`null));" is 126.,74
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testExecuteQuery,Magic Number,The method contains a magic number: 5,91
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testExecuteQuery,Magic Number,The method contains a magic number: 5,91
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,processRow,Magic Number,The method contains a magic number: 5,94
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testStreamHandling,Long Statement,The length of the statement "Connection c=new Driver().connect(new MockConnectionParameters(Collections.singletonMap(ScriptConnection.ENCODING`"UTF-8")`"tst:/file"));" is 137.,104
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testStreamHandling,Long Statement,The length of the statement "c.executeScript(new StringResource("print('Hello '+name)")`MockParametersCallbacks.fromMap(Collections.singletonMap("name"`"world")));" is 134.,104
+scriptella_scriptella-etl,scriptella.driver.script,ScriptConnectionTest,testGetErrorStatement,Magic Number,The method contains a magic number: 2,131
+scriptella_scriptella-etl,scriptella.driver.script,ScriptingQueryITest,test,Magic Number,The method contains a magic number: 2,50
+scriptella_scriptella-etl,scriptella.driver.script,ScriptingQueryITest,test,Magic Number,The method contains a magic number: 3,50
+scriptella_scriptella-etl,scriptella.driver.script,ScriptingQueryITest,test,Magic Number,The method contains a magic number: 2,50
+scriptella_scriptella-etl,scriptella.driver.script,ScriptDriverITest,test1,Magic Number,The method contains a magic number: 9,37
+scriptella_scriptella-etl,scriptella.driver.script,ScriptDriverITest,test2,Magic Number,The method contains a magic number: 2,49
+scriptella_scriptella-etl,scriptella.driver.script,ScriptDriverITest,notify,Magic Number,The method contains a magic number: 10,69
+scriptella_scriptella-etl,scriptella.driver.script,ScriptDriverITest,notify,Magic Number,The method contains a magic number: 2,69
+scriptella_scriptella-etl,scriptella.driver.janino,Driver,Driver,Long Statement,The length of the statement "throw new JaninoProviderException("Janino not found on the class path. " + "Check if connection classpath attribute points to janino.jar"`e);" is 141.,34
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoConnection,executeScript,Long Statement,The length of the statement "throw guessErrorStatement(new JaninoProviderException("Script execution failed due to exception"`e)`scriptContent`s.getClass());" is 128.,43
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoConnection,executeQuery,Long Statement,The length of the statement "throw guessErrorStatement(new JaninoProviderException("Query execution failed due to exception"`e)`queryContent`q.getClass());" is 126.,57
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoBaseClassesTest,testQuery,Magic Number,The method contains a magic number: 5,44
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoConnectionTest,testQuery,Long Statement,The length of the statement "c.executeQuery(new StringResource("set(\"p\"` \"//\"+get(\"p\") );" + "next();" + "next(new String[] {\"p\"}` new Object[] {\"v2\"});")`MockParametersCallbacks.SIMPLE`new QueryCallback(){" is 187.,61
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoConnectionTest,testErrorSourceCode,Long Statement,The length of the statement "assertTrue("UnsupportedOperationException is expected to be thrown by get() method"`e.getCause() instanceof UnsupportedOperationException);" is 139.,80
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoConnectionTest,testErrorSourceCode,Long Statement,The length of the statement "assertTrue("UnsupportedOperationException is expected to be thrown by get() method"`e.getCause() instanceof UnsupportedOperationException);" is 139.,80
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoPerfTest,testScript,Magic Number,The method contains a magic number: 1000000,35
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoPerfTest,testQuery,Long Statement,The length of the statement "Resource queryContent=new StringResource("for (int i=0;i<1000000;i++) {" + "set(\"p\"` \"value\"+i );" + "set(\"extra\"` \"value\" );"+ "next();"+ "}");" is 152.,52
+scriptella_scriptella-etl,scriptella.driver.janino,JaninoPerfTest,testQuery,Magic Number,The method contains a magic number: 1000000,52
+scriptella_scriptella-etl,scriptella.driver.spring,Driver,Driver,Long Statement,The length of the statement "throw new SpringProviderException("Spring not found on classpath. " + "This driver can be used only in a Spring-managed environment` " + "use EtlExecutorBean to run the ETL file.");" is 181.,39
+scriptella_scriptella-etl,scriptella.driver.spring,Driver,getConnection,Long Statement,The length of the statement "throw new SpringProviderException("Name of the spring bean must be specified in an url attribute of connection element.");" is 122.,49
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnection,executeScript,Complex Method,Cyclomatic complexity of the method is 9,100
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnection,executeQuery,Long Statement,The length of the statement "CSVReader inputCSVContentReader=new CSVReader(newInputReader()`csvParams.getSeparator()`csvParams.getQuote()`csvParams.getSkipLines());" is 135.,141
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQuery,rowMatches,Complex Method,Cyclomatic complexity of the method is 10,106
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQuery,compileQueries,Complex Method,Cyclomatic complexity of the method is 9,168
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQuery,getParameter,Complex Conditional,The conditional expression col != null && col > 0 && col <= row.length is complex.,236
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionPerfTest,setUp,Magic Number,The method contains a magic number: 10000,47
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionPerfTest,getInputStream,Magic Number,The method contains a magic number: 10000,52
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionPerfTest,testQuery,Magic Number,The method contains a magic number: 10,70
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionPerfTest,testQuery,Magic Number,The method contains a magic number: 10000,70
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionPerfTest,testScript,Magic Number,The method contains a magic number: 10000,100
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionTest,testQuery,Magic Number,The method contains a magic number: 2,74
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionTest,testQuery,Magic Number,The method contains a magic number: 2,74
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionTest,testQuery,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3201034f,74
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionTest,processRow,Magic Number,The method contains a magic number: 2,89
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionTest,processRow,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3201034f,89
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionTest,testEscape,Long Statement,The length of the statement "con.executeScript(new StringResource(" $row1`\"value\"`val${'ue'}\n$row2`'value'`va'l'ue\n")`MockParametersCallbacks.SIMPLE);" is 125.,135
+scriptella_scriptella-etl,scriptella.driver.csv,CsvConnectionTest,testQuoteall,Long Statement,The length of the statement "con.executeScript(new StringResource(" $row1`va\"l\"ue`val${'ue'}\n$row2`'value'`va\"l\"ue\n")`MockParametersCallbacks.SIMPLE);" is 127.,151
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,test,Long Statement,The length of the statement "CsvQuery q=new CsvQuery(new CSVReader(new StringReader(query))`new PropertiesSubstitutor(MockParametersCallbacks.UNSUPPORTED)`cp);" is 130.,38
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,testParametersLookup,Long Statement,The length of the statement "CsvQuery q=new CsvQuery(new CSVReader(new StringReader(query))`new PropertiesSubstitutor(MockParametersCallbacks.SIMPLE)`cp);" is 125.,63
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,testInvalidQuery,Empty catch clause,The method has an empty catch block.,95
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,testNullString,Long Statement,The length of the statement "CsvQuery q=new CsvQuery(new CSVReader(new StringReader(""))`new PropertiesSubstitutor(MockParametersCallbacks.SIMPLE)`cp);" is 122.,110
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,testNullString,Magic Number,The method contains a magic number: 2,110
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,testNullString,Magic Number,The method contains a magic number: 2,110
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,testExtraSpacesWithoutTrim,Long Statement,The length of the statement "CsvQuery q=new CsvQuery(new CSVReader(new StringReader(query))`new PropertiesSubstitutor(MockParametersCallbacks.UNSUPPORTED)`cp);" is 130.,156
+scriptella_scriptella-etl,scriptella.driver.csv,CsvQueryTest,testExtraSpacesWithTrim,Long Statement,The length of the statement "CsvQuery q=new CsvQuery(new CSVReader(new StringReader(query))`new PropertiesSubstitutor(MockParametersCallbacks.UNSUPPORTED)`cp);" is 130.,185
+scriptella_scriptella-etl,scriptella.driver.csv,CsvFormattingITest,test,Long Statement,The length of the statement "return new ByteArrayInputStream(("Id`Text`TextNoTrim` DateCol` NumCol" + "\n10`Ten`Ten`12-07-2012 10:00`10.1" + "\n11` Eleven ` Eleven ` 12-07-2012 11:00` 11.1").getBytes());" is 174.,35
+scriptella_scriptella-etl,scriptella.driver.csv,CsvFormattingITest,test,Long Statement,The length of the statement "String expectedResult="1`One`One`11-07-2012 22:33` 1.10\n" + "2`Two` Two `11-07-2012 20:00` 2.10\n" + "3`Three` Three `11-07-2012 20:00` 3.10\n"+ "10`Ten`Ten`12-07-2012 10:00` 10.10\n"+ "11`Eleven`Eleven`12-07-2012 11:00` 11.10\n";" is 231.,35
+scriptella_scriptella-etl,scriptella.driver.csv,CsvFormattingITest,getInputStream,Long Statement,The length of the statement "return new ByteArrayInputStream(("Id`Text`TextNoTrim` DateCol` NumCol" + "\n10`Ten`Ten`12-07-2012 10:00`10.1" + "\n11` Eleven ` Eleven ` 12-07-2012 11:00` 11.1").getBytes());" is 174.,39
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVReader,parseLine,Complex Conditional,The conditional expression inQuotes && length > (i + 1) && nextLine.charAt(i + 1) == quotechar is complex.,178
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVReader,parseLine,Complex Conditional,The conditional expression i > 2 && nextLine.charAt(i - 1) != this.separator && length > (i + 1) && nextLine.charAt(i + 1) != this.separator is complex.,178
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVReader,parseLine,Complex Method,Cyclomatic complexity of the method is 10,178
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVReader,parseLine,Magic Number,The method contains a magic number: 2,178
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVWriter,CSVWriter,Long Parameter List,The method has 5 parameters. ,131
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVWriter,writeNext,Complex Conditional,The conditional expression (quoteall || hasSpecialCharacters) && (quotechar != NO_QUOTE_CHARACTER) is complex.,151
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVWriter,writeNext,Complex Conditional,The conditional expression escapechar != NO_ESCAPE_CHARACTER && (nextChar == quotechar || nextChar == escapechar) is complex.,151
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVWriter,writeNext,Complex Conditional,The conditional expression (quoteall || hasSpecialCharacters) && (quotechar != NO_QUOTE_CHARACTER) is complex.,151
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVWriter,writeNext,Complex Method,Cyclomatic complexity of the method is 9,151
+scriptella_scriptella-etl,scriptella.driver.csv.opencsv,CSVWriter,writeNext,Long Statement,The length of the statement "final boolean hasSpecialCharacters=nextElement.indexOf(quotechar) != -1 || nextElement.indexOf(escapechar) != -1 || nextElement.indexOf(separator) != -1 || nextElement.contains(lineEnd) || nextElement.contains("\r");" is 216.,151
+scriptella_scriptella-etl,scriptella.driver.jndi,JNDIDriverTest,testGetConnection,Long Statement,The length of the statement "ConnectionParameters params=new ConnectionParameters(new MockConnectionEl(env`CtxFactory.jndiName)`MockDriverContext.INSTANCE);" is 127.,47
+scriptella_scriptella-etl,scriptella.driver.jndi,JNDIDriverTest,testGetConnection,Magic Number,The method contains a magic number: 2,47
+scriptella_scriptella-etl,scriptella.driver.jndi,JNDIDriverTest,testGetConnection,Magic Number,The method contains a magic number: 2,47
+scriptella_scriptella-etl,scriptella.driver.jndi,JNDIDriverTest,testValidation,Empty catch clause,The method has an empty catch block.,75
+scriptella_scriptella-etl,scriptella.driver.velocity,Driver,Driver,Long Statement,The length of the statement "throw new VelocityProviderException("Velocity not found on classpath. Check if connection classpath attribute points to velocity-dep.jar");" is 139.,36
+scriptella_scriptella-etl,scriptella.driver.velocity,VelocityConnection,logVelocityMessage,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@60f3abfe,134
+scriptella_scriptella-etl,scriptella.driver.velocity,VelocityScriptTest,test2,Magic Number,The method contains a magic number: 2,80
+scriptella_scriptella-etl,scriptella.driver.velocity,VelocityPerfTest,test,Magic Number,The method contains a magic number: 5,30
+scriptella_scriptella-etl,scriptella.driver.velocity,VelocityPerfTest,test,Magic Number,The method contains a magic number: 5,30
+scriptella_scriptella-etl,scriptella.driver.velocity,VelocityPerfTest,test,Magic Number,The method contains a magic number: 5000,30
+scriptella_scriptella-etl,scriptella.driver.velocity,VelocityPerfTest,run,Magic Number,The method contains a magic number: 5000,37
+scriptella_scriptella-etl,scriptella.driver.ldap,LdapConnection,LdapConnection,Complex Method,Cyclomatic complexity of the method is 10,101
+scriptella_scriptella-etl,scriptella.driver.ldap,SearchFilterQuery,query,Long Statement,The length of the statement "NamingEnumeration<SearchResult> en=connection.getCtx().search(connection.getBaseDn()`filter`connection.getSearchControls());" is 124.,128
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testGetRelativeDN,Empty catch clause,The method has an empty catch block.,50
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testModifyModdn,Long Statement,The length of the statement "final Entry e=readEntry("# Rename an entry and move all of its children to a new location in\n" + "# the directory tree (only implemented by LDAPv3 servers).\n" + "dn: ou=PD Accountants` ou=Product Development` dc=airius` dc=com\n"+ "changetype: moddn\n"+ "newrdn: ou=Product Development Accountants\n"+ "deleteoldrdn: 0\n"+ "newsuperior: ou=Accounting` dc=airius` dc=com\n");" is 376.,73
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testModifyModrdn,Long Statement,The length of the statement "final Entry e=readEntry("# Rename an entry and move all of its children to a new location in\n" + "# the directory tree (only implemented by LDAPv3 servers).\n" + "dn: ou=PD Accountants` dc=com\n"+ "changetype: modrdn\n"+ "newrdn: ou=Accountants\n"+ "deleteoldrdn: 1\n");" is 271.,111
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testModifyAdd,Long Statement,The length of the statement "final Entry e=readEntry("dn: cn=ldap`dc=scriptella\n" + "cn: ldap\n" + "objectClass: top\n"+ "objectClass: driver\n"+ "envVars:");" is 130.,147
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testModify,Long Statement,The length of the statement "final Entry e=readEntry("dn: cn=ldap` dc=scriptella\n" + "changetype: modify\n" + "add: postaladdress\n"+ "postaladdress: 123 Anystreet\n"+ "-\n"+ "delete: description\n"+ "-\n"+ "replace: phone\n"+ "phone: 1234\n"+ "phone: 5678\n"+ "-\n"+ "delete: fax\n"+ "fax: 1111\n");" is 272.,205
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testModify,Magic Number,The method contains a magic number: 4,205
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testModify,Magic Number,The method contains a magic number: 2,205
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testModify,Magic Number,The method contains a magic number: 3,205
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,modifyAttributes,Magic Number,The method contains a magic number: 4,228
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,modifyAttributes,Magic Number,The method contains a magic number: 2,228
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,modifyAttributes,Magic Number,The method contains a magic number: 3,228
+scriptella_scriptella-etl,scriptella.driver.ldap,LdifScriptTest,testExecute,Long Statement,The length of the statement "Reader ldif=new StringReader("# Rename an entry and move all of its children to a new location in\n" + "# the directory tree (only implemented by LDAPv3 servers).\n" + "dn: ou=$test` dc=scriptella\n"+ "ou: $test\n");" is 216.,253
+scriptella_scriptella-etl,scriptella.driver.ldap,LdapConnectionTest,test,Magic Number,The method contains a magic number: 100,37
+scriptella_scriptella-etl,scriptella.driver.ldap,SearchFilterQueryTest,testExecute,Magic Number,The method contains a magic number: 2,47
+scriptella_scriptella-etl,scriptella.driver.ldap,SearchFilterQueryTest,testExecute,Magic Number,The method contains a magic number: 2,47
+scriptella_scriptella-etl,scriptella.driver.ldap,SearchFilterQueryTest,query,Magic Number,The method contains a magic number: 2,58
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,isCharASCII,Complex Conditional,The conditional expression (chars == null) || (chars.length == 0) || (index < 0)|| (index >= chars.length) is complex.,40
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,isDigit,Complex Conditional,The conditional expression (chars == null) || (chars.length == 0) || (index < 0)|| (index >= chars.length) is complex.,111
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,isDigit,Magic Number,The method contains a magic number: 127,111
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Complex Method,Cyclomatic complexity of the method is 9,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 255,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 4,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 3,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 4,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 3,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 2,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 4,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 2,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 255,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 6,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 6,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 8,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 8,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,base64Decode,Magic Number,The method contains a magic number: 0xff,136
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,dumpBytes,Magic Number,The method contains a magic number: 2,252
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,dumpBytes,Magic Number,The method contains a magic number: 2,252
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,dumpBytes,Magic Number,The method contains a magic number: 0x00F0,252
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,dumpBytes,Magic Number,The method contains a magic number: 4,252
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Utils,dumpBytes,Magic Number,The method contains a magic number: 0x000F,252
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseDn,Magic Number,The method contains a magic number: 3,269
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseDn,Magic Number,The method contains a magic number: 3,269
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseDn,Magic Number,The method contains a magic number: 4,269
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseDn,Magic Number,The method contains a magic number: 4,269
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseDn,Magic Number,The method contains a magic number: 3,269
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseValue,Magic Number,The method contains a magic number: 2,313
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseValue,Magic Number,The method contains a magic number: 2,313
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseControl,Complex Method,Cyclomatic complexity of the method is 13,355
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseControl,Magic Number,The method contains a magic number: 4,355
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseControl,Magic Number,The method contains a magic number: 4,355
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseControl,Magic Number,The method contains a magic number: 5,355
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseControl,Magic Number,The method contains a magic number: 5,355
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseControl,Magic Number,The method contains a magic number: 2,355
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseModify,Complex Method,Cyclomatic complexity of the method is 14,515
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseChange,Complex Method,Cyclomatic complexity of the method is 11,611
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseChange,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1e3e5741,611
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,parseEntry,Complex Method,Cyclomatic complexity of the method is 13,694
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,readLines,Complex Method,Cyclomatic complexity of the method is 11,875
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,readLines,Magic Number,The method contains a magic number: 128,875
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReader,readLines,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@186b56b0,875
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Entry,dumpModificationItems,Complex Method,Cyclomatic complexity of the method is 8,467
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,Entry,toString,Complex Method,Cyclomatic complexity of the method is 8,516
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,SubstitutingLineReaderTest,testLdif,Long Statement,The length of the statement "String expected="dn: cn=Gern Jensen` ou=Product Testing` dc=airius` dc=com\n" + "objectclass: top\n" + "cn: Gern Jensen\n"+ "sn: Jensen\n"+ "uid: gernj\n"+ "telephonenumber: +1 408 555 1212\n"+ "description:: V2hhdCBhIGNhcmVmdWwgcmVhZGVyIHlvdSBhcmUhICBUaGlzIHZhbHVl"+ "IGlzIGJhc2UtNjQtZW5jb2RlZCBiZWNhdXNlIGl0IGhhcyBhIGNvbnRyb2wgY2hhcmFjdG";" is 341.,52
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,SubstitutingLineReaderTest,testLdif,Long Statement,The length of the statement "return "V2hhdCBhIGNhcmVmdWwgcmVhZGVyIHlvdSBhcmUhICBUaGlzIHZhbHVl" + "IGlzIGJhc2UtNjQtZW5jb2RlZCBiZWNhdXNlIGl0IGhhcyBhIGNvbnRyb2wgY2hhcmFjdG";" is 141.,52
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,SubstitutingLineReaderTest,testLdif,Long Statement,The length of the statement "String str="dn: cn=${cn}` ou=Product Testing` dc=airius` dc=com\n" + "objectclass: top\n" + "cn: $cn\n"+ "sn: Jensen\n"+ "uid: gernj\n"+ "telephonenumber: +1 408 555 1212\n"+ "description:: $desc";" is 197.,52
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,SubstitutingLineReaderTest,testLdif,Magic Number,The method contains a magic number: 7,52
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,SubstitutingLineReaderTest,getParameter,Long Statement,The length of the statement "return "V2hhdCBhIGNhcmVmdWwgcmVhZGVyIHlvdSBhcmUhICBUaGlzIHZhbHVl" + "IGlzIGJhc2UtNjQtZW5jb2RlZCBiZWNhdXNlIGl0IGhhcyBhIGNvbnRyb2wgY2hhcmFjdG";" is 141.,65
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,setUp,Magic Number,The method contains a magic number: 256,67
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,setUp,Magic Number,The method contains a magic number: 256,67
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifVersion,Magic Number,The method contains a magic number: 2,112
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserEndSpaces,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n" + "cn: app1\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1 \n"+ "dependencies:\n"+ "envVars:";" is 210.,131
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedEntriesChanges,Empty catch clause,The method has an empty catch block.,161
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedEntriesChanges,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n" + "cn: app1\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1 \n"+ "dependencies:\n"+ "envVars:\n"+ "\n"+ "# Delete an entry. The operation will attach the LDAPv3\n"+ "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "control: 1.2.840.11A556.1.4.805 true\n"+ "changetype: delete\n";" is 545.,161
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedEntriesChanges2,Empty catch clause,The method has an empty catch block.,194
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedEntriesChanges2,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n" + "cn: app1\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1 \n"+ "dependencies:\n"+ "envVars:\n"+ "\n"+ "# Delete an entry. The operation will attach the LDAPv3\n"+ "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "changetype: delete\n";" is 503.,194
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedChangesEntries,Empty catch clause,The method has an empty catch block.,226
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedChangesEntries,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Delete an entry. The operation will attach the LDAPv3\n" + "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "control: 1.2.840.11A556.1.4.805 true\n"+ "changetype: delete\n"+ "\n"+ "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n"+ "cn: app1\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1 \n"+ "dependencies:\n"+ "envVars:\n";" is 545.,226
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedChangesEntries2,Empty catch clause,The method has an empty catch block.,259
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserCombinedChangesEntries2,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Delete an entry. The operation will attach the LDAPv3\n" + "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "changetype: delete\n"+ "\n"+ "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n"+ "cn: app1\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1 \n"+ "dependencies:\n"+ "envVars:\n";" is 503.,259
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParser,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n" + "cn: app1\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1 \n"+ "dependencies:\n"+ "envVars:";" is 210.,291
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserMuiltiLineComments,Long Statement,The length of the statement "String ldif="#comment\n" + " still a comment\n" + "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n"+ "cn: app1#another comment\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1\n"+ "serviceType: http\n"+ "dependencies:\n"+ "httpHeaders:\n"+ "startupOptions:\n"+ "envVars:";" is 307.,328
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserMultiLineEntries,Long Statement,The length of the statement "String ldif="#comment\n" + "dn: cn=app1`ou=appli\n" + " cations`ou=conf`dc=apache`dc=org\n"+ "cn: app1#another comment\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1\n"+ "serviceType: http\n"+ "dependencies:\n"+ "httpHeaders:\n"+ "startupOptions:\n"+ "envVars:";" is 292.,369
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserBase64,Long Statement,The length of the statement "String ldif="#comment\n" + "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n" + "cn:: RW1tYW51ZWwgTMOpY2hhcm55\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1\n"+ "serviceType: http\n"+ "dependencies:\n"+ "httpHeaders:\n"+ "startupOptions:\n"+ "envVars:";" is 290.,410
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserBase64MultiLine,Long Statement,The length of the statement "String ldif="#comment\n" + "dn: cn=app1`ou=applications`ou=conf`dc=apache`dc=org\n" + "cn:: RW1tYW51ZWwg\n"+ " TMOpY2hhcm55ICA=\n"+ "objectClass: top\n"+ "objectClass: apApplication\n"+ "displayName: app1\n"+ "serviceType: http\n"+ "dependencies:\n"+ "httpHeaders:\n"+ "startupOptions:\n"+ "envVars:";" is 301.,450
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample1,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=Barbara Jensen` ou=Product Development` dc=airius` dc=com\n" + "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "cn: Barbara Jensen\n"+ "cn: Barbara J Jensen\n"+ "cn: Babs Jensen\n"+ "sn: Jensen\n"+ "uid: bjensen\n"+ "telephonenumber: +1 408 555 1212\n"+ "description: A big sailing fan.\n"+ "\n"+ "dn: cn=Bjorn Jensen` ou=Accounting` dc=airius` dc=com\n"+ "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "cn: Bjorn Jensen\n"+ "sn: Jensen\n"+ "telephonenumber: +1 408 555 1212";" is 590.,491
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample1,Magic Number,The method contains a magic number: 2,491
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample2,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=Barbara Jensen` ou=Product Development` dc=airius` dc=com\n" + "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "cn: Barbara Jensen\n"+ "cn: Barbara J Jensen\n"+ "cn: Babs Jensen\n"+ "sn: Jensen\n"+ "uid: bjensen\n"+ "telephonenumber: +1 408 555 1212\n"+ "description:Babs is a big sailing fan` and travels extensively in sea\n"+ " rch of perfect sailing conditions.\n"+ "title:Product Manager` Rod and Reel Division";" is 492.,567
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample2,Long Statement,The length of the statement "assertTrue(attr.contains("Babs is a big sailing fan` and travels extensively in search of perfect sailing conditions."));" is 121.,567
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample3,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=Gern Jensen` ou=Product Testing` dc=airius` dc=com\n" + "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "cn: Gern Jensen\n"+ "cn: Gern O Jensen\n"+ "sn: Jensen\n"+ "uid: gernj\n"+ "telephonenumber: +1 408 555 1212\n"+ "description:: V2hhdCBhIGNhcmVmdWwgcmVhZGVyIHlvdSBhcmUhICBUaGlzIHZhbHVl\n"+ " IGlzIGJhc2UtNjQtZW5jb2RlZCBiZWNhdXNlIGl0IGhhcyBhIGNvbnRyb2wgY2hhcmFjdG\n"+ " VyIGluIGl0IChhIENSKS4NICBCeSB0aGUgd2F5LCB5b3Ugc2hvdWxkIHJlYWxseSBnZXQg\n"+ " b3V0IG1vcmUu";" is 539.,622
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample3,Long Statement,The length of the statement "assertTrue(attr.contains("What a careful reader you are! This value is base-64-encoded because it has a control character in it (a CR).\r By the way` you should really get out more.".getBytes("UTF-8")));" is 203.,622
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample3VariousSpacing,Long Statement,The length of the statement "String ldif="version:1\n" + "dn:cn=Gern Jensen` ou=Product Testing` dc=airius` dc=com \n" + "objectclass:top\n"+ "objectclass: person \n"+ "objectclass:organizationalPerson\n"+ "cn:Gern Jensen\n"+ "cn:Gern O Jensen\n"+ "sn:Jensen\n"+ "uid:gernj\n"+ "telephonenumber:+1 408 555 1212 \n"+ "description:: V2hhdCBhIGNhcmVmdWwgcmVhZGVyIHlvdSBhcmUhICBUaGlzIHZhbHVl\n"+ " IGlzIGJhc2UtNjQtZW5jb2RlZCBiZWNhdXNlIGl0IGhhcyBhIGNvbnRyb2wgY2hhcmFjdG\n"+ " VyIGluIGl0IChhIENSKS4NICBCeSB0aGUgd2F5LCB5b3Ugc2hvdWxkIHJlYWxseSBnZXQg\n"+ " b3V0IG1vcmUu ";" is 534.,673
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample3VariousSpacing,Long Statement,The length of the statement "assertTrue(attr.contains("What a careful reader you are! This value is base-64-encoded because it has a control character in it (a CR).\r By the way` you should really get out more.".getBytes("UTF-8")));" is 203.,673
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample4,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn:: b3U95Za25qWt6YOoLG89QWlyaXVz\n" + "# dn:: ou=õÖ?öåíùÃè`o=Airius\n"+ "objectclass: top\n"+ "objectclass: organizationalUnit\n"+ "ou:: 5Za25qWt6YOo\n"+ "# ou:: õÖ?öåíùÃè\n"+ "ou;lang-ja:: 5Za25qWt6YOo\n"+ "# ou;lang-ja:: õÖ?öåíùÃè\n"+ "ou;lang-ja;phonetic:: 44GI44GE44GO44KH44GG44G2\n"+ "# ou;lang-ja:: óÁÈóÁÄóÁÎóÂÇóÁÆóÁ?\n"+ "ou;lang-en: Sales\n"+ "description: Japanese office\n"+ "\n"+ "dn:: dWlkPXJvZ2FzYXdhcmEsb3U95Za25qWt6YOoLG89QWlyaXVz\n"+ "# dn:: uid=rogasawara`ou=õÖ?öåíùÃè`o=Airius\n"+ "userpassword: {SHA}O3HSv1MusyL4kTjP+HKI5uxuNoM=\n"+ "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "objectclass: inetOrgPerson\n"+ "uid: rogasawara\n"+ "mail: rogasawara@airius.co.jp\n"+ "givenname;lang-ja:: 44Ot44OJ44OL44O8\n"+ "# givenname;lang-ja:: óÃíóÃÉóÃËóÃ?\n"+ "sn;lang-ja:: 5bCP56yg5Y6f\n"+ "# sn;lang-ja:: õ?Ï÷ìàõÎß\n"+ "cn;lang-ja:: 5bCP56yg5Y6fIOODreODieODi+ODvA==\n"+ "# cn;lang-ja:: õ?Ï÷ìàõÎß óÃíóÃÉóÃËóÃ?\n"+ "title;lang-ja:: 5Za25qWt6YOoIOmDqOmVtw==\n"+ "# title;lang-ja:: õÖ?öåíùÃè ùÃèùÕ?\n"+ "preferredlanguage: ja\n"+ "givenname:: 44Ot44OJ44OL44O8\n"+ "# givenname:: óÃíóÃÉóÃËóÃ?\n"+ "sn:: 5bCP56yg5Y6f\n"+ "# sn:: õ?Ï÷ìàõÎß\n"+ "cn:: 5bCP56yg5Y6fIOODreODieODi+ODvA==\n"+ "# cn:: õ?Ï÷ìàõÎß óÃíóÃÉóÃËóÃ?\n"+ "title:: 5Za25qWt6YOoIOmDqOmVtw==\n"+ "# title:: õÖ?öåíùÃè ùÃèùÕ?\n"+ "givenname;lang-ja;phonetic:: 44KN44Gp44Gr44O8\n"+ "# givenname;lang-ja;phonetic:: óÂÍóÁéóÁëóÃ?\n"+ "sn;lang-ja;phonetic:: 44GK44GM44GV44KP44KJ\n"+ "# sn;lang-ja;phonetic:: óÁÊóÁÌóÁÕóÂÏóÂÉ\n"+ "cn;lang-ja;phonetic:: 44GK44GM44GV44KP44KJIOOCjeOBqeOBq+ODvA==\n"+ "# cn;lang-ja;phonetic:: óÁÊóÁÌóÁÎóÂÏóÂÉ óÂÍóÁéóÁëóÃ?\n"+ "title;lang-ja;phonetic:: 44GI44GE44GO44KH44GG44G2IOOBtuOBoeOCh+OBhg==\n"+ "# title;lang-ja;phonetic::\n"+ "# óÁÈóÁÄóÁÎóÂÇóÁÆóÁ? óÁ?óÁáóÂÇóÁÆ\n"+ "givenname;lang-en: Rodney\n"+ "sn;lang-en: Ogasawara\n"+ "cn;lang-en: Rodney Ogasawara\n"+ "title;lang-en: Sales` Director\n";" is 1958.,724
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample4,Long Statement,The length of the statement "String[][][] values={{{"dn"`"ou=\u55b6\u696d\u90e8`o=Airius"}`{"objectclass"`"top"}`{"objectclass"`"organizationalUnit"}`{"ou"`"\u55b6\u696d\u90e8"}`{"ou;lang-ja"`"\u55b6\u696d\u90e8"}`{"ou;lang-ja;phonetic"`"\u3048\u3044\u304e\u3087\u3046\u3076"}`{"ou;lang-en"`"Sales"}`{"description"`"Japanese office"}}`{{"dn"`"uid=rogasawara`ou=\u55b6\u696d\u90e8`o=Airius"}`{"userpassword"`"{SHA}O3HSv1MusyL4kTjP+HKI5uxuNoM="}`{"objectclass"`"top"}`{"objectclass"`"person"}`{"objectclass"`"organizationalPerson"}`{"objectclass"`"inetOrgPerson"}`{"uid"`"rogasawara"}`{"mail"`"rogasawara@airius.co.jp"}`{"givenname;lang-ja"`"\u30ed\u30c9\u30cb\u30fc"}`{"sn;lang-ja"`"\u5c0f\u7b20\u539f"}`{"cn;lang-ja"`"\u5c0f\u7b20\u539f \u30ed\u30c9\u30cb\u30fc"}`{"title;lang-ja"`"\u55b6\u696d\u90e8 \u90e8\u9577"}`{"preferredlanguage"`"ja"}`{"givenname"`"\u30ed\u30c9\u30cb\u30fc"}`{"sn"`"\u5c0f\u7b20\u539f"}`{"cn"`"\u5c0f\u7b20\u539f \u30ed\u30c9\u30cb\u30fc"}`{"title"`"\u55b6\u696d\u90e8 \u90e8\u9577"}`{"givenname;lang-ja;phonetic"`"\u308d\u3069\u306b\u30fc"}`{"sn;lang-ja;phonetic"`"\u304a\u304c\u3055\u308f\u3089"}`{"cn;lang-ja;phonetic"`"\u304a\u304c\u3055\u308f\u3089 \u308d\u3069\u306b\u30fc"}`{"title;lang-ja;phonetic"`"\u3048\u3044\u304e\u3087\u3046\u3076 \u3076\u3061\u3087\u3046"}`{"givenname;lang-en"`"Rodney"}`{"sn;lang-en"`"Ogasawara"}`{"cn;lang-en"`"Rodney Ogasawara"}`{"title;lang-en"`"Sales` Director"}}};" is 1398.,724
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample4,Magic Number,The method contains a magic number: 2,724
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample5,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=Horatio Jensen` ou=Product Testing` dc=airius` dc=com\n" + "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "cn: Horatio Jensen\n"+ "cn: Horatio N Jensen\n"+ "sn: Jensen\n"+ "uid: hjensen\n"+ "telephonenumber: +1 408 555 1212\n"+ "jpegphoto:< file:" + HJENSEN_JPEG_FILE.getAbsolutePath() + "\n";" is 369.,846
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample5,Long Statement,The length of the statement "String[][] values={{"dn"`"cn=Horatio Jensen` ou=Product Testing` dc=airius` dc=com"}`{"objectclass"`"top"}`{"objectclass"`"person"}`{"objectclass"`"organizationalPerson"}`{"cn"`"Horatio Jensen"}`{"cn"`"Horatio N Jensen"}`{"sn"`"Jensen"}`{"uid"`"hjensen"}`{"telephonenumber"`"+1 408 555 1212"}`{"jpegphoto"`null}};" is 313.,846
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample5WithSizeLimit,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: cn=Horatio Jensen` ou=Product Testing` dc=airius` dc=com\n" + "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "cn: Horatio Jensen\n"+ "cn: Horatio N Jensen\n"+ "sn: Jensen\n"+ "uid: hjensen\n"+ "telephonenumber: +1 408 555 1212\n"+ "jpegphoto:< file:" + HJENSEN_JPEG_FILE.getAbsolutePath() + "\n";" is 369.,900
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample5WithSizeLimit,Magic Number,The method contains a magic number: 128,900
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Add a new entry\n" + "dn: cn=Fiona Jensen` ou=Marketing` dc=airius` dc=com\n"+ "changetype: add\n"+ "objectclass: top\n"+ "objectclass: person\n"+ "objectclass: organizationalPerson\n"+ "cn: Fiona Jensen\n"+ "sn: Jensen\n"+ "uid: fiona\n"+ "telephonenumber: +1 408 555 1212\n"+ "jpegphoto:< file:" + FIONA_JPEG_FILE.getAbsolutePath() + "\n"+ "\n"+ "# Delete an existing entry\n"+ "dn: cn=Robert Jensen` ou=Marketing` dc=airius` dc=com\n"+ "changetype: delete\n"+ "\n"+ "# Modify an entry's relative distinguished name\n"+ "dn: cn=Paul Jensen` ou=Product Development` dc=airius` dc=com\n"+ "changetype: modrdn\n"+ "newrdn: cn=Paula Jensen\n"+ "deleteoldrdn: 1\n"+ "\n"+ "# Rename an entry and move all of its children to a new location in\n"+ "# the directory tree (only implemented by LDAPv3 servers).\n"+ "dn: ou=PD Accountants` ou=Product Development` dc=airius` dc=com\n"+ "changetype: moddn\n"+ "newrdn: ou=Product Development Accountants\n"+ "deleteoldrdn: 0\n"+ "newsuperior: ou=Accounting` dc=airius` dc=com\n"+ "# Modify an entry: add an additional value to the postaladdress\n"+ "# attribute` completely delete the description attribute` replace\n"+ "# the telephonenumber attribute with two values` and delete a specific\n"+ "# value from the facsimiletelephonenumber attribute\n"+ "\n"+ "dn: cn=Paula Jensen` ou=Product Development` dc=airius` dc=com\n"+ "changetype: modify\n"+ "add: postaladdress\n"+ "postaladdress: 123 Anystreet $ Sunnyvale` CA $ 94086\n"+ "-\n"+ "delete: description\n"+ "-\n"+ "replace: telephonenumber\n"+ "telephonenumber: +1 408 555 1234\n"+ "telephonenumber: +1 408 555 5678\n"+ "-\n"+ "delete: facsimiletelephonenumber\n"+ "facsimiletelephonenumber: +1 408 555 9876\n"+ "-\n"+ "\n"+ "# Modify an entry: replace the postaladdress attribute with an empty\n"+ "# set of values (which will cause the attribute to be removed)` and\n"+ "# delete the entire description attribute. Note that the first will\n"+ "# always succeed` while the second will only succeed if at least\n"+ "# one value for the description attribute is present.\n"+ "dn: cn=Ingrid Jensen` ou=Product Support` dc=airius` dc=com\n"+ "changetype: modify\n"+ "replace: postaladdress\n"+ "-\n"+ "delete: description\n"+ "-\n";" is 2258.,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Long Statement,The length of the statement "String[][][] values={{{"dn"`"cn=Fiona Jensen` ou=Marketing` dc=airius` dc=com"}`{"objectclass"`"top"}`{"objectclass"`"person"}`{"objectclass"`"organizationalPerson"}`{"cn"`"Fiona Jensen"}`{"sn"`"Jensen"}`{"uid"`"fiona"}`{"telephonenumber"`"+1 408 555 1212"}`{"jpegphoto"`""}}`{{"dn"`"cn=Robert Jensen` ou=Marketing` dc=airius` dc=com"}}`{{"dn"`"cn=Paul Jensen` ou=Product Development` dc=airius` dc=com"}`{"cn=Paula Jensen"}}`{{"dn"`"ou=PD Accountants` ou=Product Development` dc=airius` dc=com"}`{"ou=Product Development Accountants"}`{"ou=Accounting` dc=airius` dc=com"}}`{{"dn"`"cn=Paula Jensen` ou=Product Development` dc=airius` dc=com"}`{"postaladdress"`"123 Anystreet $ Sunnyvale` CA $ 94086"}`{"description"}`{"telephonenumber"`"+1 408 555 1234"`"+1 408 555 5678"}`{"facsimiletelephonenumber"`"+1 408 555 9876"}}`{{"dn"`"cn=Ingrid Jensen` ou=Product Support` dc=airius` dc=com"}`{"postaladdress"}`{"description"}}};" is 923.,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 3,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 4,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 5,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 5,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 5,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 5,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample6,Magic Number,The method contains a magic number: 2,925
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample7,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Delete an entry. The operation will attach the LDAPv3\n" + "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "control: 1.2.840.113556.1.4.805 true\n"+ "changetype: delete\n";" is 356.,1141
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample7NoValueNoCritical,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Delete an entry. The operation will attach the LDAPv3\n" + "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "control: 1.2.840.11556.1.4.805\n"+ "changetype: delete\n";" is 350.,1166
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample7NoCritical,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Delete an entry. The operation will attach the LDAPv3\n" + "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "control: 1.2.840.11556.1.4.805:control-value\n"+ "changetype: delete\n";" is 364.,1191
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample7NoOid,Empty catch clause,The method has an empty catch block.,1217
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample7NoOid,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Delete an entry. The operation will attach the LDAPv3\n" + "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "control: true\n"+ "changetype: delete\n";" is 333.,1217
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample7BadOid,Empty catch clause,The method has an empty catch block.,1237
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserRFC2849Sample7BadOid,Long Statement,The length of the statement "String ldif="version: 1\n" + "# Delete an entry. The operation will attach the LDAPv3\n" + "# Tree Delete Control defined in [9]. The criticality\n"+ "# field is \"true\" and the controlValue field is\n"+ "# absent` as required by [9].\n"+ "dn: ou=Product Development` dc=airius` dc=com\n"+ "control: 1.2.840.11A556.1.4.805 true\n"+ "changetype: delete\n";" is 356.,1237
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserChangeModifyMultiAttrs,Empty catch clause,The method has an empty catch block.,1257
+scriptella_scriptella-etl,scriptella.driver.ldap.ldif,LdifReaderTest,testLdifParserChangeModifyMultiAttrs,Long Statement,The length of the statement "String ldif="version: 1\n" + "dn: ou=Product Development` dc=airius` dc=com\n" + "changetype: modify\n"+ "add: postaladdress\n"+ "postaladdress: 123 Anystreet $ Sunnyvale` CA $ 94086\n"+ "-\n"+ "delete: postaladdress\n"+ "-\n"+ "replace: telephonenumber\n"+ "telephonenumber: +1 408 555 1234\n"+ "telephonenumber: +1 408 555 5678\n"+ "-\n"+ "delete: facsimiletelephonenumber\n"+ "facsimiletelephonenumber: +1 408 555 9876\n";" is 425.,1257
+scriptella_scriptella-etl,scriptella.driver.mail,Driver,Driver,Long Statement,The length of the statement "throw new MailProviderException("JavaMail not found on classpath. " + "Check if connection classpath attribute points to mail.jar"`e);" is 134.,34
+scriptella_scriptella-etl,scriptella.driver.mail,MailConnection,MailConnection,Complex Conditional,The conditional expression type != null && !type.equalsIgnoreCase(TYPE_TEXT) && !type.equalsIgnoreCase(TYPE_HTML) is complex.,86
+scriptella_scriptella-etl,scriptella.driver.mail,MailConnection,MailConnection,Complex Method,Cyclomatic complexity of the method is 8,86
+scriptella_scriptella-etl,scriptella.driver.mail,MailConnection,MailConnection,Long Statement,The length of the statement "throw new ConfigurationException("URL connection attribute must represent comma separated list of " + "email addresses and follow RFC822 syntax: " + url`e);" is 156.,86
+scriptella_scriptella-etl,scriptella.driver.mail,MailConnection,executeScript,Long Statement,The length of the statement "throw new MailProviderException("URL connection attribute must represent comma separated list of " + "email addresses and follow RFC822 syntax: " + addresslist`e);" is 163.,132
+scriptella_scriptella-etl,scriptella.driver.mail,MaiConnectionTest,testText,Long Statement,The length of the statement "ConnectionParameters cp=new ConnectionParameters(new MockConnectionEl(parameters`"mailto:scriptella@gmail.com")`MockDriverContext.INSTANCE);" is 140.,39
+scriptella_scriptella-etl,scriptella.driver.mail,MaiConnectionTest,testHtml,Long Statement,The length of the statement "ConnectionParameters cp=new ConnectionParameters(new MockConnectionEl(parameters`"mailto:scriptella@gmail.com?subject=Hello")`MockDriverContext.INSTANCE);" is 154.,62
+scriptella_scriptella-etl,scriptella.driver.mail,MaiConnectionTest,testValidation,Empty catch clause,The method has an empty catch block.,88
+scriptella_scriptella-etl,scriptella.driver.mail,MaiConnectionTest,testValidation,Empty catch clause,The method has an empty catch block.,88
+scriptella_scriptella-etl,scriptella.driver.mail,MaiConnectionTest,testDynamicMailto,Long Statement,The length of the statement "ConnectionParameters cp=new ConnectionParameters(new MockConnectionEl(parameters`"mailto:$address?subject=$subject")`MockDriverContext.INSTANCE);" is 145.,109
+scriptella_scriptella-etl,scriptella.driver.mail,MailDriverTest,test,Long Statement,The length of the statement "ConnectionParameters cp=new ConnectionParameters(new MockConnectionEl(parameters`"mailto:scriptella@gmail.com")`MockDriverContext.INSTANCE);" is 140.,33
+scriptella_scriptella-etl,scriptella.driver.alljdbc,AllJDBCDriversTest,test,Magic Number,The method contains a magic number: 2,125
+scriptella_scriptella-etl,scriptella.driver.alljdbc,AllJDBCDriversTest,test,Magic Number,The method contains a magic number: 3,125
+scriptella_scriptella-etl,scriptella.driver.alljdbc,AllJDBCDriversTest,test,Magic Number,The method contains a magic number: 4,125
+scriptella_scriptella-etl,scriptella.driver.alljdbc,AllJDBCDriversTest,test,Magic Number,The method contains a magic number: 5,125
+scriptella_scriptella-etl,scriptella.driver.alljdbc,AllJDBCDriversTest,test,Magic Number,The method contains a magic number: 6,125
+scriptella_scriptella-etl,scriptella.driver.alljdbc,AllJDBCDriversTest,test,Magic Number,The method contains a magic number: 7,125
+scriptella_scriptella-etl,scriptella.driver.alljdbc,AllJDBCDriversTest,test,Magic Number,The method contains a magic number: 8,125

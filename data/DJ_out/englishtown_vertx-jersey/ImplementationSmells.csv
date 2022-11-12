@@ -1,0 +1,127 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.resources,TestResource,getString,Complex Conditional,The conditional expression vertx != null && vertxRequest != null && vertxResponse != null && vertxStream != null is complex.,20
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples,HelloWorldEmbedded,main,Long Statement,The length of the statement "vertx.getOrCreateContext().config().put("jersey"`new JsonObject().put("port"`8080).put("packages"`new JsonArray().add(HelloWorldEndpoint.class.getPackage().getName())));" is 169.,18
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples,HelloWorldEmbedded,main,Magic Number,The method contains a magic number: 8080,18
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples,SecurityContextBinder,configure,Magic Number,The method contains a magic number: 10,7
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,InjectionIntegrationTest,testGet_OK,Magic Number,The method contains a magic number: 200,12
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,JacksonIntegrationTest,testPost,Magic Number,The method contains a magic number: 200,57
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,JacksonIntegrationTest,runTest,Long Statement,The length of the statement "getWhenHttpClient().requestAbs(HttpMethod.GET`BASE_PATH + additionalPath`new RequestOptions().setPauseResponse(true)).then(response -> {" is 136.,84
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,JacksonIntegrationTest,runTest,Magic Number,The method contains a magic number: 200,84
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,ChunkedIntegrationTest,runTest,Magic Number,The method contains a magic number: 200,13
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,ChunkedIntegrationTest,testGetStream,Magic Number,The method contains a magic number: 200,46
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,InjectionIntegrationTest,testGet_OK,Magic Number,The method contains a magic number: 200,13
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,FilterIntegrationTest,testGet,Magic Number,The method contains a magic number: 200,12
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,GuiceIntegrationTest,testGet,Magic Number,The method contains a magic number: 200,17
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,ServiceIntegrationTest,runHttpTest,Magic Number,The method contains a magic number: 200,40
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,WhenJavaIntegrationTest,testGet,Magic Number,The method contains a magic number: 200,21
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,SecurityContextIntegrationTest,testGet_OK,Magic Number,The method contains a magic number: 200,11
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,SecurityContextIntegrationTest,testGet_Forbidden,Magic Number,The method contains a magic number: 403,16
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,SecurityContextIntegrationTest,runTest,Magic Number,The method contains a magic number: 8080,21
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,SwaggerIntegrationTest,runTest,Long Statement,The length of the statement "getWhenHttpClient().requestAbs(HttpMethod.GET`BASE_PATH + additionalPath`new RequestOptions().setPauseResponse(true)).then(response -> {" is 136.,51
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.integration,SwaggerIntegrationTest,runTest,Magic Number,The method contains a magic number: 200,51
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.guice.inject,GuiceExceptionMapper,getStatusCode,Magic Number,The method contains a magic number: 418,16
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.examples.guice.inject,GuiceExceptionMapper,toResponse,Long Statement,The length of the statement "return Response.status(STATUS_IM_A_TEAPOT).entity(new JsonObject().put("msg"`exception.getMessage()).put("type"`exception.getClass().getName()).encode()).type(MediaType.APPLICATION_JSON_TYPE).build();" is 200.,32
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.jackson.internal,JsonConfigObjectMapperConfigurator,setPropertyNamingStrategy,Long Identifier,The length of the field CONFIG_PROPERTY_NAMING_STRATEGY is 31.,35
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.jackson.internal,JsonConfigObjectMapperConfigurator,setPropertyNamingStrategy,Long Statement,The length of the statement "if (SnakeCaseStrategy.class.getSimpleName().equalsIgnoreCase(s) || LowerCaseWithUnderscoresStrategy.class.getSimpleName().equalsIgnoreCase(s)) {" is 144.,35
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.jackson.internal,JsonConfigObjectMapperConfigurator,setPropertyNamingStrategy,Long Statement,The length of the statement "if (UpperCamelCaseStrategy.class.getSimpleName().equalsIgnoreCase(s) || PascalCaseStrategy.class.getSimpleName().equalsIgnoreCase(s)) {" is 135.,35
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.jackson,VertxSerializerModule,init,Long Statement,The length of the statement "this.addSerializer(JsonObject.class`new JsonObjectSerializer()).addSerializer(JsonArray.class`new JsonArraySerializer()).addDeserializer(JsonObject.class`new JsonObjectDeserializer()).addDeserializer(JsonArray.class`new JsonArrayDeserializer());" is 245.,23
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.swagger.internal,SwaggerServletConfig,SwaggerServletConfig,Long Statement,The length of the statement "config.getProperties().entrySet().stream().filter(entry -> entry.getKey().startsWith(PROPERTY_PREFIX)).filter(entry -> entry.getValue() != null).forEach(entry -> initParams.put(entry.getKey()`entry.getValue().toString()));" is 222.,26
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.swagger.internal,SwaggerServletConfig,SwaggerServletConfig,Long Statement,The length of the statement "new SwaggerContextService().withConfigId(getValue.apply(CONFIG_ID_KEY)).withScannerId(getValue.apply(SCANNER_ID_KEY)).withContextId(getValue.apply(CONTEXT_ID_KEY)).withBasePath(context.getContextPath()).withSwaggerConfig(new DefaultSwaggerConfig(context)).withServletConfig(this).initConfig().initScanner();" is 307.,26
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.swagger.internal,SwaggerCorsFilter,filter,Complex Conditional,The conditional expression !"swagger.json".equals(path) && !"swagger.yaml".equals(path) && !"swagger".equals(path) is complex.,16
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.swagger.internal,SwaggerCorsFilter,filter,Long Identifier,The length of the field HEADER_ACCESS_CONTROL_ALLOW_ORIGIN is 34.,16
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.swagger.internal,SwaggerServletContext,getMajorVersion,Magic Number,The method contains a magic number: 3,42
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.swagger.integration,SwaggerFeatureIntegrationTest,runTest,Long Statement,The length of the statement "RequestOptions options=new RequestOptions().setPauseResponse(true).addHeader(SwaggerCorsFilter.HEADER_ORIGIN`"http://test.org");" is 128.,56
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.features.swagger.integration,SwaggerFeatureIntegrationTest,runTest,Magic Number,The method contains a magic number: 200,56
+englishtown_vertx-jersey,com.englishtown.vertx.hk2,HK2JerseyBinderTest,testVertxRequestProcessorFactory,Magic Number,The method contains a magic number: 2,59
+englishtown_vertx-jersey,com.englishtown.vertx.hk2,HK2JerseyBinderTest,testVertxResponseProcessorFactory,Magic Number,The method contains a magic number: 2,81
+englishtown_vertx-jersey,com.englishtown.vertx.hk2,HK2JerseyBinderTest,testVertxPostResponseProcessorFactory,Long Identifier,The length of the field postResponseProcessorProviders is 30.,103
+englishtown_vertx-jersey,com.englishtown.vertx.hk2,HK2JerseyBinderTest,testVertxPostResponseProcessorFactory,Long Statement,The length of the statement "List<VertxPostResponseProcessor> list=Arrays.asList(mock(VertxPostResponseProcessor.class)`mock(VertxPostResponseProcessor.class));" is 131.,103
+englishtown_vertx-jersey,com.englishtown.vertx.hk2,HK2JerseyBinderTest,testVertxPostResponseProcessorFactory,Magic Number,The method contains a magic number: 2,103
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyHandler,handle,Long Statement,The length of the statement "final ContainerRequest jerseyRequest=new ContainerRequest(baseUriBuilder.build()`uri`vertxRequest.method().name()`new DefaultSecurityContext(isSecure)`new MapPropertiesDelegate());" is 180.,156
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyHandler,shouldReadData,Complex Conditional,The conditional expression !(HttpMethod.POST == method || HttpMethod.PUT == method || HttpMethod.PATCH == method) is complex.,307
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyHandler,shouldReadData,Long Statement,The length of the statement "return MediaType.APPLICATION_JSON_TYPE.getSubtype().equalsIgnoreCase(mediaType.getSubtype()) || MediaType.APPLICATION_XML_TYPE.getSubtype().equalsIgnoreCase(mediaType.getSubtype());" is 181.,307
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyServer,start,Complex Method,Cyclomatic complexity of the method is 9,60
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyServer,start,Long Statement,The length of the statement "final String listenPath=(serverOptions.isSsl() ? "https" : "http") + "://" + serverOptions.getHost()+ ":"+ serverOptions.getPort();" is 131.,60
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptions,getPort,Magic Number,The method contains a magic number: 80,206
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptions,getAcceptBacklog,Magic Number,The method contains a magic number: 10000,243
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptions,createServerOptions,Long Statement,The length of the statement "HttpServerOptions serverOptions=new HttpServerOptions().setHost(getHost()).setPort(getPort()).setAcceptBacklog(getAcceptBacklog()).setCompressionSupported(getCompressionSupported());" is 182.,299
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,WriteStreamBodyWriter,getSize,Long Parameter List,The method has 5 parameters. ,24
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,WriteStreamBodyWriter,writeTo,Long Parameter List,The method has 7 parameters. ,29
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWriteResponseStatusAndHeaders,Magic Number,The method contains a magic number: 15,92
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWriteResponseStatusAndHeaders,Magic Number,The method contains a magic number: 2,92
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWriteResponse_Throw,Magic Number,The method contains a magic number: 15,120
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWriteResponse_Throw,Magic Number,The method contains a magic number: 2,120
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Empty catch clause,The method has an empty catch block.,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Magic Number,The method contains a magic number: 12,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Magic Number,The method contains a magic number: 40,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Magic Number,The method contains a magic number: 1024,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Magic Number,The method contains a magic number: 2,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Magic Number,The method contains a magic number: 41,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Magic Number,The method contains a magic number: 2,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite,Magic Number,The method contains a magic number: 3,148
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite_Chunked,Empty catch clause,The method has an empty catch block.,189
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite_Chunked,Magic Number,The method contains a magic number: 2,189
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite_Chunked,Magic Number,The method contains a magic number: 3,189
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testWrite_Chunked,Magic Number,The method contains a magic number: 4,189
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testSuspend,Magic Number,The method contains a magic number: 10,226
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testSuspend,Magic Number,The method contains a magic number: 10,226
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testSuspend,Magic Number,The method contains a magic number: 2,226
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testSetSuspendTimeout,Empty catch clause,The method has an empty catch block.,246
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testSetSuspendTimeout,Magic Number,The method contains a magic number: 10,246
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testSetSuspendTimeout,Magic Number,The method contains a magic number: 5,246
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,VertxResponseWriterTest,testFailure,Magic Number,The method contains a magic number: 500,279
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyHandlerTest,setUp,Long Statement,The length of the statement "when(provider.get(any(HttpServerRequest.class)`any(ContainerRequest.class))).thenReturn(mock(ContainerResponseWriter.class));" is 125.,110
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyHandlerTest,setUp,Magic Number,The method contains a magic number: 1024,110
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptionsTest,testGetMaxBodySize,Magic Number,The method contains a magic number: 12,92
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptionsTest,testGetPackages,Magic Number,The method contains a magic number: 2,109
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptionsTest,testGetComponents,Magic Number,The method contains a magic number: 2,127
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptionsTest,testGetInstances,Magic Number,The method contains a magic number: 2,151
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyOptionsTest,testGetProperties_Both,Magic Number,The method contains a magic number: 2,195
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyServerTest,testInit_Default_Config,Magic Number,The method contains a magic number: 80,126
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyServerTest,testInit_Default_Config,Magic Number,The method contains a magic number: 80,126
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyServerTest,testInit_With_Config,Magic Number,The method contains a magic number: 8888,135
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyServerTest,testInit_With_Config,Magic Number,The method contains a magic number: 1024,135
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.impl,DefaultJerseyServerTest,testInit_Listen_Result,Magic Number,The method contains a magic number: 2,166
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyServer,GuiceJerseyServer,Long Parameter List,The method has 5 parameters. ,38
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyServerTest,testInjectMultiBindings,Magic Number,The method contains a magic number: 2,75
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testConfigure,Magic Number,The method contains a magic number: 9,48
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testConfigure,Magic Number,The method contains a magic number: 11,48
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testProviders,Long Statement,The length of the statement "list=binder.provideVertxRequestProcessorList(Sets.newHashSet(mock(VertxRequestProcessor.class)`mock(VertxRequestProcessor.class)));" is 131.,61
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testProviders,Long Statement,The length of the statement "list=binder.provideVertxResponseProcessorList(Sets.newHashSet(mock(VertxResponseProcessor.class)`mock(VertxResponseProcessor.class)));" is 134.,61
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testProviders,Long Statement,The length of the statement "list=binder.provideVertxPostResponseProcessorList(Sets.newHashSet(mock(VertxPostResponseProcessor.class)`mock(VertxPostResponseProcessor.class)));" is 146.,61
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testProviders,Magic Number,The method contains a magic number: 2,61
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testProviders,Magic Number,The method contains a magic number: 2,61
+englishtown_vertx-jersey,com.englishtown.vertx.guice,GuiceJerseyBinderTest,testProviders,Magic Number,The method contains a magic number: 2,61
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.resources,TestResource,getChunked,Empty catch clause,The method has an empty catch block.,129
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.resources,TestResource,getString,Magic Number,The method contains a magic number: 100,42
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,ContainerLifecycleListenerIntegrationTests,testListener,Long Statement,The length of the statement "vertx.getOrCreateContext().config().put("jersey"`new JsonObject().put(DefaultJerseyOptions.CONFIG_PORT`8080).put(DefaultJerseyOptions.CONFIG_PACKAGES`new JsonArray().add("com.englishtown.vertx.jersey.resources")));" is 214.,45
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,ContainerLifecycleListenerIntegrationTests,testListener,Magic Number,The method contains a magic number: 8080,45
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,JerseyIntegrationTestBase,init,Magic Number,The method contains a magic number: 1000,31
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,JerseyIntegrationTestBase,init,Magic Number,The method contains a magic number: 10,31
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationBinder,configure,Magic Number,The method contains a magic number: 10,11
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationBinder,configure,Magic Number,The method contains a magic number: 100,11
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_getJson,Magic Number,The method contains a magic number: 200,67
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_getJsonp,Magic Number,The method contains a magic number: 200,78
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_getHtml,Magic Number,The method contains a magic number: 200,92
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_postJson,Magic Number,The method contains a magic number: 200,103
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_postText,Magic Number,The method contains a magic number: 200,115
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_postXml,Magic Number,The method contains a magic number: 200,128
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_getChunked,Magic Number,The method contains a magic number: 200,141
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.integration,IntegrationTests,test_getHeaders,Magic Number,The method contains a magic number: 2,152
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,createServer,Long Statement,The length of the statement "vertx.getOrCreateContext().config().put("jersey"`new JsonObject().put("host"`host).put("port"`port).put("resources"`new JsonArray().add("com.englishtown.vertx.jersey.promises.integration.resources")));" is 201.,83
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,createServer,Magic Number,The method contains a magic number: 10,83
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,testCreateServer,Magic Number,The method contains a magic number: 300,114
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,testCreateServer,Magic Number,The method contains a magic number: 200,114
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,testCreateMultipleServers,Magic Number,The method contains a magic number: 8081,130
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,testCreateMultipleServers,Magic Number,The method contains a magic number: 300,130
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,testCreateMultipleServers,Magic Number,The method contains a magic number: 200,130
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.promises.integration,PromisesIntegrationTests,testCreateMultipleServers,Magic Number,The method contains a magic number: 200,130
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.hk2,JerseyMetricsBinder,configure,Magic Number,The method contains a magic number: 999,38
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.hk2,JerseyMetricsBinder,configure,Magic Number,The method contains a magic number: 999,38
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.hk2,JerseyMetricsBinder,configure,Magic Number,The method contains a magic number: 999,38
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.integration,BasicIntegrationTest,BasicIntegrationTest,Long Statement,The length of the statement "return new JsonObject().put("hk2_binder"`"com.englishtown.vertx.jersey.metrics.integration.IntegrationTestBinder").put("port"`8080).put("resources"`new JsonArray().add("com.englishtown.vertx.jersey.resources"));" is 211.,44
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.integration,BasicIntegrationTest,BasicIntegrationTest,Magic Number,The method contains a magic number: 8080,44
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.integration,BasicIntegrationTest,getConfig,Long Statement,The length of the statement "return new JsonObject().put("hk2_binder"`"com.englishtown.vertx.jersey.metrics.integration.IntegrationTestBinder").put("port"`8080).put("resources"`new JsonArray().add("com.englishtown.vertx.jersey.resources"));" is 211.,46
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.integration,BasicIntegrationTest,getConfig,Magic Number,The method contains a magic number: 8080,46
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.integration,BasicIntegrationTest,testJerseyMetrics,Magic Number,The method contains a magic number: 8080,58
+englishtown_vertx-jersey,com.englishtown.vertx.jersey.metrics.integration,BasicIntegrationTest,testJerseyMetrics,Magic Number,The method contains a magic number: 200,58

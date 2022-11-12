@@ -1,0 +1,416 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+icode_ameba,ameba.feature.datasource,WebStatFilter,WebStatFilter,Complex Method,Cyclomatic complexity of the method is 12,79
+icode_ameba,ameba.feature.datasource,WebStatFilter,WebStatFilter,Long Identifier,The length of the field PARAM_NAME_PRINCIPAL_COOKIE_NAME is 32.,79
+icode_ameba,ameba.feature.datasource,WebStatFilter,WebStatFilter,Long Identifier,The length of the field PARAM_NAME_SESSION_STAT_MAX_COUNT is 33.,79
+icode_ameba,ameba.feature.datasource,WebStatFilter,filter,Complex Method,Cyclomatic complexity of the method is 10,202
+icode_ameba,ameba.event,AsyncEventBus,subscribe,Long Statement,The length of the statement "eventSourceMap.computeIfAbsent(event`k -> new EventSourceActor<E>(AsyncEventBus.class.getName()).spawn()).addHandler(handler(event`listener));" is 142.,35
+icode_ameba,ameba.event,EventBus,subscribe,Complex Method,Cyclomatic complexity of the method is 12,42
+icode_ameba,ameba.event,EventBus,subscribe,Long Statement,The length of the statement "throw new AmebaException("subscribe event error` " + objClass.getName() + " must be have a public void arguments constructor"`e);" is 129.,42
+icode_ameba,ameba.event,EventBus,subscribe,Long Statement,The length of the statement "throw new AmebaException("handle event error` " + method.getName() + " method must be not have arguments or extends from Event argument"`e);" is 140.,42
+icode_ameba,ameba.event,EventTest,publish,Long Statement,The length of the statement "eventBus.subscribe(TestEvent1.class`(AsyncListener<TestEvent1>)event -> logger.info("TestEvent1 async receive message {} : {}"`finalI`event.message));" is 150.,15
+icode_ameba,ameba.event,EventTest,publish,Long Statement,The length of the statement "eventBus.subscribe(TestEvent.class`(Listener<TestEvent>)event -> logger.info("receive message {} : {}"`finalI`event.message));" is 126.,15
+icode_ameba,ameba.event,EventTest,publish,Long Statement,The length of the statement "eventBus.subscribe(TestEvent1.class`(Listener<TestEvent1>)event -> logger.info("TestEvent1 receive message {} : {}"`finalI`event.message));" is 139.,15
+icode_ameba,ameba.event,EventTest,publish,Magic Number,The method contains a magic number: 10,15
+icode_ameba,ameba.event,EventTest,publish,Magic Number,The method contains a magic number: 100,15
+icode_ameba,ameba.event,EventTest,publish,Magic Number,The method contains a magic number: 5,15
+icode_ameba,ameba.event,EventTest,publish,Magic Number,The method contains a magic number: 10,15
+icode_ameba,ameba.event,EventTest,publish,Magic Number,The method contains a magic number: 1800,15
+icode_ameba,ameba.event,EventTest,publish,Magic Number,The method contains a magic number: 10,15
+icode_ameba,ameba.websocket.internal,EndpointMeta,checkMessageSize,Long Statement,The length of the statement "final long messageSize=(message instanceof String ? ((String)message).getBytes(Charset.defaultCharset()).length : ((ByteBuffer)message).remaining());" is 149.,46
+icode_ameba,ameba.websocket.internal,EndpointMeta,callMethod,Long Parameter List,The method has 5 parameters. ,124
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Complex Method,Cyclomatic complexity of the method is 21,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Method,The method has 132 lines of code.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "collector.addException(new DeploymentException(LocalizationMessages.ENDPOINT_MULTIPLE_METHODS(OnOpen.class.getSimpleName()`endpointClass.getName()`onOpen.getName()`m.getName())));" is 179.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "collector.addException(new DeploymentException(LocalizationMessages.ENDPOINT_MULTIPLE_METHODS(OnClose.class.getSimpleName()`endpointClass.getName()`onClose.getName()`m.getName())));" is 181.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "collector.addException(new DeploymentException(LocalizationMessages.ENDPOINT_MULTIPLE_METHODS(OnError.class.getSimpleName()`endpointClass.getName()`onError.getName()`m.getName())));" is 181.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "logger.warn(LocalizationMessages.ENDPOINT_MAX_MESSAGE_SIZE_TOO_LONG(maxMessageSize`m.getName()`endpointClass.getName()`incomingBufferSize));" is 140.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "handlerFactory=new WholeHandler(MethodHandles.publicLookup().unreflect(getInvocableMethod(m))`extractors`entry.getValue()`maxMessageSize);" is 138.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "handlerFactory=new PartialHandler(MethodHandles.publicLookup().unreflect(getInvocableMethod(m))`extractors`message.getValue()`maxMessageSize);" is 142.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "collector.addException(new DeploymentException(LocalizationMessages.ENDPOINT_WRONG_PARAMS(endpointClass.getName()`m.getName())));" is 129.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Long Statement,The length of the statement "collector.addException(new DeploymentException(LocalizationMessages.ENDPOINT_WRONG_PARAMS(endpointClass.getName()`m.getName())));" is 129.,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,parse,Magic Number,The method contains a magic number: 2,48
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,buildServerEndpointConfig,Long Parameter List,The method has 6 parameters. ,273
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,buildServerEndpointConfig,Long Statement,The length of the statement "ServerEndpointConfig.Builder builder=ServerEndpointConfig.Builder.create(annotatedClass`path).encoders(encoderClasses).decoders(decoderClasses).subprotocols(Arrays.asList(subProtocols));" is 186.,273
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,getParameterExtractors,Complex Conditional,The conditional expression !(Primitives.isWrapperType(type) || type.isPrimitive() || type.equals(String.class)) is complex.,324
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,getParameterExtractors,Complex Method,Cyclomatic complexity of the method is 15,324
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,getParameterExtractors,Long Statement,The length of the statement "collector.addException(new DeploymentException(LocalizationMessages.ENDPOINT_WRONG_PATH_PARAM(method.getName()`type.getName())));" is 129.,324
+icode_ameba,ameba.websocket.internal,AbstractAnnotatedEndpointMeta,getParameterExtractors,Long Statement,The length of the statement "standard=new StandardWebSocketSession(Requests.getHeaders()`session.getRequestParameterMap()`session.getPathParameters()`session.getUserProperties()`new InetSocketAddress(Requests.getLocalName()`Requests.getLocalPort())`new InetSocketAddress(Requests.getRemoteHost()`Requests.getRemotePort()));" is 294.,324
+icode_ameba,ameba.websocket,AbstractWebSocketMessage,toString,Long Statement,The length of the statement "return getClass().getSimpleName() + " payload=[" + toStringPayload()+ "]` byteCount="+ getPayloadLength()+ "` last="+ isLast()+ "]";" is 132.,103
+icode_ameba,ameba.websocket,WebSocketAddon,getAnnotation,Complex Method,Cyclomatic complexity of the method is 10,64
+icode_ameba,ameba.websocket,TextMessage,toStringPayload,Magic Number,The method contains a magic number: 10,86
+icode_ameba,ameba.websocket,TextMessage,toStringPayload,Magic Number,The method contains a magic number: 10,86
+icode_ameba,ameba.websocket.adapter.standard,StandardWebSocketSession,StandardWebSocketSession,Long Parameter List,The method has 6 parameters. ,54
+icode_ameba,ameba.websocket.adapter.standard,StandardWebSocketSession,StandardWebSocketSession,Long Parameter List,The method has 7 parameters. ,71
+icode_ameba,ameba.websocket.sockjs.frame,AbstractSockJsMessageCodec,escapeSockJsSpecialChars,Magic Number,The method contains a magic number: 4,59
+icode_ameba,ameba.websocket.sockjs.frame,AbstractSockJsMessageCodec,isSockJsSpecialChar,Long Statement,The length of the statement "return ch <= '\u001F' || ch >= '\u200C' && ch <= '\u200F' || ch >= '\u2028' && ch <= '\u202F' || ch >= '\u2060' && ch <= '\u206F' || ch >= '\uFFF0' || ch >= '\uD800' && ch <= '\uDFFF';" is 184.,79
+icode_ameba,ameba.websocket.sockjs.frame,SockJsFrame,closeFrameAnotherConnectionOpen,Long Identifier,The length of the field CLOSE_ANOTHER_CONNECTION_OPEN_FRAME is 35.,100
+icode_ameba,ameba.websocket.sockjs.frame,SockJsFrame,equals,Long Statement,The length of the statement "return this == other || other instanceof SockJsFrame && (this.type.equals(((SockJsFrame)other).type) && this.content.equals(((SockJsFrame)other).content));" is 155.,164
+icode_ameba,ameba.websocket.sockjs.frame,SockJsFrame,toString,Magic Number,The method contains a magic number: 80,182
+icode_ameba,ameba.websocket.sockjs.frame,SockJsFrame,toString,Magic Number,The method contains a magic number: 80,182
+icode_ameba,ameba.websocket.sockjs.transport,IFrameUtils,generateIFrame,Long Statement,The length of the statement "return ("<!DOCTYPE html>\n" + "<html>\n" + "<head>\n"+ " <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n"+ " <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"+ " <script>\n"+ " document.domain = document.domain;\n"+ " _sockjs_onload = function(){SockJS.bootstrap_iframe();};\n"+ " </script>\n"+ " <script src=\"" + origin + "\"></script>\n"+ "</head>\n"+ "<body>\n"+ " <h2>Don't panic!</h2>\n"+ " <p>This is a SockJS hidden iframe. It's used for cross domain magic.</p>\n"+ "</body>\n"+ "</html>").getBytes(Charsets.UTF_8);" is 564.,13
+icode_ameba,ameba.websocket.sockjs.transport,IFrameUtils,generateHtmlFile,Long Statement,The length of the statement "return ("<!doctype html>\n" + "<html><head>\n" + " <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n"+ " <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"+ "</head><body><h2>Don't panic!</h2>\n"+ " <script>\n"+ " document.domain = document.domain;\n"+ " var c = parent." + callback + ";\n"+ " c.start();\n"+ " function p(d) {c.message(d);};\n"+ " window.onload = function() {c.stop();};\n"+ " </script>").getBytes(Charsets.UTF_8);" is 469.,38
+icode_ameba,ameba.exception,UnprocessableEntityException,validate,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Invalid response status code. Expected [%d]` was [%d]."`expectedStatus`response.getStatus()));" is 144.,107
+icode_ameba,ameba.exception,AmebaExceptionWithJavaSource,AmebaExceptionWithJavaSource,Long Parameter List,The method has 6 parameters. ,41
+icode_ameba,ameba.mvc,ErrorPageFeature,configure,Complex Method,Cyclomatic complexity of the method is 8,29
+icode_ameba,ameba.mvc,ErrorPageGenerator,createViewable,Long Parameter List,The method has 5 parameters. ,96
+icode_ameba,ameba.mvc,ErrorPageGenerator,isWriteable,Long Statement,The length of the statement "return ErrorMessage.class.isAssignableFrom(type) && mediaType != null && (mediaType.getSubtype().equals("html") || mediaType.getSubtype().equals("xhtml+xml"));" is 159.,117
+icode_ameba,ameba.mvc,ErrorPageGenerator,getSize,Long Parameter List,The method has 5 parameters. ,127
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Complex Method,Cyclomatic complexity of the method is 10,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Long Identifier,The length of the field DEFAULT_500_RED_PRODUCT_ERROR_PAGE is 34.,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Long Parameter List,The method has 7 parameters. ,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Magic Number,The method contains a magic number: 500,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Magic Number,The method contains a magic number: 401,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Magic Number,The method contains a magic number: 403,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Magic Number,The method contains a magic number: 405,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Magic Number,The method contains a magic number: 406,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Magic Number,The method contains a magic number: 415,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Magic Number,The method contains a magic number: 501,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6291dd67,147
+icode_ameba,ameba.mvc,ErrorPageGenerator,writeTo,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3556b29d,147
+icode_ameba,ameba.mvc.assets,AbstractAssetsResource,computeEntityTag,Magic Number,The method contains a magic number: 10,39
+icode_ameba,ameba.mvc.assets,AbstractAssetsResource,assets,Complex Method,Cyclomatic complexity of the method is 20,67
+icode_ameba,ameba.mvc.assets,AbstractAssetsResource,assets,Long Statement,The length of the statement "final String welcomeResource=jarEntry.getName().endsWith("/") ? jarEntry.getName() + "index.html" : jarEntry.getName() + "/index.html";" is 135.,67
+icode_ameba,ameba.mvc.assets,AssetsFeature,getAssetMap,Complex Method,Cyclomatic complexity of the method is 9,40
+icode_ameba,ameba.mvc.assets,AssetsFeature,lookupAsset,Complex Method,Cyclomatic complexity of the method is 10,90
+icode_ameba,ameba.mvc.assets,AssetsFeature,lookupAsset,Empty catch clause,The method has an empty catch block.,90
+icode_ameba,ameba.mvc.route,RouteHelper,getRoutes,Long Statement,The length of the statement "routeList.addAll(resource.getChildResources().stream().map(res -> path + (res.getPath().startsWith("/") ? "" : "/") + res.getPath()).collect(Collectors.toList()));" is 163.,26
+icode_ameba,ameba.mvc.template,TemplateException,TemplateException,Long Parameter List,The method has 6 parameters. ,41
+icode_ameba,ameba.mvc.template,TemplateNotFoundException,TemplateNotFoundException,Long Parameter List,The method has 6 parameters. ,33
+icode_ameba,ameba.mvc.template.internal,AbstractTemplateProcessor,writeTo,Long Parameter List,The method has 5 parameters. ,347
+icode_ameba,ameba.mvc.template.internal,AbstractTemplateProcessor,writeTemplate,Long Parameter List,The method has 5 parameters. ,371
+icode_ameba,ameba.mvc.template.internal,TemplateModelProcessor,getEnhancingMethods,Complex Method,Cyclomatic complexity of the method is 8,144
+icode_ameba,ameba.mvc.template.internal,TemplateModelProcessor,createEnhancingMethods,Long Identifier,The length of the field IMPLICIT_VIEW_PATH_PARAMETER_TEMPLATE is 37.,190
+icode_ameba,ameba.mvc.template.internal,TemplateModelProcessor,createEnhancingMethods,Long Statement,The length of the statement "final List<MediaType> produces=MediaTypes.createQualitySourceMediaTypes(annotatedResourceClass.getAnnotation(Produces.class));" is 126.,190
+icode_ameba,ameba.mvc.template.internal,TemplateModelProcessor,createEnhancingMethods,Long Statement,The length of the statement "newMethods.add(new ModelProcessorUtil.Method(IMPLICIT_VIEW_PATH_PARAMETER_TEMPLATE`HttpMethod.GET`consumes`produces`inflector));" is 128.,190
+icode_ameba,ameba.mvc.template.internal,NotFoundForward,filter,Magic Number,The method contains a magic number: 404,77
+icode_ameba,ameba.mvc.template.internal,ResolvingViewableContext,resolveRelativeViewable,Long Statement,The length of the statement "ResolvedViewable resolvedViewable=resolveRelativeViewable(Viewables.PROTECTED_DIR + "/" + path`viewable`resolvingClass`mediaType`templateProcessor);" is 148.,75
+icode_ameba,ameba.mvc.template.internal,ResolvingViewableContext,resolveRelativeViewable,Long Parameter List,The method has 5 parameters. ,102
+icode_ameba,ameba.mvc.template.internal,MvcFeature,configure,Complex Method,Cyclomatic complexity of the method is 9,32
+icode_ameba,ameba.mvc.template.internal,MvcFeature,configure,Long Statement,The length of the statement "String engine=key.replaceFirst(Pattern.quote(TemplateHelper.TPL_ENGINE_DIR_PR.substring(0`TemplateHelper.TPL_ENGINE_DIR_PR.length() - 1))`"");" is 142.,32
+icode_ameba,ameba.mvc.template.internal,MvcFeature,configure,Magic Number,The method contains a magic number: 1000,32
+icode_ameba,ameba.mvc.template.internal,MvcFeature,append,Long Parameter List,The method has 6 parameters. ,83
+icode_ameba,ameba.mvc.template.internal,TemplateHelper,getProducibleMediaTypes,Long Statement,The length of the statement "final List<Variant> variants=VariantSelector.selectVariants(containerRequest`Variant.mediaTypes(mediaTypes).build()`varyHeaderValue == null ? Refs.emptyRef() : varyHeaderValue);" is 177.,62
+icode_ameba,ameba.mvc.template.internal,TemplateHelper,getTemplateName,Long Statement,The length of the statement "return viewable.getTemplateName() == null || viewable.getTemplateName().isEmpty() ? "index" : viewable.getTemplateName();" is 121.,83
+icode_ameba,ameba.mvc.template.internal,TemplateHelper,getResourceMethodProducibleTypes,Long Statement,The length of the statement "if (extendedUriInfo.getMatchedResourceMethod() != null && !extendedUriInfo.getMatchedResourceMethod().getProducedTypes().isEmpty()) {" is 133.,94
+icode_ameba,ameba.mvc.template.internal,TemplateHelper,getTemplateOutputEncoding,Long Statement,The length of the statement "final String enc=PropertiesHelper.getValue(configuration.getProperties()`MvcFeature.ENCODING + suffix`String.class`null);" is 121.,144
+icode_ameba,ameba.mvc.template.internal,ViewableMessageBodyWriter,getSize,Long Parameter List,The method has 5 parameters. ,60
+icode_ameba,ameba.mvc.template.internal,ViewableMessageBodyWriter,writeTo,Long Parameter List,The method has 7 parameters. ,67
+icode_ameba,ameba.mvc.template.internal,ViewableMessageBodyWriter,resolve,Long Statement,The length of the statement "List<MediaType> producibleMediaTypes=TemplateHelper.getProducibleMediaTypes(requestProvider.get()`extendedUriInfoProvider.get()`null);" is 134.,96
+icode_ameba,ameba.mvc.template.internal,ViewableMessageBodyWriter,resolve,Long Statement,The length of the statement "final ResolvedViewable resolvedViewable=resolve(simpleViewable`producibleMediaTypes`implicitViewable.getResolvingClass()`viewableContext`templateProcessors);" is 157.,96
+icode_ameba,ameba.mvc.template.internal,ViewableMessageBodyWriter,resolve,Long Parameter List,The method has 5 parameters. ,136
+icode_ameba,ameba.mvc.template.internal,ViewableMessageBodyWriter,resolve,Long Statement,The length of the statement "final ResolvedViewable resolvedViewable=viewableContext.resolveViewable(viewable`mediaType`resolvingClass`templateProcessor);" is 125.,136
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,isWriteable,Long Statement,The length of the statement "return !dataViewDisabled && -1 != ListUtils.indexOf(requestProvider.get().getAcceptableMediaTypes()`this::isSupportMediaType) && ((p=TemplateHelper.getProduces(annotations)) == null || -1 != ArrayUtils.indexOf(p`(Predicate<String>)stringType -> {" is 246.,108
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,getSize,Long Parameter List,The method has 5 parameters. ,128
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,writeTo,Complex Conditional,The conditional expression mediaType == null || MediaTypes.isWildcard(mediaType) || (mediaType.getType().equals(LOW_IE_DEFAULT_REQ_TYPE.getType()) && mediaType.getSubtype().equals(LOW_IE_DEFAULT_REQ_TYPE.getSubtype())) is complex.,135
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,writeTo,Complex Conditional,The conditional expression entity == null || (entity instanceof Collection && ((Collection)entity).size() == 0) || (entity.getClass().isArray() && Array.getLength(entity) == 0) is complex.,135
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,writeTo,Complex Method,Cyclomatic complexity of the method is 12,135
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,writeTo,Long Parameter List,The method has 7 parameters. ,135
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,writeTo,Long Statement,The length of the statement "if (mediaType == null || MediaTypes.isWildcard(mediaType) || (mediaType.getType().equals(LOW_IE_DEFAULT_REQ_TYPE.getType()) && mediaType.getSubtype().equals(LOW_IE_DEFAULT_REQ_TYPE.getSubtype()))) {" is 198.,135
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,writeTo,Long Statement,The length of the statement "if (entity == null || (entity instanceof Collection && ((Collection)entity).size() == 0) || (entity.getClass().isArray() && Array.getLength(entity) == 0)) {" is 156.,135
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,writeTo,Long Statement,The length of the statement "workersProvider.get().getMessageBodyWriter(ImplicitViewable.class`ImplicitViewable.class`annotations`mediaType).writeTo(new ImplicitViewable(templates`entity`clazz)`ImplicitViewable.class`ImplicitViewable.class`annotations`mediaType`httpHeaders`entityStream);" is 259.,135
+icode_ameba,ameba.mvc.template.internal,DataViewMessageBodyWriter,isSupportMediaType,Long Statement,The length of the statement "if (mediaType.getType().equalsIgnoreCase(type.getType()) && mediaType.getSubtype().equalsIgnoreCase(type.getSubtype())) {" is 121.,241
+icode_ameba,ameba.container,Container,Container,Abstract Function Call From Constructor,The constructor Container calls a virtual method configureHttpServer.,34
+icode_ameba,ameba.container.server,Request,Request,Long Parameter List,The method has 5 parameters. ,18
+icode_ameba,ameba.container.server,Request,getProxyRemoteAddr,Complex Method,Cyclomatic complexity of the method is 8,84
+icode_ameba,ameba.container.server,Connector,createDefault,Long Identifier,The length of the field sslTrustManagerFactoryAlgorithm is 31.,67
+icode_ameba,ameba.container.server,Connector,createDefault,Long Statement,The length of the statement "Connector.Builder builder=Connector.Builder.create().rawProperties(properties).secureEnabled(Boolean.parseBoolean(properties.get("ssl.enabled"))).sslProtocol(properties.get("ssl.protocol")).sslClientMode(Boolean.parseBoolean(properties.get("ssl.clientMode"))).sslNeedClientAuth(Boolean.parseBoolean(properties.get("ssl.needClientAuth"))).sslWantClientAuth(Boolean.parseBoolean(properties.get("ssl.wantClientAuth"))).sslKeyManagerFactoryAlgorithm(properties.get("ssl.key.manager.factory.algorithm")).sslKeyPassword(properties.get("ssl.key.password")).sslKeyStoreProvider(properties.get("ssl.key.store.provider")).sslKeyStoreType(properties.get("ssl.key.store.type")).sslKeyStorePassword(properties.get("ssl.key.store.password")).sslTrustManagerFactoryAlgorithm(properties.get("ssl.trust.manager.factory.algorithm")).sslTrustPassword(properties.get("ssl.trust.password")).sslTrustStoreProvider(properties.get("ssl.trust.store.provider")).sslTrustStoreType(properties.get("ssl.trust.store.type")).sslTrustStorePassword(properties.get("ssl.trust.store.password")).ajpEnabled(Boolean.parseBoolean(properties.get("ajp.enabled"))).host(StringUtils.defaultIfBlank(properties.get("host")`"0.0.0.0")).port(Integer.valueOf(StringUtils.defaultIfBlank(properties.get("port")`"80"))).name(properties.get("name"));" is 1299.,67
+icode_ameba,ameba.container.server,Connector,getSslTrustManagerFactoryAlgorithm,Long Identifier,The length of the field sslTrustManagerFactoryAlgorithm is 31.,327
+icode_ameba,ameba.container.internal,ConfigHelper,getContainerLifecycleListener,Long Statement,The length of the statement "final Iterable<ContainerLifecycleListener> listeners=Iterables.concat(Providers.getAllProviders(applicationHandler.getInjectionManager()`ContainerLifecycleListener.class)`new LinkedList<ContainerLifecycleListener>(){" is 216.,29
+icode_ameba,ameba.core,Application,readModuleConfig,Complex Method,Cyclomatic complexity of the method is 10,172
+icode_ameba,ameba.core,Application,readModuleConfig,Empty catch clause,The method has an empty catch block.,172
+icode_ameba,ameba.core,Application,readModuleConfig,Empty catch clause,The method has an empty catch block.,172
+icode_ameba,ameba.core,Application,readAppConfig,Long Statement,The length of the statement "String errorMsg=Messages.get("info.load.config.multi.error"`StringUtils.join(urlSet.stream().map(Application::toExternalForm)`LINE_SEPARATOR));" is 143.,306
+icode_ameba,ameba.core,Application,configureExclude,Long Statement,The length of the statement "configMap.keySet().stream().filter(key -> key.startsWith(EXCLUDES_KEY_PREFIX)).forEachOrdered(key -> addExcludes((String)configMap.get(key)));" is 142.,441
+icode_ameba,ameba.core,Application,scanClasses,Complex Method,Cyclomatic complexity of the method is 8,465
+icode_ameba,ameba.core,Application,addOnSetup,Complex Conditional,The conditional expression sortPriority == null || sortPriority < 0 || sortPriority > Integer.MAX_VALUE is complex.,579
+icode_ameba,ameba.core,Application,addOnSetup,Complex Method,Cyclomatic complexity of the method is 11,579
+icode_ameba,ameba.core,Application,addOnSetup,Magic Number,The method contains a magic number: 1000,579
+icode_ameba,ameba.core,Application,configureFeature,Complex Conditional,The conditional expression sortPriority == null || sortPriority < 0 || sortPriority > Integer.MAX_VALUE is complex.,661
+icode_ameba,ameba.core,Application,configureFeature,Complex Conditional,The conditional expression diPriority == null || diPriority < 0 || diPriority > Integer.MAX_VALUE is complex.,661
+icode_ameba,ameba.core,Application,configureFeature,Complex Method,Cyclomatic complexity of the method is 21,661
+icode_ameba,ameba.core,Application,configureFeature,Magic Number,The method contains a magic number: 1000,661
+icode_ameba,ameba.core,Application,subscribeResourceEvent,Long Statement,The length of the statement "return !javassist.Modifier.isAbstract(modifiers) && !javassist.Modifier.isInterface(modifiers) && !javassist.Modifier.isAnnotation(modifiers)&& !javassist.Modifier.isEnum(modifiers);" is 182.,778
+icode_ameba,ameba.core,Application,isResource,Long Statement,The length of the statement "return !javassist.Modifier.isAbstract(modifiers) && !javassist.Modifier.isInterface(modifiers) && !javassist.Modifier.isAnnotation(modifiers)&& !javassist.Modifier.isEnum(modifiers);" is 182.,784
+icode_ameba,ameba.core,Application,configureResource,Complex Method,Cyclomatic complexity of the method is 8,821
+icode_ameba,ameba.core,Application,configureResource,Long Statement,The length of the statement "String[] packages=StringUtils.deleteWhitespace(StringUtils.defaultIfBlank((String)getProperty("resource.packages")`"")).split("`");" is 131.,821
+icode_ameba,ameba.core,Application,setEnvironmentConfig,Magic Number,The method contains a magic number: 4,851
+icode_ameba,ameba.core,Application,convertJerseyConfig,Long Statement,The length of the statement "Stream.of(ServerProperties.class.getDeclaredFields()).filter((field) -> Modifier.isStatic(field.getModifiers())).forEach((field) -> staticFieldsMap.put(field.getName()`field));" is 176.,859
+icode_ameba,ameba.core,Application,configureServer,Long Statement,The length of the statement "if (jmxEnabled && getProperty(ServerProperties.MONITORING_STATISTICS_MBEANS_ENABLED) == null) property(ServerProperties.MONITORING_STATISTICS_MBEANS_ENABLED`jmxEnabled);" is 169.,901
+icode_ameba,ameba.core,Application,subscribeServerEvent,Complex Method,Cyclomatic complexity of the method is 8,909
+icode_ameba,ameba.core,Application,subscribeServerEvent,Empty catch clause,The method has an empty catch block.,909
+icode_ameba,ameba.core,Application,subscribeServerEvent,Long Statement,The length of the statement "builder.append(LINE_SEPARATOR).append(lineStart).append(lineChild).append(httpStart).append(ip.getHostAddress()).append(":").append(connector.getPort()).append("/");" is 165.,909
+icode_ameba,ameba.core,Application,subscribeServerEvent,Long Statement,The length of the statement "builder.append(LINE_SEPARATOR).append(lineStart).append(lineChild).append(httpStart).append("localhost:").append(connector.getPort()).append("/").append(LINE_SEPARATOR).append(lineStart).append(lineChild).append(httpStart).append("127.0.0.1:").append(connector.getPort()).append("/");" is 284.,909
+icode_ameba,ameba.core,Application,subscribeServerEvent,Long Statement,The length of the statement "appendInfo("info.memory.usage"`FileUtils.byteCountToDisplaySize((r.totalMemory() - r.freeMemory()))`FileUtils.byteCountToDisplaySize(r.maxMemory()));" is 149.,909
+icode_ameba,ameba.core,Application,appendVisitUrl,Empty catch clause,The method has an empty catch block.,921
+icode_ameba,ameba.core,Application,appendVisitUrl,Long Statement,The length of the statement "builder.append(LINE_SEPARATOR).append(lineStart).append(lineChild).append(httpStart).append(ip.getHostAddress()).append(":").append(connector.getPort()).append("/");" is 165.,921
+icode_ameba,ameba.core,Application,appendVisitUrl,Long Statement,The length of the statement "builder.append(LINE_SEPARATOR).append(lineStart).append(lineChild).append(httpStart).append("localhost:").append(connector.getPort()).append("/").append(LINE_SEPARATOR).append(lineStart).append(lineChild).append(httpStart).append("127.0.0.1:").append(connector.getPort()).append("/");" is 284.,921
+icode_ameba,ameba.core,Application,onReceive,Long Statement,The length of the statement "appendInfo("info.memory.usage"`FileUtils.byteCountToDisplaySize((r.totalMemory() - r.freeMemory()))`FileUtils.byteCountToDisplaySize(r.maxMemory()));" is 149.,972
+icode_ameba,ameba.core,Application,configureLogger,Complex Method,Cyclomatic complexity of the method is 8,1474
+icode_ameba,ameba.core,Application,configureLogger,Long Statement,The length of the statement "URL userLoggerConfigFile=getResource(StringUtils.defaultIfBlank(properties.getProperty("logger.config.file")`"conf/" + DEFAULT_LOGBACK_CONF));" is 142.,1474
+icode_ameba,ameba.core,ExcludeResourceConfig,isExclude,Complex Method,Cyclomatic complexity of the method is 9,24
+icode_ameba,ameba.core,ExcludeResourceConfig,isExclude,Magic Number,The method contains a magic number: 3,24
+icode_ameba,ameba.core,ExcludeResourceConfig,isExclude,Magic Number,The method contains a magic number: 2,24
+icode_ameba,ameba.core.ws.rs,OptionsResponseGenerator,generate,Long Parameter List,The method has 5 parameters. ,20
+icode_ameba,ameba.core.ws.rs,OptionsMethodProcessor,OptionsMethodProcessor,Long Statement,The length of the statement "methodList.add(new ModelProcessorUtil.Method(HttpMethod.OPTIONS`WILDCARD_TYPE`WILDCARD_TYPE`GenericOptionsInflector.class));" is 124.,42
+icode_ameba,ameba.core.ws.rs,OptionsMethodProcessor,getSupportProduceMediaType,Complex Conditional,The conditional expression mediaType.isCompatible(TEXT_PLAIN_TYPE) || (mediaType.getType().equalsIgnoreCase("application") && !mediaType.getSubtype().toLowerCase().contains("html")) || mediaType.getSubtype().equalsIgnoreCase("json")|| mediaType.getSubtype().equalsIgnoreCase("xml")|| mediaType.getSubtype().toLowerCase().endsWith("+json")|| mediaType.getSubtype().toLowerCase().endsWith("+xml") is complex.,73
+icode_ameba,ameba.core.ws.rs,OptionsMethodProcessor,getSupportProduceMediaType,Long Statement,The length of the statement "if (mediaType.isCompatible(TEXT_PLAIN_TYPE) || (mediaType.getType().equalsIgnoreCase("application") && !mediaType.getSubtype().toLowerCase().contains("html")) || mediaType.getSubtype().equalsIgnoreCase("json")|| mediaType.getSubtype().equalsIgnoreCase("xml")|| mediaType.getSubtype().toLowerCase().endsWith("+json")|| mediaType.getSubtype().toLowerCase().endsWith("+xml")) {" is 374.,73
+icode_ameba,ameba.core.ws.rs,OptionsMethodProcessor,generateRespBuilder,Long Statement,The length of the statement "final Set<String> allowedMethods=ModelProcessorUtil.getAllowedMethods((extendedUriInfo.getMatchedRuntimeResources().get(0)));" is 125.,94
+icode_ameba,ameba.core.ws.rs,ParamConverters,parseDate,Complex Conditional,The conditional expression !(value.contains("-") || value.contains("+")) && !value.endsWith("Z") is complex.,69
+icode_ameba,ameba,Ameba,main,Empty catch clause,The method has an empty catch block.,70
+icode_ameba,ameba,Ameba,main,Empty catch clause,The method has an empty catch block.,70
+icode_ameba,ameba,Ameba,main,Magic Number,The method contains a magic number: 10000,70
+icode_ameba,ameba,Ameba,main,Magic Number,The method contains a magic number: 500,70
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 4,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 4,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 60,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 4,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 60,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 4,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 60,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 60,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 4,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 60,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 60,12
+icode_ameba,ameba,TimesTest,testParseDuration,Magic Number,The method contains a magic number: 24,12
+icode_ameba,ameba,QueryExprMetaParserTest,parseTest,Long Statement,The length of the statement "String expr="x1.x2.w.not." + " or(" + " a_1_1."+ " b_1_2("+ " j(h.n.m.b()m(1))"+ " )eq1(asd)dd.w.eq4(asd344)"+ " d_1_3."+ " in("+ " 1!2!3!4"+ " )x.eq(m.call)eq2(w.d.w.a.cal)"+ " )"+ "xx.dd.dd."+ " ww("+ " ddddd!'nil'!nil!12343!2ww!errf"+ " )l.w2.f.g.or";" is 254.,20
+icode_ameba,ameba.validation,ValidationFeature,configure,Long Statement,The length of the statement "context.register(new ValidationBinder()).register(ValidationExceptionMapper.class).register(ValidationConfigurationContextResolver.class);" is 138.,33
+icode_ameba,ameba.validation,ValidationHelper,constraintViolationToValidationErrors,Long Statement,The length of the statement "return Lists.transform(Lists.newArrayList(violation.getConstraintViolations())`violation1 -> new ErrorMessage.Error(Hashing.murmur3_32().hashUnencodedChars(violation1.getMessageTemplate()).toString()`violation1.getMessage()`null`getViolationPath(violation1)));" is 260.,31
+icode_ameba,ameba.validation,ValidationHelper,getViolationInvalidValue,Complex Method,Cyclomatic complexity of the method is 12,49
+icode_ameba,ameba.lib,El,parse,Long Parameter List,The method has 5 parameters. ,24
+icode_ameba,ameba.lib,El,addVariables,Long Statement,The length of the statement "ValueExpression valueExpression=expressionFactory.createValueExpression(value`value != null ? value.getClass() : Object.class);" is 127.,30
+icode_ameba,ameba.lib,El,addFunctions,Complex Conditional,The conditional expression mapper instanceof MapBasedFunctionMapper && functions != null && !functions.isEmpty() is complex.,40
+icode_ameba,ameba.lib,El,getFunctions,Long Statement,The length of the statement "return Stream.of(funcClass.getMethods()).filter(method -> Modifier.isStatic(method.getModifiers())).collect(Collectors.toMap(Method::getName`m -> m));" is 150.,58
+icode_ameba,ameba.lib,El,parse,Long Parameter List,The method has 5 parameters. ,72
+icode_ameba,ameba.i18n,Messages,getLocale,Empty catch clause,The method has an empty catch block.,79
+icode_ameba,ameba.i18n,Messages,getResourceBundle,Empty catch clause,The method has an empty catch block.,95
+icode_ameba,ameba.i18n,MultiResourceBundleControl,newBundle,Complex Method,Cyclomatic complexity of the method is 10,36
+icode_ameba,ameba.i18n,MultiResourceBundleControl,newBundle,Empty catch clause,The method has an empty catch block.,36
+icode_ameba,ameba.i18n,MultiResourceBundleControl,newBundle,Long Parameter List,The method has 5 parameters. ,36
+icode_ameba,ameba.i18n,MultiResourceBundleControl,newBundle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@563ba205,36
+icode_ameba,ameba.db,PersistenceExceptionMapper,toResponse,Long Statement,The length of the statement "errors.add(new Result.Error(errorMessage.getCode()`exception.getMessage()`null`isDev ? ErrorMessage.parseSource(resourceInfo) : null));" is 135.,36
+icode_ameba,ameba.db,PersistenceExceptionMapper,toResponse,Long Statement,The length of the statement "return Response.status(errorMessage.getStatus()).entity(errorMessage).type(ExceptionMapperUtils.getResponseType()).build();" is 123.,36
+icode_ameba,ameba.db,DataSourceManager,setup,Complex Method,Cyclomatic complexity of the method is 12,61
+icode_ameba,ameba.db,DataSourceManager,setup,Magic Number,The method contains a magic number: 2,61
+icode_ameba,ameba.db,DataSourceManager,setup,Magic Number,The method contains a magic number: 2,61
+icode_ameba,ameba.db,DataSourceManager,setup,Magic Number,The method contains a magic number: 2,61
+icode_ameba,ameba.db.dsl,QueryExprMeta,toString,Long Statement,The length of the statement "return (field == null ? "" : field + ".") + operator + "("+ (arguments == null ? "" : StringUtils.join(Collections2.transform(arguments`input -> {" is 146.,143
+icode_ameba,ameba.db.dsl,ExprArgTransformer,transform,Long Parameter List,The method has 7 parameters. ,18
+icode_ameba,ameba.db.dsl,QueryExprInvoker,arg,Long Parameter List,The method has 6 parameters. ,61
+icode_ameba,ameba.db.dsl,QueryExprListener,exitSourceElement,Complex Method,Cyclomatic complexity of the method is 9,42
+icode_ameba,ameba.db.dsl,ExprTransformer,transform,Long Parameter List,The method has 5 parameters. ,18
+icode_ameba,ameba.db.dsl,QueryLexer,action,Magic Number,The method contains a magic number: 5,100
+icode_ameba,ameba.db.dsl,QueryParser,query,Magic Number,The method contains a magic number: 21,106
+icode_ameba,ameba.db.dsl,QueryParser,query,Magic Number,The method contains a magic number: 20,106
+icode_ameba,ameba.db.dsl,QueryParser,query,Magic Number,The method contains a magic number: 23,106
+icode_ameba,ameba.db.dsl,QueryParser,sourceElements,Magic Number,The method contains a magic number: 2,159
+icode_ameba,ameba.db.dsl,QueryParser,sourceElements,Magic Number,The method contains a magic number: 26,159
+icode_ameba,ameba.db.dsl,QueryParser,sourceElements,Magic Number,The method contains a magic number: 25,159
+icode_ameba,ameba.db.dsl,QueryParser,sourceElements,Magic Number,The method contains a magic number: 28,159
+icode_ameba,ameba.db.dsl,QueryParser,sourceElement,Magic Number,The method contains a magic number: 4,214
+icode_ameba,ameba.db.dsl,QueryParser,sourceElement,Magic Number,The method contains a magic number: 30,214
+icode_ameba,ameba.db.dsl,QueryParser,sourceElement,Magic Number,The method contains a magic number: 33,214
+icode_ameba,ameba.db.dsl,QueryParser,sourceElement,Magic Number,The method contains a magic number: 31,214
+icode_ameba,ameba.db.dsl,QueryParser,sourceElement,Magic Number,The method contains a magic number: 32,214
+icode_ameba,ameba.db.dsl,QueryParser,arguments,Long Statement,The length of the statement "if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << NullLiteral) | (1L << BooleanLiteral) | (1L << StringLiteral)| (1L << DecimalLiteral)| (1L << Identifier)| (1L << COMMA))) != 0)) {" is 183.,266
+icode_ameba,ameba.db.dsl,QueryParser,arguments,Magic Number,The method contains a magic number: 6,266
+icode_ameba,ameba.db.dsl,QueryParser,arguments,Magic Number,The method contains a magic number: 35,266
+icode_ameba,ameba.db.dsl,QueryParser,arguments,Magic Number,The method contains a magic number: 37,266
+icode_ameba,ameba.db.dsl,QueryParser,arguments,Magic Number,The method contains a magic number: 0x3f,266
+icode_ameba,ameba.db.dsl,QueryParser,arguments,Magic Number,The method contains a magic number: 36,266
+icode_ameba,ameba.db.dsl,QueryParser,arguments,Magic Number,The method contains a magic number: 39,266
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Complex Method,Cyclomatic complexity of the method is 14,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 8,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 62,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 10,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 53,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 42,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 41,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 46,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 46,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 44,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 45,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 48,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 6,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 2,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 51,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 7,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 50,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 55,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 0x3f,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 2,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 2,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 58,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 57,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Magic Number,The method contains a magic number: 60,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@8bc3a81,337
+icode_ameba,ameba.db.dsl,QueryParser,argumentList,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3a5ec48e,337
+icode_ameba,ameba.db.dsl,QueryParser,method,Magic Number,The method contains a magic number: 10,473
+icode_ameba,ameba.db.dsl,QueryParser,method,Magic Number,The method contains a magic number: 64,473
+icode_ameba,ameba.db.dsl,QueryParser,method,Magic Number,The method contains a magic number: 65,473
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 12,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 77,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 13,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 67,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 2,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 2,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 68,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 75,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 12,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 71,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 69,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 70,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 73,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 11,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Magic Number,The method contains a magic number: 2,537
+icode_ameba,ameba.db.dsl,QueryParser,expression,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4da61cd5,537
+icode_ameba,ameba.db.dsl,QueryParser,identifierName,Magic Number,The method contains a magic number: 14,620
+icode_ameba,ameba.db.dsl,QueryParser,identifierName,Magic Number,The method contains a magic number: 79,620
+icode_ameba,ameba.db.dsl,QueryParser,identifierVal,Magic Number,The method contains a magic number: 16,657
+icode_ameba,ameba.db.dsl,QueryParser,identifierVal,Magic Number,The method contains a magic number: 81,657
+icode_ameba,ameba.db.dsl,QueryParser,literal,Long Statement,The length of the statement "if (!((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << NullLiteral) | (1L << BooleanLiteral) | (1L << StringLiteral)| (1L << DecimalLiteral))) != 0))) {" is 151.,697
+icode_ameba,ameba.db.dsl,QueryParser,literal,Magic Number,The method contains a magic number: 18,697
+icode_ameba,ameba.db.dsl,QueryParser,literal,Magic Number,The method contains a magic number: 83,697
+icode_ameba,ameba.db.dsl,QueryParser,literal,Magic Number,The method contains a magic number: 0x3f,697
+icode_ameba,ameba.db.model,ModelManager,setup,Complex Method,Cyclomatic complexity of the method is 8,44
+icode_ameba,ameba.db.ebean.jackson,FindSerializers,findCollectionSerializer,Long Parameter List,The method has 5 parameters. ,42
+icode_ameba,ameba.db.ebean.jackson,FindSerializers,findCollectionSerializer,Long Statement,The length of the statement "if (Collection.class.isAssignableFrom(type.getRawClass()) && jsonContext.isSupportedType(type.getContentType().getRawClass())) {" is 128.,42
+icode_ameba,ameba.db.ebean.jackson,FindDeserializers,findCollectionDeserializer,Long Parameter List,The method has 5 parameters. ,39
+icode_ameba,ameba.db.ebean.jackson,CommonBeanSerializer,getPathProperties,Complex Method,Cyclomatic complexity of the method is 9,34
+icode_ameba,ameba.db.ebean.internal,ModelInterceptor,applyFetchProperties,Complex Method,Cyclomatic complexity of the method is 14,168
+icode_ameba,ameba.db.ebean.internal,ModelInterceptor,fetchRowCount,Complex Conditional,The conditional expression reqTotalCount != null && !"false".equalsIgnoreCase(reqTotalCount) && !"0".equals(reqTotalCount) is complex.,246
+icode_ameba,ameba.db.ebean.internal,ModelInterceptor,applyPageConfig,Complex Conditional,The conditional expression maxRows == null && DEFAULT_PER_PAGE != null && DEFAULT_PER_PAGE > 0 is complex.,277
+icode_ameba,ameba.db.ebean.internal,ModelInterceptor,init,Long Statement,The length of the statement "REQ_TOTAL_COUNT_PARAM_NAME=StringUtils.isNotBlank(reqTotalCountParamName) ? perPageParamName : REQ_TOTAL_COUNT_PARAM_NAME;" is 122.,400
+icode_ameba,ameba.db.ebean.internal,ModelInterceptor,init,Long Statement,The length of the statement "REQ_TOTAL_COUNT_HEADER_NAME=StringUtils.isNotBlank(reqTotalCountHeaderName) ? perPageParamName : REQ_TOTAL_COUNT_HEADER_NAME;" is 125.,400
+icode_ameba,ameba.db.ebean.internal,ModelInterceptor,isWritable,Long Statement,The length of the statement "return Finder.class.isAssignableFrom(type) || Query.class.isAssignableFrom(type) || ExpressionList.class.isAssignableFrom(type)|| FutureList.class.isAssignableFrom(type);" is 170.,443
+icode_ameba,ameba.db.ebean.internal,ModelInterceptor,aroundWriteTo,Complex Method,Cyclomatic complexity of the method is 12,456
+icode_ameba,ameba.db.ebean.filter,QuerySyntaxExceptionMapper,toResponse,Long Statement,The length of the statement "return providers.getExceptionMapper(Throwable.class).toResponse(new UnprocessableEntityException(exception.getMessage()`exception));" is 132.,23
+icode_ameba,ameba.db.ebean.filter,EbeanExprInvoker,arg,Long Parameter List,The method has 6 parameters. ,64
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,junction,Long Parameter List,The method has 5 parameters. ,57
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,match,Complex Method,Cyclomatic complexity of the method is 33,237
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,match,Long Method,The method has 117 lines of code.,237
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,match,Magic Number,The method contains a magic number: 2,237
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,match,Magic Number,The method contains a magic number: 2,237
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,match,Magic Number,The method contains a magic number: 2,237
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,textQueryString,Complex Method,Cyclomatic complexity of the method is 23,365
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,textCommonTerms,Complex Method,Cyclomatic complexity of the method is 8,450
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,checkTextOptions,Magic Number,The method contains a magic number: 2,487
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,textSimple,Complex Method,Cyclomatic complexity of the method is 12,502
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,transform,Complex Method,Cyclomatic complexity of the method is 74,680
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,transform,Long Method,The method has 189 lines of code.,680
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,transform,Long Parameter List,The method has 5 parameters. ,680
+icode_ameba,ameba.db.ebean.filter,CommonExprTransformer,transform,Magic Number,The method contains a magic number: 2,680
+icode_ameba,ameba.db.ebean.filter,CommonExprArgTransformer,transform,Complex Method,Cyclomatic complexity of the method is 28,26
+icode_ameba,ameba.db.ebean.filter,CommonExprArgTransformer,transform,Long Parameter List,The method has 7 parameters. ,26
+icode_ameba,ameba.db.ebean.filter,CommonExprArgTransformer,transform,Magic Number,The method contains a magic number: 2,26
+icode_ameba,ameba.db.ebean,EbeanUtils,checkQuery,Complex Method,Cyclomatic complexity of the method is 9,136
+icode_ameba,ameba.db.ebean,EbeanUtils,parseOrderProperty,Complex Method,Cyclomatic complexity of the method is 8,261
+icode_ameba,ameba.db.ebean,EbeanUtils,parseOrderProperty,Long Statement,The length of the statement "throw new UnprocessableEntityException(Messages.get("info.query.orderby1.unprocessable.entity"`Arrays.toString(pairs)`wordList.size()));" is 136.,261
+icode_ameba,ameba.db.ebean,EbeanUtils,parseOrderProperty,Magic Number,The method contains a magic number: 2,261
+icode_ameba,ameba.db.ebean,EbeanFeature,configure,Complex Method,Cyclomatic complexity of the method is 8,95
+icode_ameba,ameba.db.ebean.migration,MigrationModel,findMigrationResource,Magic Number,The method contains a magic number: 3,71
+icode_ameba,ameba.db.ebean.migration,PlatformDdlWriter,isApply,Long Statement,The length of the statement "return (changeSet.getType() == ChangeSetType.APPLY || changeSet.getType() == ChangeSetType.PENDING_DROPS) && !changeSet.getChangeSetChildren().isEmpty();" is 153.,60
+icode_ameba,ameba.db.ebean.migration,PlatformDdlWriter,writeApplyDdl,Long Statement,The length of the statement "scriptInfo.setApplyDdl("-- drop dependencies\n" + write.applyDropDependencies().getBuffer() + "\n"+ "-- apply changes\n"+ write.apply().getBuffer()+ write.applyForeignKeys().getBuffer()+ write.applyHistoryView().getBuffer()+ write.applyHistoryTrigger().getBuffer());" is 266.,80
+icode_ameba,ameba.db.ebean.support,ModelResourceStructure,patch,Magic Number,The method contains a magic number: 422,325
+icode_ameba,ameba.db.migration.resources,MigrationResource,info,Complex Method,Cyclomatic complexity of the method is 15,77
+icode_ameba,ameba.db.migration.resources,MigrationResource,info,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1710085e,77
+icode_ameba,ameba.db.migration.resources,MigrationResource,migrateView,Long Statement,The length of the statement "String desc=model.get("description").concat("&nbsp; - &nbsp;<input name=\"description\" placeholder=\"" + Messages.get("view.app.database.migrate.description.placeholder") + "\">");" is 181.,188
+icode_ameba,ameba.db.migration.resources,MigrationResource,getMigrations,Long Statement,The length of the statement "DataSourceManager.getDataSourceNames().stream().filter(dbName -> !"false".equals(properties.get("db." + dbName + ".migration.enabled"))).forEach(dbName -> {" is 156.,382
+icode_ameba,ameba.db.migration.resources,MigrationResource,future,Long Statement,The length of the statement "if ((migrationInfo.getState() == MigrationState.FUTURE_SUCCESS) || (migrationInfo.getState() == MigrationState.FUTURE_FAILED)) {" is 128.,436
+icode_ameba,ameba.db.migration,MigrationFeature,generateMigrationId,Magic Number,The method contains a magic number: 20,61
+icode_ameba,ameba.db.migration,MigrationFeature,generateMigrationId,Magic Number,The method contains a magic number: 30,61
+icode_ameba,ameba.db.migration,MigrationFeature,configure,Long Statement,The length of the statement "DataSourceManager.getDataSourceNames().stream().filter(dbName -> !"false".equals(properties.get("db." + dbName + ".migration.enabled"))).forEach(dbName -> {" is 156.,70
+icode_ameba,ameba.db.migration,MigrationFilter,filter,Complex Conditional,The conditional expression !mode.isDev() && (path.equals(migrationUri) || path.equals(repairUri)) && HttpMethod.GET.equals(req.getMethod())&& failMigrations != null && !failMigrations.isEmpty() is complex.,44
+icode_ameba,ameba.db.migration,MigrationFilter,filter,Complex Conditional,The conditional expression !mode.isDev() && path.equals(migrationUri) && HttpMethod.GET.equals(req.getMethod()) is complex.,44
+icode_ameba,ameba.db.migration,MigrationFilter,filter,Complex Conditional,The conditional expression !mode.isDev() && path.equals(repairUri) && HttpMethod.GET.equals(req.getMethod()) is complex.,44
+icode_ameba,ameba.db.migration,MigrationFilter,filter,Complex Conditional,The conditional expression HttpMethod.GET.equals(req.getMethod()) && failMigrations != null && !failMigrations.isEmpty() is complex.,44
+icode_ameba,ameba.db.migration,MigrationFilter,filter,Complex Method,Cyclomatic complexity of the method is 19,44
+icode_ameba,ameba.db.migration,MigrationFilter,filter,Long Statement,The length of the statement "if (!mode.isDev() && (path.equals(migrationUri) || path.equals(repairUri)) && HttpMethod.GET.equals(req.getMethod())&& failMigrations != null && !failMigrations.isEmpty()) {" is 173.,44
+icode_ameba,ameba.db.migration,MigrationFilter,repairView,Long Statement,The length of the statement "req.abortWith(Response.serverError().entity(resource.repairView(MigrationFeature.getMigrationId())).type(MediaType.TEXT_HTML_TYPE).build());" is 140.,124
+icode_ameba,ameba.db.migration,MigrationFilter,migrateView,Magic Number,The method contains a magic number: 500,133
+icode_ameba,ameba.message.jackson.internal,JacksonUtils,configFilterIntrospector,Long Statement,The length of the statement "return mapper.setAnnotationIntrospector(AnnotationIntrospector.pair(customIntrospector`new JacksonAnnotationIntrospector(){" is 123.,33
+icode_ameba,ameba.message.jackson.internal,JacksonUtils,configureMapper,Long Statement,The length of the statement "mapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY).enable(SerializationFeature.WRITE_ENUMS_USING_INDEX).enable(MapperFeature.PROPAGATE_TRANSIENT_MARKER).disable(SerializationFeature.WRITE_NULL_MAP_VALUES`SerializationFeature.FAIL_ON_EMPTY_BEANS);" is 259.,87
+icode_ameba,ameba.message.jackson.internal,JacksonUtils,configureGenerator,Complex Conditional,The conditional expression pretty != null && !"false".equalsIgnoreCase(pretty) || isDev is complex.,109
+icode_ameba,ameba.message.jackson.internal,FilteringObjectWriterModifier,modify,Long Parameter List,The method has 5 parameters. ,37
+icode_ameba,ameba.message.jackson.internal,JsonProcessingExceptionMapper,toResponse,Long Statement,The length of the statement "errorMessage.addError(new Result.Error(errorMessage.getCode()`message != null ? message : exception.getMessage()`desc`source));" is 127.,37
+icode_ameba,ameba.message.jackson.internal,JsonProcessingExceptionMapper,toResponse,Long Statement,The length of the statement "return Response.status(errorMessage.getStatus()).entity(errorMessage).type(ExceptionMapperUtils.getResponseType()).build();" is 123.,37
+icode_ameba,ameba.message.jackson.internal,FilteringJacksonXMLProvider,writeTo,Long Parameter List,The method has 7 parameters. ,60
+icode_ameba,ameba.message.jackson.internal,JacksonObjectProvider,transform,Long Statement,The length of the statement "final FilteringPropertyFilter root=new FilteringPropertyFilter(graph.getEntityClass()`graph.getFields()`createSubfilters(graph.getEntityClass()`graph.getSubgraphs()));" is 167.,28
+icode_ameba,ameba.message.jackson.internal,JacksonObjectProvider,createSubfilters,Long Statement,The length of the statement "final FilteringPropertyFilter filter=new FilteringPropertyFilter(graph.getEntityClass()`graph.getFields(fieldName)`subSubfilters);" is 130.,41
+icode_ameba,ameba.message.jackson.internal,FilteringJacksonJsonProvider,writeTo,Long Parameter List,The method has 7 parameters. ,60
+icode_ameba,ameba.message.jackson,JacksonFeature,configure,Long Statement,The length of the statement "final String jsonFeature=CommonProperties.getValue(config.getProperties()`config.getRuntimeType()`InternalProperties.JSON_FEATURE`JSON_FEATURE`String.class);" is 157.,45
+icode_ameba,ameba.message.jackson,JacksonFeature,configure,Long Statement,The length of the statement "context.property(PropertiesHelper.getPropertyNameForRuntime(InternalProperties.JSON_FEATURE`config.getRuntimeType())`JSON_FEATURE);" is 131.,45
+icode_ameba,ameba.message.jackson,JacksonFeature,configure,Long Statement,The length of the statement "Collections.addAll(HttpPatchProperties.SUPPORT_PATCH_MEDIA_TYPES`MediaType.APPLICATION_JSON`MediaType.APPLICATION_XML`MediaType.TEXT_XML);" is 138.,45
+icode_ameba,ameba.message.internal,StreamingWriterInterceptor,aroundWriteTo,Complex Method,Cyclomatic complexity of the method is 9,42
+icode_ameba,ameba.message.internal,StreamingWriterInterceptor,isWritable,Long Statement,The length of the statement "return context.getEntity() != null && !Boolean.FALSE.equals(requestProvider.get().getProperty(MessageHelper.STREAMING_RANGE_ENABLED)) && context.getHeaders().containsKey(HttpHeaders.CONTENT_LENGTH) && !(context.getEntity() instanceof MediaStreaming);" is 250.,78
+icode_ameba,ameba.message.internal,StreamingWriterInterceptor,applyStreaming,Long Statement,The length of the statement "context.setEntity(new MediaStreaming(entity`requestContext.getHeaderString(MediaStreaming.RANGE)`process`context.getMediaType()`context.getHeaders()));" is 151.,91
+icode_ameba,ameba.message.internal,MediaStreaming,MediaStreaming,Long Parameter List,The method has 5 parameters. ,44
+icode_ameba,ameba.message.internal,MediaStreaming,write,Complex Method,Cyclomatic complexity of the method is 8,65
+icode_ameba,ameba.message.internal,MediaStreaming,write,Magic Number,The method contains a magic number: 2,65
+icode_ameba,ameba.message.internal,MediaStreaming,write,Magic Number,The method contains a magic number: 2,65
+icode_ameba,ameba.message.internal,MediaStreaming,write,Magic Number,The method contains a magic number: 11,65
+icode_ameba,ameba.message.internal,MediaStreaming,write,Magic Number,The method contains a magic number: 20,65
+icode_ameba,ameba.message.internal,TextMessageBodyWriter,isWriteable,Long Statement,The length of the statement "return type != null && mediaType.getType().equals(MediaType.TEXT_PLAIN_TYPE.getType()) && mediaType.getSubtype().equals(MediaType.TEXT_PLAIN_TYPE.getSubtype());" is 160.,44
+icode_ameba,ameba.message.internal,TextMessageBodyWriter,getSize,Long Parameter List,The method has 5 parameters. ,55
+icode_ameba,ameba.message.internal,TextMessageBodyWriter,writeTo,Long Parameter List,The method has 7 parameters. ,62
+icode_ameba,ameba.message.internal,PathMessageBodyWriter,getSize,Long Parameter List,The method has 5 parameters. ,36
+icode_ameba,ameba.message.internal,PathMessageBodyWriter,writeTo,Long Parameter List,The method has 7 parameters. ,42
+icode_ameba,ameba.message.internal,PathPropertiesParser,getPath,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7e11400f,51
+icode_ameba,ameba.message.internal,PathPropertiesParser,parseSection,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@32a791f7,76
+icode_ameba,ameba.message.filtering,DownloadEntityFilter,filter,Complex Conditional,The conditional expression StringUtils.isBlank(userAgent) || userAgent.contains("MSIE") || userAgent.contains("Android") is complex.,30
+icode_ameba,ameba.message.filtering,DownloadEntityFilter,filter,Complex Method,Cyclomatic complexity of the method is 15,30
+icode_ameba,ameba.message.filtering,DownloadEntityFilter,filter,Long Statement,The length of the statement "if (StringUtils.isBlank(userAgent) || userAgent.contains("MSIE") || userAgent.contains("Android")) fileName="filename=" + fileName;" is 131.,30
+icode_ameba,ameba.message.filtering,EntityFieldsProcessor,process,Long Parameter List,The method has 5 parameters. ,26
+icode_ameba,ameba.message.filtering,EntityFieldsProcessor,process,Long Statement,The length of the statement "throw new IllegalArgumentException("field name: " + fieldName + " type: "+ fieldClass+ " must be have a explicit generics; eg. List<MyEntity> list= ...");" is 154.,26
+icode_ameba,ameba.message.filtering,SysFilteringFeature,configure,Magic Number,The method contains a magic number: 100,16
+icode_ameba,ameba.message.filtering,LoadBalancerRequestFilter,filter,Magic Number,The method contains a magic number: 443,24
+icode_ameba,ameba.message.filtering,LoadBalancerRequestFilter,filter,Magic Number,The method contains a magic number: 443,24
+icode_ameba,ameba.message.filtering,LoggingFilter,printRequestLine,Long Parameter List,The method has 5 parameters. ,110
+icode_ameba,ameba.message.filtering,LoggingFilter,printRequestLine,Long Statement,The length of the statement "prefixId(b`id).append(NOTIFICATION_PREFIX).append(note).append(" on thread ").append(Thread.currentThread().getName()).append("\n");" is 132.,110
+icode_ameba,ameba.message.filtering,LoggingFilter,printResponseLine,Long Statement,The length of the statement "prefixId(b`id).append(NOTIFICATION_PREFIX).append(note).append(" on thread ").append(Thread.currentThread().getName()).append("\n");" is 132.,119
+icode_ameba,ameba.message.filtering,LoggingFilter,isSupportPrintType,Long Statement,The length of the statement "return mediaType != null && ((getPrintMoreType() && (mediaType.getType().equals("text") || mediaType.getSubtype().equals("javascript"))) || mediaType.getSubtype().equals("json") || mediaType.getSubtype().equals("xml"));" is 219.,182
+icode_ameba,ameba.message.filtering,LoggingFilter,filter,Complex Conditional,The conditional expression printEntity && context.hasEntity() && isSupportPrintType(context.getMediaType()) is complex.,189
+icode_ameba,ameba.message.filtering,LoggingFilter,filter,Complex Conditional,The conditional expression printEntity && responseContext.hasEntity() && isSupportPrintType(responseContext.getMediaType()) is complex.,212
+icode_ameba,ameba.message.filtering,LoggingFilter,filter,Long Statement,The length of the statement "responseContext.setEntityStream(logInboundEntity(b`responseContext.getEntityStream()`MessageUtils.getCharset(responseContext.getMediaType())));" is 143.,212
+icode_ameba,ameba.message.filtering,LoggingFilter,filter,Complex Conditional,The conditional expression printEntity && context.hasEntity() && isSupportPrintType(context.getMediaType()) is complex.,238
+icode_ameba,ameba.message.filtering,LoggingFilter,filter,Complex Conditional,The conditional expression printEntity && isSupportPrintType(responseContext.getMediaType()) && responseContext.hasEntity() is complex.,259
+icode_ameba,ameba.message.error,ExceptionMapperUtils,getResponseType,Magic Number,The method contains a magic number: 406,50
+icode_ameba,ameba.message.error,StatusMapper,filter,Complex Conditional,The conditional expression !responseContext.hasEntity() && !((ContainerResponse)responseContext).isMappedFromException() && responseContext.getStatus() >= 400 && responseContext.getStatus() < 600 is complex.,32
+icode_ameba,ameba.message.error,StatusMapper,filter,Long Statement,The length of the statement "if (!responseContext.hasEntity() && !((ContainerResponse)responseContext).isMappedFromException() && responseContext.getStatus() >= 400 && responseContext.getStatus() < 600) {" is 175.,32
+icode_ameba,ameba.message.error,StatusMapper,filter,Long Statement,The length of the statement "types=workersProvider.get().getMessageBodyWriterMediaTypes(responseContext.getEntityClass()`responseContext.getEntityType()`responseContext.getEntityAnnotations());" is 164.,32
+icode_ameba,ameba.message.error,StatusMapper,filter,Long Statement,The length of the statement "types=workersProvider.get().getMessageBodyReaderMediaTypes(responseContext.getEntityClass()`responseContext.getEntityType()`responseContext.getEntityAnnotations());" is 164.,32
+icode_ameba,ameba.message.error,StatusMapper,filter,Magic Number,The method contains a magic number: 400,32
+icode_ameba,ameba.message.error,StatusMapper,filter,Magic Number,The method contains a magic number: 600,32
+icode_ameba,ameba.message.error,StatusMapper,filter,Magic Number,The method contains a magic number: 406,32
+icode_ameba,ameba.message.error,StatusMapper,filter,Magic Number,The method contains a magic number: 415,32
+icode_ameba,ameba.message.error,ErrorMessage,parseHttpStatus,Complex Method,Cyclomatic complexity of the method is 8,158
+icode_ameba,ameba.message.error,ErrorMessage,parseHttpStatus,Magic Number,The method contains a magic number: 500,158
+icode_ameba,ameba.message.error,ErrorMessage,parseHttpStatus,Magic Number,The method contains a magic number: 415,158
+icode_ameba,ameba.message.error,ErrorMessage,parseHttpStatus,Magic Number,The method contains a magic number: 406,158
+icode_ameba,ameba.message.error,ErrorMessage,parseHttpStatus,Magic Number,The method contains a magic number: 404,158
+icode_ameba,ameba.message.error,ErrorMessage,parseErrors,Long Statement,The length of the statement "Result.Error error=new Result.Error(Hashing.murmur3_32().hashUnencodedChars(exception.getClass().getName()).toString()`cause.getMessage());" is 139.,187
+icode_ameba,ameba.message.error,ErrorMessage,parseErrors,Magic Number,The method contains a magic number: 500,187
+icode_ameba,ameba.message.error,ErrorMessage,parseErrors,Magic Number,The method contains a magic number: 400,187
+icode_ameba,ameba.message.error,ErrorMessage,parseErrors,Magic Number,The method contains a magic number: 500,187
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Complex Conditional,The conditional expression status == 402 || (status > 417 && status < 421) || status > 424 is complex.,228
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Magic Number,The method contains a magic number: 500,228
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Magic Number,The method contains a magic number: 402,228
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Magic Number,The method contains a magic number: 417,228
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Magic Number,The method contains a magic number: 421,228
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Magic Number,The method contains a magic number: 424,228
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Magic Number,The method contains a magic number: 400,228
+icode_ameba,ameba.message.error,ErrorMessage,parseMessage,Magic Number,The method contains a magic number: 501,228
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Complex Conditional,The conditional expression status == 402 || (status > 417 && status < 421) || status > 424 is complex.,259
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Magic Number,The method contains a magic number: 500,259
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Magic Number,The method contains a magic number: 402,259
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Magic Number,The method contains a magic number: 417,259
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Magic Number,The method contains a magic number: 421,259
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Magic Number,The method contains a magic number: 424,259
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Magic Number,The method contains a magic number: 400,259
+icode_ameba,ameba.message.error,ErrorMessage,parseDescription,Magic Number,The method contains a magic number: 501,259
+icode_ameba,ameba.message.error,ErrorMessage,toString,Long Statement,The length of the statement "return Messages.get("error.code") + ": " + getCode()+ "\n"+ Messages.get("error.message")+ ": "+ getMessage()+ "\n"+ Messages.get("error.description")+ ": "+ getDescription();" is 175.,341
+icode_ameba,ameba.message.error,DefaultExceptionMapper,parseErrors,Complex Conditional,The conditional expression resourceInfo != null && (status == 500 || status == 400) is complex.,83
+icode_ameba,ameba.message.error,DefaultExceptionMapper,parseErrors,Long Statement,The length of the statement "errors.add(new Result.Error(Hashing.murmur3_32().hashUnencodedChars(exception.getClass().getName()).toString()`exception.getMessage()`null`isDev ? ClassUtils.toString(clazz`resourceInfo.getResourceMethod()) : null));" is 216.,83
+icode_ameba,ameba.message.error,DefaultExceptionMapper,parseErrors,Magic Number,The method contains a magic number: 500,83
+icode_ameba,ameba.message.error,DefaultExceptionMapper,parseErrors,Magic Number,The method contains a magic number: 400,83
+icode_ameba,ameba.message.error,DefaultExceptionMapper,toResponse,Magic Number,The method contains a magic number: 500,112
+icode_ameba,ameba.message.error,DefaultExceptionMapper,toResponse,Magic Number,The method contains a magic number: 404,112

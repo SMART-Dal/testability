@@ -1,0 +1,347 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+poetix_protonpack,com.codepoetics.protonpack,Seq,get,Long Statement,The length of the statement "return isEmpty() ? Stream.empty() : StreamUtils.unfold(this`s -> s.tail().isEmpty() ? Optional.empty() : Optional.of(s.tail())).map(Seq::head);" is 143.,115
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,zip,Long Statement,The length of the statement "return StreamSupport.stream(ZippingSpliterator.zipping(lefts.spliterator()`rights.spliterator()`combiner)`false).onClose(closerFor(lefts`rights));" is 146.,61
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,zip,Long Statement,The length of the statement "return StreamSupport.stream(TriZippingSpliterator.zipping(lefts.spliterator()`middles.spliterator()`rights.spliterator()`combiner)`false).onClose(closerFor(lefts`middles`rights));" is 179.,78
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,takeWhileInclusive,Long Statement,The length of the statement "return StreamSupport.stream(TakeWhileSpliterator.overInclusive(source.spliterator()`condition)`false).onClose(source::close);" is 125.,134
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,skipWhile,Long Statement,The length of the statement "return StreamSupport.stream(SkipUntilSpliterator.over(source.spliterator()`condition.negate())`false).onClose(source::close);" is 125.,171
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,skipWhileInclusive,Long Statement,The length of the statement "return StreamSupport.stream(SkipUntilSpliterator.overInclusive(source.spliterator()`condition.negate())`false).onClose(source::close);" is 134.,184
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,skipUntilInclusive,Long Statement,The length of the statement "return StreamSupport.stream(SkipUntilSpliterator.overInclusive(source.spliterator()`condition)`false).onClose(source::close);" is 125.,210
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,windowed,Long Statement,The length of the statement "return StreamSupport.stream(WindowedSpliterator.over(source.spliterator()`windowSize`skip`allowLesserSize)`false).onClose(source::close);" is 137.,272
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,interleave,Long Statement,The length of the statement "Spliterator<T>[] spliterators=(Spliterator<T>[])Stream.of(streams).map(BaseStream::spliterator).toArray(Spliterator[]::new);" is 124.,324
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,interleave,Long Statement,The length of the statement "return StreamSupport.stream(InterleavingSpliterator.interleaving(spliterators`selector)`false).onClose(closerFor(streams));" is 123.,324
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,interleave,Long Statement,The length of the statement "Spliterator<T>[] spliterators=(Spliterator<T>[])streams.stream().map(BaseStream::spliterator).toArray(Spliterator[]::new);" is 122.,345
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,interleave,Long Statement,The length of the statement "return StreamSupport.stream(InterleavingSpliterator.interleaving(spliterators`selector)`false).onClose(closerFor(streams));" is 123.,345
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,merge,Long Statement,The length of the statement "Spliterator<T>[] spliterators=(Spliterator<T>[])Stream.of(streams).map(BaseStream::spliterator).toArray(Spliterator[]::new);" is 124.,365
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,merge,Long Statement,The length of the statement "return StreamSupport.stream(MergingSpliterator.merging(spliterators`unitSupplier`merger)`false).onClose(closerFor(streams));" is 124.,365
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,aggregate,Long Statement,The length of the statement "return StreamSupport.stream(new AggregatingSpliterator<>(source.spliterator()`(a`e) -> a.isEmpty() || predicate.test(a.get(a.size() - 1)`e))`false).onClose(source::close);" is 171.,414
+poetix_protonpack,com.codepoetics.protonpack,StreamUtils,aggregate,Long Statement,The length of the statement "return StreamSupport.stream(new AggregatingSpliterator<>(source.spliterator()`(a`e) -> a.size() < size)`false).onClose(source::close);" is 134.,428
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Long Statement,The length of the statement "assertThat(runs`contains(asList(1`1)`asList(2`2)`Collections.singletonList(3)`Collections.singletonList(4)`Collections.singletonList(5)));" is 138.,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 2,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 2,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 3,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 4,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 5,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 2,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 2,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 3,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 4,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs,Magic Number,The method contains a magic number: 5,17
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Long Statement,The length of the statement "assertThat(runs`contains(asList(1`1)`asList(2`2)`Collections.singletonList(3)`Collections.singletonList(4)`asList(5`5)));" is 121.,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 2,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 2,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 3,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 4,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 5,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 5,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 2,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 2,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 3,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 4,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 5,32
+poetix_protonpack,com.codepoetics.protonpack,GroupRunsTest,group_runs_end_has_run,Magic Number,The method contains a magic number: 5,32
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 2,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 3,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 4,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 5,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 6,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 7,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 8,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 9,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 10,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 4,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 4,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 5,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 6,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 7,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 8,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 9,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_skips_items_while_condition_is_met,Magic Number,The method contains a magic number: 10,14
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 2,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 3,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 4,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 5,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 6,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 7,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 8,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 9,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 10,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 4,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 5,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 6,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 7,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 8,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 9,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_while_inclusive_skips_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 10,24
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 2,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 3,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 4,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 5,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 6,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 7,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 8,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 9,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 10,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 4,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 5,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 6,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 7,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 8,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 9,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 10,34
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 2,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 3,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 4,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 5,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 6,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 7,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 8,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 9,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 10,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 4,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 6,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 7,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 8,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 9,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_inclusive_skips_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 10,44
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_retains_sorted_property,Magic Number,The method contains a magic number: 5,54
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_retains_sorted_property,Magic Number,The method contains a magic number: 4,54
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_retains_sorted_property,Magic Number,The method contains a magic number: 3,54
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_retains_sorted_property,Magic Number,The method contains a magic number: 2,54
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_retains_sorted_property,Magic Number,The method contains a magic number: 3,54
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_retains_sorted_property,Magic Number,The method contains a magic number: 4,54
+poetix_protonpack,com.codepoetics.protonpack,SkipWhileTest,skip_until_retains_sorted_property,Magic Number,The method contains a magic number: 5,54
+poetix_protonpack,com.codepoetics.protonpack,AggregateTest,aggregate_on_bi_element_predicate,Long Statement,The length of the statement "assertThat(aggregated.collect(toList())`contains(Collections.singletonList("a1")`asList("b1"`"b2")`Collections.singletonList("c1")));" is 133.,18
+poetix_protonpack,com.codepoetics.protonpack,AggregateTest,aggregate_on_size1,Long Statement,The length of the statement "assertThat(aggregated.collect(toList())`contains(Collections.singletonList("a1")`Collections.singletonList("b1")`Collections.singletonList("b2")`Collections.singletonList("c1")));" is 179.,28
+poetix_protonpack,com.codepoetics.protonpack,AggregateTest,aggregate_on_size2,Magic Number,The method contains a magic number: 2,36
+poetix_protonpack,com.codepoetics.protonpack,AggregateTest,aggregate_on_size3,Magic Number,The method contains a magic number: 3,44
+poetix_protonpack,com.codepoetics.protonpack,AggregateTest,find_first_on_size2,Magic Number,The method contains a magic number: 2,52
+poetix_protonpack,com.codepoetics.protonpack,AggregateTest,works_with_iterator,Magic Number,The method contains a magic number: 3,59
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithSameContentsAreEqual,Magic Number,The method contains a magic number: 2,16
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithSameContentsAreEqual,Magic Number,The method contains a magic number: 3,16
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithSameContentsAreEqual,Magic Number,The method contains a magic number: 2,16
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithSameContentsAreEqual,Magic Number,The method contains a magic number: 3,16
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithDifferentContentsAreNotEqual,Magic Number,The method contains a magic number: 2,21
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithDifferentContentsAreNotEqual,Magic Number,The method contains a magic number: 4,21
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithDifferentContentsAreNotEqual,Magic Number,The method contains a magic number: 2,21
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsWithDifferentContentsAreNotEqual,Magic Number,The method contains a magic number: 3,21
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 2,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 3,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 4,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 5,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 6,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 2,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 3,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 4,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 5,31
+poetix_protonpack,com.codepoetics.protonpack,SeqTest,seqsAreAppendable,Magic Number,The method contains a magic number: 6,31
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 2,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 3,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 4,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 5,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 2,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 2,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 2,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 3,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 3,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 4,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 4,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list,Magic Number,The method contains a magic number: 5,19
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 2,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 3,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 4,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 5,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 3,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 2,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 2,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 3,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 3,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 4,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap,Magic Number,The method contains a magic number: 5,33
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on__empty_list,Magic Number,The method contains a magic number: 2,45
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_shorter_than_window_not_allowing_lesser_size,Magic Number,The method contains a magic number: 2,57
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_shorter_than_window_allowing_lesser_size,Magic Number,The method contains a magic number: 2,66
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 2,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 3,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 4,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 5,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 2,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 2,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 2,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 3,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 4,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_two_overlap_allow_lesser_size,Magic Number,The method contains a magic number: 5,75
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 2,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 3,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 4,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 5,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 3,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 2,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 3,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 2,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 3,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 4,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 3,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 4,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 5,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 4,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 5,88
+poetix_protonpack,com.codepoetics.protonpack,WindowedTest,windowing_on_list_one_overlap_allow_lesser_size_multiple_lesser_windows,Magic Number,The method contains a magic number: 5,88
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 10,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 2,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 3,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 4,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 5,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 6,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 7,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 8,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 9,14
+poetix_protonpack,com.codepoetics.protonpack,UnfoldTest,unfolds_a_seed_until_empty_is_returned,Magic Number,The method contains a magic number: 10,14
+poetix_protonpack,com.codepoetics.protonpack,ZipTest,zips_a_stream_with_index,Magic Number,The method contains a magic number: 2,46
+poetix_protonpack,com.codepoetics.protonpack,ZipTest,zips_a_trio_of_streams_of_same_length,Long Statement,The length of the statement "List<String> zipped=StreamUtils.zip(streamA`streamB`streamC`(a`b`c) -> a + " is for " + b+ " "+ c).collect(Collectors.toList());" is 128.,58
+poetix_protonpack,com.codepoetics.protonpack,ZipTest,zips_a_list_of_streams_of_same_length,Long Statement,The length of the statement "List<String> zipped=StreamUtils.zip(Arrays.asList(streamA`streamB)`l -> l.get(0) + " is for " + l.get(1)).collect(Collectors.toList());" is 135.,69
+poetix_protonpack,com.codepoetics.protonpack,ZipTest,zips_a_list_of_streams_where_first_stream_is_longer,Long Statement,The length of the statement "List<String> zipped=StreamUtils.zip(Arrays.asList(streamA`streamB)`l -> l.get(0) + " is for " + l.get(1)).collect(Collectors.toList());" is 135.,79
+poetix_protonpack,com.codepoetics.protonpack,ZipTest,zips_a_list_of_streams_where_second_stream_is_longer,Long Statement,The length of the statement "List<String> zipped=StreamUtils.zip(Arrays.asList(streamA`streamB)`l -> l.get(0) + " is for " + l.get(1)).collect(Collectors.toList());" is 135.,89
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Long Statement,The length of the statement "List<String> fizzBuzzes=zip(zip(cycle(""`""`"Fizz")`cycle(""`""`""`""`"Buzz")`String::concat)`range(1`101).boxed()`(fb`i) -> fb.isEmpty() ? i.toString() : fb).collect(Collectors.toList());" is 188.,17
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Magic Number,The method contains a magic number: 101,17
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Magic Number,The method contains a magic number: 3,17
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Magic Number,The method contains a magic number: 5,17
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Magic Number,The method contains a magic number: 9,17
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Magic Number,The method contains a magic number: 10,17
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Magic Number,The method contains a magic number: 11,17
+poetix_protonpack,com.codepoetics.protonpack,CycleTest,fizzBuzz,Magic Number,The method contains a magic number: 15,17
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,setUp,Magic Number,The method contains a magic number: 2,27
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMapKeys,Magic Number,The method contains a magic number: 2,32
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMapValues,Magic Number,The method contains a magic number: 5,39
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMapValues,Magic Number,The method contains a magic number: 6,39
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMapEntries,Magic Number,The method contains a magic number: 2,45
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMapEntriesToKeys,Magic Number,The method contains a magic number: 2,58
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMapEntriesToValues,Long Statement,The length of the statement "Map<String`String> map=mapStream.mapEntriesToValues((k`v) -> "Pope " + k + " "+ String.join(""`Collections.nCopies(v`"I"))).collect();" is 134.,64
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMergeKeys,Magic Number,The method contains a magic number: 2,78
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testMergeKeysWithBinaryFunction,Magic Number,The method contains a magic number: 3,85
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testReverseMapping,Magic Number,The method contains a magic number: 2,92
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testReverseMapping,Magic Number,The method contains a magic number: 3,92
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testReverseMapping,Magic Number,The method contains a magic number: 4,92
+poetix_protonpack,com.codepoetics.protonpack,MapStreamTest,testReverseMapping,Magic Number,The method contains a magic number: 2,92
+poetix_protonpack,com.codepoetics.protonpack,NoCombinerTest,throws_illegal_state_exception_when_called,Magic Number,The method contains a magic number: 10000,16
+poetix_protonpack,com.codepoetics.protonpack,NoCombinerTest,is_never_called_for_sequential_stream,Magic Number,The method contains a magic number: 10000,21
+poetix_protonpack,com.codepoetics.protonpack,NoCombinerTest,can_be_used_in_a_collector,Long Statement,The length of the statement "assertThat(IntStream.range(0`10000).mapToObj(Long::valueOf).collect(Collector.of(HashSet<Long>::new`Set::add`noCombiner())).size()`equalTo(10000));" is 147.,26
+poetix_protonpack,com.codepoetics.protonpack,NoCombinerTest,can_be_used_in_a_collector,Magic Number,The method contains a magic number: 10000,26
+poetix_protonpack,com.codepoetics.protonpack,NoCombinerTest,can_be_used_in_a_collector,Magic Number,The method contains a magic number: 10000,26
+poetix_protonpack,com.codepoetics.protonpack,MergeTest,merges_streams_to_list_with_unit_merger_and_combiner,Long Statement,The length of the statement "assertThat(merged.collect(toList())`contains(asList("A"`"apple"`"fritter")`asList("B"`"banana"`"split")`asList("C"`"carrot"`"cake")`asList("date"`"roll")`Collections.singletonList("pastry")));" is 192.,21
+poetix_protonpack,com.codepoetics.protonpack,InterleaveTest,round_robin_interleaving,Long Statement,The length of the statement "assertThat(interleaved.collect(Collectors.toList())`contains("Peter"`"A"`"foo"`"Paul"`"B"`"bar"`"Mary"`"C"`"baz"`"D"`"xyzzy"`"E"));" is 131.,17
+poetix_protonpack,com.codepoetics.protonpack,InterleaveTest,sorted_interleaving,Long Statement,The length of the statement "Stream<String> interleaved=StreamUtils.interleave(Selectors.takeMin()`streamA.sorted()`streamB.sorted()`streamC.sorted());" is 122.,33
+poetix_protonpack,com.codepoetics.protonpack,NullableTest,ofNullable_converts_non_null_value_to_stream_with_single_value,Magic Number,The method contains a magic number: 3,20
+poetix_protonpack,com.codepoetics.protonpack,NullableTest,ofNullable_converts_non_null_value_to_stream_with_single_value,Magic Number,The method contains a magic number: 3,20
+poetix_protonpack,com.codepoetics.protonpack,NullableTest,ofNullable_converts_non_null_iterable_value_to_stream,Magic Number,The method contains a magic number: 22,30
+poetix_protonpack,com.codepoetics.protonpack,NullableTest,ofNullable_converts_non_null_iterable_value_to_stream,Magic Number,The method contains a magic number: 33,30
+poetix_protonpack,com.codepoetics.protonpack,NullableTest,ofNullable_converts_non_null_iterable_value_to_stream,Magic Number,The method contains a magic number: 22,30
+poetix_protonpack,com.codepoetics.protonpack,NullableTest,ofNullable_converts_non_null_iterable_value_to_stream,Magic Number,The method contains a magic number: 33,30
+poetix_protonpack,com.codepoetics.protonpack,NullableTest,ofNullable_converts_non_null_int_array_to_stream_with_single_value,Magic Number,The method contains a magic number: 55,43
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_while_takes_items_while_condition_is_met,Magic Number,The method contains a magic number: 10,13
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_while_takes_items_while_condition_is_met,Magic Number,The method contains a magic number: 10,13
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_while_inclusive_takes_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 10,21
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_while_inclusive_takes_items_while_condition_is_met_but_includes_first_condition_breaker,Magic Number,The method contains a magic number: 11,21
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 10,29
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_until_takes_items_until_condition_is_met,Magic Number,The method contains a magic number: 11,29
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_until_inclusive_takes_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 10,37
+poetix_protonpack,com.codepoetics.protonpack,TakeWhileTest,take_until_inclusive_takes_items_until_condition_is_met_but_includes_first_condition_meeter,Magic Number,The method contains a magic number: 12,37
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,can_stream_repeatedly,Magic Number,The method contains a magic number: 2,16
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,can_stream_repeatedly,Magic Number,The method contains a magic number: 3,16
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,captures_stream_transformations,Magic Number,The method contains a magic number: 2,23
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,captures_stream_transformations,Magic Number,The method contains a magic number: 3,23
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 2,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 3,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 5,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 6,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 7,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 9,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 10,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 11,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 2,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 3,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 5,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 6,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 7,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 9,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 10,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,concat_multiple_streamables,Magic Number,The method contains a magic number: 11,30
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,streamable_of_optional,Magic Number,The method contains a magic number: 123,39
+poetix_protonpack,com.codepoetics.protonpack,StreamableTest,streamable_of_optional,Magic Number,The method contains a magic number: 123,39
+poetix_protonpack,com.codepoetics.protonpack,OptionalTest,stream_of_nonempty_optionals,Magic Number,The method contains a magic number: 123,16
+poetix_protonpack,com.codepoetics.protonpack,OptionalTest,stream_of_nonempty_optionals,Magic Number,The method contains a magic number: 456,16
+poetix_protonpack,com.codepoetics.protonpack,OptionalTest,stream_of_nonempty_optionals,Magic Number,The method contains a magic number: 126,16
+poetix_protonpack,com.codepoetics.protonpack,OptionalTest,stream_of_nonempty_optionals,Magic Number,The method contains a magic number: 459,16
+poetix_protonpack,com.codepoetics.protonpack,OptionalTest,maybeAdd3,Magic Number,The method contains a magic number: 3,34
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_item,Magic Number,The method contains a magic number: 2,20
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_item,Magic Number,The method contains a magic number: 3,20
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_item,Magic Number,The method contains a magic number: 2,20
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_item,Magic Number,The method contains a magic number: 3,20
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_nullable_item,Magic Number,The method contains a magic number: 2,25
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_nullable_item,Magic Number,The method contains a magic number: 3,25
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_nullable_item,Magic Number,The method contains a magic number: 2,25
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,returns_unique_nullable_item,Magic Number,The method contains a magic number: 3,25
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,throws_exception_if_item_is_not_unique,Magic Number,The method contains a magic number: 2,30
+poetix_protonpack,com.codepoetics.protonpack,UniqueTest,throws_exception_if_item_is_not_unique,Magic Number,The method contains a magic number: 3,30
+poetix_protonpack,com.codepoetics.protonpack.maps,MapStream,of,Long Parameter List,The method has 6 parameters. ,73
+poetix_protonpack,com.codepoetics.protonpack.maps,MapStream,of,Long Statement,The length of the statement "return new DefaultMapStream<>(Stream.of(new SimpleImmutableEntry<>(key`value)`new SimpleImmutableEntry<>(key1`value1)`new SimpleImmutableEntry<>(key2`value2)));" is 160.,73
+poetix_protonpack,com.codepoetics.protonpack.maps,MapStream,of,Long Parameter List,The method has 8 parameters. ,91
+poetix_protonpack,com.codepoetics.protonpack.maps,MapStream,of,Long Statement,The length of the statement "return new DefaultMapStream<>(Stream.of(new SimpleImmutableEntry<>(key`value)`new SimpleImmutableEntry<>(key1`value1)`new SimpleImmutableEntry<>(key2`value2)`new SimpleImmutableEntry<>(key3`value3)));" is 200.,91
+poetix_protonpack,com.codepoetics.protonpack.maps,MapStream,of,Long Parameter List,The method has 10 parameters. ,112
+poetix_protonpack,com.codepoetics.protonpack.maps,MapStream,of,Long Statement,The length of the statement "return new DefaultMapStream<>(Stream.of(new SimpleImmutableEntry<>(key`value)`new SimpleImmutableEntry<>(key1`value1)`new SimpleImmutableEntry<>(key2`value2)`new SimpleImmutableEntry<>(key3`value3)`new SimpleImmutableEntry<>(key4`value4)));" is 240.,112
+poetix_protonpack,com.codepoetics.protonpack.maps,MapStream,mapEntries,Long Statement,The length of the statement "return new DefaultMapStream<>(map(e -> new SimpleImmutableEntry<>(keyMapper.apply(e.getKey())`valueMapper.apply(e.getValue()))));" is 129.,158
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulSpliterator,tryAdvance,Long Statement,The length of the statement "return !isFinished && !stateMachine.isTerminal(state) && (inputSpliterator.tryAdvance(input -> acceptInput(input`action)) || finish(action));" is 141.,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,Statefully,index,Long Statement,The length of the statement "return Statefully.transform(input`StateMachine.create(() -> 0L`(index`item) -> Transition.to(index + 1`Indexed.index(index`item))));" is 132.,41
+poetix_protonpack,com.codepoetics.protonpack.stateful,TaggedValue,equals,Long Statement,The length of the statement "return this == o || (o instanceof TaggedValue && Objects.equals(((TaggedValue)o).tag`tag) && Objects.equals(((TaggedValue)o).value`value));" is 139.,27
+poetix_protonpack,com.codepoetics.protonpack.stateful,Window,reduce,Long Statement,The length of the statement "try (Stream<T> windowStream=Stream.concat(IntStream.range(index`size).mapToObj(contents::get)`IntStream.range(0`index).mapToObj(contents::get))){" is 145.,46
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,includesSubset,Long Statement,The length of the statement "assertTrue(Statefully.includesItems(Stream.of("yellow"`"blue"`"orange"`"red"`"purple"`"green"`"chartreuse")`"red"`"green"`"blue"));" is 131.,20
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,includesSubset,Long Statement,The length of the statement "assertFalse(Statefully.includesItems(Stream.of("yellow"`"blue"`"orange"`"red"`"purple"`"indigo"`"chartreuse")`"red"`"green"`"blue"));" is 133.,20
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 6,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 3,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 5,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 5,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 6,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 7,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 8,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 7,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 6,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 3,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 5,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 5,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 6,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 7,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 7,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 8,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 3,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 2,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 6,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 7,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,findLastMatching,Magic Number,The method contains a magic number: 7,28
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,windowing,Long Statement,The length of the statement "assertThat(Statefully.window(Stream.of("cat"`"dog"`"mouse"`"horse"`"sloth"`"rabbit"`"giraffe")`3`s -> s.collect(Collectors.joining("`"))).collect(Collectors.toList())`contains("cat`dog`mouse"`"dog`mouse`horse"`"mouse`horse`sloth"`"horse`sloth`rabbit"`"sloth`rabbit`giraffe"));" is 276.,36
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,windowing,Magic Number,The method contains a magic number: 3,36
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,tagging,Long Statement,The length of the statement "assertThat(Statefully.tagging(Stream.of("a"`"b"`"c"`"d"`"e")`0`(i`t) -> i + 1).collect(Collectors.toList())`contains(TaggedValue.of(1`"a")`TaggedValue.of(2`"b")`TaggedValue.of(3`"c")`TaggedValue.of(4`"d")`TaggedValue.of(5`"e")));" is 229.,46
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,tagging,Magic Number,The method contains a magic number: 2,46
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,tagging,Magic Number,The method contains a magic number: 3,46
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,tagging,Magic Number,The method contains a magic number: 4,46
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,tagging,Magic Number,The method contains a magic number: 5,46
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,indexed,Long Statement,The length of the statement "assertThat(Statefully.index(Stream.of("a"`"b"`"c"`"d"`"e")).collect(Collectors.toList())`contains(Indexed.index(0`"a")`Indexed.index(1`"b")`Indexed.index(2`"c")`Indexed.index(3`"d")`Indexed.index(4`"e")));" is 205.,62
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,indexed,Magic Number,The method contains a magic number: 2,62
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,indexed,Magic Number,The method contains a magic number: 3,62
+poetix_protonpack,com.codepoetics.protonpack.stateful,StatefulTraversalTest,indexed,Magic Number,The method contains a magic number: 4,62
+poetix_protonpack,com.codepoetics.protonpack.collectors,CollectorUtils,unique,Long Statement,The length of the statement "return Collector.of(AtomicReference::new`CollectorUtils::uniqueAccumulate`CollectorUtils::uniqueCombine`ref -> Optional.ofNullable(ref.get()));" is 143.,79
+poetix_protonpack,com.codepoetics.protonpack.collectors,CollectorUtils,uniqueNullable,Long Statement,The length of the statement "return Collector.of(AtomicReference::new`CollectorUtils::uniqueAccumulate`CollectorUtils::uniqueCombine`AtomicReference::get);" is 126.,95
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFutures,reducing,Long Statement,The length of the statement "return toFuture(Optional::empty`(left`maybeRight) -> maybeRight.isPresent() ? maybeRight.map(right -> reducer.apply(right`left)) : Optional.of(left)`(maybeLeft`maybeRight) -> maybeLeft.isPresent() ? maybeLeft.flatMap(left -> maybeRight.map(right -> reducer.apply(left`right))) : maybeRight);" is 291.,173
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFutures,toFuture,Long Statement,The length of the statement "return Collector.of(() -> FutureReducer.of(identitySupplier.get()`reducer`combiner)`FutureReducer::addFuture`FutureReducer::combine`fr -> fr.complete().thenApply(completer));" is 174.,191
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,collectsValuesFromCompletableFutures,Magic Number,The method contains a magic number: 10,23
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,collectsValuesFromCompletableFutures,Magic Number,The method contains a magic number: 1000,23
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,collectsValuesFromCompletableFutures,Magic Number,The method contains a magic number: 100,23
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,collectsValuesFromCompletableFutures,Magic Number,The method contains a magic number: 1000,23
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,failsFastOnAnyFutureFailure,Magic Number,The method contains a magic number: 10,42
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,failsFastOnAnyFutureFailure,Magic Number,The method contains a magic number: 1000,42
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,failsFastOnAnyFutureFailure,Magic Number,The method contains a magic number: 100,42
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,failsFastOnAnyFutureFailure,Magic Number,The method contains a magic number: 19,42
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,reducesFutureInts,Long Statement,The length of the statement "final CompletableFuture<Optional<Integer>> collected=IntStream.range(1`1000).parallel().mapToObj(i -> CompletableFuture.supplyAsync(() -> {" is 139.,66
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,reducesFutureInts,Magic Number,The method contains a magic number: 10,66
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,reducesFutureInts,Magic Number,The method contains a magic number: 1000,66
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,reducesFutureInts,Magic Number,The method contains a magic number: 100,66
+poetix_protonpack,com.codepoetics.protonpack.collectors,CompletableFuturesTest,reducesFutureInts,Magic Number,The method contains a magic number: 499500,66
+poetix_protonpack,com.codepoetics.protonpack.comparators,Comparators,toListComparator,Long Statement,The length of the statement "return (o1`o2) -> StreamUtils.zip(o1.stream()`o2.stream()`itemComparator::compare).filter(c -> c != 0).findFirst().orElseGet(() -> Integer.compare(o1.size()`o2.size()));" is 169.,13

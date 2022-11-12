@@ -1,0 +1,30 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+DeemOpen_zkui,com.deem.zkui.utils,LdapAuth,authenticateUser,Empty catch clause,The method has an empty catch block.,32
+DeemOpen_zkui,com.deem.zkui.dao,Dao,open,Long Statement,The length of the statement "Base.open(globalProps.getProperty("jdbcClass")`globalProps.getProperty("jdbcUrl")`globalProps.getProperty("jdbcUser")`globalProps.getProperty("jdbcPwd"));" is 154.,39
+DeemOpen_zkui,com.deem.zkui.dao,Dao,checkNCreate,Long Statement,The length of the statement "flyway.setDataSource(globalProps.getProperty("jdbcUrl")`globalProps.getProperty("jdbcUser")`globalProps.getProperty("jdbcPwd"));" is 128.,47
+DeemOpen_zkui,com.deem.zkui.dao,Dao,insertHistory,Magic Number,The method contains a magic number: 500,80
+DeemOpen_zkui,com.deem.zkui.dao,Dao,insertHistory,Magic Number,The method contains a magic number: 500,80
+DeemOpen_zkui,com.deem.zkui.controller,Import,doPost,Complex Method,Cyclomatic complexity of the method is 14,58
+DeemOpen_zkui,com.deem.zkui.controller,Import,doPost,Long Statement,The length of the statement "dao.insertHistory((String)request.getSession().getAttribute("authName")`request.getRemoteAddr()`"Importing P4 File: " + uploadFileName + "<br/>"+ "Overwrite: "+ scmOverwrite);" is 175.,58
+DeemOpen_zkui,com.deem.zkui.controller,Import,doPost,Long Statement,The length of the statement "dao.insertHistory((String)request.getSession().getAttribute("authName")`request.getRemoteAddr()`"Uploading File: " + uploadFileName + "<br/>"+ "Overwrite: "+ scmOverwrite);" is 172.,58
+DeemOpen_zkui,com.deem.zkui.controller,Import,doPost,Long Statement,The length of the statement "ZooKeeperUtil.INSTANCE.importData(importFile`Boolean.valueOf(scmOverwrite)`ServletUtil.INSTANCE.getZookeeper(request`response`zkServerLst[0]`globalProps));" is 155.,58
+DeemOpen_zkui,com.deem.zkui.controller,Import,doPost,Long Statement,The length of the statement "dao.insertHistory((String)request.getSession().getAttribute("authName")`request.getRemoteAddr()`"File: " + uploadFileName + "` Deleting Entry: "+ line);" is 152.,58
+DeemOpen_zkui,com.deem.zkui.controller,Import,doPost,Long Statement,The length of the statement "dao.insertHistory((String)request.getSession().getAttribute("authName")`request.getRemoteAddr()`"File: " + uploadFileName + "` Adding Entry: "+ line);" is 150.,58
+DeemOpen_zkui,com.deem.zkui.controller,Import,doPost,Magic Number,The method contains a magic number: 1034,58
+DeemOpen_zkui,com.deem.zkui.controller,Home,doPost,Complex Conditional,The conditional expression !newNode.equals("") && !currentPath.equals("") && authRole.equals(ZooKeeperUtil.ROLE_ADMIN) is complex.,109
+DeemOpen_zkui,com.deem.zkui.controller,Home,doPost,Complex Conditional,The conditional expression !newProperty.equals("") && !currentPath.equals("") && authRole.equals(ZooKeeperUtil.ROLE_ADMIN) is complex.,109
+DeemOpen_zkui,com.deem.zkui.controller,Home,doPost,Complex Conditional,The conditional expression !newProperty.equals("") && !currentPath.equals("") && authRole.equals(ZooKeeperUtil.ROLE_ADMIN) is complex.,109
+DeemOpen_zkui,com.deem.zkui.controller,Home,doPost,Complex Method,Cyclomatic complexity of the method is 16,109
+DeemOpen_zkui,com.deem.zkui.controller,Home,doPost,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3f67f5ff,109
+DeemOpen_zkui,com.deem.zkui.controller,Export,doGet,Long Statement,The length of the statement "Set<LeafBean> leaves=ZooKeeperUtil.INSTANCE.exportTree(zkPath`ServletUtil.INSTANCE.getZookeeper(request`response`zkServerLst[0]`globalProps)`authRole);" is 151.,44
+DeemOpen_zkui,com.deem.zkui.controller,Export,doGet,Long Statement,The length of the statement "output.append(leaf.getPath()).append('=').append(leaf.getName()).append('=').append(ServletUtil.INSTANCE.externalizeNodeValue(leaf.getValue())).append('\n');" is 157.,44
+DeemOpen_zkui,com.deem.zkui.controller,Login,doPost,Complex Method,Cyclomatic complexity of the method is 10,65
+DeemOpen_zkui,com.deem.zkui.controller,Login,doPost,Long Statement,The length of the statement "authenticated=new LdapAuth().authenticateUser(globalProps.getProperty("ldapUrl")`username`password`globalProps.getProperty("ldapDomain"));" is 138.,65
+DeemOpen_zkui,com.deem.zkui.controller,Login,doPost,Long Statement,The length of the statement "JSONArray jsonRoleSet=(JSONArray)((JSONObject)new JSONParser().parse(globalProps.getProperty("ldapRoleSet"))).get("users");" is 123.,65
+DeemOpen_zkui,com.deem.zkui.controller,RestAccess,doGet,Complex Method,Cyclomatic complexity of the method is 26,45
+DeemOpen_zkui,com.deem.zkui.controller,RestAccess,doGet,Long Method,The method has 112 lines of code.,45
+DeemOpen_zkui,com.deem.zkui.controller,RestAccess,doGet,Long Statement,The length of the statement "if ((globalProps.getProperty("blockPwdOverRest") != null) && (Boolean.valueOf(globalProps.getProperty("blockPwdOverRest")) == Boolean.FALSE)) {" is 143.,45
+DeemOpen_zkui,com.deem.zkui.controller,RestAccess,doGet,Long Statement,The length of the statement "hostsNode=ZooKeeperUtil.INSTANCE.getNodeValue(zk`ZooKeeperUtil.ZK_HOSTS`ZooKeeperUtil.ZK_HOSTS + "/" + hostName+ ":"+ appName`hostName + ":" + appName`accessRole);" is 163.,45
+DeemOpen_zkui,com.deem.zkui.controller,RestAccess,doGet,Long Statement,The length of the statement "hostsNode=ZooKeeperUtil.INSTANCE.getNodeValue(zk`ZooKeeperUtil.ZK_HOSTS`ZooKeeperUtil.ZK_HOSTS + "/" + hostName`hostName`accessRole);" is 133.,45
+DeemOpen_zkui,com.deem.zkui,Main,main,Long Statement,The length of the statement "servletContextHandler.setAttribute("org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern"`".*(/target/classes/|.*.jar)");" is 127.,48
+DeemOpen_zkui,com.deem.zkui,Main,main,Long Statement,The length of the statement "ServerConnector https=new ServerConnector(server`new SslConnectionFactory(sslContextFactory`HttpVersion.HTTP_1_1.asString())`new HttpConnectionFactory(https_config));" is 166.,48

@@ -1,0 +1,388 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,SystemFacade,getRecommendedMaxBytesOverMobile,Magic Number,The method contains a magic number: 2097152L,91
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,parseContentDisposition,Empty catch clause,The method has an empty catch block.,56
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getAvailableBytes,Magic Number,The method contains a magic number: 4,97
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,isFilenameValid,Long Statement,The length of the statement "return filename.startsWith(Environment.getDownloadCacheDirectory().toString()) || filename.startsWith(Environment.getExternalStorageDirectory().toString());" is 156.,109
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloadProgressString,Long Statement,The length of the statement "return String.format("%.2f"`(float)overallProgress / (1024.0f * 1024.0f)) + "MB /" + String.format("%.2f"`(float)overallTotal / (1024.0f * 1024.0f))+ "MB";" is 155.,131
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloadProgressString,Magic Number,The method contains a magic number: 1024.0f,131
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloadProgressString,Magic Number,The method contains a magic number: 1024.0f,131
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloadProgressString,Magic Number,The method contains a magic number: 1024.0f,131
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloadProgressString,Magic Number,The method contains a magic number: 1024.0f,131
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloadProgressStringNotification,Long Statement,The length of the statement "return getDownloadProgressString(overallProgress`overallTotal) + " (" + getDownloadProgressPercent(overallProgress`overallTotal)+ ")";" is 134.,155
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloadProgressPercent,Magic Number,The method contains a magic number: 100,174
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getSpeedString,Magic Number,The method contains a magic number: 1000,184
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getSpeedString,Magic Number,The method contains a magic number: 1024,184
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getTimeRemaining,Magic Number,The method contains a magic number: 1000,188
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getTimeRemaining,Magic Number,The method contains a magic number: 60,188
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getTimeRemaining,Magic Number,The method contains a magic number: 60,188
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloaderStringResourceIDFromState,Complex Method,Cyclomatic complexity of the method is 19,256
+bakerframework_baker-android,com.google.android.vending.expansion.downloader,Helpers,getDownloaderStringResourceIDFromState,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@57c4738e,256
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusInformational,Magic Number,The method contains a magic number: 100,147
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusInformational,Magic Number,The method contains a magic number: 200,147
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusSuccess,Magic Number,The method contains a magic number: 200,154
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusSuccess,Magic Number,The method contains a magic number: 300,154
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusError,Magic Number,The method contains a magic number: 400,161
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusError,Magic Number,The method contains a magic number: 600,161
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusClientError,Magic Number,The method contains a magic number: 400,168
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusClientError,Magic Number,The method contains a magic number: 500,168
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusServerError,Magic Number,The method contains a magic number: 500,175
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusServerError,Magic Number,The method contains a magic number: 600,175
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusCompleted,Magic Number,The method contains a magic number: 200,182
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusCompleted,Magic Number,The method contains a magic number: 300,182
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusCompleted,Magic Number,The method contains a magic number: 400,182
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,isStatusCompleted,Magic Number,The method contains a magic number: 600,182
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,updateNetworkType,Complex Method,Cyclomatic complexity of the method is 20,456
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,updateNetworkType,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5ae09ff,456
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,updateNetworkState,Complex Method,Cyclomatic complexity of the method is 8,514
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,updateNetworkState,Long Statement,The length of the statement "mStateChanged=(mStateChanged || isConnected != mIsConnected || isFailover != mIsFailover || isCellularConnection != mIsCellularConnection || isRoaming != mIsRoaming || isAtLeast3G != mIsAtLeast3G);" is 197.,514
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,updateNetworkState,Long Statement,The length of the statement "Log.v(LOG_TAG`"Starting State: " + (isConnected ? "Connected " : "Not Connected ") + (isCellularConnection ? "Cellular " : "WiFi ")+ (isRoaming ? "Roaming " : "Local ")+ (isAtLeast3G ? "3G+ " : "<3G "));" is 203.,514
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,updateNetworkState,Long Statement,The length of the statement "Log.v(LOG_TAG`"Ending State: " + (mIsConnected ? "Connected " : "Not Connected ") + (mIsCellularConnection ? "Cellular " : "WiFi ")+ (mIsRoaming ? "Roaming " : "Local ")+ (mIsAtLeast3G ? "3G+ " : "<3G "));" is 205.,514
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,startDownloadServiceIfRequired,Complex Method,Cyclomatic complexity of the method is 8,643
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,onHandleIntent,Complex Method,Cyclomatic complexity of the method is 24,1003
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,onHandleIntent,Long Identifier,The length of the field STATUS_FILE_DELIVERED_INCORRECTLY is 33.,1003
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,onHandleIntent,Long Identifier,The length of the field STATUS_QUEUED_FOR_WIFI_OR_CELLULAR_PERMISSION is 45.,1003
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,onHandleIntent,Long Identifier,The length of the field STATUS_INSUFFICIENT_SPACE_ERROR is 31.,1003
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,onHandleIntent,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6f0e1b71,1003
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,getNetworkAvailabilityState,Long Identifier,The length of the field NETWORK_TYPE_DISALLOWED_BY_REQUESTOR is 36.,1168
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,generateSaveFile,Long Identifier,The length of the field STATUS_FILE_ALREADY_EXISTS_ERROR is 32.,1224
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,generateSaveFile,Long Identifier,The length of the field STATUS_INSUFFICIENT_SPACE_ERROR is 31.,1224
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,getLogMessageForNetworkError,Long Identifier,The length of the field NETWORK_RECOMMENDED_UNUSABLE_DUE_TO_SIZE is 40.,1250
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,getLogMessageForNetworkError,Long Identifier,The length of the field NETWORK_TYPE_DISALLOWED_BY_REQUESTOR is 36.,1250
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,getLogMessageForNetworkError,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6480fece,1250
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloaderService,notifyUpdateBytes,Long Statement,The length of the statement "mNotification.onDownloadProgress(new DownloadProgressInfo(mTotalLength`totalBytesSoFar`timeRemaining`mAverageDownloadSpeed));" is 125.,1290
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,DownloadThread,Long Statement,The length of the statement "mUserAgent="APKXDL (Linux; U; Android " + android.os.Build.VERSION.RELEASE + ";"+ Locale.getDefault().toString()+ "; "+ android.os.Build.DEVICE+ "/"+ android.os.Build.ID+ ")"+ service.getPackageName();" is 201.,57
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,isLocalHost,Complex Conditional,The conditional expression host.equalsIgnoreCase("localhost") || host.equals("127.0.0.1") || host.equals("[::1]") is complex.,174
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,isLocalHost,Empty catch clause,The method has an empty catch block.,174
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,run,Empty catch clause,The method has an empty catch block.,200
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,run,Long Statement,The length of the statement "notifyDownloadCompleted(finalStatus`state.mCountRetry`state.mRetryAfter`state.mRedirectCount`state.mGotData`state.mFilename);" is 125.,200
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,checkConnectivity,Long Statement,The length of the statement "throw new StopRequest(DownloaderService.STATUS_QUEUED_FOR_WIFI_OR_CELLULAR_PERMISSION`"waiting for wifi or for download over cellular to be authorized");" is 153.,311
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,finalizeDestinationFile,Long Statement,The length of the statement "throw new StopRequest(DownloaderService.STATUS_FILE_DELIVERED_INCORRECTLY`"file delivered with incorrect size. probably due to network not browser configured");" is 160.,359
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,reportProgress,Long Statement,The length of the statement "if (innerState.mBytesSoFar - innerState.mBytesNotified > Constants.MIN_PROGRESS_STEP && now - innerState.mTimeLastNotification > Constants.MIN_PROGRESS_TIME) {" is 159.,456
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,writeDataToDestination,Long Statement,The length of the statement "throw new StopRequest(DownloaderService.STATUS_DEVICE_NOT_FOUND_ERROR`"external media not mounted while writing destination file");" is 131.,485
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,writeDataToDestination,Long Statement,The length of the statement "throw new StopRequest(DownloaderService.STATUS_INSUFFICIENT_SPACE_ERROR`"insufficient space while writing destination file"`ex);" is 128.,485
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleEndOfStream,Long Statement,The length of the statement "boolean lengthMismatched=(innerState.mHeaderContentLength != null) && (innerState.mBytesSoFar != Integer.parseInt(innerState.mHeaderContentLength));" is 148.,520
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,logNetworkState,Long Statement,The length of the statement "Log.i(Constants.TAG`"Net " + (mService.getNetworkAvailabilityState(mDB) == DownloaderService.NETWORK_OK ? "Up" : "Down"));" is 122.,593
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,readResponseHeaders,Complex Method,Cyclomatic complexity of the method is 13,652
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,readResponseHeaders,Long Statement,The length of the statement "boolean noSizeInfo=innerState.mHeaderContentLength == null && (headerTransferEncoding == null || !headerTransferEncoding.equalsIgnoreCase("chunked"));" is 150.,652
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleExceptionalStatus,Complex Conditional,The conditional expression statusCode == 301 || statusCode == 302 || statusCode == 303 || statusCode == 307 is complex.,724
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleExceptionalStatus,Magic Number,The method contains a magic number: 503,724
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleExceptionalStatus,Magic Number,The method contains a magic number: 301,724
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleExceptionalStatus,Magic Number,The method contains a magic number: 302,724
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleExceptionalStatus,Magic Number,The method contains a magic number: 303,724
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleExceptionalStatus,Magic Number,The method contains a magic number: 307,724
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleExceptionalStatus,Magic Number,The method contains a magic number: 206,724
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleOtherStatus,Magic Number,The method contains a magic number: 300,748
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleOtherStatus,Magic Number,The method contains a magic number: 400,748
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleRedirect,Magic Number,The method contains a magic number: 301,766
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleRedirect,Magic Number,The method contains a magic number: 303,766
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleServiceUnavailable,Empty catch clause,The method has an empty catch block.,818
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,handleServiceUnavailable,Magic Number,The method contains a magic number: 1000,818
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,setupDestinationFile,Complex Method,Cyclomatic complexity of the method is 8,882
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,setupDestinationFile,Long Statement,The length of the statement "throw new StopRequest(DownloaderService.STATUS_FILE_ERROR`"while opening destination for resuming: " + exc.toString()`exc);" is 123.,882
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,notifyDownloadCompleted,Long Parameter List,The method has 6 parameters. ,932
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadThread,updateDownloadDatabase,Long Parameter List,The method has 6 parameters. ,946
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,getDownloadByIndexStatement,Long Statement,The length of the statement "mGetDownloadByIndex=mHelper.getReadableDatabase().compileStatement("SELECT " + BaseColumns._ID + " FROM "+ DownloadColumns.TABLE_NAME+ " WHERE "+ DownloadColumns.INDEX+ " = ?");" is 177.,49
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,getUpdateCurrentBytesStatement,Long Statement,The length of the statement "mUpdateCurrentBytes=mHelper.getReadableDatabase().compileStatement("UPDATE " + DownloadColumns.TABLE_NAME + " SET "+ DownloadColumns.CURRENTBYTES+ " = ?"+ " WHERE "+ DownloadColumns.INDEX+ " = ?");" is 197.,59
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,DownloadsDB,Long Statement,The length of the statement "Cursor cur=sqldb.rawQuery("SELECT " + MetadataColumns.APKVERSION + "`"+ BaseColumns._ID+ "`"+ MetadataColumns.DOWNLOAD_STATUS+ "`"+ MetadataColumns.FLAGS+ " FROM "+ MetadataColumns.TABLE_NAME+ " LIMIT 1"`null);" is 210.,69
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,DownloadsDB,Magic Number,The method contains a magic number: 2,69
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,DownloadsDB,Magic Number,The method contains a magic number: 3,69
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,getDownloadInfoByFileName,Long Statement,The length of the statement "itemcur=sqldb.query(DownloadColumns.TABLE_NAME`DC_PROJECTION`DownloadColumns.FILENAME + " = ?"`new String[]{fileName}`null`null`null);" is 134.,91
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,updateDownloadCurrentBytes,Magic Number,The method contains a magic number: 2,125
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,isDownloadRequired,Long Statement,The length of the statement "Cursor cur=sqldb.rawQuery("SELECT Count(*) FROM " + DownloadColumns.TABLE_NAME + " WHERE "+ DownloadColumns.STATUS+ " <> 0"`null);" is 130.,366
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,updateFromDb,Long Statement,The length of the statement "cur=sqldb.query(DownloadColumns.TABLE_NAME`DC_PROJECTION`DownloadColumns.FILENAME + "= ?"`new String[]{di.mFileName}`null`null`null);" is 133.,445
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadsDB,getDownloadInfoFromCursor,Long Statement,The length of the statement "DownloadInfo di=new DownloadInfo(cur.getInt(INDEX_IDX)`cur.getString(FILENAME_IDX)`this.getClass().getPackage().getName());" is 123.,479
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,newInstance,Long Statement,The length of the statement "getHttpSocketFactoryMethod=SSLCertificateSocketFactory.class.getDeclaredMethod("getHttpSocketFactory"`Integer.TYPE`sSslSessionCacheClass);" is 138.,116
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,newInstance,Long Statement,The length of the statement "sslCertificateSocketFactory=(SocketFactory)getHttpSocketFactoryMethod.invoke(null`SOCKET_OPERATION_TIMEOUT`sessionCache);" is 121.,116
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,newInstance,Magic Number,The method contains a magic number: 8192,116
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,newInstance,Magic Number,The method contains a magic number: 80,116
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,newInstance,Magic Number,The method contains a magic number: 443,116
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,toCurl,Complex Conditional,The conditional expression !logAuthToken && (header.getName().equals("Authorization") || header.getName().equals("Cookie")) is complex.,461
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,toCurl,Complex Method,Cyclomatic complexity of the method is 8,461
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,AndroidHttpClient,toCurl,Magic Number,The method contains a magic number: 1024,461
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,V3CustomNotification,updateNotification,Long Statement,The length of the statement "expandedView.setTextViewText(R.id.time_remaining`c.getString(R.string.time_remaining_notification`Helpers.getTimeRemaining(mTimeRemaining)));" is 141.,60
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,V3CustomNotification,updateNotification,Magic Number,The method contains a magic number: 10,60
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,V3CustomNotification,updateNotification,Magic Number,The method contains a magic number: 8,60
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,V3CustomNotification,updateNotification,Magic Number,The method contains a magic number: 8,60
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,V14CustomNotification,updateNotification,Magic Number,The method contains a magic number: 8,60
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,V14CustomNotification,updateNotification,Magic Number,The method contains a magic number: 8,60
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadInfo,DownloadInfo,Magic Number,The method contains a magic number: 1001,45
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadInfo,restartTime,Magic Number,The method contains a magic number: 1000,62
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,CustomNotificationFactory,createCustomNotification,Magic Number,The method contains a magic number: 13,24
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadNotification,onDownloadStateChanged,Complex Method,Cyclomatic complexity of the method is 16,75
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,DownloadNotification,onDownloadStateChanged,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@251ead09,75
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 1970,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 2,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 3,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 4,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 2,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 3,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 4,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 2038,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,parse,Magic Number,The method contains a magic number: 2038,68
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getDate,Magic Number,The method contains a magic number: 2,107
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getDate,Magic Number,The method contains a magic number: 10,107
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Complex Method,Cyclomatic complexity of the method is 13,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 2,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 3,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 22,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 10,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 29,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 32,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 36,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 42,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 40,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 26,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 37,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 35,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 48,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Magic Number,The method contains a magic number: 9,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getMonth,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5f77b570,122
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Long Statement,The length of the statement "return (yearString.charAt(0) - '0') * 1000 + (yearString.charAt(1) - '0') * 100 + (yearString.charAt(2) - '0') * 10 + (yearString.charAt(3) - '0');" is 147.,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 2,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 10,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 70,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 1900,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 2000,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 3,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 100,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 10,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 2,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 1900,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 4,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 1000,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 100,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 2,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 10,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 3,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getYear,Magic Number,The method contains a magic number: 1970,156
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getTime,Magic Number,The method contains a magic number: 10,181
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getTime,Magic Number,The method contains a magic number: 10,181
+bakerframework_baker-android,com.google.android.vending.expansion.downloader.impl,HttpDateTime,getTime,Magic Number,The method contains a magic number: 10,181
+bakerframework_baker-android,com.baker.abaker.test,GcmBroadcastReceiverTest,testDownloadNotificationsDisabled,Magic Number,The method contains a magic number: 2,62
+bakerframework_baker-android,com.baker.abaker.test,GcmBroadcastReceiverTest,testNoMobileNoWiFi,Magic Number,The method contains a magic number: 3,81
+bakerframework_baker-android,com.baker.abaker.test,GcmBroadcastReceiverTest,testProcessDownloadNotification,Magic Number,The method contains a magic number: 4,100
+bakerframework_baker-android,com.baker.abaker,GcmBroadcastReceiver,onReceive,Complex Method,Cyclomatic complexity of the method is 12,70
+bakerframework_baker-android,com.baker.abaker,GcmBroadcastReceiver,onReceive,Long Identifier,The length of the field receiveNotificationsDownloadOnlyWifi is 36.,70
+bakerframework_baker-android,com.baker.abaker,GcmBroadcastReceiver,onReceive,Long Statement,The length of the statement "receiveNotificationsDownloadOnlyWifi=sharedPreferences.getBoolean(Configuration.PREF_RECEIVE_NOTIFICATIONS_DOWNLOAD_ONLY_WIFI`true);" is 132.,70
+bakerframework_baker-android,com.baker.abaker,GcmBroadcastReceiver,onReceive,Magic Number,The method contains a magic number: 4,70
+bakerframework_baker-android,com.baker.abaker,GcmBroadcastReceiver,onReceive,Magic Number,The method contains a magic number: 3,70
+bakerframework_baker-android,com.baker.abaker,GcmBroadcastReceiver,onReceive,Magic Number,The method contains a magic number: 2,70
+bakerframework_baker-android,com.baker.abaker,GcmBroadcastReceiver,sendNotification,Long Statement,The length of the statement "NotificationCompat.Builder mBuilder=new NotificationCompat.Builder(context).setSmallIcon(R.drawable.ic_launcher).setContentTitle(title).setStyle(new NotificationCompat.BigTextStyle().bigText(message)).setContentText(message);" is 225.,164
+bakerframework_baker-android,com.baker.abaker,ABakerApp,sendEvent,Long Statement,The length of the statement "Log.d(this.getClass().getName()`"Sending event to Google Analytics with Category: " + category + "` Action: "+ action+ "` Label: "+ label);" is 139.,40
+bakerframework_baker-android,com.baker.abaker,ABakerApp,sendTimingEvent,Long Statement,The length of the statement "Log.d(this.getClass().getName()`"Sending user timing event to Google Analytics with Category: " + category + "` Value: "+ value+ "` Name: "+ name+ "` Label: "+ label);" is 167.,56
+bakerframework_baker-android,com.baker.abaker,ABakerApp,sendTimingEvent,Long Statement,The length of the statement "tracker.send(new HitBuilders.TimingBuilder().setCategory(category).setValue(value).setVariable(name).setLabel(label).build());" is 126.,56
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Complex Method,Cyclomatic complexity of the method is 21,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Empty catch clause,The method has an empty catch block.,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Long Method,The method has 138 lines of code.,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Long Statement,The length of the statement "String path="file://".concat(Configuration.getMagazinesDirectory(this)).concat(File.separator).concat(book.getMagazineName());" is 126.,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Long Statement,The length of the statement "path="file:///android_asset".concat(File.separator).concat(getString(R.string.sa_books_directory)).concat(File.separator).concat(book.getMagazineName());" is 153.,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Long Statement,The length of the statement "if (timeElapsed > resources.getInteger(R.integer.ga_page_view_time_elapsed)) ((ABakerApp)MagazineActivity.this.getApplication()).sendTimingEvent(metaBakerPageCategory`timeElapsed`getString(R.string.issue_page_view)`metaBakerPageName);" is 234.,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Long Statement,The length of the statement "((ABakerApp)MagazineActivity.this.getApplication()).sendEvent(metaBakerPageCategory`getString(R.string.issue_page_view)`metaBakerPageName);" is 139.,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,setPagerView,Long Statement,The length of the statement "String category=tags.containsKey("baker-page-category") ? tags.get("baker-page-category") : getString(R.string.issues_category);" is 128.,358
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,onPageSelected,Long Statement,The length of the statement "if (timeElapsed > resources.getInteger(R.integer.ga_page_view_time_elapsed)) ((ABakerApp)MagazineActivity.this.getApplication()).sendTimingEvent(metaBakerPageCategory`timeElapsed`getString(R.string.issue_page_view)`metaBakerPageName);" is 234.,403
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,onPageSelected,Long Statement,The length of the statement "((ABakerApp)MagazineActivity.this.getApplication()).sendEvent(metaBakerPageCategory`getString(R.string.issue_page_view)`metaBakerPageName);" is 139.,403
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,onPageSelected,Long Statement,The length of the statement "String category=tags.containsKey("baker-page-category") ? tags.get("baker-page-category") : getString(R.string.issues_category);" is 128.,403
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,shouldOverrideUrlLoading,Complex Method,Cyclomatic complexity of the method is 11,466
+bakerframework_baker-android,com.baker.abaker,MagazineActivity,shouldOverrideUrlLoading,Empty catch clause,The method has an empty catch block.,466
+bakerframework_baker-android,com.baker.abaker,GindActivity,onCreate,Complex Method,Cyclomatic complexity of the method is 9,175
+bakerframework_baker-android,com.baker.abaker,GindActivity,onCreate,Long Statement,The length of the statement "if (sharedPreferences.getBoolean(Configuration.FIRST_TIME_RUN`true) && getResources().getBoolean(R.bool.ut_enable_tutorial)) {" is 126.,175
+bakerframework_baker-android,com.baker.abaker,GindActivity,onCreate,Long Statement,The length of the statement "((ABakerApp)this.getApplication()).sendEvent(getString(R.string.application_category)`getString(R.string.application_open)`getString(R.string.application_open_label));" is 167.,175
+bakerframework_baker-android,com.baker.abaker,GindActivity,getIssueData,Empty catch clause,The method has an empty catch block.,354
+bakerframework_baker-android,com.baker.abaker,GindActivity,extractFromExpansionFile,Long Statement,The length of the statement "final String path=Configuration.getSharedStorageDirectory().concat(File.separator).concat("Android").concat(File.separator).concat("obb").concat(File.separator).concat(getPackageName()).concat(File.separator);" is 209.,457
+bakerframework_baker-android,com.baker.abaker,GindActivity,extractFromExpansionFile,Long Statement,The length of the statement "final String expansionFileNameNoExtension="main.".concat(String.valueOf(versionCode)).concat(".").concat(getPackageName());" is 123.,457
+bakerframework_baker-android,com.baker.abaker,GindActivity,expansionFileExists,Long Statement,The length of the statement "final String path=Configuration.getSharedStorageDirectory().concat(File.separator).concat("Android").concat(File.separator).concat("obb").concat(File.separator).concat(getPackageName()).concat(File.separator);" is 209.,486
+bakerframework_baker-android,com.baker.abaker,GindActivity,expansionFileExists,Long Statement,The length of the statement "final String expansionFileNameNoExtension="main.".concat(String.valueOf(versionCode)).concat(".").concat(getPackageName());" is 123.,486
+bakerframework_baker-android,com.baker.abaker,GindActivity,downloadNewShelf,Long Statement,The length of the statement "shelfDownloader=new DownloaderTask(this.getApplicationContext()`this`this.DOWNLOAD_SHELF_FILE`getString(R.string.newstand_manifest_url)`this.shelfFileName`this.shelfFileTitle`this.shelfFileDescription`Configuration.getCacheDirectory(this)`this.shelfFileVisibility);" is 265.,553
+bakerframework_baker-android,com.baker.abaker,GindActivity,registerInBackground,Long Statement,The length of the statement "GCMRegistrationWorker registrationWorker=new GCMRegistrationWorker(this.getApplicationContext()`this.gcm`this.REGISTRATION_TASK`this);" is 134.,687
+bakerframework_baker-android,com.baker.abaker,GindActivity,createThumbnails,Complex Method,Cyclomatic complexity of the method is 8,785
+bakerframework_baker-android,com.baker.abaker,GindActivity,viewMagazine,Long Identifier,The length of the field STANDALONE_MAGAZINE_ACTIVITY_FINISH is 35.,873
+bakerframework_baker-android,com.baker.abaker,GindActivity,showAppUsage,Empty catch clause,The method has an empty catch block.,887
+bakerframework_baker-android,com.baker.abaker,GindActivity,showAppUsage,Long Identifier,The length of the field STANDALONE_MAGAZINE_ACTIVITY_FINISH is 35.,887
+bakerframework_baker-android,com.baker.abaker,GindActivity,readShelf,Magic Number,The method contains a magic number: 1024,940
+bakerframework_baker-android,com.baker.abaker,GindActivity,postExecute,Complex Method,Cyclomatic complexity of the method is 9,985
+bakerframework_baker-android,com.baker.abaker,GindActivity,onBackPressed,Long Statement,The length of the statement "builder.setTitle(this.getString(R.string.exit)).setMessage(this.getString(R.string.closing_app)).setPositiveButton(this.getString(R.string.yes)`new DialogInterface.OnClickListener(){" is 182.,1163
+bakerframework_baker-android,com.baker.abaker,GindActivity,onActivityResult,Long Identifier,The length of the field STANDALONE_MAGAZINE_ACTIVITY_FINISH is 35.,1198
+bakerframework_baker-android,com.baker.abaker,GindActivity,showExtractingExpansion,Magic Number,The method contains a magic number: 100,1221
+bakerframework_baker-android,com.baker.abaker,GindActivity,onDownloadStateChanged,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@28eb8bad,1235
+bakerframework_baker-android,com.baker.abaker,GindActivity,onDownloadProgress,Magic Number,The method contains a magic number: 100,1262
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,FlowLayout,Magic Number,The method contains a magic number: 0xffff0000,45
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,FlowLayout,Magic Number,The method contains a magic number: 2.0f,45
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,onMeasure,Complex Conditional,The conditional expression growHeight && (breakLine || currentWidth + child.getMeasuredWidth() > widthSize) is complex.,62
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,onLayout,Long Parameter List,The method has 5 parameters. ,120
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 2.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 4.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 4.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 4.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 4.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 2.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 6.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 6.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 6.0f,130
+bakerframework_baker-android,com.baker.abaker.views,FlowLayout,drawChild,Magic Number,The method contains a magic number: 6.0f,130
+bakerframework_baker-android,com.baker.abaker.views,CustomWebViewPager,CustomWebViewPager,Magic Number,The method contains a magic number: 5,37
+bakerframework_baker-android,com.baker.abaker.views,CustomWebViewPager,CustomWebViewPager,Magic Number,The method contains a magic number: 5,42
+bakerframework_baker-android,com.baker.abaker.views,CustomWebViewPager,canScroll,Long Parameter List,The method has 5 parameters. ,47
+bakerframework_baker-android,com.baker.abaker.views,WebViewFragment,onCreateView,Complex Method,Cyclomatic complexity of the method is 11,68
+bakerframework_baker-android,com.baker.abaker.views,WebViewFragment,onCreateView,Empty catch clause,The method has an empty catch block.,68
+bakerframework_baker-android,com.baker.abaker.views,WebViewFragment,shouldOverrideUrlLoading,Complex Method,Cyclomatic complexity of the method is 11,101
+bakerframework_baker-android,com.baker.abaker.views,WebViewFragment,shouldOverrideUrlLoading,Empty catch clause,The method has an empty catch block.,101
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,MagazineThumb,Long Statement,The length of the statement "thumbDownloader=new DownloaderTask(_activity`this`this.THUMB_DOWNLOAD_TASK`this.magazine.getCover()`this.magazine.getName()`this.magazine.getTitle().concat(" cover")`"File to show on the shelf"`cachePath`this.THUMB_DOWNLOAD_VISIBILITY);" is 236.,139
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,MagazineThumb,Long Statement,The length of the statement "packDownloader=new DownloaderTask(this.activity`this`this.MAGAZINE_DOWNLOAD_TASK`this.magazine.getUrl()`this.magazine.getName() + _activity.getString(R.string.package_extension)`this.magazine.getTitle()`this.magazine.getInfo()`this.magazinesDirectory`this.MAGAZINE_DOWNLOAD_VISIBILITY);" is 286.,139
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,init,Complex Method,Cyclomatic complexity of the method is 8,190
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,init,Long Statement,The length of the statement "if ((new File(Configuration.getCacheDirectory(this.getContext()) + File.separator + this.magazine.getName())).exists()) {" is 121.,190
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,init,Magic Number,The method contains a magic number: 1048576,190
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,checkInternetAccess,Long Statement,The length of the statement "CheckInternetTask checkInternetTask=new CheckInternetTask(MagazineThumb.this.getContext()`MagazineThumb.this`CHECK_INTERNET_TASK);" is 130.,283
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,setBookJson,Long Statement,The length of the statement "if (this.activity.getResources().getBoolean(R.bool.ga_enable) && this.activity.getResources().getBoolean(R.bool.ga_register_issue_read_event)) {" is 144.,322
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,setBookJson,Long Statement,The length of the statement "((ABakerApp)this.activity.getApplication()).sendEvent(this.activity.getString(R.string.issues_category)`this.activity.getString(R.string.issue_open)`this.magazine.getName());" is 174.,322
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,deleteIssue,Long Statement,The length of the statement "builder.setTitle(R.string.confirmation).setMessage(R.string.archiveConfirm).setIcon(android.R.drawable.ic_dialog_alert).setPositiveButton(R.string.yes`new DialogInterface.OnClickListener(){" is 189.,366
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,deleteIssue,Long Statement,The length of the statement "MagazineDeleteTask deleter=new MagazineDeleteTask(MagazineThumb.this.getContext()`MagazineThumb.this`MAGAZINE_DELETE_TASK);" is 123.,366
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,onClick,Long Statement,The length of the statement "MagazineDeleteTask deleter=new MagazineDeleteTask(MagazineThumb.this.getContext()`MagazineThumb.this`MAGAZINE_DELETE_TASK);" is 123.,375
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,startPackageDownload,Long Statement,The length of the statement "packDownloader=new DownloaderTask(this.activity`this`this.MAGAZINE_DOWNLOAD_TASK`this.magazine.getUrl()`this.magazine.getName() + activity.getString(R.string.package_extension)`this.magazine.getTitle()`this.magazine.getInfo()`this.magazinesDirectory`this.MAGAZINE_DOWNLOAD_VISIBILITY);" is 285.,422
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,downloadCover,Long Statement,The length of the statement "String coverFile=Configuration.getCacheDirectory(this.getContext()).concat(File.separator).concat(this.magazine.getName());" is 123.,482
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,renderCover,Long Statement,The length of the statement "path=books.concat(File.separator).concat(this.magazine.getName()).concat(File.separator).concat(this.magazine.getCover());" is 122.,501
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,renderCover,Long Statement,The length of the statement "path=Configuration.getMagazinesDirectory(this.getContext()).concat(File.separator).concat(this.magazine.getName()).concat(File.separator).concat(this.magazine.getCover());" is 171.,501
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,updateProgress,Magic Number,The method contains a magic number: 1048576,573
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,updateProgress,Magic Number,The method contains a magic number: 2,573
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,updateProgress,Magic Number,The method contains a magic number: 1048576,573
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,postExecute,Complex Method,Cyclomatic complexity of the method is 19,596
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,postExecute,Long Statement,The length of the statement "if (this.activity.getResources().getBoolean(R.bool.ga_enable) && this.activity.getResources().getBoolean(R.bool.ga_register_issue_download_event)) {" is 148.,596
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,postExecute,Long Statement,The length of the statement "((ABakerApp)this.activity.getApplication()).sendEvent(this.activity.getString(R.string.issues_category)`this.activity.getString(R.string.issue_download)`this.magazine.getName());" is 178.,596
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,postExecute,Long Statement,The length of the statement "if (this.activity.getResources().getBoolean(R.bool.ga_enable) && this.activity.getResources().getBoolean(R.bool.ga_register_issue_delete_event)) {" is 146.,596
+bakerframework_baker-android,com.baker.abaker.views,MagazineThumb,postExecute,Long Statement,The length of the statement "((ABakerApp)this.activity.getApplication()).sendEvent(this.activity.getString(R.string.issues_category)`this.activity.getString(R.string.issue_delete)`this.magazine.getName());" is 176.,596
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,DownloaderTask,Long Parameter List,The method has 9 parameters. ,38
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,isDownloading,Empty catch clause,The method has an empty catch block.,72
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,doInBackground,Complex Method,Cyclomatic complexity of the method is 13,136
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,doInBackground,Empty catch clause,The method has an empty catch block.,136
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,doInBackground,Long Statement,The length of the statement "publishProgress(100L`c.getLong(c.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES))`c.getLong(c.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES)));" is 160.,136
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,doInBackground,Magic Number,The method contains a magic number: 100,136
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,doInBackground,Magic Number,The method contains a magic number: 100L,136
+bakerframework_baker-android,com.baker.abaker.workers,DownloaderTask,onProgressUpdate,Magic Number,The method contains a magic number: 2,236
+bakerframework_baker-android,com.baker.abaker.workers,GCMRegistrationWorker,sendRegistrationIdToBackend,Magic Number,The method contains a magic number: 200,91
+bakerframework_baker-android,com.baker.abaker.workers,BookJsonParserTask,doInBackground,Complex Method,Cyclomatic complexity of the method is 10,61
+bakerframework_baker-android,com.baker.abaker.workers,BookJsonParserTask,doInBackground,Magic Number,The method contains a magic number: 200,61
+bakerframework_baker-android,com.baker.abaker.workers,UnzipperTask,extract,Magic Number,The method contains a magic number: 8192,105
+bakerframework_baker-android,com.baker.abaker.client,GindClient,shelfJsonGet,Long Statement,The length of the statement "json.put(basicResult.errorJson(response.getStatusLine().getStatusCode() + ": " + response.getStatusLine().getReasonPhrase()));" is 126.,50
+bakerframework_baker-android,com.baker.abaker.client,GindClient,shelfJsonGet,Magic Number,The method contains a magic number: 200,50
+bakerframework_baker-android,com.baker.abaker.client,PostClient,doPost,Magic Number,The method contains a magic number: 200,71
+bakerframework_baker-android,com.baker.abaker.settings,Configuration,copyFile,Magic Number,The method contains a magic number: 1024,249
+bakerframework_baker-android,com.google.android.vending.licensing,APKExpansionPolicy,processServerResponse,Complex Method,Cyclomatic complexity of the method is 11,114
+bakerframework_baker-android,com.google.android.vending.licensing,LicenseValidator,LicenseValidator,Long Parameter List,The method has 6 parameters. ,57
+bakerframework_baker-android,com.google.android.vending.licensing,LicenseValidator,verify,Complex Conditional,The conditional expression responseCode == LICENSED || responseCode == NOT_LICENSED || responseCode == LICENSED_OLD_KEY is complex.,81
+bakerframework_baker-android,com.google.android.vending.licensing,LicenseValidator,verify,Complex Method,Cyclomatic complexity of the method is 17,81
+bakerframework_baker-android,com.google.android.vending.licensing,LicenseValidator,verify,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@78cd1d5c,81
+bakerframework_baker-android,com.google.android.vending.licensing,ResponseData,parse,Magic Number,The method contains a magic number: 6,37
+bakerframework_baker-android,com.google.android.vending.licensing,ResponseData,parse,Magic Number,The method contains a magic number: 2,37
+bakerframework_baker-android,com.google.android.vending.licensing,ResponseData,parse,Magic Number,The method contains a magic number: 3,37
+bakerframework_baker-android,com.google.android.vending.licensing,ResponseData,parse,Magic Number,The method contains a magic number: 4,37
+bakerframework_baker-android,com.google.android.vending.licensing,ResponseData,parse,Magic Number,The method contains a magic number: 5,37
+bakerframework_baker-android,com.google.android.vending.licensing,AESObfuscator,AESObfuscator,Magic Number,The method contains a magic number: 1024,49
+bakerframework_baker-android,com.google.android.vending.licensing,AESObfuscator,AESObfuscator,Magic Number,The method contains a magic number: 256,49
+bakerframework_baker-android,com.google.android.vending.licensing,LicenseChecker,checkAccess,Long Statement,The length of the statement "LicenseValidator validator=new LicenseValidator(mPolicy`new NullDeviceLimiter()`callback`generateNonce()`mPackageName`mVersionCode);" is 132.,125
+bakerframework_baker-android,com.google.android.vending.licensing,LicenseChecker,checkAccess,Long Statement,The length of the statement "boolean bindResult=mContext.bindService(new Intent(new String(Base64.decode("Y29tLmFuZHJvaWQudmVuZGluZy5saWNlbnNpbmcuSUxpY2Vuc2luZ1NlcnZpY2U=")))`this`Context.BIND_AUTO_CREATE);" is 177.,125
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Long Parameter List,The method has 6 parameters. ,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 8,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 16,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 6,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 6,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode3to4,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1af3fb00,174
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Long Parameter List,The method has 5 parameters. ,261
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Long Parameter List,The method has 5 parameters. ,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Long Statement,The length of the statement "int inBuff=((source[d + off] << 24) >>> 8) | ((source[d + 1 + off] << 24) >>> 16) | ((source[d + 2 + off] << 24) >>> 24);" is 121.,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 3,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 3,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 8,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 16,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 18,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 12,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 6,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 3,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Long Parameter List,The method has 5 parameters. ,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((decodabet[source[srcOffset]] << 24) >>> 6) | ((decodabet[source[srcOffset + 1]] << 24) >>> 12) | ((decodabet[source[srcOffset + 2]] << 24) >>> 18);" is 161.,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((decodabet[source[srcOffset]] << 24) >>> 6) | ((decodabet[source[srcOffset + 1]] << 24) >>> 12) | ((decodabet[source[srcOffset + 2]] << 24) >>> 18)| ((decodabet[source[srcOffset + 3]] << 24) >>> 24);" is 212.,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 18,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 8,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 18,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 8,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Complex Conditional,The conditional expression (b4Posn == 3 && bytesLeft > 2) || (b4Posn == 4 && bytesLeft > 1) is complex.,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Complex Method,Cyclomatic complexity of the method is 11,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 3,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 2,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 0x7f,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 0x7f,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 3,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 2,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492
+bakerframework_baker-android,com.google.android.vending.licensing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492

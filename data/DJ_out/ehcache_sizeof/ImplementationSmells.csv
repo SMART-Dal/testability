@@ -1,0 +1,159 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalker,walk,Complex Method,Cyclomatic complexity of the method is 17,113
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalker,walk,Long Statement,The length of the statement "traversalDebugMessage.append(object.getClass().getName()).append("@").append(System.identityHashCode(object)).append("` ");" is 123.,113
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalker,walk,Long Statement,The length of the statement "traversalDebugMessage.append(" ").append(visitSize).append("b\t\t").append(ref.getClass().getName()).append("@").append(System.identityHashCode(ref)).append("\n");" is 163.,113
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalker,walk,Long Statement,The length of the statement "traversalDebugMessage.append(" ignored\t").append(ref.getClass().getName()).append("@").append(System.identityHashCode(ref)).append("\n");" is 138.,113
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalker,walk,Magic Number,The method contains a magic number: 2,113
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalker,getAllFields,Long Statement,The length of the statement "LOG.error("Security settings prevent Ehcache from accessing the subgraph beneath '{}'" + " - cache sizes may be underestimated as a result"`field`e);" is 149.,232
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalker,getAllFields,Long Statement,The length of the statement "LOG.warn("The JVM is preventing Ehcache from accessing the subgraph beneath '{}'" + " - cache sizes may be underestimated as a result"`field`e);" is 144.,232
+ehcache_sizeof,org.ehcache.sizeof,CrossCheckingSizeOfIT,testSingleClass,Magic Number,The method contains a magic number: 9,51
+ehcache_sizeof,org.ehcache.sizeof,CrossCheckingSizeOfIT,testTwoClasses,Magic Number,The method contains a magic number: 5,61
+ehcache_sizeof,org.ehcache.sizeof,CrossCheckingSizeOfIT,testTwoClasses,Magic Number,The method contains a magic number: 5,61
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalkerTest,testWalksAGraph,Magic Number,The method contains a magic number: 5L,40
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalkerTest,testWalksAGraph,Magic Number,The method contains a magic number: 14L,40
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalkerTest,testWalksAGraph,Magic Number,The method contains a magic number: 5L,40
+ehcache_sizeof,org.ehcache.sizeof,ObjectGraphWalkerTest,testUsingListenerToLimit,Magic Number,The method contains a magic number: 2,120
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,setup,Long Statement,The length of the statement "System.out.println("Testing for a " + System.getProperty("java.version") + " JDK "+ ") on a "+ System.getProperty("sun.arch.data.model")+ "-bit VM "+ "(compressed-oops: "+ COMPRESSED_OOPS+ "` Hotspot CMS: "+ HOTSPOT_CMS+ ")");" is 226.,39
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testAnnotationFiltering,Magic Number,The method contains a magic number: 128L,49
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testAnnotationFiltering,Magic Number,The method contains a magic number: 16,49
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testAnnotationFiltering,Magic Number,The method contains a magic number: 1024L,49
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testAnnotationFiltering,Magic Number,The method contains a magic number: 128L,49
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testAnnotationFiltering,Magic Number,The method contains a magic number: 16,49
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testAnnotationFiltering,Magic Number,The method contains a magic number: 1024L,49
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testCustomAnnotationFiltering,Long Statement,The length of the statement "assertThat(deepSizeOf(sizeOf`new MatchingPatternOrNotAnnotationFilteredField())`allOf(greaterThan(128L)`lessThan(16 * 1024L)));" is 127.,68
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testCustomAnnotationFiltering,Magic Number,The method contains a magic number: 128L,68
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testCustomAnnotationFiltering,Magic Number,The method contains a magic number: 16,68
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testCustomAnnotationFiltering,Magic Number,The method contains a magic number: 1024L,68
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testCustomAnnotationFiltering,Magic Number,The method contains a magic number: 4L,68
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testCustomAnnotationFiltering,Magic Number,The method contains a magic number: 4L,68
+ehcache_sizeof,org.ehcache.sizeof,FilteredSizeOfTest,testCustomAnnotationFiltering,Magic Number,The method contains a magic number: 4L,68
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,setup,Long Statement,The length of the statement "if (JvmInformation.CURRENT_JVM_INFORMATION == UNKNOWN_64_BIT || JvmInformation.CURRENT_JVM_INFORMATION == UNKNOWN_32_BIT) {" is 123.,61
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testSizeOfFlyweight,Magic Number,The method contains a magic number: 42,80
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testSizeOf,Long Statement,The length of the statement "assertThat(sizeOf.sizeOf(new Object[]{new Object()`new Object()`new Object()`new Object()})`"sizeOf(new Object[] { new Object()` new Object()` new Object()` new Object() })");" is 175.,86
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testSizeOf,Long Statement,The length of the statement "assertThat(sizeOf.sizeOf(new int[]{987654`876543`765432`654321})`"sizeOf(new int[] { 987654` 876543` 765432` 654321 })");" is 121.,86
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testSizeOf,Magic Number,The method contains a magic number: 1000,86
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Long Statement,The length of the statement "System.err.println("Run # " + (j + 1) + ": Deviation of "+ String.format("%.3f"`percentage * -100)+ "%\n"+ used+ " bytes are actually being used` while we believe "+ mem+ " are");" is 179.,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Long Statement,The length of the statement "Assert.assertThat("Run # " + (j + 1) + ": Deviation of "+ String.format("%.3f"`percentage * -100)+ "% was above the +/-1.5% delta threshold \n"+ used+ " bytes are actually being used` while we believe "+ mem+ " are ("+ (used - mem) / size + ")"`Math.abs(percentage) < .015f`is(true));" is 284.,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Magic Number,The method contains a magic number: 80000,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Magic Number,The method contains a magic number: 5,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Magic Number,The method contains a magic number: 2,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Magic Number,The method contains a magic number: 100,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Magic Number,The method contains a magic number: 100,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,testOnHeapConsumption,Magic Number,The method contains a magic number: .015f,152
+ehcache_sizeof,org.ehcache.sizeof,SizeOfTest,measureMemoryUse,Magic Number,The method contains a magic number: 100,189
+ehcache_sizeof,org.ehcache.sizeof,AbstractSizeOfTest,getVmOptionValue,Long Statement,The length of the statement "Object vmOption=server.invoke(ObjectName.getInstance("com.sun.management:type=HotSpotDiagnostic")`"getVMOption"`new Object[]{name}`new String[]{"java.lang.String"});" is 165.,60
+ehcache_sizeof,org.ehcache.sizeof,ConfigurationTest,testBuilderBuilds,Long Statement,The length of the statement "final Configuration configuration=new Configuration.Builder().abort(true).maxDepth(666).silent(true).addFilter(filter).build();" is 127.,31
+ehcache_sizeof,org.ehcache.sizeof,ConfigurationTest,testBuilderBuilds,Magic Number,The method contains a magic number: 666,31
+ehcache_sizeof,org.ehcache.sizeof,ConfigurationTest,testBuilderBuilds,Magic Number,The method contains a magic number: 666,31
+ehcache_sizeof,org.ehcache.sizeof,ConfigurationTest,testBuilderCopies,Long Statement,The length of the statement "final Configuration template=new Configuration.Builder().abort(true).maxDepth(666).silent(true).addFilter(filter).build();" is 122.,46
+ehcache_sizeof,org.ehcache.sizeof,ConfigurationTest,testBuilderCopies,Magic Number,The method contains a magic number: 666,46
+ehcache_sizeof,org.ehcache.sizeof,SizeOfFilterSourceTest,testContainsAnnotationFilterWhenConfigured,Magic Number,The method contains a magic number: 2,35
+ehcache_sizeof,org.ehcache.sizeof.impl,AgentLoader,warnIfOSX,Long Statement,The length of the statement "LOGGER.warn("Loading the SizeOfAgent will probably fail` as you are running on Apple OS X and have a value set for java.io.tmpdir\n" + "They both result in a bug` not yet fixed by Apple` that won't let us attach to the VM and load the agent.\n" + "Most probably` you'll also get a full thread-dump after this because of the failure... Nothing to worry about!\n"+ "You can bypass trying to load the Agent entirely by setting the System property '" + AgentSizeOf.BYPASS_LOADING + "' to true");" is 491.,158
+ehcache_sizeof,org.ehcache.sizeof.impl,AgentLoader,getAgentFile,Magic Number,The method contains a magic number: 1024,168
+ehcache_sizeof,org.ehcache.sizeof.impl,AgentLoader,agentIsAvailable,Long Identifier,The length of the field INSTRUMENTATION_INSTANCE_SYSTEM_PROPERTY_NAME is 45.,194
+ehcache_sizeof,org.ehcache.sizeof.impl,AgentLoader,agentIsAvailable,Long Statement,The length of the statement "LOGGER.warn("Couldn't access the system classloader because of the security policies applied by " + "the security manager. You either want to loosen these` so ClassLoader.getSystemClassLoader() and " + "reflection API calls are permitted or the sizing will be done using some other mechanism.\n"+ "Alternatively` set the system property org.ehcache.sizeof.agent.instrumentationSystemProperty to true "+ "to have the agent put the required instances in the System Properties for the loader to access.");" is 502.,194
+ehcache_sizeof,org.ehcache.sizeof.impl,AgentSizeOf,sizeOf,Long Statement,The length of the statement "return Math.max(CURRENT_JVM_INFORMATION.getMinimumObjectSize()`measuredSize + CURRENT_JVM_INFORMATION.getAgentSizeOfAdjustment());" is 130.,82
+ehcache_sizeof,org.ehcache.sizeof.impl,SizeOfAgent,registerSystemProperty,Long Identifier,The length of the field NO_INSTRUMENTATION_SYSTEM_PROPERTY_NAME is 39.,38
+ehcache_sizeof,org.ehcache.sizeof.impl,UnsafeSizeOf,UnsafeSizeOf,Long Statement,The length of the statement "LOGGER.warn("UnsafeSizeOf is not always accurate on the JVM (" + CURRENT_JVM_INFORMATION.getJvmDescription() + "). Please consider enabling AgentSizeOf.");" is 155.,78
+ehcache_sizeof,org.ehcache.sizeof.impl,UnsafeSizeOf,sizeOf,Complex Method,Cyclomatic complexity of the method is 9,100
+ehcache_sizeof,org.ehcache.sizeof.impl,UnsafeSizeOf,sizeOf,Long Statement,The length of the statement "lastFieldOffset+=CURRENT_JVM_INFORMATION.getObjectAlignment() - (lastFieldOffset % CURRENT_JVM_INFORMATION.getObjectAlignment());" is 129.,100
+ehcache_sizeof,org.ehcache.sizeof.impl,ReflectionSizeOf,ReflectionSizeOf,Long Statement,The length of the statement "LOGGER.warn("ReflectionSizeOf is not always accurate on the JVM (" + CURRENT_JVM_INFORMATION.getJvmDescription() + "). Please consider enabling AgentSizeOf.");" is 159.,64
+ehcache_sizeof,org.ehcache.sizeof.impl,ReflectionSizeOf,sizeOf,Complex Method,Cyclomatic complexity of the method is 25,81
+ehcache_sizeof,org.ehcache.sizeof.impl,ReflectionSizeOf,sizeOf,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2dfc833b,81
+ehcache_sizeof,org.ehcache.sizeof.impl,AgentLoaderRaceTest,testAgentLoaderRace,Magic Number,The method contains a magic number: 2,50
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 4,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 8,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 8,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 8,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 4,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 4,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 16,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 8,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 8,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot32Bits,Magic Number,The method contains a magic number: 4,28
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Long Statement,The length of the statement "verifyJvmInfo(JvmInformation.HOTSPOT_64_BIT_WITH_COMPRESSED_OOPS_AND_CONCURRENT_MARK_AND_SWEEP`0`0`4`24`8`12`8`true`true`true);" is 127.,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 16,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 24,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 16,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 4,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 12,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 4,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 24,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 12,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,hotspot64Bits,Magic Number,The method contains a magic number: 8,34
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 4,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 8,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 8,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 8,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 4,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 4,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 16,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 8,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 8,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk32Bits,Magic Number,The method contains a magic number: 4,42
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Long Statement,The length of the statement "verifyJvmInfo(JvmInformation.OPENJDK_64_BIT_WITH_COMPRESSED_OOPS_AND_CONCURRENT_MARK_AND_SWEEP`0`0`4`24`8`12`8`true`true`true);" is 127.,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 16,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 24,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 16,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 4,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 12,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 4,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 24,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 12,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,openJdk64Bits,Magic Number,The method contains a magic number: 8,48
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm32Bits,Magic Number,The method contains a magic number: 4,56
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm32Bits,Magic Number,The method contains a magic number: 8,56
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm32Bits,Magic Number,The method contains a magic number: 8,56
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm32Bits,Magic Number,The method contains a magic number: 16,56
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm32Bits,Magic Number,The method contains a magic number: 4,56
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 8,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 8,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 8,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 24,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 8,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 4,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 8,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 8,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 16,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,ibm64Bits,Magic Number,The method contains a magic number: 4,61
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 4,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 8,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 8,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 8,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 4,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 8,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 8,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 8,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 16,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,unknown,Magic Number,The method contains a magic number: 8,67
+ehcache_sizeof,org.ehcache.sizeof.impl,JvmInformationTest,verifyJvmInfo,Long Parameter List,The method has 11 parameters. ,73
+ehcache_sizeof,org.ehcache.sizeof.filters,AnnotationSizeOfFilter,isAnnotationPresentOrInherited,Complex Conditional,The conditional expression annotationOnClass != null && (klazz == instanceKlazz || annotationOnClass.inherited()) is complex.,89
+ehcache_sizeof,org.ehcache.sizeof.filters,AnnotationSizeOfFilter,getAnnotationOn,Long Statement,The length of the statement "throw new IllegalStateException("You are not allowed to use more than one @" + referenceAnnotation.getName() + " annotations for the same element : "+ element.toString());" is 171.,112
+ehcache_sizeof,org.ehcache.sizeof.annotations,AnnotationProxyFactoryTest,NoDefaultValueInReferenceAnnotationAndNoImplementationInCustomThrowsException_Test,Long Statement,The length of the statement "ReferenceAnnotation annotationProxy=AnnotationProxyFactory.getAnnotationProxy(customAnnotation`ReferenceAnnotation.class);" is 122.,27
+ehcache_sizeof,org.ehcache.sizeof.annotations,AnnotationProxyFactoryTest,NoImplementationInCustomFallsBackToReferenceImplementation_Test,Long Statement,The length of the statement "ReferenceAnnotation annotationProxy=AnnotationProxyFactory.getAnnotationProxy(customAnnotation`ReferenceAnnotation.class);" is 122.,35
+ehcache_sizeof,org.ehcache.sizeof.annotations,AnnotationProxyFactoryTest,IfMethodExistsInCustomAnnotationRedirectsToIt_Test,Long Statement,The length of the statement "ReferenceAnnotation annotationProxy=AnnotationProxyFactory.getAnnotationProxy(customAnnotation`ReferenceAnnotation.class);" is 122.,44
+ehcache_sizeof,org.ehcache.sizeof.annotations,AnnotationProxyFactoryTest,IfMethodExistsInCustomAnnotationButReturnTypeIsDifferentFallsBackToReferenceImplementation_Test,Long Statement,The length of the statement "ReferenceAnnotation annotationProxy=AnnotationProxyFactory.getAnnotationProxy(customAnnotation`ReferenceAnnotation.class);" is 122.,52
+ehcache_sizeof,org.ehcache.sizeof.annotations,AnnotationProxyFactoryTest,IfMethodExistsInCustomAnnotationButReturnTypeIsDifferentFallsBackToReferenceImplementation_Test,Magic Number,The method contains a magic number: 5,52
+ehcache_sizeof,org.ehcache.sizeof.annotations,AnnotationProxyFactoryTest,DifferentReturnTypesFromDifferentMethods_Test,Long Statement,The length of the statement "ReferenceAnnotation annotationProxy=org.ehcache.sizeof.annotations.AnnotationProxyFactory.getAnnotationProxy(customAnnotation`ReferenceAnnotation.class);" is 153.,60

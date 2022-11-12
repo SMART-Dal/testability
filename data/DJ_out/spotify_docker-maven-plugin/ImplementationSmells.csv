@@ -1,0 +1,59 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+spotify_docker-maven-plugin,com.spotify.docker,Utils,parseImageName,Long Statement,The length of the statement "throw new MojoExecutionException("You must specify an \"imageName\" in your " + "docker-maven-client's plugin configuration");" is 126.,49
+spotify_docker-maven-plugin,com.spotify.docker,Utils,pushImage,Long Parameter List,The method has 8 parameters. ,74
+spotify_docker-maven-plugin,com.spotify.docker,Utils,pushImage,Magic Number,The method contains a magic number: 1000,74
+spotify_docker-maven-plugin,com.spotify.docker,Utils,pushImageTag,Long Parameter List,The method has 5 parameters. ,135
+spotify_docker-maven-plugin,com.spotify.docker,Utils,pushImageTag,Long Statement,The length of the statement "throw new MojoExecutionException("You have used option \"pushImageTag\" but have" + " not specified an \"imageTag\" in your" + " docker-maven-client's plugin configuration");" is 174.,135
+spotify_docker-maven-plugin,com.spotify.docker,RemoveImageMojo,execute,Complex Method,Cyclomatic complexity of the method is 9,66
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,execute,Complex Conditional,The conditional expression useGitCommitId || ((imageName != null) && imageName.contains("${gitShortCommitId}")) is complex.,335
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,execute,Complex Method,Cyclomatic complexity of the method is 15,335
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,createImageArtifact,Long Statement,The length of the statement "final JarEntry entry=new JarEntry(MessageFormat.format("META-INF/docker/{0}/{1}/image-info.json"`mainArtifact.getGroupId()`mainArtifact.getArtifactId()));" is 154.,440
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Complex Method,Cyclomatic complexity of the method is 10,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Empty catch clause,The method has an empty catch block.,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Empty catch clause,The method has an empty catch block.,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Empty catch clause,The method has an empty catch block.,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Empty catch clause,The method has an empty catch block.,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Empty catch clause,The method has an empty catch block.,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Empty catch clause,The method has an empty catch block.,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,loadProfile,Long Method,The method has 104 lines of code.,457
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,validateParameters,Complex Method,Cyclomatic complexity of the method is 10,594
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,createDockerFile,Complex Method,Cyclomatic complexity of the method is 23,643
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,createDockerFile,Long Statement,The length of the statement "getLog().warn("Entrypoint provided but cmd is not an explicit list. Attempting to " + "generate CMD string in the form of an argument list.");" is 142.,643
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojo,buildParams,Long Statement,The length of the statement "buildParams.add(DockerClient.BuildParam.create("buildargs"`URLEncoder.encode(OBJECT_MAPPER.writeValueAsString(buildArgs)`"UTF-8")));" is 132.,866
+spotify_docker-maven-plugin,com.spotify.docker,AbstractDockerMojo,registryAuth,Complex Method,Cyclomatic complexity of the method is 8,234
+spotify_docker-maven-plugin,com.spotify.docker,AbstractDockerMojo,registryAuth,Long Statement,The length of the statement "getLog().warn("No entry found in settings.xml for serverId=" + serverId + "` cannot configure authentication for that registry");" is 129.,234
+spotify_docker-maven-plugin,com.spotify.docker,AbstractDockerMojo,googleContainerRegistryAuthSupplier,Long Statement,The length of the statement "throw new MojoExecutionException("Cannot load credentials referenced by " + "DOCKER_GOOGLE_CREDENTIALS environment variable"`ex);" is 129.,317
+spotify_docker-maven-plugin,com.spotify.docker,Git,getCommitId,Magic Number,The method contains a magic number: 7,64
+spotify_docker-maven-plugin,com.spotify.docker,TagMojoTest,testTag2,Long Statement,The length of the statement "assertTrue(String.format("tag '%s' should be git commit ID at least 7 characters long "`split[1])`split[1].length() >= 7);" is 122.,55
+spotify_docker-maven-plugin,com.spotify.docker,TagMojoTest,testTag2,Magic Number,The method contains a magic number: 7,55
+spotify_docker-maven-plugin,com.spotify.docker,PushMojoTest,testFailingPushWithRetries,Magic Number,The method contains a magic number: 4,57
+spotify_docker-maven-plugin,com.spotify.docker,CompositeImageNameTest,testStandardCompositeNameWithImageTags,Magic Number,The method contains a magic number: 2,47
+spotify_docker-maven-plugin,com.spotify.docker,CompositeImageNameTest,testCompositeNameWithoutTagWithImageTags,Magic Number,The method contains a magic number: 2,58
+spotify_docker-maven-plugin,com.spotify.docker,CompositeImageNameTest,testImageWithRegistryHostnameAndPortWithTag,Magic Number,The method contains a magic number: 2,81
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithDockerVolumes,Long Identifier,The length of the field GENERATED_DOCKERFILE_WITH_VOLUMES is 33.,164
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithDockerVolumes,Long Statement,The length of the statement "assertEquals("wrong dockerfile contents"`GENERATED_DOCKERFILE_WITH_VOLUMES`Files.readAllLines(Paths.get("target/docker/Dockerfile")`UTF_8));" is 140.,164
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithDockerLabels,Long Identifier,The length of the field GENERATED_DOCKERFILE_WITH_LABELS is 32.,179
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithDockerLabels,Long Statement,The length of the statement "assertEquals("wrong dockerfile contents"`GENERATED_DOCKERFILE_WITH_LABELS`Files.readAllLines(Paths.get("target/docker/Dockerfile")`UTF_8));" is 139.,179
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithDockerDirectoryWithArgs,Long Statement,The length of the statement "verify(docker).build(eq(Paths.get("target/docker"))`eq("busybox")`any(AnsiProgressHandler.class)`eq(DockerClient.BuildParam.create("buildargs"`"%7B%22VERSION%22%3A%220.1%22%7D")));" is 180.,206
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithMultiplePushTagButNoTagsSpecified,Long Statement,The length of the statement "final String message="You have used option \"pushImageTag\" but have" + " not specified an \"imageTag\" in your" + " docker-maven-client's plugin configuration";" is 161.,351
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithInvalidPushTag,Long Statement,The length of the statement "final String message="You have used option \"pushImageTag\" but have" + " not specified an \"imageTag\" in your" + " docker-maven-client's plugin configuration";" is 161.,388
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithGeneratedDockerfile,Long Statement,The length of the statement "assertEquals("wrong dockerfile contents"`GENERATED_DOCKERFILE`Files.readAllLines(Paths.get("target/docker/Dockerfile")`UTF_8));" is 127.,406
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithGeneratedDockerfileWithSquashCommands,Long Identifier,The length of the field GENERATED_DOCKERFILE_WITH_SQUASH_COMMANDS is 41.,420
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithGeneratedDockerfileWithSquashCommands,Long Statement,The length of the statement "assertEquals("wrong dockerfile contents"`GENERATED_DOCKERFILE_WITH_SQUASH_COMMANDS`Files.readAllLines(Paths.get("target/docker/Dockerfile")`UTF_8));" is 148.,420
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildGeneratedDockerFile_CopiesEntireDirectory,Long Statement,The length of the statement "assertEquals("wrong dockerfile contents"`expectedDockerFileContents`Files.readAllLines(Paths.get("target/docker/Dockerfile")`UTF_8));" is 133.,435
+spotify_docker-maven-plugin,com.spotify.docker,BuildMojoTest,testBuildWithProfile,Long Statement,The length of the statement "assertEquals("wrong dockerfile contents"`PROFILE_GENERATED_DOCKERFILE`Files.readAllLines(Paths.get("target/docker/Dockerfile")`UTF_8));" is 135.,458
+spotify_docker-maven-plugin,com.spotify.docker,RemoveImageMojoTest,testRemoveImageWithTags,Long Statement,The length of the statement "Mockito.when(docker.removeImage("imageToRemove:123456"`true`false)).thenThrow(new ImageNotFoundException("imageToRemove:123456"));" is 130.,70
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,execute,Complex Method,Cyclomatic complexity of the method is 8,106
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,execute,Magic Number,The method contains a magic number: 2,106
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,writeGoal,Complex Conditional,The conditional expression goal == null || goal.length() <= 0 || mojoGoal.equals(goal) is complex.,231
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,writeParameter,Magic Number,The method contains a magic number: 2,271
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,writeParameter,Magic Number,The method contains a magic number: 3,271
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,writeParameter,Magic Number,The method contains a magic number: 3,271
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,writeParameter,Magic Number,The method contains a magic number: 3,271
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,writeParameter,Magic Number,The method contains a magic number: 3,271
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,toLines,Magic Number,The method contains a magic number: 256,368
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,getIndentLevel,Magic Number,The method contains a magic number: 4,419
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,getPropertyFromExpression,Complex Conditional,The conditional expression expression != null && expression.startsWith("${") && expression.endsWith("}") && !expression.substring(2).contains("${") is complex.,443
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,getPropertyFromExpression,Long Statement,The length of the statement "if (expression != null && expression.startsWith("${") && expression.endsWith("}") && !expression.substring(2).contains("${")) {" is 127.,443
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,getPropertyFromExpression,Magic Number,The method contains a magic number: 2,443
+spotify_docker-maven-plugin,com.spotify.docker,HelpMojo,getPropertyFromExpression,Magic Number,The method contains a magic number: 2,443

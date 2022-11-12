@@ -1,0 +1,63 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+sogyf_mybatis-pagination,org.mybatis.pagination.dto.datatables,PagingCriteria,PagingCriteria,Long Parameter List,The method has 5 parameters. ,37
+sogyf_mybatis-pagination,org.mybatis.pagination.dto.datatables,PagingCriteria,createCriteriaWithAllParamter,Long Parameter List,The method has 5 parameters. ,113
+sogyf_mybatis-pagination,org.mybatis.pagination.dto,PageMyBatis,equals,Long Statement,The length of the statement "return total == that.total && !(content != null ? !content.equals(that.content) : that.content != null) && !(pageable != null ? !pageable.equals(that.pageable) : that.pageable != null);" is 185.,88
+sogyf_mybatis-pagination,org.mybatis.pagination.dto,PageMyBatis,hashCode,Magic Number,The method contains a magic number: 31,106
+sogyf_mybatis-pagination,org.mybatis.pagination.dto,PageMyBatis,hashCode,Magic Number,The method contains a magic number: 31,106
+sogyf_mybatis-pagination,org.mybatis.pagination.dto,PageMyBatis,hashCode,Magic Number,The method contains a magic number: 31,106
+sogyf_mybatis-pagination,org.mybatis.pagination.dto,PageMyBatis,hashCode,Magic Number,The method contains a magic number: 32,106
+sogyf_mybatis-pagination,org.mybatis.pagination.helpers,CountHelper,getCount,Long Parameter List,The method has 6 parameters. ,49
+sogyf_mybatis-pagination,org.mybatis.pagination.helpers,CountHelper,getCount,Long Statement,The length of the statement "final BoundSql countBS=new BoundSql(mappedStatement.getConfiguration()`count_sql`boundSql.getParameterMappings()`parameterObject);" is 130.,49
+sogyf_mybatis-pagination,org.mybatis.pagination.helpers,CountHelper,setParameters,Complex Method,Cyclomatic complexity of the method is 10,91
+sogyf_mybatis-pagination,org.mybatis.pagination.helpers,CountHelper,setParameters,Long Statement,The length of the statement "throw new ExecutorException("There was no TypeHandler found for parameter " + propertyName + " of statement "+ mappedStatement.getId());" is 136.,91
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect,DialectClient,createDbmsDialect,Complex Method,Cyclomatic complexity of the method is 10,59
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect,DialectClient,createDbmsDialect,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4131261,59
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,SQLServerDialect,getAfterSelectInsertPoint,Magic Number,The method contains a magic number: 15,18
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,SQLServerDialect,getAfterSelectInsertPoint,Magic Number,The method contains a magic number: 6,18
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,SQLServerDialect,getLimit,Magic Number,The method contains a magic number: 8,32
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,DB2Dialect,getRowNumber,Magic Number,The method contains a magic number: 50,18
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,DB2Dialect,getLimitString,Long Statement,The length of the statement "StringBuilder pagingSelect=new StringBuilder(sql.length() + 100).append(sql.substring(0`startOfSelect)).append("select * from ( select ").append(getRowNumber(sql));" is 164.,47
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,DB2Dialect,getLimitString,Magic Number,The method contains a magic number: 100,47
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,DB2Dialect,getLimitString,Magic Number,The method contains a magic number: 6,47
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,HSQLDialect,getLimitString,Long Statement,The length of the statement "return new StringBuffer(sql.length() + 10).append(sql).insert(sql.toLowerCase().indexOf("select") + 6`hasOffset ? " limit " + offsetPlaceholder + " "+ limitPlaceholder : " top " + limitPlaceholder).toString();" is 209.,28
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,HSQLDialect,getLimitString,Magic Number,The method contains a magic number: 10,28
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,HSQLDialect,getLimitString,Magic Number,The method contains a magic number: 6,28
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,PostgreSQLDialect,getLimitString,Long Statement,The length of the statement "pageSql=offset <= 0 ? pageSql.append(" limit ").append(limitPlaceholder) : pageSql.append(" limit ").append(limitPlaceholder).append(" offset ").append(offsetPlaceholder);" is 171.,28
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,SybaseDialect,getLimitString,Long Parameter List,The method has 5 parameters. ,28
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,SQLServer2005Dialect,getLimitString,Long Statement,The length of the statement "result.append("WITH query AS (SELECT ").append(distinctStr).append("TOP 100 PERCENT ").append(" ROW_NUMBER() OVER (").append(orderby).append(") as __row_number__` ").append(pagingBuilder).append(") SELECT * FROM query WHERE __row_number__ BETWEEN ").append(offset + 1).append(" AND ").append(offset + limit).append(" ORDER BY __row_number__");" is 343.,54
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,SQLServer2005Dialect,getLimitString,Magic Number,The method contains a magic number: 6,54
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,SQLServer2005Dialect,getLimitString,Magic Number,The method contains a magic number: 15,54
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,H2Dialect,getLimitString,Long Parameter List,The method has 5 parameters. ,22
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,H2Dialect,getLimitString,Long Statement,The length of the statement "return sql + ((offset > 0) ? " limit " + limitPlaceholder + " offset "+ offsetPlaceholder : " limit " + limitPlaceholder);" is 122.,22
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,DerbyDialect,getLimitString,Long Parameter List,The method has 5 parameters. ,26
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,OracleDialect,getLimitString,Long Statement,The length of the statement "pagingSelect.append(" ) row_ ) where rownum_ <= ").append(endString).append(" and rownum_ > ").append(offsetPlaceholder);" is 121.,27
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,OracleDialect,getLimitString,Magic Number,The method contains a magic number: 11,27
+sogyf_mybatis-pagination,org.mybatis.pagination.dialect.db,OracleDialect,getLimitString,Magic Number,The method contains a magic number: 100,27
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationExecutor,query,Long Parameter List,The method has 6 parameters. ,57
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationExecutor,deferLoad,Long Parameter List,The method has 5 parameters. ,152
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,sortAndFilterSql,Long Statement,The length of the statement "sql=String.format((where ? CountHelper.OR_SQL_FORMAT : CountHelper.WHERE_SQL_FORMAT)`sql`Joiner.on(CountHelper.OR_JOINER).skipNulls().join(where_field)`orderBy);" is 161.,108
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,sortAndFilterSql,Long Statement,The length of the statement "return String.format(order ? CountHelper.SQL_FORMAT : CountHelper.ORDER_SQL_FORMAT`sql`Joiner.on(StringHelper.DOT_CHAR).skipNulls().join(field_order));" is 151.,108
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,copyFromBoundSql,Long Statement,The length of the statement "BoundSql newBoundSql=new BoundSql(ms.getConfiguration()`sql`boundSql.getParameterMappings()`boundSql.getParameterObject());" is 123.,150
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,copyFromMappedStatement,Long Statement,The length of the statement "MappedStatement.Builder builder=new MappedStatement.Builder(ms.getConfiguration()`ms.getId()`newSqlSource`ms.getSqlCommandType());" is 130.,171
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,processIntercept,Complex Conditional,The conditional expression _dialect.supportsLimit() && (offset != RowBounds.NO_ROW_OFFSET || limit != RowBounds.NO_ROW_LIMIT) is complex.,199
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,processIntercept,Long Statement,The length of the statement "final PagingCriteria pageRequest=interceptor ? PagingParametersFinder.instance.findCriteria(parameter) : PagingCriteria.getDefaultCriteria();" is 141.,199
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,processIntercept,Magic Number,The method contains a magic number: 2,199
+sogyf_mybatis-pagination,org.mybatis.pagination,PaginationInterceptor,processIntercept,Magic Number,The method contains a magic number: 2,199
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagaination,Magic Number,The method contains a magic number: 15,50
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagaination,Magic Number,The method contains a magic number: 15,50
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationSqlContainOrder,Magic Number,The method contains a magic number: 15,60
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationSqlContainOrder,Magic Number,The method contains a magic number: 15,60
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndWrap,Magic Number,The method contains a magic number: 15,70
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndWrap,Magic Number,The method contains a magic number: 15,70
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndOrder,Magic Number,The method contains a magic number: 20,77
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndOrder,Magic Number,The method contains a magic number: 15,77
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndOrder,Magic Number,The method contains a magic number: 15,77
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndSearch,Magic Number,The method contains a magic number: 15,91
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndSearch,Magic Number,The method contains a magic number: 15,91
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndOrderSearch,Magic Number,The method contains a magic number: 15,103
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPagainationAndOrderSearch,Magic Number,The method contains a magic number: 15,103
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPaginationMoreWhere,Magic Number,The method contains a magic number: 15,115
+sogyf_mybatis-pagination,org.mybatis.pagination.service,MapperTest,testPaginationMoreWhere,Magic Number,The method contains a magic number: 15,115
+sogyf_mybatis-pagination,org.mybatis.pagination.domain,Resources,toString,Long Statement,The length of the statement "return Objects.toStringHelper(this).add("id"`id).add("name"`name).add("type"`type).add("path"`path).add("action"`action).add("controller"`controller).add("status"`status).toString();" is 182.,174
+sogyf_mybatis-pagination,org.mybatis.pagination.domain,Resources,equals,Long Statement,The length of the statement "return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId())) && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName())) && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))&& (this.getPath() == null ? other.getPath() == null : this.getPath().equals(other.getPath()))&& (this.getAction() == null ? other.getAction() == null : this.getAction().equals(other.getAction()))&& (this.getController() == null ? other.getController() == null : this.getController().equals(other.getController()))&& (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()));" is 697.,187
+sogyf_mybatis-pagination,org.mybatis.pagination.domain,Resources,hashCode,Magic Number,The method contains a magic number: 31,213

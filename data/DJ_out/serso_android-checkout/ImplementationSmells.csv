@@ -1,0 +1,370 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+serso_android-checkout,org.solovyev.android.checkout.app,StaticActivity,onCreate,Long Statement,The length of the statement "mSkus.setAdapter(new ArrayAdapter<>(this`R.layout.support_simple_spinner_dropdown_item`new String[]{"android.test.purchased"`"android.test.canceled"`"android.test.refunded"`"android.test.item_unavailable"}));" is 208.,39
+serso_android-checkout,org.solovyev.android.checkout.app,CheckoutApplication,getPublicKey,Long Statement,The length of the statement "final String s="PixnMSYGLjg7Ah0xDwYILlVZUy0sIiBoMi4jLDcoXTcNLiQjKgtlIC48NiRcHxwKHEcYEyZrPyMWXFRpV10VES9ENz" + "g1Hj06HTV1MCAHJlpgEDcmOxFDEkA8OiQRKjEQDxhRWVVEMBYmNl1AJghcKUAYVT15KSQgBQABMgwqKSlqF1gZBA4fAw5rMyxKI" + "w9LJFc7AhxZGjoPATgRUiUjKSsOWyRKDi4nIA9lKgAGOhMLDF06CwoKGFR6Wj0hGwReS10NXzQTIREhKlkuMz4XDTwUQjRCJUA+"+ "VjQVPUIoPicOLQJCLxs8RjZnJxY1OQNLKgQCPj83AyBEFSAJEk5UClYjGxVLNBU3FS4DCztENQMuOk5rFVclKz88AAApPgADGFx"+ "EEV5eQAF7QBhdQEE+Bzc5MygCAwlEFzclKRB7FB0uFgwPKgAvLCk2OyFiKxkgIy8BBQYjFy4/E1ktJikrEVlKJVYIHh16NDwtDC"+ "U0Vg8JNzoQBwQWOwk1GzZ4FT8fWicwITcRJi8=";" is 564.,16
+serso_android-checkout,org.solovyev.android.checkout.app,SkusActivity,getInAppSkus,Magic Number,The method contains a magic number: 20,50
+serso_android-checkout,org.solovyev.android.checkout.app,SkusActivity,getInAppSkus,Magic Number,The method contains a magic number: 10,50
+serso_android-checkout,org.solovyev.android.checkout.app,SkusActivity,makeRequestListener,Complex Method,Cyclomatic complexity of the method is 15,110
+serso_android-checkout,org.solovyev.android.checkout.app,SkusActivity,makeRequestListener,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3e56343,110
+serso_android-checkout,org.solovyev.android.checkout.app,SkusActivity,onError,Complex Method,Cyclomatic complexity of the method is 15,120
+serso_android-checkout,org.solovyev.android.checkout.app,SkusActivity,onError,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3e56343,120
+serso_android-checkout,com.android.vending.billing,InAppBillingService,getBuyIntent,Long Parameter List,The method has 5 parameters. ,11
+serso_android-checkout,com.android.vending.billing,InAppBillingService,getBuyIntentExtraParams,Long Parameter List,The method has 6 parameters. ,17
+serso_android-checkout,com.android.vending.billing,InAppBillingService,getPurchaseHistory,Long Parameter List,The method has 5 parameters. ,19
+serso_android-checkout,com.android.vending.billing,InAppBillingServiceImpl,getBuyIntent,Long Parameter List,The method has 5 parameters. ,42
+serso_android-checkout,com.android.vending.billing,InAppBillingServiceImpl,getBuyIntentExtraParams,Long Parameter List,The method has 6 parameters. ,57
+serso_android-checkout,com.android.vending.billing,InAppBillingServiceImpl,getPurchaseHistory,Long Parameter List,The method has 5 parameters. ,62
+serso_android-checkout,org.solovyev.android.checkout,Purchases,neutralize,Complex Method,Cyclomatic complexity of the method is 8,124
+serso_android-checkout,org.solovyev.android.checkout,GetSkuDetailsRequest,getCacheKey,Magic Number,The method contains a magic number: 5,87
+serso_android-checkout,org.solovyev.android.checkout,Purchase,Purchase,Long Parameter List,The method has 10 parameters. ,80
+serso_android-checkout,org.solovyev.android.checkout,Purchase,valueOf,Magic Number,The method contains a magic number: 2,192
+serso_android-checkout,org.solovyev.android.checkout,Purchase,valueOf,Magic Number,The method contains a magic number: 3,192
+serso_android-checkout,org.solovyev.android.checkout,Billing,waitGooglePlay,Magic Number,The method contains a magic number: 100L,169
+serso_android-checkout,org.solovyev.android.checkout,Billing,error,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6c9efacb,197
+serso_android-checkout,org.solovyev.android.checkout,Billing,setService,Complex Conditional,The conditional expression mState == State.INITIAL || mState == State.DISCONNECTED || mState == State.FAILED is complex.,292
+serso_android-checkout,org.solovyev.android.checkout,Billing,setState,Long Statement,The length of the statement "Check.isTrue(sPreviousStates.get(newState).contains(mState)`"State " + newState + " can't come right after "+ mState+ " state");" is 128.,354
+serso_android-checkout,org.solovyev.android.checkout,Billing,connect,Long Statement,The length of the statement "warning("Auto connection feature is turned on. There is no need in calling Billing.connect() manually. See Billing.Configuration.isAutoConnect");" is 145.,390
+serso_android-checkout,org.solovyev.android.checkout,Billing,disconnect,Complex Conditional,The conditional expression mState == State.DISCONNECTED || mState == State.DISCONNECTING || mState == State.INITIAL is complex.,451
+serso_android-checkout,org.solovyev.android.checkout,Check,equals,Complex Conditional,The conditional expression expected != null && actual != null && expected.equals(actual) is complex.,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabase,makeInClause,Magic Number,The method contains a magic number: 2,76
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabase,loadPurchases,Long Statement,The length of the statement "c=db.query("purchases"`columns`"productId in " + makeInClause(skus.size())`skus.toArray(new String[skus.size()])`null`null`null);" is 129.,124
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabase,loadPurchases,Magic Number,The method contains a magic number: 2,124
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabase,loadPurchases,Magic Number,The method contains a magic number: 3,124
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabase,loadPurchases,Magic Number,The method contains a magic number: 4,124
+serso_android-checkout,org.solovyev.android.checkout,Sku,Sku,Long Parameter List,The method has 12 parameters. ,83
+serso_android-checkout,org.solovyev.android.checkout,Sku,toJsonObject,Complex Method,Cyclomatic complexity of the method is 8,172
+serso_android-checkout,org.solovyev.android.checkout,BillingSupportedRequest,BillingSupportedRequest,Long Statement,The length of the statement "Check.isTrue(extraParams == null || apiVersion >= Billing.V7`"#isBillingSupportedExtraParams only works in Billing API v7 or higher");" is 134.,46
+serso_android-checkout,org.solovyev.android.checkout,BillingSupportedRequest,start,Long Statement,The length of the statement "final int response=mExtraParams != null ? service.isBillingSupportedExtraParams(mApiVersion`packageName`mProduct`mExtraParams) : service.isBillingSupported(mApiVersion`packageName`mProduct);" is 190.,53
+serso_android-checkout,org.solovyev.android.checkout,UiCheckout,startPurchaseFlow,Long Parameter List,The method has 5 parameters. ,220
+serso_android-checkout,org.solovyev.android.checkout,Security,verifyPurchase,Complex Conditional,The conditional expression TextUtils.isEmpty(signedData) || TextUtils.isEmpty(base64PublicKey) || TextUtils.isEmpty(signature) is complex.,45
+serso_android-checkout,org.solovyev.android.checkout,GetPurchasesRequest,processPurchases,Long Statement,The length of the statement "listener.onError(ResponseCodes.EXCEPTION`new IllegalStateException("Either onSuccess or onError methods must be called by PurchaseVerifier"));" is 142.,52
+serso_android-checkout,org.solovyev.android.checkout,PurchaseRequest,start,Long Statement,The length of the statement "final Bundle bundle=mExtraParams != null ? service.getBuyIntentExtraParams(mApiVersion`packageName`mSku`mProduct`payload`mExtraParams) : service.getBuyIntent(mApiVersion`packageName`mSku`mProduct`payload);" is 205.,57
+serso_android-checkout,org.solovyev.android.checkout,ResponseCodes,toString,Complex Method,Cyclomatic complexity of the method is 14,93
+serso_android-checkout,org.solovyev.android.checkout,ResponseCodes,toString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@15fff4da,93
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Long Parameter List,The method has 6 parameters. ,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 8,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 16,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 6,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 6,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode3to4,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5b1ff83a,174
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Long Parameter List,The method has 5 parameters. ,261
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Long Parameter List,The method has 5 parameters. ,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Long Statement,The length of the statement "int inBuff=((source[d + off] << 24) >>> 8) | ((source[d + 1 + off] << 24) >>> 16) | ((source[d + 2 + off] << 24) >>> 24);" is 121.,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 2,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 3,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 4,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 2,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 3,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 4,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 24,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 8,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 24,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 16,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 2,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 24,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 24,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 18,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 12,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 2,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 6,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 3,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 4,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 4,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 4,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 4,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,encode,Magic Number,The method contains a magic number: 4,289
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Long Parameter List,The method has 5 parameters. ,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((decodabet[source[srcOffset]] << 24) >>> 6) | ((decodabet[source[srcOffset + 1]] << 24) >>> 12) | ((decodabet[source[srcOffset + 2]] << 24) >>> 18);" is 161.,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((decodabet[source[srcOffset]] << 24) >>> 6) | ((decodabet[source[srcOffset + 1]] << 24) >>> 12) | ((decodabet[source[srcOffset + 2]] << 24) >>> 18)| ((decodabet[source[srcOffset + 3]] << 24) >>> 24);" is 212.,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 18,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 8,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 18,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 8,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Complex Conditional,The conditional expression (b4Posn == 3 && bytesLeft > 2) || (b4Posn == 4 && bytesLeft > 1) is complex.,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Complex Method,Cyclomatic complexity of the method is 11,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 3,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 4,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 2,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 4,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 0x7f,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 0x7f,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 3,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 2,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 4,489
+serso_android-checkout,org.solovyev.android.checkout,Base64,decode,Magic Number,The method contains a magic number: 4,489
+serso_android-checkout,org.solovyev.android.checkout,BasePurchaseVerifier,BasePurchaseVerifier,Magic Number,The method contains a magic number: 2,51
+serso_android-checkout,org.solovyev.android.checkout,BillingRequests,purchase,Long Parameter List,The method has 5 parameters. ,189
+serso_android-checkout,org.solovyev.android.checkout,ChangePurchaseRequest,start,Long Statement,The length of the statement "final Bundle bundle=service.getBuyIntentExtraParams(mApiVersion`packageName`mNewSku`mProduct`mPayload == null ? "" : mPayload`extraParams);" is 139.,38
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,setUp,Long Statement,The length of the statement "mRequest=Inventory.Request.create().loadSkus(IN_APP`asList("sku_0"`"sku_1"`"sku_2"`"sku_3"`"sku_4"`"sku_6")).loadAllPurchases();" is 128.,58
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 2,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 3,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 4,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 5,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 5,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 2,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 3,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldReadTransactions,Magic Number,The method contains a magic number: 4,82
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldCreateValidInClause,Empty catch clause,The method has an empty catch block.,120
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldCreateValidInClause,Magic Number,The method contains a magic number: 2,120
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldCreateValidInClause,Magic Number,The method contains a magic number: 3,120
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,testShouldCreateValidInClause,Magic Number,The method contains a magic number: 4,120
+serso_android-checkout,org.solovyev.android.checkout,RobotmediaDatabaseTest,newTransaction,Magic Number,The method contains a magic number: 2,160
+serso_android-checkout,org.solovyev.android.checkout,InventoryProductsTest,testShouldAddProduct,Magic Number,The method contains a magic number: 2,48
+serso_android-checkout,org.solovyev.android.checkout,InventoryProductsTest,testShouldIterateOverAllProducts,Magic Number,The method contains a magic number: 2,58
+serso_android-checkout,org.solovyev.android.checkout,SkuTest,testShouldNotCreateIfNoId,Empty catch clause,The method has an empty catch block.,110
+serso_android-checkout,org.solovyev.android.checkout,SkuTest,testShouldHaveDetailedPrice,Magic Number,The method contains a magic number: 111,147
+serso_android-checkout,org.solovyev.android.checkout,SkuTest,testShouldHaveIntroductoryPrice,Magic Number,The method contains a magic number: 111,154
+serso_android-checkout,org.solovyev.android.checkout,SkuTest,testShouldReadIntroductoryPriceCycles,Magic Number,The method contains a magic number: 42,238
+serso_android-checkout,org.solovyev.android.checkout,SkuTest,testShouldReadIntroductoryPriceCycles,Magic Number,The method contains a magic number: 42,238
+serso_android-checkout,org.solovyev.android.checkout,Transaction,Transaction,Long Parameter List,The method has 7 parameters. ,48
+serso_android-checkout,org.solovyev.android.checkout,Transaction,equals,Complex Method,Cyclomatic complexity of the method is 21,76
+serso_android-checkout,org.solovyev.android.checkout,PurchaseRequestTest,testShouldUseExtraParams,Long Statement,The length of the statement "verify(service).getBuyIntentExtraParams(eq(Billing.V6)`eq("package")`eq("sku")`eq("product")`eq("payload")`eq(extraParams));" is 124.,43
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldRunAllRequests,Magic Number,The method contains a magic number: 100,213
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldRunAllRequests,Magic Number,The method contains a magic number: 10,213
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldRunAllRequests,Magic Number,The method contains a magic number: 10,213
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldCancelRequests,Magic Number,The method contains a magic number: 10,240
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldCancelRequests,Magic Number,The method contains a magic number: 2,240
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldCancelRequests,Magic Number,The method contains a magic number: 100,240
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldCancelRequests,Magic Number,The method contains a magic number: 100,240
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldCancelRequests,Magic Number,The method contains a magic number: 2,240
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,testShouldCancelRequests,Magic Number,The method contains a magic number: 2,240
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Long Statement,The length of the statement "when(service.getPurchases(anyInt()`anyString()`anyString()`isNull(String.class))).thenReturn(newPurchasesBundle(0`true));" is 121.,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Long Statement,The length of the statement "when(service.getPurchaseHistory(anyInt()`anyString()`anyString()`isNull(String.class)`any(Bundle.class))).thenReturn(newPurchasesBundle(0`true`true));" is 150.,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Long Statement,The length of the statement "when(service.getPurchaseHistory(anyInt()`anyString()`anyString()`eq("1")`any(Bundle.class))).thenReturn(newPurchasesBundle(1`true`true));" is 137.,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Long Statement,The length of the statement "when(service.getPurchaseHistory(anyInt()`anyString()`anyString()`eq("2")`any(Bundle.class))).thenReturn(newPurchasesBundle(2`true`true));" is 137.,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Long Statement,The length of the statement "when(service.getPurchaseHistory(anyInt()`anyString()`anyString()`eq("3")`any(Bundle.class))).thenReturn(newPurchasesBundle(3`true`true));" is 137.,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Long Statement,The length of the statement "when(service.getPurchaseHistory(anyInt()`anyString()`anyString()`eq("4")`any(Bundle.class))).thenReturn(newPurchasesBundle(4`false`true));" is 138.,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Magic Number,The method contains a magic number: 2,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Magic Number,The method contains a magic number: 3,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Magic Number,The method contains a magic number: 4,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Magic Number,The method contains a magic number: 2,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Magic Number,The method contains a magic number: 3,349
+serso_android-checkout,org.solovyev.android.checkout,BillingTest,prepareMultiPurchasesService,Magic Number,The method contains a magic number: 4,349
+serso_android-checkout,org.solovyev.android.checkout,RequestTestBase,testShouldSuccess,Magic Number,The method contains a magic number: 100,88
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testShouldCreatePurchaseFlow,Magic Number,The method contains a magic number: 100,66
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testShouldCreatePurchaseFlow,Magic Number,The method contains a magic number: 100,66
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testShouldCreateOneShotPurchaseFlow,Magic Number,The method contains a magic number: 101,78
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testShouldCreateOneShotPurchaseFlow,Magic Number,The method contains a magic number: 101,78
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testDestroyShouldRemovePurchaseFlow,Magic Number,The method contains a magic number: 102,90
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testDestroyShouldRemovePurchaseFlow,Magic Number,The method contains a magic number: 102,90
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testDestroyShouldRemovePurchaseFlow,Magic Number,The method contains a magic number: 102,90
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,verifyPurchaseFlowDoesntExist,Empty catch clause,The method has an empty catch block.,97
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,verifyPurchaseFlowDoesntExist,Empty catch clause,The method has an empty catch block.,106
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testPurchaseWithOneShotPurchaseFlow,Empty catch clause,The method has an empty catch block.,157
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testPurchaseWithOneShotPurchaseFlow,Long Statement,The length of the statement "@Override public void verify( @Nonnull final List<Purchase> list` @Nonnull final RequestListener<List<Purchase>> requestListener){" is 130.,157
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,testPurchaseWithOneShotPurchaseFlow,Magic Number,The method contains a magic number: 200,157
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,verify,Empty catch clause,The method has an empty catch block.,166
+serso_android-checkout,org.solovyev.android.checkout,ActivityCheckoutTest,run,Empty catch clause,The method has an empty catch block.,169
+serso_android-checkout,org.solovyev.android.checkout,FallingBackInventoryTest,testShouldLoadSkus,Magic Number,The method contains a magic number: 2,61
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,verifyPurchase,Long Parameter List,The method has 5 parameters. ,49
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testShouldBeCreatedFromJson,Magic Number,The method contains a magic number: 2,109
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testShouldBeCreatedFromJson,Magic Number,The method contains a magic number: 2,109
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testToJsonShouldReturnCorrectJson,Magic Number,The method contains a magic number: 2,115
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testToJsonShouldReturnCorrectJson,Magic Number,The method contains a magic number: 2,115
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testToJsonShouldReturnCorrectJsonForPartiallyEmptyPurchase,Magic Number,The method contains a magic number: 3,124
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testJsonShouldNotContainSignature,Magic Number,The method contains a magic number: 2,141
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testJsonShouldContainSignature,Magic Number,The method contains a magic number: 2,149
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testShouldNotBeCreatedIfProductIdIsMissing,Empty catch clause,The method has an empty catch block.,158
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testShouldNotBeCreatedIfProductIdIsMissing,Magic Number,The method contains a magic number: 4,158
+serso_android-checkout,org.solovyev.android.checkout,PurchaseTest,testShouldBeCreatedWithoutUnnecessaryProperties,Magic Number,The method contains a magic number: 3,170
+serso_android-checkout,org.solovyev.android.checkout,Tests,waitWhileLoading,Magic Number,The method contains a magic number: 50L,164
+serso_android-checkout,org.solovyev.android.checkout,Tests,waitWhileLoading,Magic Number,The method contains a magic number: 50L,164
+serso_android-checkout,org.solovyev.android.checkout,Tests,mockGetSkuDetails,Magic Number,The method contains a magic number: 3,189
+serso_android-checkout,org.solovyev.android.checkout,Tests,answer,Magic Number,The method contains a magic number: 3,195
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,setUp,Long Statement,The length of the statement "mRequest=Inventory.Request.create().loadAllPurchases().loadSkus(IN_APP`asList("1"`"2"`"3"`"4"`"6")).loadSkus(SUBSCRIPTION`asList("sub1"`"sub2"`"sub3"`"sub4"));" is 159.,64
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 4,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 4,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 3,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 2,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 2,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 3,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 4,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 4,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 3,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 2,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 2,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadPurchases,Magic Number,The method contains a magic number: 3,83
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Long Statement,The length of the statement "final List<Purchase> expectedInApps=asList(Purchase.fromJson(PurchaseTest.newJson(1`PURCHASED)`"")`Purchase.fromJson(PurchaseTest.newJson(2`CANCELLED)`"")`Purchase.fromJson(PurchaseTest.newJson(3`REFUNDED)`"")`Purchase.fromJson(PurchaseTest.newJson(4`EXPIRED)`""));" is 265.,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Long Statement,The length of the statement "final List<Purchase> expectedSubs=asList(Purchase.fromJson(PurchaseTest.newJsonSubscription(1`PURCHASED)`"")`Purchase.fromJson(PurchaseTest.newJsonSubscription(2`CANCELLED)`"")`Purchase.fromJson(PurchaseTest.newJsonSubscription(3`REFUNDED)`"")`Purchase.fromJson(PurchaseTest.newJsonSubscription(4`EXPIRED)`""));" is 311.,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Magic Number,The method contains a magic number: 2,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Magic Number,The method contains a magic number: 3,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Magic Number,The method contains a magic number: 4,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Magic Number,The method contains a magic number: 2,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Magic Number,The method contains a magic number: 3,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populatePurchases,Magic Number,The method contains a magic number: 4,115
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populateSkus,Long Statement,The length of the statement "final List<Sku> expectedInAppSkus=asList(Sku.fromJson(SkuTest.newInAppJson("1")`IN_APP)`Sku.fromJson(SkuTest.newInAppJson("2")`IN_APP)`Sku.fromJson(SkuTest.newInAppJson("3")`IN_APP)`Sku.fromJson(SkuTest.newInAppJson("4")`IN_APP)`Sku.fromJson(SkuTest.newInAppJson("6")`IN_APP));" is 277.,133
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,populateSkus,Long Statement,The length of the statement "final List<Sku> expectedSubSkus=asList(Sku.fromJson(SkuTest.newSubscriptionJson("sub1")`SUBSCRIPTION)`Sku.fromJson(SkuTest.newSubscriptionJson("sub2")`SUBSCRIPTION)`Sku.fromJson(SkuTest.newSubscriptionJson("sub3")`SUBSCRIPTION)`Sku.fromJson(SkuTest.newSubscriptionJson("sub4")`SUBSCRIPTION));" is 292.,133
+serso_android-checkout,org.solovyev.android.checkout,InventoryTestBase,testShouldLoadSeveralTasksAsynchronously,Magic Number,The method contains a magic number: 5,149
+serso_android-checkout,org.solovyev.android.checkout,PurchaseFlowTest,testShouldErrorIfRequestCodeIsDifferent,Magic Number,The method contains a magic number: 2,94
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,setUp,Long Statement,The length of the statement "mRequest=Inventory.Request.create().loadAllPurchases().loadSkus(IN_APP`asList("1"`"2"`"3"`"4"`"6")).loadSkus(SUBSCRIPTION`asList("sub1"`"sub2"`"sub3"`"sub4"));" is 159.,58
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Long Statement,The length of the statement "final List<Purchase> expectedInApps=asList(Purchase.fromJson(PurchaseTest.newJson(1`PURCHASED)`"")`Purchase.fromJson(PurchaseTest.newJson(2`CANCELLED)`"")`Purchase.fromJson(PurchaseTest.newJson(3`REFUNDED)`"")`Purchase.fromJson(PurchaseTest.newJson(4`EXPIRED)`""));" is 265.,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Long Statement,The length of the statement "final List<Purchase> expectedSubs=asList(Purchase.fromJson(PurchaseTest.newJsonSubscription(1`PURCHASED)`"")`Purchase.fromJson(PurchaseTest.newJsonSubscription(2`CANCELLED)`"")`Purchase.fromJson(PurchaseTest.newJsonSubscription(3`REFUNDED)`"")`Purchase.fromJson(PurchaseTest.newJsonSubscription(4`EXPIRED)`""));" is 311.,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Magic Number,The method contains a magic number: 2,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Magic Number,The method contains a magic number: 3,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Magic Number,The method contains a magic number: 4,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Magic Number,The method contains a magic number: 2,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Magic Number,The method contains a magic number: 3,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,populatePurchases,Magic Number,The method contains a magic number: 4,69
+serso_android-checkout,org.solovyev.android.checkout,FailingCacheCheckoutInventoryTest,newBilling,Long Statement,The length of the statement "@Nullable @Override public Inventory getFallbackInventory( @Nonnull Checkout checkout` @Nonnull Executor onLoadExecutor){" is 121.,101
+serso_android-checkout,org.solovyev.android.checkout,MapCacheTest,testShouldRemoveEntriesByType,Magic Number,The method contains a magic number: 2,53
+serso_android-checkout,org.solovyev.android.checkout,BillingDB,createTransaction,Magic Number,The method contains a magic number: 2,53
+serso_android-checkout,org.solovyev.android.checkout,BillingDB,createTransaction,Magic Number,The method contains a magic number: 3,53
+serso_android-checkout,org.solovyev.android.checkout,BillingDB,createTransaction,Magic Number,The method contains a magic number: 4,53
+serso_android-checkout,org.solovyev.android.checkout,BillingDB,queryTransactions,Long Statement,The length of the statement "return mDb.query(TABLE_TRANSACTIONS`TABLE_TRANSACTIONS_COLUMNS`COLUMN_PRODUCT_ID + " = ?"`new String[]{productId}`null`null`null);" is 130.,82
+serso_android-checkout,org.solovyev.android.checkout,BillingDB,queryTransactions,Long Statement,The length of the statement "return mDb.query(TABLE_TRANSACTIONS`TABLE_TRANSACTIONS_COLUMNS`COLUMN_PRODUCT_ID + " = ? AND " + COLUMN_STATE+ " = ?"`new String[]{productId`String.valueOf(state.ordinal())}`null`null`null);" is 190.,87
+serso_android-checkout,org.solovyev.android.checkout,CheckoutInventoryTest,testIsLoadedWithEmptySkusList,Long Statement,The length of the statement "final Inventory.Request request=Inventory.Request.create().loadAllPurchases().loadSkus(IN_APP`"in_app_01").loadSkus(SUBSCRIPTION`"sub_01");" is 139.,61
+serso_android-checkout,org.solovyev.android.checkout,CheckoutInventoryTest,testShouldLoadSkus,Magic Number,The method contains a magic number: 2,106
+serso_android-checkout,org.solovyev.android.checkout,CheckoutInventoryTest,testShouldLoadSkus,Magic Number,The method contains a magic number: 2,106
+serso_android-checkout,org.solovyev.android.checkout,GetPurchasesRequestTest,testShouldVerifyPurchasesAsynchronously,Magic Number,The method contains a magic number: 2,107
+serso_android-checkout,org.solovyev.android.checkout,GetPurchasesRequestTest,testShouldVerifyPurchasesAsynchronously,Magic Number,The method contains a magic number: 3,107
+serso_android-checkout,org.solovyev.android.checkout,GetPurchasesRequestTest,testShouldVerifyPurchasesAsynchronously,Magic Number,The method contains a magic number: 4,107
+serso_android-checkout,org.solovyev.android.checkout,GetPurchasesRequestTest,testShouldVerifyPurchasesAsynchronously,Magic Number,The method contains a magic number: 5,107
+serso_android-checkout,org.solovyev.android.checkout,GetPurchasesRequestTest,testShouldVerifyPurchasesAsynchronously,Magic Number,The method contains a magic number: 6,107
+serso_android-checkout,org.solovyev.android.checkout,GetPurchasesRequestTest,testShouldVerifyPurchasesAsynchronously,Magic Number,The method contains a magic number: 4,107
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldPutAllEntries,Magic Number,The method contains a magic number: 3,50
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldRemoveAllEntriesOfType,Magic Number,The method contains a magic number: 2,126
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Complex Method,Cyclomatic complexity of the method is 9,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Magic Number,The method contains a magic number: 20,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Magic Number,The method contains a magic number: 100,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Magic Number,The method contains a magic number: 6,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Magic Number,The method contains a magic number: 2,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Magic Number,The method contains a magic number: 3,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Magic Number,The method contains a magic number: 4,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,testShouldBlockOperations,Magic Number,The method contains a magic number: 5,167
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,run,Magic Number,The method contains a magic number: 6,175
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,run,Magic Number,The method contains a magic number: 2,175
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,run,Magic Number,The method contains a magic number: 3,175
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,run,Magic Number,The method contains a magic number: 4,175
+serso_android-checkout,org.solovyev.android.checkout,ConcurrentCacheTest,run,Magic Number,The method contains a magic number: 5,175
+serso_android-checkout,org.solovyev.android.checkout,SkusTest,testShouldReadSkus,Magic Number,The method contains a magic number: 4,96
+serso_android-checkout,org.solovyev.android.checkout,SkusTest,testShouldReadSkus,Magic Number,The method contains a magic number: 3,96
+serso_android-checkout,org.solovyev.android.checkout,GetSkuDetailsRequestTest,testShouldHandleBigLists,Magic Number,The method contains a magic number: 97,75
+serso_android-checkout,org.solovyev.android.checkout,GetSkuDetailsRequestTest,testShouldHandleBigLists,Magic Number,The method contains a magic number: 3,75
+serso_android-checkout,org.solovyev.android.checkout,GetSkuDetailsRequestTest,testShouldHandleBigLists,Magic Number,The method contains a magic number: 97,75
+serso_android-checkout,org.solovyev.android.checkout,GetSkuDetailsRequestTest,answer,Magic Number,The method contains a magic number: 3,86
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Complex Method,Cyclomatic complexity of the method is 10,48
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Magic Number,The method contains a magic number: 100000,48
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Magic Number,The method contains a magic number: 4,48
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Magic Number,The method contains a magic number: 20,48
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Magic Number,The method contains a magic number: 2,48
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Magic Number,The method contains a magic number: 10,48
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Magic Number,The method contains a magic number: 3,48
+serso_android-checkout,org.solovyev.android.checkout,PendingRequestsTest,testThreadSafeness,Magic Number,The method contains a magic number: 50,48
+serso_android-checkout,org.solovyev.android.checkout,CacheKeyTest,testHashCodeAndEquals,Magic Number,The method contains a magic number: 2,32
+serso_android-checkout,org.solovyev.android.checkout,CacheKeyTest,testHashCodeAndEquals,Magic Number,The method contains a magic number: 3,32
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldReadList,Magic Number,The method contains a magic number: 3,78
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldReadList,Magic Number,The method contains a magic number: 2,78
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldReadList,Magic Number,The method contains a magic number: 2,78
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldReadList,Magic Number,The method contains a magic number: 3,78
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,prepareBundle,Magic Number,The method contains a magic number: 2,88
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,prepareBundle,Magic Number,The method contains a magic number: 3,88
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldReadListWithSignatures,Magic Number,The method contains a magic number: 3,99
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldReadListWithSignatures,Magic Number,The method contains a magic number: 2,99
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldIncludeSignaturesInJson,Magic Number,The method contains a magic number: 2,162
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldIncludeSignaturesInJson,Magic Number,The method contains a magic number: 2,162
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotIncludeSignaturesInJson,Magic Number,The method contains a magic number: 2,196
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotIncludeSignaturesInJson,Magic Number,The method contains a magic number: 2,196
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldJson,Long Statement,The length of the statement "JSONAssert.assertEquals("{" + "\"product\":\"test\"`" + "\"list\":"+ "["+ "{\"developerPayload\":\"developerPayload_0\"`\"packageName\":\"packageName_0\"`\"token\":\"purchaseToken_0\"`\"purchaseState\":0`\"orderId\":\"orderId_0\"`\"purchaseTime\":0`\"productId\":\"0\"}`"+ "{\"developerPayload\":\"developerPayload_1\"`\"packageName\":\"packageName_1\"`\"token\":\"purchaseToken_1\"`\"purchaseState\":0`\"orderId\":\"orderId_1\"`\"purchaseTime\":1`\"productId\":\"1\"}`"+ "{\"developerPayload\":\"developerPayload_2\"`\"autoRenewing\":true`\"packageName\":\"packageName_2\"`\"token\":\"purchaseToken_2\"`\"purchaseState\":0`\"orderId\":\"orderId_2\"`\"purchaseTime\":2`\"productId\":\"2\"}"+ "]"+ "}"`json`true);" is 712.,208
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldJson,Magic Number,The method contains a magic number: 2,208
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldJson,Magic Number,The method contains a magic number: 2,208
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Long Statement,The length of the statement "List<Purchase> purchases=Purchases.neutralize(asList(newPurchase("test"`100`PURCHASED)`newPurchase("test"`120`CANCELLED)`newPurchase("test"`135`PURCHASED)));" is 157.,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Long Statement,The length of the statement "purchases=Purchases.neutralize(asList(newPurchase("test"`100`PURCHASED)`newPurchase("test"`120`CANCELLED)`newPurchase("test"`135`PURCHASED)`newPurchase("test"`145`CANCELLED)));" is 176.,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 100,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 120,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 135,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 135,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 100,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 120,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 100,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 120,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 135,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizePurchasesWithSameSkus,Magic Number,The method contains a magic number: 145,243
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Long Statement,The length of the statement "List<Purchase> purchases=Purchases.neutralize(asList(newPurchase("0"`100`PURCHASED)`newPurchase("1"`120`CANCELLED)`newPurchase("2"`122`EXPIRED)`newPurchase("3"`123`REFUNDED)`newPurchase("4"`135`PURCHASED)`newPurchase("5"`137`CANCELLED)`newPurchase("6"`138`REFUNDED)`newPurchase("7"`140`EXPIRED)`newPurchase("8"`141`PURCHASED)));" is 328.,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 100,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 120,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 122,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 123,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 135,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 137,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 138,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 140,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 141,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotNeutralizePurchasesWithDifferentSkus,Magic Number,The method contains a magic number: 9,261
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldRemovePurchaseDuplicates,Long Statement,The length of the statement "List<Purchase> purchases=Purchases.neutralize(asList(newPurchase("test"`1`PURCHASED)`newPurchase("test"`2`PURCHASED)`newPurchase("test"`3`PURCHASED)));" is 151.,277
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldRemovePurchaseDuplicates,Magic Number,The method contains a magic number: 2,277
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldRemovePurchaseDuplicates,Magic Number,The method contains a magic number: 3,277
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldRemovePurchaseDuplicates,Magic Number,The method contains a magic number: 3,277
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldRemovePurchaseDuplicates,Magic Number,The method contains a magic number: 2,277
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldRemovePurchaseDuplicates,Magic Number,The method contains a magic number: 2,277
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizeDanglingPurchases,Magic Number,The method contains a magic number: 2,295
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNeutralizeDanglingPurchases,Magic Number,The method contains a magic number: 2,295
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotContainDuplicates,Magic Number,The method contains a magic number: 1000,318
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotContainDuplicates,Magic Number,The method contains a magic number: 1000,318
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotContainDuplicates,Magic Number,The method contains a magic number: 100,318
+serso_android-checkout,org.solovyev.android.checkout,PurchasesTest,testShouldNotContainDuplicates,Magic Number,The method contains a magic number: 4,318
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,setUp,Magic Number,The method contains a magic number: 3,67
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,setUp,Magic Number,The method contains a magic number: 3,67
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,testAllProductsShouldBeSupported,Magic Number,The method contains a magic number: 2,77
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,testShouldLoadPurchasesWhenProductsBecameSupported,Long Statement,The length of the statement "when(mService.getPurchases(anyInt()`anyString()`anyString()`isNull(String.class))).thenReturn(newPurchasesBundle(0`false));" is 123.,91
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,testShouldLoadPurchasesWhenProductsBecameSupported,Magic Number,The method contains a magic number: 3,91
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,testShouldLoadPurchasesWhenProductsBecameSupported,Magic Number,The method contains a magic number: 3,91
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,testShouldLoadPurchasesWhenProductsBecameSupported,Magic Number,The method contains a magic number: 3,91
+serso_android-checkout,org.solovyev.android.checkout,CheckoutTest,testShouldLoadPurchasesWhenProductsBecameSupported,Magic Number,The method contains a magic number: 3,91
+serso_android-checkout,org.solovyev.android.checkout,MainThreadRequestListenerTest,testShouldCallOnError,Magic Number,The method contains a magic number: 3,49
+serso_android-checkout,org.solovyev.android.checkout,MainThreadRequestListenerTest,testShouldCallOnError,Magic Number,The method contains a magic number: 3,49
+serso_android-checkout,org.solovyev.android.checkout,MainThreadRequestListenerTest,testShouldCancelErrorRunnable,Magic Number,The method contains a magic number: 3,71

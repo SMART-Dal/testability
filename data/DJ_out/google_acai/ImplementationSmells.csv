@@ -1,0 +1,24 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+google_acai,com.google.acai,TestingServiceManager,methodsAnnotated,Long Statement,The length of the statement "for (Class<?> clazz=testingService.getClass(); TestingService.class.isAssignableFrom(clazz); clazz=clazz.getSuperclass()) {" is 123.,70
+google_acai,com.google.acai,GuiceberryCompatibilityModule,configure,Long Identifier,The length of the field GUICEBRRY_TEST_SCOPED_ANNOTATION is 32.,52
+google_acai,com.google.acai,GuiceberryCompatibilityModule,configure,Long Statement,The length of the statement "classForName(GUICEBRRY_TEST_SCOPED_ANNOTATION).map(clazz -> clazz.asSubclass(Annotation.class)).ifPresent(annotation -> bindScope(annotation`TestScope.INSTANCE));" is 162.,52
+google_acai,com.google.acai,Acai,getOrCreateTestEnvironment,Long Statement,The length of the statement "Injector injector=Guice.createInjector(Modules.override(instantiateModule(module)`new TestScopeModule()).with(new TearDownAccepterModule()`new GuiceberryCompatibilityModule()));" is 177.,100
+google_acai,com.google.acai,Acai,getOrCreateTestEnvironment,Long Statement,The length of the statement "TestEnvironment testEnvironment=new TestEnvironment(injector`Dependencies.inOrder(injector.getInstance(TESTING_SERVICES_KEY)).stream().map(TestingServiceManager::new).collect(Collectors.toList()));" is 197.,100
+google_acai,com.google.acai,AcaiTest,beforeSuiteRunOnceOnly,Magic Number,The method contains a magic number: 2,79
+google_acai,com.google.acai,AcaiTest,beforeSuiteRunOnceOnly,Magic Number,The method contains a magic number: 2,79
+google_acai,com.google.acai,AcaiTest,failingTestInjectionDoesNotAffectSubsequentTests,Empty catch clause,The method has an empty catch block.,96
+google_acai,com.google.acai,AcaiTest,failingBeforeTestMethodDoesNotAffectSubsequentTests,Empty catch clause,The method has an empty catch block.,111
+google_acai,com.google.acai,AcaiTest,tearDownAcceptorRunsTearDownForEachTest,Magic Number,The method contains a magic number: 2,184
+google_acai,com.google.acai,TestingServiceManagerTest,staticMethodsNotInvoked,Long Identifier,The length of the field staticBeforeSuiteMethodInvoked is 30.,120
+google_acai,com.google.acai,DependenciesTest,linearOrder,Long Statement,The length of the statement "assertThat(Dependencies.inOrder(ImmutableSet.copyOf(testingServices))).containsExactlyElementsIn(testingServices).inOrder();" is 124.,55
+google_acai,com.google.acai,DependenciesTest,dependencyOnClassNotBoundShouldBeAllowed,Long Statement,The length of the statement "assertThat(Dependencies.inOrder(ImmutableSet.copyOf(testingServices))).containsExactlyElementsIn(testingServices).inOrder();" is 124.,65
+google_acai,com.google.acai,TestingServiceModuleTest,servicesAreBoundUsingFactoryMethod,Long Statement,The length of the statement "Injector injector=Guice.createInjector(TestingServiceModule.forServices(ServiceToBindByClass.class`ServiceToBindByClassTwo.class));" is 131.,44
+google_acai,com.google.acai,TestingServiceModuleTest,servicesAreBoundUsingFactoryMethod,Long Statement,The length of the statement "assertThat(boundServices.stream().map(Object::getClass)).containsExactly(ServiceToBindByClass.class`ServiceToBindByClassTwo.class);" is 131.,44
+google_acai,com.google.acai,GuiceberryCompatibilityModuleTest,testWrapperExceptionPropagated,Empty catch clause,The method has an empty catch block.,130
+google_acai,com.google.acai,AutoValue_GuiceberryCompatibilityModule_MethodReference,hashCode,Magic Number,The method contains a magic number: 1000003,54
+google_acai,com.google.acai,AutoValue_GuiceberryCompatibilityModule_MethodReference,hashCode,Magic Number,The method contains a magic number: 1000003,54
+google_acai,com.google.acai,AutoValue_AcaiTest_MethodCalls,toString,Long Statement,The length of the statement "return "MethodCalls{" + "beforeSuite=" + beforeSuite + "` "+ "beforeTest="+ beforeTest+ "` "+ "afterTest="+ afterTest+ "}";" is 123.,36
+google_acai,com.google.acai,AutoValue_AcaiTest_MethodCalls,equals,Long Statement,The length of the statement "return this.beforeSuite == that.beforeSuite() && this.beforeTest == that.beforeTest() && this.afterTest == that.afterTest();" is 124.,45
+google_acai,com.google.acai,AutoValue_AcaiTest_MethodCalls,hashCode,Magic Number,The method contains a magic number: 1000003,59
+google_acai,com.google.acai,AutoValue_AcaiTest_MethodCalls,hashCode,Magic Number,The method contains a magic number: 1000003,59
+google_acai,com.google.acai,AutoValue_AcaiTest_MethodCalls,hashCode,Magic Number,The method contains a magic number: 1000003,59

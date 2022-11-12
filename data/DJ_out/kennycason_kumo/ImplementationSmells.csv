@@ -1,0 +1,681 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,runWithArguments,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@37389825,50
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,buildLayeredWordCloud,Long Statement,The length of the statement "final LayeredWordCloud wordCloud=new LayeredWordCloud(cliParameters.getInputSources().size()`new Dimension(cliParameters.getWidth()`cliParameters.getHeight())`cliParameters.getCollisionMode());" is 193.,89
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,buildPolarWordCloud,Long Statement,The length of the statement "throw new IllegalArgumentException("Polar word clouds require exactly 2 input sources. Found: " + cliParameters.getInputSources().size());" is 138.,119
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,buildPolarWordCloud,Long Statement,The length of the statement "final PolarWordCloud wordCloud=new PolarWordCloud(new Dimension(cliParameters.getWidth()`cliParameters.getHeight())`cliParameters.getCollisionMode()`cliParameters.getPolarBlendMode());" is 184.,119
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,buildPolarWordCloud,Long Statement,The length of the statement "wordCloud.build(loadFrequencies(cliParameters.getInputSources().get(0))`loadFrequencies(cliParameters.getInputSources().get(1)));" is 129.,119
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,buildPolarWordCloud,Magic Number,The method contains a magic number: 2,119
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,buildPolarWordCloud,Magic Number,The method contains a magic number: 2,119
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,buildStandardWordCloud,Long Statement,The length of the statement "final WordCloud wordCloud=new WordCloud(new Dimension(cliParameters.getWidth()`cliParameters.getHeight())`cliParameters.getCollisionMode());" is 140.,146
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,loadFrequencies,Long Statement,The length of the statement "cliParameters.getNormalizers().addAll(Arrays.asList(NormalizerType.TRIM`NormalizerType.CHARACTER_STRIPPING`NormalizerType.LOWERCASE));" is 134.,166
+kennycason_kumo,com.kennycason.kumo.cli,KumoCli,toInputStream,Empty catch clause,The method has an empty catch block.,241
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,stopwords,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_stopwords.png"`"--stop-words"`"nintendo`the"});" is 150.,18
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,wordCount,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_wordcount_10.png"`"--word-count"`"10"});" is 143.,27
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,widthAndHeight,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_width_and_height.png"`"--width"`"100"`"--height"`"100"});" is 160.,36
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,randomWordStart,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_random_wordstart.png"`"--word-start"`"random"});" is 151.,46
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,font,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_font.png"`"--font-scalar"`"sqrt"`"--font-type"`"Impact"`"--font-weight"`"plain"`"--font-size-min"`"4"`"--font-size-max"`"100"});" is 231.,55
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,normalizer,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_normalizers.png"`"--normalizer"`"uppercase`bubble"});" is 156.,68
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,backgroundImage,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_whale_background.png"`"--width"`"990"`"--height"`"618"`"--background"`"https://raw.githubusercontent.com/kennycason/kumo/master/src/test/resources/backgrounds/whale.png"});" is 275.,77
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,colorRgb,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_rgb_color.png"`"--color"`"(255`0`0)`(0`255`0)`(0`0`255)"});" is 162.,88
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,colorRgbHex,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_color_rgb_hex.png"`"--color"`"(0xff`0`0)`(0`0xff`0)`(0`0`0xff)"});" is 169.,97
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,colorHex,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo"`"--output"`"/tmp/nintendo_color_hex.png"`"--color"`"(0xffffff)`(0xcccccc)`(0x999999)`(0x666666)`(0x333333)"});" is 187.,106
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,chinese,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://zh.wikipedia.org/wiki/%E4%BB%BB%E5%A4%A9%E5%A0%82"`"--output"`"/tmp/nintendo_chinese.png"`"--tokenizer"`"chinese"});" is 161.,115
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,polar,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://en.wikipedia.org/wiki/Nintendo` https://en.wikipedia.org/wiki/PlayStation"`"--output"`"/tmp/nintendo_vs_playstation.png"`"--type"`"polar"`"--color"`"(0x00ff00)`(0x00dd00)`(0x007700)|(0xff0000)`(0xdd0000)`(0x770000)"});" is 263.,124
+kennycason_kumo,com.kennycason.kumo.cli,KumoCliITest,layered,Long Statement,The length of the statement "KumoCli.main(new String[]{"--input"`"https://www.haskell.org/` https://en.wikipedia.org/wiki/Haskell_(programming_language)"`"--output"`"/tmp/haskell_layered.png"`"--background"`"https://raw.githubusercontent.com/kennycason/kumo/master/src/test/resources/backgrounds/haskell_1.bmp`https://raw.githubusercontent.com/kennycason/kumo/master/src/test/resources/backgrounds/haskell_2.bmp"`"--type"`"layered"`"--color"`"(0xFA6C07)`(0xFF7614)`(0xFF8936)|(0x080706)`(0x3B3029)`(0x47362A)"});" is 483.,134
+kennycason_kumo,com.kennycason.kumo.cli,ParenthesisSerializerTest,deserialize,Magic Number,The method contains a magic number: 2,23
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,ChineseWordTokenizerTest,test,Long Statement,The length of the statement "assertEquals(Arrays.asList("国家"`"都"`"有"`"自己"`"的"`"政府"`"。"`"政府"`"是"`"税收"`"的"`"主体"`"，"`"可以"`"实现"`"福利"`"的"`"合理"`"利用"`"。")`tokenizer.tokenize("国家都有自己的政府。政府是税收的主体，可以实现福利的合理利用。"));" is 174.,20
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,ChineseWordTokenizerTest,test,Magic Number,The method contains a magic number: 45,20
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,EnglishWordTokenizerTest,test,Long Statement,The length of the statement "assertEquals(Arrays.asList("Wow"`"`"`"my"`"name"`"is"`"kumo"`"."`"I"`"'"`"m"`"a"`"word"`"cloud"`"library")`tokenizer.tokenize("Wow` my name is kumo. I'm a word cloud library"));" is 177.,19
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,WhiteSpaceWordTokenizerTest,singleAndMultipleSpace,Magic Number,The method contains a magic number: 6,16
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,WhiteSpaceWordTokenizerTest,singleAndMultipleSpace,Magic Number,The method contains a magic number: 2,16
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,WhiteSpaceWordTokenizerTest,singleAndMultipleSpace,Magic Number,The method contains a magic number: 3,16
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,WhiteSpaceWordTokenizerTest,singleAndMultipleSpace,Magic Number,The method contains a magic number: 4,16
+kennycason_kumo,com.kennycason.kumo.nlp.tokenizers,WhiteSpaceWordTokenizerTest,singleAndMultipleSpace,Magic Number,The method contains a magic number: 5,16
+kennycason_kumo,com.kennycason.kumo,Word,Word,Long Parameter List,The method has 5 parameters. ,32
+kennycason_kumo,com.kennycason.kumo,Word,toString,Long Statement,The length of the statement "return "Word{" + "word='" + word + '\''+ "` color="+ color+ "` x="+ position.x+ "` y="+ position.y+ "` width="+ bufferedImage.getWidth()+ "` height="+ bufferedImage.getHeight()+ '}';" is 182.,139
+kennycason_kumo,com.kennycason.kumo,WordCloud,drawForegroundToBackground,Long Statement,The length of the statement "final BufferedImage backgroundBufferedImage=new BufferedImage(dimension.width`dimension.height`this.bufferedImage.getType());" is 125.,143
+kennycason_kumo,com.kennycason.kumo,WordCloud,place,Complex Conditional,The conditional expression position.y >= 0 && position.y < dimension.height && canPlace(word) is complex.,179
+kennycason_kumo,com.kennycason.kumo,WordCloud,place,Complex Conditional,The conditional expression offset != 0 && position.y >= 0 && position.y < dimension.height && canPlace(word) is complex.,179
+kennycason_kumo,com.kennycason.kumo,WordCloud,place,Magic Number,The method contains a magic number: 2,179
+kennycason_kumo,com.kennycason.kumo,WordFrequency,toString,Long Statement,The length of the statement "return "WordFrequency [word=" + word + "` frequency="+ frequency+ "` font="+ (font == null ? "default" : font.getFont().getFontName())+ "]";" is 140.,49
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getStartPosition,Magic Number,The method contains a magic number: 2,76
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getStartPosition,Magic Number,The method contains a magic number: 2,76
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getStartPosition,Magic Number,The method contains a magic number: 2,76
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getStartPosition,Magic Number,The method contains a magic number: 2,76
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getRandomPoles,Magic Number,The method contains a magic number: 2,92
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getRandomPoles,Magic Number,The method contains a magic number: 100,92
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getRandomPoles,Magic Number,The method contains a magic number: 2,92
+kennycason_kumo,com.kennycason.kumo,PolarWordCloud,getRandomPoles,Magic Number,The method contains a magic number: 2,92
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Complex Conditional,The conditional expression debug && rgb != white && rgb != pink is complex.,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Complex Method,Cyclomatic complexity of the method is 8,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 0xFFFF0000,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 0xFF0000FF,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 42,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 20,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 100,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 900,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 100,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 900,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,maxRadius,Magic Number,The method contains a magic number: 20,23
+kennycason_kumo,com.kennycason.kumo,SpiralTest,noIdenticalPoints,Magic Number,The method contains a magic number: 42,90
+kennycason_kumo,com.kennycason.kumo,SpiralTest,noIdenticalPoints,Magic Number,The method contains a magic number: 20,90
+kennycason_kumo,com.kennycason.kumo,SpiralTest,noIdenticalPoints,Magic Number,The method contains a magic number: 100,90
+kennycason_kumo,com.kennycason.kumo,SpiralTest,noIdenticalPoints,Magic Number,The method contains a magic number: 900,90
+kennycason_kumo,com.kennycason.kumo,SpiralTest,noIdenticalPoints,Magic Number,The method contains a magic number: 100,90
+kennycason_kumo,com.kennycason.kumo,SpiralTest,noIdenticalPoints,Magic Number,The method contains a magic number: 900,90
+kennycason_kumo,com.kennycason.kumo,SpiralTest,noIdenticalPoints,Magic Number,The method contains a magic number: 20,90
+kennycason_kumo,com.kennycason.kumo,SpiralTest,originalSpiral,Magic Number,The method contains a magic number: 2,118
+kennycason_kumo,com.kennycason.kumo,SpiralTest,optimizedSpiral,Complex Conditional,The conditional expression offset != 0 && position.y >= 0 && position.y < dimension.height is complex.,151
+kennycason_kumo,com.kennycason.kumo,SpiralTest,optimizedSpiral,Magic Number,The method contains a magic number: 2,151
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 600,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 5,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 1500,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 1000,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 0x4055F1,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 0x408DF1,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 0x40AAF1,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 0x40C5F1,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 0x40D3F1,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 10,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWordTooFewTest,Magic Number,The method contains a magic number: 50,39
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 600,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 5,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 1500,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 1000,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 0x4055F1,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 0x408DF1,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 0x40AAF1,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 0x40C5F1,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 0x40D3F1,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 10,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithCustomAutoFillTest,Magic Number,The method contains a magic number: 50,73
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 600,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 6,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 1500,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 1000,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 0x4055F1,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 0x408DF1,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 0x40AAF1,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 0x40C5F1,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 0x40D3F1,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 10,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgNoWordAfterFilterWithDefaultAutoFillTest,Magic Number,The method contains a magic number: 50,109
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 600,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 5,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 1500,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 1000,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 0x4055F1,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 0x408DF1,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 0x40AAF1,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 0x40C5F1,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 0x40D3F1,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 10,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,whaleImgWithListOfStringTest,Magic Number,The method contains a magic number: 50,149
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 500,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 6,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 500,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 900,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 0x4055F1,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 0x408DF1,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 0x40AAF1,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 0x40C5F1,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 0x40D3F1,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 7,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,wordtoosmall,Magic Number,The method contains a magic number: 35,216
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 600,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 5,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 300,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 400,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 0x4055F1,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 0x408DF1,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 0x40AAF1,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 0x40C5F1,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 0x40D3F1,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 8,245
+kennycason_kumo,com.kennycason.kumo,WordCloudAutoFillTest,duplicatesmall,Magic Number,The method contains a magic number: 30,245
+kennycason_kumo,com.kennycason.kumo,RotateWordTest,data,Magic Number,The method contains a magic number: 20,22
+kennycason_kumo,com.kennycason.kumo,RotateWordTest,data,Magic Number,The method contains a magic number: 100,22
+kennycason_kumo,com.kennycason.kumo,RotateWordTest,data,Magic Number,The method contains a magic number: 10,22
+kennycason_kumo,com.kennycason.kumo,RotateWordTest,checkRotatedTextIsNotCropped,Magic Number,The method contains a magic number: 360,44
+kennycason_kumo,com.kennycason.kumo,RotateWordTest,checkRotatedTextIsNotCropped,Magic Number,The method contains a magic number: 5,44
+kennycason_kumo,com.kennycason.kumo,RotateWordTest,nearlyTransparent,Magic Number,The method contains a magic number: 0xFF000000,94
+kennycason_kumo,com.kennycason.kumo,RotateWordTest,nearlyTransparent,Magic Number,The method contains a magic number: 0x40000000,94
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 600,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 5,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 150,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 100,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 0x4055F1,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 0x408DF1,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 0x40AAF1,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 0x40C5F1,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 0x40D3F1,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 10,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgLargeToSmallTest,Magic Number,The method contains a magic number: 50,36
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 600,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 5,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 1500,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 1000,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 0x4055F1,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 0x408DF1,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 0x40AAF1,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 0x40C5F1,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 0x40D3F1,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 10,67
+kennycason_kumo,com.kennycason.kumo,WordCloudImageResizeTest,whaleImgSmallToLargeTest,Magic Number,The method contains a magic number: 50,67
+kennycason_kumo,com.kennycason.kumo,WordCloudTest,testWriteToStreamAsPNG,Magic Number,The method contains a magic number: 200,27
+kennycason_kumo,com.kennycason.kumo,WordCloudTest,testWriteToStreamAsPNG,Magic Number,The method contains a magic number: 200,27
+kennycason_kumo,com.kennycason.kumo,WordCloudTest,testWriteToStreamAsPNG,Magic Number,The method contains a magic number: 2,27
+kennycason_kumo,com.kennycason.kumo.bg,RectangleBackground,mask,Complex Conditional,The conditional expression (y < minY) || (y > maxY) || (x < minX)|| (x > maxX) is complex.,40
+kennycason_kumo,com.kennycason.kumo.bg,RectangleBackground,toString,Long Statement,The length of the statement "return "RectangleBackground [x=" + position.x + "` y="+ position.y+ "` width="+ dimension.width+ "` height="+ dimension.height+ "]";" is 132.,62
+kennycason_kumo,com.kennycason.kumo.bg,PixelBoundaryBackground,mask,Complex Conditional,The conditional expression x < minX || x > maxX || collisionRaster.isTransparent(x`y) is complex.,56
+kennycason_kumo,com.kennycason.kumo.collide,RectanglePixelCollidable,collide,Long Identifier,The length of the field RECTANGLE_PIXEL_COLLISION_CHECKER is 33.,24
+kennycason_kumo,com.kennycason.kumo.collide.checkers,RectangleCollisionChecker,collide,Long Statement,The length of the statement "if ((position.x + collidable.getDimension().getWidth() < position2.x) || (position2.x + collidable2.getDimension().getWidth() < position.x)) {" is 142.,12
+kennycason_kumo,com.kennycason.kumo.collide.checkers,RectangleCollisionChecker,collide,Long Statement,The length of the statement "if ((position.y + collidable.getDimension().getHeight() < position2.y) || (position2.y + collidable2.getDimension().getHeight() < position.y)) {" is 144.,12
+kennycason_kumo,com.kennycason.kumo.collide.checkers,RectanglePixelCollisionChecker,collide,Complex Method,Cyclomatic complexity of the method is 11,25
+kennycason_kumo,com.kennycason.kumo.collide.checkers,RectanglePixelCollisionChecker,collide,Magic Number,The method contains a magic number: 3,25
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoader,processLines,Long Statement,The length of the statement "return lines.stream().filter(StringUtils::isNotBlank).map(FrequencyFileLoader::buildWordFrequency).sorted(WordFrequency::compareTo).collect(Collectors.toList());" is 161.,42
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoader,buildWordFrequency,Magic Number,The method contains a magic number: 2,50
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzer,buildWordFrequencies,Long Statement,The length of the statement "return texts.stream().map(tokenizer::tokenize).flatMap(List::stream).map(this::normalize).filter(buildFilter()).collect(Collectors.groupingBy(e -> e`reducing(0`e -> 1`Integer::sum)));" is 183.,148
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzer,takeTopFrequencies,Long Statement,The length of the statement "return wordCloudEntities.stream().sorted(WordFrequency::compareTo).limit(wordFrequenciesToReturn).collect(Collectors.toList());" is 127.,173
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,defaultTokenizerTrim,Long Statement,The length of the statement "final List<WordFrequency> wordFrequencies=frequencyAnalyzer.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("trim_test.txt"));" is 150.,37
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,defaultTokenizerTrim,Long Statement,The length of the statement "final Map<String`WordFrequency> wordFrequencyMap=wordFrequencies.stream().collect(Collectors.toMap(WordFrequency::getWord`Function.identity()));" is 144.,37
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,defaultTokenizerTrim,Magic Number,The method contains a magic number: 2,37
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,noNormalizationNoFilter,Long Statement,The length of the statement "final List<WordFrequency> wordFrequencies=frequencyAnalyzer.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("text/simplymeasured.txt"));" is 160.,55
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,noNormalizationNoFilter,Long Statement,The length of the statement "final Map<String`WordFrequency> wordFrequencyMap=wordFrequencies.stream().collect(Collectors.toMap(WordFrequency::getWord`Function.identity()));" is 144.,55
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,noNormalizationNoFilter,Magic Number,The method contains a magic number: 15122,55
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,noNormalizationNoFilter,Magic Number,The method contains a magic number: 2086,55
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,noNormalizationNoFilter,Magic Number,The method contains a magic number: 3020,55
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,noNormalizationNoFilter,Magic Number,The method contains a magic number: 1064,55
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,noNormalizationNoFilter,Magic Number,The method contains a magic number: 4434,55
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Long Statement,The length of the statement "final List<WordFrequency> wordFrequencies=frequencyAnalyzer.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("text/simplymeasured.txt"));" is 160.,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Long Statement,The length of the statement "final Map<String`WordFrequency> wordFrequencyMap=wordFrequencies.stream().collect(Collectors.toMap(WordFrequency::getWord`Function.identity()));" is 144.,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Magic Number,The method contains a magic number: 17336,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Magic Number,The method contains a magic number: 12574,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Magic Number,The method contains a magic number: 7187,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Magic Number,The method contains a magic number: 5815,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Magic Number,The method contains a magic number: 5755,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Magic Number,The method contains a magic number: 5501,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTest,Magic Number,The method contains a magic number: 3733,77
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTestWithStopWords,Long Statement,The length of the statement "final List<WordFrequency> wordFrequencies=frequencyAnalyzer.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("text/simplymeasured.txt"));" is 160.,97
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTestWithStopWords,Long Statement,The length of the statement "final Map<String`WordFrequency> wordFrequencyMap=wordFrequencies.stream().collect(Collectors.toMap(WordFrequency::getWord`Function.identity()));" is 144.,97
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTestWithStopWords,Magic Number,The method contains a magic number: 12574,97
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTestWithStopWords,Magic Number,The method contains a magic number: 5815,97
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTestWithStopWords,Magic Number,The method contains a magic number: 5501,97
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyAnalyzerTest,largeTextFileTestWithStopWords,Magic Number,The method contains a magic number: 3733,97
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Long Statement,The length of the statement "final List<WordFrequency> wordFrequencies=FREQUENCY_FILE_LOADER.load(IOUtils.toInputStream("100:cat\n" + "50:dog\n" + "25:fish\n"+ "75:frog"));" is 143.,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 4,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 100,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 75,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 50,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 2,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 2,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 25,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 3,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,basic,Magic Number,The method contains a magic number: 3,16
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Long Statement,The length of the statement "final List<WordFrequency> wordFrequencies=FREQUENCY_FILE_LOADER.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("frequency_file.txt"));" is 159.,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 4,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 100,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 75,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 50,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 2,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 2,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 25,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 3,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,validFile,Magic Number,The method contains a magic number: 3,36
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,malformedWord,Long Statement,The length of the statement "FREQUENCY_FILE_LOADER.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("frequency_file_malformed_word.txt"));" is 132.,51
+kennycason_kumo,com.kennycason.kumo.nlp,FrequencyFileLoaderTest,malformedWordCount,Long Statement,The length of the statement "FREQUENCY_FILE_LOADER.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("frequency_file_malformed_word_count.txt"));" is 138.,56
+kennycason_kumo,com.kennycason.kumo.wordstart,CenterWordStart,getStartingPoint,Magic Number,The method contains a magic number: 2,14
+kennycason_kumo,com.kennycason.kumo.wordstart,CenterWordStart,getStartingPoint,Magic Number,The method contains a magic number: 2,14
+kennycason_kumo,com.kennycason.kumo.wordstart,CenterWordStart,getStartingPoint,Magic Number,The method contains a magic number: 2,14
+kennycason_kumo,com.kennycason.kumo.wordstart,CenterWordStart,getStartingPoint,Magic Number,The method contains a magic number: 2,14
+kennycason_kumo,com.kennycason.kumo.placement,RTreeWordPlacer,reset,Magic Number,The method contains a magic number: 4,17
+kennycason_kumo,com.kennycason.kumo.placement,RTreeWordPlacer,place,Long Statement,The length of the statement "final Rectangle wordRectangle=Geometries.rectangle(word.getPosition().getX()`word.getPosition().getY()`word.getPosition().getX() + word.getDimension().getWidth()`word.getPosition().getY() + word.getDimension().getHeight());" is 223.,22
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testScale,Magic Number,The method contains a magic number: 13,8
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testScale,Magic Number,The method contains a magic number: 8.899495f,8
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testScale,Magic Number,The method contains a magic number: 4,8
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testScale,Magic Number,The method contains a magic number: 8,8
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testNaN,Magic Number,The method contains a magic number: 10,17
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testNaN,Magic Number,The method contains a magic number: 40,17
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testNaN,Magic Number,The method contains a magic number: 6,17
+kennycason_kumo,com.kennycason.kumo.font.scale,SqrtFontScalarTest,testNaN,Magic Number,The method contains a magic number: 6,17
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testScale,Magic Number,The method contains a magic number: 13,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testScale,Magic Number,The method contains a magic number: 6.0f,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testScale,Magic Number,The method contains a magic number: 4,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testScale,Magic Number,The method contains a magic number: 8,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testNaN,Magic Number,The method contains a magic number: 10,18
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testNaN,Magic Number,The method contains a magic number: 40,18
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testNaN,Magic Number,The method contains a magic number: 6,18
+kennycason_kumo,com.kennycason.kumo.font.scale,LinearFontScalarTest,testNaN,Magic Number,The method contains a magic number: 6,18
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testScale,Magic Number,The method contains a magic number: 13,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testScale,Magic Number,The method contains a magic number: 8.333333f,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testScale,Magic Number,The method contains a magic number: 4,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testScale,Magic Number,The method contains a magic number: 8,8
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testNaN,Magic Number,The method contains a magic number: 10,17
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testNaN,Magic Number,The method contains a magic number: 40,17
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testNaN,Magic Number,The method contains a magic number: 6,17
+kennycason_kumo,com.kennycason.kumo.font.scale,LogFontScalarTest,testNaN,Magic Number,The method contains a magic number: 6,17
+kennycason_kumo,com.kennycason.kumo.padding,WordPixelPadder,pad,Complex Method,Cyclomatic complexity of the method is 13,14
+kennycason_kumo,com.kennycason.kumo.padding,RectanglePadder,pad,Magic Number,The method contains a magic number: 2,13
+kennycason_kumo,com.kennycason.kumo.padding,RectanglePadder,pad,Magic Number,The method contains a magic number: 2,13
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPalette,LinearGradientColorPalette,Long Parameter List,The method has 5 parameters. ,41
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPalette,createTwoLinearGradients,Long Parameter List,The method has 5 parameters. ,66
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,singleGradient,Magic Number,The method contains a magic number: 0xFF,14
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,singleGradient,Magic Number,The method contains a magic number: 0xFF,14
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,singleGradient,Magic Number,The method contains a magic number: 0xFF,14
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,singleGradient,Magic Number,The method contains a magic number: 15,14
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,singleGradient,Magic Number,The method contains a magic number: 16,14
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,singleGradient,Magic Number,The method contains a magic number: 0xFF,14
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Long Statement,The length of the statement "final LinearGradientColorPalette colorPalette=new LinearGradientColorPalette(color1`color2`color3`gradientSteps`gradientSteps);" is 127.,32
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Magic Number,The method contains a magic number: 0xFF,32
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Magic Number,The method contains a magic number: 0xFF,32
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Magic Number,The method contains a magic number: 0xFF,32
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Magic Number,The method contains a magic number: 15,32
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Magic Number,The method contains a magic number: 31,32
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Magic Number,The method contains a magic number: 0xFF,32
+kennycason_kumo,com.kennycason.kumo.palette,LinearGradientColorPaletteTest,doubleGradient,Magic Number,The method contains a magic number: 0xFF,32
+kennycason_kumo,com.kennycason.kumo.image,AngleGenerator,AngleGenerator,Magic Number,The method contains a magic number: 3,17
+kennycason_kumo,com.kennycason.kumo.image,AngleGenerator,AngleGenerator,Magic Number,The method contains a magic number: 90,17
+kennycason_kumo,com.kennycason.kumo.image,AngleGenerator,AngleGenerator,Magic Number,The method contains a magic number: 90,17
+kennycason_kumo,com.kennycason.kumo.image,CollisionRaster,CollisionRaster,Magic Number,The method contains a magic number: 0xFF000000,15
+kennycason_kumo,com.kennycason.kumo.image,ImageRotation,rotate90,Magic Number,The method contains a magic number: 90,14
+kennycason_kumo,com.kennycason.kumo.image,ImageRotation,rotateMinus90,Magic Number,The method contains a magic number: 90,18
+kennycason_kumo,com.kennycason.kumo.image,ImageRotation,rotate,Magic Number,The method contains a magic number: 2,22
+kennycason_kumo,com.kennycason.kumo.image,ImageRotation,rotate,Magic Number,The method contains a magic number: 2,22
+kennycason_kumo,com.kennycason.kumo.image,ImageRotation,rotate,Magic Number,The method contains a magic number: 2,22
+kennycason_kumo,com.kennycason.kumo.image,ImageRotation,rotate,Magic Number,The method contains a magic number: 2,22
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,basicTests,Magic Number,The method contains a magic number: 10,20
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,basicTests,Magic Number,The method contains a magic number: 5,20
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,correctPixelIsTransparent,Magic Number,The method contains a magic number: 90,37
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,correctPixelIsTransparent,Magic Number,The method contains a magic number: 30,37
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,illegalX,Magic Number,The method contains a magic number: 90,66
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,illegalX,Magic Number,The method contains a magic number: 60,66
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,illegalX,Magic Number,The method contains a magic number: 100,66
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,illegalY,Magic Number,The method contains a magic number: 90,73
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,illegalY,Magic Number,The method contains a magic number: 60,73
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,illegalY,Magic Number,The method contains a magic number: 70,73
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Long Statement,The length of the statement "Assert.assertFalse(checker.collide(collidable(new Point(30`30)`dimension`collisionRasterA)`collidable(new Point(30`30)`dimension`collisionRasterB)));" is 149.,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Long Statement,The length of the statement "Assert.assertTrue(checker.collide(collidable(new Point(30`30)`dimension`collisionRasterA)`collidable(new Point(20`20)`dimension`collisionRasterB)));" is 148.,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Long Statement,The length of the statement "Assert.assertFalse(checker.collide(collidable(new Point(20`20)`dimension`collisionRasterA)`collidable(new Point(30`30)`dimension`collisionRasterB)));" is 149.,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 90,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 60,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 10,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 10,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 20,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 20,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 20,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 20,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 20,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 20,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.image,CollisionRasterTest,collisionsAreFound,Magic Number,The method contains a magic number: 30,80
+kennycason_kumo,com.kennycason.kumo.examples,EmojiWordCloudITest,emojiCloud,Magic Number,The method contains a magic number: 250,21
+kennycason_kumo,com.kennycason.kumo.examples,EmojiWordCloudITest,emojiCloud,Magic Number,The method contains a magic number: 250,21
+kennycason_kumo,com.kennycason.kumo.examples,EmojiWordCloudITest,emojiCloud,Magic Number,The method contains a magic number: 2,21
+kennycason_kumo,com.kennycason.kumo.examples,EmojiWordCloudITest,buildWordFrequencies,Magic Number,The method contains a magic number: 250,35
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 200,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 2,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 990,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 618,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 4,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 0x000000FF,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 0x0891d1,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 0x76beea,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 10,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 60,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 10,30
+kennycason_kumo,com.kennycason.kumo.examples,DataRankWordCloudITest,datarank,Magic Number,The method contains a magic number: 60,30
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0xFFFFFF)));" is 165.,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 300,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 5,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 500,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 312,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 0x4055F1,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 0x408DF1,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 0x40AAF1,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 0x40C5F1,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 0x40D3F1,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 0xFFFFFF,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 10,43
+kennycason_kumo,com.kennycason.kumo.examples,JPanelDemo,buildWordCloud,Magic Number,The method contains a magic number: 40,43
+kennycason_kumo,com.kennycason.kumo.examples,WordPlacerPerfTest,linearPlacement,Magic Number,The method contains a magic number: 1000,48
+kennycason_kumo,com.kennycason.kumo.examples,WordPlacerPerfTest,linearPlacement,Magic Number,The method contains a magic number: 1000,48
+kennycason_kumo,com.kennycason.kumo.examples,WordPlacerPerfTest,rTreePlacement,Magic Number,The method contains a magic number: 1000,63
+kennycason_kumo,com.kennycason.kumo.examples,WordPlacerPerfTest,rTreePlacement,Magic Number,The method contains a magic number: 1000,63
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,whaleImgLargePolarTest,Magic Number,The method contains a magic number: 600,33
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,whaleImgLargePolarTest,Magic Number,The method contains a magic number: 4,33
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,whaleImgLargePolarTest,Magic Number,The method contains a magic number: 990,33
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,whaleImgLargePolarTest,Magic Number,The method contains a magic number: 618,33
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,whaleImgLargePolarTest,Magic Number,The method contains a magic number: 2,33
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,whaleImgLargePolarTest,Magic Number,The method contains a magic number: 15,33
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,whaleImgLargePolarTest,Magic Number,The method contains a magic number: 50,33
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 750,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 4,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 600,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 600,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 2,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 300,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 10,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarCircle,Magic Number,The method contains a magic number: 40,55
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarRectangle,Magic Number,The method contains a magic number: 750,76
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarRectangle,Magic Number,The method contains a magic number: 4,76
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarRectangle,Magic Number,The method contains a magic number: 800,76
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarRectangle,Magic Number,The method contains a magic number: 600,76
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarRectangle,Magic Number,The method contains a magic number: 2,76
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarRectangle,Magic Number,The method contains a magic number: 10,76
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,newyorkPolarRectangle,Magic Number,The method contains a magic number: 40,76
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,tidyCatLitter,Magic Number,The method contains a magic number: 400,97
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,tidyCatLitter,Magic Number,The method contains a magic number: 4,97
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,tidyCatLitter,Magic Number,The method contains a magic number: 600,97
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,tidyCatLitter,Magic Number,The method contains a magic number: 600,97
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,tidyCatLitter,Magic Number,The method contains a magic number: 2,97
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,tidyCatLitter,Magic Number,The method contains a magic number: 10,97
+kennycason_kumo,com.kennycason.kumo.examples,PolarWordCloudITest,tidyCatLitter,Magic Number,The method contains a magic number: 40,97
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 1000,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 3,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 600,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 454,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 4,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 0x000000FF,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 2,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 2,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 2,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 0x3f5ca9,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 0x6185c3,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 2,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 0x8fb6e1,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 10,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 40,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 10,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 40,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 2,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 10,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 40,29
+kennycason_kumo,com.kennycason.kumo.examples,SimplyMeasuredWordCloudITest,simplymeasured,Magic Number,The method contains a magic number: 2,29
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 300,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 5,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 600,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 386,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 2,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 0xABEDFF,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 0x82E4FF,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 0x55D6FA,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 0xFFFFFF,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 0xDCDDDE,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 0xCCCCCC,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 10,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 40,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 10,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredExample,Magic Number,The method contains a magic number: 40,30
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 300,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 5,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 600,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 424,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 2,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 0xFA6C07,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 0xFF7614,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 0xFF8936,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 0x080706,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 0x3B3029,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 0x47362A,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 10,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 40,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 10,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredHaskellExample,Magic Number,The method contains a magic number: 40,64
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 1000,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 3,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 1000,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 976,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 4,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x333333,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 2,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 3,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 2,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 3,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 2,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 3,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x26A621,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x21961D,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x187A15,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x5963F0,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x515CF0,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x729FED,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 2,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0xEDC672,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0xDBB258,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0xDE7C1B,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 3,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x70572B,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0x857150,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 0xB09971,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 8,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 30,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 8,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 40,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 2,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 8,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 30,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 3,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 8,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 30,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 2,99
+kennycason_kumo,com.kennycason.kumo.examples,LayeredWordCloudITest,layeredPhoBowl,Magic Number,The method contains a magic number: 3,99
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upperCaseNormalizer,Magic Number,The method contains a magic number: 750,27
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upperCaseNormalizer,Magic Number,The method contains a magic number: 5,27
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upperCaseNormalizer,Magic Number,The method contains a magic number: 600,27
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upperCaseNormalizer,Magic Number,The method contains a magic number: 600,27
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upperCaseNormalizer,Magic Number,The method contains a magic number: 300,27
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upperCaseNormalizer,Magic Number,The method contains a magic number: 10,27
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upperCaseNormalizer,Magic Number,The method contains a magic number: 40,27
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upsideDownNormalizer,Magic Number,The method contains a magic number: 750,46
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upsideDownNormalizer,Magic Number,The method contains a magic number: 5,46
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upsideDownNormalizer,Magic Number,The method contains a magic number: 600,46
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upsideDownNormalizer,Magic Number,The method contains a magic number: 600,46
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upsideDownNormalizer,Magic Number,The method contains a magic number: 300,46
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upsideDownNormalizer,Magic Number,The method contains a magic number: 10,46
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,upsideDownNormalizer,Magic Number,The method contains a magic number: 40,46
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,hexStringNormalizer,Magic Number,The method contains a magic number: 750,65
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,hexStringNormalizer,Magic Number,The method contains a magic number: 5,65
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,hexStringNormalizer,Magic Number,The method contains a magic number: 600,65
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,hexStringNormalizer,Magic Number,The method contains a magic number: 600,65
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,hexStringNormalizer,Magic Number,The method contains a magic number: 300,65
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,hexStringNormalizer,Magic Number,The method contains a magic number: 10,65
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,hexStringNormalizer,Magic Number,The method contains a magic number: 40,65
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,noNormalizationOrFilters,Magic Number,The method contains a magic number: 750,84
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,noNormalizationOrFilters,Magic Number,The method contains a magic number: 5,84
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,noNormalizationOrFilters,Magic Number,The method contains a magic number: 600,84
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,noNormalizationOrFilters,Magic Number,The method contains a magic number: 600,84
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,noNormalizationOrFilters,Magic Number,The method contains a magic number: 300,84
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,noNormalizationOrFilters,Magic Number,The method contains a magic number: 10,84
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,noNormalizationOrFilters,Magic Number,The method contains a magic number: 40,84
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,bubbleText,Magic Number,The method contains a magic number: 750,104
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,bubbleText,Magic Number,The method contains a magic number: 600,104
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,bubbleText,Magic Number,The method contains a magic number: 600,104
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,bubbleText,Magic Number,The method contains a magic number: 10,104
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudNormalizersITest,bubbleText,Magic Number,The method contains a magic number: 40,104
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleCircleTest,Magic Number,The method contains a magic number: 150,36
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleCircleTest,Magic Number,The method contains a magic number: 600,36
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleCircleTest,Magic Number,The method contains a magic number: 600,36
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleCircleTest,Magic Number,The method contains a magic number: 300,36
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleCircleTest,Magic Number,The method contains a magic number: 20,36
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleCircleTest,Magic Number,The method contains a magic number: 10,36
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleCircleTest,Magic Number,The method contains a magic number: 40,36
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleRectangleTest,Magic Number,The method contains a magic number: 150,50
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleRectangleTest,Magic Number,The method contains a magic number: 600,50
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleRectangleTest,Magic Number,The method contains a magic number: 600,50
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleRectangleTest,Magic Number,The method contains a magic number: 20,50
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleRectangleTest,Magic Number,The method contains a magic number: 10,50
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,simpleRectangleTest,Magic Number,The method contains a magic number: 40,50
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,loadWikipediaFromUrl,Magic Number,The method contains a magic number: 1000,63
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,loadWikipediaFromUrl,Magic Number,The method contains a magic number: 1000,63
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,loadWikipediaFromUrl,Magic Number,The method contains a magic number: 1000,63
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,loadWikipediaFromUrl,Magic Number,The method contains a magic number: 5,63
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,loadWikipediaFromUrl,Magic Number,The method contains a magic number: 18,63
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,loadWikipediaFromUrl,Magic Number,The method contains a magic number: 70,63
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,readCNN,Magic Number,The method contains a magic number: 500,82
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,readCNN,Magic Number,The method contains a magic number: 3,82
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,readCNN,Magic Number,The method contains a magic number: 600,82
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,readCNN,Magic Number,The method contains a magic number: 600,82
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,readCNN,Magic Number,The method contains a magic number: 5,82
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,readCNN,Magic Number,The method contains a magic number: 18,82
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,readCNN,Magic Number,The method contains a magic number: 70,82
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0x000000)));" is 165.,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 600,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 5,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 990,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 618,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 0x4055F1,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 0x408DF1,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 0x40AAF1,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 0x40C5F1,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 0x40D3F1,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 10,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeTest,Magic Number,The method contains a magic number: 50,102
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0xFFFFFF)));" is 165.,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 300,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 5,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 500,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 312,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 0x4055F1,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 0x408DF1,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 0x40AAF1,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 0x40C5F1,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 0x40D3F1,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 0xFFFFFF,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 10,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallTest,Magic Number,The method contains a magic number: 40,122
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0xFFFFFF)));" is 165.,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 100,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 5,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 500,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 312,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 2,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 90,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 90,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 10,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 0x4055F1,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 0x408DF1,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 0x40AAF1,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 0x40C5F1,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 0x40D3F1,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 0xFFFFFF,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 10,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgSmallAnglesTest,Magic Number,The method contains a magic number: 30,140
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0xFFFFFF)));" is 165.,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 600,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 5,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 990,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 618,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 2,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 90,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 90,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 10,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 0x4055F1,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 0x408DF1,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 0x40AAF1,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 0x40C5F1,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 0x40D3F1,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 0xFFFFFF,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 20,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,whaleImgLargeAnglesTest,Magic Number,The method contains a magic number: 50,159
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0xFFFFFF)));" is 165.,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 750,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 5,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 600,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 600,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 2,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 300,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 0x4055F1,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 0x408DF1,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 0x40AAF1,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 0x40C5F1,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 0x40D3F1,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 0xFFFFFF,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 10,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircle,Magic Number,The method contains a magic number: 40,178
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Long Statement,The length of the statement "wordCloud.setColorPalette(new ColorPalette(new Color(0x4055F1)`new Color(0x408DF1)`new Color(0x40AAF1)`new Color(0x40C5F1)`new Color(0x40D3F1)`new Color(0xFFFFFF)));" is 165.,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 750,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 5,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 1000,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 1000,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 2,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 500,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 0x4055F1,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 0x408DF1,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 0x40AAF1,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 0x40C5F1,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 0x40D3F1,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 0xFFFFFF,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 10,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCircleLarge,Magic Number,The method contains a magic number: 50,198
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 300,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 5,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 600,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 600,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 2,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 3,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 10,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankEarthImage,Magic Number,The method contains a magic number: 40,218
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 300,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 5,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 600,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 600,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 0xcccccc,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 0xdddddd,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 0xffffff,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 10,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,catImage,Magic Number,The method contains a magic number: 50,239
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 600,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 5,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 990,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 618,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 2,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 3,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 10,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,datarankCode,Magic Number,The method contains a magic number: 50,262
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 5000,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 2,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 600,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 600,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 500,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 20,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 10,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,largeCircleTest,Magic Number,The method contains a magic number: 100,282
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 600,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 5,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 600,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 600,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 300,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 2,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 8,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,matchOnlineExample,Magic Number,The method contains a magic number: 130,300
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 250,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 5,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 600,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 600,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 2,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 4,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 30,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,anotherRectangleTest,Magic Number,The method contains a magic number: 60,320
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,buildRandomColorPalette,Magic Number,The method contains a magic number: 230,337
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,buildRandomColorPalette,Magic Number,The method contains a magic number: 25,337
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,buildRandomColorPalette,Magic Number,The method contains a magic number: 230,337
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,buildRandomColorPalette,Magic Number,The method contains a magic number: 25,337
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,buildRandomColorPalette,Magic Number,The method contains a magic number: 230,337
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,buildRandomColorPalette,Magic Number,The method contains a magic number: 25,337
+kennycason_kumo,com.kennycason.kumo.examples,WordCloudITest,buildWordFrequencies,Magic Number,The method contains a magic number: 100,345

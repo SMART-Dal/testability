@@ -1,0 +1,485 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Hive2Hive_PeerBox,org.peerbox,App,initializeLogging,Empty catch clause,The method has an empty catch block.,128
+Hive2Hive_PeerBox,org.peerbox.server,HttpServerTest,testCreateServer,Magic Number,The method contains a magic number: 65535,29
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestSinglePath,testCollectionOfUrls,Long Statement,The length of the statement "sb.append("{").append("\"path\":").append("[").append("\"").append(Paths.get("/tmp/testpath/file1")).append("\"").append("`\"").append(Paths.get("/tmp/testpath/file2")).append("\"").append("]}");" is 195.,31
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestSinglePath,testCollectionOfUrls,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(sb.toString()).post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.DESERIALIZE_ERROR.ordinal()));" is 267.,31
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestSinglePath,testPostWrongJson,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content("{file:\"/tmp/PeerWasp_test/f\"").post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.DESERIALIZE_ERROR.ordinal()));" is 286.,49
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestSinglePath,testPostWrongMsg,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(msg).post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.REQUEST_EXCEPTION.ordinal()));" is 257.,61
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestSinglePath,testPostFile,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(msg).post(url).then().assertThat().statusCode(HttpServletResponse.SC_OK).assertThat().contentType(ContentType.JSON);" is 162.,80
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestSinglePath,testPostFileAndAdditionalParameter,Long Statement,The length of the statement "sb.append("{").append("\"path\":").append("\"").append(Paths.get("/tmp/testpath/file1")).append("\"").append("` \"code\":\"4\"").append("}");" is 141.,94
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestSinglePath,testPostFileAndAdditionalParameter,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(sb.toString()).post(url).then().assertThat().statusCode(HttpServletResponse.SC_OK).assertThat().contentType(ContentType.JSON);" is 172.,94
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestMultiplePaths,testSingleUrl,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(message).post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.DESERIALIZE_ERROR.ordinal()));" is 261.,30
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestMultiplePaths,testPostWrongJson,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(msg).post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.DESERIALIZE_ERROR.ordinal()));" is 257.,47
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestMultiplePaths,testPostWrongMsg,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(msg).post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.REQUEST_EXCEPTION.ordinal()));" is 257.,64
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestMultiplePaths,testPostFiles,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(msg).post(url).then().assertThat().statusCode(HttpServletResponse.SC_OK).assertThat().contentType(ContentType.JSON);" is 162.,81
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTestMultiplePaths,testPostFileAndAdditionalParameter,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content(message).post(url).then().assertThat().statusCode(HttpServletResponse.SC_OK).assertThat().contentType(ContentType.JSON);" is 166.,98
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTest,configureRestAssured,Long Statement,The length of the statement "RestAssured.config=RestAssuredConfig.config().objectMapperConfig(objectMapperConfig().gsonObjectMapperFactory(new GsonObjectMapperFactory(){" is 140.,68
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTest,testPostNoContentType,Long Statement,The length of the statement "post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.WRONG_CONTENT_TYPE.ordinal()));" is 207.,122
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTest,testPostTextContentType,Long Statement,The length of the statement "given().contentType(ContentType.TEXT).post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.WRONG_CONTENT_TYPE.ordinal()));" is 245.,134
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTest,testPostEmpty,Long Statement,The length of the statement "given().contentType(ContentType.JSON).post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.EMPTY_REQUEST.ordinal()));" is 240.,148
+Hive2Hive_PeerBox,org.peerbox.server.servlets,ServletTest,testPostEmptyJson,Long Statement,The length of the statement "given().contentType(ContentType.JSON).content("{}").post(url).then().assertThat().statusCode(HttpServletResponse.SC_BAD_REQUEST).assertThat().contentType(ContentType.JSON).assertThat().body("returnCode"`equalTo(ServerReturnCode.REQUEST_EXCEPTION.ordinal()));" is 258.,162
+Hive2Hive_PeerBox,org.peerbox.utils,IconUtils,createErrorIcon,Magic Number,The method contains a magic number: 20.0,61
+Hive2Hive_PeerBox,org.peerbox.utils,DialogUtils,createAlert,Magic Number,The method contains a magic number: 420,24
+Hive2Hive_PeerBox,org.peerbox.utils,DialogUtils,createAlert,Magic Number,The method contains a magic number: 280,24
+Hive2Hive_PeerBox,org.peerbox.utils,ExecuteProcessUtils,executeCommand,Magic Number,The method contains a magic number: 5,25
+Hive2Hive_PeerBox,org.peerbox.utils,WinRegistry,setApiServerPort,Long Statement,The length of the statement "builder.command("reg"`"ADD"`"HKCU\\Software\\PeerWasp"`"/v"`"api_server_port"`"/t"`"REG_DWORD"`"/d"`String.format("%d"`port)`"/f");" is 131.,22
+Hive2Hive_PeerBox,org.peerbox.utils,BrowserUtils,openURL,Long Statement,The length of the statement "d.getDeclaredMethod("browse"`new Class[]{java.net.URI.class}).invoke(d.getDeclaredMethod("getDesktop").invoke(null)`new Object[]{java.net.URI.create(url)});" is 156.,51
+Hive2Hive_PeerBox,org.peerbox.utils,BrowserUtils,openURL,Long Statement,The length of the statement "Class.forName("com.apple.eio.FileManager").getDeclaredMethod("openURL"`new Class[]{String.class}).invoke(null`new Object[]{url});" is 129.,51
+Hive2Hive_PeerBox,org.peerbox.utils,NetUtilsTest,testIsValidPort,Magic Number,The method contains a magic number: 4714,10
+Hive2Hive_PeerBox,org.peerbox.utils,NetUtilsTest,testIsValidPort,Magic Number,The method contains a magic number: 4714,10
+Hive2Hive_PeerBox,org.peerbox.utils,NetUtilsTest,testIsValidPort,Magic Number,The method contains a magic number: 65534,10
+Hive2Hive_PeerBox,org.peerbox.utils,NetUtilsTest,testIsValidPort,Magic Number,The method contains a magic number: 65535,10
+Hive2Hive_PeerBox,org.peerbox.utils,NetUtilsTest,testIsValidPort,Magic Number,The method contains a magic number: 65536,10
+Hive2Hive_PeerBox,org.peerbox.utils,NetUtilsTest,testMinMaxPort,Magic Number,The method contains a magic number: 65535,22
+Hive2Hive_PeerBox,org.peerbox.utils,ExecuteProcessUtilsTest,testExecuteCommand,Magic Number,The method contains a magic number: 16,17
+Hive2Hive_PeerBox,org.peerbox.utils,ExecuteProcessUtilsTest,testExecuteCommand,Magic Number,The method contains a magic number: 16,17
+Hive2Hive_PeerBox,org.peerbox.utils,AppDataTest,setUp,Magic Number,The method contains a magic number: 16,28
+Hive2Hive_PeerBox,org.peerbox.utils,AppDataTest,testCheckAccess_NotExists,Empty catch clause,The method has an empty catch block.,112
+Hive2Hive_PeerBox,org.peerbox.utils,WinRegistryTest,testTooBigApiServerPort,Magic Number,The method contains a magic number: 65536,43
+Hive2Hive_PeerBox,org.peerbox.utils,WinRegistryTest,testSetApiServerPort,Magic Number,The method contains a magic number: 65536,48
+Hive2Hive_PeerBox,org.peerbox.utils,WinRegistryTest,testSetRootPath,Magic Number,The method contains a magic number: 12,77
+Hive2Hive_PeerBox,org.peerbox.utils,UserConfigUtilsTest,testGetAllConfigFiles,Magic Number,The method contains a magic number: 2,75
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,initializeGrid,Magic Number,The method contains a magic number: 10,64
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,initializeGrid,Magic Number,The method contains a magic number: 5,64
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,initializeGrid,Magic Number,The method contains a magic number: 10,64
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,initializeGrid,Magic Number,The method contains a magic number: 10,64
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,addControlsToGrid,Magic Number,The method contains a magic number: 2,88
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,addControlsToGrid,Magic Number,The method contains a magic number: 2,88
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,addControlsToGrid,Magic Number,The method contains a magic number: 2,88
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,addContent,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@677ed04d,111
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemCell,getIconByType,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@46ce21ec,133
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityTypeTest,testEnumElements,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6e952225,10
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityLoggerTest,testAddToLimit,Magic Number,The method contains a magic number: 2,48
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityLoggerTest,testClearActivityItems,Magic Number,The method contains a magic number: 20,63
+Hive2Hive_PeerBox,org.peerbox.app.activity,ActivityItemTest,testGetTimestamp,Magic Number,The method contains a magic number: 10,75
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,UserManagerCollector,onUserRegister,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setTitle("User registered.").setDescription(String.format("Username: %s"`register.getUsername()));" is 138.,27
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,UserManagerCollector,onUserLogin,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setTitle("User logged in.").setDescription(String.format("Username: %s"`login.getUsername()));" is 134.,36
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,UserManagerCollector,onUserLogout,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setTitle("User logged out.").setDescription(String.format("Username: %s"`logout.getUsername()));" is 136.,45
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,NodeManagerCollector,onNodeConnected,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setTitle("Node connected.").setDescription(String.format("Client connected to the network. Address connected to: %s"`message.getNodeAddress()));" is 184.,26
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,NodeManagerCollector,onNodeDisconnected,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setTitle("Node disconnected.").setDescription("Node disconnected from thet network.");" is 126.,37
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,FileManagerCollector,onLocalFileDesynchronized,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setTitle("Soft-delete finished. File has been locally deleted.").setDescription(formatDescription(desync));" is 147.,75
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,FileManagerCollector,onLocalFileConfilct,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setType(ActivityType.WARNING).setTitle("Conflict detected` local version renamed.").setDescription(formatDescription(conflict));" is 168.,84
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,FileManagerCollector,onFileExecutionFailed,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setType(ActivityType.WARNING).setTitle("All attempts to handle events failed.").setDescription(formatDescription(failure));" is 163.,130
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,FileManagerCollector,onRemoteShareFolder,Long Statement,The length of the statement "String description="Received an invite for folder \"" + message.getFile().getPath() + " by user \""+ message.getInvitedBy()+ "\"";" is 130.,144
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,FileManagerCollector,onRemoteShareFolder,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setType(ActivityType.INFORMATION).setTitle("Folder sharing.").setDescription(description);" is 130.,144
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,FileManagerCollector,onLocalShareFolder,Long Statement,The length of the statement "String description="Successful sharing of own folder" + message.getFile().getPath() + " with user \""+ message.getInvitedUserPermission().getUserId();" is 150.,158
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,FileManagerCollector,onLocalShareFolder,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setType(ActivityType.INFORMATION).setTitle("Sharing complete.").setDescription(description);" is 132.,158
+Hive2Hive_PeerBox,org.peerbox.app.activity.collectors,GeneralMessageCollector,onWarningMessage,Long Statement,The length of the statement "ActivityItem item=ActivityItem.create().setTitle(message.getTitle()).setDescription(message.getDescription()).setType(ActivityType.WARNING);" is 140.,36
+Hive2Hive_PeerBox,org.peerbox.app.manager.file,FileInfoTest,testFileInfo_FileNode,Long Statement,The length of the statement "FileNode fileNode=new FileNode(null`file.toFile()`file.getFileName().toString()`HashUtil.hash("hello world".getBytes())`new HashSet<>());" is 137.,84
+Hive2Hive_PeerBox,org.peerbox.app.manager.file,FileManagerTest,testListFiles,Long Statement,The length of the statement "@SuppressWarnings("unchecked") IProcessComponent<FileNode> listFiles=(IProcessComponent<FileNode>)Mockito.mock(IProcessComponent.class);" is 136.,179
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,FileAgent,writeCache,Empty catch clause,The method has an empty catch block.,25
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,FileAgent,readCache,Empty catch clause,The method has an empty catch block.,46
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testRegister,Long Statement,The length of the statement "ResultStatus res=client.getUserManager().registerUser(userCredentials.getUserId()`userCredentials.getPassword()`userCredentials.getPin());" is 138.,65
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testAlreadyRegistered,Long Statement,The length of the statement "ResultStatus res=client.getUserManager().registerUser(userCredentials.getUserId()`userCredentials.getPassword()`userCredentials.getPin());" is 138.,93
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testLogin,Long Statement,The length of the statement "ResultStatus res=userManager.registerUser(userCredentials.getUserId()`userCredentials.getPassword()`userCredentials.getPin());" is 126.,116
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testLogin,Magic Number,The method contains a magic number: 2,116
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testNotRegisteredLogin,Long Statement,The length of the statement "ResultStatus res=userManager.loginUser(userCredentials.getUserId()`userCredentials.getPassword()`userCredentials.getPin()`root);" is 128.,141
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testLoginWrongCredentials,Long Statement,The length of the statement "ResultStatus res=userManager.registerUser(userCredentials.getUserId()`userCredentials.getPassword()`userCredentials.getPin());" is 126.,157
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testLoginWrongCredentials,Magic Number,The method contains a magic number: 2,157
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,UserManagerTest,testLogout,Magic Number,The method contains a magic number: 3,189
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,FileAgentTest,testCacheFolderNotExists,Magic Number,The method contains a magic number: 1000,45
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,FileAgentTest,testWriteRead,Magic Number,The method contains a magic number: 1000,56
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,FileAgentTest,testOverwrite,Magic Number,The method contains a magic number: 1000,100
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,FileAgentTest,testOverwrite,Magic Number,The method contains a magic number: 1000,100
+Hive2Hive_PeerBox,org.peerbox.app.manager.user,FileAgentTest,testReadWrongKey,Magic Number,The method contains a magic number: 1000,121
+Hive2Hive_PeerBox,org.peerbox.app.manager.node,NodeManagerTest,testJoinNetwork_Node_UnknownHost,Empty catch clause,The method has an empty catch block.,129
+Hive2Hive_PeerBox,org.peerbox.app.manager.node,NodeManagerTest,testLeaveNetwork_Join,Magic Number,The method contains a magic number: 2,183
+Hive2Hive_PeerBox,org.peerbox.app.manager.node,NodeManagerTest,testLeaveNetwork_Initial,Magic Number,The method contains a magic number: 2,200
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testHasApiServerPort,Magic Number,The method contains a magic number: 65536,36
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testHasApiServerPort,Magic Number,The method contains a magic number: 47325,36
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testHasApiServerPort,Magic Number,The method contains a magic number: 65535,36
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testSetApiServerPort,Magic Number,The method contains a magic number: 65536,57
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testSetApiServerPort,Magic Number,The method contains a magic number: 37824,57
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testSetApiServerPort,Magic Number,The method contains a magic number: 37824,57
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testSetApiServerPort,Magic Number,The method contains a magic number: 65535,57
+Hive2Hive_PeerBox,org.peerbox.app.config,AppConfigTest,testSetApiServerPort,Magic Number,The method contains a magic number: 65535,57
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesTest,testAddNode,Magic Number,The method contains a magic number: 2,81
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesTest,testRemoveNode,Magic Number,The method contains a magic number: 3,104
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesTest,testRemoveNode,Magic Number,The method contains a magic number: 2,104
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesTest,testClearNodes,Magic Number,The method contains a magic number: 3,124
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesFactoryTest,testCreate_Default,Magic Number,The method contains a magic number: 2,64
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesFactoryTest,testCreate_Nodes,Magic Number,The method contains a magic number: 3,76
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesFactoryTest,testLoadAndSave,Magic Number,The method contains a magic number: 4,99
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesFactoryTest,testLoadAndSave,Magic Number,The method contains a magic number: 5,99
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesFactoryTest,testLoadAndSave,Magic Number,The method contains a magic number: 5,99
+Hive2Hive_PeerBox,org.peerbox.app.config,BootstrappingNodesFactoryTest,testLoadAndSave,Magic Number,The method contains a magic number: 4,99
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,setup,Magic Number,The method contains a magic number: 7,38
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,sendEvents,Magic Number,The method contains a magic number: 5,51
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,sendEvents,Magic Number,The method contains a magic number: 4,51
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,sendEvents,Magic Number,The method contains a magic number: 2,51
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,sendEvents,Magic Number,The method contains a magic number: 3,51
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,sendEvents,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@d9a6088,51
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,testRandomFileEventAggregation,Long Statement,The length of the statement "logger.info("Expected - Added: {}` Modified: {}` Deleted: {}"`sent.getNumFilesAdded()`sent.getNumFilesModified()`sent.getNumFilesDeleted());" is 140.,90
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,testRandomFileEventAggregation,Magic Number,The method contains a magic number: 1.5,90
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,testRandomFileEventAggregation,Magic Number,The method contains a magic number: 1.1,90
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,testRandomFileEventAggregationWaitTime,Long Statement,The length of the statement "logger.info("Expected - Added: {}` Modified: {}` Deleted: {}"`sent.getNumFilesAdded()`sent.getNumFilesModified()`sent.getNumFilesDeleted());" is 140.,120
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,testRandomFileEventAggregationWaitTime,Magic Number,The method contains a magic number: 1.5,120
+Hive2Hive_PeerBox,org.peerbox.notifications,FileEventAggregatorTest,testRandomFileEventAggregationWaitTime,Magic Number,The method contains a magic number: 0.1,120
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,RemoteFileDao,tableExists,Long Statement,The length of the statement "final String sql=String.format("SELECT tbl.cnt FROM " + "(SELECT count(*) cnt FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = UPPER('%s')) as tbl"`REMOTE_FILE_TABLE);" is 168.,37
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,RemoteFileDao,createTable,Long Statement,The length of the statement "final String tableSql="CREATE TABLE IF NOT EXISTS " + REMOTE_FILE_TABLE + " ( "+ "id IDENTITY NOT NULL PRIMARY KEY auto_increment` "+ "path NVARCHAR NOT NULL UNIQUE` "+ "is_file BOOLEAN NOT NULL` "+ "content_hash NVARCHAR(64) NOT NULL` "+ "to_delete BOOLEAN NOT NULL DEFAULT(FALSE)"+ ");";" is 289.,49
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,RemoteFileDao,persistAndReplaceFileNodes,Long Statement,The length of the statement "final String insert=String.format("MERGE INTO %s (path` is_file` content_hash` to_delete) " + "KEY (path) " + "VALUES ( :path` :is_file` :content_hash` :to_delete );"`REMOTE_FILE_TABLE);" is 186.,74
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,RemoteFileDao,persistAndReplaceFileNodes,Long Statement,The length of the statement "con.createQuery(insert).addParameter("path"`node.getFile().toString()).addParameter("is_file"`node.isFile()).addParameter("content_hash"`hash).addParameter("to_delete"`false).executeUpdate();" is 191.,74
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,PeriodicFileDataPersister,stop,Magic Number,The method contains a magic number: 5,61
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,DaoUtils,dumpTableToCsv,Long Statement,The length of the statement "final String sql="CALL " + "CSVWRITE( " + String.format("'%s'` "`file.toString()) + String.format("'%s'` 'charset=UTF-8 fieldSeparator=;' "`selectQuery)+ " );";" is 160.,35
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,LocalFileDao,createTable,Long Statement,The length of the statement "final String tableSql="CREATE TABLE IF NOT EXISTS " + FILE_TABLE + " ( "+ "id IDENTITY NOT NULL PRIMARY KEY auto_increment` "+ "path NVARCHAR NOT NULL UNIQUE` "+ "is_file BOOLEAN NOT NULL` "+ "content_hash NVARCHAR(64) NOT NULL` "+ "is_synchronized BOOLEAN NOT NULL DEFAULT(false)` "+ "is_uploaded BOOLEAN NOT NULL DEFAULT(false)` "+ "current_state NVARCHAR(32)` "+ "next_state NVARCHAR(32)` "+ "to_delete BOOLEAN NOT NULL DEFAULT(false) "+ ");";" is 446.,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,LocalFileDao,getFileByPath,Long Statement,The length of the statement "return con.createQuery(sql).addParameter("path"`path.toString()).executeAndFetchFirst(new FileComponentResultSetHandler());" is 123.,69
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,LocalFileDao,persistFile,Long Statement,The length of the statement "final String sql="MERGE INTO " + FILE_TABLE + " "+ "(path` is_file` content_hash` is_synchronized` is_uploaded` current_state` next_state` to_delete) "+ "KEY(path) "+ "VALUES (:path` :is_file` :content_hash` :is_synchronized` :is_uploaded` :current_state` :next_state` :to_delete);";" is 283.,91
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,LocalFileDao,persistFile,Long Statement,The length of the statement "con.createQuery(sql).addParameter("path"`file.getPath().toString()).addParameter("is_file"`file.isFile()).addParameter("content_hash"`file.getContentHash()).addParameter("is_synchronized"`file.isSynchronized()).addParameter("is_uploaded"`file.isUploaded()).addParameter("current_state"`file.getAction().getCurrentState().getStateType().toString()).addParameter("next_state"`file.getAction().getNextState().getStateType().toString()).addParameter("to_delete"`false).executeUpdate();" is 481.,91
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,LocalFileDao,persistAndReplaceFileComponents,Long Statement,The length of the statement "final String sql="MERGE INTO " + FILE_TABLE + " "+ "(path` is_file` content_hash` is_synchronized` is_uploaded` current_state` next_state` to_delete) "+ "KEY(path) "+ "VALUES (:path` :is_file` :content_hash` :is_synchronized` :is_uploaded` :current_state` :next_state` :to_delete);";" is 283.,116
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.persistency,LocalFileDao,persistAndReplaceFileComponents,Long Statement,The length of the statement "con.createQuery(sql).addParameter("path"`file.getPath().toString()).addParameter("is_file"`file.isFile()).addParameter("content_hash"`file.getContentHash()).addParameter("is_synchronized"`file.isSynchronized()).addParameter("is_uploaded"`file.isUploaded()).addParameter("current_state"`file.getAction().getCurrentState().getStateType().toString()).addParameter("next_state"`file.getAction().getNextState().getStateType().toString()).addParameter("to_delete"`false).executeUpdate();" is 481.,116
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.composite,FolderComposite,toString,Long Statement,The length of the statement "String s=String.format("Folder[path(%s)` contentHash(%s)` structureHash(%s)` isUploaded(%s)` isSynchronized(%s)` children(%s)]"`getPath()`getContentHash()`getStructureHash()`isUploaded()`isSynchronized()`children);" is 214.,326
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.composite,FileLeaf,isReady,Long Statement,The length of the statement "logger.trace("this should not occur: A file being checked for readyness without a parent is invalid` as it is not in the filetree.");" is 133.,43
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree.composite,FileLeaf,toString,Long Statement,The length of the statement "String s=String.format("File[path(%s)` contentHash(%s)` isUploaded(%s)` isSynchronized(%s)]"`getPath()`getContentHash()`isUploaded()`isSynchronized());" is 151.,52
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileTreeInitializer,initialize,Complex Method,Cyclomatic complexity of the method is 11,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileTreeInitializer,initialize,Long Statement,The length of the statement "fileList=fileList.stream().filter(node -> node.getFile().toPath().startsWith(topLevel)).sorted(new Comparator<FileNode>(){" is 122.,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileTreeInitializer,initialize,Long Statement,The length of the statement "List<FileComponent> subtreeList=tree.asList().stream().filter(node -> node.getPath().startsWith(topLevel)).sorted(new Comparator<FileComponent>(){" is 146.,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileLeafTest,setUp,Magic Number,The method contains a magic number: 1000,70
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileLeafTest,testGetAndUpdateContentHash,Magic Number,The method contains a magic number: 10,163
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileLeafTest,testGetAndUpdateContentHash,Magic Number,The method contains a magic number: 1000,163
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileLeafTest,testGetAndUpdateContentHash,Magic Number,The method contains a magic number: 1000,163
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileLeafTest,testGetAndUpdateContentHash,Magic Number,The method contains a magic number: 10,163
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileLeafTest,testBubbleContentHashUpdate,Magic Number,The method contains a magic number: 1000,191
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FolderCompositeTest,createFile,Magic Number,The method contains a magic number: 1000,69
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,setUp,Magic Number,The method contains a magic number: 12,34
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,setUp,Magic Number,The method contains a magic number: 12,34
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,testDao,Magic Number,The method contains a magic number: 10,57
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,testDao,Magic Number,The method contains a magic number: 8,57
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,testDao,Magic Number,The method contains a magic number: 5,57
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,testDao,Magic Number,The method contains a magic number: 3,57
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,testDao,Magic Number,The method contains a magic number: 12,57
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,testDao,Magic Number,The method contains a magic number: 1000,57
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,createNodeList,Magic Number,The method contains a magic number: 12,133
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,RemoteFileDaoTest,createNodeList,Magic Number,The method contains a magic number: 2,133
+Hive2Hive_PeerBox,org.peerbox.watchservice.filetree,FileComponentTest,setContentHashByReflection,Long Statement,The length of the statement "catch ( NoSuchMethodException|SecurityException|IllegalAccessException|IllegalArgumentException|InvocationTargetException e) {" is 126.,168
+Hive2Hive_PeerBox,org.peerbox.watchservice,Action,handleLocalUpdateEvent,Long Statement,The length of the statement "logger.trace("A LocalUpdateEvent occured in LocalMoveState for file {}." + " Even though the Action is not yet executing` we apply the event" + "to the next state."`getFile().getPath());" is 186.,135
+Hive2Hive_PeerBox,org.peerbox.watchservice,Action,onSucceeded,Long Statement,The length of the statement "logger.trace("onSucceeded: File {} - Switch state from {} to {}"`getFile().getPath()`getCurrentStateName()`getNextStateName());" is 127.,535
+Hive2Hive_PeerBox,org.peerbox.watchservice,Action,acquireLock,Long Statement,The length of the statement "logger.trace("File {} with ID {}: Wait for own lock at t={} in State {}"`getFile().getPath()`getFile().hashCode()`System.currentTimeMillis()`getCurrentState().getStateType());" is 175.,577
+Hive2Hive_PeerBox,org.peerbox.watchservice,Action,acquireLock,Long Statement,The length of the statement "logger.trace("File {} with ID {}: Received own lock at t={} in State {}"`getFile().getPath()`getFile().hashCode()`System.currentTimeMillis()`getCurrentState().getStateType());" is 175.,577
+Hive2Hive_PeerBox,org.peerbox.watchservice,Action,releaseLock,Long Statement,The length of the statement "logger.trace("File {} with ID {}: Released own lock at t={} in State {}"`getFile().getPath()`getFile().hashCode()`System.currentTimeMillis()`getCurrentState().getStateType());" is 175.,585
+Hive2Hive_PeerBox,org.peerbox.watchservice,Action,toString,Long Statement,The length of the statement "return String.format("Action[currentState(%s)` nextState(%s)` isExecuting(%s)` changedWhileExecuted(%s)` executionAttempts(%d)`]"`getCurrentStateName()`getNextStateName()`isExecuting()`changedWhileExecuted`executionAttempts);" is 225.,720
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,start,Long Statement,The length of the statement "throw new IllegalStateException(String.format("Calling start() is not allowed when action executor is already running " + "(executorThread=%s` asyncHandlesThread=%s)"`executorThread`asyncHandlesThread));" is 203.,118
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,processActions,Complex Method,Cyclomatic complexity of the method is 9,152
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,calculateWaitTime,Magic Number,The method contains a magic number: 500L,283
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,calculateWaitTime,Magic Number,The method contains a magic number: 500L,283
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,removeComponentFromSetMultimap,Complex Method,Cyclomatic complexity of the method is 9,361
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,removeComponentFromSetMultimap,Long Statement,The length of the statement "if (System.currentTimeMillis() - candidate.getAction().getTimestamp() > peerWaspConfig.getLongAggregationIntervalInMillis()) {" is 126.,361
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,removeComponentFromSetMultimap,Long Statement,The length of the statement "if (System.currentTimeMillis() - candidate.getAction().getTimestamp() > peerWaspConfig.getAggregationIntervalInMillis()) {" is 122.,361
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,onActionExecuteSucceeded,Long Statement,The length of the statement "logger.trace("File: {} changed during the execution process to state {}. " + "Put back into the queue"`file.getPath()`action.getCurrentStateName());" is 148.,414
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,handleErrorDefault,Long Statement,The length of the statement "logger.trace("Default Error Handling: Re-initiate execution - {} - {} - attempt({})."`path`action.getCurrentStateName()`action.getExecutionAttempts());" is 151.,472
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionExecutor,handleErrorDefault,Long Statement,The length of the statement "fileEventManager.getMessageBus().post(new InformationNotification("Synchronization error "`"Operation on " + path + " failed")).now();" is 134.,472
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManager,onFileShare,Long Statement,The length of the statement "sb.append("User ").append(invitedBy).append(" shared the folder ").append(fileEvent.getFile().toPath()).append(" with you.");" is 125.,416
+Hive2Hive_PeerBox,org.peerbox.watchservice,PathUtils,computeFileContentHash,Magic Number,The method contains a magic number: 3,21
+Hive2Hive_PeerBox,org.peerbox.watchservice,PathUtils,computeFileContentHash,Magic Number,The method contains a magic number: 3000,21
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionQueueTest,testAddAndTake_Order,Magic Number,The method contains a magic number: 10,40
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionQueueTest,testAddAndTake_Order,Magic Number,The method contains a magic number: 100,40
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionQueueTest,testAddAndTake_Order,Magic Number,The method contains a magic number: 10,40
+Hive2Hive_PeerBox,org.peerbox.watchservice,ActionQueueTest,testSize,Magic Number,The method contains a magic number: 2,89
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testAddFileInNewFolderEvent,Magic Number,The method contains a magic number: 100,259
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testFolderDelete,Magic Number,The method contains a magic number: 200,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testFolderMoveEvent,Magic Number,The method contains a magic number: 200,314
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testFolderRenameEvent,Magic Number,The method contains a magic number: 200,330
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testFolderCopyEvent,Magic Number,The method contains a magic number: 200,344
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testHighLoad,Magic Number,The method contains a magic number: 10000,362
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndEmptyFiles,Long Statement,The length of the statement "Mockito.verify(fileEventListener`Mockito.times(numFolders + numFolders * numFilesPerFolder)).onLocalFileCreated(anyObject());" is 125.,376
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndEmptyFiles,Magic Number,The method contains a magic number: 10,376
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndEmptyFiles,Magic Number,The method contains a magic number: 100,376
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndEmptyFiles,Magic Number,The method contains a magic number: 100,376
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyEmptyFiles,Long Statement,The length of the statement "Mockito.verify(fileEventListener`Mockito.times(numFolders + numFolders * numFilesPerFolder)).onLocalFileCreated(anyObject());" is 125.,399
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyEmptyFiles,Magic Number,The method contains a magic number: 10,399
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyEmptyFiles,Magic Number,The method contains a magic number: 100,399
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyEmptyFiles,Magic Number,The method contains a magic number: 100,399
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndSmallFiles,Long Statement,The length of the statement "Mockito.verify(fileEventListener`Mockito.times(numFolders + numFolders * numFilesPerFolder)).onLocalFileCreated(anyObject());" is 125.,421
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndSmallFiles,Magic Number,The method contains a magic number: 10,421
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndSmallFiles,Magic Number,The method contains a magic number: 100,421
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManyFoldersAndSmallFiles,Magic Number,The method contains a magic number: 50,421
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManySmallFiles,Long Statement,The length of the statement "Mockito.verify(fileEventListener`Mockito.times(numFolders + numFolders * numFilesPerFolder)).onLocalFileCreated(anyObject());" is 125.,444
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManySmallFiles,Magic Number,The method contains a magic number: 10,444
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManySmallFiles,Magic Number,The method contains a magic number: 100,444
+Hive2Hive_PeerBox,org.peerbox.watchservice,FolderWatchServiceTest,testManySmallFiles,Magic Number,The method contains a magic number: 100,444
+Hive2Hive_PeerBox,org.peerbox.watchservice,PathUtilsTest,testComputeFileContentHash,Magic Number,The method contains a magic number: 24,20
+Hive2Hive_PeerBox,org.peerbox.watchservice,PathUtilsTest,testComputeFileContentHash_EmptyFile,Magic Number,The method contains a magic number: 24,45
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,cleanFolder,Magic Number,The method contains a magic number: 500,77
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,sleep,Magic Number,The method contains a magic number: 2,84
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testManySimultaneousEvents,Magic Number,The method contains a magic number: 5,323
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testManySimultaneousEvents,Magic Number,The method contains a magic number: 50,323
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testManySimultaneousEvents,Magic Number,The method contains a magic number: 200,323
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testManySimultaneousEvents,Magic Number,The method contains a magic number: 1000,323
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testManySimultaneousEvents,Magic Number,The method contains a magic number: 15,323
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testManySimultaneousEvents,Magic Number,The method contains a magic number: 15,323
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,createManyFiles,Magic Number,The method contains a magic number: 1000,386
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,createManyFiles,Magic Number,The method contains a magic number: 5,386
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testCopyFolder,Magic Number,The method contains a magic number: 100,410
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testCopyFolder,Magic Number,The method contains a magic number: 2,410
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testCreateManyFiles,Magic Number,The method contains a magic number: 1000,461
+Hive2Hive_PeerBox,org.peerbox.watchservice,NativeFolderWatchServiceTest,testCreateManyFiles,Magic Number,The method contains a magic number: 9,461
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileCreatedTest,Magic Number,The method contains a magic number: 2,101
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileCreatedTest,Magic Number,The method contains a magic number: 200,101
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileCreatedTest,Magic Number,The method contains a magic number: 2,101
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 7,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 2,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 7,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 8,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 2,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 8,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 2,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,fromDeleteToMoveTest,Magic Number,The method contains a magic number: 8,141
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileDeletedTest,Magic Number,The method contains a magic number: 2,183
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileDeletedTest,Magic Number,The method contains a magic number: 200,183
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileDeletedTest,Magic Number,The method contains a magic number: 5,183
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 2,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 50,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 2,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 50,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 2,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 2,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 200,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,onFileModifiedTest,Magic Number,The method contains a magic number: 5,238
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 50,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 50,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 10,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 200,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 10,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 50,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 10,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 10,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 10,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 2,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 3,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,multipleFilesTest,Magic Number,The method contains a magic number: 5,301
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,deleteFile,Magic Number,The method contains a magic number: 200,433
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,deleteFile,Magic Number,The method contains a magic number: 10,433
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 4,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 10,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 4,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 4,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 10,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 5,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 2,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 4,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 5,441
+Hive2Hive_PeerBox,org.peerbox.watchservice,FileEventManagerTest,createOnLocalMove,Magic Number,The method contains a magic number: 5,441
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,LocalHardDeleteState,getDefaultState,Long Statement,The length of the statement "logger.debug("Return to default state 'InitialState' as component was removed completely {}"`action.getFile().getPath());" is 121.,35
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,LocalHardDeleteState,handleRemoteMove,Long Statement,The length of the statement "logger.info("The file which was locally deleted has been moved remotely. RemoteCreate at destination" + "of move operation initiated to download the file: {}"`path);" is 165.,97
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,RemoteCreateState,handleRemoteMove,Long Statement,The length of the statement "logger.info("The file which was remotely moved after it has been " + "remotely created. RemoteCreate at destination" + "of move operation initiated to download the file: {}"`path);" is 180.,85
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,LocalMoveState,execute,Long Statement,The length of the statement "handle.getProcess().attachListener(new LocalFileMoveListener(sourceFile`destFile`action.getFileEventManager().getMessageBus()));" is 128.,40
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,RemoteUpdateState,handleRemoteMove,Long Statement,The length of the statement "logger.info("The file which was remotely moved after it has been " + "remotely updated. RemoteUpdate at destination" + "of move operation initiated to download the file: {}"`path);" is 180.,97
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,InitialState,addComponentToMoveTargetCandidates,Long Statement,The length of the statement "SetMultimap<String`FileComponent> createdByContentHash=action.getFileEventManager().getFileTree().getCreatedByContentHash();" is 124.,103
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,InitialState,addComponentToMoveTargetCandidates,Long Statement,The length of the statement "SetMultimap<String`FolderComposite> createdByStructureHash=action.getFileEventManager().getFileTree().getCreatedByStructureHash();" is 130.,103
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,InitialState,updateSoftDeletedFileComponent,Long Statement,The length of the statement "action.getFileEventManager().getMessageBus().publish(new FileExecutionSucceededMessage(fileHelper`file.getAction().getCurrentState().getStateType()));" is 150.,125
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,InitialState,moveFile,Long Statement,The length of the statement "logger.trace("InitialState.handleLocalDelete: IsRemoved for file {} with hash {}: {}"`action.getFile().getPath()`contentHash`isRemoved);" is 136.,140
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,InitialState,moveFolder,Long Statement,The length of the statement "SetMultimap<String`FolderComposite> createdByStructureHash=action.getFileEventManager().getFileTree().getCreatedByStructureHash();" is 130.,167
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,InitialState,moveFolder,Long Statement,The length of the statement "createdByStructureHash.get(((FolderComposite)action.getFile()).getStructureHash()).remove((FolderComposite)action.getFile());" is 125.,167
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,AbstractActionState,putToFolderMoveSources,Long Statement,The length of the statement "logger.trace("Delete folder: put folder {} with structure hash {} to deleted folders."`file.getPath()`file.getStructureHash());" is 127.,213
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,AbstractActionState,putToFileMoveSources,Long Statement,The length of the statement "logger.debug("Put deleted file {} with hash {} to SetMultimap<String` FileComponent>"`file.getPath()`file.getContentHash());" is 124.,220
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,AbstractActionState,performSwappedMove,Long Statement,The length of the statement "logger.trace("We observed a swapped folder move (deletion of source file " + "was reported after creation of target file: {} -> {}"`action.getFile().getPath()`moveTarget.getPath());" is 181.,228
+Hive2Hive_PeerBox,org.peerbox.watchservice.states,AbstractActionState,logStateTransition,Long Statement,The length of the statement "logger.debug("STATE_TRANSITION for file {}: {} + {} --> {}"`action.getFile().getPath()`stateBefore.getName()`event.getString()`stateAfter.getName());" is 149.,238
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationService,canNavigateBack,Magic Number,The method contains a magic number: 2,135
+Hive2Hive_PeerBox,org.peerbox.presenter,RegisterController,validateAll,Long Statement,The length of the statement "return (usernameValidator.validate(true) == ValidationResult.OK & passwordValidator.validate() == ValidationResult.OK & pinValidator.validate() == ValidationResult.OK) ? ValidationResult.OK : ValidationResult.ERROR;" is 215.,134
+Hive2Hive_PeerBox,org.peerbox.presenter,RegisterController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,256
+Hive2Hive_PeerBox,org.peerbox.presenter,RegisterController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,256
+Hive2Hive_PeerBox,org.peerbox.presenter,RegisterController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,256
+Hive2Hive_PeerBox,org.peerbox.presenter,RegisterController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,256
+Hive2Hive_PeerBox,org.peerbox.presenter,JoinNetworkController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,116
+Hive2Hive_PeerBox,org.peerbox.presenter,JoinNetworkController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,116
+Hive2Hive_PeerBox,org.peerbox.presenter,JoinNetworkController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,116
+Hive2Hive_PeerBox,org.peerbox.presenter,JoinNetworkController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,116
+Hive2Hive_PeerBox,org.peerbox.presenter,LoginController,validateAll,Long Statement,The length of the statement "return (usernameValidator.validate() == ValidationResult.OK & passwordValidator.validate() == ValidationResult.OK & pinValidator.validate() == ValidationResult.OK & pathValidator.validate() == ValidationResult.OK) ? ValidationResult.OK : ValidationResult.ERROR;" is 261.,205
+Hive2Hive_PeerBox,org.peerbox.presenter,LoginController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,346
+Hive2Hive_PeerBox,org.peerbox.presenter,LoginController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,346
+Hive2Hive_PeerBox,org.peerbox.presenter,LoginController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,346
+Hive2Hive_PeerBox,org.peerbox.presenter,LoginController,installProgressIndicator,Magic Number,The method contains a magic number: 2.0,346
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,setupNavigationService,Magic Number,The method contains a magic number: 2,63
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,setupNavigationService,Magic Number,The method contains a magic number: 3,63
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,createPages,Long Statement,The length of the statement "elements=new Label[]{new Label("testpage1.fxml")`new Label("testpage2.fxml")`new Label("testpage3.fxml")`new Label("testpage4.fxml")};" is 134.,85
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigate,Magic Number,The method contains a magic number: 2,122
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigate,Magic Number,The method contains a magic number: 2,122
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigate,Magic Number,The method contains a magic number: 3,122
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigate,Magic Number,The method contains a magic number: 2,122
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigate,Magic Number,The method contains a magic number: 3,122
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigate,Magic Number,The method contains a magic number: 2,122
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigate,Magic Number,The method contains a magic number: 2,122
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testNavigateBack,Magic Number,The method contains a magic number: 2,178
+Hive2Hive_PeerBox,org.peerbox.presenter,NavigationServiceTest,testClearPages,Magic Number,The method contains a magic number: 3,231
+Hive2Hive_PeerBox,org.peerbox.presenter.settings,Network,swapBootstrapingNodes,Complex Conditional,The conditional expression indexCurrent >= 0 && indexCurrent < size && indexNew >= 0 && indexNew < size is complex.,156
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,SyncTreeItem,propertyChange,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1c7735ce,88
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,SyncTreeItem,initializeProgressStateProperty,Long Statement,The length of the statement "@Override public void changed( ObservableValue<? extends ProgressState> arg0` ProgressState oldValue` ProgressState newValue){" is 126.,144
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,SyncTreeItem,handleProgressStateChange,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2b01a6ed,174
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,SyncTreeItem,handleWhenDefault,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6c422da2,199
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,SyncTreeItem,handleWhenSuccessful,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@32828e82,208
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,SyncTreeItem,handleWhenInProgress,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@177e0459,217
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,SyncTreeItem,getIconByProgressState,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@316eee95,257
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,Synchronization,Synchronization,Long Parameter List,The method has 6 parameters. ,103
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,Synchronization,onExecutionSucceeds,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4cbcea27,270
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,Synchronization,createTreeView,Long Statement,The length of the statement "return new CustomizedTreeCell(getFileEventManager()`recoverFileHandlerProvider`shareFolderHandlerProvider`forceSyncHandlerProvider);" is 132.,493
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,Synchronization,call,Long Statement,The length of the statement "return new CustomizedTreeCell(getFileEventManager()`recoverFileHandlerProvider`shareFolderHandlerProvider`forceSyncHandlerProvider);" is 132.,501
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,Synchronization,addChildrensToTreeView,Long Statement,The length of the statement "List<FileNode> sortedChildren=fileNode.getChildren().stream().sorted((f1`f2) -> f1.getFile().compareTo(f2.getFile())).collect(Collectors.<FileNode>toList());" is 157.,516
+Hive2Hive_PeerBox,org.peerbox.presenter.settings.synchronization,Synchronization,addChildrensToTreeView,Long Statement,The length of the statement "SyncTreeItem item=createItem(topLevelNode.getFile().toPath()`isSynched`topLevelNode.isFile()`topLevelNode.getUserPermissions());" is 128.,516
+Hive2Hive_PeerBox,org.peerbox.share,ShareFolderStarter,initNetwork,Magic Number,The method contains a magic number: 2,76
+Hive2Hive_PeerBox,org.peerbox.share,ShareFolderStarter,initNetwork,Magic Number,The method contains a magic number: 3,76
+Hive2Hive_PeerBox,org.peerbox.share,ShareFolderStarter,initFiles,Magic Number,The method contains a magic number: 512,101
+Hive2Hive_PeerBox,org.peerbox.share,ShareFolderStarter,initFiles,Magic Number,The method contains a magic number: 1024,101
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileRecoveryHandler,checkPreconditions,Complex Method,Cyclomatic complexity of the method is 8,52
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileVersionSelectorTest,uploadVersions,Magic Number,The method contains a magic number: 10,82
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileVersionSelectorTest,uploadVersions,Magic Number,The method contains a magic number: 2000,82
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileVersionSelectorTest,uploadVersions,Magic Number,The method contains a magic number: 10,82
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileVersionSelectorTest,recoverVersion,Long Statement,The length of the statement "logger.info("Version {}:\n\tExpected content: {}... \n\tRecovered content: {}..."`version`expected.substring(0`10)`recovered.substring(0`10));" is 142.,117
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileVersionSelectorTest,recoverVersion,Magic Number,The method contains a magic number: 10,117
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileVersionSelectorTest,recoverVersion,Magic Number,The method contains a magic number: 10,117
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileVersionSelectorTest,testCancelBeforeSelect,Long Statement,The length of the statement "IProcessComponent<Void> p=client.getFileManager().createRecoverProcess(file`versionSelectorListener.getFileVersionSelector());" is 126.,158
+Hive2Hive_PeerBox,org.peerbox.filerecovery,FileRecoveryStarter,uploadFileVersions,Magic Number,The method contains a magic number: 2000,98
+Hive2Hive_PeerBox,org.peerbox.guice,GuiceFxmlLoaderTest,testCreateLoginViewDependencies,Long Statement,The length of the statement "Injector injector=Guice.createInjector(new AppModule(Mockito.mock(Stage.class))`new AppConfigModule()`new ApiServerModule());" is 125.,50
+Hive2Hive_PeerBox,org.peerbox.view.tray,JSystemTray,onSynchronizationErrorResolved,Long Statement,The length of the statement "logger.trace("All failed operations successfully resolved. If the application is idle` " + "the success icon is shown.");" is 121.,251
+Hive2Hive_PeerBox,org.peerbox.view.tray,JTrayIcons,initSize,Complex Conditional,The conditional expression trayDim == null || trayDim.getWidth() < 1.0 || trayDim.getWidth() < 1.0 is complex.,40
+Hive2Hive_PeerBox,org.peerbox.view.tray,JTrayIcons,initSize,Magic Number,The method contains a magic number: 24.0,40
+Hive2Hive_PeerBox,org.peerbox.view.tray,JTrayIcons,initSize,Magic Number,The method contains a magic number: 24.0,40
+Hive2Hive_PeerBox,org.peerbox.forcesync,ForceSyncHandler,forceSync,Long Statement,The length of the statement "appContext.getMessageBus().publish(new InformationNotification("Forced synchronization complete"`"Possible inconsistencies should be resolved now."));" is 150.,21
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && eRemoteDb && eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && eRemoteDb && eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && eRemoteDb && !eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && eRemoteDb && !eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && !eRemoteDb && eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && !eRemoteDb && eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && !eRemoteDb && !eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression eRemoteNetwork && !eRemoteDb && !eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && eRemoteDb && eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && eRemoteDb && eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && eRemoteDb && !eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && eRemoteDb && !eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && !eRemoteDb && eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && !eRemoteDb && eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && !eRemoteDb && !eLocalDb&& eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Conditional,The conditional expression !eRemoteNetwork && !eRemoteDb && !eLocalDb&& !eLocalDisk is complex.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Complex Method,Cyclomatic complexity of the method is 31,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Long Method,The method has 118 lines of code.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,ListSync,synchronize,Long Statement,The length of the statement "allFiles=allFiles.stream().filter(file -> file.startsWith(topLevel)).collect(Collectors.toCollection(() -> new TreeSet<Path>()));" is 129.,84
+Hive2Hive_PeerBox,org.peerbox.forcesync,RemoteDeleteLocalExists,testRemoteDeleteLocalExists_Folder_NoNewFile,Magic Number,The method contains a magic number: 2,40
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedAddDelete,data,Magic Number,The method contains a magic number: 20,21
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedAddDelete,singleFileInManyFoldersTest,Magic Number,The method contains a magic number: 100,26
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedAddDelete,singleFileInManyFoldersTest,Magic Number,The method contains a magic number: 2,26
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedAddDelete,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,36
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedAddDelete,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,36
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedUpdate,data,Magic Number,The method contains a magic number: 30,23
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedUpdate,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,28
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedUpdate,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,28
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedUpdate,singleFileInManyFoldersTest,Magic Number,The method contains a magic number: 20,40
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,RepeatedUpdate,updateManyFiles,Magic Number,The method contains a magic number: 2,52
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Recover,recoverLastVersionTest,Magic Number,The method contains a magic number: 10,15
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Recover,recoverLastVersionTest,Magic Number,The method contains a magic number: 10,15
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Recover,recoverLastVersionTest,Magic Number,The method contains a magic number: 30,15
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,EnhancedMove,data,Magic Number,The method contains a magic number: 10,18
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,EnhancedMove,manyNonEmptyFolderMoveTest,Magic Number,The method contains a magic number: 10000,23
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,EnhancedMove,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,EnhancedMove,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,EnhancedMove,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,EnhancedMove,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,33
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileMoveTest,Magic Number,The method contains a magic number: 2,20
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileMoveTest,Magic Number,The method contains a magic number: 2,20
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileMoveWhileUploadTest,Magic Number,The method contains a magic number: 4,35
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileMoveWhileUploadTest,Magic Number,The method contains a magic number: 1000,35
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileMoveWhileUploadTest,Magic Number,The method contains a magic number: 2,35
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileDoubleMoveTest,Magic Number,The method contains a magic number: 2,45
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileDoubleMoveTest,Magic Number,The method contains a magic number: 2,45
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileDoubleMoveTest,Magic Number,The method contains a magic number: 2,45
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileDoubleMoveRemoteTest,Magic Number,The method contains a magic number: 2,58
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileDoubleMoveRemoteTest,Magic Number,The method contains a magic number: 2,58
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFileDoubleMoveRemoteTest,Magic Number,The method contains a magic number: 2,58
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,severalFilesMoveTest,Magic Number,The method contains a magic number: 20,78
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,severalFilesMoveTest,Magic Number,The method contains a magic number: 21,78
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,severalFilesMoveTest,Magic Number,The method contains a magic number: 10,78
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,severalFilesMoveTest,Magic Number,The method contains a magic number: 21,78
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyFilesMoveTest,Magic Number,The method contains a magic number: 100,88
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyFilesMoveTest,Magic Number,The method contains a magic number: 101,88
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyFilesMoveTest,Magic Number,The method contains a magic number: 50,88
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyFilesMoveTest,Magic Number,The method contains a magic number: 101,88
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleEmptyFolderMoveTest,Magic Number,The method contains a magic number: 2,98
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleEmptyFolderMoveTest,Magic Number,The method contains a magic number: 2,98
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleEmptyFolderMoveTest,Magic Number,The method contains a magic number: 2,98
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleNonEmptyFolderMoveTest,Magic Number,The method contains a magic number: 2,107
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleNonEmptyFolderMoveTest,Magic Number,The method contains a magic number: 3,107
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleNonEmptyFolderMoveTest,Magic Number,The method contains a magic number: 3,107
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFolderWithDesyncedFileMoveTest,Magic Number,The method contains a magic number: 2,118
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,singleFolderWithDesyncedFileMoveTest,Magic Number,The method contains a magic number: 4,118
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyEmptyFolderMoveTest,Magic Number,The method contains a magic number: 10,138
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,169
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,169
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,169
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,manyNonEmptyFolderMoveTestFunc,Magic Number,The method contains a magic number: 10,169
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,localUpdateOnLocalMoveTest,Magic Number,The method contains a magic number: 2,194
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,localUpdateOnLocalMoveTest,Magic Number,The method contains a magic number: 2,194
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,localUpdateOnRemoteMoveTest,Long Statement,The length of the statement "Path dstOnClient=Paths.get(clientRootPath + File.separator + folder.getFileName()+ File.separator+ srcFile.getFileName());" is 122.,205
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,localUpdateOnRemoteMoveTest,Magic Number,The method contains a magic number: 2,205
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Move,localUpdateOnRemoteMoveTest,Magic Number,The method contains a magic number: 200,205
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesTest,Magic Number,The method contains a magic number: 100,39
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,singleFileInFolderTest,Magic Number,The method contains a magic number: 2,49
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,singleFileInFolderTest,Magic Number,The method contains a magic number: 2,49
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesInFolderTest,Magic Number,The method contains a magic number: 100,58
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesInFolderTest,Magic Number,The method contains a magic number: 101,58
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesInFolderTest,Magic Number,The method contains a magic number: 101,58
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,67
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,67
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,67
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,67
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,Update,updateManyFiles,Magic Number,The method contains a magic number: 2,80
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,localCreateRemoteCreateTest,Magic Number,The method contains a magic number: 2,17
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,localCreateRemoteCreateTest,Magic Number,The method contains a magic number: 2,17
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,localUpdateRemoteUpdateTest,Magic Number,The method contains a magic number: 2,30
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,localUpdateRemoteUpdateTest,Magic Number,The method contains a magic number: 10000,30
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,localUpdateRemoteUpdateTest,Magic Number,The method contains a magic number: 2,30
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,remoteCreateLocalCreateTest,Magic Number,The method contains a magic number: 3,43
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,remoteCreateLocalCreateTest,Magic Number,The method contains a magic number: 2,43
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,remoteCreateLocalCreateTest,Magic Number,The method contains a magic number: 2,43
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,remoteUpdateLocalUpdateTest,Magic Number,The method contains a magic number: 3,56
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,remoteUpdateLocalUpdateTest,Magic Number,The method contains a magic number: 2,56
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,remoteUpdateLocalUpdateTest,Magic Number,The method contains a magic number: 10000,56
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,remoteUpdateLocalUpdateTest,Magic Number,The method contains a magic number: 2,56
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,LocalUpdate_RemoteUpdateTest,Long Statement,The length of the statement "Path pathClient0=Paths.get(homeDir + File.separator + "PeerWasp_Test"+ File.separator+ "client-0"+ File.separator+ "test.txt");" is 127.,69
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,LocalUpdate_RemoteUpdateTest,Long Statement,The length of the statement "Path pathClient1=Paths.get(homeDir + File.separator + "PeerWasp_Test"+ File.separator+ "client-1"+ File.separator+ "test.txt");" is 127.,69
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,LocalUpdate_RemoteUpdateTest,Magic Number,The method contains a magic number: 5000,69
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,LocalUpdate_RemoteUpdateTest,Magic Number,The method contains a magic number: 2000,69
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,ConflictTest,LocalUpdate_RemoteUpdateTest,Magic Number,The method contains a magic number: 10000,69
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,addFiles,Magic Number,The method contains a magic number: 100,131
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,addFiles,Magic Number,The method contains a magic number: 100,138
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,updateSingleFile,Magic Number,The method contains a magic number: 100000,200
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,deleteFileOnClient,Magic Number,The method contains a magic number: 2,243
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,deleteFileOnClient,Magic Number,The method contains a magic number: 10,243
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,assertSetMultimapsAreEmpty,Long Statement,The length of the statement "for ( Map.Entry<String`FileComponent> entry : fileTree.getCreatedByContentHash().entries()) logger.trace("Created file left: {}"`entry.getValue().getPath());" is 157.,468
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,assertSetMultimapsAreEmpty,Long Statement,The length of the statement "for ( Map.Entry<String`FileComponent> entry : fileTree.getDeletedByContentHash().entries()) logger.trace("Deleted file left: {}"`entry.getValue().getPath());" is 157.,468
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,assertSetMultimapsAreEmpty,Long Statement,The length of the statement "for ( Map.Entry<String`FolderComposite> entry : fileTree.getCreatedByStructureHash().entries()) logger.trace("Created folder left: {}"`entry.getValue().getPath());" is 163.,468
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,assertSetMultimapsAreEmpty,Long Statement,The length of the statement "for ( Map.Entry<String`FolderComposite> entry : fileTree.getDeletedByStructureHash().entries()) logger.trace("Deleted file left: {}"`entry.getValue().getPath());" is 161.,468
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,FileIntegrationTest,compareContentByPaths,Long Statement,The length of the statement "logger.error("Different path: {} ({}) <-> {} ({})"`thisPath`Files.exists(thisPath) ? "exists" : "not exists"`otherPath`Files.exists(otherPath) ? "exists" : "not exists");" is 170.,518
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,manyFoldersTest,Magic Number,The method contains a magic number: 20,46
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,singleFolderInFolderTest,Magic Number,The method contains a magic number: 2,61
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,manyFoldersInFolderTest,Magic Number,The method contains a magic number: 20,75
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,singleLargeFileTest,Magic Number,The method contains a magic number: 1024,104
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,manyFilesTest,Magic Number,The method contains a magic number: 100,118
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,manyFilesStressTest,Magic Number,The method contains a magic number: 1000,129
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,singleFileInFolderTest,Magic Number,The method contains a magic number: 2,141
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,manyFilesInFolderTest,Magic Number,The method contains a magic number: 20,156
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,172
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,manyFilesInManyFoldersTest,Magic Number,The method contains a magic number: 10,172
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,singleFileInManyFoldersTest,Magic Number,The method contains a magic number: 100,189
+Hive2Hive_PeerBox,org.peerbox.watchservice.integration,AddDelete,singleFileInManyFoldersTest,Magic Number,The method contains a magic number: 2,189
+Hive2Hive_PeerBox,org.peerbox.client,ClientStarter,parseArguments,Complex Method,Cyclomatic complexity of the method is 8,45
+Hive2Hive_PeerBox,org.peerbox.client,ClientStarter,parseArguments,Magic Number,The method contains a magic number: 3,45
+Hive2Hive_PeerBox,org.peerbox.client,ClientStarter,parseArguments,Magic Number,The method contains a magic number: 2,45
+Hive2Hive_PeerBox,org.peerbox.client,ClientStarter,parseArguments,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6aec8bac,45
+Hive2Hive_PeerBox,org.peerbox.testutils,WatchServiceTestHelpers,getRandomCharacter,Magic Number,The method contains a magic number: 26,17
+Hive2Hive_PeerBox,org.peerbox.testutils,FileTestUtils,recreateRandomFile,Magic Number,The method contains a magic number: 100,54

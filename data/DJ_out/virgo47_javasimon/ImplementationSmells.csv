@@ -1,0 +1,950 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+virgo47_javasimon,org.javasimon.examples.jdbc,JdbcExample,printResults,Long Statement,The length of the statement "System.out.printf("%6d %-20s %-20s %s\n"`resultSet.getInt("id")`resultSet.getString("stopwatch")`SDF.format(resultSet.getTimestamp("start"))`SimonUtils.presentNanoTime(resultSet.getLong("nanos")));" is 197.,56
+virgo47_javasimon,org.javasimon.examples.jdbc,JdbcExample,startInsertSelectThread,Long Statement,The length of the statement "try (PreparedStatement statement=connection.prepareStatement("INSERT INTO events (stopwatch` start` nanos) VALUES (?`?`?)")){" is 125.,73
+virgo47_javasimon,org.javasimon.examples.jdbc,JdbcExample,startInsertSelectThread,Magic Number,The method contains a magic number: 3000,73
+virgo47_javasimon,org.javasimon.examples.jdbc,JdbcExample,startInsertSelectThread,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.examples.jdbc,JdbcExample,startInsertSelectThread,Magic Number,The method contains a magic number: 3,73
+virgo47_javasimon,org.javasimon.examples.jdbc,JdbcExample,prepareTable,Long Statement,The length of the statement "statement.execute("CREATE TABLE events (" + " id INT IDENTITY`" + " stopwatch VARCHAR(100)`"+ " start TIMESTAMP`"+ " nanos BIGINT)");" is 133.,98
+virgo47_javasimon,org.javasimon.examples,SamplingExample,main,Magic Number,The method contains a magic number: 50,19
+virgo47_javasimon,org.javasimon.examples,CallbackExample,main,Long Statement,The length of the statement "System.out.println("Stopwatch " + split.getStopwatch().getName() + " has just been stopped ("+ SimonUtils.presentNanoTime(split.runningFor())+ ").");" is 149.,16
+virgo47_javasimon,org.javasimon.examples,CallbackExample,main,Magic Number,The method contains a magic number: 1000000,16
+virgo47_javasimon,org.javasimon.examples,CallbackExample,onStopwatchStop,Long Statement,The length of the statement "System.out.println("Stopwatch " + split.getStopwatch().getName() + " has just been stopped ("+ SimonUtils.presentNanoTime(split.runningFor())+ ").");" is 149.,28
+virgo47_javasimon,org.javasimon.examples,SimonNameGenerationTest,main,Long Statement,The length of the statement "System.out.println("\nGoogle Chart avg/max/min:\n" + GoogleChartImageGenerator.barChart("200k-loop duration"`SimonUnit.MILLISECOND`true`results));" is 146.,28
+virgo47_javasimon,org.javasimon.examples,SimonNameGenerationTest,main,Magic Number,The method contains a magic number: 2,28
+virgo47_javasimon,org.javasimon.examples,SimonNameGenerationTest,main,Magic Number,The method contains a magic number: 5,28
+virgo47_javasimon,org.javasimon.examples,LoopingRandomMethod,main,Magic Number,The method contains a magic number: 10,11
+virgo47_javasimon,org.javasimon.examples,LoopingRandomMethod,main,Magic Number,The method contains a magic number: 50,11
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,randomWait,Empty catch clause,The method has an empty catch block.,40
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 100,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 200,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 300,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 200,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 300,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 100,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 4L,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 2L,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addDefaultSimons,Magic Number,The method contains a magic number: 5,62
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addChangingSimons,Magic Number,The method contains a magic number: 10000L,79
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addManySimons,Magic Number,The method contains a magic number: 4,99
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addManySimons,Magic Number,The method contains a magic number: 3,99
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addManySimons,Magic Number,The method contains a magic number: 3,99
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addManySimons,Magic Number,The method contains a magic number: 6,99
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,run,Magic Number,The method contains a magic number: 4,105
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,run,Magic Number,The method contains a magic number: 3,105
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,run,Magic Number,The method contains a magic number: 3,105
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,run,Magic Number,The method contains a magic number: 6,105
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addManySimons,Long Parameter List,The method has 5 parameters. ,112
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addManySimons,Magic Number,The method contains a magic number: 2,112
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addManySimons,Magic Number,The method contains a magic number: 2,112
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStopwatchSplit,Magic Number,The method contains a magic number: 50,131
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStopwatchSplit,Magic Number,The method contains a magic number: 150,131
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStopwatchSplits,Magic Number,The method contains a magic number: 2,142
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStackedSimons,Magic Number,The method contains a magic number: 6,161
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStackedSimons,Magic Number,The method contains a magic number: 100,161
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStackedSimons,Magic Number,The method contains a magic number: 250,161
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStackedSimons,Magic Number,The method contains a magic number: 100,161
+virgo47_javasimon,org.javasimon.examples,SimonDataGenerator,addStackedSimons,Magic Number,The method contains a magic number: 250,161
+virgo47_javasimon,org.javasimon.examples,CallbackFilteringExample,main,Long Statement,The length of the statement "System.out.println("Stopped " + split.getStopwatch().getName() + " ("+ SimonUtils.presentNanoTime(split.runningFor())+ ")");" is 124.,21
+virgo47_javasimon,org.javasimon.examples,CallbackFilteringExample,onStopwatchStop,Long Statement,The length of the statement "System.out.println("Stopped " + split.getStopwatch().getName() + " ("+ SimonUtils.presentNanoTime(split.runningFor())+ ")");" is 124.,39
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 100000,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 1000,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 2,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 2,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 3,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 4,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 5,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,main,Magic Number,The method contains a magic number: 100,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,perform,Magic Number,The method contains a magic number: 2,45
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,perform,Magic Number,The method contains a magic number: 3,51
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,perform,Magic Number,The method contains a magic number: 4,57
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,perform,Magic Number,The method contains a magic number: 5,63
+virgo47_javasimon,org.javasimon.examples,MultithreadedStopwatchLoad,perform,Magic Number,The method contains a magic number: 100,69
+virgo47_javasimon,org.javasimon.examples,AggregationExample,main,Long Statement,The length of the statement "try (Split ignored=SimonManager.getStopwatch(STOPWATCH_PARENT + Manager.HIERARCHY_DELIMITER + random.nextInt(STOPWATCH_COUNT)).start()){" is 136.,28
+virgo47_javasimon,org.javasimon.examples,AggregationExample,main,Long Statement,The length of the statement "System.out.println("\nSimonUtils.calculateStopwatchAggregate(parent) = " + SimonUtils.calculateStopwatchAggregate(parent));" is 123.,28
+virgo47_javasimon,org.javasimon.examples,AggregationExample,main,Magic Number,The method contains a magic number: 20,28
+virgo47_javasimon,org.javasimon.examples,Perf4JLikeExample,main,Long Statement,The length of the statement "System.out.println("INFO: start[" + split.getStartMillis() + "] time["+ (split.runningFor() / SimonClock.NANOS_IN_MILLIS)+ "] tag["+ sample.getName()+ "]");" is 156.,47
+virgo47_javasimon,org.javasimon.examples,Perf4JLikeExample,main,Magic Number,The method contains a magic number: 20,47
+virgo47_javasimon,org.javasimon.examples,Perf4JLikeExample,printPerf4JLog,Long Statement,The length of the statement "System.out.println("INFO: start[" + split.getStartMillis() + "] time["+ (split.runningFor() / SimonClock.NANOS_IN_MILLIS)+ "] tag["+ sample.getName()+ "]");" is 156.,59
+virgo47_javasimon,org.javasimon.examples,Perf4JLikeExample,method,Magic Number,The method contains a magic number: 1000L,70
+virgo47_javasimon,org.javasimon.examples,Perf4JLikeExample,method,Magic Number,The method contains a magic number: 500L,70
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,stopwatchKeyedSampling,Magic Number,The method contains a magic number: 55,35
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,stopwatchKeyedSampling,Magic Number,The method contains a magic number: 47,35
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,stopwatchKeyedSampling,Magic Number,The method contains a magic number: 33,35
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,stopwatchKeyedSampling,Magic Number,The method contains a magic number: 100,35
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,stopwatchKeyedSampling,Magic Number,The method contains a magic number: 12,35
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,counterKeyedSampling,Magic Number,The method contains a magic number: 2,68
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,counterKeyedSampling,Magic Number,The method contains a magic number: 3,68
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,counterKeyedSampling,Magic Number,The method contains a magic number: 4,68
+virgo47_javasimon,org.javasimon.examples,IncrementalSampling,counterKeyedSampling,Magic Number,The method contains a magic number: 5,68
+virgo47_javasimon,org.javasimon.examples,HelloUniverse,main,Long Statement,The length of the statement "SimonManager.getSimon("stopwatch").setNote("stopwatch wants some note too! ...after all to have a note is the basic right of any Simon!");" is 138.,20
+virgo47_javasimon,org.javasimon.examples,HelloUniverse,main,Magic Number,The method contains a magic number: 5,20
+virgo47_javasimon,org.javasimon.examples,HelloUniverse,main,Magic Number,The method contains a magic number: 7,20
+virgo47_javasimon,org.javasimon.examples,HelloUniverse,run,Magic Number,The method contains a magic number: 5,27
+virgo47_javasimon,org.javasimon.examples,HelloUniverse,run,Magic Number,The method contains a magic number: 7,27
+virgo47_javasimon,org.javasimon.examples,ClockExample,main,Magic Number,The method contains a magic number: 10,15
+virgo47_javasimon,org.javasimon.examples,ClockExample,main,Magic Number,The method contains a magic number: 1000000,15
+virgo47_javasimon,org.javasimon.examples,ClockExample,main,Magic Number,The method contains a magic number: 200,15
+virgo47_javasimon,org.javasimon.examples,SimonConsoleJettyDemo,initServer,Long Statement,The length of the statement "servletHolder.setInitParameter("plugin-classes"`QuantilesDetailPlugin.class.getName() + "`" + CallTreeDetailPlugin.class.getName()+ "`"+ TimelineDetailPlugin.class.getName());" is 175.,42
+virgo47_javasimon,org.javasimon.examples,SimonConsoleJettyDemo,initServer,Magic Number,The method contains a magic number: 8080,42
+virgo47_javasimon,org.javasimon.examples,SimonConsoleJettyDemo,initServer,Magic Number,The method contains a magic number: 5,42
+virgo47_javasimon,org.javasimon.examples,SimonConsoleJettyDemo,initServer,Magic Number,The method contains a magic number: 5,42
+virgo47_javasimon,org.javasimon.examples,SimonConsoleJettyDemo,initServer,Magic Number,The method contains a magic number: 10,42
+virgo47_javasimon,org.javasimon.examples,SimonConsoleJettyDemo,initServer,Magic Number,The method contains a magic number: 60000L,42
+virgo47_javasimon,org.javasimon.examples,SimonConsoleJettyDemo,initServer,Magic Number,The method contains a magic number: 50,42
+virgo47_javasimon,org.javasimon.examples,MultithreadedContention,main,Long Statement,The length of the statement "System.out.println("\nGoogle Chart avg:\n" + GoogleChartImageGenerator.barChart("MultithreadedContention"`SimonUnit.NANOSECOND`sampleLo`sampleCpu`sampleHi));" is 157.,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedContention,main,Long Statement,The length of the statement "System.out.println("\nGoogle Chart avg/min/max:\n" + GoogleChartImageGenerator.barChart("MultithreadedContention"`SimonUnit.NANOSECOND`true`sampleLo`sampleCpu`sampleHi));" is 170.,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedContention,main,Magic Number,The method contains a magic number: 1000,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedContention,main,Magic Number,The method contains a magic number: 2,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedContention,main,Magic Number,The method contains a magic number: 400,28
+virgo47_javasimon,org.javasimon.examples,MultithreadedContention,perform,Magic Number,The method contains a magic number: 400,53
+virgo47_javasimon,org.javasimon.examples,ExampleUtils,fillManagerWithSimons,Magic Number,The method contains a magic number: 10,40
+virgo47_javasimon,org.javasimon.examples.perf,StopwatchProxyPerformance,main,Long Statement,The length of the statement "StopwatchSource<DelegatingMethodInvocation<MonitoredInterface>> disabledCachedStopwatchSource=new ProxyStopwatchSource<MonitoredInterface>(){" is 141.,55
+virgo47_javasimon,org.javasimon.examples.perf,StopwatchProxyPerformance,logPerformanceTime,Long Statement,The length of the statement "LOGGER.info(name + " " + SimonUtils.presentNanoTime(measure)+ " "+ (delta > 0 ? "+" : "")+ SimonUtils.presentNanoTime(delta)+ " "+ (ratio > 0 ? "+" : "")+ ratio+ "%");" is 167.,100
+virgo47_javasimon,org.javasimon.examples.perf,StopwatchProxyPerformance,logPerformanceTime,Magic Number,The method contains a magic number: 100L,100
+virgo47_javasimon,org.javasimon.examples.perf,DisabledEnabledComparison,main,Magic Number,The method contains a magic number: 2,23
+virgo47_javasimon,org.javasimon.examples.perf,DisabledEnabledComparison,main,Magic Number,The method contains a magic number: 5,23
+virgo47_javasimon,org.javasimon.examples.perf,ManagerVsStopwatchComparison,main,Magic Number,The method contains a magic number: 100000,30
+virgo47_javasimon,org.javasimon.examples.perf,ManagerVsStopwatchComparison,main,Magic Number,The method contains a magic number: 2,30
+virgo47_javasimon,org.javasimon.examples.perf,ManagerVsStopwatchComparison,main,Magic Number,The method contains a magic number: 5,30
+virgo47_javasimon,org.javasimon.examples.perf,CircularListAddPerfromance,main,Magic Number,The method contains a magic number: 10,20
+virgo47_javasimon,org.javasimon.examples.perf,CircularListAddPerfromance,main,Magic Number,The method contains a magic number: 10,20
+virgo47_javasimon,org.javasimon.examples.perf,CircularListAddPerfromance,main,Magic Number,The method contains a magic number: 100,20
+virgo47_javasimon,org.javasimon.examples.perf,AsyncCallbackPerformance,main,Empty catch clause,The method has an empty catch block.,28
+virgo47_javasimon,org.javasimon.examples.perf,AsyncCallbackPerformance,main,Long Statement,The length of the statement "System.out.println("Performance` async=" + SimonUtils.presentNanoTime(timeAsync) + "` normal="+ SimonUtils.presentNanoTime(timeNormal));" is 136.,28
+virgo47_javasimon,org.javasimon.examples.perf,AsyncCallbackPerformance,main,Magic Number,The method contains a magic number: 3,28
+virgo47_javasimon,org.javasimon.examples.perf,AsyncCallbackPerformance,onManagerMessage,Empty catch clause,The method has an empty catch block.,31
+virgo47_javasimon,org.javasimon.examples.perf,SystemTimersPrecision,main,Complex Method,Cyclomatic complexity of the method is 16,25
+virgo47_javasimon,org.javasimon.examples.perf,SystemTimersPrecision,main,Magic Number,The method contains a magic number: 5,25
+virgo47_javasimon,org.javasimon.examples.perf,SystemTimersPrecision,main,Magic Number,The method contains a magic number: 1000000,25
+virgo47_javasimon,org.javasimon.examples.perf,SystemTimersPrecision,main,Magic Number,The method contains a magic number: 1000000,25
+virgo47_javasimon,org.javasimon.examples.perf,SystemTimersPrecision,main,Magic Number,The method contains a magic number: 5,25
+virgo47_javasimon,org.javasimon.examples.perf,SystemTimersPrecision,main,Magic Number,The method contains a magic number: 5,25
+virgo47_javasimon,org.javasimon.examples.perf,NanoMillisComparison,main,Complex Method,Cyclomatic complexity of the method is 9,23
+virgo47_javasimon,org.javasimon.examples.perf,NanoMillisComparison,main,Magic Number,The method contains a magic number: 100000,23
+virgo47_javasimon,org.javasimon.examples.perf,NanoMillisComparison,main,Magic Number,The method contains a magic number: 2,23
+virgo47_javasimon,org.javasimon.examples.perf,NanoMillisComparison,main,Magic Number,The method contains a magic number: 5,23
+virgo47_javasimon,org.javasimon.examples.perf,SimonMemoryConsumption,main,Magic Number,The method contains a magic number: 100000,15
+virgo47_javasimon,org.javasimon.examples.perf,SimonMemoryConsumption,something,Magic Number,The method contains a magic number: 55,71
+virgo47_javasimon,org.javasimon.examples.perf,SimonMemoryConsumption,something,Magic Number,The method contains a magic number: 47,71
+virgo47_javasimon,org.javasimon.examples.perf,SimonMemoryConsumption,something,Magic Number,The method contains a magic number: 33,71
+virgo47_javasimon,org.javasimon.examples.perf,SimonMemoryConsumption,something,Magic Number,The method contains a magic number: 100,71
+virgo47_javasimon,org.javasimon.examples.perf,SimonMemoryConsumption,something,Magic Number,The method contains a magic number: 12,71
+virgo47_javasimon,org.javasimon.examples.jmx,JmxCallbackExample,main,Magic Number,The method contains a magic number: 40,17
+virgo47_javasimon,org.javasimon.examples.jmx,SimonJolokiaDemo,initServer,Magic Number,The method contains a magic number: 5,59
+virgo47_javasimon,org.javasimon.examples.jmx,SimonJolokiaDemo,initServer,Magic Number,The method contains a magic number: 5,59
+virgo47_javasimon,org.javasimon.examples.jmx,SimonJolokiaDemo,initServer,Magic Number,The method contains a magic number: 10,59
+virgo47_javasimon,org.javasimon.examples.jmx,SimonJolokiaDemo,initServer,Magic Number,The method contains a magic number: 60000L,59
+virgo47_javasimon,org.javasimon.examples.jmx,SimonJolokiaDemo,initServer,Magic Number,The method contains a magic number: 50,59
+virgo47_javasimon,org.javasimon.examples.jmx,MonitoredApplication,doInsert,Magic Number,The method contains a magic number: 99999,52
+virgo47_javasimon,org.javasimon.examples.jmx,MonitoredApplication,doInsert,Magic Number,The method contains a magic number: 2,52
+virgo47_javasimon,org.javasimon.examples.jmx,MonitoredApplication,waitForEnterPressed,Empty catch clause,The method has an empty catch block.,130
+virgo47_javasimon,org.javasimon.examples.jmx,JmxReporterExample,main,Magic Number,The method contains a magic number: 1000,19
+virgo47_javasimon,org.javasimon.examples.jmx,JmxReporterExample,main,Magic Number,The method contains a magic number: 10000,19
+virgo47_javasimon,org.javasimon.examples.jmx,StandaloneExample,main,Empty catch clause,The method has an empty catch block.,66
+virgo47_javasimon,org.javasimon.examples.jmx,StandaloneExample,main,Long Statement,The length of the statement "SimonManagerMXBean simonManagerMXBean=JMX.newMXBeanProxy(ManagementFactory.getPlatformMBeanServer()`new ObjectName("org.javasimon.jmx.example:type=Simon")`SimonManagerMXBean.class);" is 181.,66
+virgo47_javasimon,org.javasimon.examples.jmx,StandaloneExample,main,Magic Number,The method contains a magic number: 632,66
+virgo47_javasimon,org.javasimon.examples.jmx,StandaloneExample,main,Magic Number,The method contains a magic number: 52,66
+virgo47_javasimon,org.javasimon.examples.jmx,StandaloneExample,main,Magic Number,The method contains a magic number: 12,66
+virgo47_javasimon,org.javasimon.examples.jmx,StandaloneExample,main,Magic Number,The method contains a magic number: 18,66
+virgo47_javasimon,org.javasimon.examples.jmx,MonitoringClient,main,Long Statement,The length of the statement "SimonManagerMXBean simonManagerMXBean=JMX.newMXBeanProxy(mbsc`new ObjectName("org.javasimon.jmx.example:type=Simon")`SimonManagerMXBean.class);" is 143.,22
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilter,init,Empty catch clause,The method has an empty catch block.,156
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilter,init,Long Identifier,The length of the field INIT_PARAM_REPORT_THRESHOLD_MS is 30.,156
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilter,setStopwatchSourceProperties,Long Identifier,The length of the field INIT_PARAM_STOPWATCH_SOURCE_PROPS is 33.,188
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilter,doFilter,Complex Conditional,The conditional expression consolePath != null && (localPath.equals(printTreePath) || localPath.startsWith(consolePath)) is complex.,215
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtils,monitorSourceNewInstance,Empty catch clause,The method has an empty catch block.,112
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtils,monitorSourceNewInstance,Long Statement,The length of the statement "throw new IllegalArgumentException("Stopwatch source class must have public constructor or public setter with Manager argument (used class " + monitorClass.getName() + ")"`e);" is 175.,112
+virgo47_javasimon,org.javasimon.javaee,HttpStopwatchSource,includeMethodName,Long Statement,The length of the statement "return includeHttpMethodName == IncludeHttpMethodName.ALWAYS || (includeHttpMethodName == IncludeHttpMethodName.NON_GET && !request.getMethod().equals(GET_METHOD));" is 164.,128
+virgo47_javasimon,org.javasimon.javaee,HttpStopwatchSource,isMonitored,Long Statement,The length of the statement "return !(uri.endsWith(".css") || uri.endsWith(".png") || uri.endsWith(".gif")|| uri.endsWith(".jpg")|| uri.endsWith(".js"));" is 124.,187
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterTest,testHttpStopwatchSourceParameterIsSet,Long Statement,The length of the statement "when(filterConfig.getInitParameter(SimonServletFilter.INIT_PARAM_STOPWATCH_SOURCE_CLASS)).thenReturn(HttpStopwatchSource.class.getCanonicalName());" is 147.,34
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterTest,testHttpStopwatchSourceParameterIsSet,Long Statement,The length of the statement "when(filterConfig.getInitParameter(SimonServletFilter.INIT_PARAM_STOPWATCH_SOURCE_PROPS)).thenReturn("includeHttpMethodName=ALWAYS");" is 133.,34
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterTest,testBeanParametersAreSet,Long Statement,The length of the statement "when(filterConfig.getInitParameter(SimonServletFilter.INIT_PARAM_STOPWATCH_SOURCE_CLASS)).thenReturn(TestBean.class.getName());" is 127.,46
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterTest,testBeanParametersAreSet,Long Statement,The length of the statement "when(filterConfig.getInitParameter(SimonServletFilter.INIT_PARAM_STOPWATCH_SOURCE_PROPS)).thenReturn("strProp=str;intProp=123");" is 128.,46
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterTest,testBeanParametersAreSet,Magic Number,The method contains a magic number: 123,46
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testDefaultInitStopwatchSource,Long Statement,The length of the statement "MonitorSource<HttpServletRequest`Stopwatch> monitorSource=SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig(null`null)`null);" is 139.,23
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testDefaultInitStopwatchSourceWithManager,Long Statement,The length of the statement "MonitorSource<HttpServletRequest`Stopwatch> monitorSource=SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig(null`Boolean.FALSE.toString())`SimonManager.manager());" is 177.,32
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testCachedInitStopwatchSource,Long Statement,The length of the statement "MonitorSource<HttpServletRequest`Stopwatch> monitorSource=SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig(null`Boolean.TRUE.toString())`null);" is 158.,41
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testInitStopwatchSourceWithCustomManager,Long Statement,The length of the statement "MonitorSource<HttpServletRequest`Stopwatch> monitorSource=SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig(null`Boolean.TRUE.toString())`manager);" is 161.,49
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testInitStopwatchCustomSourceManagerViaConstructor,Long Statement,The length of the statement "MonitorSource<HttpServletRequest`Stopwatch> monitorSource=SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig("org.javasimon.javaee.MonitorSourceWithManagerViaConstructor"`null)`SimonManager.manager());" is 214.,58
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testInitStopwatchCustomSourceManagerViaSetter,Long Statement,The length of the statement "MonitorSource<HttpServletRequest`Stopwatch> monitorSource=SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig("org.javasimon.javaee.MonitorSourceNoConstructorManagerViaSetter"`null)`SimonManager.manager());" is 218.,68
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testInitStopwatchCustomSourceManagerViaSetter,Long Statement,The length of the statement "Assert.assertEquals(monitorSource.getMonitor(new MockHttpServletRequest("GET"`"somethingElse")).getName()`"somethingElse");" is 123.,68
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testInitStopwatchCustomSourceManagerViaConstructorBroken,Long Statement,The length of the statement "MonitorSource<HttpServletRequest`Stopwatch> monitorSource=SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig("org.javasimon.javaee.MonitorSourceWithManagerViaConstructorBroken"`null)`SimonManager.manager());" is 220.,77
+virgo47_javasimon,org.javasimon.javaee,SimonServletFilterUtilsTest,testInitStopwatchCustomSourceManagerNoConstructorNoSetter,Long Statement,The length of the statement "SimonServletFilterUtils.initStopwatchSource(prepareFilterConfig("org.javasimon.javaee.MonitorSourceNoConstructorNoSetter"`null)`SimonManager.manager());" is 152.,91
+virgo47_javasimon,org.javasimon.javaee,HttpStopwatchSourceTest,allMethodsUrlMappingTest,Long Statement,The length of the statement "return new Object[][]{{"foo/bar/quix"`"GET"`"foo.bar.quix.GET"}`{"foo/bar/quix"`"POST"`"foo.bar.quix.POST"}`{"foo/bar/quix"`"DELETE"`"foo.bar.quix.DELETE"}`{"foo/bar/quix"`"PUT"`"foo.bar.quix.PUT"}`{"foo//bar/image.png"`"GET"`"foo.bar.image_png.GET"}};" is 252.,102
+virgo47_javasimon,org.javasimon.javaee,HttpStopwatchSourceTest,primeNumbers,Long Statement,The length of the statement "return new Object[][]{{"foo/bar/quix"`"GET"`"foo.bar.quix"}`{"foo/bar/quix"`"POST"`"foo.bar.quix.POST"}`{"foo/bar/quix"`"PUT"`"foo.bar.quix.PUT"}`{"foo/bar/quix"`"DELETE"`"foo.bar.quix.DELETE"}`{"foo//bar/image.png"`"GET"`"foo.bar.image_png"}`{"foo//bar/some.item"`"POST"`"foo.bar.some_item.POST"}};" is 299.,121
+virgo47_javasimon,org.javasimon.javaee.reqreporter,DefaultRequestReporter,reportRequest,Long Statement,The length of the statement "StringBuilder messageBuilder=new StringBuilder("Web request is too long (" + SimonUtils.presentNanoTime(requestSplit.runningFor()) + ") ["+ requestSplit.getStopwatch().getNote()+ "]");" is 184.,34
+virgo47_javasimon,org.javasimon.javaee.reqreporter,DefaultRequestReporter,processSplitsAndAddSignificantOnes,Long Statement,The length of the statement "messageBuilder.append("\n\t").append(split.getStopwatch().getName()).append(": ").append(SimonUtils.presentNanoTime(split.runningFor()));" is 137.,64
+virgo47_javasimon,org.javasimon.javaee.reqreporter,DefaultRequestReporter,isSignificantSplit,Magic Number,The method contains a magic number: 20,80
+virgo47_javasimon,org.javasimon.javaee.reqreporter,DefaultRequestReporter,addStopwatchInfo,Long Statement,The length of the statement "messageBuilder.append("\n\t").append(info.stopwatch.getName()).append(": ").append(info.splits.size()).append("x` total: ").append(SimonUtils.presentNanoTime(info.total)).append("` max: ").append(SimonUtils.presentNanoTime(info.maxSplit.runningFor()));" is 252.,114
+virgo47_javasimon,org.javasimon.javaee.reqreporter,PlainRequestReporter,reportRequest,Long Statement,The length of the statement "StringBuilder messageBuilder=new StringBuilder("Web request is too long (" + SimonUtils.presentNanoTime(requestSplit.runningFor()) + ") ["+ requestSplit.getStopwatch().getNote()+ "]");" is 184.,28
+virgo47_javasimon,org.javasimon.javaee.reqreporter,PlainRequestReporter,reportRequest,Long Statement,The length of the statement "messageBuilder.append("\n\t").append(split.getStopwatch().getName()).append(": ").append(SimonUtils.presentNanoTime(split.runningFor()));" is 137.,28
+virgo47_javasimon,org.javasimon.demoapp.web,ToDoControllerTest,deleteItem,Magic Number,The method contains a magic number: 123,68
+virgo47_javasimon,org.javasimon.demoapp.web,ToDoControllerTest,deleteItem,Magic Number,The method contains a magic number: 123,68
+virgo47_javasimon,org.javasimon.demoapp.web,ToDoControllerTest,deleteNonExistingItemShouldCauseException,Magic Number,The method contains a magic number: 123,77
+virgo47_javasimon,org.javasimon.demoapp.web,ToDoControllerTest,deleteNonExistingItemShouldCauseException,Magic Number,The method contains a magic number: 123,77
+virgo47_javasimon,org.javasimon.demoapp.web,ToDoControllerTest,updateItem,Magic Number,The method contains a magic number: 123,99
+virgo47_javasimon,org.javasimon.demoapp.model,ToDoItem,hashCode,Magic Number,The method contains a magic number: 32,62
+virgo47_javasimon,org.javasimon.demoapp.model,ToDoItem,hashCode,Magic Number,The method contains a magic number: 31,62
+virgo47_javasimon,org.javasimon.demoapp.model,ToDoItem,hashCode,Magic Number,The method contains a magic number: 31,62
+virgo47_javasimon,org.javasimon.demoapp.model,ToDoItem,hashCode,Magic Number,The method contains a magic number: 31,62
+virgo47_javasimon,org.javasimon.demoapp.dao,ToDoItemDaoImpl,update,Long Statement,The length of the statement "int numOfUpdated=jdbcTemplate.update("UPDATE toDoItem SET name = ?` description = ?` isDone = ? WHERE id = ?"`new Object[]{newItem.getName()`newItem.getDescription()`newItem.isDone()`newItem.getId()});" is 201.,71
+virgo47_javasimon,org.javasimon.demoapp.dao,ToDoItemDaoImpl,getById,Long Statement,The length of the statement "List<ToDoItem> items=jdbcTemplate.query("SELECT id` name` description` isDone FROM toDoItem WHERE toDoItem.id = ?"`new Object[]{id}`new ToDoItemRowMapper());" is 157.,81
+virgo47_javasimon,org.javasimon.demoapp.dao,ToDoDaoImplTest,uniqueIdsAreGenerated,Magic Number,The method contains a magic number: 2,40
+virgo47_javasimon,org.javasimon.demoapp.dao,ToDoDaoImplTest,deleteNonExistingItemCausesException,Magic Number,The method contains a magic number: 12345,78
+virgo47_javasimon,org.javasimon.demoapp.dao,ToDoDaoImplTest,updateNonExistingItemShouldCauseException,Magic Number,The method contains a magic number: 12345,99
+virgo47_javasimon,org.javasimon.demoapp,Start,main,Magic Number,The method contains a magic number: 8080,11
+virgo47_javasimon,org.javasimon.jdbc4,SimonPreparedStatement,SimonPreparedStatement,Long Parameter List,The method has 5 parameters. ,46
+virgo47_javasimon,org.javasimon.jdbc4,SimonCallableStatement,SimonCallableStatement,Long Parameter List,The method has 5 parameters. ,22
+virgo47_javasimon,org.javasimon.jdbc4,Driver,getRealDriver,Complex Conditional,The conditional expression drv == null && info != null && info.keySet().contains(SimonConnectionConfiguration.REAL_DRIVER) is complex.,109
+virgo47_javasimon,org.javasimon.jdbc4,Driver,getRealDriver,Empty catch clause,The method has an empty catch block.,109
+virgo47_javasimon,org.javasimon.jdbc4,Driver,getMajorVersion,Magic Number,The method contains a magic number: 2,175
+virgo47_javasimon,org.javasimon.jdbc4,Driver,getMinorVersion,Magic Number,The method contains a magic number: 4,180
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfiguration,initProperties,Empty catch clause,The method has an empty catch block.,75
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfiguration,SimonConnectionConfiguration,Magic Number,The method contains a magic number: 2,101
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfiguration,SimonConnectionConfiguration,Magic Number,The method contains a magic number: 2,101
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfiguration,SimonConnectionConfiguration,Magic Number,The method contains a magic number: 2,101
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnection,prepareStatement,Long Statement,The length of the statement "return new SimonPreparedStatement(this`conn.prepareStatement(sql`rsType`rsConcurrency`rsHoldability)`sql`prefix`sqlNormalizerFactory);" is 134.,209
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnection,prepareCall,Long Statement,The length of the statement "return new SimonCallableStatement(conn`conn.prepareCall(sql`rsType`rsConcurrency`rsHoldability)`sql`prefix`sqlNormalizerFactory);" is 129.,278
+virgo47_javasimon,org.javasimon.jdbc4,RegexBasedSqlNormalizer,normalize,Magic Number,The method contains a magic number: 2,95
+virgo47_javasimon,org.javasimon.jdbc4,RegexBasedSqlNormalizer,normalize,Magic Number,The method contains a magic number: 2,95
+virgo47_javasimon,org.javasimon.jdbc4,RegexBasedSqlNormalizer,toString,Long Statement,The length of the statement "return "SqlNormalizer{" + "\n sql='" + sql + '\''+ "`\n normalizedSql='"+ normalizedSql+ '\''+ "`\n type='"+ type+ '\''+ '}';" is 125.,145
+virgo47_javasimon,org.javasimon.jdbc4,SimonStatement,prepare,Long Statement,The length of the statement "sqlNormalizer=sqls.size() == 1 ? sqlNormalizerFactory.getNormalizer(sqls.get(0)) : sqlNormalizerFactory.getNormalizer(sqls);" is 124.,116
+virgo47_javasimon,org.javasimon.jdbc4,SimonStatement,startSplit,Long Statement,The length of the statement "Stopwatch stopwatch=SimonManager.getStopwatch(sqlCmdLabel + Manager.HIERARCHY_DELIMITER + sqlNormalizer.getNormalizedSql().hashCode());" is 135.,133
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfigurationTest,createTestData1,Long Statement,The length of the statement "return new Object[][]{{"jdbc:simon:sqlserver://test;databaseName=testdb"`"sqlserver"`"com.microsoft.sqlserver.jdbc.SQLServerDriver"`"jdbc:sqlserver://test;databaseName=testdb"}`{"jdbc:simon:h2:tcp://localhost:6762/testdb"`"h2"`"org.h2.Driver"`"jdbc:h2:tcp://localhost:6762/testdb"}`{"jdbc:simon:mysql://localhost/someDb?useUnicode=yes&characterEncoding=UTF-8"`"mysql"`"com.mysql.jdbc.Driver"`"jdbc:mysql://localhost/someDb?useUnicode=yes&characterEncoding=UTF-8"}`{"jdbc:mysql://localhost/someDb?useUnicode=yes&characterEncoding=UTF-8"`"mysql"`"com.mysql.jdbc.Driver"`"jdbc:mysql://localhost/someDb?useUnicode=yes&characterEncoding=UTF-8"}};" is 641.,15
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfigurationTest,createTestData2,Long Statement,The length of the statement "return new Object[][]{{"jdbc:simon:h2:tcp://localhost:6762/testdb;simon_real_drv=org.h2db.OtherDriver;simon_prefix=org.test"`"org.h2db.OtherDriver"`"org.test"`"jdbc:h2:tcp://localhost:6762/testdb"}`{"jdbc:simon:h2:tcp://localhost:6762/testdb;option=option;simon_prefix=org.test2"`"org.h2.Driver"`"org.test2"`"jdbc:h2:tcp://localhost:6762/testdb;option=option"}};" is 362.,59
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfigurationTest,testDataSource,Long Statement,The length of the statement "SimonConnectionConfiguration configuration=new SimonConnectionConfiguration("jdbc:simon:mysql://localhost/someDb?useUnicode=yes&characterEncoding=UTF-8");" is 154.,91
+virgo47_javasimon,org.javasimon.jdbc4,SimonConnectionConfigurationTest,testDataSource,Long Statement,The length of the statement "assertEquals(configuration.getRealConnectionPoolDataSourceName()`"com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource");" is 128.,91
+virgo47_javasimon,org.javasimon.jdbc4,RegexBasedSqlNormalizerTest,createTestData,Long Statement,The length of the statement "return new Object[][]{{null`null`null}`{"select * from trn` subtrn where amount>=45.8 and date!=to_date('5.6.2008'` 'dd.mm.yyyy') and type='Mark''s'"`"select"`"select * from trn` subtrn where amount >= ? and date != ? and type = ?"}`{"select name as 'Customer Name'` sum(item_price) as sum from foo where dept = ? group by name"`"select"`"select name as 'customer name'` sum(item_price) as sum from foo where dept = ? group by name"}`{"select name as employee` sum(dur)/8 hrs from foo where dept='sys' group by name order by name desc"`"select"`"select name as employee` sum(dur) / ? hrs from foo where dept = ? group by name order by name desc"}`{"select sysdate()` sysdate from sys.dual"`"select"`"select sysdate()` sysdate from sys.dual"}`{"SELECT * FROM a JOIN (b JOIN c ON (b.ref = c.id)) ON (a.id = b.id);"`"select"`"select * from a join (b join c on (b.ref = c.id)) on (a.id = b.id);"}`{"select * from wherever where x=function1(function2('xxx')` function2(function3(3 + 5)))"`"select"`"select * from wherever where x = ?"}`{"update trn set amount=50.6`type='bubu' where id=4"`"update"`"update trn set amount = ?` type = ? where id = ?"}`{"update 'trn' set amount= 50.6`type='' where id in (4`5`6) or date in (to_date('6.6.2006'`'dd.mm.yyyy')` to_date('7.6.2006'`'dd.mm.yyyy'))"`"update"`"update 'trn' set amount = ?` type = ? where id in (?) or date in (?)"}`{"update nonsense set amount=null where substring(date`3`17) like '%'.to_date('7.6.2006'`'dd.mm.yyyy')"`"update"`"update nonsense set amount = null where substring(date` ?` ?) like ?.to_date(?` ?)"}`{" delete from trn where id in (select id from subtrn where trndesc not like '%SX')"`"delete"`"delete from trn where id in (select id from subtrn where trndesc not like ?)"}`{"delete from trn where date between to_date('6.6.2006'`'dd.mm.yyyy') and to_date('7.6.2006'`'dd.mm.yyyy') and id<=10000"`"delete"`"delete from trn where date between ? and ? and id <= ?"}`{"delete from trn where id in (select id from subtrn where trndesc in (select allowed from descs))"`"delete"`"delete from trn where id in (select id from subtrn where trndesc in (select allowed from descs))"}`{"insert into foo ('bufo'` 4.47)"`"insert"`"insert into foo (?` ?)"}`{"insert into foo (a1) values ('bubu')"`"insert"`"insert into foo (a1) values (?)"}`{"{call foo_ins_proc(99999` 'This text is inserted from stored procedure')}"`"call"`"call foo_ins_proc(?` ?)"}`{"{?= call foo_ins_proc_with_ret(99999` 'Text'` sysdate())}"`"call"`"? = call foo_ins_proc_with_ret(?` ?` ?)"}`{"begin foo_ins_proc_with_ret(99999` 'Text'` sysdate); end;"`"call"`"call foo_ins_proc_with_ret(?` ?` sysdate)"}`{" create table foo(a1 varchar2(30) not null` a2 numeric(12`4))"`"create"`"create table foo"}};" is 2721.,17
+virgo47_javasimon,org.javasimon.jdbc4,RegexBasedSqlNormalizerTest,batchNormalizationTest,Long Statement,The length of the statement "SqlNormalizer sn=new RegexBasedSqlNormalizer(Arrays.asList("update trn set amount=50.6`type='bubu' where id=4"`"insert into foo ('bufo'` 4.47)"));" is 146.,68
+virgo47_javasimon,org.javasimon.jdbc4,RegexBasedSqlNormalizerTest,batchNormalizationTest,Long Statement,The length of the statement "sn=new RegexBasedSqlNormalizer(Arrays.asList("insert into fuu values (?` ?` ?` ?` ?)"`"insert into fuu values (?` ?` ?` ?` ?)"`"insert into fuu values (?` ?` ?` ?` ?)"`"insert into fuu values (?` ?` ?` ?` ?)"`"delete from fuu where id =?"`"delete from fuu where id =?"`"insert into fuu2 values (?` 'aaa')"));" is 308.,68
+virgo47_javasimon,org.javasimon.jdbc4,RegexBasedSqlNormalizerTest,batchNormalizationTest,Long Statement,The length of the statement "Assert.assertEquals(sn.getNormalizedSql()`"4x insert into fuu values (?` ?` ?` ?` ?); 2x delete from fuu where id = ?; insert into fuu2 values (?` ?)");" is 152.,68
+virgo47_javasimon,org.javasimon.jdbc4.jmx,JdbcMXBeanImpl,connectionsStat,Long Statement,The length of the statement "return new JdbcObjectInfo(s.getActive()`s.getMaxActive()`s.getMaxActiveTimestamp()`s.getCounter()`s.getCounter() - s.getActive()`s.getMin()`s.getMax()`s.getTotal());" is 165.,69
+virgo47_javasimon,org.javasimon.jdbc4.jmx,JdbcMXBeanImpl,statementsStat,Long Statement,The length of the statement "return new JdbcObjectInfo(s.getActive()`s.getMaxActive()`s.getMaxActiveTimestamp()`s.getCounter()`s.getCounter() - s.getActive()`s.getMin()`s.getMax()`s.getTotal());" is 165.,87
+virgo47_javasimon,org.javasimon.jdbc4.jmx,JdbcObjectInfo,JdbcObjectInfo,Long Parameter List,The method has 8 parameters. ,24
+virgo47_javasimon,org.javasimon.jdbcx4,SimonConnectionPoolDataSource,getPooledConnection,Long Statement,The length of the statement "return new SimonPooledConnection(datasource().getPooledConnection()`getPrefix()).withSqlNormalizerFactory(sqlNormalizerFactory);" is 128.,29
+virgo47_javasimon,org.javasimon.jdbcx4,SimonConnectionPoolDataSource,getPooledConnection,Long Statement,The length of the statement "return new SimonPooledConnection(datasource().getPooledConnection(user`password)`getPrefix()).withSqlNormalizerFactory(sqlNormalizerFactory);" is 141.,34
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,getRealDataSourceClassName,Complex Conditional,The conditional expression (realDataSourceClassName == null || realDataSourceClassName.isEmpty()) && (configuration != null) is complex.,161
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,createDataSource,Complex Method,Cyclomatic complexity of the method is 11,182
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,createDataSource,Magic Number,The method contains a magic number: 3,182
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,createDataSource,Magic Number,The method contains a magic number: 4,182
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,createDataSource,Magic Number,The method contains a magic number: 4,182
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,createDataSource,Magic Number,The method contains a magic number: 4,182
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,getPrefix,Complex Conditional,The conditional expression (prefix == null || prefix.isEmpty()) && (configuration != null) is complex.,235
+virgo47_javasimon,org.javasimon.jdbcx4,AbstractSimonDataSource,getPropertyAs,Complex Method,Cyclomatic complexity of the method is 9,272
+virgo47_javasimon,org.javasimon,SimonPattern,SimonPattern,Complex Conditional,The conditional expression pattern.startsWith(WILDCARD_STAR) && pattern.endsWith(WILDCARD_STAR) && pattern.length() > 2 is complex.,98
+virgo47_javasimon,org.javasimon,SimonPattern,SimonPattern,Magic Number,The method contains a magic number: 2,98
+virgo47_javasimon,org.javasimon,SimonPattern,SimonPattern,Magic Number,The method contains a magic number: 2,98
+virgo47_javasimon,org.javasimon,SimonPattern,hashCode,Magic Number,The method contains a magic number: 31,207
+virgo47_javasimon,org.javasimon,CounterSample,simonToString,Long Statement,The length of the statement "return "Simon Counter: counter=" + counter + "` max="+ SimonUtils.presentMinMaxCount(max)+ "` min="+ SimonUtils.presentMinMaxCount(min)+ simonToStringCommon();" is 159.,182
+virgo47_javasimon,org.javasimon,ManagerConfiguration,processStartElementPrivate,Long Statement,The length of the statement "throw new XMLStreamException("Attribute '" + attr + "' MUST be present (element: "+ elementName+ "). "+ readerPosition(reader));" is 128.,253
+virgo47_javasimon,org.javasimon,ManagerConfiguration,assertStartTag,Long Statement,The length of the statement "throw new XMLStreamException("Assert start tag - wrong event type " + reader.getEventType() + " (expected name: "+ name+ ") "+ readerPosition(reader));" is 151.,264
+virgo47_javasimon,org.javasimon,ManagerConfiguration,assertName,Long Statement,The length of the statement "throw new XMLStreamException("Assert " + operation + " - wrong element name "+ reader.getName().toString()+ " (expected name: "+ name+ ") "+ readerPosition(reader));" is 165.,280
+virgo47_javasimon,org.javasimon,ManagerConfiguration,assertEndTag,Long Statement,The length of the statement "throw new XMLStreamException("Assert end tag - wrong event type " + reader.getEventType() + " (expected name: "+ name+ ") "+ readerPosition(reader));" is 149.,290
+virgo47_javasimon,org.javasimon,StopwatchSample,simonToString,Long Statement,The length of the statement "return "Simon Stopwatch: total " + SimonUtils.presentNanoTime(total) + "` counter "+ counter+ "` max "+ SimonUtils.presentNanoTime(max)+ "` min "+ SimonUtils.presentNanoTime(min)+ "` mean "+ SimonUtils.presentNanoTime((long)mean)+ simonToStringCommon();" is 253.,312
+virgo47_javasimon,org.javasimon,CounterImpl,toString,Long Statement,The length of the statement "return "Simon Counter: counter=" + counter + "` max="+ SimonUtils.presentMinMaxCount(max)+ "` min="+ SimonUtils.presentMinMaxCount(min)+ super.toString();" is 154.,235
+virgo47_javasimon,org.javasimon,StopwatchImpl,toString,Long Statement,The length of the statement "return "Simon Stopwatch: total " + SimonUtils.presentNanoTime(total) + "` counter "+ counter+ "` max "+ SimonUtils.presentNanoTime(max)+ "` min "+ SimonUtils.presentNanoTime(min)+ "` mean "+ SimonUtils.presentNanoTime((long)mean)+ super.toString();" is 248.,273
+virgo47_javasimon,org.javasimon,Split,toString,Long Statement,The length of the statement "return "Running split" + (stopwatch != null ? " for Stopwatch '" + stopwatch.getName() + "': " : ": ") + SimonUtils.presentNanoTime(runningFor());" is 146.,341
+virgo47_javasimon,org.javasimon,Split,toString,Long Statement,The length of the statement "return "Stopped split" + (stopwatch != null ? " for Stopwatch '" + stopwatch.getName() + "': " : ": ") + SimonUtils.presentNanoTime(total);" is 139.,341
+virgo47_javasimon,org.javasimon,EnabledManager,getOrCreateSimon,Long Statement,The length of the statement "throw new SimonException("Simon named '" + name + "' already exists and its type is '"+ simon.getClass().getName()+ "' while requested type is '"+ simonClass.getName()+ "'.");" is 175.,110
+virgo47_javasimon,org.javasimon,CounterTest,increaseDecrease,Magic Number,The method contains a magic number: 10,61
+virgo47_javasimon,org.javasimon,CounterTest,increaseDecrease,Magic Number,The method contains a magic number: 30,61
+virgo47_javasimon,org.javasimon,CounterTest,negativeIncrease,Magic Number,The method contains a magic number: 3,84
+virgo47_javasimon,org.javasimon,CounterTest,negativeIncrease,Magic Number,The method contains a magic number: 3,84
+virgo47_javasimon,org.javasimon,CounterTest,negativeIncrease,Magic Number,The method contains a magic number: 3,84
+virgo47_javasimon,org.javasimon,CounterTest,negativeIncrease,Magic Number,The method contains a magic number: 3,84
+virgo47_javasimon,org.javasimon,CounterTest,arbitraryStartValue,Magic Number,The method contains a magic number: 47,96
+virgo47_javasimon,org.javasimon,CounterTest,arbitraryStartValue,Magic Number,The method contains a magic number: 47,96
+virgo47_javasimon,org.javasimon,CounterTest,arbitraryStartValue,Magic Number,The method contains a magic number: 47,96
+virgo47_javasimon,org.javasimon,CounterTest,arbitraryStartValue,Magic Number,The method contains a magic number: 47,96
+virgo47_javasimon,org.javasimon,CounterTest,disabledCounter,Magic Number,The method contains a magic number: 47,112
+virgo47_javasimon,org.javasimon,CounterTest,disabledCounter,Magic Number,The method contains a magic number: 3,112
+virgo47_javasimon,org.javasimon,CounterTest,disabledCounter,Magic Number,The method contains a magic number: 2,112
+virgo47_javasimon,org.javasimon,StopwatchTest,usagesTest,Magic Number,The method contains a magic number: 10,26
+virgo47_javasimon,org.javasimon,StopwatchTest,usagesTest,Magic Number,The method contains a magic number: 30,26
+virgo47_javasimon,org.javasimon,StopwatchTest,sampling,Magic Number,The method contains a magic number: 10,77
+virgo47_javasimon,org.javasimon,StopwatchTest,sampling,Magic Number,The method contains a magic number: 10,77
+virgo47_javasimon,org.javasimon,StopwatchTest,sampling,Magic Number,The method contains a magic number: 10,77
+virgo47_javasimon,org.javasimon,StopwatchTest,sampling,Magic Number,The method contains a magic number: 10,77
+virgo47_javasimon,org.javasimon,StopwatchTest,assertIncrementalSampleAfterIncrease,Magic Number,The method contains a magic number: 10,103
+virgo47_javasimon,org.javasimon,StopwatchTest,assertIncrementalSampleAfterIncrease,Magic Number,The method contains a magic number: 10,103
+virgo47_javasimon,org.javasimon,StopwatchTest,assertIncrementalSampleAfterIncrease,Magic Number,The method contains a magic number: 10,103
+virgo47_javasimon,org.javasimon,StopwatchTest,assertIncrementalSampleAfterIncrease,Magic Number,The method contains a magic number: 10,103
+virgo47_javasimon,org.javasimon,ManagerTest,testSimonCreation,Long Identifier,The length of the field SIMON_COUNT_AFTER_COUNTER_ADDED is 31.,27
+virgo47_javasimon,org.javasimon,ManagerTest,testGeneratedNames,Long Statement,The length of the statement "Assert.assertEquals(SimonUtils.generateNameForClassAndMethod("-stopwatch")`getClass().getName() + ".testGeneratedNames-stopwatch");" is 131.,117
+virgo47_javasimon,org.javasimon,ManagerTest,testAnonymousSimon,Magic Number,The method contains a magic number: 2,132
+virgo47_javasimon,org.javasimon,ManagerTest,testRemoveIncrementalSimons,Magic Number,The method contains a magic number: 1000,188
+virgo47_javasimon,org.javasimon,ConfigurationTest,testConfigResource,Magic Number,The method contains a magic number: 2,27
+virgo47_javasimon,org.javasimon,ConfigurationTest,testConfig,Long Statement,The length of the statement "manager.configuration().readConfig(new StringReader("<simon-configuration>\n" + " <simon pattern='*.debug' state='disabled'/>\n" + "</simon-configuration>"));" is 158.,45
+virgo47_javasimon,org.javasimon,ConfigurationTest,testConditions,Long Statement,The length of the statement "Assert.assertFalse(new FilterRule(null`"split < 5 || split > 1000000000us"`null).checkCondition(split.getStopwatch()`split));" is 125.,55
+virgo47_javasimon,org.javasimon,ConfigurationTest,testConditions,Long Statement,The length of the statement "Assert.assertTrue(new FilterRule(null`"split > 100 && split < 10000ms"`null).checkCondition(split.getStopwatch()`split));" is 121.,55
+virgo47_javasimon,org.javasimon,ConfigurationTest,testConditions,Long Statement,The length of the statement "Assert.assertTrue(new FilterRule(null`"value == 1ms"`null).checkCondition(split.getStopwatch()`SimonClock.NANOS_IN_MILLIS));" is 124.,55
+virgo47_javasimon,org.javasimon,ConfigurationTest,testConditions,Magic Number,The method contains a magic number: 1000000000L,55
+virgo47_javasimon,org.javasimon,ConfigurationTest,testConditions,Magic Number,The method contains a magic number: 1000L,55
+virgo47_javasimon,org.javasimon,SplitTest,anonymousSplitTest,Magic Number,The method contains a magic number: 10,36
+virgo47_javasimon,org.javasimon,SplitTest,anonymousSplitTest,Magic Number,The method contains a magic number: 10000000,36
+virgo47_javasimon,org.javasimon,SplitTest,anonymousSplitTest,Magic Number,The method contains a magic number: 10,36
+virgo47_javasimon,org.javasimon,SplitTest,anonymousSplitTest,Magic Number,The method contains a magic number: 20,36
+virgo47_javasimon,org.javasimon,SplitTest,anonymousSplitTest,Magic Number,The method contains a magic number: 10,36
+virgo47_javasimon,org.javasimon,SplitTest,anonymousSplitTest,Magic Number,The method contains a magic number: 10,36
+virgo47_javasimon,org.javasimon,SplitTest,anonymousSplitTest,Magic Number,The method contains a magic number: 30,36
+virgo47_javasimon,org.javasimon,IncrementalSimonsPurgerTest,beforeMethod,Long Statement,The length of the statement "when(executorService.scheduleWithFixedDelay(any(Runnable.class)`anyLong()`anyLong()`any(TimeUnit.class))).thenReturn(scheduledFuture);" is 134.,29
+virgo47_javasimon,org.javasimon,IncrementalSimonsPurgerTest,testPeriodicalIncrementalSimonsPurge,Long Statement,The length of the statement "verify(executorService).scheduleWithFixedDelay(argThat(new PurgerRunnableMatcher(manager))`eq(duration)`eq(duration)`eq(timeUnit));" is 131.,39
+virgo47_javasimon,org.javasimon,IncrementalSimonsPurgerTest,testPurging,Magic Number,The method contains a magic number: 1000,118
+virgo47_javasimon,org.javasimon.utils,SimonUtils,printSimon,Long Statement,The length of the statement "sb.append(localName(simon.getName())).append('(').append(simon.isEnabled() ? '+' : '-').append("): ").append(simon.toString()).append('\n');" is 140.,236
+virgo47_javasimon,org.javasimon.utils,SimonUtils,validateSimonName,Long Statement,The length of the statement "throw new SimonException("Simon name must match following pattern: '" + SimonUtils.NAME_PATTERN.pattern() + "'` used name: "+ name);" is 132.,273
+virgo47_javasimon,org.javasimon.utils,SimonUtils,compact,Magic Number,The method contains a magic number: 2,366
+virgo47_javasimon,org.javasimon.utils,Replacer,processModificators,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4504659f,37
+virgo47_javasimon,org.javasimon.utils,Replacer,toString,Long Statement,The length of the statement "return "Replacer{" + "from=" + from + "` to='"+ to+ '\''+ "` repeatUntilUnchanged="+ repeatUntilUnchanged+ "` ignoreCase="+ ignoreCase+ '}';" is 140.,105
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildHeader,Magic Number,The method contains a magic number: 2,60
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildHeader,Magic Number,The method contains a magic number: 2,60
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildHeader,Magic Number,The method contains a magic number: 2,60
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildHeader,Magic Number,The method contains a magic number: 2,60
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildHeader,Magic Number,The method contains a magic number: 2,60
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildHeader,Magic Number,The method contains a magic number: 2,60
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildHeader,Magic Number,The method contains a magic number: 2,60
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Long Statement,The length of the statement "indent(2).append("<td>").append(SimonUtils.presentNanoTime(stopwatchSample.getMin())).append("</td>").append(lineSeparator);" is 124.,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Long Statement,The length of the statement "indent(2).append("<td>").append(SimonUtils.presentNanoTime(stopwatchSample.getMax())).append("</td>").append(lineSeparator);" is 124.,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Long Statement,The length of the statement "indent(2).append("<td>").append(SimonUtils.presentNanoTime(stopwatchSample.getMean())).append("</td>").append(lineSeparator);" is 125.,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Long Statement,The length of the statement "indent(2).append("<td>").append(SimonUtils.presentNanoTime(stopwatchSample.getTotal())).append("</td>").append(lineSeparator);" is 126.,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Long Statement,The length of the statement "indent(2).append("<td>").append(SimonUtils.presentMinMaxCount(counterSample.getMin())).append("</td>").append(lineSeparator);" is 125.,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Long Statement,The length of the statement "indent(2).append("<td>").append(SimonUtils.presentMinMaxCount(counterSample.getMax())).append("</td>").append(lineSeparator);" is 125.,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Long Statement,The length of the statement "indent(2).append("<td>").append("+").append(SimonUtils.presentMinMaxCount(counterSample.getIncrementSum())).append("/-").append(SimonUtils.presentMinMaxCount(counterSample.getDecrementSum())).append("</td>").append(lineSeparator);" is 230.,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGenerator,buildRowForSample,Magic Number,The method contains a magic number: 2,73
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,equals,Complex Method,Cyclomatic complexity of the method is 10,106
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 32,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 31,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 32,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 31,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 32,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 31,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 32,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 31,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 32,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 31,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 32,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 31,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,hashCode,Magic Number,The method contains a magic number: 32,124
+virgo47_javasimon,org.javasimon.utils,CounterAggregate,toString,Long Statement,The length of the statement "return "CounterAggregate{" + "counter=" + counter + "` incrementSum="+ incrementSum+ "` decrementSum="+ decrementSum+ "` max="+ SimonUtils.presentMinMaxCount(max)+ "` min="+ SimonUtils.presentMinMaxCount(min)+ "` maxTimestamp="+ SimonUtils.presentTimestamp(maxTimestamp)+ "` minTimestamp="+ SimonUtils.presentTimestamp(minTimestamp)+ '}';" is 338.,136
+virgo47_javasimon,org.javasimon.utils,GoogleInteractiveChartGenerator,barChart,Long Statement,The length of the statement "final StringBuilder result=new StringBuilder("<html>\n" + " <head>\n" + " <script type=\"text/javascript\" src=\"https://www.google.com/jsapi\"></script>\n"+ " <script type=\"text/javascript\">\n"+ " google.load(\"visualization\"` \"1\"` {packages:[\"corechart\"]});\n"+ " google.setOnLoadCallback(drawChart);\n"+ " function drawChart() {\n"+ " var data = new google.visualization.DataTable();\n");" is 398.,19
+virgo47_javasimon,org.javasimon.utils,GoogleInteractiveChartGenerator,barChart,Long Statement,The length of the statement "result.append(" data.addColumn('string'` 'stopwatch');\n" + " data.addColumn('number'` 'avg');\n" + " data.addColumn('number'` 'max');\n"+ " data.addColumn('number'` 'min');\n"+ " data.addRows(").append(samples.length).append(");\n");" is 234.,19
+virgo47_javasimon,org.javasimon.utils,GoogleInteractiveChartGenerator,barChart,Long Statement,The length of the statement "result.append(" data.setValue(").append(rowIndex).append("` 0` '").append(stopwatch.getName()).append("');\n").append(" data.setValue(").append(rowIndex).append("` 1` ").append(stopwatch.getMean() / divisor).append(");\n").append(" data.setValue(").append(rowIndex).append("` 2` ").append(stopwatch.getMax() / divisor).append(");\n").append(" data.setValue(").append(rowIndex).append("` 3` ").append(stopwatch.getMin() / divisor).append(");\n");" is 445.,19
+virgo47_javasimon,org.javasimon.utils,GoogleInteractiveChartGenerator,barChart,Long Statement,The length of the statement "result.append(" var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));\n" + " chart.draw(data` {width: ").append(ONE_BAR_WIDTH * (1 + samples.length)).append("` height: 600` title: '").append(title).append("'`\n hAxis: {title: 'stopwatch'` titleTextStyle: {color: 'red'}}\n" + " });\n }\n" + " </script>\n"+ " </head>\n\n <body>\n <div id=\"chart_div\"></div>\n </body>\n</html>");" is 414.,19
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,equals,Complex Method,Cyclomatic complexity of the method is 12,137
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 31,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,hashCode,Magic Number,The method contains a magic number: 32,157
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregate,toString,Long Statement,The length of the statement "return "StopwatchAggregate{total= " + SimonUtils.presentNanoTime(total) + "` counter="+ counter+ "` min="+ SimonUtils.presentNanoTime(min)+ "` max="+ SimonUtils.presentNanoTime(max)+ "` minTimestamp="+ SimonUtils.presentTimestamp(minTimestamp)+ "` maxTimestamp="+ SimonUtils.presentTimestamp(maxTimestamp)+ "` active="+ active+ "` maxActive="+ maxActive+ "` maxActiveTimestamp="+ SimonUtils.presentTimestamp(maxActiveTimestamp)+ '}';" is 433.,171
+virgo47_javasimon,org.javasimon.utils,GoogleChartImageGenerator,process,Complex Method,Cyclomatic complexity of the method is 9,104
+virgo47_javasimon,org.javasimon.utils,GoogleChartImageGenerator,process,Long Statement,The length of the statement "result.append(FIXED_WIDTH + BAR_WIDTH * samples.length).append('x').append(IMAGE_HEIGHT).append(TYPE_BAR1).append(setSpacing).append(TYPE_BAR2);" is 144.,104
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testTotalIsIncremented,Magic Number,The method contains a magic number: 5,34
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testTotalIsIncremented,Magic Number,The method contains a magic number: 5,34
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testTotalIsIncremented,Magic Number,The method contains a magic number: 15,34
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testTotalIsIncremented,Magic Number,The method contains a magic number: 20,34
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testCounterIsIncremented,Magic Number,The method contains a magic number: 2,47
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testCounterIsIncremented,Magic Number,The method contains a magic number: 3,47
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 40,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 100,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 40,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 100,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 10,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 200,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 10,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 200,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 20,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 500,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 10,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMinIsUpdated,Magic Number,The method contains a magic number: 200,60
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 10,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 100,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 10,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 100,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 40,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 200,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 40,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 200,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 20,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 500,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 40,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxIsUpdated,Magic Number,The method contains a magic number: 200,83
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testActiveIsUpdated,Magic Number,The method contains a magic number: 2,106
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testActiveIsUpdated,Magic Number,The method contains a magic number: 2,106
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testActiveIsUpdated,Magic Number,The method contains a magic number: 4,106
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testActiveIsUpdated,Magic Number,The method contains a magic number: 6,106
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 10,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 100,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 10,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 100,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 40,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 200,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 40,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 200,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 20,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 300,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 40,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testMaxActiveIsUpdated,Magic Number,The method contains a magic number: 200,119
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 2,147
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 3,147
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 4,147
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 100,147
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 200,147
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 5,147
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 6,147
+virgo47_javasimon,org.javasimon.utils,StopwatchAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 300,147
+virgo47_javasimon,org.javasimon.utils,SimonUtilsTest,testDataUtilsProvider,Long Statement,The length of the statement "return new Object[][]{{1`"1 ns"}`{47`"47 ns"}`{999`"999 ns"}`{1047`"1.05 us"}`{11047`"11.0 us"}`{11000`"11.0 us"}`{141047`"141 us"}`{942141047`"942 ms"}`{942141047666L`"942 s"}`{10942141047666L`"10942 s"}};" is 206.,17
+virgo47_javasimon,org.javasimon.utils,SimonUtilsTest,testStringCompact,Magic Number,The method contains a magic number: 4,38
+virgo47_javasimon,org.javasimon.utils,SimonUtilsTest,testStringCompact,Magic Number,The method contains a magic number: 7,38
+virgo47_javasimon,org.javasimon.utils,SimonUtilsTest,testStringCompact,Magic Number,The method contains a magic number: 12,38
+virgo47_javasimon,org.javasimon.utils,SimonUtilsTest,testStringCompact,Magic Number,The method contains a magic number: 17,38
+virgo47_javasimon,org.javasimon.utils,SimonUtilsTest,testStringCompact,Magic Number,The method contains a magic number: 18,38
+virgo47_javasimon,org.javasimon.utils,SimonUtilsTest,testStringCompact,Magic Number,The method contains a magic number: 30,38
+virgo47_javasimon,org.javasimon.utils,SimonUtilsAggregationTests,testAggregateOnStopwatchHierarchy,Magic Number,The method contains a magic number: 4,121
+virgo47_javasimon,org.javasimon.utils,SimonUtilsAggregationTests,testFilteredAggregationWithAcceptAllFilter,Magic Number,The method contains a magic number: 4,127
+virgo47_javasimon,org.javasimon.utils,SimonUtilsAggregationTests,testFilteredAggregationWithSubtreeFilter,Magic Number,The method contains a magic number: 2,145
+virgo47_javasimon,org.javasimon.utils,SimonUtilsAggregationTests,testAggregationWithNullFilter,Magic Number,The method contains a magic number: 4,151
+virgo47_javasimon,org.javasimon.utils,SimonUtilsAggregationTests,testAggregateWithCountersHierarchy,Magic Number,The method contains a magic number: 4,167
+virgo47_javasimon,org.javasimon.utils,SimonUtilsAggregationTests,testFilteredCounterAggregateWithSubtreeFilter,Magic Number,The method contains a magic number: 2,173
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testCounterIsAdded,Magic Number,The method contains a magic number: 2,32
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testCounterIsAdded,Magic Number,The method contains a magic number: 3,32
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testIncrementSumIsAdded,Magic Number,The method contains a magic number: 2,45
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testIncrementSumIsAdded,Magic Number,The method contains a magic number: 3,45
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testDecrementSumIsAdded,Magic Number,The method contains a magic number: 2,58
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testDecrementSumIsAdded,Magic Number,The method contains a magic number: 3,58
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 40,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 100,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 40,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 100,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 10,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 200,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 10,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 200,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 20,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 300,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 10,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMinValueIsUpdated,Magic Number,The method contains a magic number: 200,71
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 10,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 100,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 10,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 100,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 40,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 200,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 40,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 200,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 20,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 300,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 40,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testMaxValueIsUpdated,Magic Number,The method contains a magic number: 200,94
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 8,122
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 10,122
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 2,122
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 2,122
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 10,122
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 100,122
+virgo47_javasimon,org.javasimon.utils,CounterAggregateTest,testAggregatesWithSameChangesAreEqual,Magic Number,The method contains a magic number: 200,122
+virgo47_javasimon,org.javasimon.utils,ReplacerTest,nonRepeatingReplacerMakesSinglePass,Magic Number,The method contains a magic number: 100,9
+virgo47_javasimon,org.javasimon.utils,ReplacerTest,repeatingReplacerReducesStringCompletely,Magic Number,The method contains a magic number: 100,15
+virgo47_javasimon,org.javasimon.utils,ReplacerTest,replacerIsCaseSensitiveByDefault,Magic Number,The method contains a magic number: 100,21
+virgo47_javasimon,org.javasimon.utils,ReplacerTest,replacerIgnoresCaseWithModificator,Magic Number,The method contains a magic number: 100,27
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,testSamplesToHtmlTable,Magic Number,The method contains a magic number: 3,23
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createSample,Magic Number,The method contains a magic number: 2,49
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createCounterSample,Magic Number,The method contains a magic number: 555,61
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createCounterSample,Magic Number,The method contains a magic number: 600,61
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createCounterSample,Magic Number,The method contains a magic number: 1000,61
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createCounterSample,Magic Number,The method contains a magic number: 13,61
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createStopwatchSample,Magic Number,The method contains a magic number: 2,72
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createStopwatchSample,Magic Number,The method contains a magic number: 5000,72
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createStopwatchSample,Magic Number,The method contains a magic number: 5000,72
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createStopwatchSample,Magic Number,The method contains a magic number: 15000,72
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createStopwatchSample,Magic Number,The method contains a magic number: 15000,72
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createStopwatchSample,Magic Number,The method contains a magic number: 10000,72
+virgo47_javasimon,org.javasimon.utils,SampleHtmlGeneratorTest,createStopwatchSample,Magic Number,The method contains a magic number: 20000,72
+virgo47_javasimon,org.javasimon.utils.bean,ClassUtils,getSetterType,Long Statement,The length of the statement "throw new BeanUtilsException(String.format("Method %s has %d parameters and cannot be a setter"`setter.getName()`parameterTypes.length));" is 137.,106
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtils,convertStringValue,Long Statement,The length of the statement "throw new BeanUtilsException(String.format("Failed to find find setter/field for property '%s' and value '%s'"`property`strVal));" is 129.,79
+virgo47_javasimon,org.javasimon.utils.bean,ClassUtilsTest,getMultiplePotentialSetters,Magic Number,The method contains a magic number: 2,100
+virgo47_javasimon,org.javasimon.utils.bean,ClassUtilsTest,getInheritedPotentialSetters,Magic Number,The method contains a magic number: 2,118
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetByteProperty,Magic Number,The method contains a magic number: 10,135
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetShortProperty,Magic Number,The method contains a magic number: 10,142
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetIntProperty,Magic Number,The method contains a magic number: 10,149
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetLongProperty,Magic Number,The method contains a magic number: 10,156
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetFloatProperty,Magic Number,The method contains a magic number: 123.456,163
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetFloatProperty,Magic Number,The method contains a magic number: 0.00001,163
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetDoubleProperty,Magic Number,The method contains a magic number: 123.456,170
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetDoubleProperty,Magic Number,The method contains a magic number: 0.00001,170
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetIntField,Magic Number,The method contains a magic number: 123,215
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetDoubleField,Magic Number,The method contains a magic number: 123.456,222
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetIntPropertyWithNoBackendField,Magic Number,The method contains a magic number: 20,265
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSeveralSettersSetInt,Magic Number,The method contains a magic number: 123,312
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetInheritedField,Magic Number,The method contains a magic number: 123,422
+virgo47_javasimon,org.javasimon.utils.bean,SimonBeanUtilsTest,testSetNestedBean,Magic Number,The method contains a magic number: 123,434
+virgo47_javasimon,org.javasimon.utils.bean,ToDoubleConverterTest,testConvertValidValues,Magic Number,The method contains a magic number: 0.00001,23
+virgo47_javasimon,org.javasimon.jmx,CounterSample,CounterSample,Long Parameter List,The method has 11 parameters. ,24
+virgo47_javasimon,org.javasimon.jmx,StopwatchSample,StopwatchSample,Long Parameter List,The method has 18 parameters. ,24
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImpl,getSimonInfos,Long Statement,The length of the statement "simonInfo[i++]=new SimonInfo(name`s instanceof Stopwatch ? SimonInfo.STOPWATCH : s instanceof Counter ? SimonInfo.COUNTER : SimonInfo.UNKNOWN);" is 143.,71
+virgo47_javasimon,org.javasimon.jmx,JmxReporterTest,testStartJmxReporter,Long Statement,The length of the statement "verify(beanServer).registerMBean(argThat(new SimonManagerMXBeanVerifier(manager))`eq(new ObjectName(JmxReporter.DEFAULT_BEAN_NAME)));" is 133.,56
+virgo47_javasimon,org.javasimon.jmx,JmxReporterTest,testStartJmxReporterForDefaultManager,Long Statement,The length of the statement "verify(beanServer).registerMBean(argThat(new SimonManagerMXBeanVerifier(defaultManager))`eq(new ObjectName(JmxReporter.DEFAULT_BEAN_NAME)));" is 140.,72
+virgo47_javasimon,org.javasimon.jmx,JmxReporterTest,testRegisterSimons,Long Statement,The length of the statement "verify(compositeCallback).addCallback(argThat(new JmxRegistrationCallbackVerifier(JmxReporter.DEFAULT_SIMON_DOMAIN`beanServer)));" is 129.,157
+virgo47_javasimon,org.javasimon.jmx,JmxReporterTest,testRegisterSimonsWithCustomDomain,Long Statement,The length of the statement "JmxReporter.forManager(manager).beanName(CUSTOM_BEAN_NAME).beanServer(beanServer).registerSimons().simonDomain(simonDomain).start();" is 132.,171
+virgo47_javasimon,org.javasimon.jmx,JmxReporterTest,testSimonBeanUnregisteredOnStop,Long Statement,The length of the statement "JmxReporter reporter=JmxReporter.forManager(manager).beanName(CUSTOM_BEAN_NAME).beanServer(beanServer).registerSimons().simonDomain(simonDomain).start();" is 153.,185
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,beforeMethod,Long Statement,The length of the statement "when(manager.getSimons(SimonPattern.createForStopwatch(STOPWATCH_PATTERN))).thenReturn(Arrays.<Simon>asList(stopwatchA));" is 121.,40
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,beforeMethod,Magic Number,The method contains a magic number: 2,40
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,beforeMethod,Magic Number,The method contains a magic number: 2,40
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetCounterSamples,Magic Number,The method contains a magic number: 2,91
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetStopwatchSamples,Magic Number,The method contains a magic number: 2,111
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSampleWithExistingSample,Magic Number,The method contains a magic number: 2,131
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSampleWithExistingSample,Magic Number,The method contains a magic number: 2,131
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSamplesWithExistingSample,Magic Number,The method contains a magic number: 2,141
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSamplesWithExistingSample,Magic Number,The method contains a magic number: 2,141
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSamplesWithoutPattern,Magic Number,The method contains a magic number: 3,152
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSamplesWithoutPattern,Magic Number,The method contains a magic number: 4,152
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSamplesWithoutPattern,Magic Number,The method contains a magic number: 2,152
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSamplesWithoutPattern,Magic Number,The method contains a magic number: 3,152
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementCounterSamplesWithoutPattern,Magic Number,The method contains a magic number: 4,152
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSampleWithExistingSample,Magic Number,The method contains a magic number: 2,166
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSampleWithExistingSample,Magic Number,The method contains a magic number: 2,166
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSamplesWithExistingSample,Magic Number,The method contains a magic number: 2,176
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSamplesWithExistingSample,Magic Number,The method contains a magic number: 2,176
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSamplesWithoutPattern,Magic Number,The method contains a magic number: 3,187
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSamplesWithoutPattern,Magic Number,The method contains a magic number: 4,187
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSamplesWithoutPattern,Magic Number,The method contains a magic number: 2,187
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSamplesWithoutPattern,Magic Number,The method contains a magic number: 3,187
+virgo47_javasimon,org.javasimon.jmx,SimonManagerMXBeanImplTest,testGetIncrementStopwatchSamplesWithoutPattern,Magic Number,The method contains a magic number: 4,187
+virgo47_javasimon,org.javasimon.callback.logging,LogTemplateTest,testCounter,Magic Number,The method contains a magic number: 3,78
+virgo47_javasimon,org.javasimon.callback.logging,LogTemplateTest,testPeriodic,Magic Number,The method contains a magic number: 1000,106
+virgo47_javasimon,org.javasimon.callback.logging,LogTemplateTest,testPeriodic,Magic Number,The method contains a magic number: 500L,106
+virgo47_javasimon,org.javasimon.callback.logging,LogTemplateTest,testPeriodic,Magic Number,The method contains a magic number: 300L,106
+virgo47_javasimon,org.javasimon.callback.logging,LogTemplateTest,testPeriodic,Magic Number,The method contains a magic number: 550L,106
+virgo47_javasimon,org.javasimon.callback.logging,LogTemplateTest,testPeriodic,Magic Number,The method contains a magic number: 1550L,106
+virgo47_javasimon,org.javasimon.callback,CompositeFilterCallback,checkRules,Complex Method,Cyclomatic complexity of the method is 8,179
+virgo47_javasimon,org.javasimon.callback,CompositeFilterCallback,patternAndConditionCheck,Complex Conditional,The conditional expression simon != null && rule.getPattern() != null && !rule.getPattern().accept(simon) is complex.,208
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplits,getTrend,Magic Number,The method contains a magic number: 1000,201
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplits,toString,Long Statement,The length of the statement "stringBuilder.append("`values=[").append(values).append("]").append("`min=").append(presentNanoTime(min)).append("`mean=").append(presentNanoTime(mean)).append("`max=").append(presentNanoTime(max));" is 198.,269
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallback,LastSplitsCallback,Magic Number,The method contains a magic number: 10,44
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testAddAndSize,Magic Number,The method contains a magic number: 5,16
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testAddAndSize,Magic Number,The method contains a magic number: 2,16
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testAddAndSize,Magic Number,The method contains a magic number: 3,16
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testAddAndSize,Magic Number,The method contains a magic number: 4,16
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testAddAndSize,Magic Number,The method contains a magic number: 5,16
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testAddAndSize,Magic Number,The method contains a magic number: 5,16
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testAddAndSize,Magic Number,The method contains a magic number: 5,16
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testIterator,Magic Number,The method contains a magic number: 5,50
+virgo47_javasimon,org.javasimon.callback.lastsplits,CircularListTest,testToArray,Magic Number,The method contains a magic number: 5,73
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,resetManager,Magic Number,The method contains a magic number: 5,21
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 100L,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 150L,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 125L,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 150L,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 100L,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 150L,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 150,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 2,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 125,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 100,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testAddSplit,Magic Number,The method contains a magic number: 4L,27
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testTrend,Magic Number,The method contains a magic number: 100L,39
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testTrend,Magic Number,The method contains a magic number: 125L,39
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testTrend,Magic Number,The method contains a magic number: 150L,39
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testTrend,Magic Number,The method contains a magic number: 150L,39
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testTrend,Magic Number,The method contains a magic number: 125L,39
+virgo47_javasimon,org.javasimon.callback.lastsplits,LastSplitsCallbackTest,testTrend,Magic Number,The method contains a magic number: 100L,39
+virgo47_javasimon,org.javasimon.callback.timeline,TimelineCallback,TimelineCallback,Magic Number,The method contains a magic number: 6,54
+virgo47_javasimon,org.javasimon.callback.timeline,TimelineCallback,TimelineCallback,Magic Number,The method contains a magic number: 1000L,54
+virgo47_javasimon,org.javasimon.callback.timeline,TimelineCallback,TimelineCallback,Magic Number,The method contains a magic number: 60L,54
+virgo47_javasimon,org.javasimon.callback.timeline,TimelineCallback,TimelineCallback,Magic Number,The method contains a magic number: 6L,54
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRange,toStringBuilder,Long Statement,The length of the statement "return super.toStringBuilder(stringBuilder).append(" counter=").append(counter).append(" total=").append(SimonUtils.presentNanoTime(total)).append(" min=").append(SimonUtils.presentNanoTime(min)).append(" mean=").append(SimonUtils.presentNanoTime(getMean())).append(" last=").append(SimonUtils.presentNanoTime(getLast())).append(" max=").append(SimonUtils.presentNanoTime(max)).append(" stddev=").append(SimonUtils.presentNanoTime(getStandardDeviation()));" is 456.,115
+virgo47_javasimon,org.javasimon.callback.timeline,TimeRange,toStringBuilder,Long Statement,The length of the statement "return stringBuilder.append(getClass().getSimpleName()).append(" start=").append(SimonUtils.presentTimestamp(startTimestamp)).append(" end=").append(SimonUtils.presentTimestamp(endTimestamp));" is 192.,54
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 2012,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 7,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 12,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 21,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 5,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 2012,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 7,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 12,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 21,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,createStopwatchTimeRange,Magic Number,The method contains a magic number: 10,19
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 2012,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 7,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 12,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 21,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 7,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 2012,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 7,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 12,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 21,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 13,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 2012,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 7,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 12,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 21,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testContainsTimestamp,Magic Number,The method contains a magic number: 4,23
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 2012,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 7,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 12,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 21,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 11,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 100,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 2012,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 7,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 12,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 21,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 12,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 200,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 2012,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 7,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 12,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 21,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 13,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 300,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 3,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 600,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 200.0d,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 0.01d,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 100,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 300,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 300,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 81.65d,34
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimeRangeTest,testStatistics,Magic Number,The method contains a magic number: 0.01d,34
+virgo47_javasimon,org.javasimon.callback.timeline,TimeUtil,createTimestamp,Long Parameter List,The method has 6 parameters. ,15
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 10,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 5,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 60,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 1000,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 51,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 100,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 52,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 13,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 200,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 53,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 14,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 300,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 56,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 15,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 100,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 57,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 16,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 200,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 54,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 17,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 200,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 44,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 18,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 400,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 22,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 19,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 100,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 22,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 20,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 200,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 22,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 3,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 200,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2012,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 7,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 12,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 21,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 54,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 22,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 250,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 3,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 5,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 2,22
+virgo47_javasimon,org.javasimon.callback.timeline,StopwatchTimelineTest,testAddSplit,Magic Number,The method contains a magic number: 3,22
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,Buckets,Magic Number,The method contains a magic number: 3,48
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,Buckets,Magic Number,The method contains a magic number: 2,48
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,checkAndGetTotalCount,Long Statement,The length of the statement "throw new IllegalStateException("Only " + usedBuckets + " buckets used` not enough for interpolation` consider reconfiguring min/max/nb");" is 138.,73
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,checkAndGetTotalCount,Magic Number,The method contains a magic number: 3,73
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,getMedian,Magic Number,The method contains a magic number: 0.5D,189
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,getQuartiles,Magic Number,The method contains a magic number: 0.25D,198
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,getQuartiles,Magic Number,The method contains a magic number: 0.50D,198
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,getQuartiles,Magic Number,The method contains a magic number: 0.75D,198
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,getQuantiles,Empty catch clause,The method has an empty catch block.,203
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,getQuantiles,Empty catch clause,The method has an empty catch block.,203
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,sample,Magic Number,The method contains a magic number: 0.50D,235
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,sample,Magic Number,The method contains a magic number: 0.90D,235
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,toString,Complex Method,Cyclomatic complexity of the method is 10,256
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,toString,Long Statement,The length of the statement "stringBuilder.append("min=").append(presentNanoTime(min)).append("`max=").append(presentNanoTime(max)).append("`nb=").append(bucketNb).append("] Quantiles[");" is 158.,256
+virgo47_javasimon,org.javasimon.callback.quantiles,Buckets,toString,Magic Number,The method contains a magic number: 10,256
+virgo47_javasimon,org.javasimon.callback.quantiles,AutoQuantilesCallback,AutoQuantilesCallback,Magic Number,The method contains a magic number: 10,56
+virgo47_javasimon,org.javasimon.callback.quantiles,AutoQuantilesCallback,AutoQuantilesCallback,Magic Number,The method contains a magic number: 8,56
+virgo47_javasimon,org.javasimon.callback.quantiles,AutoQuantilesCallback,createBucketsAfterWarmup,Magic Number,The method contains a magic number: 90L,105
+virgo47_javasimon,org.javasimon.callback.quantiles,AutoQuantilesCallback,createBucketsAfterWarmup,Magic Number,The method contains a magic number: 100L,105
+virgo47_javasimon,org.javasimon.callback.quantiles,AutoQuantilesCallback,createBucketsAfterWarmup,Magic Number,The method contains a magic number: 110L,105
+virgo47_javasimon,org.javasimon.callback.quantiles,AutoQuantilesCallback,createBucketsAfterWarmup,Magic Number,The method contains a magic number: 100L,105
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBuckets,estimateQuantile,Long Statement,The length of the statement "return bucket.getMin() + (bucket.getMax() - bucket.getMin()) * Math.exp(Math.log(expectedCount - lastCount) / Math.log(bucket.getCount()));" is 139.,61
+virgo47_javasimon,org.javasimon.callback.quantiles,QuantilesCallback,createLogTemplate,Magic Number,The method contains a magic number: 60,73
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 60000,25
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 5,25
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 60000,25
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 10,25
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 300000,25
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 10,25
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 60000,25
+virgo47_javasimon,org.javasimon.callback.quantiles,PropertiesQuantilesCallbackTest,testCreateBuckets,Magic Number,The method contains a magic number: 10,25
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 10000L,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 4,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 5,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 10,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 200,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 1000,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 1001,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 5000,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 10000,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 6,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 2,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 2,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 3,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 4,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 3,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testAdd,Magic Number,The method contains a magic number: 5,15
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 64L,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 6,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 2,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 25,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 33,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 34,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 16D,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 0.1D,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 2,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 4,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 33,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 35,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 65,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 32D,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 0.1D,36
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 10000L,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 4,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 5,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 10,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 20,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 30,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 40,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 50,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 110,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 120,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 130,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 1050,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 0.9D,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 1000D,56
+virgo47_javasimon,org.javasimon.callback.quantiles,ExponentialBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 0.1D,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 500L,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 5,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 50,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 60,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 125,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 340,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 620,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 7,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 2,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 2,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 3,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 4,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 5,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testAdd,Magic Number,The method contains a magic number: 6,15
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 500L,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 5,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 50,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 150,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 250,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 350,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 450,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 250D,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 0.1D,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 10,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 20,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 110,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 120,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 210,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 220,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 310,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 320,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 200D,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles1,Magic Number,The method contains a magic number: 0.1D,34
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 500L,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 5,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 10,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 20,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 30,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 40,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 50,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 110,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 120,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 130,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 140,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 300,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 200D,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 0.9D,56
+virgo47_javasimon,org.javasimon.callback.quantiles,LinearBucketsTest,testQuantiles2,Magic Number,The method contains a magic number: 0.1D,56
+virgo47_javasimon,org.javasimon.callback.calltree,CallTreeCallback,CallTreeCallback,Magic Number,The method contains a magic number: 500L,46
+virgo47_javasimon,org.javasimon.callback.calltree,CallTreeNode,getPercent,Magic Number,The method contains a magic number: 100L,96
+virgo47_javasimon,org.javasimon.callback.calltree,CallTreeNode,print,Magic Number,The method contains a magic number: 100,169
+virgo47_javasimon,org.javasimon.callback.calltree,CallTreeTest,testStopwatchStartStop,Magic Number,The method contains a magic number: 2,46
+virgo47_javasimon,org.javasimon.callback.calltree,CallTreeTest,testStopwatchStartStop,Magic Number,The method contains a magic number: 2,46
+virgo47_javasimon,org.javasimon.callback.calltree,CallTreeTest,testStopwatchStartStop,Magic Number,The method contains a magic number: 2,46
+virgo47_javasimon,org.javasimon.proxy,DelegatingMethodInvocation,run,Empty catch clause,The method has an empty catch block.,56
+virgo47_javasimon,org.javasimon.proxy,StopwatchProxyTest,doTest,Magic Number,The method contains a magic number: 2L,59
+virgo47_javasimon,org.javasimon.spring,SpringStopwatchSource,getMonitorName,Complex Conditional,The conditional expression methodAnnotation != null && methodAnnotation.name() != null && methodAnnotation.name().length() > 0 is complex.,63
+virgo47_javasimon,org.javasimon.spring,SpringStopwatchSource,getMonitorName,Complex Conditional,The conditional expression classAnnotation != null && classAnnotation.name() != null && classAnnotation.name().length() > 0 is complex.,63
+virgo47_javasimon,org.javasimon.spring,SpringStopwatchSource,getMonitorName,Complex Conditional,The conditional expression methodAnnotation != null && methodAnnotation.suffix() != null && methodAnnotation.suffix().length() > 0 is complex.,63
+virgo47_javasimon,org.javasimon.spring,MonitoredMeasuringPointcut,isMonitoredAnnotationOnClassOrMethod,Long Statement,The length of the statement "return AnnotationUtils.findAnnotation(targetClass`Monitored.class) != null || AnnotationUtils.findAnnotation(AopUtils.getMostSpecificMethod(method`targetClass)`Monitored.class) != null;" is 185.,50
+virgo47_javasimon,org.javasimon.spring.webmvc,HandlerStopwatchSource,getMonitorName,Long Statement,The length of the statement "stringBuilder.append(handlerMethod.getBeanType().getSimpleName()).append(".").append(handlerMethod.getMethod().getName());" is 122.,33
+virgo47_javasimon,org.javasimon.spring.webmvc,MonitoringHandlerInterceptorTest,processRequest,Long Parameter List,The method has 5 parameters. ,42
+virgo47_javasimon,org.javasimon.spring.webmvc,MonitoringHandlerInterceptorTest,processRequest,Magic Number,The method contains a magic number: 10L,42
+virgo47_javasimon,org.javasimon.spring.webmvc,MonitoringHandlerInterceptorTest,testRequestWithHandlerMethod,Long Statement,The length of the statement "processRequest("request/uri"`new HandlerMethod(new Object()`Object.class.getDeclaredMethod("toString"))`500L`"view"`100L);" is 122.,78
+virgo47_javasimon,org.javasimon.spring.webmvc,MonitoringHandlerInterceptorTest,testRequestWithHandlerMethod,Magic Number,The method contains a magic number: 500L,78
+virgo47_javasimon,org.javasimon.spring.webmvc,MonitoringHandlerInterceptorTest,testRequestWithHandlerMethod,Magic Number,The method contains a magic number: 100L,78
+virgo47_javasimon,org.javasimon.spring.webmvc,MonitoringHandlerInterceptorTest,testRequestWithHandlerObject,Magic Number,The method contains a magic number: 500L,94
+virgo47_javasimon,org.javasimon.spring.webmvc,MonitoringHandlerInterceptorTest,testRequestWithHandlerObject,Magic Number,The method contains a magic number: 100L,94
+virgo47_javasimon,org.javasimon.console,SimonConsoleRequestProcessor,initActionBindings,Long Statement,The length of the statement "logBuilder.append(urlPrefix).append(simpleActionBinding.getPath()).append(':').append(simpleActionBinding.getActionClass().getName()).append(' ');" is 146.,134
+virgo47_javasimon,org.javasimon.console,Action,findSimonByName,Empty catch clause,The method has an empty catch block.,47
+virgo47_javasimon,org.javasimon.console,SimpleActionBinding,create,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@61ad6457,59
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 100,24
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 200,24
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 300,24
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 200,24
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 300,24
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 100,24
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 4L,24
+virgo47_javasimon,org.javasimon.console,SimonData,initStopwatches,Magic Number,The method contains a magic number: 2L,24
+virgo47_javasimon,org.javasimon.console,SimonConsolePluginManagerTest,testGetPluginByType,Magic Number,The method contains a magic number: 2,66
+virgo47_javasimon,org.javasimon.console.html,HtmlBuilder,header,Long Statement,The length of the statement "return (T)begin("html").begin("head").begin("title").text("Simon Console: ").text(title).end("title").resources(resources).end("head").begin("body").begin("h1").write("<img id=\"logo\" src=\"../resource/images/logo.png\" alt=\"Logo\" />").text("Simon Console: ").text(title).end("h1");" is 285.,158
+virgo47_javasimon,org.javasimon.console.text,StringifierFactory,init,Long Statement,The length of the statement "final LongTimeStringifier longTimeStringifier=new LongTimeStringifier(nullStringifier`longStringifier`stringStringifier`timeFormat);" is 132.,104
+virgo47_javasimon,org.javasimon.console.text,StringifierFactory,init,Long Statement,The length of the statement "final DoubleTimeStringifier doubleTimeStringifier=new DoubleTimeStringifier(nullStringifier`doubleStringifier`stringStringifier`timeFormat);" is 140.,104
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,registerStringStringifier,Complex Method,Cyclomatic complexity of the method is 13,20
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,registerStringStringifier,Magic Number,The method contains a magic number: 6,20
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,registerStringStringifier,Magic Number,The method contains a magic number: 4,20
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,registerStringStringifier,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@23313a87,20
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,doToString,Complex Method,Cyclomatic complexity of the method is 13,23
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,doToString,Magic Number,The method contains a magic number: 6,23
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,doToString,Magic Number,The method contains a magic number: 4,23
+virgo47_javasimon,org.javasimon.console.json,JsonStringifierFactory,doToString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@23313a87,23
+virgo47_javasimon,org.javasimon.console.json,ObjectJSTest,setUp,Long Statement,The length of the statement "stringifierFactory.init(TimeFormatType.MILLISECOND`JsonStringifierFactory.READABLE_DATE_PATTERN`JsonStringifierFactory.READABLE_NUMBER_PATTERN);" is 144.,38
+virgo47_javasimon,org.javasimon.console.json,ObjectJSTest,testCreate,Magic Number,The method contains a magic number: 123L,43
+virgo47_javasimon,org.javasimon.console.json,ObjectJSTest,testCreate,Magic Number,The method contains a magic number: 123L,43
+virgo47_javasimon,org.javasimon.console.json,ObjectJSTest,testWrite,Magic Number,The method contains a magic number: 123L,53
+virgo47_javasimon,org.javasimon.console.json,ObjectJSTest,testWrite,Magic Number,The method contains a magic number: 123,53
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,createStringifierFactory,Long Statement,The length of the statement "stringifierFactory.init(timeFormat`JsonStringifierFactory.READABLE_DATE_PATTERN`JsonStringifierFactory.READABLE_NUMBER_PATTERN);" is 128.,15
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,testDouble,Magic Number,The method contains a magic number: 5e15d,21
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,testLong,Magic Number,The method contains a magic number: 12345L,35
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,testTime,Long Statement,The length of the statement "SimpleJS<Long> simpleJS=new SimpleJS<>(inputTime`stringifierFactory.getStringifier(Long.class`JsonStringifierFactory.TIME_SUBTYPE));" is 132.,42
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,testTime,Magic Number,The method contains a magic number: 123456789L,50
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,testTime,Magic Number,The method contains a magic number: 123456789L,50
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,testTime,Magic Number,The method contains a magic number: 123456789L,50
+virgo47_javasimon,org.javasimon.console.json,SimpleJSTest,testTime,Magic Number,The method contains a magic number: 123456789L,50
+virgo47_javasimon,org.javasimon.console.plugin,CallTreeDetailPlugin,htmlTreeNode,Long Statement,The length of the statement "htmlBuilder.text("total&nbsp;").text(htmlStringifierFactory.toString(node.getTotal()`"Time")).text("` ").text("count&nbsp;").text(htmlStringifierFactory.toString(node.getSplitCount()));" is 185.,70
+virgo47_javasimon,org.javasimon.console.plugin,CallTreeDetailPlugin,executeHtml,Long Statement,The length of the statement "htmlBuilder.beginRow().labelCell("Threshold").valueCell(htmlStringifierFactory.toString(callTree.getLogThreshold()`"Time")).endRow().beginRow().labelCell("Tree").beginValueCell().begin("ul");" is 191.,94
+virgo47_javasimon,org.javasimon.console.plugin,TimelineDetailPlugin,executeHtml,Long Statement,The length of the statement "htmlBuilder.beginRow().labelCell("Capacity").valueCell(htmlStringifierFactory.toString(timelineSample.getCapacity())).labelCell("Width").valueCell(htmlStringifierFactory.toString(timelineSample.getWidth() * SimonClock.NANOS_IN_MILLIS`"Time")).endRow();" is 252.,78
+virgo47_javasimon,org.javasimon.console.plugin,TimelineDetailPlugin,executeHtml,Long Statement,The length of the statement "htmlBuilder.labelCell("Counter").labelCell("Total").labelCell("Min").labelCell("Mean").labelCell("Last").labelCell("Max").labelCell("Std. Dev.");" is 145.,78
+virgo47_javasimon,org.javasimon.console.plugin,TimelineDetailPlugin,executeHtml,Long Statement,The length of the statement "htmlBuilder.beginRow().valueCell(htmlStringifierFactory.toString(timeRange.getStartTimestamp()`"Date")).valueCell(htmlStringifierFactory.toString(timeRange.getEndTimestamp()`"Date"));" is 183.,78
+virgo47_javasimon,org.javasimon.console.plugin,TimelineDetailPlugin,executeHtml,Long Statement,The length of the statement "htmlBuilder.valueCell(htmlStringifierFactory.toString(sTimeRange.getCounter())).valueCell(htmlStringifierFactory.toString(sTimeRange.getTotal()`"Time")).valueCell(htmlStringifierFactory.toString(sTimeRange.getMin()`"Time")).valueCell(htmlStringifierFactory.toString(sTimeRange.getMean()`"Time")).valueCell(htmlStringifierFactory.toString(sTimeRange.getLast()`"Time")).valueCell(htmlStringifierFactory.toString(sTimeRange.getMax()`"Time")).valueCell(htmlStringifierFactory.toString(sTimeRange.getStandardDeviation()`"Time"));" is 524.,78
+virgo47_javasimon,org.javasimon.console.plugin,QuantilesDetailPlugin,executeHtml,Long Statement,The length of the statement "htmlBuilder.beginRow().labelCell("Median").valueCell(htmlStringifierFactory.toString(bucketsSample.getMedian()`"Time")).labelCell("90%").valueCell(htmlStringifierFactory.toString(bucketsSample.getPercentile90()`"Time")).endRow();" is 229.,69
+virgo47_javasimon,org.javasimon.console.plugin,QuantilesDetailPlugin,executeHtml,Long Statement,The length of the statement "htmlBuilder.beginRow().beginValueCell().value(bucketSample.getMin()`"Time").endValueCell().beginValueCell().value(bucketSample.getMax()`"Time").endValueCell().beginValueCell().write("<div class=\"bar\" style=\"width:").write(Integer.toString(barSize)).write("px\">&nbsp;").end("div").value(count`null).endValueCell().endRow();" is 326.,69
+virgo47_javasimon,org.javasimon.console.plugin,QuantilesDetailPlugin,executeHtml,Magic Number,The method contains a magic number: 200,69
+virgo47_javasimon,org.javasimon.console.reflect,GetterFactory,isGetterMethod,Long Statement,The length of the statement "return !Modifier.isStatic(method.getModifiers()) && (method.getName().startsWith("get") || method.getName().startsWith("is")) && method.getParameterTypes().length == 0;" is 168.,23
+virgo47_javasimon,org.javasimon.console.reflect,GetterFactory,getPropertyName,Magic Number,The method contains a magic number: 3,30
+virgo47_javasimon,org.javasimon.console.reflect,GetterFactory,getPropertyName,Magic Number,The method contains a magic number: 2,30
+virgo47_javasimon,org.javasimon.console.action,AbstractJsonAction,readParameters,Long Statement,The length of the statement "jsonStringifierFactory.init(timeFormat`JsonStringifierFactory.READABLE_DATE_PATTERN`JsonStringifierFactory.INTEGER_NUMBER_PATTERN);" is 131.,36
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,readParameters,Long Statement,The length of the statement "stringifierFactory.init(getContext().getParameterAsEnum("timeFormat"`TimeFormatType.class`TimeFormatType.MILLISECOND)`StringifierFactory.READABLE_DATE_PATTERN`StringifierFactory.READABLE_NUMBER_PATTERN);" is 203.,36
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Long Statement,The length of the statement "htmlBuilder.header("Detail View"`DetailPlugin.getResources(getContext()`DetailPlugin.class)).beginSection("simonPanel"`"Simon").beginRow().simonProperty(simon`"Name"`"name"`5).endRow().beginRow().labelCell("Type").beginValueCell().simonTypeImg(simonType`"../../").object(simonType).endValueCell().simonProperty(simon`"State"`"state").simonProperty(simon`"Enabled"`"enabled").endRow().beginRow().simonProperty(simon`"Note"`"note"`5).endRow().beginRow().simonProperty(simon`"First Use"`"firstUsage").simonProperty(simon`"Last Use"`"lastUsage").endRow().endSection();" is 564.,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Long Statement,The length of the statement "htmlBuilder.beginSection("stopwatchPanel"`"Stopwatch").beginRow().simonProperty(simon`"Counter"`"counter").simonProperty(simon`"Total"`"total"`3).endRow().beginRow().simonProperty(simon`"Min"`"min"`3).simonProperty(simon`"Min Timestamp"`"minTimeStamp").endRow().beginRow().simonProperty(simon`"Mean"`"mean").simonProperty(simon`"Standard Deviation"`"standardDeviation"`3).endRow().beginRow().simonProperty(simon`"Max"`"max"`3).simonProperty(simon`"Max Timestamp"`"maxTimeStamp").endRow().beginRow().simonProperty(simon`"Last"`"last"`3).simonProperty(simon`"Last Timestamp"`"lastUsage").endRow().beginRow().simonProperty(simon`"Active"`"active").simonProperty(simon`"Max Active"`"maxActive").simonProperty(simon`"Max Active Timestamp"`"maxActiveTimestamp").endRow().endSection();" is 778.,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Long Statement,The length of the statement "htmlBuilder.beginSection("counterPanel"`"Counter").beginRow().simonProperty(simon`"Counter"`"counter").endRow().beginRow().simonProperty(simon`"Min"`"min").simonProperty(simon`"Min Timestamp"`"minTimeStamp").endRow().beginRow().simonProperty(simon`"Max"`"max").simonProperty(simon`"Max Timestamp"`"maxTimeStamp").endRow().beginRow().simonProperty(simon`"Increment Sum"`"incrementSum").simonProperty(simon`"Decrement Sum"`"decrementSum").endRow().endSection();" is 459.,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Magic Number,The method contains a magic number: 5,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Magic Number,The method contains a magic number: 5,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Magic Number,The method contains a magic number: 3,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Magic Number,The method contains a magic number: 3,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Magic Number,The method contains a magic number: 3,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Magic Number,The method contains a magic number: 3,44
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlAction,execute,Magic Number,The method contains a magic number: 3,44
+virgo47_javasimon,org.javasimon.console.action,ResourceAction,copyStream,Magic Number,The method contains a magic number: 65535,82
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlBuilder,beginSection,Long Statement,The length of the statement "return begin("div"`id`"sectionPanel").begin("div"`null`"title").write(title).end("div").begin("table"`null`"sectionTable");" is 123.,21
+virgo47_javasimon,org.javasimon.console.action,DetailHtmlBuilder,simonProperty,Long Statement,The length of the statement "return labelCell(propertyLabel).beginValueCell(" colspan=\"" + colSpan + "\"").simonProperty(simon`propertyName).endValueCell();" is 128.,67
+virgo47_javasimon,org.javasimon.console.action,AbstractXmlAction,readParameters,Long Statement,The length of the statement "final TimeFormatType timeFormat=getContext().getParameterAsEnum("timeFormat"`TimeFormatType.class`TimeFormatType.MILLISECOND);" is 126.,45
+virgo47_javasimon,org.javasimon.console.action,TableHtmlAction,printBodyRow,Magic Number,The method contains a magic number: 2,63
+virgo47_javasimon,org.javasimon.console.action,TableHtmlAction,printCell,Empty catch clause,The method has an empty catch block.,71
+virgo47_javasimon,org.javasimon.console.action,ResourceActionTest,testExecute,Magic Number,The method contains a magic number: 128,20
+virgo47_javasimon,org.javasimon.console.action,TableJsonActionTest,testExecute,Long Statement,The length of the statement "assertTrue(json.contains("{\"name\":\"A\"`\"type\":\"STOPWATCH\"`\"counter\":3`\"total\":600`\"min\":100`\"mean\":200`\"last\":300`\"max\":300`\"standardDeviation\":100"));" is 172.,29
+virgo47_javasimon,org.javasimon.console.action,TableJsonActionTest,testExecute,Long Statement,The length of the statement "assertTrue(json.contains("{\"name\":\"B\"`\"type\":\"STOPWATCH\"`\"counter\":2`\"total\":300`\"min\":100`\"mean\":150`\"last\":100`\"max\":200`\"standardDeviation\":71"));" is 171.,29
+virgo47_javasimon,org.javasimon.console.action,TableJsonActionTest,testExecute,Long Statement,The length of the statement "assertTrue(json.contains("{\"name\":\"C\"`\"type\":\"STOPWATCH\"`\"counter\":1`\"total\":300`\"min\":300`\"mean\":300`\"last\":300`\"max\":300`\"standardDeviation\":0"));" is 170.,29
+virgo47_javasimon,org.javasimon.console.action,TableJsonActionTest,testExecute,Long Statement,The length of the statement "assertTrue(json.contains("{\"name\":\"X\"`\"type\":\"COUNTER\"`\"counter\":2`\"total\":\"\"`\"min\":1`\"mean\":\"\"`\"last\":\"\"`\"max\":4"));" is 143.,29
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 100L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 300L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 200L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 600L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 300L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 200L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 3L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteStopwatch,Magic Number,The method contains a magic number: 100L,33
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteCounter,Magic Number,The method contains a magic number: 4L,53
+virgo47_javasimon,org.javasimon.console.action,DetailJsonActionTest,testExecuteCounter,Magic Number,The method contains a magic number: 2L,53
+virgo47_javasimon,org.javasimon.console.action,PluginsJsonActionTest,testExecuteAll,Magic Number,The method contains a magic number: 2,30
+virgo47_javasimon,org.javasimon.console.action,PluginsJsonActionTest,testExecuteAll,Magic Number,The method contains a magic number: 2,30
+virgo47_javasimon,org.javasimon.console.action,TableHtmlActionTest,testExecute,Long Statement,The length of the statement "assertTrue(html.contains("<td class=\"name\">B</td><td class=\"type\"><img class=\"stopwatch icon\" src=\"../../resource/images/TypeStopwatch.png\" alt=\"stopwatch\" />STOPWATCH</td><td class=\"counter\">2</td><td class=\"total\">300</td><td class=\"min\">100</td><td class=\"mean\">150</td><td class=\"last\">100</td><td class=\"max\">200</td><td class=\"standardDeviation\">71</td>"));" is 387.,23
+virgo47_javasimon,org.javasimon.console.action,TableHtmlActionTest,testExecute,Long Statement,The length of the statement "assertTrue(html.contains("<td class=\"name\">A</td><td class=\"type\"><img class=\"stopwatch icon\" src=\"../../resource/images/TypeStopwatch.png\" alt=\"stopwatch\" />STOPWATCH</td><td class=\"counter\">3</td><td class=\"total\">600</td><td class=\"min\">100</td><td class=\"mean\">200</td><td class=\"last\">300</td><td class=\"max\">300</td><td class=\"standardDeviation\">100</td>"));" is 388.,23
+virgo47_javasimon,org.javasimon.console.action,TableHtmlActionTest,testExecute,Long Statement,The length of the statement "assertTrue(html.contains("<td class=\"name\">C</td><td class=\"type\"><img class=\"stopwatch icon\" src=\"../../resource/images/TypeStopwatch.png\" alt=\"stopwatch\" />STOPWATCH</td><td class=\"counter\">1</td><td class=\"total\">300</td><td class=\"min\">300</td><td class=\"mean\">300</td><td class=\"last\">300</td><td class=\"max\">300</td><td class=\"standardDeviation\">0</td>"));" is 386.,23
+virgo47_javasimon,org.javasimon.console.action,TableHtmlActionTest,testExecuteTimeFormat,Long Statement,The length of the statement "assertTrue(html.contains("<td class=\"name\">B</td><td class=\"type\"><img class=\"stopwatch icon\" src=\"../../resource/images/TypeStopwatch.png\" alt=\"stopwatch\" />STOPWATCH</td><td class=\"counter\">2</td><td class=\"total\">300 ms</td><td class=\"min\">100 ms</td><td class=\"mean\">150 ms</td><td class=\"last\">100 ms</td><td class=\"max\">200 ms</td><td class=\"standardDeviation\">70.7 ms</td>"));" is 407.,36
+virgo47_javasimon,org.javasimon.console.action,TableHtmlActionTest,testExecuteTimeFormat,Long Statement,The length of the statement "assertTrue(html.contains("<td class=\"name\">A</td><td class=\"type\"><img class=\"stopwatch icon\" src=\"../../resource/images/TypeStopwatch.png\" alt=\"stopwatch\" />STOPWATCH</td><td class=\"counter\">3</td><td class=\"total\">600 ms</td><td class=\"min\">100 ms</td><td class=\"mean\">200 ms</td><td class=\"last\">300 ms</td><td class=\"max\">300 ms</td><td class=\"standardDeviation\">100 ms</td>"));" is 406.,36
+virgo47_javasimon,org.javasimon.console.action,TableHtmlActionTest,testExecuteTimeFormat,Long Statement,The length of the statement "assertTrue(html.contains("<td class=\"name\">C</td><td class=\"type\"><img class=\"stopwatch icon\" src=\"../../resource/images/TypeStopwatch.png\" alt=\"stopwatch\" />STOPWATCH</td><td class=\"counter\">1</td><td class=\"total\">300 ms</td><td class=\"min\">300 ms</td><td class=\"mean\">300 ms</td><td class=\"last\">300 ms</td><td class=\"max\">300 ms</td><td class=\"standardDeviation\">0</td>"));" is 401.,36

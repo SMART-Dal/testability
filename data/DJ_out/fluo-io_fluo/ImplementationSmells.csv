@@ -1,0 +1,1138 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoKeyValueGenerator,FluoKeyValueGenerator,Magic Number,The method contains a magic number: 2,81
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoRowInputFormat,createRecordReader,Long Statement,The length of the statement "@Override public void initialize( InputSplit split` TaskAttemptContext context) throws IOException` InterruptedException {" is 122.,55
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoRowInputFormat,createRecordReader,Long Statement,The length of the statement "ByteArrayInputStream bais=new ByteArrayInputStream(context.getConfiguration().get(PROPS_CONF_KEY).getBytes(StandardCharsets.UTF_8));" is 132.,55
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoRowInputFormat,initialize,Long Statement,The length of the statement "ByteArrayInputStream bais=new ByteArrayInputStream(context.getConfiguration().get(PROPS_CONF_KEY).getBytes(StandardCharsets.UTF_8));" is 132.,93
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoOutputFormat,getRecordWriter,Long Statement,The length of the statement "ByteArrayInputStream bais=new ByteArrayInputStream(context.getConfiguration().get(PROPS_CONF_KEY).getBytes(StandardCharsets.UTF_8));" is 132.,74
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoEntryInputFormat,createRecordReader,Long Statement,The length of the statement "@Override public void initialize( InputSplit split` TaskAttemptContext context) throws IOException` InterruptedException {" is 122.,55
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoEntryInputFormat,createRecordReader,Long Statement,The length of the statement "ByteArrayInputStream bais=new ByteArrayInputStream(context.getConfiguration().get(PROPS_CONF_KEY).getBytes(StandardCharsets.UTF_8));" is 132.,55
+fluo-io_fluo,org.apache.fluo.mapreduce,FluoEntryInputFormat,initialize,Long Statement,The length of the statement "ByteArrayInputStream bais=new ByteArrayInputStream(context.getConfiguration().get(PROPS_CONF_KEY).getBytes(StandardCharsets.UTF_8));" is 132.,93
+fluo-io_fluo,org.apache.fluo.command,CommandUtil,verifyAppInitialized,Long Statement,The length of the statement "throw new FluoCommandException("A Fluo '" + config.getApplicationName() + "' application has not "+ "been initialized yet in Zookeeper at "+ config.getAppZookeepers());" is 168.,28
+fluo-io_fluo,org.apache.fluo.command,CommandUtil,verifyAppRunning,Long Statement,The length of the statement "throw new FluoCommandException("A Fluo '" + config.getApplicationName() + "' application is initialized but is not running!");" is 126.,36
+fluo-io_fluo,org.apache.fluo.command,CommandUtil,resolveFluoConfig,Long Statement,The length of the statement "Preconditions.checkArgument(connPropsFile.exists()`"System property 'fluo.conn.props' is set to file that doesn't exist: " + connPropsPath);" is 140.,46
+fluo-io_fluo,org.apache.fluo.command,FluoWait,waitTillNoNotifications,Magic Number,The method contains a magic number: 1.5,64
+fluo-io_fluo,org.apache.fluo.command,FluoList,execute,Long Statement,The length of the statement "System.out.println("Fluo instance (" + config.getInstanceZookeepers() + ") has not been "+ "created yet in Zookeeper. It will be created when the first Fluo application is "+ "initialized for this instance.");" is 209.,31
+fluo-io_fluo,org.apache.fluo.command,FluoList,execute,Long Statement,The length of the statement "System.out.println("Fluo instance (" + config.getInstanceZookeepers() + ") does not "+ "contain any Fluo applications.");" is 121.,31
+fluo-io_fluo,org.apache.fluo.command,FluoList,execute,Long Statement,The length of the statement "System.out.println("Fluo instance (" + config.getInstanceZookeepers() + ") contains "+ children.size()+ " application(s)\n");" is 125.,31
+fluo-io_fluo,org.apache.fluo.command,FluoGetJars,execute,Long Statement,The length of the statement "throw new FluoCommandException(String.format("Unsupported url prefix for %s=%s"`FluoConfiguration.OBSERVER_JARS_URL_PROP`config.getObserverJarsUrl()));" is 151.,47
+fluo-io_fluo,org.apache.fluo.command,FluoWorker,execute,Magic Number,The method contains a magic number: 10000,26
+fluo-io_fluo,org.apache.fluo.command,FluoExec,execute,Magic Number,The method contains a magic number: 2,55
+fluo-io_fluo,org.apache.fluo.command,FluoExec,execute,Magic Number,The method contains a magic number: 2,55
+fluo-io_fluo,org.apache.fluo.command,FluoInit,execute,Complex Method,Cyclomatic complexity of the method is 12,99
+fluo-io_fluo,org.apache.fluo.command,FluoInit,execute,Long Statement,The length of the statement "System.out.println("Updating configuration for the Fluo '" + config.getApplicationName() + "' application in Zookeeper using "+ getAppPropsPath());" is 147.,99
+fluo-io_fluo,org.apache.fluo.command,FluoInit,execute,Long Statement,The length of the statement "System.out.print("A Fluo '" + config.getApplicationName() + "' application is already initialized in Zookeeper at "+ config.getAppZookeepers()+ " - Would you like to clear and reinitialize Zookeeper"+ " for this application (y/n)? ");" is 234.,99
+fluo-io_fluo,org.apache.fluo.command,FluoInit,execute,Long Statement,The length of the statement "System.out.print("The Accumulo table '" + config.getAccumuloTable() + "' already exists - Would you like to drop and recreate this table (y/n)? ");" is 147.,99
+fluo-io_fluo,org.apache.fluo.command,FluoProgram,main,Long Statement,The length of the statement "List<FluoCommand> fluoCommands=Arrays.asList(new FluoConfig()`new FluoExec()`new FluoGetJars()`new FluoInit()`new FluoList()`new FluoOracle()`new FluoRemove()`new FluoScan()`new FluoStatus()`new FluoWait()`new FluoWorker());" is 224.,28
+fluo-io_fluo,org.apache.fluo.command,FluoOracle,execute,Magic Number,The method contains a magic number: 10000,26
+fluo-io_fluo,org.apache.fluo.command,ConfigCommand,overrideFluoConfig,Magic Number,The method contains a magic number: 2,40
+fluo-io_fluo,org.apache.fluo.command,ConfigCommand,overrideFluoConfig,Magic Number,The method contains a magic number: 2,40
+fluo-io_fluo,org.apache.fluo.command,AppCommandTest,testGetConfig,Long Statement,The length of the statement "List<String> overrideConfig=Collections.singletonList(FluoConfiguration.CONNECTION_ZOOKEEPER_TIMEOUT_PROP + "=" + newZookeeperTimeout);" is 135.,29
+fluo-io_fluo,org.apache.fluo.command,AppCommandTest,testGetConfig,Magic Number,The method contains a magic number: 100,29
+fluo-io_fluo,org.apache.fluo.command,CommandUtilTest,testResolveFluoConfig,Magic Number,The method contains a magic number: 999,27
+fluo-io_fluo,org.apache.fluo.command,ConfigCommandTest,testGetConfigWithOneOverriddenProp,Long Statement,The length of the statement "List<String> overrideConfig=Collections.singletonList(FluoConfiguration.CONNECTION_ZOOKEEPER_TIMEOUT_PROP + "=" + newZookeeperTimeout);" is 135.,55
+fluo-io_fluo,org.apache.fluo.command,ConfigCommandTest,testGetConfigWithOneOverriddenProp,Magic Number,The method contains a magic number: 100,55
+fluo-io_fluo,org.apache.fluo.command,ConfigCommandTest,testGetConfigWithTwoOverriddenProp,Long Statement,The length of the statement "List<String> overrideConfig=Arrays.asList(FluoConfiguration.CONNECTION_ZOOKEEPER_TIMEOUT_PROP + "=" + newZookeeperTimeout`FluoConfiguration.LOADER_QUEUE_SIZE_PROP + "=" + "256");" is 178.,68
+fluo-io_fluo,org.apache.fluo.command,ConfigCommandTest,testGetConfigWithTwoOverriddenProp,Magic Number,The method contains a magic number: 100,68
+fluo-io_fluo,org.apache.fluo.command,ConfigCommandTest,testGetConfigWithTwoOverriddenProp,Magic Number,The method contains a magic number: 256,68
+fluo-io_fluo,org.apache.fluo.command,ScanTest,testValidInput,Magic Number,The method contains a magic number: 2,40
+fluo-io_fluo,org.apache.fluo.command,ScanTest,testValidInput,Magic Number,The method contains a magic number: 2,40
+fluo-io_fluo,org.apache.fluo.command,ScanTest,testBadInputs,Empty catch clause,The method has an empty catch block.,83
+fluo-io_fluo,org.apache.fluo.command,ScanTest,testBadInputs,Empty catch clause,The method has an empty catch block.,83
+fluo-io_fluo,org.apache.fluo.command,ScanTest,testBadInputs,Empty catch clause,The method has an empty catch block.,83
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelLockValue,isRollback,Magic Number,The method contains a magic number: 0x02,51
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelLockValue,isRollback,Magic Number,The method contains a magic number: 2,51
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelLockValue,encodeCommit,Magic Number,The method contains a magic number: 9,55
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelLockValue,encodeRollback,Magic Number,The method contains a magic number: 9,62
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelLockValue,encodeRollback,Magic Number,The method contains a magic number: 2,62
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelLockValue,encodeRollback,Magic Number,The method contains a magic number: 9,69
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelLockValue,encodeRollback,Magic Number,The method contains a magic number: 2,69
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 6,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 2,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 3,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 4,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 4,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 0x2,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 0x2,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 4,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 0x4,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 0x4,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,LockValue,Magic Number,The method contains a magic number: 5,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,encode,Long Parameter List,The method has 6 parameters. ,78
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,encode,Long Statement,The length of the statement "return ByteArrayUtil.concat(prow`pcol.getFamily()`pcol.getQualifier()`pcol.getVisibility()`Bytes.of(bools)`Bytes.of(ByteArrayUtil.encode(transactor)));" is 151.,78
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,encode,Magic Number,The method contains a magic number: 0x2,78
+fluo-io_fluo,org.apache.fluo.accumulo.values,LockValue,encode,Magic Number,The method contains a magic number: 0x4,78
+fluo-io_fluo,org.apache.fluo.accumulo.values,DelReadLockValue,encodeCommit,Magic Number,The method contains a magic number: 9,39
+fluo-io_fluo,org.apache.fluo.accumulo.values,WriteValue,isDelete,Magic Number,The method contains a magic number: 0x02,43
+fluo-io_fluo,org.apache.fluo.accumulo.values,WriteValue,isDelete,Magic Number,The method contains a magic number: 2,43
+fluo-io_fluo,org.apache.fluo.accumulo.values,WriteValue,encode,Magic Number,The method contains a magic number: 9,60
+fluo-io_fluo,org.apache.fluo.accumulo.values,WriteValue,encode,Magic Number,The method contains a magic number: 2,60
+fluo-io_fluo,org.apache.fluo.accumulo.values,ReadLockValue,ReadLockValue,Magic Number,The method contains a magic number: 5,32
+fluo-io_fluo,org.apache.fluo.accumulo.values,ReadLockValue,ReadLockValue,Magic Number,The method contains a magic number: 2,32
+fluo-io_fluo,org.apache.fluo.accumulo.values,ReadLockValue,ReadLockValue,Magic Number,The method contains a magic number: 3,32
+fluo-io_fluo,org.apache.fluo.accumulo.values,ReadLockValue,ReadLockValue,Magic Number,The method contains a magic number: 4,32
+fluo-io_fluo,org.apache.fluo.accumulo.values,ReadLockValue,encode,Long Statement,The length of the statement "return ByteArrayUtil.concat(prow`pcol.getFamily()`pcol.getQualifier()`pcol.getVisibility()`Bytes.of(ByteArrayUtil.encode(transactor)));" is 135.,56
+fluo-io_fluo,org.apache.fluo.accumulo.format,FluoFormatter,appendByte,Complex Conditional,The conditional expression b >= 32 && b <= 126 && b != '\\' is complex.,40
+fluo-io_fluo,org.apache.fluo.accumulo.format,FluoFormatter,appendByte,Magic Number,The method contains a magic number: 32,40
+fluo-io_fluo,org.apache.fluo.accumulo.format,FluoFormatter,appendByte,Magic Number,The method contains a magic number: 126,40
+fluo-io_fluo,org.apache.fluo.accumulo.format,FluoFormatter,appendByte,Magic Number,The method contains a magic number: 0xff,40
+fluo-io_fluo,org.apache.fluo.accumulo.format,FluoFormatter,toString,Complex Method,Cyclomatic complexity of the method is 9,66
+fluo-io_fluo,org.apache.fluo.accumulo.format,FluoFormatter,toString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@40564090,66
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimestampSkippingIterator,skipToTimestamp,Long Statement,The length of the statement "while (source.hasTop() && curCol.equals(source.getTopKey()`PartialKey.ROW_COLFAM_COLQUAL_COLVIS) && timestamp < source.getTopKey().getTimestamp()) {" is 148.,64
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimestampSkippingIterator,skipToTimestamp,Magic Number,The method contains a magic number: 10,64
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimestampSkippingIterator,skipColumn,Magic Number,The method contains a magic number: 10,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIterator,skipRowCol,Magic Number,The method contains a magic number: 10,63
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIterator,consume,Complex Conditional,The conditional expression source.hasTop() && isNtfy(source.getTopKey()) && !isDelete(source.getTopKey()) is complex.,81
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIterator,init,Long Statement,The length of the statement "scanOrFullMajc=env.getIteratorScope() == IteratorScope.scan || (env.getIteratorScope() == IteratorScope.majc && env.isFullMajorCompaction());" is 141.,147
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,OpenReadLockIterator,findTop,Complex Method,Cyclomatic complexity of the method is 12,40
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,OpenReadLockIterator,findTop,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3fb9974c,40
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIterator,readColMetadata,Complex Method,Cyclomatic complexity of the method is 33,152
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIterator,readColMetadata,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2278861d,152
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIterator,seek,Complex Method,Cyclomatic complexity of the method is 28,92
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIterator,seek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@71021b33,92
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIterator,findTop,Complex Method,Cyclomatic complexity of the method is 23,82
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIterator,findTop,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3a28743,82
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIterator,seek,Complex Conditional,The conditional expression range.getStartKey() != null && range.getStartKey().getTimestamp() != Long.MAX_VALUE && !range.isStartKeyInclusive() is complex.,217
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIterator,seek,Long Statement,The length of the statement "if (range.getStartKey() != null && range.getStartKey().getTimestamp() != Long.MAX_VALUE && !range.isStartKeyInclusive()) {" is 122.,217
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,RollbackCheckIterator,seek,Complex Method,Cyclomatic complexity of the method is 19,68
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,RollbackCheckIterator,seek,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7052638c,68
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimeSkippingIteratorTest,testSkipColBug,Magic Number,The method contains a magic number: 2,33
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimeSkippingIteratorTest,testSkipColBug,Magic Number,The method contains a magic number: 1000,33
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimeSkippingIteratorTest,testSkipColBug,Magic Number,The method contains a magic number: 999,33
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimeSkippingIteratorTest,testSkipColBug,Magic Number,The method contains a magic number: 999,33
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TimeSkippingIteratorTest,testSkipColBug,Magic Number,The method contains a magic number: 999,33
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testSimple,Magic Number,The method contains a magic number: 10,48
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testSimple,Magic Number,The method contains a magic number: 60,48
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testAckRemoval,Magic Number,The method contains a magic number: 5,72
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testAckRemoval,Magic Number,The method contains a magic number: 2,72
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testAckRemoval,Magic Number,The method contains a magic number: 5,72
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testAckRemoval,Magic Number,The method contains a magic number: 2,72
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testAckRemoval,Magic Number,The method contains a magic number: 5,72
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testAckRemoval,Magic Number,The method contains a magic number: 2,72
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 3,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 8,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 35,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 39,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 6,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 46,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 4,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 53,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDataRemoval,Magic Number,The method contains a magic number: 2,123
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testTxDone,Magic Number,The method contains a magic number: 60,175
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testTxDone,Magic Number,The method contains a magic number: 60,175
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testTxDone,Magic Number,The method contains a magic number: 60,175
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testTxDone,Magic Number,The method contains a magic number: 60,175
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testLock,Magic Number,The method contains a magic number: 10,247
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLockPartialCompaction,Magic Number,The method contains a magic number: 23,268
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,291
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,291
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,291
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,291
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,291
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,291
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,291
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 60,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 60,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 60,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 37,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 43,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 70,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 70,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 70,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletes,Magic Number,The method contains a magic number: 70,399
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletePrimary,Magic Number,The method contains a magic number: 60,505
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletePrimary,Magic Number,The method contains a magic number: 60,505
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testNotifications,Magic Number,The method contains a magic number: 60,539
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testMultiColumn,Magic Number,The method contains a magic number: 27,558
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletedReadLocks,Magic Number,The method contains a magic number: 53,601
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletedReadLocks,Magic Number,The method contains a magic number: 50,601
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletedReadLocks,Magic Number,The method contains a magic number: 53,601
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testDeletedReadLocks,Magic Number,The method contains a magic number: 50,601
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testInvalidatedReadLocks,Magic Number,The method contains a magic number: 75,661
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testInvalidatedReadLocks,Magic Number,The method contains a magic number: 75,661
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testInvalidatedReadLocks,Magic Number,The method contains a magic number: 30,661
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,GarbageCollectionIteratorTest,testInvalidatedReadLocks,Magic Number,The method contains a magic number: 30,661
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,ColumnBufferTest,testDifferentKeys,Empty catch clause,The method has an empty catch block.,25
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,newPI,Magic Number,The method contains a magic number: 10,29
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,newPI,Magic Number,The method contains a magic number: 10,47
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,newPI,Magic Number,The method contains a magic number: 10,62
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,addLots,Magic Number,The method contains a magic number: 3,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,addLots,Magic Number,The method contains a magic number: 100,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,addLots,Magic Number,The method contains a magic number: 3,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 2,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 117,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 100,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 117,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 116,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 112,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 100,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 3,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 100,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAck,Magic Number,The method contains a magic number: 3,87
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testDelLock,Magic Number,The method contains a magic number: 2,176
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testDelLock,Magic Number,The method contains a magic number: 117,176
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testDelLock,Magic Number,The method contains a magic number: 108,176
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testDelLock,Magic Number,The method contains a magic number: 117,176
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testDelLock,Magic Number,The method contains a magic number: 108,176
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteAndDelLockMax,Magic Number,The method contains a magic number: 117,206
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteAndDelLockMax,Magic Number,The method contains a magic number: 111,206
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteAndDelLockMax,Magic Number,The method contains a magic number: 117,206
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteAndDelLockMax,Magic Number,The method contains a magic number: 111,206
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteInvalidatesLock,Magic Number,The method contains a magic number: 117,238
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteInvalidatesLock,Magic Number,The method contains a magic number: 117,238
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteInvalidatesLock,Magic Number,The method contains a magic number: 117,238
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 4,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 2,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 2,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 2,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 3,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 3,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 117,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 117,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 117,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testReadLockPreventsWriteLock,Magic Number,The method contains a magic number: 55,259
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testOnlyDelReadLocks,Magic Number,The method contains a magic number: 55,332
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteLockPreventsReadLock,Magic Number,The method contains a magic number: 2,357
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteLockPreventsReadLock,Magic Number,The method contains a magic number: 117,357
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteLockPreventsReadLock,Magic Number,The method contains a magic number: 117,357
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteLockPreventsReadLock,Magic Number,The method contains a magic number: 11,357
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteLockPreventsReadLock,Magic Number,The method contains a magic number: 7,357
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testWriteLockPreventsReadLock,Magic Number,The method contains a magic number: 4,357
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 10,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 2010,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 2,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 3000,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 2001,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 3000,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 12,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 3000,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testManyReadLocks,Magic Number,The method contains a magic number: 13,392
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testGarbageCollectedReadLocks,Magic Number,The method contains a magic number: 47,426
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testGarbageCollectedReadLocks,Magic Number,The method contains a magic number: 43,426
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,PrewriteIteratorTest,testAbortedReadLock,Magic Number,The method contains a magic number: 2,448
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testBasic,Magic Number,The method contains a magic number: 6,56
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testBasic,Magic Number,The method contains a magic number: 11,56
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testBasic,Magic Number,The method contains a magic number: 17,56
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testLock,Magic Number,The method contains a magic number: 6,76
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testLock,Magic Number,The method contains a magic number: 15,76
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testLock,Magic Number,The method contains a magic number: 17,76
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testLock,Magic Number,The method contains a magic number: 22,76
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 6,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 15,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 17,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 6,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 17,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 19,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testDelLock,Magic Number,The method contains a magic number: 23,98
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testSeek,Long Statement,The length of the statement "for ( Range range : new Range[]{Range.exact("0")`Range.exact("1")`Range.exact("0"`"f")`Range.exact("0"`"f"`"q1")`Range.exact("0"`"f"`"q2")`Range.exact("1"`"f"`"q1")}) {" is 168.,149
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testSeek,Magic Number,The method contains a magic number: 6,149
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testSeek,Magic Number,The method contains a magic number: 17,149
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testSeek,Magic Number,The method contains a magic number: 19,149
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testSeek,Magic Number,The method contains a magic number: 22,149
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testSeek,Magic Number,The method contains a magic number: 27,149
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testColumnsWithManyWrites,Magic Number,The method contains a magic number: 1000,208
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testColumnsWithManyWrites,Magic Number,The method contains a magic number: 3,208
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testColumnsWithManyWrites,Magic Number,The method contains a magic number: 3,208
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testColumnsWithManyWrites,Magic Number,The method contains a magic number: 3,208
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testColumnsWithManyWrites,Magic Number,The method contains a magic number: 3,208
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testReadLock,Magic Number,The method contains a magic number: 20,254
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testReadLock,Magic Number,The method contains a magic number: 20,254
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,checkManyColumnData,Magic Number,The method contains a magic number: 3,302
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,checkManyColumnData,Magic Number,The method contains a magic number: 3,302
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,checkManyColumnData,Magic Number,The method contains a magic number: 3,302
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,checkManyColumnData,Magic Number,The method contains a magic number: 2,302
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testNegativeTime,Magic Number,The method contains a magic number: 3,316
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,SnapshotIteratorTest,testNonZeroPrefix,Magic Number,The method contains a magic number: 6,321
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,TestData,Long Statement,The length of the statement "iter.seek(new Range(iter.getTopKey()`false`range.getEndKey()`range.isEndKeyInclusive())`new HashSet<ByteSequence>()`false);" is 123.,51
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Complex Method,Cyclomatic complexity of the method is 16,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 2,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 3,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 5,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 4,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 3,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 4,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 2,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Magic Number,The method contains a magic number: 42l,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,TestData,addIfInRange,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@16fc4bf5,78
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIteratorTest,testScans,Magic Number,The method contains a magic number: 26,180
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIteratorTest,testLots,Magic Number,The method contains a magic number: 42L,297
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIteratorTest,testLots,Magic Number,The method contains a magic number: 1000,297
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIteratorTest,testLots,Magic Number,The method contains a magic number: 50,297
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIteratorTest,testLots,Magic Number,The method contains a magic number: 42L,297
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIteratorTest,testLots,Magic Number,The method contains a magic number: 1000,297
+fluo-io_fluo,org.apache.fluo.accumulo.iterators,NotificationIteratorTest,testLots,Magic Number,The method contains a magic number: 50,297
+fluo-io_fluo,org.apache.fluo.accumulo.summarizer,FluoCollector,accept,Complex Method,Cyclomatic complexity of the method is 11,39
+fluo-io_fluo,org.apache.fluo.accumulo.summarizer,FluoCollector,accept,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7746019a,39
+fluo-io_fluo,org.apache.fluo.accumulo.summarizer,FluoSummarizer,getCounts,Long Statement,The length of the statement "return new Counts(m.get("ntfy")`m.get("ntfyDel")`m.get("txDone")`m.get("delLock")`m.get("lock")`m.get("data")`m.get("write")`m.get("ack")`m.get("delrlock")`m.get("rlock"));" is 172.,68
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 8,37
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 56,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 48,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 2,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 40,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 3,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 32,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 4,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 24,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 5,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 16,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 6,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 8,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,encode,Magic Number,The method contains a magic number: 7,49
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Long Statement,The length of the statement "return ((((long)ba[offset + 0] << 56) + ((long)(ba[offset + 1] & 255) << 48) + ((long)(ba[offset + 2] & 255) << 40)+ ((long)(ba[offset + 3] & 255) << 32)+ ((long)(ba[offset + 4] & 255) << 24)+ ((ba[offset + 5] & 255) << 16)+ ((ba[offset + 6] & 255) << 8)+ ((ba[offset + 7] & 255) << 0)));" is 288.,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 56,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 255,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 48,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 2,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 255,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 40,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 3,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 255,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 32,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 4,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 255,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 24,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 5,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 255,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 16,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 6,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 255,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 8,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 7,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,decodeLong,Magic Number,The method contains a magic number: 255,69
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 112,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 127,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 112,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 120,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 8,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 120,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 120,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 112,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 8,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,writeVint,Magic Number,The method contains a magic number: 0xFFL,137
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 112,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 127,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 112,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 120,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 8,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 120,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 120,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,checkVlen,Magic Number,The method contains a magic number: 112,175
+fluo-io_fluo,org.apache.fluo.accumulo.util,ByteArrayUtil,split,Empty catch clause,The method has an empty catch block.,211
+fluo-io_fluo,org.apache.fluo.accumulo.util,ZookeeperUtil,getGcTimestamp,Magic Number,The method contains a magic number: 30000,63
+fluo-io_fluo,org.apache.fluo.accumulo.util,ZookeeperUtil,getGcTimestamp,Magic Number,The method contains a magic number: 30000,63
+fluo-io_fluo,org.apache.fluo.accumulo.util,ZookeeperUtil,getGcTimestamp,Magic Number,The method contains a magic number: 10,63
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testPrefix,Magic Number,The method contains a magic number: 19,57
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testPrefix,Magic Number,The method contains a magic number: 19L,57
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testPrefix,Magic Number,The method contains a magic number: 50,57
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testPrefix,Magic Number,The method contains a magic number: 50,57
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testPrefix,Magic Number,The method contains a magic number: 48,57
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFirst,Magic Number,The method contains a magic number: 19,64
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFirst,Magic Number,The method contains a magic number: 19L,64
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFirst,Magic Number,The method contains a magic number: 50,64
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFirst,Magic Number,The method contains a magic number: 50,64
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFirst,Magic Number,The method contains a magic number: 48,64
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFrom,Magic Number,The method contains a magic number: 19,78
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFrom,Magic Number,The method contains a magic number: 19L,78
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFrom,Magic Number,The method contains a magic number: 50,78
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFrom,Magic Number,The method contains a magic number: 50,78
+fluo-io_fluo,org.apache.fluo.accumulo.util,ColumnTypeTest,testFrom,Magic Number,The method contains a magic number: 48,78
+fluo-io_fluo,org.apache.fluo.core.thrift,Stamps,findByThriftId,Magic Number,The method contains a magic number: 2,62
+fluo-io_fluo,org.apache.fluo.core.thrift,Stamps,findByThriftId,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@604918ae,62
+fluo-io_fluo,org.apache.fluo.core.thrift,Stamps,equals,Complex Method,Cyclomatic complexity of the method is 9,271
+fluo-io_fluo,org.apache.fluo.core.thrift,Stamps,hashCode,Magic Number,The method contains a magic number: 8191,298
+fluo-io_fluo,org.apache.fluo.core.thrift,Stamps,hashCode,Magic Number,The method contains a magic number: 8191,298
+fluo-io_fluo,org.apache.fluo.core.thrift,Stamps,compareTo,Complex Method,Cyclomatic complexity of the method is 8,309
+fluo-io_fluo,org.apache.fluo.core.thrift,Stamps,scheme,Long Statement,The length of the statement "return (org.apache.thrift.scheme.StandardScheme.class.equals(proto.getScheme()) ? STANDARD_SCHEME_FACTORY : TUPLE_SCHEME_FACTORY).getScheme();" is 142.,509
+fluo-io_fluo,org.apache.fluo.core.metrics,MetricsUtil,getConfiguredReservoir,Long Statement,The length of the statement "String clazz=config.getString(FluoConfigurationImpl.METRICS_RESERVOIR_PROP`HdrHistogramResetOnSnapshotReservoir.class.getName());" is 129.,28
+fluo-io_fluo,org.apache.fluo.core.metrics,ReporterUtil,setupReporters,Long Statement,The length of the statement "throw new IllegalStateException("Multiple metrics reporters cannot be configured when using " + hdrSnapshotClass + " as corrupt metrics can be reported");" is 154.,40
+fluo-io_fluo,org.apache.fluo.core.metrics,MetricNames,MetricNames,Long Statement,The length of the statement "Preconditions.checkArgument(!metricsReporterId.contains(".")`"Metrics Reporter ID should not contain '.': " + metricsReporterId);" is 129.,50
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,JmxReporterStarter,start,Long Statement,The length of the statement "JmxReporter reporter=JmxReporter.forRegistry(params.getMetricRegistry()).convertDurationsTo(durationUnit).convertRatesTo(rateUnit).inDomain(params.getDomain()).build();" is 168.,33
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,Slf4jReporterStarter,start,Long Statement,The length of the statement "Slf4jReporter reporter=Slf4jReporter.forRegistry(params.getMetricRegistry()).convertDurationsTo(durationUnit).convertRatesTo(rateUnit).outputTo(logger).build();" is 160.,33
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,Slf4jReporterStarter,start,Magic Number,The method contains a magic number: 60,33
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,GraphiteReporterStarter,start,Long Statement,The length of the statement "GraphiteReporter reporter=GraphiteReporter.forRegistry(params.getMetricRegistry()).convertDurationsTo(durationUnit).convertRatesTo(rateUnit).prefixedWith(prefix).build(graphite);" is 178.,34
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,GraphiteReporterStarter,start,Magic Number,The method contains a magic number: 8080,34
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,GraphiteReporterStarter,start,Magic Number,The method contains a magic number: 60,34
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,ConsoleReporterStarter,start,Long Statement,The length of the statement "ConsoleReporter reporter=ConsoleReporter.forRegistry(params.getMetricRegistry()).convertDurationsTo(durationUnit).convertRatesTo(rateUnit).outputTo(out).build();" is 161.,34
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,ConsoleReporterStarter,start,Magic Number,The method contains a magic number: 60,34
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,CsvReporterStarter,start,Long Statement,The length of the statement "CsvReporter reporter=CsvReporter.forRegistry(params.getMetricRegistry()).convertDurationsTo(durationUnit).convertRatesTo(rateUnit).build(new File(dir));" is 152.,34
+fluo-io_fluo,org.apache.fluo.core.metrics.starters,CsvReporterStarter,start,Magic Number,The method contains a magic number: 60,34
+fluo-io_fluo,org.apache.fluo.core.util,AccumuloUtil,getClient,Long Statement,The length of the statement "return Accumulo.newClient().to(config.getAccumuloInstance()`config.getAccumuloZookeepers()).as(config.getAccumuloUser()`config.getAccumuloPassword()).build();" is 158.,28
+fluo-io_fluo,org.apache.fluo.core.util,CuratorUtil,newRootFluoCurator,Long Statement,The length of the statement "return newCurator(ZookeeperUtil.parseServers(config.getInstanceZookeepers())`config.getZookeeperTimeout()`config.getZookeeperSecret());" is 135.,70
+fluo-io_fluo,org.apache.fluo.core.util,CuratorUtil,newCurator,Magic Number,The method contains a magic number: 1000,85
+fluo-io_fluo,org.apache.fluo.core.util,CuratorUtil,newCurator,Magic Number,The method contains a magic number: 10,85
+fluo-io_fluo,org.apache.fluo.core.util,CuratorUtil,newCurator,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5ff31b3e,85
+fluo-io_fluo,org.apache.fluo.core.util,CuratorUtil,getAclForPath,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5ff31b3e,103
+fluo-io_fluo,org.apache.fluo.core.util,CuratorUtil,putData,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@74393fc1,118
+fluo-io_fluo,org.apache.fluo.core.util,NotificationScanner,createColumnFilter,Long Statement,The length of the statement "Set<Bytes> families=allColumns.stream().filter(col -> !col.isQualifierSet()).map(col -> col.getFamily()).collect(toSet());" is 122.,42
+fluo-io_fluo,org.apache.fluo.core.util,SpanUtil,toSpan,Long Statement,The length of the statement "return new Span(toRowColumn(range.getStartKey())`range.isStartKeyInclusive()`toRowColumn(range.getEndKey())`range.isEndKeyInclusive());" is 135.,70
+fluo-io_fluo,org.apache.fluo.core.util,PortUtils,getRandomFreePort,Empty catch clause,The method has an empty catch block.,26
+fluo-io_fluo,org.apache.fluo.core.util,PortUtils,getRandomFreePort,Magic Number,The method contains a magic number: 13,26
+fluo-io_fluo,org.apache.fluo.core.util,PortUtils,getRandomFreePort,Magic Number,The method contains a magic number: 16,26
+fluo-io_fluo,org.apache.fluo.core.util,PortUtils,getRandomFreePort,Magic Number,The method contains a magic number: 1024,26
+fluo-io_fluo,org.apache.fluo.core.util,PortUtils,getRandomFreePort,Magic Number,The method contains a magic number: 1024,26
+fluo-io_fluo,org.apache.fluo.core.util,Hex,encNonAscii,Complex Conditional,The conditional expression b >= 32 && b <= 126 && b != '\\' is complex.,28
+fluo-io_fluo,org.apache.fluo.core.util,Hex,encNonAscii,Magic Number,The method contains a magic number: 32,28
+fluo-io_fluo,org.apache.fluo.core.util,Hex,encNonAscii,Magic Number,The method contains a magic number: 126,28
+fluo-io_fluo,org.apache.fluo.core.util,Hex,encNonAscii,Magic Number,The method contains a magic number: 0xff,28
+fluo-io_fluo,org.apache.fluo.core.util,Hex,encNonAscii,Long Statement,The length of the statement "return ((span.isStartInclusive() && !span.getStart().equals(RowColumn.EMPTY)) ? "[" : "(") + (span.getStart().equals(RowColumn.EMPTY) ? "-inf" : encNonAscii(span.getStart())) + "`"+ (span.getEnd().equals(RowColumn.EMPTY) ? "+inf" : encNonAscii(span.getEnd()))+ ((span.isEndInclusive() && !span.getEnd().equals(RowColumn.EMPTY)) ? "]" : ")");" is 341.,101
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 2,108
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 3,108
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 0xff,108
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 16,108
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 3,108
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 32,108
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 126,108
+fluo-io_fluo,org.apache.fluo.core.util,Hex,decode,Magic Number,The method contains a magic number: 0xff,108
+fluo-io_fluo,org.apache.fluo.core.util,Halt,halt,Magic Number,The method contains a magic number: 100,37
+fluo-io_fluo,org.apache.fluo.core.util,OracleServerUtils,oracleExists,Long Statement,The length of the statement "exists=curator.checkExists().forPath(ZookeeperPath.ORACLE_SERVER) != null && !curator.getChildren().forPath(ZookeeperPath.ORACLE_SERVER).isEmpty();" is 147.,26
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,getSpan,Complex Conditional,The conditional expression (options.getExactRow() != null) && ((options.getStartRow() != null) || (options.getEndRow() != null) || (options.getRowPrefix() != null)) is complex.,57
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,getSpan,Complex Conditional,The conditional expression (options.getRowPrefix() != null) && ((options.getStartRow() != null) || (options.getEndRow() != null) || (options.getExactRow() != null)) is complex.,57
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,getSpan,Complex Method,Cyclomatic complexity of the method is 8,57
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,getSpan,Long Statement,The length of the statement "if ((options.getExactRow() != null) && ((options.getStartRow() != null) || (options.getEndRow() != null) || (options.getRowPrefix() != null))) {" is 144.,57
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,getSpan,Long Statement,The length of the statement "if ((options.getRowPrefix() != null) && ((options.getStartRow() != null) || (options.getEndRow() != null) || (options.getExactRow() != null))) {" is 144.,57
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,getColumns,Magic Number,The method contains a magic number: 2,89
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,generateJson,Long Statement,The length of the statement "Gson gson=new GsonBuilder().serializeNulls().setDateFormat(DateFormat.LONG).setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).setVersion(1.0).create();" is 169.,176
+fluo-io_fluo,org.apache.fluo.core.util,ScanUtil,scanAccumulo,Long Statement,The length of the statement "try (AccumuloClient client=AccumuloUtil.getClient(sConfig);Scanner scanner=client.createScanner(sConfig.getAccumuloTable()`Authorizations.EMPTY)){" is 146.,204
+fluo-io_fluo,org.apache.fluo.core.util,Flutation,put,Long Parameter List,The method has 5 parameters. ,42
+fluo-io_fluo,org.apache.fluo.core.util,ColumnUtil,commitColumn,Long Parameter List,The method has 11 parameters. ,55
+fluo-io_fluo,org.apache.fluo.core.util,ColumnUtil,commitColumn,Long Statement,The length of the statement "Flutation.put(env`m`col`ColumnType.RLOCK.encode(ReadLockUtil.encodeTs(startTs`true))`DelReadLockValue.encodeCommit(commitTs));" is 126.,55
+fluo-io_fluo,org.apache.fluo.core.util,ColumnUtil,checkColumn,Complex Conditional,The conditional expression r.equals(row) && cf.equals(col.getFamily()) && cq.equals(col.getQualifier())&& cv.equals(col.getVisibility()) is complex.,74
+fluo-io_fluo,org.apache.fluo.core.util,SpanUtilTest,testToRowColumn,Long Statement,The length of the statement "Assert.assertEquals(new RowColumn("row"`new Column("cf"`"cq"`"cv"))`SpanUtil.toRowColumn(new Key("row"`"cf"`"cq"`"cv")));" is 121.,41
+fluo-io_fluo,org.apache.fluo.core.util,ByteUtilTest,testConcatSplit,Long Statement,The length of the statement "Bytes b4=Bytes.of("testinggreaterthan128characterstestinggreaterthan128characters" + "testinggreaterthan128characterstestinggreaterthan128characters" + "testinggreaterthan128characters");" is 187.,51
+fluo-io_fluo,org.apache.fluo.core.util,ByteUtilTest,testConcatSplit,Magic Number,The method contains a magic number: 4,51
+fluo-io_fluo,org.apache.fluo.core.util,ByteUtilTest,testConcatSplit,Magic Number,The method contains a magic number: 2,51
+fluo-io_fluo,org.apache.fluo.core.util,ByteUtilTest,testConcatSplit,Magic Number,The method contains a magic number: 3,51
+fluo-io_fluo,org.apache.fluo.core.util,ByteUtilTest,testConcatSplit,Magic Number,The method contains a magic number: 2,51
+fluo-io_fluo,org.apache.fluo.core.util,ByteUtilTest,testConcatSplit,Magic Number,The method contains a magic number: 2,51
+fluo-io_fluo,org.apache.fluo.core.util,ByteUtilTest,testConcatSplit,Magic Number,The method contains a magic number: 2,51
+fluo-io_fluo,org.apache.fluo.core.async,CommitManager,CommitManager,Long Statement,The length of the statement "env.getSharedResources().getMetricRegistry().register(env.getMetricNames().getCommitsProcessing()`(Gauge<Integer>)() -> commitingTransactions.get());" is 149.,43
+fluo-io_fluo,org.apache.fluo.core.async,AsyncConditionalWriter,AsyncConditionalWriter,Long Statement,The length of the statement "int numThreads=env.getConfiguration().getInt(FluoConfigurationImpl.ASYNC_CW_THREADS`FluoConfigurationImpl.ASYNC_CW_THREADS_DEFAULT);" is 132.,42
+fluo-io_fluo,org.apache.fluo.core.async,AsyncConditionalWriter,AsyncConditionalWriter,Long Statement,The length of the statement "int permits=env.getConfiguration().getInt(FluoConfigurationImpl.ASYNC_CW_LIMIT`FluoConfigurationImpl.ASYNC_CW_LIMIT_DEFAULT);" is 125.,42
+fluo-io_fluo,org.apache.fluo.core.async,AsyncConditionalWriter,close,Magic Number,The method contains a magic number: 5,76
+fluo-io_fluo,org.apache.fluo.core.async,SyncCommitObserver,committed,Long Identifier,The length of the field METHOD_CALLED_VALIDATION_CHECK_MESSAGE is 38.,38
+fluo-io_fluo,org.apache.fluo.core.async,SyncCommitObserver,failed,Long Identifier,The length of the field METHOD_CALLED_VALIDATION_CHECK_MESSAGE is 38.,46
+fluo-io_fluo,org.apache.fluo.core.async,SyncCommitObserver,alreadyAcknowledged,Long Identifier,The length of the field METHOD_CALLED_VALIDATION_CHECK_MESSAGE is 38.,54
+fluo-io_fluo,org.apache.fluo.core.async,SyncCommitObserver,commitFailed,Long Identifier,The length of the field METHOD_CALLED_VALIDATION_CHECK_MESSAGE is 38.,62
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorID,createID,Long Statement,The length of the statement "DistributedAtomicLong counter=new DistributedAtomicLong(curator`ZookeeperPath.TRANSACTOR_COUNT`new ExponentialBackoffRetry(1000`10));" is 133.,59
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorID,createID,Magic Number,The method contains a magic number: 1000,59
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorID,createID,Magic Number,The method contains a magic number: 10,59
+fluo-io_fluo,org.apache.fluo.core.impl,TimestampTracker,TimestampTracker,Complex Method,Cyclomatic complexity of the method is 8,55
+fluo-io_fluo,org.apache.fluo.core.impl,TimestampTracker,TimestampTracker,Magic Number,The method contains a magic number: 2,55
+fluo-io_fluo,org.apache.fluo.core.impl,TimestampTracker,run,Complex Method,Cyclomatic complexity of the method is 8,66
+fluo-io_fluo,org.apache.fluo.core.impl,TimestampTracker,run,Magic Number,The method contains a magic number: 2,66
+fluo-io_fluo,org.apache.fluo.core.impl,TimestampTracker,TimestampTracker,Long Statement,The length of the statement "this(env`tid`env.getConfiguration().getLong(FluoConfigurationImpl.ZK_UPDATE_PERIOD_PROP`FluoConfigurationImpl.ZK_UPDATE_PERIOD_MS_DEFAULT));" is 140.,117
+fluo-io_fluo,org.apache.fluo.core.impl,TimestampTracker,createZkNode,Long Statement,The length of the statement "node=new PersistentNode(env.getSharedResources().getCurator()`CreateMode.EPHEMERAL`false`getNodePath()`LongUtil.toByteArray(ts));" is 129.,177
+fluo-io_fluo,org.apache.fluo.core.impl,TimestampTracker,createZkNode,Magic Number,The method contains a magic number: 10,177
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,groupLocksByPrimary,Long Statement,The length of the statement "throw new IllegalStateException("transactor ids not equals " + prc + " "+ lockInfo.entry.getKey()+ " "+ trid+ " "+ lockInfo.transactorId);" is 138.,64
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,resolveLocks,Complex Method,Cyclomatic complexity of the method is 14,120
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,resolveLocks,Long Parameter List,The method has 5 parameters. ,120
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,resolveLocks,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@450279bc,120
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,rollback,Long Parameter List,The method has 5 parameters. ,212
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,rollback,Long Statement,The length of the statement "mut.put(k.getColumnFamilyData().toArray()`k.getColumnQualifierData().toArray()`k.getColumnVisibilityParsed()`ColumnType.RLOCK.encode(ReadLockUtil.encodeTs(lockInfo.lockTs`true))`DelReadLockValue.encodeRollback());" is 213.,212
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,rollback,Long Statement,The length of the statement "mut.put(k.getColumnFamilyData().toArray()`k.getColumnQualifierData().toArray()`k.getColumnVisibilityParsed()`ColumnType.DEL_LOCK.encode(lockInfo.lockTs)`DelLockValue.encodeRollback(false`true));" is 194.,212
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,rollbackPrimary,Long Statement,The length of the statement "ConditionalFlutation delLockMutation=new ConditionalFlutation(env`prc.prow`new FluoCondition(env`prc.pcol).setIterators(iterConf).setValue(lockValue));" is 151.,235
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,rollbackPrimary,Magic Number,The method contains a magic number: 10,235
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,commitColumns,Long Parameter List,The method has 5 parameters. ,261
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,commitColumns,Long Statement,The length of the statement "ColumnUtil.commitColumn(env`false`false`col`false`false`true`lockTs`commitTs`env.getConfiguredObservers().getObservedColumns(STRONG)`mut);" is 138.,261
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,commitColumns,Long Statement,The length of the statement "ColumnUtil.commitColumn(env`lv.isTrigger()`false`col`lv.isWrite()`lv.isDelete()`false`lockTs`commitTs`env.getConfiguredObservers().getObservedColumns(STRONG)`mut);" is 163.,261
+fluo-io_fluo,org.apache.fluo.core.impl,LockResolver,getOpenReadLocks,Magic Number,The method contains a magic number: 10,306
+fluo-io_fluo,org.apache.fluo.core.impl,VisibilityCache,VisibilityCache,Long Statement,The length of the statement "visCache=CacheBuilder.newBuilder().expireAfterAccess(FluoConfigurationImpl.getVisibilityCacheTimeout(conf`TimeUnit.MILLISECONDS)`TimeUnit.MILLISECONDS).maximumWeight(FluoConfigurationImpl.getVisibilityCacheWeight(conf)).weigher(new VisWeigher()).concurrencyLevel(10).build();" is 275.,49
+fluo-io_fluo,org.apache.fluo.core.impl,VisibilityCache,VisibilityCache,Magic Number,The method contains a magic number: 10,49
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImpl,getNumCWThreads,Complex Conditional,The conditional expression min < 0 || max < 0 || min > max is complex.,58
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImpl,getNumBWThreads,Complex Conditional,The conditional expression min < 0 || max < 0 || min > max is complex.,79
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImpl,getVisibilityCacheWeight,Long Identifier,The length of the field VISIBILITY_CACHE_WEIGHT_DEFAULT is 31.,150
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImpl,getVisibilityCacheTimeout,Long Identifier,The length of the field VISIBILITY_CACHE_TIMEOUT_DEFAULT is 32.,172
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImpl,getTransactorMaxCacheSize,Long Identifier,The length of the field TRANSACTOR_MAX_CACHE_SIZE_DEFAULT is 33.,192
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImpl,getTransactorCacheTimeout,Long Identifier,The length of the field TRANSACTOR_CACHE_TIMEOUT_DEFAULT is 32.,215
+fluo-io_fluo,org.apache.fluo.core.impl,SnapshotScanner,setupScanner,Magic Number,The method contains a magic number: 10,84
+fluo-io_fluo,org.apache.fluo.core.impl,TxInfoCache,TxInfoCache,Long Statement,The length of the statement "cache=CacheBuilder.newBuilder().expireAfterAccess(FluoConfigurationImpl.getTxIfoCacheTimeout(conf`TimeUnit.MILLISECONDS)`TimeUnit.MILLISECONDS).maximumWeight(FluoConfigurationImpl.getTxInfoCacheWeight(conf)).weigher(new TxStatusWeigher()).concurrencyLevel(10).build();" is 268.,39
+fluo-io_fluo,org.apache.fluo.core.impl,TxInfoCache,TxInfoCache,Magic Number,The method contains a magic number: 10,39
+fluo-io_fluo,org.apache.fluo.core.impl,TxStats,report,Long Statement,The length of the statement "MetricsUtil.getTimer(env.getConfiguration()`registry`names.getTxLockWaitTime(alias)).update(getLockWaitTime()`TimeUnit.MILLISECONDS);" is 133.,145
+fluo-io_fluo,org.apache.fluo.core.impl,TxStats,report,Long Statement,The length of the statement "MetricsUtil.getTimer(env.getConfiguration()`registry`names.getTxExecTime(alias)).update(getReadTime()`TimeUnit.MILLISECONDS);" is 125.,145
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorCache,TransactorCache,Long Statement,The length of the statement "timeoutCache=CacheBuilder.newBuilder().maximumSize(FluoConfigurationImpl.getTransactorMaxCacheSize(conf)).expireAfterAccess(FluoConfigurationImpl.getTransactorCacheTimeout(conf`TimeUnit.MILLISECONDS)`TimeUnit.MILLISECONDS).concurrencyLevel(10).build();" is 252.,49
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorCache,TransactorCache,Magic Number,The method contains a magic number: 10,49
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorCache,logTimedoutTransactor,Long Statement,The length of the statement "log.warn("Transactor ID {} was unresponsive for {} secs` marking as dead for lockTs <= {}"`LongUtil.toMaxRadixString(transactorId)`(System.currentTimeMillis() - startTime) / 1000.0`lockTs);" is 189.,70
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorCache,logTimedoutTransactor,Magic Number,The method contains a magic number: 1000.0,70
+fluo-io_fluo,org.apache.fluo.core.impl,Environment,ensureDeletesAreDisabled,Long Statement,The length of the statement "Preconditions.checkState(AccumuloProps.TABLE_DELETE_BEHAVIOR_VALUE.equals(value)`"The Accumulo table %s is not configured correctly. Please set %s=%s for this table in Accumulo."`table`AccumuloProps.TABLE_DELETE_BEHAVIOR`AccumuloProps.TABLE_DELETE_BEHAVIOR_VALUE);" is 264.,61
+fluo-io_fluo,org.apache.fluo.core.impl,Environment,Environment,Long Statement,The length of the statement "throw new IllegalArgumentException("unexpected accumulo instance id " + client.instanceOperations().getInstanceID() + " != "+ accumuloInstanceID);" is 146.,81
+fluo-io_fluo,org.apache.fluo.core.impl,Environment,readZookeeperConfig,Long Statement,The length of the statement "accumuloInstance=new String(curator.getData().forPath(ZookeeperPath.CONFIG_ACCUMULO_INSTANCE_NAME)`StandardCharsets.UTF_8);" is 123.,130
+fluo-io_fluo,org.apache.fluo.core.impl,Environment,readZookeeperConfig,Long Statement,The length of the statement "accumuloInstanceID=new String(curator.getData().forPath(ZookeeperPath.CONFIG_ACCUMULO_INSTANCE_ID)`StandardCharsets.UTF_8);" is 123.,130
+fluo-io_fluo,org.apache.fluo.core.impl,Environment,readZookeeperConfig,Long Statement,The length of the statement "fluoApplicationID=new String(curator.getData().forPath(ZookeeperPath.CONFIG_FLUO_APPLICATION_ID)`StandardCharsets.UTF_8);" is 121.,130
+fluo-io_fluo,org.apache.fluo.core.impl,SharedResources,SharedResources,Long Statement,The length of the statement "cw=env.getAccumuloClient().createConditionalWriter(env.getTable()`new ConditionalWriterConfig().setAuthorizations(env.getAuthorizations()).setMaxWriteThreads(numCWThreads));" is 173.,66
+fluo-io_fluo,org.apache.fluo.core.impl,SharedResources,SharedResources,Long Statement,The length of the statement "bulkCw=env.getAccumuloClient().createConditionalWriter(env.getTable()`new ConditionalWriterConfig().setAuthorizations(env.getAuthorizations()).setMaxWriteThreads(numCWThreads));" is 177.,66
+fluo-io_fluo,org.apache.fluo.core.impl,SharedResources,SharedResources,Long Statement,The length of the statement "int commitThreads=env.getConfiguration().getInt(FluoConfigurationImpl.ASYNC_COMMIT_THREADS`FluoConfigurationImpl.ASYNC_COMMIT_THREADS_DEFAULT);" is 143.,66
+fluo-io_fluo,org.apache.fluo.core.impl,SharedResources,SharedResources,Long Statement,The length of the statement "commitThreads=env.getConfiguration().getInt(FluoConfigurationImpl.SYNC_COMMIT_THREADS`FluoConfigurationImpl.SYNC_COMMIT_THREADS_DEFAULT);" is 137.,66
+fluo-io_fluo,org.apache.fluo.core.impl,SharedResources,close,Magic Number,The method contains a magic number: 5,174
+fluo-io_fluo,org.apache.fluo.core.impl,SharedResources,close,Magic Number,The method contains a magic number: 5,174
+fluo-io_fluo,org.apache.fluo.core.impl,SharedBatchWriter,SharedBatchWriter,Magic Number,The method contains a magic number: 100000,139
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorNode,TransactorNode,Long Statement,The length of the statement "node=new PersistentNode(env.getSharedResources().getCurator()`CreateMode.EPHEMERAL`false`getNodePath()`tid.toString().getBytes());" is 130.,45
+fluo-io_fluo,org.apache.fluo.core.impl,TransactorNode,TransactorNode,Magic Number,The method contains a magic number: 10,45
+fluo-io_fluo,org.apache.fluo.core.impl,TxInfo,getTransactionInfo,Complex Method,Cyclomatic complexity of the method is 9,37
+fluo-io_fluo,org.apache.fluo.core.impl,TxInfo,getTransactionInfo,Magic Number,The method contains a magic number: 10,37
+fluo-io_fluo,org.apache.fluo.core.impl,TxInfo,getTransactionInfo,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@77cf92da,37
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,getImpl,Complex Method,Cyclomatic complexity of the method is 10,225
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,setReadLock,Complex Conditional,The conditional expression curVal != null && (isWrite(curVal) || isDelete(curVal)) is complex.,344
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,prewrite,Long Parameter List,The method has 7 parameters. ,420
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,prewrite,Long Statement,The length of the statement "cm.put(col`ColumnType.RLOCK.encode(ReadLockUtil.encodeTs(startTs`false))`ReadLockValue.encode(primaryRow`primaryColumn`getTransactorID()));" is 139.,420
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,prewrite,Long Statement,The length of the statement "cm.put(col`ColumnType.LOCK.encode(startTs)`LockValue.encode(primaryRow`primaryColumn`isWrite(val)`isDelete(val)`isTriggerRow`getTransactorID()));" is 145.,420
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,prewrite,Magic Number,The method contains a magic number: 10,420
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,prewrite,Long Parameter List,The method has 6 parameters. ,456
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,prewrite,Long Parameter List,The method has 6 parameters. ,461
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,checkForOrphanedReadLocks,Complex Method,Cyclomatic complexity of the method is 12,615
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,checkForOrphanedReadLocks,Magic Number,The method contains a magic number: 2,615
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,checkForAckCollision,Long Statement,The length of the statement "Column col=new Column(Bytes.of(cu.getColumnFamily())`Bytes.of(cu.getColumnQualifier())`Bytes.of(cu.getColumnVisibility()));" is 123.,690
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,setUpBeginCommitAsync,Complex Method,Cyclomatic complexity of the method is 11,1462
+fluo-io_fluo,org.apache.fluo.core.impl,TransactionImpl,beginCommitAsync,Long Statement,The length of the statement "firstStep.andThen(new LockOtherStep()).andThen(new GetCommitStampStep()).andThen(new WriteNotificationsStep()).andThen(new CommitPrimaryStep()).andThen(new DeleteLocksStep()).andThen(new FinishCommitStep());" is 207.,1531
+fluo-io_fluo,org.apache.fluo.core.impl,PrimaryRowColumn,weight,Magic Number,The method contains a magic number: 32,51
+fluo-io_fluo,org.apache.fluo.core.impl,Notification,configureScanner,Magic Number,The method contains a magic number: 11,93
+fluo-io_fluo,org.apache.fluo.core.impl,ParallelSnapshotScanner,ParallelSnapshotScanner,Long Parameter List,The method has 7 parameters. ,59
+fluo-io_fluo,org.apache.fluo.core.impl,ParallelSnapshotScanner,ParallelSnapshotScanner,Long Parameter List,The method has 6 parameters. ,73
+fluo-io_fluo,org.apache.fluo.core.impl,ParallelSnapshotScanner,scan,Magic Number,The method contains a magic number: 2,132
+fluo-io_fluo,org.apache.fluo.core.impl,ParallelSnapshotScanner,scan,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@408091ad,176
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 3,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 10,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 10,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 100,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 40,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 40,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 100,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 3,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 5,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 5,22
+fluo-io_fluo,org.apache.fluo.core.impl,FluoConfigurationImplTest,testBasic,Magic Number,The method contains a magic number: 3,22
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,OracleServer,Long Statement,The length of the statement "stampsHistogram=MetricsUtil.getHistogram(env.getConfiguration()`env.getSharedResources().getMetricRegistry()`env.getMetricNames().getOracleServerStamps());" is 155.,193
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,allocateTimestamp,Magic Number,The method contains a magic number: 1000,202
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,getTimestampsImpl,Long Statement,The length of the statement "throw new IllegalArgumentException("Received timestamp request with a Fluo application ID [" + id + "] that does not match the application ID ["+ env.getFluoApplicationID()+ "] of the Oracle");" is 193.,232
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,startServer,Long Statement,The length of the statement "Preconditions.checkArgument(port >= 1 && port <= 65535`FluoConfigurationImpl.ORACLE_PORT_PROP + " must be valid port (1-65535)");" is 129.,280
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,startServer,Magic Number,The method contains a magic number: 65535,280
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,start,Magic Number,The method contains a magic number: 200,310
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,start,Magic Number,The method contains a magic number: 200,310
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,assumeLeadership,Magic Number,The method contains a magic number: 500,360
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,stop,Magic Number,The method contains a magic number: 10,397
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,stop,Magic Number,The method contains a magic number: 250,397
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,childEvent,Complex Conditional,The conditional expression isConnected() && (event.getType().equals(PathChildrenCacheEvent.Type.CHILD_ADDED) || event.getType().equals(PathChildrenCacheEvent.Type.CHILD_REMOVED) || event.getType().equals(PathChildrenCacheEvent.Type.CHILD_UPDATED)) is complex.,448
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleServer,childEvent,Long Statement,The length of the statement "if (isConnected() && (event.getType().equals(PathChildrenCacheEvent.Type.CHILD_ADDED) || event.getType().equals(PathChildrenCacheEvent.Type.CHILD_REMOVED) || event.getType().equals(PathChildrenCacheEvent.Type.CHILD_UPDATED))) {" is 227.,448
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleClient,OracleClient,Long Statement,The length of the statement "responseTimer=MetricsUtil.getTimer(env.getConfiguration()`env.getSharedResources().getMetricRegistry()`env.getMetricNames().getOracleResponseTime());" is 149.,339
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleClient,OracleClient,Long Statement,The length of the statement "stampsHistogram=MetricsUtil.getHistogram(env.getConfiguration()`env.getSharedResources().getMetricRegistry()`env.getMetricNames().getOracleClientStamps());" is 155.,339
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleClient,getStamp,Long Statement,The length of the statement "log.warn("Waiting for timestamp from Oracle. Is it running? Client has waited a total of {}s and will retry in {}s"`waitTotal`waitPeriod);" is 138.,351
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleClient,getStamp,Long Statement,The length of the statement "throw new FluoException("Timed out (after " + timeout + "ms) trying to retrieve timestamp from Oracle. Is the Oracle running?");" is 128.,351
+fluo-io_fluo,org.apache.fluo.core.oracle,OracleClient,getStamp,Magic Number,The method contains a magic number: 2,351
+fluo-io_fluo,org.apache.fluo.core.oracle,FluoOracleImpl,main,Magic Number,The method contains a magic number: 10000,88
+fluo-io_fluo,org.apache.fluo.core.oracle,StampTest,testBadStartTime,Magic Number,The method contains a magic number: 62,25
+fluo-io_fluo,org.apache.fluo.core.oracle,StampTest,testBadStartTime,Magic Number,The method contains a magic number: 5,25
+fluo-io_fluo,org.apache.fluo.core.oracle,StampTest,testBadGcTime,Magic Number,The method contains a magic number: 5,30
+fluo-io_fluo,org.apache.fluo.core.oracle,StampTest,testBadGcTime,Magic Number,The method contains a magic number: 62,30
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Long Statement,The length of the statement "Preconditions.checkArgument(!ZookeeperUtil.parseRoot(config.getInstanceZookeepers()).equals("/")`"The Zookeeper connection string (set by 'fluo.connection.zookeepers') " + " must have a chroot suffix.");" is 203.,97
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Long Statement,The length of the statement "Preconditions.checkArgument(config.getObserverJarsUrl().isEmpty() || config.getObserverInitDir().isEmpty()`"Only one of 'fluo.observer.init.dir' and 'fluo.observer.jars.url' can be set");" is 187.,97
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Long Statement,The length of the statement "throw new AlreadyInitializedException("Error - The Fluo '" + config.getApplicationName() + "' application"+ " is already running and must be stopped before initializing. "+ " Aborted initialization.");" is 201.,97
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Complex Method,Cyclomatic complexity of the method is 11,126
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Empty catch clause,The method has an empty catch block.,126
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Long Statement,The length of the statement "logger.error("An error occurred deleting Zookeeper root of [" + config.getAppZookeepers() + "]` error=["+ e.getMessage()+ "]");" is 127.,126
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Long Statement,The length of the statement "throw new IllegalStateException("The property " + FluoConfiguration.ACCUMULO_JARS_PROP + " is set and "+ FluoConfiguration.DFS_ROOT_PROP+ " is not set. So there is nowhere to copy the jars.");" is 192.,126
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initialize,Long Statement,The length of the statement "ntc.setLocalityGroups(Collections.singletonMap(ColumnConstants.NOTIFY_LOCALITY_GROUP_NAME`Collections.singleton(new Text(ColumnConstants.NOTIFY_CF.toArray()))));" is 161.,126
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,configureIterators,Magic Number,The method contains a magic number: 10,221
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,configureIterators,Magic Number,The method contains a magic number: 11,221
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,remove,Empty catch clause,The method has an empty catch block.,235
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,remove,Long Statement,The length of the statement "throw new FluoException("Error - The Fluo '" + config.getApplicationName() + "' application"+ " is already running and must be stopped before removing. Aborted remove.");" is 170.,235
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,remove,Long Statement,The length of the statement "Preconditions.checkArgument(!ZookeeperUtil.parseRoot(config.getInstanceZookeepers()).equals("/")`"The Zookeeper connection string (set by 'fluo.connection.zookeepers') " + " must have a chroot suffix.");" is 203.,235
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,remove,Long Statement,The length of the statement "logger.error("An error occurred deleting Zookeeper root of [" + config.getAppZookeepers() + "]` error=["+ e.getMessage()+ "]");" is 127.,235
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initializeApplicationInZooKeeper,Long Statement,The length of the statement "CuratorUtil.putData(curator`ZookeeperPath.CONFIG_ACCUMULO_TABLE`config.getAccumuloTable().getBytes(StandardCharsets.UTF_8)`CuratorUtil.NodeExistsPolicy.FAIL);" is 158.,281
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initializeApplicationInZooKeeper,Long Statement,The length of the statement "CuratorUtil.putData(curator`ZookeeperPath.CONFIG_ACCUMULO_INSTANCE_NAME`accumuloInstanceName.getBytes(StandardCharsets.UTF_8)`CuratorUtil.NodeExistsPolicy.FAIL);" is 161.,281
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initializeApplicationInZooKeeper,Long Statement,The length of the statement "CuratorUtil.putData(curator`ZookeeperPath.CONFIG_ACCUMULO_INSTANCE_ID`accumuloInstanceID.getBytes(StandardCharsets.UTF_8)`CuratorUtil.NodeExistsPolicy.FAIL);" is 157.,281
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,initializeApplicationInZooKeeper,Long Statement,The length of the statement "CuratorUtil.putData(curator`ZookeeperPath.CONFIG_FLUO_APPLICATION_ID`fluoApplicationID.getBytes(StandardCharsets.UTF_8)`CuratorUtil.NodeExistsPolicy.FAIL);" is 155.,281
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,updateSharedConfig,Long Statement,The length of the statement "throw new FluoException("Error - The Fluo '" + config.getApplicationName() + "' application"+ " is already running and must be stopped before updating shared configuration. "+ " Aborted update.");" is 196.,315
+fluo-io_fluo,org.apache.fluo.core.client,FluoAdminImpl,getJarsFromClasspath,Long Statement,The length of the statement "String regex=config.getString(FluoConfigurationImpl.ACCUMULO_JARS_REGEX_PROP`FluoConfigurationImpl.ACCUMULO_JARS_REGEX_DEFAULT);" is 128.,478
+fluo-io_fluo,org.apache.fluo.core.client,FluoClientImpl,setupReporters,Long Statement,The length of the statement "return ReporterUtil.setupReporters(env`FluoConfiguration.FLUO_PREFIX + "." + id+ "."+ reporterCounter.getAndIncrement());" is 121.,49
+fluo-io_fluo,org.apache.fluo.core.client,LoaderExecutorAsyncImpl,setException,Long Statement,The length of the statement "LoggerFactory.getLogger(LoaderExecutorAsyncImpl.class).debug("Multiple exceptions occured` not reporting subsequent ones"`t);" is 125.,52
+fluo-io_fluo,org.apache.fluo.core.client,LoaderExecutorAsyncImpl,LoaderExecutorAsyncImpl,Complex Conditional,The conditional expression numThreads < 0 || (numThreads == 0 && queueSize != 0) is complex.,181
+fluo-io_fluo,org.apache.fluo.core.client,LoaderExecutorAsyncImpl,LoaderExecutorAsyncImpl,Complex Conditional,The conditional expression queueSize < 0 || (numThreads != 0 && queueSize == 0) is complex.,181
+fluo-io_fluo,org.apache.fluo.core.client,LoaderExecutorAsyncImpl,execute,Magic Number,The method contains a magic number: 50,209
+fluo-io_fluo,org.apache.fluo.core.client,LoaderExecutorAsyncImpl,submit,Magic Number,The method contains a magic number: 50,240
+fluo-io_fluo,org.apache.fluo.core.client,LoaderExecutorAsyncImpl,close,Magic Number,The method contains a magic number: 3,266
+fluo-io_fluo,org.apache.fluo.core.log,TracingScannerBuilder,build,Long Statement,The length of the statement "log.trace("txid: {} scanId: {} scanner().over({}).fetch({}).build()"`txid`scanId`Hex.encNonAscii(span)`Hex.encNonAscii(columns));" is 129.,74
+fluo-io_fluo,org.apache.fluo.core.log,TracingScannerBuilder,byRow,Long Statement,The length of the statement "log.trace("txid: {} scanId: {} scanner().over({}).fetch({}).byRow().build()"`txid`scanId`Hex.encNonAscii(span)`Hex.encNonAscii(columns));" is 137.,86
+fluo-io_fluo,org.apache.fluo.core.log,TracingCellScanner,iterator,Long Statement,The length of the statement "log.trace("txid: {} scanId: {} next()-> {} {}"`txid`scanId`Hex.encNonAscii(rcv.getRowColumn())`Hex.encNonAscii(rcv.getValue()));" is 128.,41
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,toStringEncNonAsciiMBMCB,Long Statement,The length of the statement "return Iterators.toString(Iterators.transform(ret.entrySet().iterator()`e -> encNonAscii(e.getKey()) + "=" + toStringEncNonAsciiMCB(e.getValue())));" is 148.,79
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,toStringEncNonAsciiMRCB,Long Statement,The length of the statement "return Iterators.toString(Iterators.transform(ret.entrySet().iterator()`e -> encNonAscii(e.getKey()) + "=" + encNonAscii(e.getValue())));" is 137.,84
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,toStringEncNonAsciiMCB,Long Statement,The length of the statement "return Iterators.toString(Iterators.transform(ret.entrySet().iterator()`e -> toStringEncNonAscii(e.getKey()) + "=" + encNonAscii(e.getValue())));" is 145.,93
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,toStringEncNonAsciiMBSC,Long Statement,The length of the statement "return Iterators.toString(Iterators.transform(m.entrySet().iterator()`e -> encNonAscii(e.getKey()) + "=" + toStringEncNonAsciiCC(e.getValue())));" is 145.,98
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,TracingTransaction,Long Statement,The length of the statement "log.trace("txid: {} trigger: {} {} {}"`txid`encNonAscii(notification.getRow())`toStringEncNonAscii(notification.getColumn())`notification.getTimestamp());" is 154.,103
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,get,Long Statement,The length of the statement "log.trace("txid: {} {}get({}` {}) -> {}"`txid`prefix`encNonAscii(row)`toStringEncNonAsciiCC(columns)`toStringEncNonAsciiMCB(ret));" is 130.,139
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,get,Long Statement,The length of the statement "log.trace("txid: {} {}get({}` {}) -> {}"`txid`prefix`toStringEncNonAsciiCB(rows)`toStringEncNonAsciiCC(columns)`toStringEncNonAsciiMBMCB(ret));" is 143.,148
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,logUnsuccessfulCommit,Long Statement,The length of the statement "collisionLog.trace("txid: {} trigger: {} {} {}"`txid`notification.getRow()`notification.getColumn()`notification.getTimestamp());" is 129.,232
+fluo-io_fluo,org.apache.fluo.core.log,TracingTransaction,close,Long Statement,The length of the statement "summaryLog.trace("txid: {} thread : {} time: {} ({} {}) #ret: {} #set: {} #collisions: {} " + "waitTime: {} committed: {} class: {}"`txid`Thread.currentThread().getId()`stats.getTime()`stats.getReadTime()`stats.getCommitTime()`stats.getEntriesReturned()`stats.getEntriesSet()`stats.getCollisions()`stats.getLockWaitTime()`committed`className);" is 343.,248
+fluo-io_fluo,org.apache.fluo.core.log,TracingColumnScanner,iterator,Long Statement,The length of the statement "log.trace("txid: {} scanId: {} next()-> {} {} {}"`txid`scanId`encRow`Hex.encNonAscii(cv.getColumn())`Hex.encNonAscii(cv.getValue()));" is 133.,43
+fluo-io_fluo,org.apache.fluo.core.worker,FluoWorkerImpl,main,Magic Number,The method contains a magic number: 10000,85
+fluo-io_fluo,org.apache.fluo.core.worker,WorkTaskAsync,WorkTaskAsync,Long Parameter List,The method has 5 parameters. ,68
+fluo-io_fluo,org.apache.fluo.core.worker,NotificationProcessor,NotificationProcessor,Long Statement,The length of the statement "env.getSharedResources().getMetricRegistry().register(env.getMetricNames().getNotificationQueued()`(Gauge<Integer>)() -> queue.size());" is 135.,52
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,ScanTask,ScanTask,Long Parameter List,The method has 7 parameters. ,63
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,ScanTask,run,Complex Method,Cyclomatic complexity of the method is 10,79
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,ScanTask,run,Empty catch clause,The method has an empty catch block.,79
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,ScanTask,run,Long Statement,The length of the statement "log.debug("Scanned {} of {} tablets. Notifications added: {} seen: {} queued: {}"`tabletsScanned`ranges.size()`ntfyCounts.added`ntfyCounts.seen`qSize);" is 151.,79
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,ScanTask,run,Magic Number,The method contains a magic number: 2,79
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,ScanTask,run,Magic Number,The method contains a magic number: 50,79
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,ScanTask,scan,Magic Number,The method contains a magic number: 30,184
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,TabletData,updateScanCount,Magic Number,The method contains a magic number: 100,22
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,TabletData,updateScanCount,Magic Number,The method contains a magic number: 1.5,22
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionNotificationFinder,start,Long Statement,The length of the statement "long minSleepTime=env.getConfiguration().getInt(FluoConfigurationImpl.NTFY_FINDER_MIN_SLEEP_TIME_PROP`FluoConfigurationImpl.NTFY_FINDER_MIN_SLEEP_TIME_DEFAULT);" is 160.,43
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionNotificationFinder,start,Long Statement,The length of the statement "long maxSleepTime=env.getConfiguration().getInt(FluoConfigurationImpl.NTFY_FINDER_MAX_SLEEP_TIME_PROP`FluoConfigurationImpl.NTFY_FINDER_MAX_SLEEP_TIME_DEFAULT);" is 160.,43
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionInfo,PartitionInfo,Long Parameter List,The method has 6 parameters. ,29
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionInfo,equals,Long Statement,The length of the statement "return other.myGroupId == myGroupId && other.myIdInGroup == myIdInGroup && other.numGroups == numGroups && other.myGroupSize == myGroupSize && other.numWorkers == numWorkers && other.myGroupsRanges.equals(myGroupsRanges);" is 221.,81
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionInfo,toString,Long Statement,The length of the statement "return String.format("workers:%d groups:%d groupSize:%d groupId:%d idInGroup:%d #tablets:%d"`numWorkers`numGroups`myGroupSize`myGroupId`myIdInGroup`myGroupsRanges.size());" is 171.,97
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,getGroupInfo,Magic Number,The method contains a magic number: 42,109
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,updatePartitionInfo,Long Statement,The length of the statement "log.warn("Group size disagreement " + groupSize + " "+ groupSizes+ "` cannot gather tablet and notification partitioning info.");" is 129.,153
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,updatePartitionInfo,Magic Number,The method contains a magic number: 100,153
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,scheduleRetry,Magic Number,The method contains a magic number: 1.5,215
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,PartitionManager,Long Statement,The length of the statement "groupSize=env.getConfiguration().getInt(FluoConfigurationImpl.WORKER_PARTITION_GROUP_SIZE`FluoConfigurationImpl.WORKER_PARTITION_GROUP_SIZE_DEFAULT);" is 149.,270
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,PartitionManager,Long Statement,The length of the statement "myESNode=new PersistentNode(curator`CreateMode.EPHEMERAL_SEQUENTIAL`false`ZookeeperPath.FINDERS + "/" + ZK_FINDER_PREFIX`("" + groupSize).getBytes(UTF_8));" is 155.,270
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,shouldProcess,Long Statement,The length of the statement "return NotificationHashFilter.accept(ByteUtil.toByteSequence(notification.getRow())`new ArrayByteSequence(cfcq)`divisor`remainder);" is 131.,353
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManager,shouldProcess,Long Statement,The length of the statement "return pi.getMyGroupsRanges().getContaining(notification.getRow()) != null && shouldProcess(notification`pi.getMyGroupSize()`pi.getMyIdInGroup());" is 146.,360
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplits,serializeInternal,Magic Number,The method contains a magic number: 16,68
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplits,serialize,Magic Number,The method contains a magic number: 2,85
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplits,serialize,Magic Number,The method contains a magic number: 2,85
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplits,serializeTableSplits,Long Statement,The length of the statement "splits=env.getAccumuloClient().tableOperations().listSplits(env.getTable()).stream().map(ByteUtil::toBytes).collect(Collectors.toList());" is 137.,108
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,TableRangeTest,testMultiple,Magic Number,The method contains a magic number: 4,65
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,TableRangeTest,testToRange,Long Statement,The length of the statement "Assert.assertEquals(new Range(prev`false`end`true)`new TableRange(prev == null ? null : Bytes.of(prev)`end == null ? null : Bytes.of(end)).getRange());" is 151.,115
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: 7,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: 1000,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: 16,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: 16,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: 16,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: 1000.0,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: 7,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,testHashingConsistency,Magic Number,The method contains a magic number: .1,33
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,check,Magic Number,The method contains a magic number: 6,60
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,check,Magic Number,The method contains a magic number: 7,60
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,check,Magic Number,The method contains a magic number: 3,60
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,check,Magic Number,The method contains a magic number: 7,60
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,HashTest,check,Magic Number,The method contains a magic number: 3,60
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManagerTest,testGrouping,Long Statement,The length of the statement "Collection<Bytes> rows=IntStream.iterate(0`i -> i + 1000).limit(numSplits).mapToObj(i -> String.format("r%06d"`i)).map(Bytes::of).collect(toList());" is 148.,36
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManagerTest,testGrouping,Magic Number,The method contains a magic number: 1000,36
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,PartitionManagerTest,testGrouping,Magic Number,The method contains a magic number: 2,36
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Long Statement,The length of the statement "List<Bytes> splits=IntStream.iterate(0`i -> i + 13).limit(1_000_000).mapToObj(i -> String.format("%08x"`i)).map(Bytes::of).collect(toList());" is 141.,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 13,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 1_000_000,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 10_000,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 16,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 16,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 13,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 13,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 16,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 16,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 13,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testLotsOfSplits,Magic Number,The method contains a magic number: 13,32
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testSimple,Long Statement,The length of the statement "Set<Bytes> splits=IntStream.iterate(0`i -> i + 13).limit(1_000).mapToObj(i -> String.format("%08x"`i)).map(Bytes::of).collect(toSet());" is 135.,64
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testSimple,Magic Number,The method contains a magic number: 13,64
+fluo-io_fluo,org.apache.fluo.core.worker.finder.hash,SerializedSplitsTest,testSimple,Magic Number,The method contains a magic number: 1_000,64
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserverStoreV1,update,Long Statement,The length of the statement "throw new FluoException("Observer class '" + ospec.getClassName() + "' was not "+ "found. Check for class name misspellings or failure to include "+ "the observer jar."`e1);" is 173.,64
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserverStoreV1,updateObservers,Empty catch clause,The method has an empty catch block.,107
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserverStoreV1,readObservers,Long Statement,The length of the statement "org.apache.fluo.api.config.ObserverSpecification ospec=new org.apache.fluo.api.config.ObserverSpecification(clazz`params);" is 122.,165
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserverStoreV1,load,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@41e5751d,190
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserverStoreV1,getObservedColumns,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@41e5751d,215
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserverStoreV1,clear,Empty catch clause,The method has an empty catch block.,229
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserversV1,ObserversV1,Long Statement,The length of the statement "for ( Entry<Column`org.apache.fluo.api.config.ObserverSpecification> e : Iterables.concat(strongObservers.entrySet()`weakObservers.entrySet())) {" is 145.,55
+fluo-io_fluo,org.apache.fluo.core.observer.v1,ObserversV1,getObserver,Long Statement,The length of the statement "throw new IllegalStateException("Mismatch between configured column and class column " + observerConfig.getClassName() + " "+ col+ " "+ observer.getObservedColumn().getColumn());" is 178.,76
+fluo-io_fluo,org.apache.fluo.core.observer.v2,ObserversV2,ObserversV2,Long Statement,The length of the statement "throw new FluoException("ObserverProvider " + jco.getObserverProviderClass() + " did not provide observers for columns "+ diff);" is 128.,36
+fluo-io_fluo,org.apache.fluo.core.observer.v2,ObserverStoreV2,newObserverProvider,Long Statement,The length of the statement "throw new FluoException("ObserverProvider class '" + obsProviderClass + "' was not "+ "found. Check for class name misspellings or failure to include "+ "the observer provider jar."`e1);" is 186.,81
+fluo-io_fluo,org.apache.fluo.core.observer.v2,ObserverStoreV2,load,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@72590dda,97
+fluo-io_fluo,org.apache.fluo.core.observer.v2,ObserverStoreV2,load,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@798b0809,97
+fluo-io_fluo,org.apache.fluo.core.observer.v2,ObserverStoreV2,getObservedColumns,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@798b0809,134
+fluo-io_fluo,org.apache.fluo.core.observer.v2,ObserverStoreV2,clear,Empty catch clause,The method has an empty catch block.,148
+fluo-io_fluo,org.apache.fluo.core.observer.v2,JsonObservers,JsonObservers,Long Statement,The length of the statement "this.observedColumns=columns.entrySet().stream().map(entry -> new JsonObservedColumn(entry.getKey()`entry.getValue())).collect(toList());" is 137.,34
+fluo-io_fluo,org.apache.fluo.core.observer.v2,ObserverRegistry,register,Long Statement,The length of the statement "log.warn("Observer {} implements close(). Close is not called on Observers registered using ObserverProvider." + " Close is only called on Observers configured the old way."`obs.getClass().getName());" is 200.,81
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,setAppConfig,Magic Number,The method contains a magic number: 50000,42
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 50000,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 3,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 50000,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 40000,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 30000,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 6,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 7,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 40000,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testBasic,Magic Number,The method contains a magic number: 30000,52
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testLoaderAndObserver,Magic Number,The method contains a magic number: 3,116
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testLoaderAndObserver,Magic Number,The method contains a magic number: 30000,116
+fluo-io_fluo,org.apache.fluo.integration.impl,AppConfigIT,testLoaderAndObserver,Magic Number,The method contains a magic number: 60000,116
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testOverlap1,Magic Number,The method contains a magic number: 5,87
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testOverlap1,Magic Number,The method contains a magic number: 5,87
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testOverlap1,Magic Number,The method contains a magic number: 5,87
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testOverlap1,Magic Number,The method contains a magic number: 5,87
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,assertCommitFails,Empty catch clause,The method has an empty catch block.,132
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,assertAAck,Empty catch clause,The method has an empty catch block.,141
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testSnapshots,Magic Number,The method contains a magic number: 5,150
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testSnapshots,Magic Number,The method contains a magic number: 5,150
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testSnapshots,Magic Number,The method contains a magic number: 10,150
+fluo-io_fluo,org.apache.fluo.integration.impl,FluoIT,testStringMethods,Long Statement,The length of the statement "Map<String`ImmutableMap<Column`String>> expected1=ImmutableMap.of("d:0001"`ImmutableMap.of(ccol`"abc def")`"d:0002"`ImmutableMap.of(ccol`"neb feg"));" is 149.,498
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,waitForGcTime,Magic Number,The method contains a magic number: 500,54
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 10,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 20,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 60,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 2,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 2,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 9,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 22,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testVerifyAfterGC,Magic Number,The method contains a magic number: 59,64
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testRolledBackDataIsDropped,Magic Number,The method contains a magic number: 10,136
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testRolledBackDataIsDropped,Magic Number,The method contains a magic number: 10,136
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testRolledBackDataIsDropped,Magic Number,The method contains a magic number: 20,136
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testRolledBackDataIsDropped,Magic Number,The method contains a magic number: 20,136
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testRolledBackDataIsDropped,Magic Number,The method contains a magic number: 20,136
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testRolledBackDataIsDropped,Magic Number,The method contains a magic number: 20,136
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 60000,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 10,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 19,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 50,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 10,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 50,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 50,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 10,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 13,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 50,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 10,186
+fluo-io_fluo,org.apache.fluo.integration.impl,GarbageCollectionIteratorIT,testReadLocks,Magic Number,The method contains a magic number: 10,186
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,setConfig,Magic Number,The method contains a magic number: 20,99
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,setConfig,Magic Number,The method contains a magic number: 20,99
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,setConfig,Magic Number,The method contains a magic number: 20,99
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,testLotsOfCollisions,Long Statement,The length of the statement "String rowCol=k.getRow() + ":" + k.getColumnFamily()+ ":"+ k.getColumnQualifier()+ ":"+ String.format("%x"`k.getTimestamp() & ColumnConstants.PREFIX_MASK);" is 155.,109
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,testLotsOfCollisions,Magic Number,The method contains a magic number: 45734985,109
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,testLotsOfCollisions,Magic Number,The method contains a magic number: 1000,109
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,testLotsOfCollisions,Magic Number,The method contains a magic number: 5,109
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,testLotsOfCollisions,Magic Number,The method contains a magic number: 1000,109
+fluo-io_fluo,org.apache.fluo.integration.impl,CollisionIT,testLotsOfCollisions,Magic Number,The method contains a magic number: 300,109
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackManyImpl,Magic Number,The method contains a magic number: 10,92
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackManyImpl,Magic Number,The method contains a magic number: 10,92
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackManyImpl,Magic Number,The method contains a magic number: 10,92
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackManyImpl,Magic Number,The method contains a magic number: 10,92
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollforwardManyImpl,Magic Number,The method contains a magic number: 10,157
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollforwardManyImpl,Magic Number,The method contains a magic number: 10,157
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollforwardManyImpl,Magic Number,The method contains a magic number: 10,157
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollforwardManyImpl,Magic Number,The method contains a magic number: 10,157
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 7,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 7,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 10,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 20,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: .5,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 7,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 7,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 7,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 7,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 2,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 2,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollback,Magic Number,The method contains a magic number: 2,208
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,rollbackTest,Magic Number,The method contains a magic number: 7,274
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,rollbackTest,Magic Number,The method contains a magic number: 7,274
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,rollbackTest,Magic Number,The method contains a magic number: 10,274
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: 7,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: 7,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: 3,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: 27,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: .5,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: 2,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: 25,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollfoward,Magic Number,The method contains a magic number: 2,332
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testAcks,Empty catch clause,The method has an empty catch block.,385
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testStaleScanPrevention,Magic Number,The method contains a magic number: 2,454
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testStaleScanPrevention,Magic Number,The method contains a magic number: 2,454
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testForcedStaleScan,Empty catch clause,The method has an empty catch block.,487
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testForcedStaleScan,Magic Number,The method contains a magic number: 60000,487
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testForcedStaleScan,Magic Number,The method contains a magic number: 2,487
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testForcedStaleScan,Magic Number,The method contains a magic number: 2,487
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testForcedStaleScan,Magic Number,The method contains a magic number: 500,487
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testCommitBug1,Empty catch clause,The method has an empty catch block.,558
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackSelf,Empty catch clause,The method has an empty catch block.,592
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackSelf,Magic Number,The method contains a magic number: 5,592
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackSelf,Magic Number,The method contains a magic number: 5,592
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackSelf,Magic Number,The method contains a magic number: 5,592
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,testRollbackSelf,Magic Number,The method contains a magic number: 5,592
+fluo-io_fluo,org.apache.fluo.integration.impl,FailureIT,wasRolledBackPrimary,Complex Conditional,The conditional expression row.equals(rolledBackRow) && colType == ColumnType.DEL_LOCK && ts == startTs && DelLockValue.isPrimary(val) is complex.,636
+fluo-io_fluo,org.apache.fluo.integration.impl,ParallelScannerIT,testConcurrentParallelScan,Magic Number,The method contains a magic number: 500,76
+fluo-io_fluo,org.apache.fluo.integration.impl,ParallelScannerIT,testConcurrentParallelScan,Magic Number,The method contains a magic number: 4,76
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,getZookeeper,Magic Number,The method contains a magic number: 30000,63
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,getZookeeper,Magic Number,The method contains a magic number: 30000,63
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,getZookeeper,Magic Number,The method contains a magic number: 10,63
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,testZKAcls,Empty catch clause,The method has an empty catch block.,105
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,testZKAcls,Empty catch clause,The method has an empty catch block.,105
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,testZKAcls,Empty catch clause,The method has an empty catch block.,105
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,testZKAcls,Empty catch clause,The method has an empty catch block.,105
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,testZKAcls,Empty catch clause,The method has an empty catch block.,105
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,testZKAcls,Empty catch clause,The method has an empty catch block.,105
+fluo-io_fluo,org.apache.fluo.integration.impl,ZKSecretIT,testZKAcls,Long Statement,The length of the statement "for ( String path : Arrays.asList(ZookeeperPath.ORACLE_SERVER`ZookeeperPath.CONFIG_SHARED`ZookeeperPath.CONFIG_FLUO_OBSERVERS2`ZookeeperPath.TRANSACTOR_NODES)) {" is 161.,105
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTransactorAndCache,Magic Number,The method contains a magic number: 2,43
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 30000,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 4,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 3,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 3,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 4,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 5,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 6,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 7,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 3,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 4,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 3,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 4,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 5,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 6,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 7,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 8,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 9,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 3,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 4,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 5,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 6,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 3,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 3,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 7,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,testTimeout,Magic Number,The method contains a magic number: 8,119
+fluo-io_fluo,org.apache.fluo.integration.impl,TransactorIT,assertNumOpen,Magic Number,The method contains a magic number: 50,172
+fluo-io_fluo,org.apache.fluo.integration.impl,WorkerIT,testDiffObserverConfig,Long Statement,The length of the statement "Assert.assertTrue(ise.getMessage().contains("Column attr2 lastupdate not previously configured for strong notifications"));" is 123.,148
+fluo-io_fluo,org.apache.fluo.integration.impl,WorkerIT,testMultipleFinders,Magic Number,The method contains a magic number: 10,175
+fluo-io_fluo,org.apache.fluo.integration.impl,WorkerIT,testMultipleFinders,Magic Number,The method contains a magic number: 10,175
+fluo-io_fluo,org.apache.fluo.integration.impl,NotificationGcIT,testNotificationGC,Magic Number,The method contains a magic number: 3,70
+fluo-io_fluo,org.apache.fluo.integration.impl,NotificationGcIT,testNotificationGC,Magic Number,The method contains a magic number: 7,70
+fluo-io_fluo,org.apache.fluo.integration.impl,NotificationGcIT,testNotificationGC,Magic Number,The method contains a magic number: 5,70
+fluo-io_fluo,org.apache.fluo.integration.impl,NotificationGcIT,testNotificationGC,Magic Number,The method contains a magic number: 7,70
+fluo-io_fluo,org.apache.fluo.integration.impl,NotificationGcIT,testNotificationGC,Magic Number,The method contains a magic number: 4,70
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testFiltering,Long Statement,The length of the statement "Iterables.addAll(expectedR2c`Iterables.filter(expected`rcv -> rcv.getsRow().equals("r2") && rcv.getColumn().equals(new Column("f1"`"q2"))));" is 140.,42
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testFiltering,Long Statement,The length of the statement "Iterables.addAll(expectedCols`Iterables.filter(expected`rcv -> rcv.getColumn().equals(new Column("f2"`"q5")) || rcv.getColumn().equals(new Column("f1"`"q1"))));" is 160.,42
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testFiltering,Magic Number,The method contains a magic number: 2,42
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testFiltering,Magic Number,The method contains a magic number: 2,42
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testFiltering,Magic Number,The method contains a magic number: 2,42
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testFiltering,Magic Number,The method contains a magic number: 3,42
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testSame,Long Statement,The length of the statement "Iterables.addAll(expectedC`Iterables.filter(expected`rcv -> rcv.getColumn().equals(col1) || rcv.getColumn().equals(col2)));" is 123.,96
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,testSame,Magic Number,The method contains a magic number: 3,96
+fluo-io_fluo,org.apache.fluo.integration.impl,ScannerIT,genData,Magic Number,The method contains a magic number: 5,194
+fluo-io_fluo,org.apache.fluo.integration.impl,SummaryIT,testSummaries,Magic Number,The method contains a magic number: 2,32
+fluo-io_fluo,org.apache.fluo.integration.impl,SummaryIT,testSummaries,Magic Number,The method contains a magic number: 2,32
+fluo-io_fluo,org.apache.fluo.integration.impl,SummaryIT,testSummaries,Magic Number,The method contains a magic number: 2,32
+fluo-io_fluo,org.apache.fluo.integration.impl,ClientExceptionIT,testAlreadySetException,Empty catch clause,The method has an empty catch block.,35
+fluo-io_fluo,org.apache.fluo.integration.impl,ClientExceptionIT,testAlreadySetException,Empty catch clause,The method has an empty catch block.,35
+fluo-io_fluo,org.apache.fluo.integration.impl,ClientExceptionIT,testAlreadySetException,Empty catch clause,The method has an empty catch block.,35
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTrackingWithZkUpdate,Magic Number,The method contains a magic number: 5,73
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTrackingWithZkUpdate,Magic Number,The method contains a magic number: 5,73
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTrackingWithZkUpdate,Magic Number,The method contains a magic number: 15,73
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTrackingWithZkUpdate,Magic Number,The method contains a magic number: 15,73
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTrackingWithZkUpdate,Magic Number,The method contains a magic number: 5,73
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTrackingWithZkUpdate,Magic Number,The method contains a magic number: 5,73
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTimestampUtilGetOldestTs,Magic Number,The method contains a magic number: 5,104
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTimestampUtilGetOldestTs,Magic Number,The method contains a magic number: 15,104
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTimestampUtilGetOldestTs,Magic Number,The method contains a magic number: 5,104
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTimestampUtilGetOldestTs,Magic Number,The method contains a magic number: 5,104
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTimestampUtilGetOldestTs,Magic Number,The method contains a magic number: 5,104
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTimestampUtilGetOldestTs,Magic Number,The method contains a magic number: 5,104
+fluo-io_fluo,org.apache.fluo.integration.impl,TimestampTrackerIT,testTimestampUtilGetOldestTs,Magic Number,The method contains a magic number: 5,104
+fluo-io_fluo,org.apache.fluo.integration.impl,ObserverConfigIT,newMap,Magic Number,The method contains a magic number: 2,92
+fluo-io_fluo,org.apache.fluo.integration.impl,ObserverConfigIT,setupObservers,Long Statement,The length of the statement "observers.add(new org.apache.fluo.api.config.ObserverSpecification(ConfigurableObserver.class.getName()`newMap("observedCol"`"fam1:col1:" + NotificationType.STRONG`"outputCQ"`"col2")));" is 185.,100
+fluo-io_fluo,org.apache.fluo.integration.impl,ObserverConfigIT,setupObservers,Long Statement,The length of the statement "observers.add(new org.apache.fluo.api.config.ObserverSpecification(ConfigurableObserver.class.getName()`newMap("observedCol"`"fam1:col2:" + NotificationType.STRONG`"outputCQ"`"col3"`"setWeakNotification"`"true")));" is 214.,100
+fluo-io_fluo,org.apache.fluo.integration.impl,ObserverConfigIT,setupObservers,Long Statement,The length of the statement "observers.add(new org.apache.fluo.api.config.ObserverSpecification(ConfigurableObserver.class.getName()`newMap("observedCol"`"fam1:col3:" + NotificationType.WEAK`"outputCQ"`"col4")));" is 183.,100
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,bogusDataTest,Magic Number,The method contains a magic number: 2,117
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,threadTest,Magic Number,The method contains a magic number: 20,139
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,threadTest,Magic Number,The method contains a magic number: 100,139
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,failover_newTimestampRequested,Magic Number,The method contains a magic number: 2,176
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,failover_newTimestampRequested,Magic Number,The method contains a magic number: 7,176
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,failover_newTimestampRequested,Magic Number,The method contains a magic number: 1002,176
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,failover_newTimestampRequested,Magic Number,The method contains a magic number: 2002,176
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,singleOracle_goesAwayAndComesBack,Magic Number,The method contains a magic number: 2,228
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,singleOracle_goesAwayAndComesBack,Magic Number,The method contains a magic number: 7,228
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,singleOracle_goesAwayAndComesBack,Magic Number,The method contains a magic number: 100,228
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,singleOracle_goesAwayAndComesBack,Magic Number,The method contains a magic number: 1002,228
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,threadFailoverTest,Magic Number,The method contains a magic number: 20,264
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,threadFailoverTest,Magic Number,The method contains a magic number: 100,264
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,threadFailoverTest,Magic Number,The method contains a magic number: 10,264
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,threadFailoverTest,Magic Number,The method contains a magic number: 5,264
+fluo-io_fluo,org.apache.fluo.integration.impl,OracleIT,sleepWhile,Magic Number,The method contains a magic number: 100,329
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: 5000,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: 4,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: 2,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: 3,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: 4,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: .4,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: .1,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: .50,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: 20,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,testConcurrency,Magic Number,The method contains a magic number: 100,62
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,startTransfers,Magic Number,The method contains a magic number: 100,120
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,run,Magic Number,The method contains a magic number: 100,129
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,transfer,Empty catch clause,The method has an empty catch block.,153
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,runVerifier,Long Statement,The length of the statement "log.debug("avg : %`9.2f min : %`6d max : %`6d stddev : %1.2f rate : %`6.2f\n"`stat.getMean()`stat.getMin()`stat.getMax()`stat.getStandardDeviation()`numAccounts / ((t2 - t1) / 1000.0));" is 185.,184
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,runVerifier,Magic Number,The method contains a magic number: 2,184
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,runVerifier,Magic Number,The method contains a magic number: 1000.0,184
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,runVerifier,Magic Number,The method contains a magic number: 1000,184
+fluo-io_fluo,org.apache.fluo.integration.impl,StochasticBankIT,runVerifier,Magic Number,The method contains a magic number: 1000,184
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,getDerivedEdges,Long Statement,The length of the statement "snap.scanner().over(Span.prefix("d:")).build().stream().map(RowColumnValue::getsRow).map(r -> r.substring(2)).forEach(derivedEdges::add);" is 137.,51
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,getDerivedEdges,Magic Number,The method contains a magic number: 2,51
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,expectCommitException,Empty catch clause,The method has an empty catch block.,60
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testParallelScan,Magic Number,The method contains a magic number: 2,194
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testParallelScanRC,Long Statement,The length of the statement "Map<RowColumn`String> ratios=tx.withReadLock().gets(Arrays.asList(new RowColumn("user5"`crCol)`new RowColumn("user6"`crCol)));" is 126.,242
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testParallelScanRC,Magic Number,The method contains a magic number: 2,242
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testFailDeletesReadLocks,Empty catch clause,The method has an empty catch block.,361
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testFailDeletesReadLocks,Magic Number,The method contains a magic number: 20,361
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testFailDeletesReadLocks,Magic Number,The method contains a magic number: 20,361
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testFailDeletesReadLocks,Magic Number,The method contains a magic number: 19,361
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testFailDeletesReadLocks,Magic Number,The method contains a magic number: 19,361
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockFailureIT,testFailDeletesReadLocks,Magic Number,The method contains a magic number: 20,361
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,addEdge,Long Parameter List,The method has 5 parameters. ,89
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,setAlias,Magic Number,The method contains a magic number: 2,98
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,setAlias,Magic Number,The method contains a magic number: 2,98
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testConcurrentReadlocks,Empty catch clause,The method has an empty catch block.,120
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testWriteCausesReadLockToFail,Empty catch clause,The method has an empty catch block.,160
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Complex Method,Cyclomatic complexity of the method is 9,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Magic Number,The method contains a magic number: 100,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Magic Number,The method contains a magic number: 1000,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Magic Number,The method contains a magic number: 25,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Magic Number,The method contains a magic number: 1000000000,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Magic Number,The method contains a magic number: 1000000000,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Magic Number,The method contains a magic number: 1000000000,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testRandom,Magic Number,The method contains a magic number: 20,239
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,getDerivedEdges,Long Statement,The length of the statement "snap.scanner().over(Span.prefix("d:")).build().stream().map(RowColumnValue::getsRow).map(r -> r.substring(2)).forEach(derivedEdges::add);" is 137.,357
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,getDerivedEdges,Magic Number,The method contains a magic number: 2,357
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,ensureReadLocksSet,Empty catch clause,The method has an empty catch block.,403
+fluo-io_fluo,org.apache.fluo.integration.impl,ReadLockIT,testGetRowColumns,Long Statement,The length of the statement "Map<RowColumn`String> vals=txr.withReadLock().gets(ImmutableList.of(new RowColumn("test1"`c1)`new RowColumn("test1"`c2)`new RowColumn("test2"`c1)`new RowColumn("test2"`c2)));" is 174.,496
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,Bytes,Complex Conditional,The conditional expression offset < 0 || offset > data.length || length < 0 || (offset + length) > data.length is complex.,86
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,Bytes,Long Statement,The length of the statement "throw new IndexOutOfBoundsException(" Bad offset and/or length data.length = " + data.length + " offset = "+ offset+ " length = "+ length);" is 139.,86
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,subSequence,Complex Conditional,The conditional expression start > end || start < 0 || end > length is complex.,123
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,subSequence,Long Statement,The length of the statement "throw new IndexOutOfBoundsException("Bad start and/end start = " + start + " end="+ end+ " offset="+ offset+ " length="+ length);" is 129.,123
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,writeTo,Magic Number,The method contains a magic number: 32,177
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,compareToUnchecked,Magic Number,The method contains a magic number: 0xff,238
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,compareToUnchecked,Magic Number,The method contains a magic number: 0xff,238
+fluo-io_fluo,org.apache.fluo.api.data,Bytes,hashCode,Magic Number,The method contains a magic number: 31,316
+fluo-io_fluo,org.apache.fluo.api.data,Span,equals,Long Statement,The length of the statement "return start.equals(other.start) && (startInclusive == other.startInclusive) && end.equals(other.end)&& (endInclusive == other.endInclusive);" is 141.,179
+fluo-io_fluo,org.apache.fluo.api.data,Span,toString,Long Statement,The length of the statement "return ((startInclusive && !start.equals(RowColumn.EMPTY)) ? "[" : "(") + (start.equals(RowColumn.EMPTY) ? "-inf" : start) + "`"+ (end.equals(RowColumn.EMPTY) ? "+inf" : end)+ ((endInclusive && !end.equals(RowColumn.EMPTY)) ? "]" : ")");" is 237.,190
+fluo-io_fluo,org.apache.fluo.api.data,Span,followingPrefix,Magic Number,The method contains a magic number: 0xff,242
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testHashSubsequence,Magic Number,The method contains a magic number: 2,74
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testHashSubsequence,Magic Number,The method contains a magic number: 5,74
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testPrefixSuffix,Magic Number,The method contains a magic number: 2,82
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testPrefixSuffix,Magic Number,The method contains a magic number: 2,82
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testPrefixSuffix,Magic Number,The method contains a magic number: 3,82
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testPrefixSuffix,Magic Number,The method contains a magic number: 5,82
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testPrefixSuffix,Magic Number,The method contains a magic number: 2,82
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testPrefixSuffix,Magic Number,The method contains a magic number: 2,82
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompare,Magic Number,The method contains a magic number: 3,135
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompare,Magic Number,The method contains a magic number: 2,135
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompare,Magic Number,The method contains a magic number: 2,135
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompare,Magic Number,The method contains a magic number: 2,135
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompare,Magic Number,The method contains a magic number: 2,135
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompare,Magic Number,The method contains a magic number: 3,135
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompareNegOffset,Magic Number,The method contains a magic number: 4,171
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompareBadArgs,Magic Number,The method contains a magic number: 2,187
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompareBadArgs,Magic Number,The method contains a magic number: 2,187
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompareSubsequence,Magic Number,The method contains a magic number: 3,195
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompareSubsequence,Magic Number,The method contains a magic number: 4,195
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompareSubsequence,Magic Number,The method contains a magic number: 5,195
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCompareSubsequence,Magic Number,The method contains a magic number: 3,195
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testToByteBuffer,Empty catch clause,The method has an empty catch block.,221
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testToByteBuffer,Magic Number,The method contains a magic number: 8,221
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testToByteBuffer,Magic Number,The method contains a magic number: 8,221
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testToByteBuffer,Magic Number,The method contains a magic number: 6,221
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testWrite,Magic Number,The method contains a magic number: 1024,239
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testWrite,Magic Number,The method contains a magic number: 42,239
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Empty catch clause,The method has an empty catch block.,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Empty catch clause,The method has an empty catch block.,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Empty catch clause,The method has an empty catch block.,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Empty catch clause,The method has an empty catch block.,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Empty catch clause,The method has an empty catch block.,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 2,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 5,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 2,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 5,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 2,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 3,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 3,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 2,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 5,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testBounds,Magic Number,The method contains a magic number: 2,260
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToSubset,Magic Number,The method contains a magic number: 4,358
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToSubset,Magic Number,The method contains a magic number: 3,358
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToSubset,Magic Number,The method contains a magic number: 6,358
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToSubset,Magic Number,The method contains a magic number: 3,358
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToSubset,Magic Number,The method contains a magic number: 6,358
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToArgsReversed,Magic Number,The method contains a magic number: 4,374
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToArgsReversed,Magic Number,The method contains a magic number: 6,374
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToArgsReversed,Magic Number,The method contains a magic number: 3,374
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToNothing,Magic Number,The method contains a magic number: 4,387
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToNothing,Magic Number,The method contains a magic number: 3,387
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToNothing,Magic Number,The method contains a magic number: 3,387
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 11,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 15,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 9,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 2,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 9,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 15,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 9,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 2,397
+fluo-io_fluo,org.apache.fluo.api.data,BytesTest,testCopyToWithUnicode,Magic Number,The method contains a magic number: 11,397
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rw1b`false`rw2b`false)`Span.newBuilder().startRow(rw1b).exclusive().endRow(rw2b).exclusive().build());" is 131.,45
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rw1b`false`rw2b`false)`Span.newBuilder().startRow(rw1s).exclusive().endRow(rw2s).exclusive().build());" is 131.,45
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testInfiniteRanges,Long Statement,The length of the statement "Assert.assertEquals(new Span(RowColumn.EMPTY`true`rc2`false)`Span.newBuilder().endRow(rw2b).fam(cf2b).exclusive().build());" is 123.,68
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testInfiniteRanges,Long Statement,The length of the statement "Assert.assertEquals(new Span(frc1`true`RowColumn.EMPTY`true)`Span.newBuilder().startRow(rw1b).fam(cf1b).exclusive().build());" is 125.,68
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rc1`true`frc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).endRow(rw2b).fam(cf2b).build());" is 125.,85
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rc1`true`rc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).endRow(rw2b).fam(cf2b).exclusive().build());" is 136.,85
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(frc1`true`frc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).exclusive().endRow(rw2b).fam(cf2b).build());" is 138.,85
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(frc1`true`rc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).exclusive().endRow(rw2b).fam(cf2b).exclusive().build());" is 149.,85
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rc1`true`frc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).endRow(rw2b).fam(cf2b).qual(cq2b).build());" is 147.,102
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rc1`true`rc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).endRow(rw2b).fam(cf2b).qual(cq2b).exclusive().build());" is 158.,102
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(frc1`true`frc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).exclusive().endRow(rw2b).fam(cf2b).qual(cq2b).build());" is 160.,102
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(frc1`true`rc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).exclusive().endRow(rw2b).fam(cf2b).qual(cq2b).exclusive().build());" is 171.,102
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQCVRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rc1`true`frc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).vis(cv1b).endRow(rw2b).fam(cf2b).qual(cq2b).vis(cv2b).build());" is 167.,119
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQCVRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(rc1`true`rc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).vis(cv1b).endRow(rw2b).fam(cf2b).qual(cq2b).vis(cv2b).exclusive().build());" is 178.,119
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQCVRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(frc1`true`frc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).vis(cv1b).exclusive().endRow(rw2b).fam(cf2b).qual(cq2b).vis(cv2b).build());" is 180.,119
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testRowCFCQCVRange,Long Statement,The length of the statement "Assert.assertEquals(new Span(frc1`true`rc2`false)`Span.newBuilder().startRow(rw1b).fam(cf1b).qual(cq1b).vis(cv1b).exclusive().endRow(rw2b).fam(cf2b).qual(cq2b).vis(cv2b).exclusive().build());" is 191.,119
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testExactSpan,Long Statement,The length of the statement "Assert.assertEquals(new RowColumn(rw1b`new Column(cf1b)).following().getColumn().getFamily()`s.getEnd().getColumn().getFamily());" is 129.,138
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testExactSpan,Long Statement,The length of the statement "Assert.assertEquals(new RowColumn(rw1b`new Column(cf1b`cq1b)).following().getColumn().getQualifier()`s.getEnd().getColumn().getQualifier());" is 140.,138
+fluo-io_fluo,org.apache.fluo.api.data,SpanTest,testExactSpan,Long Statement,The length of the statement "Assert.assertEquals(new RowColumn(rw1b`new Column(cf1b`cq1b`cv1b)).following().getColumn().getVisibility()`s.getEnd().getColumn().getVisibility());" is 147.,138
+fluo-io_fluo,org.apache.fluo.api.data,RowColumnTest,testBasic,Magic Number,The method contains a magic number: 123316141,26
+fluo-io_fluo,org.apache.fluo.api.data,RowColumnTest,testFollowing,Long Statement,The length of the statement "Assert.assertEquals(new RowColumn("row"`new Column(Bytes.of("cf")`fb))`new RowColumn("row"`new Column("cf"`"data")).following());" is 129.,53
+fluo-io_fluo,org.apache.fluo.api.data,RowColumnTest,testFollowing,Long Statement,The length of the statement "Assert.assertEquals(new RowColumn("row"`new Column(Bytes.of("cf")`Bytes.of("cq")`fb))`new RowColumn("row"`new Column("cf"`"cq"`"data")).following());" is 149.,53
+fluo-io_fluo,org.apache.fluo.api.data,RowColumnTest,testFollowing,Magic Number,The method contains a magic number: 4,53
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testInputStream,Magic Number,The method contains a magic number: 2,40
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testInputStream,Magic Number,The method contains a magic number: 3,40
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testByteBuffer,Magic Number,The method contains a magic number: 7,53
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSetLength,Magic Number,The method contains a magic number: 10,68
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSetLength,Magic Number,The method contains a magic number: 100,68
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSetLength,Magic Number,The method contains a magic number: 6,68
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSetLength,Magic Number,The method contains a magic number: 6,68
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSetLength,Magic Number,The method contains a magic number: 100,68
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSingleByte,Magic Number,The method contains a magic number: 127,91
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSingleByte,Magic Number,The method contains a magic number: 128,91
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSingleByte,Magic Number,The method contains a magic number: 255,91
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSingleByte,Magic Number,The method contains a magic number: 128,91
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testSingleByte,Magic Number,The method contains a magic number: 0xff,91
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testArraySection,Magic Number,The method contains a magic number: 3,105
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testArraySection,Magic Number,The method contains a magic number: 3,105
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testArraySection,Magic Number,The method contains a magic number: 2,105
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testArraySection,Magic Number,The method contains a magic number: 2,105
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testIncreaseCapacity,Magic Number,The method contains a magic number: 19,119
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testIncreaseCapacity,Magic Number,The method contains a magic number: 100,119
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testIncreaseCapacity,Magic Number,The method contains a magic number: 1000,119
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testIncreaseCapacity,Magic Number,The method contains a magic number: 19,119
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testIncreaseCapacity,Magic Number,The method contains a magic number: 500,119
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testIncreaseCapacity,Magic Number,The method contains a magic number: 10,119
+fluo-io_fluo,org.apache.fluo.api.data,BytesBuilderTest,testIncreaseCapacity,Magic Number,The method contains a magic number: 19,119
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setApplicationName,Long Identifier,The length of the field CONNECTION_APPLICATION_NAME_PROP is 32.,271
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getApplicationName,Long Identifier,The length of the field CONNECTION_APPLICATION_NAME_PROP is 32.,282
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,verifyApplicationName,Complex Conditional,The conditional expression c == '/' || c == '.' || c == ':' is complex.,304
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,verifyApplicationName,Complex Conditional,The conditional expression c > '\u0000' && c <= '\u001f' || c >= '\u007f' && c <= '\u009F' || c >= '\ud800' && c <= '\uf8ff' || c >= '\ufff0' && c <= '\uffff' is complex.,304
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,verifyApplicationName,Complex Method,Cyclomatic complexity of the method is 8,304
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,verifyApplicationName,Long Statement,The length of the statement "else if (c > '\u0000' && c <= '\u001f' || c >= '\u007f' && c <= '\u009F' || c >= '\ud800' && c <= '\uf8ff' || c >= '\ufff0' && c <= '\uffff') {" is 143.,304
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setZookeeperTimeout,Long Identifier,The length of the field CONNECTION_ZOOKEEPER_TIMEOUT_PROP is 33.,371
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getZookeeperTimeout,Long Identifier,The length of the field CONNECTION_ZOOKEEPER_TIMEOUT_PROP is 33.,380
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getZookeeperTimeout,Long Identifier,The length of the field CONNECTION_ZOOKEEPER_TIMEOUT_DEFAULT is 36.,380
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getZookeeperTimeout,Long Statement,The length of the statement "return getDepPositiveInt(CONNECTION_ZOOKEEPER_TIMEOUT_PROP`CLIENT_ZOOKEEPER_TIMEOUT_PROP`CONNECTION_ZOOKEEPER_TIMEOUT_DEFAULT);" is 127.,380
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setConnectionRetryTimeout,Long Identifier,The length of the field CONNECTION_RETRY_TIMEOUT_MS_PROP is 32.,426
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getConnectionRetryTimeout,Long Identifier,The length of the field CONNECTION_RETRY_TIMEOUT_MS_PROP is 32.,439
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getConnectionRetryTimeout,Long Identifier,The length of the field CONNECTION_RETRY_TIMEOUT_MS_DEFAULT is 35.,439
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getAccumuloZookeepers,Long Identifier,The length of the field CLIENT_ACCUMULO_ZOOKEEPERS_PROP is 31.,522
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getObserverSpecifications,Complex Conditional,The conditional expression key.startsWith(FluoConfiguration.OBSERVER_PREFIX) && !key.equals(FluoConfiguration.OBSERVER_PROVIDER) && !key.equals(FluoConfiguration.OBSERVER_INIT_DIR_PROP)&& !key.equals(FluoConfiguration.OBSERVER_JARS_URL_PROP) is complex.,614
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getObserverSpecifications,Complex Method,Cyclomatic complexity of the method is 9,614
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getObserverSpecifications,Long Statement,The length of the statement "if (key.startsWith(FluoConfiguration.OBSERVER_PREFIX) && !key.equals(FluoConfiguration.OBSERVER_PROVIDER) && !key.equals(FluoConfiguration.OBSERVER_INIT_DIR_PROP)&& !key.equals(FluoConfiguration.OBSERVER_JARS_URL_PROP)) {" is 221.,614
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getObserverSpecifications,Magic Number,The method contains a magic number: 2,614
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getNextObserverId,Empty catch clause,The method has an empty catch block.,667
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setTransactionRollbackTime,Long Identifier,The length of the field TRANSACTION_ROLLBACK_TIME_PROP is 30.,827
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getTransactionRollbackTime,Long Identifier,The length of the field TRANSACTION_ROLLBACK_TIME_PROP is 30.,839
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getTransactionRollbackTime,Long Identifier,The length of the field TRANSACTION_ROLLBACK_TIME_DEFAULT is 33.,839
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,hasRequiredConnectionProps,Long Identifier,The length of the field CONNECTION_APPLICATION_NAME_PROP is 32.,986
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,hasRequiredClientProps,Long Identifier,The length of the field CONNECTION_APPLICATION_NAME_PROP is 32.,997
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,hasRequiredMiniFluoProps,Long Identifier,The length of the field CLIENT_ACCUMULO_ZOOKEEPERS_PROP is 31.,1037
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,hasRequiredMiniFluoProps,Long Statement,The length of the statement "log.error("Client properties should not be set in your configuration if MiniFluo is " + "configured to start its own accumulo (indicated by fluo.mini.start.accumulo being " + "set to true)");" is 191.,1037
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,getClientConfiguration,Complex Conditional,The conditional expression key.startsWith(CONNECTION_PREFIX) || key.startsWith(ACCUMULO_PREFIX) || key.startsWith(CLIENT_PREFIX) is complex.,1063
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setDefaultConfiguration,Long Identifier,The length of the field CONNECTION_ZOOKEEPER_TIMEOUT_PROP is 33.,1091
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setDefaultConfiguration,Long Identifier,The length of the field CONNECTION_ZOOKEEPER_TIMEOUT_DEFAULT is 36.,1091
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setDefaultConfiguration,Long Identifier,The length of the field TRANSACTION_ROLLBACK_TIME_PROP is 30.,1091
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfiguration,setDefaultConfiguration,Long Identifier,The length of the field TRANSACTION_ROLLBACK_TIME_DEFAULT is 33.,1091
+fluo-io_fluo,org.apache.fluo.api.config,ObserverSpecification,hashCode,Magic Number,The method contains a magic number: 17,79
+fluo-io_fluo,org.apache.fluo.api.config,SimpleConfiguration,stream2String,Magic Number,The method contains a magic number: 4096,340
+fluo-io_fluo,org.apache.fluo.api.config,SimpleConfiguration,checkProps,Long Statement,The length of the statement "throw new IllegalArgumentException("A Fluo properties value contains \\${. In the past Fluo used Apache Commons Config 1 and this was required for " + "interpolation. Fluo now uses Commons Config 2 and this is no longer required. Please remove the slash " + "preceding the interpolation.");" is 290.,361
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 4,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 4,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 7,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 7,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 13,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 13,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 14,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 14,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 17,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSetGet,Magic Number,The method contains a magic number: 17,84
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingDistPropsFile,Empty catch clause,The method has an empty catch block.,176
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingDistPropsFile,Empty catch clause,The method has an empty catch block.,176
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingDistPropsFile,Empty catch clause,The method has an empty catch block.,176
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingOldTestPropsFile,Magic Number,The method contains a magic number: 3,212
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingOldTestPropsFile,Magic Number,The method contains a magic number: 8,212
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingOldTestPropsFile,Magic Number,The method contains a magic number: 8,212
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingTestPropsFile,Magic Number,The method contains a magic number: 30000,234
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingTestPropsFile,Magic Number,The method contains a magic number: 50000,234
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testLoadingTestPropsFile,Magic Number,The method contains a magic number: 3000,234
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,assertIAE,Empty catch clause,The method has an empty catch block.,274
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testObserverConfig,Long Statement,The length of the statement "config.setProperty(FluoConfiguration.OBSERVER_PREFIX + "1"`"com.foo.Observer2`configKey1=configVal1`configKey2=configVal2");" is 124.,285
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testObserverConfig,Magic Number,The method contains a magic number: 2,285
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,assertSetNameIAE,Empty catch clause,The method has an empty catch block.,351
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,assertGetNameIAE,Empty catch clause,The method has an empty catch block.,360
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testCopyConfig,Magic Number,The method contains a magic number: 2,383
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testCopyConfig,Magic Number,The method contains a magic number: 2,383
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testIAE,Long Statement,The length of the statement "String[] nonEmptyMethods={"setAccumuloInstance"`"setAccumuloTable"`"setAccumuloUser"`"setAccumuloZookeepers"`"setMiniDataDir"`"setInstanceZookeepers"`"setDfsRoot"};" is 164.,395
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testIAE,Magic Number,The method contains a magic number: 5,395
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSerialization,Magic Number,The method contains a magic number: 100,430
+fluo-io_fluo,org.apache.fluo.api.config,FluoConfigurationTest,testSerialization,Magic Number,The method contains a magic number: 9,430
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testCellScannerStream,Long Statement,The length of the statement "Set<RowColumnValue> expected=rowCols.stream().filter(rcv -> rcv.getColumn().getsFamily().equals("f2")).collect(Collectors.toSet());" is 131.,38
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testCellScannerStream,Long Statement,The length of the statement "Set<RowColumnValue> actualSubSet=cellScanner.stream().filter(rcv -> rcv.getColumn().getsFamily().equals("f2")).collect(Collectors.toSet());" is 139.,38
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testColumnScannerStream,Long Statement,The length of the statement "Set<ColumnValue> expected=colsVal.stream().filter(cv -> cv.getColumn().getsFamily().equals("f2")).collect(Collectors.toSet());" is 126.,62
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testColumnScannerStream,Long Statement,The length of the statement "Set<ColumnValue> colSubSet=colScanner.stream().filter(cv -> cv.getColumn().getsFamily().equals("f2")).collect(Collectors.toSet());" is 130.,62
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testRowScannerStream,Magic Number,The method contains a magic number: 21,87
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testRowScannerStream,Magic Number,The method contains a magic number: 555555555,87
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testRowScannerStream,Magic Number,The method contains a magic number: 60,87
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,testRowScannerStream,Magic Number,The method contains a magic number: 55234234,87
+fluo-io_fluo,org.apache.fluo.api.client.scanner,ScannerStreamTest,toPerson,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3dc2f36c,118
+fluo-io_fluo,org.apache.fluo.api.exceptions,FluoExceptionTest,testCatchFluo,Empty catch clause,The method has an empty catch block.,43
+fluo-io_fluo,org.apache.fluo.api.exceptions,FluoExceptionTest,testCatchCommit,Empty catch clause,The method has an empty catch block.,57
+fluo-io_fluo,org.apache.fluo.api.exceptions,FluoExceptionTest,testCatchCommit,Empty catch clause,The method has an empty catch block.,57
+fluo-io_fluo,org.apache.fluo.api.exceptions,FluoExceptionTest,testCatchAlreadySet,Empty catch clause,The method has an empty catch block.,77
+fluo-io_fluo,org.apache.fluo.api.exceptions,FluoExceptionTest,testCatchAlreadySet,Empty catch clause,The method has an empty catch block.,77
+fluo-io_fluo,org.apache.fluo.integration.accumulo,TimeskippingIT,testTimestampSkippingIterPerformance,Long Statement,The length of the statement "aClient.tableOperations().create("ttsi"`new NewTableConfiguration().withoutDefaultIterators().setProperties(Collections.singletonMap(AccumuloProps.TABLE_DELETE_BEHAVIOR`AccumuloProps.TABLE_DELETE_BEHAVIOR_VALUE)));" is 214.,43
+fluo-io_fluo,org.apache.fluo.integration.accumulo,TimeskippingIT,testTimestampSkippingIterPerformance,Magic Number,The method contains a magic number: 100000,43
+fluo-io_fluo,org.apache.fluo.integration.accumulo,TimeskippingIT,testTimestampSkippingIterPerformance,Magic Number,The method contains a magic number: 10,43
+fluo-io_fluo,org.apache.fluo.integration.accumulo,TimeskippingIT,testTimestampSkippingIterPerformance,Magic Number,The method contains a magic number: 3000,43
+fluo-io_fluo,org.apache.fluo.integration.accumulo,TimeskippingIT,testTimestampSkippingIterPerformance,Magic Number,The method contains a magic number: 3000,43
+fluo-io_fluo,org.apache.fluo.integration.accumulo,Skip100StampsIterator,seek,Magic Number,The method contains a magic number: 99999,53
+fluo-io_fluo,org.apache.fluo.integration.accumulo,Skip100StampsIterator,seek,Magic Number,The method contains a magic number: 100,53
+fluo-io_fluo,org.apache.fluo.integration.accumulo,Skip100StampsIterator,getTopKey,Magic Number,The method contains a magic number: 42,78
+fluo-io_fluo,org.apache.fluo.integration,ITBaseMini,setUpFluo,Magic Number,The method contains a magic number: 5,42
+fluo-io_fluo,org.apache.fluo.integration,TestTransaction,getNotificationTS,Magic Number,The method contains a magic number: 11,57
+fluo-io_fluo,org.apache.fluo.integration.client,FluoClientIT,testFailures,Empty catch clause,The method has an empty catch block.,61
+fluo-io_fluo,org.apache.fluo.integration.client,FluoClientIT,testFailures,Empty catch clause,The method has an empty catch block.,61
+fluo-io_fluo,org.apache.fluo.integration.client,LoaderExecutorIT,testSubmit,Empty catch clause,The method has an empty catch block.,89
+fluo-io_fluo,org.apache.fluo.integration.client,LoaderExecutorIT,testSubmit,Magic Number,The method contains a magic number: 2,89
+fluo-io_fluo,org.apache.fluo.integration.client,LoaderExecutorIT,testSubmit,Magic Number,The method contains a magic number: 3,89
+fluo-io_fluo,org.apache.fluo.integration.client,LoaderExecutorIT,testSubmitResult,Magic Number,The method contains a magic number: 2,143
+fluo-io_fluo,org.apache.fluo.integration.client,LoaderExecutorIT,testSubmitResult,Magic Number,The method contains a magic number: 3,143
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testInitializeTwiceFails,Empty catch clause,The method has an empty catch block.,64
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testInitializeTwiceFails,Empty catch clause,The method has an empty catch block.,64
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testInitializeTwiceFails,Empty catch clause,The method has an empty catch block.,64
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testInitializeConfig,Long Statement,The length of the statement "Assert.assertEquals("'notify' locality group not found."`ColumnConstants.NOTIFY_LOCALITY_GROUP_NAME`localityGroup.getKey());" is 124.,106
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testInitializeConfig,Long Statement,The length of the statement "Assert.assertEquals("'notify' locality group does not contain exactly 1 column family."`1`localityGroup.getValue().size());" is 123.,106
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testInitializeConfig,Long Statement,The length of the statement "Assert.assertTrue("'notify' locality group does not contain the correct column family."`ColumnConstants.NOTIFY_CF.contentEquals(colFam.getBytes()`0`colFam.getLength()));" is 169.,106
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testInitializeWithNoChroot,Empty catch clause,The method has an empty catch block.,145
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testRemove,Empty catch clause,The method has an empty catch block.,202
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testRemove,Magic Number,The method contains a magic number: 2,202
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testRemove,Magic Number,The method contains a magic number: 2,202
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testNumOracles,Magic Number,The method contains a magic number: 3,275
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testNumOracles,Magic Number,The method contains a magic number: 2,275
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testNumOracles,Magic Number,The method contains a magic number: 3,275
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testNumOracles,Magic Number,The method contains a magic number: 3,275
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testNumOraclesWithMissingOraclePath,Magic Number,The method contains a magic number: 3,295
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testOracleExists,Magic Number,The method contains a magic number: 3,308
+fluo-io_fluo,org.apache.fluo.integration.client,FluoAdminImplIT,testNumWorkers,Magic Number,The method contains a magic number: 2,320
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testCollisionLogging,Magic Number,The method contains a magic number: 20,148
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testSummaryLogging,Long Statement,The length of the statement "Assert.assertTrue(logMsgs.matches(".*txid: \\d+ thread : \\d+ " + "time: \\d+ \\(\\d+ \\d+\\) #ret: 0 #set: 1 #collisions: 0 waitTime: \\d+ " + "committed: true class: TriggerLoader.*"));" is 187.,193
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testSummaryLogging,Long Statement,The length of the statement "Assert.assertTrue(logMsgs.matches(".*txid: \\d+ thread : \\d+ " + "time: \\d+ \\(\\d+ \\d+\\) #ret: 1 #set: 1 #collisions: 0 waitTime: \\d+ " + "committed: true class: SimpleLoader.*"));" is 186.,193
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testSummaryLogging,Long Statement,The length of the statement "Assert.assertTrue(logMsgs.matches(".*txid: \\d+ thread : \\d+ " + "time: \\d+ \\(\\d+ \\d+\\) #ret: 1 #set: 1 #collisions: 1 waitTime: \\d+ " + "committed: false class: SimpleLoader.*"));" is 187.,193
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testSummaryLogging,Long Statement,The length of the statement "Assert.assertTrue(logMsgs.matches(".*txid: \\d+ thread : \\d+ " + "time: \\d+ \\(\\d+ \\d+\\) #ret: 2 #set: 1 #collisions: 0 waitTime: \\d+ " + "committed: true class: TestObserver.*"));" is 186.,193
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testSummaryLogging,Long Statement,The length of the statement "Assert.assertTrue(logMsgs.matches(".*txid: \\d+ thread : \\d+ " + "time: \\d+ \\(\\d+ \\d+\\) #ret: 2 #set: 1 #collisions: 1 waitTime: \\d+ " + "committed: false class: TestObserver.*"));" is 187.,193
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testSummaryLogging,Magic Number,The method contains a magic number: 20,193
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,waitForClose,Magic Number,The method contains a magic number: 30,384
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,waitForClose,Magic Number,The method contains a magic number: 1000,384
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testBinaryLogging,Long Statement,The length of the statement "pattern+=".*txid: \\1 \\Qget([r\\x051` r\\x062]` [c\\x021 c\\xf51 ` c\\x092 c\\xe52 ]) -> " + "[\\E(" + v1 + "|"+ v2+ ")\\` ("+ v1+ "|"+ v2+ ")\\]";" is 148.,404
+fluo-io_fluo,org.apache.fluo.integration.log,LogIT,testReadLocks,Long Statement,The length of the statement "Assert.assertEquals(ImmutableMap.of(new RowColumn("r1"`c2)`"v2")`tx.withReadLock().gets(Arrays.asList(new RowColumn("r1"`c2))));" is 128.,598
+fluo-io_fluo,org.apache.fluo.mini,MiniFluoImpl,MiniFluoImpl,Magic Number,The method contains a magic number: 50,76
+fluo-io_fluo,org.apache.fluo.mini,MiniFluoImpl,MiniFluoImpl,Magic Number,The method contains a magic number: 100,76
+fluo-io_fluo,org.apache.fluo.mini,MiniFluoImpl,startMiniAccumulo,Long Statement,The length of the statement "if ((config.containsKey(FluoConfiguration.ACCUMULO_TABLE_PROP) == false) || config.getAccumuloTable().trim().isEmpty()) {" is 121.,106
+fluo-io_fluo,org.apache.fluo.mini,MiniFluoImpl,waitForObservers,Magic Number,The method contains a magic number: 2,167
+fluo-io_fluo,org.apache.fluo.mini,MiniFluoImpl,waitForObservers,Magic Number,The method contains a magic number: 10,167
+fluo-io_fluo,org.apache.fluo.mini,MiniFluoImpl,waitForObservers,Magic Number,The method contains a magic number: 10000,167

@@ -1,0 +1,214 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+AndroidHooker_hooker,com.example.test,TestSSLRight,testSSLwithVerification,Magic Number,The method contains a magic number: 443,45
+AndroidHooker_hooker,com.example.test,TestSSLWrong,getNewHttpClient,Magic Number,The method contains a magic number: 80,55
+AndroidHooker_hooker,com.example.test,TestSSLWrong,getNewHttpClient,Magic Number,The method contains a magic number: 443,55
+AndroidHooker_hooker,com.example.test,MainActivity,readContacts,Long Statement,The length of the statement "Cursor pCur=cr.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI`null`ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?"`new String[]{id}`null);" is 159.,134
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ContactsBuilder,generateContacts,Magic Number,The method contains a magic number: 4,23
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ContactsBuilder,generateContacts,Magic Number,The method contains a magic number: 2,23
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ContactsBuilder,generateContacts,Magic Number,The method contains a magic number: 3,23
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ContactsBuilder,createAContact,Long Statement,The length of the statement "ops.add(ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI).withValue(ContactsContract.RawContacts.ACCOUNT_TYPE`null).withValue(ContactsContract.RawContacts.ACCOUNT_NAME`null).build());" is 210.,73
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ContactsBuilder,createAContact,Long Statement,The length of the statement "ops.add(ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI).withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID`0).withValue(ContactsContract.Data.MIMETYPE`ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE).withValue(ContactsContract.CommonDataKinds.StructuredName.DISPLAY_NAME`name).build());" is 335.,73
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ContactsBuilder,createAContact,Long Statement,The length of the statement "ops.add(ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI).withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID`0).withValue(ContactsContract.Data.MIMETYPE`ContactsContract.CommonDataKinds.Phone.CONTENT_ITEM_TYPE).withValue(ContactsContract.CommonDataKinds.Phone.NUMBER`mobile).withValue(ContactsContract.CommonDataKinds.Phone.TYPE`ContactsContract.CommonDataKinds.Phone.TYPE_MOBILE).build());" is 419.,73
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ContactsBuilder,createAContact,Long Statement,The length of the statement "ops.add(ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI).withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID`0).withValue(ContactsContract.Data.MIMETYPE`ContactsContract.CommonDataKinds.Email.CONTENT_ITEM_TYPE).withValue(ContactsContract.CommonDataKinds.Email.DATA`email).withValue(ContactsContract.CommonDataKinds.Email.TYPE`ContactsContract.CommonDataKinds.Email.TYPE_WORK).build());" is 414.,73
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ImportContacts,onCreate,Magic Number,The method contains a magic number: 50,28
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ImportContacts,onCreate,Magic Number,The method contains a magic number: 20,28
+AndroidHooker_hooker,com.amossys.hooker.generatecontacts,ImportContacts,setProgressPercent,Magic Number,The method contains a magic number: 100,87
+AndroidHooker_hooker,com.amossys.hooker.service,InstrumentationService,createReportersFromConfigFile,Complex Conditional,The conditional expression fileMode && fileName != null && idXP != null is complex.,216
+AndroidHooker_hooker,com.amossys.hooker.service,InstrumentationService,createReportersFromConfigFile,Complex Conditional,The conditional expression networkMode && esIp != null && esPort > 0 && esNbThread > 0 && esIndex != null && esDoctype != null && idXP != null is complex.,216
+AndroidHooker_hooker,com.amossys.hooker.service,InstrumentationService,createReportersFromConfigFile,Long Statement,The length of the statement "SubstrateMain.log("Eslaticsearch mode'" + networkMode + "' (esIP='"+ esIp+ "'` esPort='"+ esPort+ "'` esIndex='"+ esIndex+ "'` esDoctype='"+ esDoctype+ "') extracted from the configuration file");" is 196.,216
+AndroidHooker_hooker,com.amossys.hooker.service,InstrumentationService,createReportersFromConfigFile,Long Statement,The length of the statement "if (networkMode && esIp != null && esPort > 0 && esNbThread > 0 && esIndex != null && esDoctype != null && idXP != null) {" is 122.,216
+AndroidHooker_hooker,com.amossys.hooker,GlobalApplicationContextAnalyzer,loadContext,Long Statement,The length of the statement "SubstrateMain.log(new StringBuilder("Oups` something bad happened while retrieving current information on the context of the hooked application: ").append(packageName).toString()`e);" is 182.,44
+AndroidHooker_hooker,com.amossys.hooker,GlobalApplicationContextAnalyzer,loadContext,Magic Number,The method contains a magic number: 0x81,44
+AndroidHooker_hooker,com.amossys.hooker,GlobalApplicationContextAnalyzer,invoked,Long Statement,The length of the statement "SubstrateMain.log(new StringBuilder("Oups` something bad happened while retrieving current information on the context of the hooked application: ").append(packageName).toString()`e);" is 182.,71
+AndroidHooker_hooker,com.amossys.hooker,GlobalApplicationContextAnalyzer,invoked,Magic Number,The method contains a magic number: 0x81,71
+AndroidHooker_hooker,com.amossys.hooker,GlobalContextHooker,attach,Long Identifier,The length of the field CLASSNAME_ANDROID_APPCONTEXTIMPL is 32.,42
+AndroidHooker_hooker,com.amossys.hooker,SubstrateMain,initialize,Long Statement,The length of the statement "final List<Hooker> hookers=asList((Hooker)new AccountsHooker()`new BluetoothHooker()`new ContentsDataHooker()`new CryptoHooker()`new DRMHooker()`new DynamicCodeLoaderHooker()`new FileSystemHooker()`new GeolocationDataHooker()`new IPCHooker()`new NetworkHooker()`new NFCHooker()`new SystemHooker()`new SharedPreferencesHooker()`new SQLiHooker()`new TaskSchedulerHooker()`new TelephonyHooker()`new USBHooker()`new MediaRecorderHooker()`new RuntimeHooker()`new ResourcesHooker());" is 477.,121
+AndroidHooker_hooker,com.amossys.hooker.common,InterceptEvent,InterceptEvent,Long Parameter List,The method has 6 parameters. ,219
+AndroidHooker_hooker,com.amossys.hooker.common,InterceptEvent,InterceptEvent,Long Parameter List,The method has 12 parameters. ,228
+AndroidHooker_hooker,com.amossys.hooker.common,INIParser,initFromFile,Complex Conditional,The conditional expression trimmedLine.length() == 0 || trimmedLine.startsWith("#") || trimmedLine.startsWith(";") is complex.,114
+AndroidHooker_hooker,com.amossys.hooker.common,INIParser,initFromFile,Complex Method,Cyclomatic complexity of the method is 8,114
+AndroidHooker_hooker,com.amossys.hooker.common,INIParser,initFromFile,Magic Number,The method contains a magic number: 2,114
+AndroidHooker_hooker,com.amossys.hooker.reporting,NetworkEventSenderThread,NetworkEventSenderThread,Long Parameter List,The method has 5 parameters. ,83
+AndroidHooker_hooker,com.amossys.hooker.reporting,NetworkEventSenderThread,run,Long Statement,The length of the statement "SubstrateMain.log("EventSenderThread (" + Thread.currentThread().getPriority() + ") fails to start since no Queue is available. ");" is 131.,99
+AndroidHooker_hooker,com.amossys.hooker.reporting,NetworkEventSenderThread,run,Magic Number,The method contains a magic number: 10,99
+AndroidHooker_hooker,com.amossys.hooker.reporting,NetworkEventSenderThread,run,Magic Number,The method contains a magic number: 5,99
+AndroidHooker_hooker,com.amossys.hooker.reporting,NetworkEventSenderThread,send,Long Statement,The length of the statement "this.targetURI=new URI("http://" + host + ":"+ port+ "/"+ this.esIndex.toLowerCase()+ "/"+ this.esDoctype.toLowerCase()+ "?parent="+ event.getIDXP()+ "&op_type=create");" is 169.,153
+AndroidHooker_hooker,com.amossys.hooker.reporting,FileEventReporter,writeToFile,Long Statement,The length of the statement "SubstrateMain.log(new StringBuilder("Error` while writing (or flushing) file ").append(this.outputFile).append(" on the sdcard").toString()`e);" is 143.,64
+AndroidHooker_hooker,com.amossys.hooker.reporting,FileEventReporter,getCurrentFileOutputStream,Long Statement,The length of the statement "SubstrateMain.log(new StringBuilder("Error` impossible to create the file: ").append(outputFile.getAbsolutePath()).toString()`e);" is 129.,83
+AndroidHooker_hooker,com.amossys.hooker.reporting,FileEventReporter,getCurrentFileOutputStream,Long Statement,The length of the statement "SubstrateMain.log(new StringBuilder("Error` impossible to open ").append(outputFile.getAbsolutePath()).append(" on the sdcard").toString()`e);" is 142.,83
+AndroidHooker_hooker,com.amossys.hooker.reporting,NetworkEventSender,NetworkEventSender,Long Parameter List,The method has 5 parameters. ,54
+AndroidHooker_hooker,com.amossys.hooker.reporting,NetworkEventSender,createThreads,Magic Number,The method contains a magic number: 500,80
+AndroidHooker_hooker,com.amossys.hooker.hookers,FileSystemHooker,attachOnContextWrapperClass,Magic Number,The method contains a magic number: 2,125
+AndroidHooker_hooker,com.amossys.hooker.hookers,FileSystemHooker,attachOnContextWrapperClass,Magic Number,The method contains a magic number: 2,125
+AndroidHooker_hooker,com.amossys.hooker.hookers,FileSystemHooker,attachOnContextWrapperClass,Magic Number,The method contains a magic number: 2,125
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnSQLiteDatabaseClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnContextWrapperClass,Magic Number,The method contains a magic number: 2,92
+AndroidHooker_hooker,com.amossys.hooker.hookers,SQLiHooker,attachOnContextWrapperClass,Magic Number,The method contains a magic number: 2,92
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNfcAdapterClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNdefRecordClass,Magic Number,The method contains a magic number: 2,84
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNdefRecordClass,Magic Number,The method contains a magic number: 2,84
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNdefRecordClass,Magic Number,The method contains a magic number: 2,84
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNdefRecordClass,Magic Number,The method contains a magic number: 2,84
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNdefRecordClass,Magic Number,The method contains a magic number: 2,84
+AndroidHooker_hooker,com.amossys.hooker.hookers,NFCHooker,attachOnNdefMessageClass,Magic Number,The method contains a magic number: 2,113
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnCameraClass,Magic Number,The method contains a magic number: 2,59
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnAudioRecordClass,Magic Number,The method contains a magic number: 2,93
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnAudioManagerClass,Magic Number,The method contains a magic number: 2,124
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnAudioManagerClass,Magic Number,The method contains a magic number: 2,124
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnMediaRecorderClass,Magic Number,The method contains a magic number: 2,156
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnMediaRecorderClass,Magic Number,The method contains a magic number: 2,156
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnMediaRecorderClass,Magic Number,The method contains a magic number: 2,156
+AndroidHooker_hooker,com.amossys.hooker.hookers,MediaRecorderHooker,attachOnMediaRecorderClass,Magic Number,The method contains a magic number: 2,156
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,AccountsHooker,attachOnAccountManagerClass,Magic Number,The method contains a magic number: 2,76
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnSocketClass,Magic Number,The method contains a magic number: 2,238
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnSocketClass,Magic Number,The method contains a magic number: 2,238
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnSocketClass,Magic Number,The method contains a magic number: 2,238
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnSocketClass,Magic Number,The method contains a magic number: 2,238
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnHttpGetClass,Magic Number,The method contains a magic number: 2,273
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnAbstractHttpClientClass,Magic Number,The method contains a magic number: 2,293
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnAbstractHttpClientClass,Magic Number,The method contains a magic number: 2,293
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnIOBridgeClass,Magic Number,The method contains a magic number: 2,381
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnIOBridgeClass,Magic Number,The method contains a magic number: 2,381
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebviewClass,Magic Number,The method contains a magic number: 2,412
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebSettingsClass,Magic Number,The method contains a magic number: 2,449
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebSettingsClass,Magic Number,The method contains a magic number: 2,449
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebSettingsClass,Magic Number,The method contains a magic number: 2,449
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebSettingsClass,Magic Number,The method contains a magic number: 2,449
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebSettingsClass,Magic Number,The method contains a magic number: 2,449
+AndroidHooker_hooker,com.amossys.hooker.hookers,NetworkHooker,attachOnWebSettingsClass,Magic Number,The method contains a magic number: 2,449
+AndroidHooker_hooker,com.amossys.hooker.hookers,SystemHooker,attachOnPackageManagerClass,Magic Number,The method contains a magic number: 2,55
+AndroidHooker_hooker,com.amossys.hooker.hookers,SystemHooker,attachOnPackageManagerClass,Magic Number,The method contains a magic number: 2,55
+AndroidHooker_hooker,com.amossys.hooker.hookers,SystemHooker,attachOnPackageManagerClass,Magic Number,The method contains a magic number: 2,55
+AndroidHooker_hooker,com.amossys.hooker.hookers,SystemHooker,attachOnPackageManagerClass,Magic Number,The method contains a magic number: 2,55
+AndroidHooker_hooker,com.amossys.hooker.hookers,SystemHooker,attachOnPackageManagerClass,Magic Number,The method contains a magic number: 2,55
+AndroidHooker_hooker,com.amossys.hooker.hookers,SystemHooker,attachOnActivityManagerClass,Magic Number,The method contains a magic number: 2,92
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnSmsManagerClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnSmsManagerClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnSmsManagerClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnServiceStateClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnServiceStateClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnServiceStateClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnServiceStateClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnServiceStateClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnServiceStateClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnSmsMessageClass,Magic Number,The method contains a magic number: 2,108
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnSmsMessageClass,Magic Number,The method contains a magic number: 21,108
+AndroidHooker_hooker,com.amossys.hooker.hookers,TelephonyHooker,attachOnTelephonyManagerClass,Long Identifier,The length of the identifier methodsFromTelephonyManagerToHook is 33.,154
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Complex Conditional,The conditional expression result == null || outputs.get(methodName) == null || result.getClass().isAssignableFrom(outputs.get(methodName).getClass()) is complex.,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Complex Method,Cyclomatic complexity of the method is 25,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Long Method,The method has 115 lines of code.,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Long Statement,The length of the statement "SubstrateMain.log(new StringBuilder("No method found with name ").append(className).append(":").append(methodName).toString());" is 127.,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Long Statement,The length of the statement "event=new InterceptEvent(hookerName`intrusiveLevelFinal`System.identityHashCode(resources)`packName`className`methodName);" is 122.,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Long Statement,The length of the statement "if (result == null || outputs.get(methodName) == null || result.getClass().isAssignableFrom(outputs.get(methodName).getClass())) {" is 130.,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Long Statement,The length of the statement "SubstrateMain.log("Cannot replace method " + methodName + " output with "+ outputs.get(methodName)+ ": types are incompatible."`false);" is 135.,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Long Statement,The length of the statement "* Computes if we are self hooking ourselves. To do so` we generate a stack trace to retrieve the caller list of the current invocation and check no Hooker appears after the second entry of the stack trace." is 205.,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Magic Number,The method contains a magic number: 2,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,hookMethodsWithOutputs,Magic Number,The method contains a magic number: 2,148
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Complex Conditional,The conditional expression result == null || outputs.get(methodName) == null || result.getClass().isAssignableFrom(outputs.get(methodName).getClass()) is complex.,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Complex Method,Cyclomatic complexity of the method is 25,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Long Method,The method has 109 lines of code.,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Long Statement,The length of the statement "SubstrateMain.log(new StringBuilder("No method found with name ").append(className).append(":").append(methodName).toString());" is 127.,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Long Statement,The length of the statement "event=new InterceptEvent(hookerName`intrusiveLevelFinal`System.identityHashCode(resources)`packName`className`methodName);" is 122.,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Long Statement,The length of the statement "if (result == null || outputs.get(methodName) == null || result.getClass().isAssignableFrom(outputs.get(methodName).getClass())) {" is 130.,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Long Statement,The length of the statement "SubstrateMain.log("Cannot replace method " + methodName + " output with "+ outputs.get(methodName)+ ": types are incompatible."`false);" is 135.,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Long Statement,The length of the statement "* Computes if we are self hooking ourselves. To do so` we generate a stack trace to retrieve the caller list of the current invocation and check no Hooker appears after the second entry of the stack trace." is 205.,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Magic Number,The method contains a magic number: 2,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,classLoaded,Magic Number,The method contains a magic number: 2,155
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,invoked,Complex Conditional,The conditional expression result == null || outputs.get(methodName) == null || result.getClass().isAssignableFrom(outputs.get(methodName).getClass()) is complex.,206
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,invoked,Complex Method,Cyclomatic complexity of the method is 14,206
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,invoked,Long Statement,The length of the statement "event=new InterceptEvent(hookerName`intrusiveLevelFinal`System.identityHashCode(resources)`packName`className`methodName);" is 122.,206
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,invoked,Long Statement,The length of the statement "if (result == null || outputs.get(methodName) == null || result.getClass().isAssignableFrom(outputs.get(methodName).getClass())) {" is 130.,206
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,invoked,Long Statement,The length of the statement "SubstrateMain.log("Cannot replace method " + methodName + " output with "+ outputs.get(methodName)+ ": types are incompatible."`false);" is 135.,206
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,isSelfHooking,Magic Number,The method contains a magic number: 2,298
+AndroidHooker_hooker,com.amossys.hooker.hookers,Hooker,isSelfHooking,Magic Number,The method contains a magic number: 2,298
+AndroidHooker_hooker,com.amossys.hooker.hookers,ResourcesHooker,attachOnResourcesClass,Magic Number,The method contains a magic number: 2,47
+AndroidHooker_hooker,com.amossys.hooker.hookers,ResourcesHooker,attachOnResourcesClass,Magic Number,The method contains a magic number: 2,47
+AndroidHooker_hooker,com.amossys.hooker.hookers,ResourcesHooker,attachOnResourcesClass,Magic Number,The method contains a magic number: 2,47
+AndroidHooker_hooker,com.amossys.hooker.hookers,ResourcesHooker,attachOnResourcesClass,Magic Number,The method contains a magic number: 2,47
+AndroidHooker_hooker,com.amossys.hooker.hookers,DynamicCodeLoaderHooker,attachOnDexClassLoaderClass,Magic Number,The method contains a magic number: 2,54
+AndroidHooker_hooker,com.amossys.hooker.hookers,RuntimeHooker,attachOnRuntimeClass,Magic Number,The method contains a magic number: 2,52
+AndroidHooker_hooker,com.amossys.hooker.hookers,RuntimeHooker,attachOnRuntimeClass,Magic Number,The method contains a magic number: 2,52
+AndroidHooker_hooker,com.amossys.hooker.hookers,RuntimeHooker,attachOnRuntimeClass,Magic Number,The method contains a magic number: 2,52
+AndroidHooker_hooker,com.amossys.hooker.hookers,RuntimeHooker,attachOnProcessBuilderClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,RuntimeHooker,attachOnProcessBuilderClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentProviderClass,Magic Number,The method contains a magic number: 2,67
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentProviderClass,Magic Number,The method contains a magic number: 2,67
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentProviderClass,Magic Number,The method contains a magic number: 2,67
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentResolverClass,Magic Number,The method contains a magic number: 2,101
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentResolverClass,Magic Number,The method contains a magic number: 2,101
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentResolverClass,Magic Number,The method contains a magic number: 2,101
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentResolverClass,Magic Number,The method contains a magic number: 2,101
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentResolverClass,Magic Number,The method contains a magic number: 2,101
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentResolverClass,Magic Number,The method contains a magic number: 2,101
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnContentResolverClass,Magic Number,The method contains a magic number: 2,101
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnCursorWrapperClass,Magic Number,The method contains a magic number: 2,138
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnCursorWrapperClass,Magic Number,The method contains a magic number: 2,138
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnCursorWrapperClass,Magic Number,The method contains a magic number: 2,138
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnCursorWrapperClass,Magic Number,The method contains a magic number: 2,138
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnCursorWrapperClass,Magic Number,The method contains a magic number: 2,138
+AndroidHooker_hooker,com.amossys.hooker.hookers,ContentsDataHooker,attachOnSQLiteCursorClass,Magic Number,The method contains a magic number: 2,173
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothSocketClass,Magic Number,The method contains a magic number: 2,56
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothServerSocketClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothServerSocketClass,Magic Number,The method contains a magic number: 2,75
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,BluetoothHooker,attachOnBluetoothDeviceClass,Magic Number,The method contains a magic number: 2,95
+AndroidHooker_hooker,com.amossys.hooker.hookers,GeolocationDataHooker,attachOnLocationClass,Magic Number,The method contains a magic number: 2,109
+AndroidHooker_hooker,com.amossys.hooker.hookers,GeolocationDataHooker,attachOnLocationClass,Magic Number,The method contains a magic number: 2,109
+AndroidHooker_hooker,com.amossys.hooker.hookers,GeolocationDataHooker,attachOnLocationClass,Magic Number,The method contains a magic number: 2,109
+AndroidHooker_hooker,com.amossys.hooker.hookers,GeolocationDataHooker,attachOnLocationClass,Magic Number,The method contains a magic number: 2,109
+AndroidHooker_hooker,com.amossys.hooker.hookers,GeolocationDataHooker,attachOnLocationClass,Magic Number,The method contains a magic number: 2,109

@@ -1,0 +1,203 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+zk1931_jzab,com.github.zk1931.jzab,ClusterConfiguration,getQuorumSize,Magic Number,The method contains a magic number: 2,145
+zk1931_jzab,com.github.zk1931.jzab,ParticipantState,ParticipantState,Long Parameter List,The method has 8 parameters. ,87
+zk1931_jzab,com.github.zk1931.jzab,PreProcessor,call,Complex Method,Cyclomatic complexity of the method is 12,87
+zk1931_jzab,com.github.zk1931.jzab,Zxid,fromSimpleString,Magic Number,The method contains a magic number: 2,109
+zk1931_jzab,com.github.zk1931.jzab,Zab,Zab,Long Parameter List,The method has 5 parameters. ,124
+zk1931_jzab,com.github.zk1931.jzab,Zab,Zab,Long Parameter List,The method has 7 parameters. ,134
+zk1931_jzab,com.github.zk1931.jzab,Zab,Zab,Long Parameter List,The method has 7 parameters. ,146
+zk1931_jzab,com.github.zk1931.jzab,Zab,Zab,Long Parameter List,The method has 8 parameters. ,157
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElection,electLeader,Complex Method,Cyclomatic complexity of the method is 11,57
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElection,electLeader,Magic Number,The method contains a magic number: 100,57
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElection,electLeader,Magic Number,The method contains a magic number: 1600,57
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElection,electLeader,Magic Number,The method contains a magic number: 2,57
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElection,electLeader,Magic Number,The method contains a magic number: 2,57
+zk1931_jzab,com.github.zk1931.jzab,ElectionMessageFilter,getMessage,Magic Number,The method contains a magic number: 1000000,38
+zk1931_jzab,com.github.zk1931.jzab,ElectionMessageFilter,getMessage,Magic Number,The method contains a magic number: 1000000,38
+zk1931_jzab,com.github.zk1931.jzab,MessageQueueFilter,getExpectedMessage,Complex Conditional,The conditional expression tuple.getMessage().getType() == type && (source == null || source.equals(from)) is complex.,71
+zk1931_jzab,com.github.zk1931.jzab,MessageQueueFilter,getExpectedMessage,Magic Number,The method contains a magic number: 1000000,71
+zk1931_jzab,com.github.zk1931.jzab,MessageQueueFilter,getExpectedMessage,Magic Number,The method contains a magic number: 1000000,71
+zk1931_jzab,com.github.zk1931.jzab,RollingLog,append,Long Statement,The length of the statement "String exStr=String.format("The zxid %s is not larger than last seen" + " zxid %s in the log."`txn.getZxid()`lastSeenZxid);" is 123.,94
+zk1931_jzab,com.github.zk1931.jzab,Leader,changePhase,Complex Method,Cyclomatic complexity of the method is 13,100
+zk1931_jzab,com.github.zk1931.jzab,Leader,join,Long Statement,The length of the statement "LOG.debug("Didn't hear message from peers for {} milliseconds. Going" + " back to leader election."`this.config.getTimeoutMs());" is 128.,146
+zk1931_jzab,com.github.zk1931.jzab,Leader,lead,Long Statement,The length of the statement "LOG.debug("Didn't hear message from peers for {} milliseconds. Going" + " back to leader election."`this.config.getTimeoutMs());" is 128.,194
+zk1931_jzab,com.github.zk1931.jzab,Leader,lead,Long Statement,The length of the statement "LOG.debug("Go back to recovery in synchronization phase` increase " + "sync timeout to {} milliseconds."`getSyncTimeoutMs());" is 125.,194
+zk1931_jzab,com.github.zk1931.jzab,Leader,lead,Magic Number,The method contains a magic number: 1000000,194
+zk1931_jzab,com.github.zk1931.jzab,Leader,waitProposedEpochFromQuorum,Complex Conditional,The conditional expression peerAckedEpoch > acknowledgedEpoch || (peerAckedEpoch == acknowledgedEpoch && peerVersion.compareTo(selfVersion) > 0) is complex.,276
+zk1931_jzab,com.github.zk1931.jzab,Leader,waitProposedEpochFromQuorum,Long Statement,The length of the statement "if (peerAckedEpoch > acknowledgedEpoch || (peerAckedEpoch == acknowledgedEpoch && peerVersion.compareTo(selfVersion) > 0)) {" is 124.,276
+zk1931_jzab,com.github.zk1931.jzab,Leader,waitProposedEpochFromQuorum,Magic Number,The method contains a magic number: 3,276
+zk1931_jzab,com.github.zk1931.jzab,Leader,selectSyncHistoryOwner,Complex Conditional,The conditional expression fEpoch > ackEpoch || (fEpoch == ackEpoch && fZxid.compareTo(zxid) > 0) is complex.,413
+zk1931_jzab,com.github.zk1931.jzab,Leader,broadcastingInit,Long Statement,The length of the statement "this.commitProcessor=new CommitProcessor(stateMachine`lastDeliveredZxid`serverId`transport`quorumMap.keySet()`clusterConfig`electedLeader`pendings);" is 148.,527
+zk1931_jzab,com.github.zk1931.jzab,Leader,broadcastingInit,Magic Number,The method contains a magic number: 3,527
+zk1931_jzab,com.github.zk1931.jzab,Leader,broadcasting,Long Statement,The length of the statement "LOG.debug("Detects the size of the ensemble is less than the" + "quorum size {}` goes back to electing phase."`getQuorumSize());" is 128.,558
+zk1931_jzab,com.github.zk1931.jzab,Leader,handleMessageOutsideQuorum,Complex Method,Cyclomatic complexity of the method is 9,614
+zk1931_jzab,com.github.zk1931.jzab,Leader,handleMessageFromQuorum,Complex Method,Cyclomatic complexity of the method is 17,664
+zk1931_jzab,com.github.zk1931.jzab,Leader,onJoin,Magic Number,The method contains a magic number: 3,724
+zk1931_jzab,com.github.zk1931.jzab,Leader,onAck,Complex Method,Cyclomatic complexity of the method is 8,810
+zk1931_jzab,com.github.zk1931.jzab,Leader,onAckEpoch,Magic Number,The method contains a magic number: 3,866
+zk1931_jzab,com.github.zk1931.jzab,Leader,onSyncHistory,Magic Number,The method contains a magic number: 3,934
+zk1931_jzab,com.github.zk1931.jzab,Leader,checkFollowerLiveness,Magic Number,The method contains a magic number: 1000000,962
+zk1931_jzab,com.github.zk1931.jzab,Leader,checkFollowerLiveness,Magic Number,The method contains a magic number: 1000000,962
+zk1931_jzab,com.github.zk1931.jzab,MessageBuilder,buildProposedEpoch,Long Statement,The length of the statement "ZabMessage.ClusterConfiguration zCnf=ZabMessage.ClusterConfiguration.newBuilder().setVersion(version).addAllServers(config.getPeers()).build();" is 143.,102
+zk1931_jzab,com.github.zk1931.jzab,MessageBuilder,buildProposedEpoch,Long Statement,The length of the statement "ProposedEpoch pEpoch=ProposedEpoch.newBuilder().setProposedEpoch(proposedEpoch).setCurrentEpoch(acknowledgedEpoch).setConfig(zCnf).setSyncTimeout(syncTimeoutMs).build();" is 169.,102
+zk1931_jzab,com.github.zk1931.jzab,MessageBuilder,buildProposal,Long Statement,The length of the statement "Proposal prop=Proposal.newBuilder().setZxid(zxid).setBody(ByteString.copyFrom(txn.getBody())).setType(ProposalType.values()[txn.getType()]).build();" is 148.,203
+zk1931_jzab,com.github.zk1931.jzab,MessageBuilder,buildProposal,Long Statement,The length of the statement "Proposal prop=Proposal.newBuilder().setZxid(zxid).setBody(ByteString.copyFrom(txn.getBody())).setClientId(clientId).setType(ProposalType.values()[txn.getType()]).build();" is 170.,223
+zk1931_jzab,com.github.zk1931.jzab,MessageBuilder,buildSyncEnd,Long Statement,The length of the statement "ZabMessage.ClusterConfiguration zConfig=ZabMessage.ClusterConfiguration.newBuilder().setVersion(version).addAllServers(config.getPeers()).build();" is 146.,457
+zk1931_jzab,com.github.zk1931.jzab,MessageBuilder,buildElectionInfo,Long Parameter List,The method has 5 parameters. ,598
+zk1931_jzab,com.github.zk1931.jzab,MessageBuilder,buildElectionInfo,Long Statement,The length of the statement "ZabMessage.ElectionInfo ei=ZabMessage.ElectionInfo.newBuilder().setVote(vote).setZxid(zxid).setAckEpoch(ackEpoch).setIsElecting(electing).setRound(round).build();" is 162.,598
+zk1931_jzab,com.github.zk1931.jzab,CommitProcessor,CommitProcessor,Long Parameter List,The method has 8 parameters. ,76
+zk1931_jzab,com.github.zk1931.jzab,CommitProcessor,call,Complex Method,Cyclomatic complexity of the method is 18,122
+zk1931_jzab,com.github.zk1931.jzab,FileUtils,writeLongToFile,Long Statement,The length of the statement "try (FileOutputStream fos=new FileOutputStream(temp);OutputStreamWriter os=new OutputStreamWriter(fos`Charset.forName("UTF-8"));PrintWriter pw=new PrintWriter(os)){" is 164.,49
+zk1931_jzab,com.github.zk1931.jzab,FileUtils,readLongFromFile,Long Statement,The length of the statement "try (FileInputStream fis=new FileInputStream(file);BufferedReader br=new BufferedReader(new InputStreamReader(fis`Charset.forName("UTF-8")))){" is 142.,75
+zk1931_jzab,com.github.zk1931.jzab,AckProcessor,call,Complex Method,Cyclomatic complexity of the method is 20,122
+zk1931_jzab,com.github.zk1931.jzab,AckProcessor,call,Long Method,The method has 101 lines of code.,122
+zk1931_jzab,com.github.zk1931.jzab,PersistentState,getLastConfigWithin,Complex Conditional,The conditional expression lastFileName != null && fileName.compareTo(lastFileName) > 0 && fileName.compareTo(zxidFileName) <= 0 is complex.,209
+zk1931_jzab,com.github.zk1931.jzab,PersistentState,getNextDataDir,Magic Number,The method contains a magic number: 4,438
+zk1931_jzab,com.github.zk1931.jzab,Participant,waitForSync,Complex Conditional,The conditional expression (msg.getType() != MessageType.DIFF && msg.getType() != MessageType.TRUNCATE && msg.getType() != MessageType.SNAPSHOT && msg.getType() != MessageType.PULL_TXN_REQ) || !source.equals(peer) is complex.,274
+zk1931_jzab,com.github.zk1931.jzab,Participant,waitForSync,Complex Method,Cyclomatic complexity of the method is 18,274
+zk1931_jzab,com.github.zk1931.jzab,Participant,waitForSync,Long Method,The method has 101 lines of code.,274
+zk1931_jzab,com.github.zk1931.jzab,Participant,waitForSync,Long Statement,The length of the statement "if ((msg.getType() != MessageType.DIFF && msg.getType() != MessageType.TRUNCATE && msg.getType() != MessageType.SNAPSHOT && msg.getType() != MessageType.PULL_TXN_REQ) || !source.equals(peer)) {" is 193.,274
+zk1931_jzab,com.github.zk1931.jzab,Participant,incSyncTimeout,Magic Number,The method contains a magic number: 2,564
+zk1931_jzab,com.github.zk1931.jzab,Participant,adjustSyncTimeout,Magic Number,The method contains a magic number: 999,585
+zk1931_jzab,com.github.zk1931.jzab,Participant,adjustSyncTimeout,Magic Number,The method contains a magic number: 1000,585
+zk1931_jzab,com.github.zk1931.jzab,Participant,adjustSyncTimeout,Magic Number,The method contains a magic number: 32,585
+zk1931_jzab,com.github.zk1931.jzab,Participant,adjustSyncTimeout,Magic Number,The method contains a magic number: 1000,585
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,NettyTransport,Long Statement,The length of the statement "this.trustStorePassword=sslParam.getTrustStorePassword() != null ? sslParam.getTrustStorePassword().toCharArray() : null;" is 121.,112
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,NettyTransport,Long Statement,The length of the statement "b.group(bossGroup`workerGroup).channel(NioServerSocketChannel.class).option(ChannelOption.SO_BACKLOG`128).option(ChannelOption.SO_REUSEADDR`true).childOption(ChannelOption.SO_KEEPALIVE`true).childOption(ChannelOption.TCP_NODELAY`true).childHandler(new ChannelInitializer<SocketChannel>(){" is 288.,112
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,NettyTransport,Magic Number,The method contains a magic number: 2,112
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,NettyTransport,Magic Number,The method contains a magic number: 128,112
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,NettyTransport,Magic Number,The method contains a magic number: 5,112
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,NettyTransport,Magic Number,The method contains a magic number: 1000,112
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,initSsl,Long Statement,The length of the statement "try (FileInputStream keyStoreStream=new FileInputStream(keyStore);FileInputStream trustStoreStream=new FileInputStream(trustStore)){" is 132.,188
+zk1931_jzab,com.github.zk1931.jzab,NettyTransport,shutdown,Magic Number,The method contains a magic number: 10,210
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessor,call,Complex Conditional,The conditional expression req == null || batchCount == maxBatchSize || req == MessageTuple.REQUEST_OF_DEATH is complex.,93
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessor,call,Complex Method,Cyclomatic complexity of the method is 8,93
+zk1931_jzab,com.github.zk1931.jzab,Follower,changePhase,Complex Method,Cyclomatic complexity of the method is 13,49
+zk1931_jzab,com.github.zk1931.jzab,Follower,join,Long Statement,The length of the statement "LOG.debug("Didn't hear message from {} for {} milliseconds. Going" + " back to leader election."`this.electedLeader`this.config.getTimeoutMs());" is 144.,95
+zk1931_jzab,com.github.zk1931.jzab,Follower,join,Magic Number,The method contains a magic number: 1000,95
+zk1931_jzab,com.github.zk1931.jzab,Follower,follow,Long Statement,The length of the statement "LOG.debug("Didn't hear message from {} for {} milliseconds. Going" + " back to leader election."`this.electedLeader`this.config.getTimeoutMs());" is 144.,178
+zk1931_jzab,com.github.zk1931.jzab,Follower,follow,Long Statement,The length of the statement "LOG.debug("Go back to recovery in synchronization phase` increase " + "sync timeout to {} milliseconds."`getSyncTimeoutMs());" is 125.,178
+zk1931_jzab,com.github.zk1931.jzab,Follower,follow,Magic Number,The method contains a magic number: 1000000,178
+zk1931_jzab,com.github.zk1931.jzab,Follower,sendProposedEpoch,Long Statement,The length of the statement "Message message=MessageBuilder.buildProposedEpoch(persistence.getProposedEpoch()`persistence.getAckEpoch()`persistence.getLastSeenConfig()`getSyncTimeoutMs());" is 159.,234
+zk1931_jzab,com.github.zk1931.jzab,Follower,waitForNewEpoch,Long Statement,The length of the statement "LOG.error("New epoch {} from {} is smaller than last received " + "proposed epoch {}"`epoch.getNewEpoch()`source`persistence.getProposedEpoch());" is 145.,251
+zk1931_jzab,com.github.zk1931.jzab,Follower,acceptingInit,Long Statement,The length of the statement "this.commitProcessor=new CommitProcessor(stateMachine`lastDeliveredZxid`serverId`transport`null`clusterConfig`electedLeader`pendings);" is 134.,345
+zk1931_jzab,com.github.zk1931.jzab,Follower,accepting,Complex Method,Cyclomatic complexity of the method is 16,360
+zk1931_jzab,com.github.zk1931.jzab,Follower,accepting,Long Statement,The length of the statement "LOG.warn("Detects there's a timeout in waiting" + "message from leader {}` goes back to leader electing"`this.electedLeader);" is 125.,360
+zk1931_jzab,com.github.zk1931.jzab,Follower,accepting,Magic Number,The method contains a magic number: 1000000,360
+zk1931_jzab,com.github.zk1931.jzab,ZxidTest,cmpTest,Magic Number,The method contains a magic number: 2,29
+zk1931_jzab,com.github.zk1931.jzab,ZxidTest,serializeTest,Magic Number,The method contains a magic number: 20,44
+zk1931_jzab,com.github.zk1931.jzab,ZxidTest,serializeTest,Magic Number,The method contains a magic number: 16,44
+zk1931_jzab,com.github.zk1931.jzab,ZxidTest,toStringTest,Magic Number,The method contains a magic number: 10,53
+zk1931_jzab,com.github.zk1931.jzab,ZxidTest,toStringTest,Magic Number,The method contains a magic number: 3,53
+zk1931_jzab,com.github.zk1931.jzab,TestBase,getDirectory,Long Statement,The length of the statement "String dirName="target" + File.separator + "data"+ File.separator+ this.getClass().getCanonicalName()+ File.separator+ testName.getMethodName();" is 144.,101
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,getLog,Magic Number,The method contains a magic number: 10,69
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,getLog,Magic Number,The method contains a magic number: 1024,69
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,getLog,Magic Number,The method contains a magic number: 1024,69
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,benchmark,Magic Number,The method contains a magic number: 1000,82
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,benchmark,Magic Number,The method contains a magic number: 1000,82
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,benchmark,Magic Number,The method contains a magic number: 1000,82
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,benchmark,Magic Number,The method contains a magic number: 1024,82
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,benchmark,Magic Number,The method contains a magic number: 1024,82
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 1024,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 1000,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 128,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 100000,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 1000,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 2,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 1024,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 100000,149
+zk1931_jzab,com.github.zk1931.jzab,SyncProposalProcessorTest,testPerformance,Magic Number,The method contains a magic number: 1000,149
+zk1931_jzab,com.github.zk1931.jzab,FileUtilsTest,testReadWriteLong,Magic Number,The method contains a magic number: 10,31
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElectionTest,testSelectLeaderWithHigherId,Magic Number,The method contains a magic number: 5000,36
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElectionTest,testSelectLeaderWithHigherAckEpoch,Magic Number,The method contains a magic number: 5000,74
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElectionTest,testSelectLeaderWithHigherZxid,Magic Number,The method contains a magic number: 5000,113
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElectionTest,testSelectLeaderFromThreeServers,Magic Number,The method contains a magic number: 5000,148
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElectionTest,testSelectLeaderFromThreeServers,Magic Number,The method contains a magic number: 2,148
+zk1931_jzab,com.github.zk1931.jzab,FastLeaderElectionTest,testSelectLeaderFromThreeServers,Magic Number,The method contains a magic number: 2,148
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testReadWrite,Magic Number,The method contains a magic number: 2,52
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testReadWrite,Magic Number,The method contains a magic number: 3,52
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testReadWrite,Magic Number,The method contains a magic number: 2,52
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testReadWrite,Magic Number,The method contains a magic number: 3,52
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testRestore,Magic Number,The method contains a magic number: 2,73
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testRestore,Magic Number,The method contains a magic number: 3,73
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testRestore,Magic Number,The method contains a magic number: 2,73
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testRestore,Magic Number,The method contains a magic number: 3,73
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 2,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 100,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 99,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 99,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 10,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 9,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 99,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 10,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 9,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testStateTransfering,Magic Number,The method contains a magic number: 99,97
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testCleanupClusterConfigFiles,Magic Number,The method contains a magic number: 3,177
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testCleanupClusterConfigFiles,Magic Number,The method contains a magic number: 3,177
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testCleanupClusterConfigFiles,Magic Number,The method contains a magic number: 6,177
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testCleanupClusterConfigFiles,Magic Number,The method contains a magic number: 5,177
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testCleanupClusterConfigFiles,Magic Number,The method contains a magic number: 2,177
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testCleanupClusterConfigFiles,Magic Number,The method contains a magic number: 2,177
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testLastConfig,Magic Number,The method contains a magic number: 2,212
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testLastConfig,Magic Number,The method contains a magic number: 2,212
+zk1931_jzab,com.github.zk1931.jzab,PersistentStateTest,testLastConfig,Magic Number,The method contains a magic number: 2,212
+zk1931_jzab,com.github.zk1931.jzab,LogTest,getLog,Magic Number,The method contains a magic number: 128,64
+zk1931_jzab,com.github.zk1931.jzab,LogTest,corruptFile,Magic Number,The method contains a magic number: 0xff,75
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testAppend,Magic Number,The method contains a magic number: 100,97
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testAppend,Magic Number,The method contains a magic number: 100,97
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testGetLatestZxid,Magic Number,The method contains a magic number: 100,111
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testGetLatestZxid,Magic Number,The method contains a magic number: 99,111
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateFile,Magic Number,The method contains a magic number: 100,120
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateFile,Magic Number,The method contains a magic number: 99,120
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateFile,Magic Number,The method contains a magic number: 100,120
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAll,Magic Number,The method contains a magic number: 100,133
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAll,Magic Number,The method contains a magic number: 100,133
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 100,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 99,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 77,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 77,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 78,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 22,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 99,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testTruncateAndAppend,Magic Number,The method contains a magic number: 100,142
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testIterator,Magic Number,The method contains a magic number: 100,188
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testIterator,Magic Number,The method contains a magic number: 100,188
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testRecoverFromExistingLog,Magic Number,The method contains a magic number: 100,206
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testRecoverFromExistingLog,Magic Number,The method contains a magic number: 100,206
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testCorruptLength,Magic Number,The method contains a magic number: 4,239
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testCorruptZxid,Magic Number,The method contains a magic number: 8,254
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testCorruptType,Magic Number,The method contains a magic number: 16,269
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testCorruptTxn,Magic Number,The method contains a magic number: 20,284
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testDivergingPoint,Magic Number,The method contains a magic number: 2,299
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testDivergingPoint,Magic Number,The method contains a magic number: 2,299
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testDivergingPoint,Magic Number,The method contains a magic number: 2,299
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testDivergingPoint,Magic Number,The method contains a magic number: 2,299
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testDivergingPoint,Magic Number,The method contains a magic number: 2,299
+zk1931_jzab,com.github.zk1931.jzab,LogTest,testDivergingPoint,Magic Number,The method contains a magic number: 2,299
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,createByteBuffer,Magic Number,The method contains a magic number: 4,56
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testInvalidPort,Magic Number,The method contains a magic number: 10000,67
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testLocalSend,Magic Number,The method contains a magic number: 1000,76
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testLocalSend,Magic Number,The method contains a magic number: 20,76
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testLocalSend,Magic Number,The method contains a magic number: 20,76
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testConnectFailed,Magic Number,The method contains a magic number: 5000,108
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSend,Magic Number,The method contains a magic number: 10000,128
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSend,Magic Number,The method contains a magic number: 20,128
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testClear,Magic Number,The method contains a magic number: 10000,194
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testClear,Magic Number,The method contains a magic number: 500,194
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testClear,Magic Number,The method contains a magic number: 500,194
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testDisconnectClient,Magic Number,The method contains a magic number: 5000,234
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testDisconnectServer,Magic Number,The method contains a magic number: 5000,277
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testCloseClient,Magic Number,The method contains a magic number: 5000,319
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testCloseClient,Magic Number,The method contains a magic number: 100,319
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testCloseServer,Magic Number,The method contains a magic number: 5000,371
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testCloseServer,Magic Number,The method contains a magic number: 100,371
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testCloseServer,Magic Number,The method contains a magic number: 500,371
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testBroadcast,Magic Number,The method contains a magic number: 10000,427
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testBroadcast,Magic Number,The method contains a magic number: 100,427
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSsl,Magic Number,The method contains a magic number: 20000,476
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSsl,Magic Number,The method contains a magic number: 2,476
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSsl,Magic Number,The method contains a magic number: 2,476
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSendFile,Magic Number,The method contains a magic number: 10000,550
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSendFile,Magic Number,The method contains a magic number: 3,550
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSendFileSsl,Magic Number,The method contains a magic number: 10000,595
+zk1931_jzab,com.github.zk1931.jzab,NettyTransportTest,testSendFileSsl,Magic Number,The method contains a magic number: 3,595

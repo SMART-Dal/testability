@@ -1,0 +1,97 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,main,Magic Number,The method contains a magic number: 8989,27
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Long Statement,The length of the statement "return writeError(request`response`"Please provide a numerical 'id' value. It can be a random number (uuid). Received => " + _id);" is 130.,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Long Statement,The length of the statement "return MockResponse.generateJson(id`delay`itemSize`numItems).doOnNext(json -> counter.add(CounterEvent.BYTES`json.readableBytes())).flatMap(response::writeAndFlush).doOnTerminate(response::close);" is 196.,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Magic Number,The method contains a magic number: 50,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Magic Number,The method contains a magic number: 128,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Magic Number,The method contains a magic number: 10,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Magic Number,The method contains a magic number: 100,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Magic Number,The method contains a magic number: 1024,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Magic Number,The method contains a magic number: 50,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,handleRequest,Magic Number,The method contains a magic number: 60000,69
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Long Statement,The length of the statement "msg.append(" \n Latency (ms) => 50th: ").append(latency.getPercentile(50.0)).append(" 90th: ").append(latency.getPercentile(90.0));" is 131.,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Magic Number,The method contains a magic number: 5,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Magic Number,The method contains a magic number: 1024,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Magic Number,The method contains a magic number: 1024,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Magic Number,The method contains a magic number: 50.0,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Magic Number,The method contains a magic number: 90.0,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Magic Number,The method contains a magic number: 99.0,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,StartMockService,startMonitoring,Magic Number,The method contains a magic number: 100.0,109
+Netflix-Skunkworks_WSPerfLab,perf.backend,MockResponse,getResponseKey,Magic Number,The method contains a magic number: 37,100
+Netflix-Skunkworks_WSPerfLab,perf.backend,MockResponse,getResponseKey,Magic Number,The method contains a magic number: 5739375,100
+Netflix-Skunkworks_WSPerfLab,perf.backend,MockResponse,getResponseKey,Magic Number,The method contains a magic number: 7,100
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,TestCaseAServlet,Long Statement,The length of the statement "final RequestConfig reqConfig=RequestConfig.custom().setConnectTimeout(PropertyNames.ClientConnectTimeout.getValueAsInt()).setSocketTimeout(PropertyNames.ClientSocketTimeout.getValueAsInt()).setConnectionRequestTimeout(PropertyNames.ClientConnectionRequestTimeout.getValueAsInt()).build();" is 289.,41
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,TestCaseAServlet,Long Statement,The length of the statement "executor=new ThreadPoolExecutor(backendRequestThreadPoolSize`backendRequestThreadPoolSize`5`TimeUnit.MINUTES`new LinkedBlockingQueue<Runnable>());" is 146.,41
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,TestCaseAServlet,Magic Number,The method contains a magic number: 5,41
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,doGet,Long Statement,The length of the statement "final Future<BackendResponse> cResponse=queueGet("/mock.json?type=C&numItems=1&itemSize=5000&delay=80&id=" + aResponse.getResponseKey());" is 137.,73
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,doGet,Long Statement,The length of the statement "final Future<BackendResponse> dResponse=queueGet("/mock.json?type=D&numItems=1&itemSize=1000&delay=1&id=" + aResponse.getResponseKey());" is 136.,73
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,doGet,Magic Number,The method contains a magic number: 500,73
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,doGet,Magic Number,The method contains a magic number: 2,73
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,doGet,Magic Number,The method contains a magic number: 500,73
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,call,Long Statement,The length of the statement "final Future<BackendResponse> cResponse=queueGet("/mock.json?type=C&numItems=1&itemSize=5000&delay=80&id=" + aResponse.getResponseKey());" is 137.,97
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,call,Long Statement,The length of the statement "final Future<BackendResponse> dResponse=queueGet("/mock.json?type=D&numItems=1&itemSize=1000&delay=1&id=" + aResponse.getResponseKey());" is 136.,97
+Netflix-Skunkworks_WSPerfLab,perf.test,TestCaseAServlet,get,Magic Number,The method contains a magic number: 200,154
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,buildTestAResponse,Long Statement,The length of the statement "return buildTestAResponse(jsonFactory`orderedResponse[0]`orderedResponse[1]`orderedResponse[2]`orderedResponse[3]`orderedResponse[4]);" is 134.,19
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,buildTestAResponse,Magic Number,The method contains a magic number: 2,19
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,buildTestAResponse,Magic Number,The method contains a magic number: 3,19
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,buildTestAResponse,Magic Number,The method contains a magic number: 4,19
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,buildTestAResponse,Long Parameter List,The method has 6 parameters. ,58
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,buildTestAResponse,Long Statement,The length of the statement "jsonGenerator.writeNumberField("responseKey"`responseC.getResponseKey() + responseD.getResponseKey() + responseE.getResponseKey());" is 131.,58
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,getPerfResponseHeaders,Magic Number,The method contains a magic number: 4,139
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,ServiceResponseBuilder,getPerfResponseHeaders,Magic Number,The method contains a magic number: 4,139
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,BackendResponse,BackendResponse,Long Parameter List,The method has 5 parameters. ,30
+Netflix-Skunkworks_WSPerfLab,perf.test.utils,BackendResponse,parseBackendResponse,Complex Method,Cyclomatic complexity of the method is 11,76
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,TestRouteBasic,Long Statement,The length of the statement "client=new HttpClientBuilder<ByteBuf`ByteBuf>(host`port).withMaxConnections(10000).config(new HttpClient.HttpClientConfig.Builder().readTimeout(1`TimeUnit.MINUTES).build()).build();" is 181.,47
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,TestRouteBasic,Magic Number,The method contains a magic number: 10000,47
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> acd=getDataFromBackend("/mock.json?numItems=2&itemSize=50&delay=50&id=" + id).doOnError(Throwable::printStackTrace).<List<BackendResponse>>flatMap(responseA -> {" is 195.,58
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseC=getDataFromBackend("/mock.json?numItems=1&itemSize=5000&delay=80&id=" + responseA.getResponseKey());" is 138.,58
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseD=getDataFromBackend("/mock.json?numItems=1&itemSize=1000&delay=1&id=" + responseA.getResponseKey());" is 137.,58
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> be=getDataFromBackend("/mock.json?numItems=25&itemSize=30&delay=150&id=" + id).<List<BackendResponse>>flatMap(responseB -> {" is 158.,58
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseE=getDataFromBackend("/mock.json?numItems=100&itemSize=30&delay=4&id=" + responseB.getResponseKey());" is 137.,58
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,TestRouteBasic,handle,Magic Number,The method contains a magic number: 2,58
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Complex Method,Cyclomatic complexity of the method is 9,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Long Statement,The length of the statement "System.err.println("Execute with either no argument (for defaults) or 4 arguments: EVENTLOOPS` PORT` BACKEND_HOST` BACKEND_PORT");" is 130.,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Long Statement,The length of the statement "System.out.println(String.format("Using eventloops: %d port: %d backend host: %s backend port: %d"`eventLoops`port`backendHost`backendPort));" is 141.,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Long Statement,The length of the statement ").eventLoops(new NioEventLoopGroup(1)`provider.globalServerEventLoop()).build().withErrorHandler(throwable -> Observable.empty()).withErrorResponseGenerator((response`error) -> System.err.println("Error: " + error.getMessage())).startAndWait();" is 244.,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Magic Number,The method contains a magic number: 8888,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Magic Number,The method contains a magic number: 8989,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Magic Number,The method contains a magic number: 4,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Magic Number,The method contains a magic number: 2,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,main,Magic Number,The method contains a magic number: 3,34
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Long Statement,The length of the statement "msg.append(" \n Latency (ms) => 50th: ").append(latency.getPercentile(50.0)).append(" 90th: ").append(latency.getPercentile(90.0));" is 131.,109
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Magic Number,The method contains a magic number: 5,109
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Magic Number,The method contains a magic number: 1024,109
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Magic Number,The method contains a magic number: 1024,109
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Magic Number,The method contains a magic number: 50.0,109
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Magic Number,The method contains a magic number: 90.0,109
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Magic Number,The method contains a magic number: 99.0,109
+Netflix-Skunkworks_WSPerfLab,perf.test.rxnetty,StartServer,startMonitoring,Magic Number,The method contains a magic number: 100.0,109
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,main,Complex Method,Cyclomatic complexity of the method is 9,34
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,main,Magic Number,The method contains a magic number: 8976,34
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,main,Magic Number,The method contains a magic number: 200,34
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,main,Magic Number,The method contains a magic number: 30,34
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Magic Number,The method contains a magic number: 8888,123
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Magic Number,The method contains a magic number: 1000,123
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Magic Number,The method contains a magic number: 30,123
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Long Parameter List,The method has 6 parameters. ,127
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Long Statement,The length of the statement "System.out.println("Starting client with hostname: " + host + " port: "+ port+ " first-step: "+ firstStep+ " step-size: "+ stepSize+ " step-duration: "+ stepDuration+ "s query: "+ query);" is 187.,127
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Long Statement,The length of the statement "httpClient=new HttpClientBuilder<ByteBuf`ByteBuf>(this.host`this.port).withMaxConnections(15000).config(new HttpClient.HttpClientConfig.Builder().readTimeout(1`TimeUnit.MINUTES).build()).build();" is 195.,127
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Magic Number,The method contains a magic number: 15000,127
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,WSClient,Magic Number,The method contains a magic number: 200,127
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startLoad,Long Statement,The length of the statement "Observable<Observable<Long>> stepIntervals=Observable.timer(0`stepDuration`TimeUnit.SECONDS).map(l -> l + firstStep).map(step -> {" is 130.,173
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startLoad,Magic Number,The method contains a magic number: 1000,173
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startLoad,Magic Number,The method contains a magic number: 100,173
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startLoad,Magic Number,The method contains a magic number: 1000,173
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Long Statement,The length of the statement "msg.append(" \n Latency (ms) => 50th: ").append(latency.getPercentile(50.0)).append(" 90th: ").append(latency.getPercentile(90.0));" is 131.,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 5,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 1024,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 1024,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 50.0,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 90.0,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 99.0,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 100.0,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 1024,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 50.0,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 90.0,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 99.0,225
+Netflix-Skunkworks_WSPerfLab,perf.client,WSClient,startMonitoring,Magic Number,The method contains a magic number: 100.0,225

@@ -1,0 +1,797 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Complex Conditional,The conditional expression fields != null && !fields.isEmpty() || (!facet.isEmpty() && rows == 0) is complex.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Complex Method,Cyclomatic complexity of the method is 59,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Method,The method has 284 lines of code.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Parameter List,The method has 29 parameters. ,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Sort on unique value or value combination is required to use a cursor (i.e. id or title`id)").build();" is 166.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "Response.status(LumongoConstants.INTERNAL_ERROR).entity("Similarity <" + sim + "> should be in the form field:simType").build();" is 128.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to parse cosine sim json: " + e.getClass().getSimpleName() + ":"+ e.getMessage()).build();" is 161.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to parse filter json: " + e.getClass().getSimpleName() + ":"+ e.getMessage()).build();" is 157.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to parse highlight json: " + e.getClass().getSimpleName() + ":"+ e.getMessage()).build();" is 160.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to parse analyzer json: " + e.getClass().getSimpleName() + ":"+ e.getMessage()).build();" is 159.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "Response.status(LumongoConstants.INTERNAL_ERROR).entity("Invalid facet count <" + countString + "> for facet <"+ f+ ">").build();" is 129.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "Response.status(LumongoConstants.INTERNAL_ERROR).entity("Invalid sort direction <" + sortDir + "> for field <"+ sortField+ ">. Expecting -1/1 or DESC/ASC").build();" is 164.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.SUCCESS).type(MediaType.APPLICATION_JSON + ";charset=utf-8").entity(response).build();" is 126.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.ok(outputStream`MediaType.APPLICATION_OCTET_STREAM).header("content-disposition"`"attachment; filename = " + "lumongoDownload_" + now.format(formatter) + ".csv").build();" is 186.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.SUCCESS).type(MediaType.TEXT_PLAIN + ";charset=utf-8").entity(response.toString()).build();" is 131.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.SUCCESS).type(MediaType.TEXT_PLAIN + ";charset=utf-8").entity("Please specify fields to be exported i.e. fl=title&fl=abstract or the facets to be exported i.e. facet=issn&facet=pubYear&rows=0").build();" is 242.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity(e.getClass().getSimpleName() + ":" + e.getMessage()).build();" is 124.,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,get,Magic Number,The method contains a magic number: 1000,47
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,getStandardResponse,Complex Method,Cyclomatic complexity of the method is 24,408
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,getStandardResponse,Long Method,The method has 151 lines of code.,408
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,appendDocument,Complex Conditional,The conditional expression value.contains("`") || value.contains(" ") || value.contains("\"")|| value.contains("\n") is complex.,608
+lumongo_lumongo,org.lumongo.server.rest,QueryResource,appendDocument,Complex Method,Cyclomatic complexity of the method is 18,608
+lumongo_lumongo,org.lumongo.server.rest,RestServiceManager,start,Magic Number,The method contains a magic number: 128,31
+lumongo_lumongo,org.lumongo.server.rest,RestServiceManager,start,Magic Number,The method contains a magic number: 1024,31
+lumongo_lumongo,org.lumongo.server.rest,FetchResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.NOT_FOUND).entity("Failed to fetch uniqueId <" + uniqueId + "> for index <"+ indexName+ ">").build();" is 141.,28
+lumongo_lumongo,org.lumongo.server.rest,FetchResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to fetch uniqueId <" + uniqueId + "> for index <"+ indexName+ ">: "+ e.getMessage()).build();" is 164.,28
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Complex Conditional,The conditional expression value.contains("`") || value.contains(" ") || value.contains("\"")|| value.contains("\n") is complex.,32
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Complex Method,Cyclomatic complexity of the method is 19,32
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Long Method,The method has 106 lines of code.,32
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Long Parameter List,The method has 14 parameters. ,32
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to parse analyzer json: " + e.getClass().getSimpleName() + ":"+ e.getMessage()).build();" is 159.,32
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.SUCCESS).type(MediaType.APPLICATION_JSON_TYPE + ";charset=utf-8").entity(docString).build();" is 132.,32
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.SUCCESS).type(MediaType.TEXT_PLAIN + ";charset=utf-8").entity(csvString.toString()).build();" is 132.,32
+lumongo_lumongo,org.lumongo.server.rest,TermsResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to fetch fields for index <" + indexName + ">: "+ e.getMessage()).build();" is 145.,32
+lumongo_lumongo,org.lumongo.server.rest,FieldsResource,get,Long Statement,The length of the statement "Lumongo.GetFieldNamesRequest fieldNamesRequest=Lumongo.GetFieldNamesRequest.newBuilder().setIndexName(indexName).build();" is 121.,27
+lumongo_lumongo,org.lumongo.server.rest,FieldsResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to fetch fields for index <" + indexName + ">: "+ e.getMessage()).build();" is 145.,27
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,get,Complex Conditional,The conditional expression uniqueId != null && fileName != null && indexName != null is complex.,36
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,get,Long Statement,The length of the statement "throw new WebApplicationException("Cannot find associated document with uniqueId <" + uniqueId + "> with fileName <"+ fileName+ ">"`LumongoConstants.NOT_FOUND);" is 160.,36
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,get,Long Statement,The length of the statement "throw new WebApplicationException(LumongoConstants.ID + " and " + LumongoConstants.FILE_NAME+ " are required"`LumongoConstants.BAD_REQUEST);" is 140.,36
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,write,Complex Conditional,The conditional expression uniqueId != null && fileName != null && indexName != null is complex.,43
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,write,Long Statement,The length of the statement "throw new WebApplicationException("Cannot find associated document with uniqueId <" + uniqueId + "> with fileName <"+ fileName+ ">"`LumongoConstants.NOT_FOUND);" is 160.,43
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,write,Long Statement,The length of the statement "throw new WebApplicationException(LumongoConstants.ID + " and " + LumongoConstants.FILE_NAME+ " are required"`LumongoConstants.BAD_REQUEST);" is 140.,43
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,post,Complex Conditional,The conditional expression uniqueId != null && fileName != null && indexName != null is complex.,68
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,post,Long Parameter List,The method has 6 parameters. ,68
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,post,Long Statement,The length of the statement "return Response.status(LumongoConstants.SUCCESS).entity("Stored associated document with uniqueId <" + uniqueId + "> and fileName <"+ fileName+ ">").build();" is 157.,68
+lumongo_lumongo,org.lumongo.server.rest,AssociatedResource,post,Long Statement,The length of the statement "throw new WebApplicationException(LumongoConstants.ID + " and " + LumongoConstants.FILE_NAME+ " are required"`LumongoConstants.BAD_REQUEST);" is 140.,68
+lumongo_lumongo,org.lumongo.server.rest,MembersResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to get cluster membership: " + e.getMessage()).build();" is 126.,31
+lumongo_lumongo,org.lumongo.server.rest,StatsResource,get,Long Statement,The length of the statement "return Response.status(LumongoConstants.INTERNAL_ERROR).entity("Failed to get cluster membership: " + e.getMessage()).build();" is 126.,29
+lumongo_lumongo,org.lumongo.server.search,QueryCacheKey,hashCode,Magic Number,The method contains a magic number: 31,13
+lumongo_lumongo,org.lumongo.server.search,LumongoQueryParser,getRangeQuery,Long Parameter List,The method has 5 parameters. ,62
+lumongo_lumongo,org.lumongo.server.search,LumongoQueryParser,getNumericOrDateRange,Complex Method,Cyclomatic complexity of the method is 18,74
+lumongo_lumongo,org.lumongo.server.search,LumongoQueryParser,getNumericOrDateRange,Long Parameter List,The method has 5 parameters. ,74
+lumongo_lumongo,org.lumongo.server.search,LumongoMultiFieldQueryParser,getFieldQuery,Complex Method,Cyclomatic complexity of the method is 18,110
+lumongo_lumongo,org.lumongo.server.search,LumongoMultiFieldQueryParser,getRangeQuery,Long Parameter List,The method has 5 parameters. ,212
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,validate,Complex Method,Cyclomatic complexity of the method is 11,65
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Complex Method,Cyclomatic complexity of the method is 63,112
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Long Method,The method has 338 lines of code.,112
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Long Statement,The length of the statement "boolean computePossibleMissing=countRequest.getSegmentFacets() != 0 && countRequest.getComputePossibleMissed() && (maxValuePossibleMissing != 0);" is 145.,112
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Long Statement,The length of the statement "SortedSet<FacetCountResult> sortedFacetResults=facetCounts.keySet().stream().map(facet -> new FacetCountResult(facet`facetCounts.get(facet).get())).collect(Collectors.toCollection(TreeSet::new));" is 195.,112
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Long Statement,The length of the statement "String message="Cannot sort on field <" + sortField + ">: found type: <"+ currentSortType+ "> then type: <"+ indexSortType+ ">";" is 128.,112
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Long Statement,The length of the statement "msg+=" Last for index from segment <" + lastForIndex.getSegment() + "> has sort values <"+ lastForIndex.getSortValues()+ ">\n";" is 127.,112
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Long Statement,The length of the statement "String msg="Result set did not return the most relevant documents for index <" + indexName + "> with segment tolerance <"+ segmentTolerance+ ">\n";" is 147.,112
+lumongo_lumongo,org.lumongo.server.search,QueryCombiner,getQueryResponse,Long Statement,The length of the statement "LastIndexResult lastIndexResult=LastIndexResult.newBuilder().addAllLastForSegment(indexList).setIndexName(indexName).build();" is 125.,112
+lumongo_lumongo,org.lumongo.server,LumongoNode,LumongoNode,Long Statement,The length of the statement "this.hazelcastManager=HazelcastManager.createHazelcastManager(localNodeConfig`indexManager`nodes.getHazelcastNodes()`mongoConfig.getDatabaseName());" is 148.,40
+lumongo_lumongo,org.lumongo.server.config,Nodes,find,Long Statement,The length of the statement "throw new Exception("Member with memberIp <" + memberIp + "> and fullHostName <"+ fullHostName+ "> and hazelcast port <"+ hazelcastPort+ "> not found in cluster membership. Correctly register the machine with server address or ip that all machines can resolve");" is 262.,84
+lumongo_lumongo,org.lumongo.server.config,ClusterConfig,ClusterConfig,Long Identifier,The length of the field MAX_INTERNAL_CLIENT_CONNECTIONS is 31.,51
+lumongo_lumongo,org.lumongo.server.config,ClusterConfig,toDocument,Long Identifier,The length of the field MAX_INTERNAL_CLIENT_CONNECTIONS is 31.,99
+lumongo_lumongo,org.lumongo.server.config,ClusterConfig,fromDBObject,Long Identifier,The length of the field MAX_INTERNAL_CLIENT_CONNECTIONS is 31.,113
+lumongo_lumongo,org.lumongo.server.config,ClusterConfig,toString,Long Statement,The length of the statement "return "ClusterConfig [sharded=" + sharded + "` indexBlockSize="+ indexBlockSize+ "` maxIndexBlocks="+ maxIndexBlocks+ "` maxInternalClientConnections="+ maxInternalClientConnections+ "` internalWorkers="+ internalWorkers+ "` externalWorkers="+ externalWorkers+ "` internalShutdownTimeout="+ internalShutdownTimeout+ "` externalShutdownTimeout="+ externalShutdownTimeout+ "]";" is 376.,126
+lumongo_lumongo,org.lumongo.server.config,LocalNodeConfig,toString,Long Statement,The length of the statement "return "LocalNodeConfig [hazelcastPort=" + hazelcastPort + "` internalServicePort="+ internalServicePort+ "` externalServicePort="+ externalServicePort+ "` restPort="+ restPort+ "]";" is 182.,92
+lumongo_lumongo,org.lumongo.server.config,IndexConfigUtil,isNumericOrDateFieldType,Long Statement,The length of the statement "return isNumericIntFieldType(fieldType) || isNumericLongFieldType(fieldType) || isNumericFloatFieldType(fieldType)|| isNumericDoubleFieldType(fieldType)|| isDateFieldType(fieldType);" is 182.,83
+lumongo_lumongo,org.lumongo.server.config,IndexConfigUtil,fromDocument,Complex Method,Cyclomatic complexity of the method is 15,88
+lumongo_lumongo,org.lumongo.server.config,IndexConfigUtil,fromDocument,Long Identifier,The length of the field SEGMENT_QUERY_CACHE_MAX_AMOUNT is 30.,88
+lumongo_lumongo,org.lumongo.server.config,IndexConfigUtil,toDocument,Complex Method,Cyclomatic complexity of the method is 15,234
+lumongo_lumongo,org.lumongo.server.config,IndexConfigUtil,toDocument,Long Identifier,The length of the field SEGMENT_QUERY_CACHE_MAX_AMOUNT is 30.,234
+lumongo_lumongo,org.lumongo.server.config,IndexConfigUtil,toDocument,Long Statement,The length of the statement "List<String> filtersList=analyzerSettings.getFilterList().stream().map(AnalyzerSettings.Filter::name).collect(Collectors.toList());" is 131.,234
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Complex Method,Cyclomatic complexity of the method is 14,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.STANDARD`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.STANDARD).addFilter(Filter.LOWERCASE).addFilter(Filter.STOPWORDS).build());" is 172.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.KEYWORD`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.KEYWORD).setTokenizer(Tokenizer.KEYWORD).build());" is 146.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.LC_KEYWORD`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.LC_KEYWORD).setTokenizer(Tokenizer.KEYWORD).addFilter(Filter.LOWERCASE).build());" is 180.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.MIN_STEM`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.MIN_STEM).setTokenizer(Tokenizer.STANDARD).addFilter(Filter.LOWERCASE).addFilter(Filter.STOPWORDS).addFilter(Filter.ENGLISH_MIN_STEM).build());" is 240.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.TWO_TWO_SHINGLE`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.TWO_TWO_SHINGLE).setTokenizer(Tokenizer.STANDARD).addFilter(Filter.LOWERCASE).addFilter(Filter.TWO_TWO_SHINGLE).build());" is 225.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.THREE_THREE_SHINGLE`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.THREE_THREE_SHINGLE).setTokenizer(Tokenizer.STANDARD).addFilter(Filter.LOWERCASE).addFilter(Filter.THREE_THREE_SHINGLE).build());" is 237.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.LC_CONCAT_ALL`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.LC_CONCAT_ALL).setTokenizer(Tokenizer.KEYWORD).addFilter(Filter.LOWERCASE).addFilter(Filter.CONCAT_ALL).build());" is 215.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.KSTEMMED`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.KSTEMMED).setTokenizer(Tokenizer.STANDARD).addFilter(Filter.LOWERCASE).addFilter(Filter.STOPWORDS).addFilter(Filter.KSTEM).build());" is 229.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,configure,Long Statement,The length of the statement "analyzerMap.put(DefaultAnalyzers.LSH`AnalyzerSettings.newBuilder().setName(DefaultAnalyzers.LSH).setTokenizer(Tokenizer.STANDARD).addFilter(Filter.LOWERCASE).addFilter(Filter.ASCII_FOLDING).addFilter(Filter.KSTEM).addFilter(Filter.STOPWORDS).addFilter(Filter.FIVE_FIVE_SHINGLE).addFilter(Filter.MINHASH).build());" is 313.,50
+lumongo_lumongo,org.lumongo.server.config,IndexConfig,toString,Long Statement,The length of the statement "return "IndexConfig{" + "numberOfSegments=" + numberOfSegments + "` indexName='"+ indexName+ '\''+ "` indexSettings="+ indexSettings+ '}';" is 138.,206
+lumongo_lumongo,org.lumongo.server.index.analysis,AnalysisHandler,AnalysisHandler,Long Statement,The length of the statement "this.computeDocLevel=analysisRequest.getDocTerms() || analysisRequest.getTokens() || AnalysisRequest.SummaryType.TOP_TERMS_TOP_N.equals(summaryType);" is 149.,40
+lumongo_lumongo,org.lumongo.server.index.analysis,AnalysisHandler,AnalysisHandler,Long Statement,The length of the statement "boolean needDocFreq=(analysisRequest.hasMinSegFreqPerc() || analysisRequest.hasMinSegFreqPerc() || analysisRequest.hasMinSegFreq()|| analysisRequest.hasMaxSegFreq()|| TermSort.TFIDF.equals(analysisRequest.getTermSort()));" is 221.,40
+lumongo_lumongo,org.lumongo.server.index.analysis,AnalysisHandler,handleDocument,Complex Method,Cyclomatic complexity of the method is 19,91
+lumongo_lumongo,org.lumongo.server.index.analysis,AnalysisHandler,handleDocument,Long Statement,The length of the statement "List<Lumongo.Term.Builder> termBuilderList=docTermFreq.getTopTerms(analysisRequest.getTopN()`analysisRequest.getTermSort());" is 124.,91
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,LumongoIndex,Long Statement,The length of the statement "this.documentStorage=new MongoDocumentStorage(storageMongoClient`indexName`rawStorageDb`RESULT_STORAGE_COLLECTION`clusterConfig.isSharded());" is 141.,125
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,LumongoIndex,Magic Number,The method contains a magic number: 1000,125
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,LumongoIndex,Magic Number,The method contains a magic number: 1000,125
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,loadIndex,Long Parameter List,The method has 5 parameters. ,191
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,doCommit,Long Statement,The length of the statement "log.error("Failed to flush segment <" + segment.getSegmentNumber() + "> for index <"+ indexName+ ">: "+ e.getClass().getSimpleName()+ ": "`e);" is 142.,260
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getIndexWriter,Long Statement,The length of the statement "MongoDirectory mongoDirectory=new MongoDirectory(mongo`indexSegmentDbName`indexSegmentCollectionName`clusterConfig.isSharded()`clusterConfig.getIndexBlockSize());" is 162.,411
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getIndexWriter,Magic Number,The method contains a magic number: 100,411
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getIndexWriter,Magic Number,The method contains a magic number: 15,411
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getIndexWriter,Magic Number,The method contains a magic number: 90,411
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getTaxoWriter,Long Statement,The length of the statement "MongoDirectory mongoDirectory=new MongoDirectory(mongo`indexSegmentDbName`indexSegmentCollectionName`clusterConfig.isSharded()`clusterConfig.getIndexBlockSize());" is 162.,469
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getTaxoWriter,Magic Number,The method contains a magic number: 2,469
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getTaxoWriter,Magic Number,The method contains a magic number: 10,469
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,balance,Complex Method,Cyclomatic complexity of the method is 9,624
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,balance,Magic Number,The method contains a magic number: 0.5,624
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,mapSanityCheck,Complex Method,Cyclomatic complexity of the method is 8,688
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,handleCosineSimQuery,Long Statement,The length of the statement "booleanQueryBuilder.add(new BooleanClause(new TermQuery(new org.apache.lucene.index.Term(fieldName`signature[i] ? "1" : "0"))`BooleanClause.Occur.SHOULD));" is 155.,909
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,handleCosineSimQuery,Long Statement,The length of the statement "queryWithFilters.addSimilarityOverride(Lumongo.FieldSimilarity.newBuilder().setField(fieldName).setSimilarity(Similarity.CONSTANT).build());" is 140.,909
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getQuery,Complex Method,Cyclomatic complexity of the method is 10,941
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,queryInternal,Complex Method,Cyclomatic complexity of the method is 20,1026
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,queryInternal,Long Statement,The length of the statement "amount=(int)(((amount / numberOfSegments) + indexConfig.getIndexSettings().getMinSegmentRequest()) * indexConfig.getIndexSettings().getRequestFactor());" is 152.,1026
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,queryInternal,Long Statement,The length of the statement "return segment.querySegment(queryWithFilters`requestedAmount`lastScoreDocMap.get(segment.getSegmentNumber())`queryRequest.getFacetRequest()`queryRequest.getSortRequest()`queryCacheKey`queryRequest.getResultFetchType()`queryRequest.getDocumentFieldsList()`queryRequest.getDocumentMaskedFieldsList()`queryRequest.getHighlightRequestList()`queryRequest.getAnalysisRequestList()`queryRequest.getDebug());" is 400.,1026
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,reloadIndexSettings,Empty catch clause,The method has an empty catch block.,1184
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getTerms,Long Identifier,The length of the identifier getTermsResponseInternalBuilder is 31.,1364
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,storeAssociatedDocument,Long Parameter List,The method has 6 parameters. ,1402
+lumongo_lumongo,org.lumongo.server.index,LumongoIndex,getSourceDocument,Long Parameter List,The method has 6 parameters. ,1433
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,LumongoSegment,Long Parameter List,The method has 5 parameters. ,133
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,LumongoSegment,Long Statement,The length of the statement "this.fetchSet=Collections.unmodifiableSet(new HashSet<>(Arrays.asList(LumongoConstants.ID_FIELD`LumongoConstants.TIMESTAMP_FIELD)));" is 132.,133
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,LumongoSegment,Long Statement,The length of the statement "this.fetchSetWithMeta=Collections.unmodifiableSet(new HashSet<>(Arrays.asList(LumongoConstants.ID_FIELD`LumongoConstants.TIMESTAMP_FIELD`LumongoConstants.STORED_META_FIELD)));" is 175.,133
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,LumongoSegment,Long Statement,The length of the statement "this.fetchSetWithDocument=Collections.unmodifiableSet(new HashSet<>(Arrays.asList(LumongoConstants.ID_FIELD`LumongoConstants.TIMESTAMP_FIELD`LumongoConstants.STORED_META_FIELD`LumongoConstants.STORED_DOC_FIELD)));" is 213.,133
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,getFoldedString,Magic Number,The method contains a magic number: 4,163
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,reopenIndexWritersIfNecessary,Long Statement,The length of the statement "this.directoryReader=DirectoryReader.open(indexWriter`indexConfig.getIndexSettings().getApplyUncommittedDeletes()`false);" is 121.,171
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,openIndexWriters,Long Statement,The length of the statement "this.directoryReader=DirectoryReader.open(indexWriter`indexConfig.getIndexSettings().getApplyUncommittedDeletes()`false);" is 121.,194
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,setupCaches,Magic Number,The method contains a magic number: 8,217
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,querySegment,Complex Method,Cyclomatic complexity of the method is 16,243
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,querySegment,Long Parameter List,The method has 12 parameters. ,243
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,querySegment,Long Statement,The length of the statement "boolean useCache=(qrc != null) && ((segmentQueryCacheMaxAmount <= 0) || (segmentQueryCacheMaxAmount >= amount)) && queryCacheKey != null;" is 137.,243
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,querySegment,Long Statement,The length of the statement "ScoredResult.Builder srBuilder=handleDocResult(indexSearcher`sortRequest`sorting`results`i`resultFetchType`fieldsToReturn`fieldsToMask`highlighterList`analysisHandlerList);" is 172.,243
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,querySegment,Long Statement,The length of the statement "ScoredResult.Builder srBuilder=handleDocResult(indexSearcher`sortRequest`sorting`results`numResults`FetchType.NONE`Collections.emptyList()`Collections.emptyList()`Collections.emptyList()`Collections.emptyList());" is 212.,243
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,searchWithFacets,Complex Method,Cyclomatic complexity of the method is 13,453
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,searchWithFacets,Long Parameter List,The method has 5 parameters. ,453
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,searchWithFacets,Magic Number,The method contains a magic number: 8,453
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,getSortingCollector,Complex Method,Cyclomatic complexity of the method is 10,529
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,openReaderIfChanges,Long Statement,The length of the statement "DirectoryReader newDirectoryReader=DirectoryReader.openIfChanged(directoryReader`indexWriter`indexConfig.getIndexSettings().getApplyUncommittedDeletes());" is 154.,584
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleDocResult,Complex Method,Cyclomatic complexity of the method is 8,602
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleDocResult,Long Parameter List,The method has 10 parameters. ,602
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleStoredDoc,Complex Conditional,The conditional expression !highlighterList.isEmpty() || !analysisHandlerList.isEmpty() || !fieldsToMask.isEmpty()|| !fieldsToReturn.isEmpty() is complex.,654
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleStoredDoc,Complex Method,Cyclomatic complexity of the method is 12,654
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleStoredDoc,Long Parameter List,The method has 8 parameters. ,654
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleStoredDoc,Long Statement,The length of the statement "if (!highlighterList.isEmpty() || !analysisHandlerList.isEmpty() || !fieldsToMask.isEmpty()|| !fieldsToReturn.isEmpty()) {" is 122.,654
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortValues,Complex Method,Cyclomatic complexity of the method is 9,708
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleHighlight,Long Statement,The length of the statement "TextFragment[] bestTextFragments=highlighter.getBestTextFragments(tokenStream`content`false`highlightRequest.getNumberOfFragments());" is 133.,754
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,getSourceDocument,Long Parameter List,The method has 5 parameters. ,793
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,getSourceDocument,Long Statement,The length of the statement "SegmentResponse segmentResponse=this.querySegment(queryWithFilters`1`null`null`null`null`resultFetchType`fieldsToReturn`fieldsToMask`Collections.emptyList()`Collections.emptyList()`false);" is 188.,793
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,doCommit,Magic Number,The method contains a magic number: 1000,882
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,index,Long Statement,The length of the statement "luceneDocument.add(new StoredField(LumongoConstants.STORED_DOC_FIELD`new BytesRef(LumongoUtil.mongoDocumentToByteArray(mongoDocument))));" is 137.,912
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,index,Long Statement,The length of the statement "luceneDocument.add(new StoredField(LumongoConstants.STORED_META_FIELD`new BytesRef(LumongoUtil.mongoDocumentToByteArray(metadataMongoDoc))));" is 141.,912
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleProjectForStoredField,Long Statement,The length of the statement "StringFieldIndexer.INSTANCE.index(luceneDocument`projectAs.getField()`s ? "1" : "0"`LumongoConstants.SUPERBIT_PREFIX + "." + projectAs.getField()+ "."+ j);" is 155.,972
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleIndexingForStoredField,Complex Method,Cyclomatic complexity of the method is 9,1002
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleIndexingForStoredField,Long Parameter List,The method has 5 parameters. ,1002
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortForStoredField,Complex Method,Cyclomatic complexity of the method is 17,1036
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortForStoredField,Long Statement,The length of the statement "throw new RuntimeException("Expecting date for document field <" + storedFieldName + "> / sort field <"+ sortFieldName+ ">` found <"+ o.getClass()+ ">");" is 153.,1036
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortForStoredField,Long Statement,The length of the statement "throw new RuntimeException("Not handled numeric field type <" + fieldType + "> for document field <"+ storedFieldName+ "> / sort field <"+ sortFieldName+ ">");" is 159.,1036
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortForStoredField,Long Statement,The length of the statement "throw new RuntimeException("Expecting number for document field <" + storedFieldName + "> / sort field <"+ sortFieldName+ ">` found <"+ o.getClass()+ ">");" is 155.,1036
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortForStoredField,Long Statement,The length of the statement "throw new RuntimeException("Expecting boolean for document field <" + storedFieldName + "> / sort field <"+ sortFieldName+ ">` found <"+ o.getClass()+ ">");" is 156.,1036
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortForStoredField,Long Statement,The length of the statement "throw new RuntimeException("Not handled string handling <" + stringHandling + "> for document field <"+ storedFieldName+ "> / sort field <"+ sortFieldName+ ">");" is 161.,1036
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleSortForStoredField,Long Statement,The length of the statement "throw new RuntimeException("Not handled field type <" + fieldType + "> for document field <"+ storedFieldName+ "> / sort field <"+ sortFieldName+ ">");" is 151.,1036
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleFacetsForStoredField,Long Statement,The length of the statement "throw new RuntimeException("Cannot facet date for document field <" + fc.getStoredFieldName() + "> / facet <"+ fa.getFacetName()+ ">: excepted Date or Collection of Date` found <"+ o.getClass().getSimpleName()+ ">");" is 216.,1140
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,getTerms,Complex Method,Cyclomatic complexity of the method is 21,1227
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,getTerms,Long Statement,The length of the statement "FuzzyTermsEnum termsEnum=new FuzzyTermsEnum(terms`atts`new Term(fieldName`fuzzyTerm.getTerm())`fuzzyTerm.getEditDistance()`fuzzyTerm.getPrefixLength()`fuzzyTerm.getTranspositions());" is 182.,1227
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleTerm,Complex Method,Cyclomatic complexity of the method is 8,1349
+lumongo_lumongo,org.lumongo.server.index,LumongoSegment,handleTerm,Long Parameter List,The method has 5 parameters. ,1349
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,shutdown,Empty catch clause,The method has an empty catch block.,344
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,shutdown,Magic Number,The method contains a magic number: 10,344
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,internalFetch,Complex Method,Cyclomatic complexity of the method is 9,479
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,internalFetch,Long Statement,The length of the statement "ResultDocument resultDoc=i.getSourceDocument(uniqueId`timestamp`resultFetchType`fetchRequest.getDocumentFieldsList()`fetchRequest.getDocumentMaskedFieldsList()`Collections.emptyList());" is 185.,479
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,getQueryMap,Complex Method,Cyclomatic complexity of the method is 13,634
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,getQueryMap,Long Statement,The length of the statement "booleanQuery.add(new BooleanClause(new TermQuery(new org.apache.lucene.index.Term(indexFieldName`value))`BooleanClause.Occur.SHOULD));" is 134.,634
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,query,Long Statement,The length of the statement "SocketRequestFederator<QueryRequest`InternalQueryResponse> queryFederator=new SocketRequestFederator<QueryRequest`InternalQueryResponse>(hazelcastManager`pool){" is 160.,708
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,getNumberOfDocs,Long Statement,The length of the statement "SocketRequestFederator<GetNumberOfDocsRequest`GetNumberOfDocsResponse> federator=new SocketRequestFederator<GetNumberOfDocsRequest`GetNumberOfDocsResponse>(hazelcastManager`pool){" is 179.,833
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,clearIndex,Long Statement,The length of the statement "SocketRequestFederator<ClearRequest`ClearResponse> federator=new SocketRequestFederator<ClearRequest`ClearResponse>(hazelcastManager`pool){" is 139.,899
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,optimize,Long Statement,The length of the statement "SocketRequestFederator<OptimizeRequest`OptimizeResponse> federator=new SocketRequestFederator<OptimizeRequest`OptimizeResponse>(hazelcastManager`pool){" is 151.,942
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,getFieldNames,Long Statement,The length of the statement "SocketRequestFederator<GetFieldNamesRequest`GetFieldNamesResponse> federator=new SocketRequestFederator<GetFieldNamesRequest`GetFieldNamesResponse>(hazelcastManager`pool){" is 171.,986
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,getTerms,Complex Method,Cyclomatic complexity of the method is 11,1034
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,getTerms,Long Statement,The length of the statement "SocketRequestFederator<GetTermsRequest`GetTermsResponseInternal> federator=new SocketRequestFederator<GetTermsRequest`GetTermsResponseInternal>(hazelcastManager`pool){" is 167.,1034
+lumongo_lumongo,org.lumongo.server.index,LumongoIndexManager,storeAssociatedDocument,Long Parameter List,The method has 6 parameters. ,1124
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Complex Method,Cyclomatic complexity of the method is 25,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Long Method,The method has 119 lines of code.,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 100,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 2,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 2,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 3,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 3,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 3,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 3,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 3,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 3,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 4,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 4,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 5,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Magic Number,The method contains a magic number: 5,46
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPositionIncrementGap,Magic Number,The method contains a magic number: 100,50
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Complex Method,Cyclomatic complexity of the method is 22,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 2,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 2,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 3,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 3,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 3,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 3,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 3,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 3,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 4,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 4,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 5,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getFilteredStream,Magic Number,The method contains a magic number: 5,81
+lumongo_lumongo,org.lumongo.server.index,LumongoAnalyzerFactory,getPerFieldAnalyzer,Complex Method,Cyclomatic complexity of the method is 9,182
+lumongo_lumongo,org.lumongo.server.index.field,NumericFieldIndexer,handleValue,Long Statement,The length of the statement "throw new Exception("String value <" + value + "> for field <"+ storedFieldName+ "> cannot be parsed as a the defined numeric type");" is 133.,12
+lumongo_lumongo,org.lumongo.server.index.field,NumericFieldIndexer,handleValue,Long Statement,The length of the statement "throw new Exception("Expecting collection of Number` collection of numeric String` Number` or numeric String for field <" + storedFieldName + "> and found <"+ value.getClass().getSimpleName()+ ">");" is 198.,12
+lumongo_lumongo,org.lumongo.server.index.field,BooleanFieldIndexer,handleValue,Complex Conditional,The conditional expression v.startsWith("T") || v.startsWith("F") | v.startsWith("t") | v.startsWith("f") || v.startsWith("0") || v.startsWith("1") is complex.,28
+lumongo_lumongo,org.lumongo.server.index.field,BooleanFieldIndexer,handleValue,Long Statement,The length of the statement "if (v.startsWith("T") || v.startsWith("F") | v.startsWith("t") | v.startsWith("f") || v.startsWith("0") || v.startsWith("1")) {" is 127.,28
+lumongo_lumongo,org.lumongo.server.index.field,BooleanFieldIndexer,handleValue,Long Statement,The length of the statement "throw new Exception("String for Boolean field must start with 'T'`'t'`'F'`'f'`'0'` or '1' for <" + storedFieldName + "> and found <"+ v+ ">");" is 142.,28
+lumongo_lumongo,org.lumongo.server.index.field,BooleanFieldIndexer,handleValue,Long Statement,The length of the statement "throw new Exception("Expecting collection of data type of Boolean` String` or Number for field <" + storedFieldName + "> and found <"+ value.getClass().getSimpleName()+ ">");" is 174.,28
+lumongo_lumongo,org.lumongo.server.index.field,DateFieldIndexer,handleValue,Long Statement,The length of the statement "throw new Exception("Expecting collection of Date or Date for field <" + storedFieldName + "> and found <"+ value.getClass().getSimpleName()+ ">");" is 147.,17
+lumongo_lumongo,org.lumongo.server.connection,InternalClient,addMember,Long Statement,The length of the statement "internalConnectionPoolMap.put(m`new InternalRpcConnectionPool(m.getSocketAddress().getHostName()`internalServicePort`maxConnections));" is 134.,49
+lumongo_lumongo,org.lumongo.server.connection,InternalClient,removeMember,Empty catch clause,The method has an empty catch block.,76
+lumongo_lumongo,org.lumongo.server.connection,ExternalServiceServer,ExternalServiceServer,Long Statement,The length of the statement "server=NettyServerBuilder.forPort(externalServicePort).addService(externalServiceHandler).maxMessageSize(128 * 1024 * 1024).build();" is 132.,19
+lumongo_lumongo,org.lumongo.server.connection,ExternalServiceServer,ExternalServiceServer,Magic Number,The method contains a magic number: 128,19
+lumongo_lumongo,org.lumongo.server.connection,ExternalServiceServer,ExternalServiceServer,Magic Number,The method contains a magic number: 1024,19
+lumongo_lumongo,org.lumongo.server.connection,ExternalServiceServer,ExternalServiceServer,Magic Number,The method contains a magic number: 1024,19
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnectionPool,InternalRpcConnectionPool,Magic Number,The method contains a magic number: 32,7
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnectionPool,InternalRpcConnectionPool,Magic Number,The method contains a magic number: 1024,7
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnectionPool,InternalRpcConnectionPool,Magic Number,The method contains a magic number: 1000L,7
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnectionPool,InternalRpcConnectionPool,Magic Number,The method contains a magic number: 300L,7
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnection,InternalRpcConnection,Long Statement,The length of the statement "ManagedChannelBuilder<?> managedChannelBuilder=ManagedChannelBuilder.forAddress(memberAddress`internalServicePort).maxInboundMessageSize(256 * 1024 * 1024).usePlaintext(true);" is 175.,19
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnection,InternalRpcConnection,Magic Number,The method contains a magic number: 256,19
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnection,InternalRpcConnection,Magic Number,The method contains a magic number: 1024,19
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnection,InternalRpcConnection,Magic Number,The method contains a magic number: 1024,19
+lumongo_lumongo,org.lumongo.server.connection,InternalRpcConnection,close,Magic Number,The method contains a magic number: 15,36
+lumongo_lumongo,org.lumongo.server.connection,InternalServiceServer,InternalServiceServer,Long Statement,The length of the statement "server=NettyServerBuilder.forPort(internalServicePort).addService(internalServiceHandler).maxMessageSize(128 * 1024 * 1024).build();" is 132.,19
+lumongo_lumongo,org.lumongo.server.connection,InternalServiceServer,InternalServiceServer,Magic Number,The method contains a magic number: 128,19
+lumongo_lumongo,org.lumongo.server.connection,InternalServiceServer,InternalServiceServer,Magic Number,The method contains a magic number: 1024,19
+lumongo_lumongo,org.lumongo.server.connection,InternalServiceServer,InternalServiceServer,Magic Number,The method contains a magic number: 1024,19
+lumongo_lumongo,org.lumongo.server.connection,ExternalServiceHandler,store,Empty catch clause,The method has an empty catch block.,43
+lumongo_lumongo,org.lumongo.server.connection,ExternalServiceHandler,store,Long Statement,The length of the statement "log.error("Failed to store: <" + request.getUniqueId() + "> in index <"+ request.getIndexName()+ ">: "+ e.getClass().getSimpleName()+ ": "`e);" is 142.,43
+lumongo_lumongo,org.lumongo.filter,BritishUSFilter,initializeDictHash,Magic Number,The method contains a magic number: 2000,24
+lumongo_lumongo,org.lumongo.filter,BritishUSFilter,initializeDictHash,Magic Number,The method contains a magic number: 2,24
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,MongoDocumentStorage,Long Parameter List,The method has 5 parameters. ,62
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,storeAssociatedDocument,Long Parameter List,The method has 6 parameters. ,186
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,getGridFSUploadOptions,Long Parameter List,The method has 5 parameters. ,201
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,getGridFSUploadOptions,Magic Number,The method contains a magic number: 1024,201
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,storeAssociatedDocument,Long Statement,The length of the statement "storeAssociatedDocument(doc.getDocumentUniqueId()`doc.getFilename()`byteInputStream`doc.getCompressed()`doc.getTimestamp()`metadata);" is 133.,216
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,getAssociatedDocumentStream,Long Statement,The length of the statement "GridFSFile file=gridFS.find(new Document(ASSOCIATED_METADATA + "." + FILE_UNIQUE_ID_KEY`getGridFsId(uniqueId`fileName))).first();" is 129.,250
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,getAssociatedDocument,Long Statement,The length of the statement "GridFSFile file=gridFS.find(new Document(ASSOCIATED_METADATA + "." + FILE_UNIQUE_ID_KEY`getGridFsId(uniqueId`fileName))).first();" is 129.,273
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,getAssociatedFilenames,Long Statement,The length of the statement "gridFS.find(new Document(ASSOCIATED_METADATA + "." + DOCUMENT_UNIQUE_ID_KEY`uniqueId)).forEach((Consumer<com.mongodb.client.gridfs.model.GridFSFile>)gridFSFile -> fileNames.add(gridFSFile.getFilename()));" is 204.,369
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,deleteAssociatedDocument,Long Statement,The length of the statement "gridFS.find(new Document(ASSOCIATED_METADATA + "." + FILE_UNIQUE_ID_KEY`getGridFsId(uniqueId`fileName))).forEach((Block<com.mongodb.client.gridfs.model.GridFSFile>)gridFSFile -> gridFS.delete(gridFSFile.getObjectId()));" is 219.,379
+lumongo_lumongo,org.lumongo.storage.rawfiles,MongoDocumentStorage,deleteAssociatedDocuments,Long Statement,The length of the statement "gridFS.find(new Document(ASSOCIATED_METADATA + "." + DOCUMENT_UNIQUE_ID_KEY`uniqueId)).forEach((Block<com.mongodb.client.gridfs.model.GridFSFile>)gridFSFile -> gridFS.delete(gridFSFile.getObjectId()));" is 201.,387
+lumongo_lumongo,org.lumongo.storage.rawfiles,DocumentStorage,storeAssociatedDocument,Long Parameter List,The method has 6 parameters. ,26
+lumongo_lumongo,org.lumongo.util,ClusterHelper,getNodeConfig,Long Statement,The length of the statement "throw new Exception("No node found with address <" + serverAddress + "> and hazelcast port <"+ instance+ ">. Please register the node with cluster admin tool");" is 160.,85
+lumongo_lumongo,org.lumongo.util,Compression,compressZlib,Empty catch clause,The method has an empty catch block.,30
+lumongo_lumongo,org.lumongo.util,Compression,compressZlib,Magic Number,The method contains a magic number: 10,30
+lumongo_lumongo,org.lumongo.util,Compression,compressZlib,Magic Number,The method contains a magic number: 16,30
+lumongo_lumongo,org.lumongo.util,Compression,uncompressZlib,Empty catch clause,The method has an empty catch block.,53
+lumongo_lumongo,org.lumongo.util,Compression,uncompressZlib,Magic Number,The method contains a magic number: 1024,53
+lumongo_lumongo,org.lumongo.util,LockIndexer,LockIndexer,Magic Number,The method contains a magic number: 2,12
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 15,56
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 0xffffcd7d,56
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 10,56
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 3,56
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 6,56
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 2,56
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 14,56
+lumongo_lumongo,org.lumongo.util,LockIndexer,rehash,Magic Number,The method contains a magic number: 16,56
+lumongo_lumongo,org.lumongo.util,LockHandler,LockHandler,Magic Number,The method contains a magic number: 10,11
+lumongo_lumongo,org.lumongo.util,CommonCompression,compressZlib,Empty catch clause,The method has an empty catch block.,32
+lumongo_lumongo,org.lumongo.util,CommonCompression,compressZlib,Magic Number,The method contains a magic number: 10,32
+lumongo_lumongo,org.lumongo.util,CommonCompression,compressZlib,Magic Number,The method contains a magic number: 16,32
+lumongo_lumongo,org.lumongo.util,CommonCompression,uncompressZlib,Empty catch clause,The method has an empty catch block.,55
+lumongo_lumongo,org.lumongo.util,CommonCompression,uncompressZlib,Magic Number,The method contains a magic number: 1024,55
+lumongo_lumongo,org.lumongo.util,StreamHelper,copyChannel,Magic Number,The method contains a magic number: 32,14
+lumongo_lumongo,org.lumongo.util,StreamHelper,copyChannel,Magic Number,The method contains a magic number: 1024,14
+lumongo_lumongo,org.lumongo.util,StreamHelper,copyStream,Empty catch clause,The method has an empty catch block.,30
+lumongo_lumongo,org.lumongo.util,StreamHelper,copyStream,Empty catch clause,The method has an empty catch block.,30
+lumongo_lumongo,org.lumongo.util,StreamHelper,getBytesFromStream,Magic Number,The method contains a magic number: 32,53
+lumongo_lumongo,org.lumongo.util,StreamHelper,getBytesFromStream,Magic Number,The method contains a magic number: 1024,53
+lumongo_lumongo,org.lumongo.admin.help,LumongoHelpFormatter,format,Complex Method,Cyclomatic complexity of the method is 10,14
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Complex Method,Cyclomatic complexity of the method is 18,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "OptionSpec<File> mongoConfigArg=parser.accepts(AdminConstants.MONGO_CONFIG).withRequiredArg().ofType(File.class).describedAs("Mongo properties file");" is 150.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "OptionSpec<File> nodeConfigArg=parser.accepts(AdminConstants.NODE_CONFIG).withRequiredArg().ofType(File.class).describedAs("Node properties file");" is 147.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "OptionSpec<File> clusterConfigArg=parser.accepts(AdminConstants.CLUSTER_CONFIG).withRequiredArg().ofType(File.class).describedAs("Cluster properties file");" is 156.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "OptionSpec<String> serverAddressArg=parser.accepts(AdminConstants.ADDRESS).withRequiredArg().describedAs("Specific server address manually for node commands");" is 159.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "OptionSpec<Integer> hazelcastPortArg=parser.accepts(AdminConstants.HAZELCAST_PORT).withRequiredArg().ofType(Integer.class).describedAs("Hazelcast port if multiple instances on one server for node commands");" is 207.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "OptionSpec<Command> commandArg=parser.accepts(AdminConstants.COMMAND).withRequiredArg().ofType(Command.class).required().describedAs("Command to run " + Arrays.toString(Command.values()));" is 188.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "System.out.println("Creating cluster in database <" + mongoConfig.getDatabaseName() + "> on mongo server <"+ mongoConfig.getServerAddresses()+ ">");" is 148.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "System.out.println("Updating cluster in database <" + mongoConfig.getDatabaseName() + "> on mongo server <"+ mongoConfig.getServerAddresses()+ ">");" is 148.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Long Statement,The length of the statement "System.out.println("Removing cluster from database <" + mongoConfig.getDatabaseName() + "> on mongo server <"+ mongoConfig.getServerAddresses()+ ">");" is 150.,21
+lumongo_lumongo,org.lumongo.admin,ClusterAdmin,main,Magic Number,The method contains a magic number: 2,21
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Complex Method,Cyclomatic complexity of the method is 16,34
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Long Statement,The length of the statement "OptionSpec<String> addressArg=parser.accepts(AdminConstants.ADDRESS).withRequiredArg().defaultsTo("localhost").describedAs("Lumongo server address");" is 149.,34
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Long Statement,The length of the statement "OptionSpec<Integer> portArg=parser.accepts(AdminConstants.PORT).withRequiredArg().ofType(Integer.class).defaultsTo(32191).describedAs("Lumongo external port");" is 159.,34
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Long Statement,The length of the statement "OptionSpec<String> indexArg=parser.accepts(AdminConstants.INDEX).withRequiredArg().describedAs("Index to perform action");" is 122.,34
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Long Statement,The length of the statement "OptionSpec<Command> commandArg=parser.accepts(AdminConstants.COMMAND).withRequiredArg().ofType(Command.class).required().describedAs("Command to run " + Arrays.toString(Command.values()));" is 188.,34
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Long Statement,The length of the statement "System.out.println(val.getServerAddress() + "\t" + val.getHazelcastPort()+ "\t"+ val.getInternalPort()+ "\t"+ val.getExternalPort());" is 133.,34
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Magic Number,The method contains a magic number: 32191,34
+lumongo_lumongo,org.lumongo.admin,IndexAdmin,main,Magic Number,The method contains a magic number: 2,34
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> addressArg=parser.accepts(AdminConstants.ADDRESS).withRequiredArg().defaultsTo("localhost").describedAs("Lumongo server address");" is 149.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<Integer> portArg=parser.accepts(AdminConstants.PORT).withRequiredArg().ofType(Integer.class).defaultsTo(32191).describedAs("Lumongo external port");" is 159.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> indexArg=parser.accepts(AdminConstants.INDEX).withRequiredArg().required().describedAs("Index to find terms");" is 129.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> fieldArg=parser.accepts(AdminConstants.FIELD).withRequiredArg().required().describedAs("Field to find terms");" is 129.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<Integer> minDocFreqArg=parser.accepts(AdminConstants.MIN_DOC_FREQ).withRequiredArg().ofType(Integer.class).describedAs("Minimum number of documents for a term to be shown");" is 184.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<Integer> minTermFreqArg=parser.accepts(AdminConstants.MIN_TERM_FREQ).withRequiredArg().ofType(Integer.class).describedAs("Minimum number of occurrences for a term to be shown");" is 188.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> startTermArg=parser.accepts(AdminConstants.START_TERM).withRequiredArg().describedAs("Term to start search from (inclusive)");" is 145.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> endTermArg=parser.accepts(AdminConstants.END_TERM).withRequiredArg().describedAs("Term to end on (exclusive)");" is 130.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> termFilterArg=parser.accepts(AdminConstants.TERM_FILTER).withRequiredArg().describedAs("Filter terms that match this regex");" is 144.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> termMatchArg=parser.accepts(AdminConstants.TERM_MATCH).withRequiredArg().describedAs("Return terms that match this regex");" is 142.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<String> includeTermsArg=parser.accepts(AdminConstants.INCLUDE_TERM).withRequiredArg().describedAs("Return only term(s) specified");" is 142.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "OptionSpec<Integer> amountArg=parser.accepts(AdminConstants.AMOUNT).withRequiredArg().describedAs("Number of terms to return (default 0/all terms)").ofType(Integer.class);" is 171.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Long Statement,The length of the statement "GetTermsResult response=lumongoWorkPool.execute(new GetTerms(index`field).setStartTerm(startTerm).setEndTerm(endTerm).setAmount(amount).setMinDocFreq(minDocFreq).setMinTermFreq(minTermFreq).setTermFilter(termFilter).setTermMatch(termMatch).setIncludeTerms(includeTerms));" is 271.,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Magic Number,The method contains a magic number: 32191,21
+lumongo_lumongo,org.lumongo.admin,Terms,main,Magic Number,The method contains a magic number: 2,21
+lumongo_lumongo,org.lumongo.admin,FetchAssociated,main,Long Statement,The length of the statement "OptionSpec<String> addressArg=parser.accepts(AdminConstants.ADDRESS).withRequiredArg().defaultsTo("localhost").describedAs("Lumongo server address");" is 149.,16
+lumongo_lumongo,org.lumongo.admin,FetchAssociated,main,Long Statement,The length of the statement "OptionSpec<Integer> restPortArg=parser.accepts(AdminConstants.REST_PORT).withRequiredArg().ofType(Integer.class).defaultsTo(LumongoConstants.DEFAULT_REST_SERVICE_PORT).describedAs("Lumongo rest port");" is 201.,16
+lumongo_lumongo,org.lumongo.admin,FetchAssociated,main,Long Statement,The length of the statement "OptionSpec<String> fileNameArg=parser.accepts(AdminConstants.FILE_NAME).withRequiredArg().required().describedAs("Associated File Name");" is 137.,16
+lumongo_lumongo,org.lumongo.admin,FetchAssociated,main,Long Statement,The length of the statement "OptionSpec<File> outputFileArg=parser.accepts(AdminConstants.OUTPUT_FILE).withRequiredArg().ofType(File.class).required().describedAs("Location to write associated file");" is 171.,16
+lumongo_lumongo,org.lumongo.admin,FetchAssociated,main,Magic Number,The method contains a magic number: 2,16
+lumongo_lumongo,org.lumongo.admin,Fetch,main,Long Statement,The length of the statement "OptionSpec<String> addressArg=parser.accepts(AdminConstants.ADDRESS).withRequiredArg().defaultsTo("localhost").describedAs("Lumongo server address");" is 149.,22
+lumongo_lumongo,org.lumongo.admin,Fetch,main,Long Statement,The length of the statement "OptionSpec<Integer> portArg=parser.accepts(AdminConstants.PORT).withRequiredArg().ofType(Integer.class).defaultsTo(LumongoConstants.DEFAULT_EXTERNAL_SERVICE_PORT).describedAs("Lumongo external port");" is 200.,22
+lumongo_lumongo,org.lumongo.admin,Fetch,main,Long Statement,The length of the statement "OptionSpec<String> uniqueIdArg=parser.accepts(AdminConstants.ID).withRequiredArg().required().describedAs("Unique Id to fetch");" is 128.,22
+lumongo_lumongo,org.lumongo.admin,Fetch,main,Long Statement,The length of the statement "OptionSpec<String> indexArg=parser.accepts(AdminConstants.INDEX).withRequiredArg().required().describedAs("Index to fetch from");" is 129.,22
+lumongo_lumongo,org.lumongo.admin,Fetch,main,Long Statement,The length of the statement "OptionSpec<String> documentFieldsArg=parser.accepts(AdminConstants.DOCUMENT_FIELDS`"Fields to return from mongo").withRequiredArg();" is 132.,22
+lumongo_lumongo,org.lumongo.admin,Fetch,main,Long Statement,The length of the statement "OptionSpec<String> documentMaskedFieldsArg=parser.accepts(AdminConstants.DOCUMENT_MASKED_FIELDS`"Fields to mask from mongo").withRequiredArg();" is 143.,22
+lumongo_lumongo,org.lumongo.admin,Fetch,main,Magic Number,The method contains a magic number: 2,22
+lumongo_lumongo,org.lumongo.admin,StoreAssociated,main,Long Statement,The length of the statement "OptionSpec<String> addressArg=parser.accepts(AdminConstants.ADDRESS).withRequiredArg().defaultsTo("localhost").describedAs("Lumongo server address");" is 149.,20
+lumongo_lumongo,org.lumongo.admin,StoreAssociated,main,Long Statement,The length of the statement "OptionSpec<Integer> restPortArg=parser.accepts(AdminConstants.REST_PORT).withRequiredArg().ofType(Integer.class).defaultsTo(LumongoConstants.DEFAULT_REST_SERVICE_PORT).describedAs("Lumongo rest port");" is 201.,20
+lumongo_lumongo,org.lumongo.admin,StoreAssociated,main,Long Statement,The length of the statement "OptionSpec<String> fileNameArg=parser.accepts(AdminConstants.FILE_NAME).withRequiredArg().required().describedAs("Associated File Name");" is 137.,20
+lumongo_lumongo,org.lumongo.admin,StoreAssociated,main,Long Statement,The length of the statement "OptionSpec<File> fileToStoreArg=parser.accepts(AdminConstants.FILE_TO_STORE).withRequiredArg().ofType(File.class).required().describedAs("Associated File to Store");" is 165.,20
+lumongo_lumongo,org.lumongo.admin,StoreAssociated,main,Long Statement,The length of the statement "OptionSpec<Boolean> compressedArg=parser.accepts(AdminConstants.COMPRESSED).withRequiredArg().ofType(Boolean.class).describedAs("Compress before storage");" is 155.,20
+lumongo_lumongo,org.lumongo.admin,StoreAssociated,main,Magic Number,The method contains a magic number: 2,20
+lumongo_lumongo,org.lumongo.admin,Search,main,Complex Method,Cyclomatic complexity of the method is 26,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Method,The method has 182 lines of code.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<String> addressArg=parser.accepts(AdminConstants.ADDRESS`"LuMongo server address").withRequiredArg().defaultsTo("localhost");" is 136.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<Integer> portArg=parser.accepts(AdminConstants.PORT`"LuMongo external port").withRequiredArg().ofType(Integer.class).defaultsTo(LumongoConstants.DEFAULT_EXTERNAL_SERVICE_PORT);" is 187.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<String> queryArg=parser.accepts(AdminConstants.QUERY`"Lucene query (matches all docs by default)").withRequiredArg();" is 128.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<Integer> amountArg=parser.accepts(AdminConstants.AMOUNT`"Amount of results to return").withRequiredArg().ofType(Integer.class).defaultsTo(10);" is 153.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<Integer> startArg=parser.accepts(AdminConstants.START`"Start index").withRequiredArg().ofType(Integer.class).defaultsTo(0);" is 134.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<Integer> facetsCountArg=parser.accepts(AdminConstants.FACET_COUNT`"Number of facets to return").withRequiredArg().ofType(Integer.class).defaultsTo(10);" is 162.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<Integer> facetSegmentCountArg=parser.accepts(AdminConstants.FACET_SEGMENT_COUNT`"Number of facets to return per segment").withRequiredArg().ofType(Integer.class).defaultsTo(40);" is 188.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<String> sortDescArg=parser.accepts(AdminConstants.SORT_DESC`"Field to sort on (descending)").withRequiredArg();" is 122.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<String> queryFieldArg=parser.accepts(AdminConstants.QUERY_FIELD`"Specific field(s) for query to search if none specified in query instead of index default").withRequiredArg();" is 186.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<Integer> minimumNumberShouldMatchArg=parser.accepts(AdminConstants.MIN_TO_MATCH`"Minimum number of optional boolean queries to match").withRequiredArg().ofType(Integer.class);" is 186.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "OptionSpec<String> fieldsToReturnArg=parser.accepts(AdminConstants.RETURN`"Fields to return from fetch").withRequiredArg();" is 123.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Long Statement,The length of the statement "System.out.println("Possible facets missing from top results for <" + fg.getCountRequest().getFacetField().getLabel() + "> with max count <"+ fg.getMaxValuePossibleMissing()+ ">");" is 180.,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Magic Number,The method contains a magic number: 10,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Magic Number,The method contains a magic number: 10,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Magic Number,The method contains a magic number: 40,30
+lumongo_lumongo,org.lumongo.admin,Search,main,Magic Number,The method contains a magic number: 2,30
+lumongo_lumongo,org.lumongo.admin,StartNode,main,Long Statement,The length of the statement "OptionSpec<File> mongoConfigArg=parser.accepts(AdminConstants.MONGO_CONFIG).withRequiredArg().ofType(File.class).describedAs("Mongo properties file").required();" is 161.,20
+lumongo_lumongo,org.lumongo.admin,StartNode,main,Long Statement,The length of the statement "OptionSpec<String> serverAddressArg=parser.accepts(AdminConstants.ADDRESS).withRequiredArg().describedAs("Specific Server Address Manually");" is 141.,20
+lumongo_lumongo,org.lumongo.admin,StartNode,main,Long Statement,The length of the statement "OptionSpec<Integer> hazelcastPortArg=parser.accepts(AdminConstants.HAZELCAST_PORT).withRequiredArg().ofType(Integer.class).describedAs("Hazelcast port if multiple instances on one server (expert)");" is 198.,20
+lumongo_lumongo,org.lumongo.admin,StartNode,main,Long Statement,The length of the statement "System.out.println("Using <" + serverAddress + "> as the server address. If this is not correct please specify on command line");" is 129.,20
+lumongo_lumongo,org.lumongo.admin,StartNode,main,Magic Number,The method contains a magic number: 16,20
+lumongo_lumongo,org.lumongo.admin,StartNode,main,Magic Number,The method contains a magic number: 1024,20
+lumongo_lumongo,org.lumongo.admin,StartNode,main,Magic Number,The method contains a magic number: 2,20
+lumongo_lumongo,org.lumongo.similarity,TFSimilarity,simScorer,Long Statement,The length of the statement "return Explanation.match(queryBoostExpl.getValue()`"score(" + getClass().getSimpleName() + "` doc="+ doc+ ")` computed from:"`queryBoostExpl);" is 142.,58
+lumongo_lumongo,org.lumongo.similarity,TFSimilarity,explain,Long Statement,The length of the statement "return Explanation.match(queryBoostExpl.getValue()`"score(" + getClass().getSimpleName() + "` doc="+ doc+ ")` computed from:"`queryBoostExpl);" is 142.,69
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,startClient,Magic Number,The method contains a magic number: 8,96
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,startClient,Magic Number,The method contains a magic number: 8,96
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,startClient,Magic Number,The method contains a magic number: 10000,96
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,createIndex,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("issn"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 124.,123
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,createIndex,Magic Number,The method contains a magic number: 16,123
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,updateIndex,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("issn"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 124.,136
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,updateIndex,Long Statement,The length of the statement "indexConfig.addAnalyzerSetting("myAnalyzer"`Tokenizer.WHITESPACE`Arrays.asList(Filter.ASCII_FOLDING`Filter.LOWERCASE)`Similarity.BM25`QueryHandling.NORMAL);" is 156.,136
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,createOrUpdateIndex,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("issn"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 124.,153
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,createOrUpdateIndex,Magic Number,The method contains a magic number: 16,153
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,simpleQuery,Magic Number,The method contains a magic number: 10,234
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,moreComplexQuery,Magic Number,The method contains a magic number: 10,250
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,simpleQueryAsync,Magic Number,The method contains a magic number: 10,269
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,simpleQueryWithSort,Magic Number,The method contains a magic number: 10,289
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,queryWithBatchFetch,Magic Number,The method contains a magic number: 10,306
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,pagingQuery,Magic Number,The method contains a magic number: 2,325
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,facetQuery,Magic Number,The method contains a magic number: 30,344
+lumongo_lumongo,org.lumongo.test.cluster,ApiTest,fetchLargeAssociated,Long Statement,The length of the statement "FetchLargeAssociated fetchLargeAssociated=new FetchLargeAssociated(uniqueId`indexName`filename`new File("/tmp/myFetchedFile"));" is 127.,433
+lumongo_lumongo,org.lumongo.test.cluster,DateTest,main,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("title"`FieldType.STRING).indexAs(DefaultAnalyzers.STANDARD).facet());" is 123.,20
+lumongo_lumongo,org.lumongo.test.cluster,DateTest,main,Magic Number,The method contains a magic number: 1000,20
+lumongo_lumongo,org.lumongo.test.cluster,DateTest,main,Magic Number,The method contains a magic number: 2,20
+lumongo_lumongo,org.lumongo.test.cluster,DateTest,main,Magic Number,The method contains a magic number: 10,20
+lumongo_lumongo,org.lumongo.test.cluster,QueryTest,main,Long Statement,The length of the statement "String[] queries=new String[]{"human"`"male"`"female"`"animal"`"age"`"protein"`"cell"`"factor"`"disease"`"agent"`"acid"`"dna"`"child"`"receptor"`"drug"`"liver"`"mutation"`"rabbits"`"neurons"`"brain"`"variance"`"apoptosis"`"mucosal"`"infection"`"death"`"cancer"`"response"`"heart"`"treatment"`"outcome"`"middle"`"survival"`"analysis"`"valine"`"circulation"`"complex"`"angina"`"unstable"`"myocardial"`"controlled"`"trials"`"platelet"`"translational"`"psoriasis"`"adolescent"`"health"`"dermatology"`"blood"`"plasma"`"acne"`"adherence"`"stroke"`"aspirin"`"migraine"`"hyperphagia"`"hiv"`"melanoma"`"prostate"`"aggression"`"arthritis"`"abatacept"`"enteritis"`"histone"`"lenalidomide"`"potassium"`"bortezomib"`"lung"`"enteritis"`"pregnant"`"myeloma"`"paclitaxel"`"cisplatin"`"erlotinib"`"antigens"`"carbon"`"sorafenib"`"paclitaxel"`"genetics"`"embryo"`"stem"`"gemcitabine"`"tumor"`"alpha"`"histone"`"cetuximab"`"steroids"`"lead"`"melphalan"`"glucose"`"radical"`"taxane"`"folic"`"somatic"`"perifosine"`"carcinogens"`"irinotecan"`"communicable"`"vomiting"`"volatile"`"water"`"vaccination"`"urology"`"ultrasonic"`"tyrosine"`"tuberculosis"`"triphosphate"`"transplantable"`"toxoplasmosis"};" is 1178.,15
+lumongo_lumongo,org.lumongo.test.cluster,QueryTest,main,Magic Number,The method contains a magic number: 32191,15
+lumongo_lumongo,org.lumongo.test.cluster,QueryTest,main,Magic Number,The method contains a magic number: 25,15
+lumongo_lumongo,org.lumongo.test.cluster,QueryTest,main,Magic Number,The method contains a magic number: 10000,15
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test02Init,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("issn"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 124.,51
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test02Init,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("country"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 127.,51
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test02Init,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("date"`FieldType.DATE).index().facetAs(FacetAs.DateHandling.DATE_YYYY_MM_DD));" is 131.,51
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test02Init,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("keyword"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 127.,51
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test02Init,Magic Number,The method contains a magic number: 0.05,51
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test02Init,Magic Number,The method contains a magic number: 16,51
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Complex Method,Cyclomatic complexity of the method is 8,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Long Method,The method has 110 lines of code.,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Long Statement,The length of the statement "assertEquals("Total record count after drill down not " + (totalRecords * 2) / 5`(totalRecords * 2) / 5`qr.getTotalHits());" is 123.,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Long Statement,The length of the statement "Query q=new Query(FACET_TEST_INDEX`"title:userguide"`10).addDrillDown("issn"`"1234-1234").addDrillDown("issn"`"3333-1234");" is 123.,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Long Statement,The length of the statement "Query q=new Query(FACET_TEST_INDEX`"title:userguide"`10).addDrillDown("issn"`"1234-1234").addDrillDown("country"`"France");" is 123.,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2014,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 4,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2013,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 4,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2013,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 8,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 4,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 30,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 30,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 30,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 30,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 3,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 3,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 5,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 5,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 10,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test03Facet,Magic Number,The method contains a magic number: 2,74
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Long Statement,The length of the statement "qr=lumongoWorkPool.query(new Query(MY_TEST_INDEX`"an:[1 TO 4]"`10).addFieldSort("an"`Lumongo.FieldSort.Direction.DESCENDING));" is 126.,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 5,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 3,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 300,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 100,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 20,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 20,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 3,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 3,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 2,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 3,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test04Bulk,Magic Number,The method contains a magic number: 10,237
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test06AssociatedDocuments,Magic Number,The method contains a magic number: 2222,401
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test06AssociatedDocuments,Magic Number,The method contains a magic number: 1111,401
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test06AssociatedDocuments,Magic Number,The method contains a magic number: 3,401
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test06AssociatedDocuments,Magic Number,The method contains a magic number: 2,401
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test06AssociatedDocuments,Magic Number,The method contains a magic number: 3,401
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test06AssociatedDocuments,Magic Number,The method contains a magic number: 2,401
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test07Delete,Magic Number,The method contains a magic number: 4,492
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test07Delete,Magic Number,The method contains a magic number: 10,492
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test07Delete,Magic Number,The method contains a magic number: 10,492
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test07Delete,Magic Number,The method contains a magic number: 3,492
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test07Delete,Magic Number,The method contains a magic number: 2,492
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test08Api,Magic Number,The method contains a magic number: 10,551
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test08Api,Magic Number,The method contains a magic number: 10,551
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test08Api,Magic Number,The method contains a magic number: 10,551
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test08Api,Magic Number,The method contains a magic number: 30,551
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test08Api,Magic Number,The method contains a magic number: 10,551
+lumongo_lumongo,org.lumongo.test.cluster,SingleNodeTest,test09DeleteIndex,Magic Number,The method contains a magic number: 2,627
+lumongo_lumongo,org.lumongo.test.cluster,ServerTestBase,getTestLocalNodeConfig,Magic Number,The method contains a magic number: 10,116
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test02Init,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("issn"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 124.,43
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test02Init,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("country"`FieldType.STRING).indexAs(DefaultAnalyzers.LC_KEYWORD).facet());" is 127.,43
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test02Init,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create("date"`FieldType.DATE).index().facetAs(DateHandling.DATE_YYYY_MM_DD));" is 123.,43
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test02Init,Magic Number,The method contains a magic number: 0.05,43
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 2,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 10,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 2014,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 4,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 2013,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 4,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 2013,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 8,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test03Facet,Magic Number,The method contains a magic number: 4,63
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test04Restart,Magic Number,The method contains a magic number: 20000,113
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Long Statement,The length of the statement "assertEquals("Total record count after drill down not " + (totalRecords * 2) / 5`(totalRecords * 2) / 5`qr.getTotalHits());" is 123.,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Long Statement,The length of the statement "Query q=new Query(FACET_TEST_INDEX`"title:userguide"`10).addDrillDown("issn"`"1234-1234").addDrillDown("issn"`"3333-1234");" is 123.,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Long Statement,The length of the statement "Query q=new Query(FACET_TEST_INDEX`"title:userguide"`10).addDrillDown("issn"`"1234-1234").addDrillDown("country"`"France");" is 123.,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 30,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 30,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 3,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 3,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 5,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 5,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 10,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,StartStopTest,test05ConfirmCounts,Magic Number,The method contains a magic number: 2,123
+lumongo_lumongo,org.lumongo.test.cluster,IndexerTest,testFieldExtraction,Long Statement,The length of the statement "Assert.assertEquals(Arrays.asList("val1"`"someval")`ResultHelper.getValueFromMongoDocument(testMongoDocument`"thisfield.key1"));" is 128.,15
+lumongo_lumongo,org.lumongo.test.cluster,IndexerTest,testFieldExtraction,Magic Number,The method contains a magic number: 40,15
+lumongo_lumongo,org.lumongo.test.cluster,IndexerTest,testFieldExtraction,Magic Number,The method contains a magic number: 40,15
+lumongo_lumongo,org.lumongo.test.cluster.mapper,Person,toString,Long Statement,The length of the statement "return "Person{" + "id='" + id + '\''+ "` firstName='"+ firstName+ '\''+ "` lastName='"+ lastName+ '\''+ "` address='"+ address+ '\''+ "` phoneNumbers="+ phoneNumbers+ '}';" is 172.,38
+lumongo_lumongo,org.lumongo.test.cluster.mapper,ServerMapperTest,test04Search,Magic Number,The method contains a magic number: 10,79
+lumongo_lumongo,org.lumongo.test.cluster.mapper,ServerMapperTest,test04Search,Magic Number,The method contains a magic number: 10,79
+lumongo_lumongo,org.lumongo.test.cluster.mapper,ServerMapperTest,test04Search,Magic Number,The method contains a magic number: 10,79
+lumongo_lumongo,org.lumongo.test.cluster.mapper,ServerMapperTest,test04Search,Magic Number,The method contains a magic number: 2,79
+lumongo_lumongo,org.lumongo.ui.server,UIQueryServiceImpl,init,Magic Number,The method contains a magic number: 2,53
+lumongo_lumongo,org.lumongo.ui.server,UIQueryServiceImpl,init,Magic Number,The method contains a magic number: 32,53
+lumongo_lumongo,org.lumongo.ui.server,UIQueryServiceImpl,getIndexInfos,Long Statement,The length of the statement "TreeMap<String`FieldConfig> fieldConfigMap=lumongoWorkPool.getIndexConfig(new GetIndexConfig(indexName)).getIndexConfig().getFieldConfigMap();" is 142.,107
+lumongo_lumongo,org.lumongo.ui.server,UIQueryServiceImpl,getIndexInfos,Magic Number,The method contains a magic number: 20L,107
+lumongo_lumongo,org.lumongo.ui.server,UIQueryServiceImpl,search,Complex Method,Cyclomatic complexity of the method is 38,137
+lumongo_lumongo,org.lumongo.ui.server,UIQueryServiceImpl,search,Long Method,The method has 124 lines of code.,137
+lumongo_lumongo,org.lumongo.ui.server,UIQueryServiceImpl,search,Magic Number,The method contains a magic number: 100,137
+lumongo_lumongo,org.lumongo.ui.server,LumongoServletContextListener,contextInitialized,Long Statement,The length of the statement "servletContext.addServlet("uiqueryservice"`UIQueryServiceImpl.class).addMapping("/" + appPrefix + "/"+ "uiqueryservice");" is 121.,16
+lumongo_lumongo,org.lumongo.ui.server,LumongoServletContextListener,setFilters,Long Statement,The length of the statement "FilterRegistration.Dynamic gwtcachecontrolfilter=servletContext.addFilter("gwtcachecontrolfilter"`GWTCacheControlFilter.class);" is 127.,30
+lumongo_lumongo,org.lumongo.ui.server.filter,GWTCacheControlFilter,doFilter,Magic Number,The method contains a magic number: 86400000L,24
+lumongo_lumongo,org.lumongo.ui.shared,UIQueryObject,toString,Long Statement,The length of the statement "return "UIQueryObject{" + "queryId=" + queryId + "` query='"+ query+ '\''+ "` indexNames="+ indexNames+ "` debug="+ debug+ "` start="+ start+ "` dontCache="+ dontCache+ "` mm="+ mm+ "` dismax="+ dismax+ "` dismaxTie="+ dismaxTie+ "` queryFields="+ queryFields+ "` defaultOperator='"+ defaultOperator+ '\''+ "` similarities="+ similarities+ "` filterQueries="+ filterQueries+ "` cosineSimJsonList="+ cosineSimJsonList+ "` filterJsonQueries="+ filterJsonQueries+ "` highlightList="+ highlightList+ "` highlightJsonList="+ highlightJsonList+ "` analyzeJsonList="+ analyzeJsonList+ "` displayFields="+ displayFields+ "` facets="+ facets+ "` computeFacetError="+ computeFacetError+ "` drillDowns="+ drillDowns+ "` sortList="+ sortList+ "` rows="+ rows+ '}';" is 752.,243
+lumongo_lumongo,org.lumongo.ui.client,LumongoUI,createBaseView,Magic Number,The method contains a magic number: 40,56
+lumongo_lumongo,org.lumongo.ui.client,LumongoUI,createBaseView,Magic Number,The method contains a magic number: 40,56
+lumongo_lumongo,org.lumongo.ui.client.util,UrlBuilder,buildListParamMap,Complex Method,Cyclomatic complexity of the method is 8,18
+lumongo_lumongo,org.lumongo.ui.client.util,UrlBuilder,buildListParamMap,Magic Number,The method contains a magic number: 2,18
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Long Statement,The length of the statement "chatButton.addClickHandler(clickEvent -> Window.open("https://gitter.im/lumongo/lumongo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"`"_blank"`"menubar=1`status=1`toolbar=1`scrollbars=1`resizable=1"));" is 230.,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Long Statement,The length of the statement "sourceButton.addClickHandler(clickEvent -> Window.open("https://github.com/lumongo/lumongo"`"_blank"`"menubar=1`status=1`toolbar=1`scrollbars=1`resizable=1"));" is 159.,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 12,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 6,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 6,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 12,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 6,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 6,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 15,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 10,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 20,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.base,Footer,Footer,Magic Number,The method contains a magic number: 10,20
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,QueryView,Magic Number,The method contains a magic number: 102,33
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,QueryView,Magic Number,The method contains a magic number: 25,33
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,QueryView,Magic Number,The method contains a magic number: 130,33
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,QueryView,Magic Number,The method contains a magic number: 130,33
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,draw,Magic Number,The method contains a magic number: 25,55
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,onResize,Magic Number,The method contains a magic number: 600,108
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,onResize,Magic Number,The method contains a magic number: 102,108
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,onResize,Magic Number,The method contains a magic number: 600,108
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,onResize,Magic Number,The method contains a magic number: 130,108
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,onResize,Magic Number,The method contains a magic number: 600,108
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryView,onResize,Magic Number,The method contains a magic number: 130,108
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,FieldsDiv,FieldsDiv,Complex Method,Cyclomatic complexity of the method is 8,19
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,FieldsDiv,FieldsDiv,Magic Number,The method contains a magic number: 12,19
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,FieldsDiv,FieldsDiv,Magic Number,The method contains a magic number: 12,19
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,FieldsDiv,FieldsDiv,Magic Number,The method contains a magic number: 12,19
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,QueryOptionsView,Complex Method,Cyclomatic complexity of the method is 12,49
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,QueryOptionsView,Long Statement,The length of the statement "MaterialBadge resultsBadge=new MaterialBadge("Total Results: " + NumberFormat.getFormat("#`##0").format(uiQueryResults.getTotalResults()));" is 139.,49
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,QueryOptionsView,Long Statement,The length of the statement "rowsIntegerBox.getTextBox().addChangeHandler(changeEvent -> uiQueryObject.setRows(Integer.valueOf(rowsIntegerBox.getValue())));" is 127.,49
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,QueryOptionsView,Magic Number,The method contains a magic number: 15,49
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,QueryOptionsView,Magic Number,The method contains a magic number: 10,49
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,QueryOptionsView,Magic Number,The method contains a magic number: 2,49
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,QueryOptionsView,Magic Number,The method contains a magic number: 10,49
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,createFieldNameCollapsible,Magic Number,The method contains a magic number: 40,177
+lumongo_lumongo,org.lumongo.ui.client.widgets.query,QueryOptionsView,createFieldNameCollapsible,Magic Number,The method contains a magic number: 40,177
+lumongo_lumongo,org.lumongo.ui.client.widgets,HomeView,drawSplashPage,Long Statement,The length of the statement "Highcharts chart=PieChart.getBuilder().setChartTitle("Index Info").setHeight(400).setData(data).setYAxisAllowDecimals(false).build();" is 133.,26
+lumongo_lumongo,org.lumongo.ui.client.widgets,HomeView,drawSplashPage,Magic Number,The method contains a magic number: 12,26
+lumongo_lumongo,org.lumongo.ui.client.widgets,HomeView,drawSplashPage,Magic Number,The method contains a magic number: 6,26
+lumongo_lumongo,org.lumongo.ui.client.widgets,HomeView,drawSplashPage,Magic Number,The method contains a magic number: 6,26
+lumongo_lumongo,org.lumongo.ui.client.widgets,HomeView,drawSplashPage,Magic Number,The method contains a magic number: 400,26
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,createCache,Long Statement,The length of the statement "cache=CacheBuilder.newBuilder().concurrencyLevel(32).maximumSize(MongoDirectory.DEFAULT_BLOCK_MAX).removalListener(removalListener).build();" is 140.,62
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,createCache,Magic Number,The method contains a magic number: 32,62
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,setMaxIndexBlocks,Magic Number,The method contains a magic number: 32,90
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,toString,Long Statement,The length of the statement "return "MongoFile{" + "mongoDirectory=" + mongoDirectory + "` indexNumber="+ indexNumber+ "` fileNumber="+ fileNumber+ "` indexName='"+ indexName+ '\''+ "` blockSize="+ blockSize+ "` fileLength="+ fileLength+ "` lastModified="+ lastModified+ "` fileName='"+ fileName+ '\''+ "` currentReadBlock="+ currentReadBlock+ "` currentWriteBlock="+ currentWriteBlock+ "` dirtyBlocks="+ dirtyBlocks+ "` crc="+ crc+ '}';" is 408.,354
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Long Statement,The length of the statement "return ((buffer[blockOffset++] & 0xFF) << 24) | ((buffer[blockOffset++] & 0xFF) << 16) | ((buffer[blockOffset++] & 0xFF) << 8)| (buffer[blockOffset++] & 0xFF);" is 159.,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Long Statement,The length of the statement "return ((readByte(position++) & 0xFF) << 24) | ((readByte(position++) & 0xFF) << 16) | ((readByte(position++) & 0xFF) << 8)| (readByte(position++) & 0xFF);" is 155.,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 4,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 4,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 24,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 16,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 8,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 24,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 16,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 8,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readInt,Magic Number,The method contains a magic number: 0xFF,361
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Long Statement,The length of the statement "final int i1=((buffer[blockOffset++] & 0xff) << 24) | ((buffer[blockOffset++] & 0xff) << 16) | ((buffer[blockOffset++] & 0xff) << 8)| (buffer[blockOffset++] & 0xff);" is 165.,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Long Statement,The length of the statement "final int i2=((buffer[blockOffset++] & 0xff) << 24) | ((buffer[blockOffset++] & 0xff) << 16) | ((buffer[blockOffset++] & 0xff) << 8)| (buffer[blockOffset++] & 0xff);" is 165.,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 8,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 8,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 24,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 16,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 8,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 24,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 16,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 8,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xff,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 32,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xFFFFFFFFL,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 32,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 4,384
+lumongo_lumongo,org.lumongo.storage.lucene,MongoFile,readLong,Magic Number,The method contains a magic number: 0xFFFFFFFFL,384
+lumongo_lumongo,org.lumongo.storage.lucene,DistributedIndexInput,readInt,Magic Number,The method contains a magic number: 4,75
+lumongo_lumongo,org.lumongo.storage.lucene,DistributedIndexInput,readLong,Magic Number,The method contains a magic number: 8,82
+lumongo_lumongo,org.lumongo.storage.lucene,DistributedIndexInput,slice,Complex Conditional,The conditional expression sliceOffset < 0 || length < 0 || sliceOffset + length > this.length is complex.,100
+lumongo_lumongo,org.lumongo.storage.lucene,DistributedIndexInput,slice,Long Statement,The length of the statement "final DistributedIndexInput dii=new DistributedIndexInput(getFullSliceDescription(sliceDescription)`nosqlFile`this.sliceOffset + sliceOffset`length);" is 149.,100
+lumongo_lumongo,org.lumongo.storage.lucene,DistributedDirectory,createTempOutput,Long Statement,The length of the statement "String name=IndexFileNames.segmentFileName(prefix`suffix + "_" + Long.toString(nextTempFileCounter.getAndIncrement()`Character.MAX_RADIX)`"tmp");" is 145.,57
+lumongo_lumongo,org.lumongo.storage.lucene,MongoDirectory,MongoDirectory,Long Parameter List,The method has 5 parameters. ,82
+lumongo_lumongo,org.lumongo.storage.lucene,MongoDirectory,createFile,Long Statement,The length of the statement "TreeSet<Short> fileNumbers=nameToFileMap.values().stream().map(mongoFile -> mongoFile.fileNumber).collect(Collectors.toCollection(TreeSet::new));" is 145.,185
+lumongo_lumongo,org.lumongo.storage.lucene,MongoDirectory,fromDocument,Long Statement,The length of the statement "MongoFile mongoFile=new MongoFile(this`(String)document.get(FILE_NAME)`((Number)document.get(FILE_NUMBER)).shortValue()`((Number)document.get(BLOCK_SIZE)).intValue());" is 167.,224
+lumongo_lumongo,org.lumongo.storage.lucene,MongoBlock,computeBlockKey,Long Statement,The length of the statement "return ((0xFFFF & (long)mongoFile.indexNumber)) << 48 | ((0xFFFF & (long)mongoFile.fileNumber)) << 32 | (blockNumber & 0xffffffffL);" is 132.,76
+lumongo_lumongo,org.lumongo.storage.lucene,MongoBlock,computeBlockKey,Magic Number,The method contains a magic number: 0xFFFF,76
+lumongo_lumongo,org.lumongo.storage.lucene,MongoBlock,computeBlockKey,Magic Number,The method contains a magic number: 48,76
+lumongo_lumongo,org.lumongo.storage.lucene,MongoBlock,computeBlockKey,Magic Number,The method contains a magic number: 0xFFFF,76
+lumongo_lumongo,org.lumongo.storage.lucene,MongoBlock,computeBlockKey,Magic Number,The method contains a magic number: 32,76
+lumongo_lumongo,org.lumongo.storage.lucene,MongoBlock,computeBlockKey,Magic Number,The method contains a magic number: 0xffffffffL,76
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,addDoc,Magic Number,The method contains a magic number: 3,80
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Long Statement,The length of the statement "@Override protected Query getRangeQuery( final String fieldName` final String start` final String end` final boolean startInclusive` final boolean endInclusive) throws ParseException {" is 184.,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 2,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 2,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 5,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 10,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test2Query,Magic Number,The method contains a magic number: 5,133
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,getRangeQuery,Long Parameter List,The method has 5 parameters. ,140
+lumongo_lumongo,org.lumongo.test.storage,BasicStorageTest,test3Api,Empty catch clause,The method has an empty catch block.,200
+lumongo_lumongo,org.lumongo.test.storage,FacetStorageTest,search,Magic Number,The method contains a magic number: 10,83
+lumongo_lumongo,org.lumongo.test.storage,FacetStorageTest,search,Magic Number,The method contains a magic number: 10,83
+lumongo_lumongo,org.lumongo.test.storage,FacetStorageTest,drillDown,Magic Number,The method contains a magic number: 10,111
+lumongo_lumongo,org.lumongo.test.storage,FacetStorageTest,drillDown,Magic Number,The method contains a magic number: 10,111
+lumongo_lumongo,org.lumongo.client.cache,ClientDocumentCache,ClientDocumentCache,Magic Number,The method contains a magic number: 16,28
+lumongo_lumongo,org.lumongo.client.cache,ClientDocumentCache,fetch,Long Statement,The length of the statement "bfr.getFetchResults().stream().filter(FetchResult::hasResultDocument).forEach(fr -> documentCache.put(new DocId(fr.getUniqueId()`fr.getIndexName())`fr));" is 153.,82
+lumongo_lumongo,org.lumongo.client.command,GetTerms,getRequest,Complex Method,Cyclomatic complexity of the method is 9,123
+lumongo_lumongo,org.lumongo.client.command,GetTerms,getRequest,Long Statement,The length of the statement "GetTermsRequest.Builder getTermsRequestBuilder=GetTermsRequest.newBuilder().setIndexName(indexName).setFieldName(fieldName);" is 124.,123
+lumongo_lumongo,org.lumongo.client.command,CursorHelper,getUniqueSortedCursor,Long Statement,The length of the statement "Lumongo.ScoredResult.Builder scoredResultBuilder=Lumongo.ScoredResult.newBuilder(scoredResult).clearScore().clearResultDocument();" is 130.,20
+lumongo_lumongo,org.lumongo.client.command,Query,addFieldSimilarity,Long Statement,The length of the statement "Lumongo.FieldSimilarity fieldSimilarity=Lumongo.FieldSimilarity.newBuilder().setField(field).setSimilarity(similarity).build();" is 127.,181
+lumongo_lumongo,org.lumongo.client.command,Query,addCosineSim,Long Statement,The length of the statement "Lumongo.CosineSimRequest.Builder builder=Lumongo.CosineSimRequest.newBuilder().setField(field).setSimilarity(similarity);" is 121.,198
+lumongo_lumongo,org.lumongo.client.command,Query,addAnalysis,Long Parameter List,The method has 5 parameters. ,365
+lumongo_lumongo,org.lumongo.client.command,Query,getRequest,Complex Method,Cyclomatic complexity of the method is 19,498
+lumongo_lumongo,org.lumongo.client.command,Query,toString,Long Statement,The length of the statement "return "Query{" + "query='" + query + '\''+ "` amount="+ amount+ "` indexes="+ indexes+ "` lastResult="+ lastResult+ "` countRequests="+ countRequests+ "` drillDowns="+ drillDowns+ "` fieldSorts="+ fieldSorts+ "` queryFields="+ queryFields+ "` filterQueries="+ filterQueries+ "` minimumNumberShouldMatch="+ minimumNumberShouldMatch+ "` defaultOperator="+ defaultOperator+ "` resultFetchType="+ resultFetchType+ "` documentFields="+ documentFields+ "` documentMaskedFields="+ documentMaskedFields+ '}';" is 501.,603
+lumongo_lumongo,org.lumongo.client,LumongoRestClient,storeAssociated,Long Parameter List,The method has 5 parameters. ,63
+lumongo_lumongo,org.lumongo.client,LumongoRestClient,storeAssociated,Long Parameter List,The method has 5 parameters. ,71
+lumongo_lumongo,org.lumongo.client,LumongoRestClient,storeAssociated,Long Parameter List,The method has 6 parameters. ,75
+lumongo_lumongo,org.lumongo.client,LumongoRestClient,handlePossibleError,Long Statement,The length of the statement "throw new IOException("Request failed with <" + conn.getResponseCode() + ">: "+ new String(bytes`LumongoConstants.UTF8));" is 121.,113
+lumongo_lumongo,org.lumongo.client,LumongoRestClient,closeStreams,Empty catch clause,The method has an empty catch block.,126
+lumongo_lumongo,org.lumongo.client,LumongoRestClient,closeStreams,Empty catch clause,The method has an empty catch block.,126
+lumongo_lumongo,org.lumongo.client.config,LumongoPoolConfig,LumongoPoolConfig,Long Identifier,The length of the field DEFAULT_MEMBER_UPDATE_INTERVAL is 30.,25
+lumongo_lumongo,org.lumongo.client.config,LumongoPoolConfig,LumongoPoolConfig,Magic Number,The method contains a magic number: 16,25
+lumongo_lumongo,org.lumongo.client.config,LumongoPoolConfig,LumongoPoolConfig,Magic Number,The method contains a magic number: 16,25
+lumongo_lumongo,org.lumongo.client.config,LumongoPoolConfig,addMember,Long Statement,The length of the statement "return addMember(serverAddress`LumongoConstants.DEFAULT_EXTERNAL_SERVICE_PORT`LumongoConstants.DEFAULT_REST_SERVICE_PORT);" is 122.,37
+lumongo_lumongo,org.lumongo.client.config,LumongoPoolConfig,addMember,Long Statement,The length of the statement "LMMember member=LMMember.newBuilder().setServerAddress(serverAddress).setExternalPort(externalPort).setRestPort(restPort).build();" is 130.,45
+lumongo_lumongo,org.lumongo.client.config,IndexConfig,addAnalyzerSetting,Long Parameter List,The method has 5 parameters. ,150
+lumongo_lumongo,org.lumongo.client.config,IndexConfig,getIndexSettings,Complex Method,Cyclomatic complexity of the method is 15,202
+lumongo_lumongo,org.lumongo.client.pool,WorkPool,WorkPool,Magic Number,The method contains a magic number: 10,21
+lumongo_lumongo,org.lumongo.client.pool,WorkPool,WorkPool,Long Statement,The length of the statement "pool=MoreExecutors.listeningDecorator(new ThreadPoolExecutor(threads`threads`0L`TimeUnit.MILLISECONDS`workQueue`new LumongoThreadFactory(poolName)));" is 149.,29
+lumongo_lumongo,org.lumongo.client.pool,LumongoPool,LumongoPool,Long Statement,The length of the statement "KeyedPoolableObjectFactory<LMMember`LumongoConnection> factory=new KeyedPoolableObjectFactory<LMMember`LumongoConnection>(){" is 124.,59
+lumongo_lumongo,org.lumongo.client.pool,LumongoPool,LumongoPool,Magic Number,The method contains a magic number: 100,59
+lumongo_lumongo,org.lumongo.client.pool,LumongoPool,execute,Empty catch clause,The method has an empty catch block.,135
+lumongo_lumongo,org.lumongo.client.pool,LumongoBaseWorkPool,LumongoBaseWorkPool,Long Statement,The length of the statement "this(new LumongoPool(lumongoPoolConfig)`lumongoPoolConfig.getPoolName() != null ? lumongoPoolConfig.getPoolName() : "lumongoPool-" + counter.getAndIncrement());" is 160.,19
+lumongo_lumongo,org.lumongo.client.pool,LumongoBaseWorkPool,LumongoBaseWorkPool,Magic Number,The method contains a magic number: 10,28
+lumongo_lumongo,org.lumongo.client.pool,LumongoConnection,open,Long Statement,The length of the statement "ManagedChannelBuilder<?> managedChannelBuilder=ManagedChannelBuilder.forAddress(member.getServerAddress()`member.getExternalPort()).maxInboundMessageSize(256 * 1024 * 1024).usePlaintext(true);" is 192.,25
+lumongo_lumongo,org.lumongo.client.pool,LumongoConnection,open,Magic Number,The method contains a magic number: 256,25
+lumongo_lumongo,org.lumongo.client.pool,LumongoConnection,open,Magic Number,The method contains a magic number: 1024,25
+lumongo_lumongo,org.lumongo.client.pool,LumongoConnection,open,Magic Number,The method contains a magic number: 1024,25
+lumongo_lumongo,org.lumongo.client.pool,LumongoConnection,close,Magic Number,The method contains a magic number: 15,57
+lumongo_lumongo,org.lumongo.fields,Mapper,Mapper,Complex Method,Cyclomatic complexity of the method is 14,42
+lumongo_lumongo,org.lumongo.fields,Mapper,Mapper,Long Statement,The length of the statement "throw new RuntimeException("Cannot use AsField with UniqueId on field <" + f.getName() + "> for class <"+ clazz.getSimpleName()+ ">. Unique id always stored as _id.");" is 167.,42
+lumongo_lumongo,org.lumongo.fields,Mapper,Mapper,Long Statement,The length of the statement "throw new RuntimeException("Cannot use Embedded with UniqueId with on field <" + f.getName() + "> for class <"+ clazz.getSimpleName()+ ">");" is 140.,42
+lumongo_lumongo,org.lumongo.fields,Mapper,Mapper,Long Statement,The length of the statement "throw new RuntimeException("DefaultSearch must be on Indexed field <" + f.getName() + "> for class <"+ clazz.getSimpleName()+ ">");" is 131.,42
+lumongo_lumongo,org.lumongo.fields,FieldConfigMapper,setupField,Complex Conditional,The conditional expression f.isAnnotationPresent(IndexedFields.class) || f.isAnnotationPresent(Indexed.class) || f.isAnnotationPresent(Faceted.class)|| f.isAnnotationPresent(UniqueId.class)|| f.isAnnotationPresent(DefaultSearch.class) is complex.,47
+lumongo_lumongo,org.lumongo.fields,FieldConfigMapper,setupField,Complex Method,Cyclomatic complexity of the method is 24,47
+lumongo_lumongo,org.lumongo.fields,FieldConfigMapper,setupField,Long Statement,The length of the statement "if (f.isAnnotationPresent(IndexedFields.class) || f.isAnnotationPresent(Indexed.class) || f.isAnnotationPresent(Faceted.class)|| f.isAnnotationPresent(UniqueId.class)|| f.isAnnotationPresent(DefaultSearch.class)) {" is 214.,47
+lumongo_lumongo,org.lumongo.fields,FieldConfigMapper,setupField,Long Statement,The length of the statement "throw new RuntimeException("Cannot use Indexed` Faceted` UniqueId` DefaultSearch on embedded field <" + f.getName() + "> for class <"+ clazz.getSimpleName()+ ">");" is 163.,47
+lumongo_lumongo,org.lumongo.fields,SavedFieldInfo,populate,Complex Method,Cyclomatic complexity of the method is 8,32
+lumongo_lumongo,org.lumongo.fields,SavedFieldInfo,populate,Long Statement,The length of the statement "throw new Exception("Cannot assign multiple values <" + valueList + "> to field <"+ field.getName()+ "> with type <"+ field.getType()+ "> because it is not a list.");" is 166.,32
+lumongo_lumongo,org.lumongo.fields,SavedFieldsMapper,validate,Complex Conditional,The conditional expression f.isAnnotationPresent(IndexedFields.class) || f.isAnnotationPresent(Indexed.class) || f.isAnnotationPresent(Faceted.class)|| f.isAnnotationPresent(UniqueId.class)|| f.isAnnotationPresent(DefaultSearch.class)|| f.isAnnotationPresent(Embedded.class) is complex.,54
+lumongo_lumongo,org.lumongo.fields,SavedFieldsMapper,validate,Long Statement,The length of the statement "if (f.isAnnotationPresent(IndexedFields.class) || f.isAnnotationPresent(Indexed.class) || f.isAnnotationPresent(Faceted.class)|| f.isAnnotationPresent(UniqueId.class)|| f.isAnnotationPresent(DefaultSearch.class)|| f.isAnnotationPresent(Embedded.class)) {" is 254.,54
+lumongo_lumongo,org.lumongo.fields,SavedFieldsMapper,validate,Long Statement,The length of the statement "throw new RuntimeException("Cannot use NotSaved with Indexed` Faceted` UniqueId` DefaultSearch` or Embedded on field <" + f.getName() + "> for class <"+ clazz.getSimpleName()+ ">");" is 181.,54
+lumongo_lumongo,org.lumongo.fields,FactedFieldInfo,build,Complex Method,Cyclomatic complexity of the method is 8,26
+lumongo_lumongo,org.lumongo.fields,SavedEmbeddedFieldInfo,populate,Complex Method,Cyclomatic complexity of the method is 9,69
+lumongo_lumongo,org.lumongo.fields,SavedEmbeddedFieldInfo,populate,Long Statement,The length of the statement "throw new Exception("Cannot assign multiple values <" + valueList + "> to field <"+ field.getName()+ "> with type <"+ field.getType()+ "> because it is not a list.");" is 166.,69
+lumongo_lumongo,org.lumongo.test.client,Person,toString,Long Statement,The length of the statement "return "Person{" + "id='" + id + '\''+ "` firstName='"+ firstName+ '\''+ "` lastName='"+ lastName+ '\''+ "` address='"+ address+ '\''+ "` phoneNumber="+ phoneNumber+ '}';" is 170.,35
+lumongo_lumongo,org.lumongo.util.cache,DocId,hashCode,Magic Number,The method contains a magic number: 31,20
+lumongo_lumongo,org.lumongo.util.cache,DocId,equals,Complex Method,Cyclomatic complexity of the method is 10,29
+lumongo_lumongo,org.lumongo.cluster.message,InternalServiceGrpc,getServiceDescriptor,Long Statement,The length of the statement "serviceDescriptor=result=io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME).setSchemaDescriptor(new InternalServiceDescriptorSupplier()).addMethod(METHOD_QUERY).addMethod(METHOD_STORE).addMethod(METHOD_FETCH).addMethod(METHOD_DELETE).addMethod(METHOD_GET_NUMBER_OF_DOCS).addMethod(METHOD_CLEAR).addMethod(METHOD_OPTIMIZE).addMethod(METHOD_GET_FIELD_NAMES).addMethod(METHOD_GET_TERMS).build();" is 392.,650
+lumongo_lumongo,org.lumongo.cluster.message,ExternalServiceGrpc,getServiceDescriptor,Long Statement,The length of the statement "serviceDescriptor=result=io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME).setSchemaDescriptor(new ExternalServiceDescriptorSupplier()).addMethod(METHOD_QUERY).addMethod(METHOD_STORE).addMethod(METHOD_DELETE).addMethod(METHOD_BATCH_DELETE).addMethod(METHOD_FETCH).addMethod(METHOD_BATCH_FETCH).addMethod(METHOD_CREATE_INDEX).addMethod(METHOD_CHANGE_INDEX).addMethod(METHOD_DELETE_INDEX).addMethod(METHOD_GET_INDEXES).addMethod(METHOD_GET_NUMBER_OF_DOCS).addMethod(METHOD_CLEAR).addMethod(METHOD_OPTIMIZE).addMethod(METHOD_GET_FIELD_NAMES).addMethod(METHOD_GET_TERMS).addMethod(METHOD_GET_MEMBERS).addMethod(METHOD_GET_INDEX_CONFIG).build();" is 641.,1082
+lumongo_lumongo,org.lumongo.cluster.message,Lumongo,forNumber,Magic Number,The method contains a magic number: 2,62
+lumongo_lumongo,org.lumongo.cluster.message,Lumongo,forNumber,Magic Number,The method contains a magic number: 3,62
+lumongo_lumongo,org.lumongo.cluster.message,Lumongo,forNumber,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@77fb4b1c,62
+lumongo_lumongo,org.lumongo.example.medline,MedlineJAXBReader,handleRecord,Complex Conditional,The conditional expression firstName != null && lastName != null && suffix != null is complex.,33
+lumongo_lumongo,org.lumongo.example.medline,MedlineJAXBReader,handleRecord,Complex Method,Cyclomatic complexity of the method is 46,33
+lumongo_lumongo,org.lumongo.example.medline,MedlineJAXBReader,handleRecord,Long Identifier,The length of the identifier startPageOrEndPageOrMedlinePgn is 30.,33
+lumongo_lumongo,org.lumongo.example.medline,MedlineJAXBReader,handleRecord,Long Method,The method has 189 lines of code.,33
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Complex Method,Cyclomatic complexity of the method is 15,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Long Method,The method has 172 lines of code.,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Long Statement,The length of the statement "for ( String term : Arrays.asList("cancer"`"molecular"`"biology"`"kinases"`"DNA"`"replication"`"regulators"`"neurons"`"animals"`"depression"`"serotonin"`"rats"`"male"`"university"`"nicotine"`"France"`"United States")) {" is 219.,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 10,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 10,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 10,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 4,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 10,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 4,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 10,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 4,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 4,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 10,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 15,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 10,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 15,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 20000,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 1000,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 1000,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 100,19
+lumongo_lumongo,org.lumongo.example.medline,QueryTest,main,Magic Number,The method contains a magic number: 1000,19
+lumongo_lumongo,org.lumongo.example.medline,MedlineDocument,toString,Long Statement,The length of the statement "return "MedlineDocument{" + "pmid='" + pmid + '\''+ "` title='"+ title+ '\''+ "` journalTitle='"+ journalTitle+ '\''+ "` journalIso='"+ journalIso+ '\''+ "` abstractText='"+ abstractText+ '\''+ "` publicationDate="+ publicationDate+ "` pubYear='"+ pubYear+ '\''+ "` journalVolume='"+ journalVolume+ '\''+ "` journalIssue='"+ journalIssue+ '\''+ "` journalCountry='"+ journalCountry+ '\''+ "` issn='"+ issn+ '\''+ "` authors="+ authors+ "` pagination='"+ pagination+ '\''+ "` citation='"+ citation+ '\''+ '}';" is 508.,202
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineLumongo,main,Long Statement,The length of the statement "System.out.println(" a single active lumongo server is enough` cluster membership will be updated when a connection is established");" is 133.,30
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineLumongo,main,Long Statement,The length of the statement "@SuppressWarnings("unused") CreateOrUpdateIndexResult createOrUpdateResult=lumongoWorkPool.createOrUpdateIndex(mapper.createOrUpdateIndex());" is 141.,30
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineLumongo,main,Magic Number,The method contains a magic number: 2,30
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineLumongo,main,Magic Number,The method contains a magic number: 2,30
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineLumongo,main,Magic Number,The method contains a magic number: 8,30
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineLumongo,main,Magic Number,The method contains a magic number: 50000,30
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineLumongo,handleMedlineDocument,Magic Number,The method contains a magic number: 50000,66
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineSolr,main,Magic Number,The method contains a magic number: 2,24
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineSolr,main,Magic Number,The method contains a magic number: 2,24
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineSolr,main,Magic Number,The method contains a magic number: 8,24
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineSolr,main,Magic Number,The method contains a magic number: 50000,24
+lumongo_lumongo,org.lumongo.example.medline,IndexMedlineSolr,handleMedlineDocument,Magic Number,The method contains a magic number: 50000,49
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,main,Long Statement,The length of the statement "indexConfig.addFieldConfig(FieldConfigBuilder.create(TEXT_CONTENTS`FieldType.STRING).indexAs(DefaultAnalyzers.STANDARD));" is 121.,52
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,main,Magic Number,The method contains a magic number: 4,52
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,main,Magic Number,The method contains a magic number: 2,52
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,main,Magic Number,The method contains a magic number: 3,52
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,main,Magic Number,The method contains a magic number: 16,52
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,main,Magic Number,The method contains a magic number: 16,52
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,handleFile,Complex Method,Cyclomatic complexity of the method is 8,129
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,handleFile,Empty catch clause,The method has an empty catch block.,129
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,handleFile,Magic Number,The method contains a magic number: 1024,129
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,handleFile,Magic Number,The method contains a magic number: 16,129
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,handleFile,Magic Number,The method contains a magic number: 5000,129
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,getBytes,Magic Number,The method contains a magic number: 1024,215
+lumongo_lumongo,org.lumongo.example.commoncrawl,IndexCommonCrawl,getBytes,Magic Number,The method contains a magic number: 16,215
+lumongo_lumongo,org.lumongo.example.wikipedia,IndexWikipedia,main,Long Statement,The length of the statement "System.out.println(" download from http://dumps.wikimedia.org/enwiki/20120802/enwiki-20120802-pages-articles-multistream.xml.bz2");" is 131.,38
+lumongo_lumongo,org.lumongo.example.wikipedia,IndexWikipedia,main,Long Statement,The length of the statement "System.out.println(" a single active lumongo server is enough` cluster membership will be updated when a connection is established");" is 133.,38
+lumongo_lumongo,org.lumongo.example.wikipedia,IndexWikipedia,main,Long Statement,The length of the statement "@SuppressWarnings("unused") CreateOrUpdateIndexResult createOrUpdateIndexResult=lumongoWorkPool.createOrUpdateIndex(mapper.createOrUpdateIndex());" is 146.,38
+lumongo_lumongo,org.lumongo.example.wikipedia,IndexWikipedia,main,Magic Number,The method contains a magic number: 2,38
+lumongo_lumongo,org.lumongo.example.wikipedia,IndexWikipedia,main,Magic Number,The method contains a magic number: 2,38
+lumongo_lumongo,org.lumongo.example.wikipedia,IndexWikipedia,main,Magic Number,The method contains a magic number: 5000,38
+lumongo_lumongo,org.lumongo.example.wikipedia,IndexWikipedia,handle,Magic Number,The method contains a magic number: 5000,77
+lumongo_lumongo,org.lumongo.example.wikipedia,SearchWikipedia,main,Magic Number,The method contains a magic number: 2000,18
+lumongo_lumongo,org.lumongo.example.wikipedia,SearchWikipedia,main,Magic Number,The method contains a magic number: 10,18
+lumongo_lumongo,org.lumongo.example.twitter,TwitterIndexer,main,Magic Number,The method contains a magic number: 2,13
+lumongo_lumongo,org.lumongo.example.twitter,TwitterIndexer,main,Magic Number,The method contains a magic number: 40.68757493,13
+lumongo_lumongo,org.lumongo.example.twitter,TwitterIndexer,main,Magic Number,The method contains a magic number: 76.21184093,13

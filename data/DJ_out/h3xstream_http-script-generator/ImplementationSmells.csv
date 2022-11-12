@@ -1,0 +1,67 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Complex Method,Cyclomatic complexity of the method is 13,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Long Statement,The length of the statement "Log.debug(String.format("Parameter: type='%s' name='%s' value='%s[..]'"`paramTypeToString(param.getType())`param.getName()`param.getValue().substring(0`Math.min(param.getValue().length()`15))));" is 194.,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Long Statement,The length of the statement "multiPartParameters.add(new MultiPartParameter(paramBody.getName()`paramBody.getValue()`guessContentType(param.getValue())`param.getValue()));" is 142.,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Long Statement,The length of the statement "System.arraycopy(requestBytes`requestInfo.getBodyOffset()`requestBodyBytes`0`requestBytes.length - requestInfo.getBodyOffset());" is 128.,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Long Statement,The length of the statement "return new HttpRequestInfo(requestInfo.getMethod()`url.toString()`paramsGet`paramsPost`requestBodyString`headers`multiPartParameters);" is 134.,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Magic Number,The method contains a magic number: 2,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Magic Number,The method contains a magic number: 2,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,buildSingleRequestInfo,Magic Number,The method contains a magic number: 15,29
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,paramTypeToString,Complex Method,Cyclomatic complexity of the method is 8,114
+h3xstream_http-script-generator,burp,BurpHttpRequestMapper,paramTypeToString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@58914623,114
+h3xstream_http-script-generator,burp,IExtensionHelpers,indexOf,Long Parameter List,The method has 5 parameters. ,191
+h3xstream_http-script-generator,burp,IBurpExtenderCallbacks,sendToRepeater,Long Parameter List,The method has 5 parameters. ,337
+h3xstream_http-script-generator,burp,IBurpExtenderCallbacks,sendToIntruder,Long Parameter List,The method has 5 parameters. ,374
+h3xstream_http-script-generator,burp,IBurpExtenderCallbacks,doActiveScan,Long Parameter List,The method has 5 parameters. ,425
+h3xstream_http-script-generator,burp,IBurpExtenderCallbacks,doPassiveScan,Long Parameter List,The method has 5 parameters. ,449
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorController,updateLanguage,Long Statement,The length of the statement "String codeGenerated=new CodeTemplateBuilder().request(requests).templatePath(newLanguage.getTemplate()).displaySettings(latestDisplaySettings).build();" is 152.,28
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorController,updateDisplaySettings,Long Statement,The length of the statement "String codeGenerated=new CodeTemplateBuilder().request(requests).templatePath(latestLanguage.getTemplate()).displaySettings(newDisplay).build();" is 144.,40
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,ScriptFileChooser,saveScriptToFile,Long Parameter List,The method has 5 parameters. ,19
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,ScriptFileChooser,saveScriptToFile,Long Statement,The length of the statement "fileChooser.setSelectedFile(new File(currentDirectory`requests.get(0).getHostname().replace('.'`'-') + "_http_script." + lang.getExtension()));" is 143.,19
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorFrame,GeneratorFrame,Magic Number,The method contains a magic number: 800,50
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorFrame,GeneratorFrame,Magic Number,The method contains a magic number: 450,50
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorFrame,centerWindow,Magic Number,The method contains a magic number: 2,78
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorFrame,centerWindow,Magic Number,The method contains a magic number: 2,78
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorFrame,buildCodeSection,Magic Number,The method contains a magic number: 20,92
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorFrame,buildCodeSection,Magic Number,The method contains a magic number: 60,92
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,GeneratorFrame,inputStreamToBytes,Magic Number,The method contains a magic number: 2048,178
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,IntegrationGuiTest,validateLanguageOrder,Magic Number,The method contains a magic number: 2,52
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,IntegrationGuiTest,validateLanguageOrder,Magic Number,The method contains a magic number: 3,52
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,IntegrationGuiTest,languageSelectionChange,Magic Number,The method contains a magic number: 2,61
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,IntegrationGuiTest,languageSelectionChange,Magic Number,The method contains a magic number: 3,61
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,IntegrationGuiTest,testSendToCopyPasteAfterLanguageSelectionChange,Magic Number,The method contains a magic number: 2,92
+h3xstream_http-script-generator,com.h3xstream.scriptgen.gui,IntegrationGuiTest,testSaveToFile,Long Statement,The length of the statement "window.fileChooser(ScriptFileChooser.FILE_CHOOSER).fileNameTextBox().enterText("somescript").pressKey(KeyEvent.VK_ENTER);" is 121.,107
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,HttpRequestInfo,Long Parameter List,The method has 7 parameters. ,35
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,HttpRequestInfo,Long Statement,The length of the statement "boolean isDefaultPort=u.getPort() == -1 || (u.getPort() == 443 && u.getProtocol().equals("https")) || (u.getPort() == 80 && u.getProtocol().equals("http"));" is 156.,35
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,HttpRequestInfo,Magic Number,The method contains a magic number: 443,35
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,HttpRequestInfo,Magic Number,The method contains a magic number: 80,35
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,extractHeaders,Complex Method,Cyclomatic complexity of the method is 11,67
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,extractHeaders,Long Statement,The length of the statement "if (entry.getKey().toLowerCase().equals("content-type") && entry.getValue().toLowerCase().startsWith("multipart/form-data;")) {" is 127.,67
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,extractHeaders,Magic Number,The method contains a magic number: 2,67
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,extractHeaders,Magic Number,The method contains a magic number: 2,67
+h3xstream_http-script-generator,com.h3xstream.scriptgen.model,HttpRequestInfo,extractHeaders,Magic Number,The method contains a magic number: 2,67
+h3xstream_http-script-generator,com.h3xstream.scriptgen,LanguageOption,LanguageOption,Long Parameter List,The method has 5 parameters. ,33
+h3xstream_http-script-generator,com.h3xstream.scriptgen,HttpRequestInfoFixtures,getBrokenRequest,Long Statement,The length of the statement "return new HttpRequestInfo("SPECIAL\"')(\\"`"http://httpbin.org/brokentest=1${php}#{ruby}\"')(aaaaaaaa\\"`getParams`null`null`headers`multipartParams);" is 151.,48
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,XmlUtil,escapeValue,Complex Conditional,The conditional expression characterWithSpecialMeaningInXML || unicodeButNotAscii || controlCharacter is complex.,5
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,XmlUtil,escapeValue,Long Identifier,The length of the identifier characterWithSpecialMeaningInXML is 32.,5
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,XmlUtil,escapeValue,Magic Number,The method contains a magic number: 32,5
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,XmlUtil,escapeValue,Magic Number,The method contains a magic number: 126,5
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,buildMap,Long Parameter List,The method has 5 parameters. ,27
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,genericString,Complex Method,Cyclomatic complexity of the method is 8,40
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,genericString,Magic Number,The method contains a magic number: 32,40
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,genericString,Magic Number,The method contains a magic number: 126,40
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,pythonDictMultipart,Long Statement,The length of the statement "buffer.append(String.format("('%s'` ('%s'` \"%s\"` '%s'))"`p.getName()`p.getFileName()`pythonStr(p.getValue())`p.getContentType()));" is 132.,87
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,rubyDictMultipart,Long Statement,The length of the statement "buffer.append(String.format("\"%s\" => UploadIO.new(File.new(\"./%s\")` \"%s\"` \"%s\")"`p.getName()`p.getFileName()`p.getContentType()`p.getFileName()));" is 154.,117
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,jsUrlEncode,Complex Conditional,The conditional expression !(Character.isAlphabetic(value.charAt(i)) || Character.isDigit(value.charAt(i)) || CHAR_NO_URL_ENCODE.contains(value.charAt(i))) is complex.,245
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,jsUrlEncode,Long Statement,The length of the statement "if (!(Character.isAlphabetic(value.charAt(i)) || Character.isDigit(value.charAt(i)) || CHAR_NO_URL_ENCODE.contains(value.charAt(i)))) {" is 135.,245
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,TemplateUtil,hasSpecialCharsPyRequest,Long Identifier,The length of the field CHAR_FALL_BACK_RAW_PY_REQUESTS is 30.,275
+h3xstream_http-script-generator,com.h3xstream.scriptgen.template,CodeTemplateBuilderTest,basicTemplate,Long Statement,The length of the statement "String output=new CodeTemplateBuilder().request(Arrays.asList(req1)).templatePath("templates/basic_template.tpl").build();" is 122.,17
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,buildRequestInfo,Complex Method,Cyclomatic complexity of the method is 10,45
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,buildRequestInfo,Long Identifier,The length of the field PATTERN_MULTIPART_FORM_BOUNDARY is 31.,45
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,buildRequestInfo,Long Statement,The length of the statement "parseMultiPartParameter(httpMessage.getRequestBody().getBytes()`multiPartBoundary.getBytes()`multiPartParameters`paramsPost);" is 125.,45
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,buildRequestInfo,Magic Number,The method contains a magic number: 2,45
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,buildRequestInfo,Magic Number,The method contains a magic number: 2,45
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,parseMultiPartParameter,Empty catch clause,The method has an empty catch block.,102
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,parseMultiPartParameter,Empty catch clause,The method has an empty catch block.,102
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,parseMultiPartParameter,Long Identifier,The length of the field PATTERN_MULTIPART_PARAM_FILENAME is 32.,102
+h3xstream_http-script-generator,org.zaproxy.zap.extension.scriptgen,ZapHttpRequestMapper,parseMultiPartParameter,Long Identifier,The length of the field PATTERN_MULTIPART_PARAM_CONTENT_TYPE is 36.,102

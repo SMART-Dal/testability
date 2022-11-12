@@ -1,0 +1,56 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,AzureTableConfiguration,getPartitioner,Long Statement,The length of the statement "Class<? extends AzureTablePartitioner> partitionerClass=job.getClass(Keys.PARTITIONER_CLASS.getKey()`DefaultTablePartitioner.class`AzureTablePartitioner.class);" is 160.,56
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,AzureTableConfiguration,createTableClient,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Invalid value specified for %s: %s"`Keys.ACCOUNT_URI`accountUriString)`ex);" is 125.,82
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,AzureTableRecordReader,getProgress,Magic Number,The method contains a magic number: 0.5f,93
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,TestDefaultTablePartitioner,testGetAllPartitionKeys,Magic Number,The method contains a magic number: 3,24
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,TestDefaultTablePartitioner,testGetAllPartitionKeys,Magic Number,The method contains a magic number: 2,24
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,TestUtils,getCreateAzureTableSql,Long Statement,The length of the statement "return "CREATE EXTERNAL TABLE " + hiveTableName + " ("+ columnsDefinition+ ") "+ " STORED BY 'com.microsoft.hadoop.azure.hive.AzureTableHiveStorageHandler'"+ " TBLPROPERTIES("+ "\"azure.table.name\"=\""+ table.getName()+ "\"`"+ "\"azure.table.account.uri\"=\""+ getAccountUri()+ "\"`"+ "\"azure.table.storage.key\"=\""+ getAccountKey()+ "\"`"+ "\"azure.table.partitioner.class\"=\""+ partitioner+ "\")";" is 403.,88
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,TestAzureTableInputFormat,testGetSplits,Magic Number,The method contains a magic number: 3,29
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure,TestAzureTableInputFormat,testGetSplits,Magic Number,The method contains a magic number: 2,29
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.examples,SixCounter,populate,Magic Number,The method contains a magic number: 100,40
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.examples,SixCounter,run,Magic Number,The method contains a magic number: 2,99
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.examples,SixCounter,run,Magic Number,The method contains a magic number: 3,99
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.examples,SixCounter,createTableReference,Magic Number,The method contains a magic number: 2,167
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,AzureEntitySerDe,initialize,Long Statement,The length of the statement "throw new IllegalArgumentException("Column names list: " + columnNames + " doesn't match column types list: "+ columnTypes);" is 124.,23
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,AzureEntitySerDe,initialize,Long Statement,The length of the statement "fields.add(new PrimitiveField(columnNames.get(c)`EntityPropertyInspector.getInspectorForType(columnTypes.get(c).getTypeName())`requireFieldExists));" is 148.,23
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,PrimitiveField,getData,Complex Method,Cyclomatic complexity of the method is 9,40
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,PrimitiveField,getData,Long Statement,The length of the statement "throw new IllegalArgumentException("No property found with name " + name + ". Properties found: "+ Joiner.on('`').join(entity.getProperties().keySet()));" is 153.,40
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Long Statement,The length of the statement "assertEquals(new Timestamp(dateToStore.getTime().getTime())`inspector.getStructFieldData(entity`inspector.getStructFieldRef("Timestamp")));" is 139.,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 3,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 123L,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 32.5,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 1980,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 10,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 3,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 123L,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testReadSimpleEntity,Magic Number,The method contains a magic number: 32.5,20
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testPropertyNotFound,Magic Number,The method contains a magic number: 7,73
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureEntitySerDe,testPropertyNotFound,Magic Number,The method contains a magic number: 7,73
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureTableHiveStorageHandler,testSelectStar,Magic Number,The method contains a magic number: 5,43
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureTableHiveStorageHandler,testSelectStar,Magic Number,The method contains a magic number: 1980,43
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureTableHiveStorageHandler,testSelectStar,Magic Number,The method contains a magic number: 10,43
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureTableHiveStorageHandler,testSelectStar,Magic Number,The method contains a magic number: 5,43
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.hive,TestAzureTableHiveStorageHandler,testSelectStar,Magic Number,The method contains a magic number: 1980,43
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.oldinterface,OldAzureTableReader,getProgress,Magic Number,The method contains a magic number: 0.5f,63
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,AzureDiagnosticsLogsPartitioner,getPartitionKeysAtIntervals,Long Statement,The length of the statement "getNextKeyQuery=TableQuery.from(DynamicTableEntity.class).select(new String[0]).where("PartitionKey ge '" + nextPartitionKey + "'").take(1);" is 140.,63
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,AzureDiagnosticsLogsPartitioner,getPartitionKeysAtIntervals,Magic Number,The method contains a magic number: 10000000,63
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,AzureDiagnosticsLogsPartitioner,getPartitionKeysAtIntervals,Magic Number,The method contains a magic number: 10000000,63
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,PartitionKeyRangeInputSplit,getQuery,Long Statement,The length of the statement "clauses.add(TableQuery.generateFilterCondition("PartitionKey"`QueryComparisons.GREATER_THAN_OR_EQUAL`partitionKeyStart));" is 121.,45
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,getPartitionKeyForMinute,Magic Number,The method contains a magic number: 635454394200000000L,28
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,getPartitionKeyForMinute,Magic Number,The method contains a magic number: 60L,28
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,getPartitionKeyForMinute,Magic Number,The method contains a magic number: 10,28
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,getPartitionKeyForMinute,Magic Number,The method contains a magic number: 1000,28
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,getPartitionKeyForMinute,Magic Number,The method contains a magic number: 1000,28
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testGetPartitionKeysAtIntervals,Magic Number,The method contains a magic number: 40,35
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testGetPartitionKeysAtIntervals,Magic Number,The method contains a magic number: 2,35
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testGetPartitionKeysAtIntervals,Magic Number,The method contains a magic number: 40,35
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Long Statement,The length of the statement "connection.createStatement().execute(getCreateAzureTableSql(t`"WadSelectCountStarTest"`"partitionkey string` rowkey string"`AzureDiagnosticsLogsPartitioner.class.getName()));" is 174.,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 5,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 10,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 5,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 55,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 200,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 210,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 2,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 3,69
+mooso_azure-tables-hadoop,com.microsoft.hadoop.azure.partitioners,TestAzureDiagnosticsLogsPartitioner,testSelectCountStar,Magic Number,The method contains a magic number: 75,69

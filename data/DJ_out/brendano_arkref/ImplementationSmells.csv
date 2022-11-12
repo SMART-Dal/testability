@@ -1,0 +1,513 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+brendano_arkref,arkref.analysis,WriteEntityXml,writeTaggedDocument,Complex Method,Cyclomatic complexity of the method is 8,56
+brendano_arkref,arkref.analysis,Types,toString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7b23ed99,56
+brendano_arkref,arkref.analysis,Types,personhoodEquals,Complex Conditional,The conditional expression (x == null || x == Personhood.NotPerson || x == Personhood.MaybePerson) && (y == null || y == Personhood.NotPerson || y == Personhood.MaybePerson) is complex.,87
+brendano_arkref,arkref.analysis,Types,personhoodEquals,Complex Conditional,The conditional expression (x == Personhood.Person || x == Personhood.MaybePerson) && (y == Personhood.Person || y == Personhood.MaybePerson) is complex.,87
+brendano_arkref,arkref.analysis,Types,personhoodEquals,Long Statement,The length of the statement "if ((x == null || x == Personhood.NotPerson || x == Personhood.MaybePerson) && (y == null || y == Personhood.NotPerson || y == Personhood.MaybePerson)) {" is 153.,87
+brendano_arkref,arkref.analysis,Types,personhoodEquals,Long Statement,The length of the statement "if ((x == Personhood.Person || x == Personhood.MaybePerson) && (y == Personhood.Person || y == Personhood.MaybePerson)) {" is 121.,87
+brendano_arkref,arkref.analysis,Types,checkPronominalMatch,Long Statement,The length of the statement "return personhoodEquals(personhood(pronoun)`personhood(cand)) && sexistGenderEquals(gender(mention)`gender(cand)) && relaxedEquals(number(mention)`number(cand))&& true;" is 168.,103
+brendano_arkref,arkref.analysis,Types,gender,Complex Conditional,The conditional expression !neType.equalsIgnoreCase("PERSON") && !neType.equalsIgnoreCase("noun.person") && !neType.equals("O") is complex.,153
+brendano_arkref,arkref.analysis,Types,genderByFirstNamesOrTitles,Complex Conditional,The conditional expression genderS.equals("Fem") || leaf.value().equals("Mrs.") || leaf.value().equals("Ms.") is complex.,182
+brendano_arkref,arkref.analysis,Types,personhood,Complex Conditional,The conditional expression t.equalsIgnoreCase("PERSON") || t.equalsIgnoreCase("noun.person") || genderByFirstNamesOrTitles(m) != null || personhoodByTitle(m) == Personhood.Person is complex.,238
+brendano_arkref,arkref.analysis,Types,personhood,Long Statement,The length of the statement "if (t.equalsIgnoreCase("PERSON") || t.equalsIgnoreCase("noun.person") || genderByFirstNamesOrTitles(m) != null || personhoodByTitle(m) == Personhood.Person) return Personhood.Person;" is 182.,238
+brendano_arkref,arkref.analysis,Types,personhood,Long Statement,The length of the statement "if (pronoun.matches("^(me|he|him|his|she|her|hers|we|us|our|ours|i|my|mine|you|yours|himself|herself|ourselves|myself)$")) {" is 124.,256
+brendano_arkref,arkref.analysis,Resolve,go,Complex Conditional,The conditional expression hadAChance && m.aceMention != null && !Types.isPronominal(m) is complex.,23
+brendano_arkref,arkref.analysis,Resolve,go,Complex Method,Cyclomatic complexity of the method is 10,23
+brendano_arkref,arkref.analysis,Resolve,reportResolution,Long Statement,The length of the statement "U.pf("%sresolved %-15s: M%-2d -> M%-2d %20s -> %-20s\n"`eval`reason`mention.ID()`ref.ID()`AnalysisUtilities.abbrevTree(mention.node())`AnalysisUtilities.abbrevTree(ref.node()));" is 177.,68
+brendano_arkref,arkref.analysis,Resolve,findAntecedentInRoleAppositiveConstruction,Complex Method,Cyclomatic complexity of the method is 8,140
+brendano_arkref,arkref.analysis,Resolve,findAntecendentInPredicateNominativeConstruction,Long Statement,The length of the statement "TregexPattern pat=TregexPatternFactory.getPattern("S < NP=np1 <+(VP) (VP < (/^VB.*/ < be|is|was|were|are|being|been) < NP=np2)");" is 129.,189
+brendano_arkref,arkref.analysis,Resolve,inAppositiveConstruction,Complex Method,Cyclomatic complexity of the method is 8,216
+brendano_arkref,arkref.analysis,Resolve,inAppositiveConstruction,Magic Number,The method contains a magic number: 3,216
+brendano_arkref,arkref.analysis,Resolve,inAppositiveConstruction,Magic Number,The method contains a magic number: 2,216
+brendano_arkref,arkref.analysis,Resolve,resolvePronoun,Complex Method,Cyclomatic complexity of the method is 13,265
+brendano_arkref,arkref.analysis,Resolve,resolveOther,Complex Method,Cyclomatic complexity of the method is 16,323
+brendano_arkref,arkref.analysis,Resolve,resolveOther,Long Statement,The length of the statement "U.pf("SEMANTICS ORACLE %-5s\t%s\t%s\n"`match ? "MATCH" : "DIFF"`Strings.normalizeWhitespace(mention.aceMention.head.charseq.text)`Strings.normalizeWhitespace(cand.aceMention.head.charseq.text));" is 194.,323
+brendano_arkref,arkref.analysis,Resolve,substringMatch,Long Statement,The length of the statement "if (mention.node().headPreTerminal(AnalysisUtilities.getInstance().getHeadFinder()).label().toString().indexOf("NNP") != 0 && cand.node().headPreTerminal(AnalysisUtilities.getInstance().getHeadFinder()).label().toString().indexOf("NNP") != 0) {" is 244.,413
+brendano_arkref,arkref.analysis,Resolve,substringMatch,Magic Number,The method contains a magic number: 4,413
+brendano_arkref,arkref.analysis,Sem,areCompatible,Magic Number,The method contains a magic number: 0.30,24
+brendano_arkref,arkref.analysis,SyntacticPaths,findBestCandidateByShortestPath,Magic Number,The method contains a magic number: 1000000,21
+brendano_arkref,arkref.analysis,SyntacticPaths,computePathLength,Magic Number,The method contains a magic number: 1000,74
+brendano_arkref,arkref.analysis,ARKref,main,Complex Conditional,The conditional expression !Opts.stdin && (Opts.input == null || Opts.input.length == 0) is complex.,48
+brendano_arkref,arkref.analysis,ARKref,main,Complex Method,Cyclomatic complexity of the method is 14,48
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Complex Conditional,The conditional expression part.matches("^[dmf]rs?\\.?$") || part.equals("professor") || part.equals("president")|| part.equals("general")|| part.equals("captain") is complex.,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Complex Conditional,The conditional expression part.equals("I") || part.equals("II") || part.equals("III")|| part.equals("IV")|| part.equals("V")|| part.equals("esq.")|| part.equals("esq")|| part.equals("Esq")|| part.equals("Esq.")|| part.equals("Jr")|| part.equals("Jr.")|| part.equals("Sr")|| part.equals("Sr.") is complex.,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Complex Conditional,The conditional expression (low == 0) && (inputParts.size() == 1) && firstNames.contains(inputParts.get(0).toLowerCase()) is complex.,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Complex Method,Cyclomatic complexity of the method is 23,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Long Statement,The length of the statement "if (part.matches("^[dmf]rs?\\.?$") || part.equals("professor") || part.equals("president")|| part.equals("general")|| part.equals("captain")) {" is 143.,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Long Statement,The length of the statement "if (part.equals("I") || part.equals("II") || part.equals("III")|| part.equals("IV")|| part.equals("V")|| part.equals("esq.")|| part.equals("esq")|| part.equals("Esq")|| part.equals("Esq.")|| part.equals("Jr")|| part.equals("Jr.")|| part.equals("Sr")|| part.equals("Sr.")) {" is 273.,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Magic Number,The method contains a magic number: 2,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Magic Number,The method contains a magic number: 2,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Magic Number,The method contains a magic number: 2,56
+brendano_arkref,arkref.analysis,HAPNIS,processPossibleName,Magic Number,The method contains a magic number: 2,56
+brendano_arkref,arkref.analysis,Preprocess,go,Complex Conditional,The conditional expression useTempFiles && !parseOutputFile.exists() && !sstOutputFile.exists() is complex.,56
+brendano_arkref,arkref.analysis,Preprocess,go,Complex Method,Cyclomatic complexity of the method is 10,56
+brendano_arkref,arkref.data,Sentence,setStuff,Long Statement,The length of the statement "U.pf("WARNING parser and SST tokenizers disagree on length %d vs %d\nPARSER: %s\nSST: %s\n"`leaves.size()`neTaggedWords.size()`leaves`StringUtils.join(neTaggedWords`" "));" is 171.,47
+brendano_arkref,arkref.data,CDB,getContextVector,Magic Number,The method contains a magic number: 2,63
+brendano_arkref,arkref.data,Document,findNodeThatCoversSpan,Complex Conditional,The conditional expression spanStart < 0 || leaves.size() == 0 || spanEnd >= leaves.size() is complex.,108
+brendano_arkref,arkref.data,Document,loadFiles,Magic Number,The method contains a magic number: 2,135
+brendano_arkref,arkref.data,Document,doTokenAlignments,Complex Conditional,The conditional expression s.words != null && s.words.size() > 0 && s.words.get(0).charStart == -1 is complex.,327
+brendano_arkref,arkref.data,Document,doTokenAlignments,Complex Method,Cyclomatic complexity of the method is 9,327
+brendano_arkref,arkref.data,Document,doTokenAlignments,Long Statement,The length of the statement "for (int i=0; i < wordAlignsInSent.length; i++) if (wordAlignsInSent[i] != -1) wordAlignsInSent[i]=cleanText.alignments[wordAlignsInSent[i]];" is 141.,327
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,alignTokens,Magic Number,The method contains a magic number: 100,98
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,alignTokens,Magic Number,The method contains a magic number: 2,98
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,alignTokens,Magic Number,The method contains a magic number: 10,98
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,parseSentence,Empty catch clause,The method has an empty catch block.,269
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,parseSentence,Empty catch clause,The method has an empty catch block.,269
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,parseSentence,Magic Number,The method contains a magic number: 99999.0,269
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,annotateSentenceWithSupersenses,Complex Method,Cyclomatic complexity of the method is 10,389
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,annotateSentenceWithSupersenses,Long Statement,The length of the statement "sst=DiscriminativeTagger.loadModel(ARKref.getProperties().getProperty("supersenseModelFile"`"config/supersenseModel.ser.gz"));" is 126.,389
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,annotateSentenceWithSupersenses,Magic Number,The method contains a magic number: 2,389
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,loadWordnetMorphologyCache,Magic Number,The method contains a magic number: 2,594
+brendano_arkref,arkref.parsestuff,AnalysisUtilities,loadWordnetMorphologyCache,Magic Number,The method contains a magic number: 2,594
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Complex Method,Cyclomatic complexity of the method is 14,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Long Method,The method has 118 lines of code.,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Long Statement,The length of the statement "System.err.println("usage: java edu.stanford.nlp.parser.lexparser." + "LexicalizedParser parserFileOrUrl\nOptions: -port` -maxLength` -markHeadNodes");" is 151.,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Magic Number,The method contains a magic number: 5556,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Magic Number,The method contains a magic number: 40,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Magic Number,The method contains a magic number: 2,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Magic Number,The method contains a magic number: 2,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Magic Number,The method contains a magic number: 2,23
+brendano_arkref,arkref.parsestuff,StanfordParserServer,main,Magic Number,The method contains a magic number: 2,23
+brendano_arkref,arkref.parsestuff,AlignedSub,replace,Complex Method,Cyclomatic complexity of the method is 8,68
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 5 parameters. ,48
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 5 parameters. ,49
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 6 parameters. ,50
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 6 parameters. ,51
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 7 parameters. ,52
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 7 parameters. ,53
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 8 parameters. ,54
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 8 parameters. ,55
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 9 parameters. ,56
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 9 parameters. ,57
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 10 parameters. ,58
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 10 parameters. ,59
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 11 parameters. ,60
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 11 parameters. ,61
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 12 parameters. ,62
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 12 parameters. ,63
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 13 parameters. ,64
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 13 parameters. ,65
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 14 parameters. ,66
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 14 parameters. ,67
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 15 parameters. ,68
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 15 parameters. ,69
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 16 parameters. ,70
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 16 parameters. ,71
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 17 parameters. ,72
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 17 parameters. ,73
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 18 parameters. ,74
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 18 parameters. ,75
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 19 parameters. ,76
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 19 parameters. ,77
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 20 parameters. ,78
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 20 parameters. ,79
+brendano_arkref,arkref.parsestuff,U,pf,Long Parameter List,The method has 21 parameters. ,80
+brendano_arkref,arkref.parsestuff,U,sf,Long Parameter List,The method has 21 parameters. ,81
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 60000,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 60000,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 60,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 60,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 24,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 24,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 365,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 365,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 1000,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 9,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 100,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 10.0,66
+brendano_arkref,arkref.ext.fig.basic,StopWatch,toString,Magic Number,The method contains a magic number: 1000.0,66
+brendano_arkref,arkref.ext.fig.basic,FloatVec,setGrow,Magic Number,The method contains a magic number: 2,30
+brendano_arkref,arkref.ext.fig.basic,IntTriple,hashCode,Magic Number,The method contains a magic number: 17,19
+brendano_arkref,arkref.ext.fig.basic,IntTriple,hashCode,Magic Number,The method contains a magic number: 29,19
+brendano_arkref,arkref.ext.fig.basic,Utils,sleep,Empty catch clause,The method has an empty catch block.,37
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Complex Method,Cyclomatic complexity of the method is 8,141
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Magic Number,The method contains a magic number: 10,141
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Magic Number,The method contains a magic number: 60,141
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Magic Number,The method contains a magic number: 60,141
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Magic Number,The method contains a magic number: 24,141
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Magic Number,The method contains a magic number: 60,141
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Magic Number,The method contains a magic number: 60,141
+brendano_arkref,arkref.ext.fig.basic,Utils,parseTimeLength,Magic Number,The method contains a magic number: 60,141
+brendano_arkref,arkref.ext.fig.basic,String2DoubleMap,restrict,Long Statement,The length of the statement "for ( Map.Entry<String`StringDoubleMap> e : maps.entrySet()) if (set1.contains(e.getKey())) newMap.maps.put(e.getKey()`e.getValue().restrict(set2));" is 148.,97
+brendano_arkref,arkref.ext.fig.basic,DoubleVec,setGrow,Magic Number,The method contains a magic number: 2,30
+brendano_arkref,arkref.ext.fig.basic,IOUtils,copy,Magic Number,The method contains a magic number: 16384,262
+brendano_arkref,arkref.ext.fig.basic,IOUtils,copy,Magic Number,The method contains a magic number: 16384,274
+brendano_arkref,arkref.ext.fig.basic,IOUtils,purgePath,Magic Number,The method contains a magic number: 1000,298
+brendano_arkref,arkref.ext.fig.basic,IOUtils,readBigEndianInt,Magic Number,The method contains a magic number: 24,503
+brendano_arkref,arkref.ext.fig.basic,IOUtils,readBigEndianInt,Magic Number,The method contains a magic number: 16,503
+brendano_arkref,arkref.ext.fig.basic,IOUtils,readBigEndianInt,Magic Number,The method contains a magic number: 8,503
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,parent,Magic Number,The method contains a magic number: 2,36
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,leftChild,Magic Number,The method contains a magic number: 2,40
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,rightChild,Magic Number,The method contains a magic number: 2,44
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,rightChild,Magic Number,The method contains a magic number: 2,44
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,add,Magic Number,The method contains a magic number: 2,151
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,PriorityQueue,Magic Number,The method contains a magic number: 15,239
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,PriorityQueue,Magic Number,The method contains a magic number: 2,243
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,main,Magic Number,The method contains a magic number: 3,251
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,main,Magic Number,The method contains a magic number: 1.1,251
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,main,Magic Number,The method contains a magic number: 2,251
+brendano_arkref,arkref.ext.fig.basic,PriorityQueue,main,Magic Number,The method contains a magic number: 2,251
+brendano_arkref,arkref.ext.fig.basic,OptInfo,getValueString,Complex Method,Cyclomatic complexity of the method is 9,47
+brendano_arkref,arkref.ext.fig.basic,OptInfo,typeStr,Complex Method,Cyclomatic complexity of the method is 13,98
+brendano_arkref,arkref.ext.fig.basic,OptInfo,interpretValue,Complex Method,Cyclomatic complexity of the method is 40,130
+brendano_arkref,arkref.ext.fig.basic,OptInfo,interpretValue,Long Method,The method has 118 lines of code.,130
+brendano_arkref,arkref.ext.fig.basic,OptInfo,interpretValue,Magic Number,The method contains a magic number: 2,130
+brendano_arkref,arkref.ext.fig.basic,OptInfo,interpretValue,Magic Number,The method contains a magic number: 2,130
+brendano_arkref,arkref.ext.fig.basic,IntVec,setGrow,Magic Number,The method contains a magic number: 2,36
+brendano_arkref,arkref.ext.fig.basic,IntVec,hashCode,Magic Number,The method contains a magic number: 29,62
+brendano_arkref,arkref.ext.fig.basic,ClassInitializer,initializeJar,Magic Number,The method contains a magic number: 6,161
+brendano_arkref,arkref.ext.fig.basic,ClassInitializer,initialize,Magic Number,The method contains a magic number: 6,218
+brendano_arkref,arkref.ext.fig.basic,IntBoolPair,hashCode,Magic Number,The method contains a magic number: 29,18
+brendano_arkref,arkref.ext.fig.basic,TVMap,getCapacity,Magic Number,The method contains a magic number: 2,238
+brendano_arkref,arkref.ext.fig.basic,TVMap,switchMapType,Complex Method,Cyclomatic complexity of the method is 8,253
+brendano_arkref,arkref.ext.fig.basic,TVMap,binarySearch,Complex Conditional,The conditional expression targetHash < keyHash || (targetHash == keyHash && ((Comparable)targetKey).compareTo((Comparable)keys[m]) <= 0) is complex.,292
+brendano_arkref,arkref.ext.fig.basic,TVMap,hash,Magic Number,The method contains a magic number: 9,313
+brendano_arkref,arkref.ext.fig.basic,TVMap,hash,Magic Number,The method contains a magic number: 14,313
+brendano_arkref,arkref.ext.fig.basic,TVMap,hash,Magic Number,The method contains a magic number: 4,313
+brendano_arkref,arkref.ext.fig.basic,TVMap,hash,Magic Number,The method contains a magic number: 10,313
+brendano_arkref,arkref.ext.fig.basic,TVMap,find,Complex Conditional,The conditional expression i < num && keys[i] != null && key.equals(keys[i]) is complex.,323
+brendano_arkref,arkref.ext.fig.basic,TVMap,find,Complex Conditional,The conditional expression !locked && modify && (num > loadFactor * capacity || capacity <= num + 1) is complex.,323
+brendano_arkref,arkref.ext.fig.basic,TVMap,find,Complex Method,Cyclomatic complexity of the method is 15,323
+brendano_arkref,arkref.ext.fig.basic,ConvertEncoding,copy,Magic Number,The method contains a magic number: 16384,38
+brendano_arkref,arkref.ext.fig.basic,BipartiteMatcher,reduceMatrix,Complex Method,Cyclomatic complexity of the method is 9,102
+brendano_arkref,arkref.ext.fig.basic,BipartiteMatcher,initStars,Complex Conditional,The conditional expression 0 == costMatrix[i][j] && 0 == rowHasStarredZero[i] && 0 == colHasStarredZero[j] is complex.,144
+brendano_arkref,arkref.ext.fig.basic,BipartiteMatcher,makeMoreZeroes,Complex Method,Cyclomatic complexity of the method is 11,260
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,switchMapType,Complex Method,Cyclomatic complexity of the method is 8,276
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,binarySearch,Complex Conditional,The conditional expression targetHash < keyHash || (targetHash == keyHash && targetKey.compareTo(keys[m]) <= 0) is complex.,315
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,hash,Magic Number,The method contains a magic number: 9,336
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,hash,Magic Number,The method contains a magic number: 14,336
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,hash,Magic Number,The method contains a magic number: 4,336
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,hash,Magic Number,The method contains a magic number: 10,336
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,find,Complex Conditional,The conditional expression i < num && keys[i] != null && key.equals(keys[i]) is complex.,346
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,find,Complex Method,Cyclomatic complexity of the method is 15,346
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,main,Complex Method,Cyclomatic complexity of the method is 11,545
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,main,Magic Number,The method contains a magic number: 200,545
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,main,Magic Number,The method contains a magic number: 10000,545
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,main,Magic Number,The method contains a magic number: 10000,545
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,main,Magic Number,The method contains a magic number: 10000,545
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,main,Magic Number,The method contains a magic number: 10000,545
+brendano_arkref,arkref.ext.fig.basic,StringDoubleMap,main,Magic Number,The method contains a magic number: 10000,545
+brendano_arkref,arkref.ext.fig.basic,T2VMap,restrict,Long Statement,The length of the statement "for ( Map.Entry<S`TVMap<T`V>> e : maps.entrySet()) if (set1.contains(e.getKey())) newMap.maps.put(e.getKey()`e.getValue().restrict(set2));" is 138.,111
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,argmax,Complex Conditional,The conditional expression keys[i] != null && (besti == -1 || values[i] > values[besti]) is complex.,178
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,max,Complex Conditional,The conditional expression keys[i] != null && (besti == -1 || values[i] > values[besti]) is complex.,187
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,getCapacity,Magic Number,The method contains a magic number: 2,374
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,switchMapType,Complex Method,Cyclomatic complexity of the method is 8,389
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,binarySearch,Complex Conditional,The conditional expression targetHash < keyHash || (targetHash == keyHash && ((Comparable)targetKey).compareTo(keys[m]) <= 0) is complex.,428
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,hash,Magic Number,The method contains a magic number: 9,449
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,hash,Magic Number,The method contains a magic number: 14,449
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,hash,Magic Number,The method contains a magic number: 4,449
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,hash,Magic Number,The method contains a magic number: 10,449
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,find,Complex Conditional,The conditional expression i < num && keys[i] != null && key.equals(keys[i]) is complex.,459
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,find,Complex Conditional,The conditional expression !locked && modify && (num > loadFactor * capacity || capacity <= num + 1) is complex.,459
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,find,Complex Method,Cyclomatic complexity of the method is 15,459
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,newMap,Magic Number,The method contains a magic number: 2,608
+brendano_arkref,arkref.ext.fig.basic,TFloatMap,newMap,Magic Number,The method contains a magic number: 2,608
+brendano_arkref,arkref.ext.fig.basic,Cron,eachSeconds,Magic Number,The method contains a magic number: 1000,17
+brendano_arkref,arkref.ext.fig.basic,Cron,intervalSecs,Magic Number,The method contains a magic number: 1000,31
+brendano_arkref,arkref.ext.fig.basic,Cron,totalSecs,Magic Number,The method contains a magic number: 1000,34
+brendano_arkref,arkref.ext.fig.basic,T2DoubleMap,restrict,Long Statement,The length of the statement "for ( Map.Entry<S`TDoubleMap<T>> e : maps.entrySet()) if (set1.contains(e.getKey())) newMap.maps.put(e.getKey()`e.getValue().restrict(set2));" is 141.,112
+brendano_arkref,arkref.ext.fig.basic,StrUtils,splitIgnoreEscaped,Long Statement,The length of the statement "if (tokens[i].endsWith("\\") && i + 1 < tokens.length) tokens[i + 1]=tokens[i].substring(0`tokens[i].length() - 1) + "\\" + delim+ tokens[i + 1];" is 145.,58
+brendano_arkref,arkref.ext.fig.basic,StrUtils,parseHashMap,Magic Number,The method contains a magic number: 2,114
+brendano_arkref,arkref.ext.fig.basic,StrUtils,parseTDoubleMap,Magic Number,The method contains a magic number: 2,126
+brendano_arkref,arkref.ext.fig.basic,StrUtils,join,Complex Method,Cyclomatic complexity of the method is 12,228
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,argmax,Complex Conditional,The conditional expression keys[i] != null && (besti == -1 || values[i] > values[besti]) is complex.,156
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,max,Complex Conditional,The conditional expression keys[i] != null && (besti == -1 || values[i] > values[besti]) is complex.,165
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,getCapacity,Magic Number,The method contains a magic number: 2,320
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,switchMapType,Complex Method,Cyclomatic complexity of the method is 8,335
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,binarySearch,Complex Conditional,The conditional expression targetHash < keyHash || (targetHash == keyHash && ((Comparable)targetKey).compareTo((Comparable)keys[m]) <= 0) is complex.,374
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,hash,Magic Number,The method contains a magic number: 9,395
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,hash,Magic Number,The method contains a magic number: 14,395
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,hash,Magic Number,The method contains a magic number: 4,395
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,hash,Magic Number,The method contains a magic number: 10,395
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,find,Complex Conditional,The conditional expression i < num && keys[i] != null && key.equals(keys[i]) is complex.,405
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,find,Complex Conditional,The conditional expression !locked && modify && (num > loadFactor * capacity || capacity <= num + 1) is complex.,405
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,find,Complex Method,Cyclomatic complexity of the method is 15,405
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,newMap,Magic Number,The method contains a magic number: 2,554
+brendano_arkref,arkref.ext.fig.basic,TDoubleMap,newMap,Magic Number,The method contains a magic number: 2,554
+brendano_arkref,arkref.ext.fig.basic,ListUtils,sortedIndices,Long Statement,The length of the statement "Collections.sort(pairList`reverse ? new Pair.ReverseFirstComparator<Double`Integer>() : new Pair.FirstComparator<Double`Integer>());" is 132.,677
+brendano_arkref,arkref.ext.fig.basic,ListUtils,sortedIndices,Long Statement,The length of the statement "Collections.sort(pairList`reverse ? new Pair.ReverseFirstComparator<Integer`Integer>() : new Pair.FirstComparator<Integer`Integer>());" is 134.,692
+brendano_arkref,arkref.ext.fig.basic,NumUtils,assertEquals,Magic Number,The method contains a magic number: 1e-10,42
+brendano_arkref,arkref.ext.fig.basic,NumUtils,normalize,Complex Method,Cyclomatic complexity of the method is 8,78
+brendano_arkref,arkref.ext.fig.basic,NumUtils,equals,Magic Number,The method contains a magic number: 1e-10,227
+brendano_arkref,arkref.ext.fig.basic,NumUtils,round,Magic Number,The method contains a magic number: 10,234
+brendano_arkref,arkref.ext.fig.basic,NumUtils,round,Magic Number,The method contains a magic number: 10,239
+brendano_arkref,arkref.ext.fig.basic,NumUtils,logGamma,Magic Number,The method contains a magic number: 5.5,296
+brendano_arkref,arkref.ext.fig.basic,NumUtils,logGamma,Magic Number,The method contains a magic number: 0.5,296
+brendano_arkref,arkref.ext.fig.basic,NumUtils,logGamma,Magic Number,The method contains a magic number: 1.000000000190015,296
+brendano_arkref,arkref.ext.fig.basic,NumUtils,logGamma,Magic Number,The method contains a magic number: 5,296
+brendano_arkref,arkref.ext.fig.basic,NumUtils,logGamma,Magic Number,The method contains a magic number: 2.5066282746310005,296
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Long Statement,The length of the statement "t=f * (-1 / 12.0 + f * (1 / 120.0 + f * (-1 / 252.0 + f * (1 / 240.0 + f * (-1 / 132.0 + f * (691 / 32760.0 + f * (-1 / 12.0 + f * 3617 / 8160.0)))))));" is 152.,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 5,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 12.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 120.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 252.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 240.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 132.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 691,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 32760.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 12.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 3617,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 8160.0,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,digamma,Magic Number,The method contains a magic number: 0.5,327
+brendano_arkref,arkref.ext.fig.basic,NumUtils,fastExp,Magic Number,The method contains a magic number: 1512775,366
+brendano_arkref,arkref.ext.fig.basic,NumUtils,fastExp,Magic Number,The method contains a magic number: 1072693248,366
+brendano_arkref,arkref.ext.fig.basic,NumUtils,fastExp,Magic Number,The method contains a magic number: 60801,366
+brendano_arkref,arkref.ext.fig.basic,NumUtils,fastExp,Magic Number,The method contains a magic number: 32,366
+brendano_arkref,arkref.ext.fig.basic,NumUtils,fastLog,Magic Number,The method contains a magic number: 32,370
+brendano_arkref,arkref.ext.fig.basic,NumUtils,fastLog,Magic Number,The method contains a magic number: 1072632447,370
+brendano_arkref,arkref.ext.fig.basic,NumUtils,fastLog,Magic Number,The method contains a magic number: 1512775,370
+brendano_arkref,arkref.ext.fig.basic,Pair,hashCode,Magic Number,The method contains a magic number: 29,53
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getNumCPUs,Empty catch clause,The method has an empty catch block.,28
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getNumCPUs,Empty catch clause,The method has an empty catch block.,28
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getNumUsedCPUs,Magic Number,The method contains a magic number: 50,53
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getNumUsedCPUs,Magic Number,The method contains a magic number: 150,53
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getNumUsedCPUs,Magic Number,The method contains a magic number: 250,53
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getNumUsedCPUs,Magic Number,The method contains a magic number: 350,53
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getCPUSpeed,Empty catch clause,The method has an empty catch block.,79
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getCPUSpeed,Empty catch clause,The method has an empty catch block.,79
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getCPUSpeed,Long Statement,The length of the statement "return cpuSpeed=Integer.parseInt(StrUtils.split(Utils.systemGetStringOutput("sysctl hw.cpufrequency").trim()`" ")[1]) / 1000000;" is 128.,79
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getCPUSpeed,Magic Number,The method contains a magic number: 0.5,79
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getCPUSpeed,Magic Number,The method contains a magic number: 1000000,79
+brendano_arkref,arkref.ext.fig.basic,SysInfoUtils,getFreeMemory,Magic Number,The method contains a magic number: 1024,122
+brendano_arkref,arkref.ext.fig.basic,LogInfo,end_track,Complex Method,Cyclomatic complexity of the method is 8,83
+brendano_arkref,arkref.ext.fig.basic,LogInfo,end_track,Magic Number,The method contains a magic number: 1000,83
+brendano_arkref,arkref.ext.fig.basic,LogInfo,logs,Complex Conditional,The conditional expression forcePrint || (indWithin() && thisRun().newLine()) is complex.,125
+brendano_arkref,arkref.ext.fig.basic,EvalResult,f1,Magic Number,The method contains a magic number: 2,58
+brendano_arkref,arkref.ext.fig.basic,EvalResult,toString,Long Statement,The length of the statement "return String.format("Precision = %s` recall = %s` F1 = %s (%s)"`Fmt.D(precision())`Fmt.D(recall())`Fmt.D(f1())`Fmt.D(count()));" is 128.,63
+brendano_arkref,arkref.ext.fig.basic,Fmt,D,Magic Number,The method contains a magic number: 1e-40,10
+brendano_arkref,arkref.ext.fig.basic,Fmt,D,Magic Number,The method contains a magic number: 1e-3,10
+brendano_arkref,arkref.ext.fig.basic,Fmt,D,Magic Number,The method contains a magic number: 20,43
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 1024,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 1024,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 1024,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 10,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 1024,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 1024,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 10,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 1024,55
+brendano_arkref,arkref.ext.fig.basic,Fmt,bytesToString,Magic Number,The method contains a magic number: 10,55
+brendano_arkref,arkref.ext.fig.basic,IntPair,hashCode,Magic Number,The method contains a magic number: 29,18
+brendano_arkref,arkref.ext.fig.basic,UnorderedPair,equals,Long Statement,The length of the statement "return (((first == null ? pair.first == null : first.equals(pair.first)) && (second == null ? pair.second == null : second.equals(pair.second))) || ((first == null ? pair.second == null : first.equals(pair.second)) && (second == null ? pair.first == null : second.equals(pair.first))));" is 286.,19
+brendano_arkref,arkref.ext.fig.basic,UnorderedPair,hashCode,Magic Number,The method contains a magic number: 16,28
+brendano_arkref,arkref.ace,Eval,pairwise,Complex Method,Cyclomatic complexity of the method is 15,53
+brendano_arkref,arkref.ace,Eval,pairwise,Long Statement,The length of the statement "U.pf("Doc Prec = %.3f Doc Rec = %.3f \t%s\n"`safeDivide(pred_tp`pred_tp + fp)`safeDivide(gold_tp`(gold_tp + fn))`aceDoc.document.docid);" is 136.,53
+brendano_arkref,arkref.ace,Eval,pairwise,Magic Number,The method contains a magic number: 2,53
+brendano_arkref,arkref.ace,Eval,pairwise,Magic Number,The method contains a magic number: 2,53
+brendano_arkref,arkref.ace,Eval,pairwise,Magic Number,The method contains a magic number: 2,53
+brendano_arkref,arkref.ace,Eval,pairwise,Magic Number,The method contains a magic number: 2,53
+brendano_arkref,arkref.ace,FindAceMentions,alignToTree,Complex Method,Cyclomatic complexity of the method is 14,87
+brendano_arkref,arkref.ace,FindAceMentions,alignToTree,Long Statement,The length of the statement "if (start < 0 && end >= sent.surfSent.rawText.length()) throw new AlignmentFailed("both ACE extent bounds outside the sentence` weird");" is 136.,87
+brendano_arkref,arkref.ace,FindAceMentions,alignToTree,Long Statement,The length of the statement "int rightPos=(wi < sent.words.size() - 1) ? sent.words.get(wi + 1).charStart - sent.surfSent.charStart : sent.surfSent.charEnd - sent.surfSent.charStart;" is 153.,87
+brendano_arkref,arkref.ace,FindAceMentions,calculateAceOffsetCorrection,Complex Method,Cyclomatic complexity of the method is 8,220
+brendano_arkref,arkref.ace,FindAceMentions,calculateAceOffsetCorrection,Magic Number,The method contains a magic number: 5,220
+brendano_arkref,arkref.sent,MyIndoEuropeanTokenizer,devanagari,Magic Number,The method contains a magic number: 0x0900,128
+brendano_arkref,arkref.sent,MyIndoEuropeanTokenizer,devanagari,Magic Number,The method contains a magic number: 0x097F,128
+brendano_arkref,arkref.sent,MyIndoEuropeanTokenizer,nextToken,Complex Method,Cyclomatic complexity of the method is 14,140
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,MyHeuristicSentenceModel,Long Identifier,The length of the parameter usingCapitalizationConventions is 30.,122
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,MyHeuristicSentenceModel,Long Identifier,The length of the field mUsingCapitalizationConventions is 31.,122
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,MyHeuristicSentenceModel,Long Parameter List,The method has 7 parameters. ,122
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,boundaryIndices,Complex Conditional,The conditional expression mForceFinalStop || (isPossibleStop(end`tokens`whitespaces) && !mBadPrevious.contains(tokens[end - 1].toLowerCase())) is complex.,214
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,boundaryIndices,Complex Method,Cyclomatic complexity of the method is 19,214
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,boundaryIndices,Long Parameter List,The method has 5 parameters. ,214
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,boundaryIndices,Long Statement,The length of the statement "if (mForceFinalStop || (isPossibleStop(end`tokens`whitespaces) && !mBadPrevious.contains(tokens[end - 1].toLowerCase()))) indices.add(Integer.valueOf(end));" is 156.,214
+brendano_arkref,arkref.sent,MyHeuristicSentenceModel,possibleStart,Long Identifier,The length of the field mUsingCapitalizationConventions is 31.,294
+brendano_arkref,arkref.sent,SentenceBreaker,usesCapitalConvention,Magic Number,The method contains a magic number: 0.1,111
+brendano_arkref,arkref.sent,SentenceBreaker,usesCapitalConvention,Magic Number,The method contains a magic number: 0.1,111
+brendano_arkref,arkref.sent,SentenceBreaker,usesCapitalConvention,Magic Number,The method contains a magic number: 0.3,111
+brendano_arkref,arkref.tests,TestArkref,testSpecialSymbols,Magic Number,The method contains a magic number: 2,71
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 2,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 4,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 6,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 5,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 6,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 9,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 10,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 8,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 10,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 12,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 13,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 14,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 16,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 17,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 18,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 19,79
+brendano_arkref,arkref.tests,TestArkref,testReflexives,Magic Number,The method contains a magic number: 20,79
+brendano_arkref,arkref.tests,TestArkref,testSameHead,Magic Number,The method contains a magic number: 2,106
+brendano_arkref,arkref.tests,TestArkref,testSameHead,Magic Number,The method contains a magic number: 3,106
+brendano_arkref,arkref.tests,TestArkref,testSameHead,Magic Number,The method contains a magic number: 3,106
+brendano_arkref,arkref.tests,TestArkref,testSameHead,Magic Number,The method contains a magic number: 3,106
+brendano_arkref,arkref.tests,TestArkref,testSameHead,Magic Number,The method contains a magic number: 2,106
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 9,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 2,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 5,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 6,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 7,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 9,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 2,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 7,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 5,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 6,122
+brendano_arkref,arkref.tests,TestArkref,testRoleAppositives,Magic Number,The method contains a magic number: 5,122
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 4,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 4,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 4,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 6,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 7,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 4,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 4,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 6,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 6,150
+brendano_arkref,arkref.tests,TestArkref,testFirstPerson,Magic Number,The method contains a magic number: 7,150
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 2,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 2,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 3,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 2,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 3,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 2,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 2,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 3,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 3,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 2,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 2,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 3,168
+brendano_arkref,arkref.tests,TestArkref,testDefaultMale,Magic Number,The method contains a magic number: 3,168
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 2,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 3,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 4,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 3,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 2,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 7,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 8,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 9,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 7,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 8,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 7,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 9,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 8,200
+brendano_arkref,arkref.tests,TestArkref,testAppositives,Magic Number,The method contains a magic number: 9,200
+brendano_arkref,arkref.tests,TestArkref,testPathLength,Magic Number,The method contains a magic number: 2,229
+brendano_arkref,arkref.tests,TestArkref,testPathLength,Magic Number,The method contains a magic number: 3,229
+brendano_arkref,arkref.tests,TestArkref,testPathLength,Magic Number,The method contains a magic number: 3,229
+brendano_arkref,arkref.tests,TestArkref,testPathLength,Magic Number,The method contains a magic number: 3,229
+brendano_arkref,arkref.tests,TestArkref,testPathLength,Magic Number,The method contains a magic number: 2,229
+brendano_arkref,arkref.tests,TestArkref,testLargerNodeComesFirstAsMention,Magic Number,The method contains a magic number: 2,243
+brendano_arkref,arkref.tests,TestArkref,testLargerNodeComesFirstAsMention,Magic Number,The method contains a magic number: 3,243
+brendano_arkref,arkref.tests,TestArkref,testLargerNodeComesFirstAsMention,Magic Number,The method contains a magic number: 4,243
+brendano_arkref,arkref.tests,TestArkref,testLargerNodeComesFirstAsMention,Magic Number,The method contains a magic number: 4,243
+brendano_arkref,arkref.tests,TestArkref,testPathLength2,Magic Number,The method contains a magic number: 2,257
+brendano_arkref,arkref.tests,TestArkref,testPathLength2,Magic Number,The method contains a magic number: 3,257
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 5,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 4,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 3,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 2,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 7,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 3,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 7,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 6,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 2,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 5,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 5,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 4,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 4,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 5,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 3,277
+brendano_arkref,arkref.tests,TestArkref,testEntityTypeMatching,Magic Number,The method contains a magic number: 6,277
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 2,307
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 3,307
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 4,307
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 4,307
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 4,307
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 2,307
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 4,307
+brendano_arkref,arkref.tests,TestArkref,testIWithinI,Magic Number,The method contains a magic number: 3,307
+brendano_arkref,arkref.tests,TestArkref,testPredicateNominatives,Magic Number,The method contains a magic number: 2,325
+brendano_arkref,arkref.tests,TestArkref,testPredicateNominatives,Magic Number,The method contains a magic number: 3,325
+brendano_arkref,arkref.tests,TestArkref,testPredicateNominatives,Magic Number,The method contains a magic number: 6,325
+brendano_arkref,arkref.tests,TestArkref,testPredicateNominatives,Magic Number,The method contains a magic number: 7,325
+brendano_arkref,arkref.tests,TestArkref,testConjunctions,Magic Number,The method contains a magic number: 2,353
+brendano_arkref,arkref.tests,TestArkref,testConjunctions,Magic Number,The method contains a magic number: 3,353
+brendano_arkref,arkref.tests,TestArkref,testThey,Magic Number,The method contains a magic number: 6,370
+brendano_arkref,arkref.tests,TestArkref,testFindNodeFromSpan,Magic Number,The method contains a magic number: 2,400
+brendano_arkref,arkref.tests,TestArkref,testFindNodeFromSpan,Magic Number,The method contains a magic number: 3,400
+brendano_arkref,arkref.tests,TestArkref,testFindNodeFromSpan,Magic Number,The method contains a magic number: 3,400
+brendano_arkref,arkref.tests,TestArkref,testFindNodeFromSpan,Magic Number,The method contains a magic number: 5,400
+brendano_arkref,arkref.tests,TestArkref,testFindNodeFromSpan,Magic Number,The method contains a magic number: 48,400
+brendano_arkref,arkref.tests,TestArkref,testFindNodeFromSpan,Magic Number,The method contains a magic number: 48,400
+brendano_arkref,arkref.tests,TestArkref,testFindMentionDominatingNode,Magic Number,The method contains a magic number: 6,432
+brendano_arkref,arkref.tests,TestArkref,testFindMentionDominatingNode,Magic Number,The method contains a magic number: 6,432
+brendano_arkref,arkref.tests,TestArkref,testFindMentionDominatingNode,Magic Number,The method contains a magic number: 2,432
+brendano_arkref,arkref.tests,TestArkref,testFindMentionDominatingNode,Magic Number,The method contains a magic number: 2,432
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 7,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 9,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 2,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 19,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 3,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 20,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 4,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 22,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 5,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 24,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 6,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 26,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 7,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 30,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 8,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 39,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 9,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 43,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 10,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 46,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 11,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 58,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 12,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 66,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 13,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 76,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 14,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 78,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 15,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 86,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 16,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 89,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 17,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 99,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 18,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 107,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 19,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 110,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 20,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 122,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 21,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 129,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 22,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 133,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 23,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 136,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 24,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 147,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 25,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 151,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 26,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 161,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 27,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 7,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 9,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 2,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 14,459
+brendano_arkref,arkref.tests,TestArkref,testTokenAlignments,Magic Number,The method contains a magic number: 3,459
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 3,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 4,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 2,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 4,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 7,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 6,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 7,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 8,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 6,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 8,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 9,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 11,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 10,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 11,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 13,505
+brendano_arkref,arkref.tests,TestArkref,testAdjunctPhrases,Magic Number,The method contains a magic number: 14,505

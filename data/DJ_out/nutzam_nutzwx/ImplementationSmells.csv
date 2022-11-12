@@ -1,0 +1,142 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+nutzam_nutzwx,org.nutz.weixin.at.impl,CacheableAccessTokenStore,get,Complex Conditional,The conditional expression timeout > 0 && at != null && (System.currentTimeMillis() / 1000 - at.getExpires()) < timeout is complex.,12
+nutzam_nutzwx,org.nutz.weixin.at.impl,CacheableAccessTokenStore,get,Magic Number,The method contains a magic number: 1000,12
+nutzam_nutzwx,org.nutz.weixin.at.impl,RedisAccessTokenStore,save,Long Statement,The length of the statement "log.infof("A new wx access_token was generated and stored to redis with the key [%s] ` redis return code : %s"`tokenKey`result);" is 128.,94
+nutzam_nutzwx,org.nutz.weixin.bean,WxTemplateData,WxTemplateData,Magic Number,The method contains a magic number: 2,20
+nutzam_nutzwx,org.nutz.weixin.bean,WxTemplateData,WxTemplateData,Magic Number,The method contains a magic number: 2,20
+nutzam_nutzwx,org.nutz.weixin.bean,WxTemplateData,invoke,Magic Number,The method contains a magic number: 2,37
+nutzam_nutzwx,org.nutz.weixin.bean,WxMusic,WxMusic,Long Parameter List,The method has 5 parameters. ,11
+nutzam_nutzwx,org.nutz.weixin.bean,WxMassArticle,WxMassArticle,Long Parameter List,The method has 9 parameters. ,20
+nutzam_nutzwx,org.nutz.weixin.spi,WxTemplateMsgApi,template_send,Long Parameter List,The method has 5 parameters. ,26
+nutzam_nutzwx,org.nutz.weixin.spi,WxPayApi,postPay,Long Parameter List,The method has 5 parameters. ,15
+nutzam_nutzwx,org.nutz.weixin.spi,WxNewTmplApi,newtmpl_send,Long Parameter List,The method has 5 parameters. ,55
+nutzam_nutzwx,org.nutz.weixin.util,WxPaySSL,buildSSL,Long Statement,The length of the statement "public void checkClientTrusted( X509Certificate[] paramArrayOfX509Certificate` String paramString) throws CertificateException {" is 128.,25
+nutzam_nutzwx,org.nutz.weixin.util,WxPaySSL,buildSSL,Long Statement,The length of the statement "public void checkServerTrusted( X509Certificate[] paramArrayOfX509Certificate` String paramString) throws CertificateException {" is 128.,25
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_certificates,Magic Number,The method contains a magic number: 1000,22
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_order_jsapi,Magic Number,The method contains a magic number: 1000,39
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_order_app,Magic Number,The method contains a magic number: 1000,58
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_order_native,Magic Number,The method contains a magic number: 1000,77
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_order_h5,Magic Number,The method contains a magic number: 1000,96
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_order_close,Magic Number,The method contains a magic number: 1000,115
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_order_query_transaction_id,Magic Number,The method contains a magic number: 1000,134
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_order_query_out_trade_no,Magic Number,The method contains a magic number: 1000,152
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_ecommerce_refunds_apply,Magic Number,The method contains a magic number: 1000,170
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_ecommerce_refunds_query_refund_id,Magic Number,The method contains a magic number: 1000,188
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_ecommerce_refunds_query_out_refund_no,Magic Number,The method contains a magic number: 1000,206
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Api,v3_call,Long Parameter List,The method has 10 parameters. ,224
+nutzam_nutzwx,org.nutz.weixin.util,WxContext,filter,Complex Method,Cyclomatic complexity of the method is 8,92
+nutzam_nutzwx,org.nutz.weixin.util,WxContext,filter,Long Parameter List,The method has 5 parameters. ,92
+nutzam_nutzwx,org.nutz.weixin.util,WxPaySign,createSign,Complex Conditional,The conditional expression null != v && !"".equals(v) && !"sign".equals(k) && !"key".equals(k) is complex.,11
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,fillPayMap,Magic Number,The method contains a magic number: 10000000,120
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,fillPayMap,Magic Number,The method contains a magic number: 100000000,120
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,check,Complex Conditional,The conditional expression signature == null || signature.length() > 128 || timestamp == null || timestamp.length() > 128 || nonce == null || nonce.length() > 128 is complex.,254
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,check,Long Statement,The length of the statement "if (signature == null || signature.length() > 128 || timestamp == null || timestamp.length() > 128 || nonce == null || nonce.length() > 128) {" is 142.,254
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,check,Magic Number,The method contains a magic number: 128,254
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,check,Magic Number,The method contains a magic number: 128,254
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,check,Magic Number,The method contains a magic number: 128,254
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,handle,Complex Method,Cyclomatic complexity of the method is 9,280
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5536c56d,280
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,handleEvent,Complex Method,Cyclomatic complexity of the method is 11,318
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,handleEvent,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@69b62da1,318
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,fix,Magic Number,The method contains a magic number: 1000,362
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,respMusic,Long Parameter List,The method has 6 parameters. ,416
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,asXml,Complex Method,Cyclomatic complexity of the method is 22,513
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,asXml,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2dc39a7c,513
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,asJson,Complex Method,Cyclomatic complexity of the method is 20,613
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,asJson,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@9df7d7d,613
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,handle,Magic Number,The method contains a magic number: 403,689
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,downloadMedia,Magic Number,The method contains a magic number: 3,734
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,downloadMedia,Magic Number,The method contains a magic number: 60,734
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,downloadMedia,Magic Number,The method contains a magic number: 1000,734
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,downloadMedia,Magic Number,The method contains a magic number: 128,734
+nutzam_nutzwx,org.nutz.weixin.util,Wxs,mapField,Long Statement,The length of the statement "Tmpl tmpl=Tmpl.parse(" public ${className} set${upperFieldName}(${fieldType} ${fieldName}){\r\n" + " put(\"${fieldName}\"` ${fieldName});\r\n" + " return this;\r\n"+ " }\r\n"+ "\r\n"+ " public ${fieldType} get${upperFieldName}(){\r\n"+ " " + getterTmpl + ";\r\n"+ " }\r\n");" is 274.,799
+nutzam_nutzwx,org.nutz.weixin.util,BeanConfigures,configure,Empty catch clause,The method has an empty catch block.,17
+nutzam_nutzwx,org.nutz.weixin.util,BeanConfigures,asConfigureMap,Empty catch clause,The method has an empty catch block.,49
+nutzam_nutzwx,org.nutz.weixin.util,BeanConfigures,asConfigureMap,Empty catch clause,The method has an empty catch block.,49
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,getCertSerialNo,Magic Number,The method contains a magic number: 16,102
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,buildAuthorization,Long Parameter List,The method has 9 parameters. ,134
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,buildAuthorization,Long Parameter List,The method has 9 parameters. ,159
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,getAuthorization,Long Parameter List,The method has 6 parameters. ,180
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,getAuthorization,Magic Number,The method contains a magic number: 5,180
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,buildSignMessage,Long Parameter List,The method has 5 parameters. ,250
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,getJsapiSignMessage,Magic Number,The method contains a magic number: 1000,282
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,loadPrivateKey,Long Statement,The length of the statement "String privateKey=privateKeyStr.replace("-----BEGIN PRIVATE KEY-----"`"").replace("-----END PRIVATE KEY-----"`"").replaceAll("\\s+"`"");" is 136.,310
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,getBaseHeaders,Long Statement,The length of the statement "String userAgent=String.format("WeChatPay-IJPay-HttpClient/%s (%s) Java/%s"`WxPay3Util.class.getPackage().getImplementationVersion()`OS`VERSION == null ? "Unknown" : VERSION);" is 175.,354
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,getBaseHeaders,Magic Number,The method contains a magic number: 5,354
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,verifyNotify,Long Parameter List,The method has 7 parameters. ,393
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,verifyNotify,Long Statement,The length of the statement "return decryptToString(key.getBytes(StandardCharsets.UTF_8)`associatedData.getBytes(StandardCharsets.UTF_8)`nonceStr.getBytes(StandardCharsets.UTF_8)`cipherText);" is 162.,393
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,verifyNotify,Magic Number,The method contains a magic number: 16,393
+nutzam_nutzwx,org.nutz.weixin.util,WxPay3Util,verifySignature,Long Parameter List,The method has 5 parameters. ,460
+nutzam_nutzwx,org.nutz.weixin.util,WxCryptTestProgram,main,Long Statement,The length of the statement "String replyMsg=" 中文<xml><ToUserName><![CDATA[oia2TjjewbmiOUlr6X-1crbLOvLw]]></ToUserName><FromUserName><![CDATA[gh_7f083739789a]]></FromUserName><CreateTime>1407743423</CreateTime><MsgType><![CDATA[video]]></MsgType><Video><MediaId><![CDATA[eYJ1MbwPRJtOvIEabaxHs7TX2D-HV71s79GUxqdUkjm6Gs2Ed1KF3ulAOA9H1xG0]]></MediaId><Title><![CDATA[testCallBackReplyVideo]]></Title><Description><![CDATA[testCallBackReplyVideo]]></Description></Video></xml>";" is 445.,17
+nutzam_nutzwx,org.nutz.weixin.util,WxsTest,test_ioc_load,Magic Number,The method contains a magic number: 6,35
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,AbstractWxApi2,Long Parameter List,The method has 5 parameters. ,63
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,checkWXBizMsgCrypt,Complex Conditional,The conditional expression pc != null || encodingAesKey == null || token == null || appid == null is complex.,202
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,get,Magic Number,The method contains a magic number: 2,256
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,postJson,Magic Number,The method contains a magic number: 2,265
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,call,Complex Method,Cyclomatic complexity of the method is 9,277
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,call,Long Statement,The length of the statement "log.warnf("wxapi of access_token request [%s] finished` but the return code is 40001` try to reflush access_token right now` surplus retry times : %s"`URL`retry);" is 162.,277
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,call,Magic Number,The method contains a magic number: 40001,277
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getJsapiTicket,Long Statement,The length of the statement "if (at_forupdate == null || at_forupdate.getExpires() < (System.currentTimeMillis() - at_forupdate.getLastCacheTimeMillis()) / 1000) {" is 134.,325
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getJsapiTicket,Magic Number,The method contains a magic number: 1000,325
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getJsapiTicket,Magic Number,The method contains a magic number: 1000,325
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,reflushJsapiTicket,Magic Number,The method contains a magic number: 200,339
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getCardTicket,Long Statement,The length of the statement "if (ct_forupdate == null || ct_forupdate.getExpires() < (System.currentTimeMillis() - ct_forupdate.getLastCacheTimeMillis()) / 1000) {" is 134.,359
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getCardTicket,Magic Number,The method contains a magic number: 1000,359
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getCardTicket,Magic Number,The method contains a magic number: 1000,359
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,reflushCardTicket,Magic Number,The method contains a magic number: 200,373
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getAccessToken,Long Statement,The length of the statement "if (at_forupdate == null || at_forupdate.getExpires() < (System.currentTimeMillis() - at_forupdate.getLastCacheTimeMillis()) / 1000) {" is 134.,396
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getAccessToken,Magic Number,The method contains a magic number: 1000,396
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,getAccessToken,Magic Number,The method contains a magic number: 1000,396
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxApi2,reflushAccessToken,Magic Number,The method contains a magic number: 200,411
+nutzam_nutzwx,org.nutz.weixin.impl,AbstractWxHandler,defaultMsg,Complex Method,Cyclomatic complexity of the method is 10,78
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,WxApi2Impl,Long Parameter List,The method has 5 parameters. ,39
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,template_send,Long Parameter List,The method has 5 parameters. ,252
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,template_send,Long Statement,The length of the statement "return postJson("/message/template/send"`"touser"`touser`"template_id"`template_id`"url"`url`"miniprogram"`miniprogram`"data"`data);" is 132.,252
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,_mass_send,Complex Conditional,The conditional expression "image".equals(tp) || "voice".equals(tp) || "mpnews".equals(tp) is complex.,456
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,_mass_send,Complex Method,Cyclomatic complexity of the method is 12,456
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,applyId,Long Statement,The length of the statement "return postJson(wxBase + "/shakearound/device/applyid"`"quantity"`quantity`"apply_reason"`apply_reason`"comment"`comment);" is 122.,536
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,add_video,Long Statement,The length of the statement "req.getParams().put("description"`Json.toJson(new NutMap().setv("title"`title).setv("introduction"`introduction)`JsonFormat.compact().setQuoteName(true)));" is 155.,697
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,update_material,Long Statement,The length of the statement "return postJson("/material/update_news"`new NutMap().setv("media_id"`media_id).setv("index"`index).setv("articles"`article));" is 125.,755
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,postPay,Long Parameter List,The method has 5 parameters. ,879
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,pay_jsapi,Magic Number,The method contains a magic number: 1000,924
+nutzam_nutzwx,org.nutz.weixin.impl,WxApi2Impl,newtmpl_send,Long Parameter List,The method has 5 parameters. ,1120
+nutzam_nutzwx,org.nutz.weixin.impl,WxApiImpl,tmpQr,Long Statement,The length of the statement "NutMap map=new NutMap().setv("expire_seconds"`expire_seconds).setv("action_name"`"QR_SCENE").setv("scene"`new NutMap().setv("scene_id"`scene_id));" is 146.,154
+nutzam_nutzwx,org.nutz.weixin.impl,WxApiImpl,reflushAccessToken,Long Statement,The length of the statement "String url=String.format("%s/token?grant_type=client_credential&appid=%s&secret=%s"`base`master.getAppid()`master.getAppsecret());" is 130.,171
+nutzam_nutzwx,org.nutz.weixin.impl,WxApiImpl,reflushAccessToken,Magic Number,The method contains a magic number: 60,171
+nutzam_nutzwx,org.nutz.weixin.impl,WxApiImpl,reflushAccessToken,Magic Number,The method contains a magic number: 1000,171
+nutzam_nutzwx,org.nutz.weixin.impl,WxApiImpl,call,Complex Conditional,The conditional expression map != null && map.containsKey("errcode") && ((Number)map.get("errcode")).intValue() != 0 is complex.,188
+nutzam_nutzwx,org.nutz.weixin.impl,WxApiImpl,mediaUpload,Complex Conditional,The conditional expression map != null && map.containsKey("errcode") && ((Number)map.get("errcode")).intValue() != 0 is complex.,223
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,PKCS7Encoder,decode,Magic Number,The method contains a magic number: 32,42
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,PKCS7Encoder,chr,Magic Number,The method contains a magic number: 0xFF,56
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,AesException,getMessage,Complex Method,Cyclomatic complexity of the method is 9,21
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,AesException,getMessage,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@75f92fdc,21
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,SHA1,getSHA1,Magic Number,The method contains a magic number: 4,21
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,SHA1,getSHA1,Magic Number,The method contains a magic number: 0xFF,21
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,SHA1,getSHA1,Magic Number,The method contains a magic number: 2,21
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,WXBizMsgCrypt,Magic Number,The method contains a magic number: 43,48
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 4,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 3,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 0xFF,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 2,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 8,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 0xFF,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 16,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 0xFF,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 24,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getNetworkBytesOrder,Magic Number,The method contains a magic number: 0xFF,67
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,recoverNetworkBytesOrder,Magic Number,The method contains a magic number: 4,77
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,recoverNetworkBytesOrder,Magic Number,The method contains a magic number: 8,77
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,recoverNetworkBytesOrder,Magic Number,The method contains a magic number: 0xff,77
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,getRandomStr,Magic Number,The method contains a magic number: 16,87
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,encrypt,Magic Number,The method contains a magic number: 16,98
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,decrypt,Magic Number,The method contains a magic number: 16,146
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,decrypt,Magic Number,The method contains a magic number: 16,146
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,decrypt,Magic Number,The method contains a magic number: 20,146
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,decrypt,Magic Number,The method contains a magic number: 20,146
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,decrypt,Magic Number,The method contains a magic number: 20,146
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,WXBizMsgCrypt,decrypt,Magic Number,The method contains a magic number: 20,146
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,XMLParse,extract,Magic Number,The method contains a magic number: 3,28
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,XMLParse,extract,Magic Number,The method contains a magic number: 2,28
+nutzam_nutzwx,org.nutz.weixin.repo.com.qq.weixin.mp.aes,XMLParse,generate,Long Statement,The length of the statement "String format="<xml>\n" + "<Encrypt><![CDATA[%1$s]]></Encrypt>\n" + "<MsgSignature><![CDATA[%2$s]]></MsgSignature>\n"+ "<TimeStamp>%3$s</TimeStamp>\n"+ "<Nonce><![CDATA[%4$s]]></Nonce>\n"+ "</xml>";" is 198.,55
+nutzam_nutzwx,org.nutz.weixin.session.memory,MemorySessionManager,getSession,Magic Number,The method contains a magic number: 1000,17
+nutzam_nutzwx,org.nutz.weixin.session.memory,MemorySessionManager,getSession,Magic Number,The method contains a magic number: 60,17

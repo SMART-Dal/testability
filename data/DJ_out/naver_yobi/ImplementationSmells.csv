@@ -1,0 +1,900 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+naver_yobi,utils,FileUtil,detectCharset,Magic Number,The method contains a magic number: 4096,55
+naver_yobi,utils,FileUtil,detectCharset,Magic Number,The method contains a magic number: 4096,81
+naver_yobi,utils,Config,getHostport,Magic Number,The method contains a magic number: 80,64
+naver_yobi,utils,PullRequestCommit,PullRequestCommit,Magic Number,The method contains a magic number: 3,33
+naver_yobi,utils,PullRequestCommit,PullRequestCommit,Magic Number,The method contains a magic number: 4,33
+naver_yobi,utils,PullRequestCommit,PullRequestCommit,Magic Number,The method contains a magic number: 6,33
+naver_yobi,utils,PullRequestCommit,PullRequestCommit,Magic Number,The method contains a magic number: 8,33
+naver_yobi,utils,FastHttpDateFormat,getCurrentDate,Magic Number,The method contains a magic number: 1000,108
+naver_yobi,utils,FastHttpDateFormat,getCurrentDate,Magic Number,The method contains a magic number: 1000,108
+naver_yobi,utils,FastHttpDateFormat,internalParseDate,Empty catch clause,The method has an empty catch block.,181
+naver_yobi,utils,PlayServletResponse,setHeader,Complex Conditional,The conditional expression name == null || name.length() == 0 || value == null is complex.,338
+naver_yobi,utils,PlayServletResponse,getCharsetFromContentType,Complex Conditional,The conditional expression (encoding.length() > 2) && (encoding.startsWith("\"")) && (encoding.endsWith("\"")) is complex.,370
+naver_yobi,utils,PlayServletResponse,getCharsetFromContentType,Magic Number,The method contains a magic number: 8,370
+naver_yobi,utils,PlayServletResponse,getCharsetFromContentType,Magic Number,The method contains a magic number: 2,370
+naver_yobi,utils,RouteUtil,getUrl,Complex Method,Cyclomatic complexity of the method is 9,40
+naver_yobi,utils,RouteUtil,getUrl,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@8896780,40
+naver_yobi,utils,RouteUtil,getUrl,Long Statement,The length of the statement "return controllers.routes.UserApp.userInfo(user.loginId`controllers.routes.UserApp.userInfo$default$2()`controllers.routes.UserApp.userInfo$default$3()`controllers.routes.UserApp.userInfo$default$4()).url();" is 207.,72
+naver_yobi,utils,RouteUtil,getUrl,Long Statement,The length of the statement "play.mvc.Call toView=controllers.routes.CodeHistoryApp.show(comment.project.owner`comment.project.name`comment.commitId);" is 121.,134
+naver_yobi,utils,AutoLinkRenderer,render,Long Identifier,The length of the field LOGIN_ID_PATTERN_ALLOW_FORWARD_SLASH_PATTERN is 44.,127
+naver_yobi,utils,AutoLinkRenderer,render,Magic Number,The method contains a magic number: 2,127
+naver_yobi,utils,AutoLinkRenderer,render,Magic Number,The method contains a magic number: 2,127
+naver_yobi,utils,AutoLinkRenderer,toLink,Magic Number,The method contains a magic number: 2,130
+naver_yobi,utils,AutoLinkRenderer,toLink,Magic Number,The method contains a magic number: 2,146
+naver_yobi,utils,AutoLinkRenderer,toValidUserLink,Long Statement,The length of the statement "avatarImage="<img src='" + user.avatarUrl() + "' class='avatar-wrap smaller no-margin-no-padding vertical-top' alt='@"+ user.loginId+ "'> ";" is 140.,313
+naver_yobi,utils,AutoLinkRenderer,toValidUserLink,Long Statement,The length of the statement "return new Link(RouteUtil.getUrl(user)`"no-text-decoration"`"<span data-toggle='popover' data-placement='top' data-trigger='hover' data-html='true' data-content=\"" + StringEscapeUtils.escapeHtml4(avatarImage + user.name) + "\">@"+ user.loginId+ "</span>");" is 257.,313
+naver_yobi,utils,AutoLinkRenderer,isWrappedNonCharacter,Long Statement,The length of the statement "return (matcher.start() != 0 && WORD_PATTERN.matcher(body.substring(matcher.start() - 1`matcher.start())).find()) || (matcher.end() != body.length() && WORD_PATTERN.matcher(body.substring(matcher.end()`matcher.end() + 1)).find());" is 230.,353
+naver_yobi,utils,JodaDateUtil,lastSecondOfDay,Long Statement,The length of the statement "return dateTime.withField(DateTimeFieldType.hourOfDay()`23).withField(DateTimeFieldType.minuteOfHour()`59).withField(DateTimeFieldType.secondOfMinute()`59).toDate();" is 165.,90
+naver_yobi,utils,JodaDateUtil,lastSecondOfDay,Magic Number,The method contains a magic number: 23,90
+naver_yobi,utils,JodaDateUtil,lastSecondOfDay,Magic Number,The method contains a magic number: 59,90
+naver_yobi,utils,JodaDateUtil,lastSecondOfDay,Magic Number,The method contains a magic number: 59,90
+naver_yobi,utils,AccessControl,isProjectResourceCreatable,Complex Conditional,The conditional expression user.isSiteManager() || OrganizationUser.isAdmin(project.organization`user) || user.isMemberOf(project)|| isAllowedIfGroupMember(project`user) is complex.,48
+naver_yobi,utils,AccessControl,isProjectResourceCreatable,Complex Method,Cyclomatic complexity of the method is 11,48
+naver_yobi,utils,AccessControl,isProjectResourceCreatable,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6d0ac78,48
+naver_yobi,utils,AccessControl,isAllowedIfGroupMember,Long Statement,The length of the statement "return project.hasGroup() && (project.isPublic() || project.isProtected()) && OrganizationUser.isMember(project.organization`user);" is 131.,94
+naver_yobi,utils,AccessControl,isResourceCreatable,Long Statement,The length of the statement "Project project=(container.getType() == ResourceType.PROJECT) ? Project.find.byId(Long.valueOf(container.getId())) : container.getProject();" is 140.,111
+naver_yobi,utils,AccessControl,isGlobalResourceAllowed,Complex Method,Cyclomatic complexity of the method is 17,130
+naver_yobi,utils,AccessControl,isGlobalResourceAllowed,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5cc3ae6f,130
+naver_yobi,utils,AccessControl,isProjectResourceAllowed,Complex Conditional,The conditional expression user.isManagerOf(project) || isAllowedIfAuthor(user`resource) || isAllowedIfAssignee(user`resource)|| isAllowedIfGroupMember(project`user) is complex.,216
+naver_yobi,utils,AccessControl,isProjectResourceAllowed,Complex Method,Cyclomatic complexity of the method is 22,216
+naver_yobi,utils,AccessControl,isProjectResourceAllowed,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@78dcc4b9,216
+naver_yobi,utils,AccessControl,isProjectResourceAllowed,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@24e94e4d,216
+naver_yobi,utils,AccessControl,onStart,Long Statement,The length of the statement "allowsAnonymousAccess=BooleanUtils.toBoolean(play.Configuration.root().getBoolean("application.allowsAnonymousAccess"`true));" is 125.,346
+naver_yobi,utils,AccessControl,isAllowedIfAuthor,Complex Method,Cyclomatic complexity of the method is 8,351
+naver_yobi,utils,AccessControl,isAllowedIfAuthor,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@27d985c4,351
+naver_yobi,utils,AccessControl,isAllowedIfAssignee,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@66a8e786,378
+naver_yobi,utils,AccessLogger,log,Long Statement,The length of the statement "String entry=String.format("%s - %s [%s] \"%s %s %s\" %d - %s %s %s"`request.remoteAddress()`orHyphen(username)`format.format(new Date())`request.method()`request.uri()`request.version()`status`quotedOrHyphen(request.getHeader("Referer"))`quotedOrHyphen(request.getHeader("User-Agent"))`time);" is 293.,124
+naver_yobi,utils,PlayServletRequest,getScheme,Empty catch clause,The method has an empty catch block.,282
+naver_yobi,utils,PlayServletRequest,getServerPort,Magic Number,The method contains a magic number: 443,303
+naver_yobi,utils,PlayServletRequest,getServerPort,Magic Number,The method contains a magic number: 80,303
+naver_yobi,utils,HttpUtil,removeQueryString,Long Statement,The length of the statement "return new URI(aURI.getScheme()`aURI.getAuthority()`aURI.getPath()`StringUtils.join(pairStrings`"&")`aURI.getFragment()).toString();" is 132.,125
+naver_yobi,utils,BasicAuthAction,parseCredentials,Magic Number,The method contains a magic number: 6,49
+naver_yobi,utils,Markdown,checkReferrer,Empty catch clause,The method has an empty catch block.,95
+naver_yobi,utils,Markdown,renderWithHighlight,Long Statement,The length of the statement "Object options=engine.eval("new Object({gfm: true` tables: true` breaks: " + breaks + "` "+ "pedantic: false` sanitize: false` smartLists: true`"+ "highlight : function(sCode` sLang) { "+ "if(sLang) { try { return hljs.highlight(sLang.toLowerCase()` sCode).value;"+ " } catch(oException) { return sCode; } } }});");" is 315.,133
+naver_yobi,utils,Markdown,renderByMarked,Magic Number,The method contains a magic number: 5000,149
+naver_yobi,utils,Markdown,render,Long Statement,The length of the statement "Object options=engine.eval("new Object({gfm: true` tables: true` breaks: true` " + "pedantic: false` sanitize: false` smartLists: true});");" is 140.,187
+naver_yobi,utils,MD5Util,hex,Magic Number,The method contains a magic number: 0xFF,30
+naver_yobi,utils,MD5Util,hex,Magic Number,The method contains a magic number: 0x100,30
+naver_yobi,utils,MD5Util,hex,Magic Number,The method contains a magic number: 3,30
+naver_yobi,utils,MD5Util,md5Hex,Empty catch clause,The method has an empty catch block.,38
+naver_yobi,utils,MD5Util,md5Hex,Empty catch clause,The method has an empty catch block.,38
+naver_yobi,utils,GravatarUtilTest,getAvatar,Long Statement,The length of the statement "assertThat(result).isEqualTo("http://www.gravatar.com/avatar/d3a3e1e76decd8760aaf9af6ab334264?s=80&d=http%3A%2F%2Fko.gravatar.com%2Fuserimage%2F53495145%2F0eaeeb47c620542ad089f17377298af6.png");" is 194.,29
+naver_yobi,utils,GravatarUtilTest,getAvatarWithSize,Magic Number,The method contains a magic number: 40,41
+naver_yobi,utils,BasicAuthActionTest,parseCredentials,Empty catch clause,The method has an empty catch block.,63
+naver_yobi,utils,BasicAuthActionTest,call,Long Statement,The length of the statement "assertThat(context.session()).includes(entry(UserApp.SESSION_USERID`String.valueOf(user.id))`entry(UserApp.SESSION_LOGINID`user.loginId)`entry(UserApp.SESSION_USERNAME`user.name));" is 180.,126
+naver_yobi,utils,AccessControlTest,isAllowed_lostProject,Empty catch clause,The method has an empty catch block.,90
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.ISSUE_POST)).describedAs("ISSUE_POST").isTrue();" is 144.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.BOARD_POST)).describedAs("BOARD_POST").isTrue();" is 144.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.COMMENT_THREAD)).describedAs("COMMENT_THREAD").isTrue();" is 152.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.ATTACHMENT)).describedAs("ATTACHMENT").isTrue();" is 144.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.COMMIT)).describedAs("COMMIT").isTrue();" is 136.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.COMMIT_COMMENT)).describedAs("COMMIT_COMMENT").isTrue();" is 152.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.MILESTONE)).describedAs("MILESTONE").isTrue();" is 142.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.LABEL)).describedAs("LABEL").isTrue();" is 134.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.CODE)).describedAs("CODE").isTrue();" is 132.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.PULL_REQUEST)).describedAs("PULL_REQUEST").isTrue();" is 148.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.ISSUE_COMMENT)).describedAs("ISSUE_COMMENT").isTrue();" is 150.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.ISSUE_STATE)).describedAs("ISSUE_STATE").isTrue();" is 146.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`protectedProject.asResource()`ResourceType.ISSUE_ASSIGNEE)).describedAs("ISSUE_ASSIGNEE").isTrue();" is 152.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.ISSUE_POST)).describedAs("ISSUE_POST").isTrue();" is 141.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.BOARD_POST)).describedAs("BOARD_POST").isTrue();" is 141.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.COMMENT_THREAD)).describedAs("COMMENT_THREAD").isTrue();" is 149.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.ATTACHMENT)).describedAs("ATTACHMENT").isTrue();" is 141.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.COMMIT)).describedAs("COMMIT").isTrue();" is 133.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.COMMIT_COMMENT)).describedAs("COMMIT_COMMENT").isTrue();" is 149.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.MILESTONE)).describedAs("MILESTONE").isTrue();" is 139.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.LABEL)).describedAs("LABEL").isTrue();" is 131.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.CODE)).describedAs("CODE").isTrue();" is 129.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.PULL_REQUEST)).describedAs("PULL_REQUEST").isTrue();" is 145.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.ISSUE_COMMENT)).describedAs("ISSUE_COMMENT").isTrue();" is 147.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.ISSUE_STATE)).describedAs("ISSUE_STATE").isTrue();" is 143.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(doortts`publicProject.asResource()`ResourceType.ISSUE_ASSIGNEE)).describedAs("ISSUE_ASSIGNEE").isTrue();" is 149.,114
+naver_yobi,utils,AccessControlTest,isResourceCreatable_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isResourceCreatable(nori`protectedProject.asResource()`ResourceType.ISSUE_POST)).describedAs("ISSUE_POST").isFalse();" is 142.,114
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(doortts`protectedProject.asResource()`Operation.READ)).describedAs("doortts can read protected protectedProject").isTrue();" is 158.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(nori`protectedProject.asResource()`Operation.READ)).describedAs("nori cann't read protected protectedProject").isFalse();" is 156.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(doortts`protectedIssue.asResource()`Operation.UPDATE)).describedAs("doortts can update protectedIssue").isTrue();" is 148.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(doortts`protectedIssue.asResource()`Operation.DELETE)).describedAs("doortts can delete protectedIssue").isTrue();" is 148.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(nori`protectedIssue.asResource()`Operation.UPDATE)).describedAs("nori can update protectedIssue").isTrue();" is 142.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(nori`protectedIssue.asResource()`Operation.DELETE)).describedAs("nori can delete protectedIssue").isTrue();" is 142.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(laziel`protectedIssue.asResource()`Operation.UPDATE)).describedAs("laziel cann't update protectedIssue").isFalse();" is 150.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(laziel`protectedIssue.asResource()`Operation.DELETE)).describedAs("laziel cann't delete protectedIssue").isFalse();" is 150.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(doortts`publicIssue.asResource()`Operation.UPDATE)).describedAs("doortts can update publicIssue").isTrue();" is 142.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(doortts`publicIssue.asResource()`Operation.DELETE)).describedAs("doortts can delete publicIssue").isTrue();" is 142.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(nori`publicIssue.asResource()`Operation.UPDATE)).describedAs("nori can update publicIssue").isTrue();" is 136.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(nori`publicIssue.asResource()`Operation.DELETE)).describedAs("nori can delete publicIssue").isTrue();" is 136.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(laziel`publicIssue.asResource()`Operation.UPDATE)).describedAs("laziel cann't update publicIssue").isFalse();" is 144.,157
+naver_yobi,utils,AccessControlTest,isAllowed_resource_to_group_member,Long Statement,The length of the statement "assertThat(AccessControl.isAllowed(laziel`publicIssue.asResource()`Operation.DELETE)).describedAs("laziel cann't delete publicIssue").isFalse();" is 144.,157
+naver_yobi,utils,PullRequestCommitTest,create,Magic Number,The method contains a magic number: 897,38
+naver_yobi,(default package),Global,initConfig,Long Statement,The length of the statement "return new Configuration(ConfigFactory.load(classloader`ConfigFactory.parseFileAnySyntax(configFile.getPath().toFile())));" is 122.,85
+naver_yobi,(default package),Global,getConfigSecretAction,Complex Method,Cyclomatic complexity of the method is 10,206
+naver_yobi,(default package),Global,getConfigSecretAction,Magic Number,The method contains a magic number: 130,206
+naver_yobi,(default package),Global,getConfigSecretAction,Magic Number,The method contains a magic number: 32,206
+naver_yobi,(default package),Global,updateSiteSecretKey,Magic Number,The method contains a magic number: 130,241
+naver_yobi,(default package),Global,updateSiteSecretKey,Magic Number,The method contains a magic number: 32,241
+naver_yobi,(default package),Global,onError,Long Statement,The length of the statement "return Promise.pure((Result)Results.internalServerError(views.html.error.internalServerError_default.render(messageKey)));" is 122.,306
+naver_yobi,controllers,MilestoneApp,milestones,Long Statement,The length of the statement "List<Milestone> milestones=Milestone.findMilestones(project.id`State.getValue(mCondition.state)`mCondition.orderBy`Direction.getValue(mCondition.orderDir));" is 156.,62
+naver_yobi,controllers,MilestoneApp,deleteMilestone,Magic Number,The method contains a magic number: 204,177
+naver_yobi,controllers,PasswordResetApp,sendPasswordResetMail,Long Statement,The length of the statement "email.setFrom(sender).setSubject("[" + utils.Config.getSiteName() + "] "+ Messages.get("site.resetPasswordEmail.title")).addTo(user.email).setMsg(Messages.get("site.resetPasswordEmail.mailContents") + "\n\n" + resetPasswordUrl).setCharset("utf-8");" is 248.,76
+naver_yobi,controllers,AbstractPostingApp,delete,Magic Number,The method contains a magic number: 204,70
+naver_yobi,controllers,AbstractPostingApp,editPosting,Long Parameter List,The method has 5 parameters. ,85
+naver_yobi,controllers,AbstractPostingApp,attachUploadFilesToPost,Long Statement,The length of the statement "flash(Constants.DESCRIPTION`Messages.get("post.popup.fileAttach.hasMissing.description"`getTemporaryFilesServerKeepUpTimeOfMinuntes()));" is 136.,124
+naver_yobi,controllers,AbstractPostingApp,getTemporaryFilesServerKeepUpTimeOfMinuntes,Magic Number,The method contains a magic number: 60,136
+naver_yobi,controllers,AbstractPostingApp,getTemporaryFilesServerKeepUpTimeOfMinuntes,Magic Number,The method contains a magic number: 1000l,136
+naver_yobi,controllers,ProjectApp,getTitleMessage,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1276205c,124
+naver_yobi,controllers,ProjectApp,getProjectHistory,Empty catch clause,The method has an empty catch block.,136
+naver_yobi,controllers,ProjectApp,getProjectHistory,Long Identifier,The length of the field RECENT_PULL_REQUEST_SHOW_LIMIT is 30.,136
+naver_yobi,controllers,ProjectApp,newProject,Complex Conditional,The conditional expression (!AccessControl.isGlobalResourceCreatable(user)) || (Organization.isNameExist(owner) && !OrganizationUser.isAdmin(organization.id`user.id)) is complex.,173
+naver_yobi,controllers,ProjectApp,newProject,Long Statement,The length of the statement "if ((!AccessControl.isGlobalResourceCreatable(user)) || (Organization.isNameExist(owner) && !OrganizationUser.isAdmin(organization.id`user.id))) {" is 146.,173
+naver_yobi,controllers,ProjectApp,saveProjectMenuSetting,Long Identifier,The length of the identifier filledUpdatedProjectMenuSettingForm is 35.,278
+naver_yobi,controllers,ProjectApp,validateWhenUpdate,Complex Method,Cyclomatic complexity of the method is 8,293
+naver_yobi,controllers,ProjectApp,deleteProject,Magic Number,The method contains a magic number: 204,337
+naver_yobi,controllers,ProjectApp,members,Long Statement,The length of the statement "return ok(views.html.project.members.render("title.projectMembers"`ProjectUser.findMemberListByProject(project.id)`project`Role.findProjectRoles()));" is 149.,352
+naver_yobi,controllers,ProjectApp,getMentionIssueList,Long Statement,The length of the statement "return Issue.finder.where().eq("project.id"`project.isForkedFromOrigin() ? project.originalProject.id : project.id).orderBy("createdDate desc").setMaxRows(ISSUE_MENTION_SHOW_LIMIT).findList();" is 192.,436
+naver_yobi,controllers,ProjectApp,transferProject,Complex Conditional,The conditional expression (!destOwner.isAnonymous() && destOwner.equals(projectOwner)) || (projectOrg != null && projectOrg.equals(destOrg)) is complex.,527
+naver_yobi,controllers,ProjectApp,transferProject,Long Statement,The length of the statement "if ((!destOwner.isAnonymous() && destOwner.equals(projectOwner)) || (projectOrg != null && projectOrg.equals(destOrg))) {" is 121.,527
+naver_yobi,controllers,ProjectApp,transferProject,Magic Number,The method contains a magic number: 204,527
+naver_yobi,controllers,ProjectApp,sendTransferRequestMail,Long Statement,The length of the statement "String message=Messages.get("transfer.message.hello"`pt.destination) + "\n\n" + Messages.get("transfer.message.detail"`pt.project.name`pt.newProjectName`pt.project.owner`pt.destination)+ "\n"+ Messages.get("transfer.message.link")+ "\n\n"+ acceptUrl+ "\n\n"+ Messages.get("transfer.message.deadline")+ "\n\n"+ Messages.get("transfer.message.thank");" is 349.,651
+naver_yobi,controllers,ProjectApp,addCodeCommenters,Long Statement,The length of the statement "List<ReviewComment> comments=ReviewComment.find.fetch("thread").where().eq("thread.commitId"`commitId).eq("thread.project"`project).eq("thread.pullRequest"`null).findList();" is 173.,693
+naver_yobi,controllers,ProjectApp,collectAuthorAndCommenter,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@29855559,741
+naver_yobi,controllers,ProjectApp,deleteMember,Long Statement,The length of the statement "if (!UserApp.currentUser().id.equals(userId) && !AccessControl.isAllowed(UserApp.currentUser()`project.asResource()`Operation.UPDATE)) {" is 136.,875
+naver_yobi,controllers,CommentApp,delete,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7cc47585,35
+naver_yobi,controllers,EnrollOrganizationApp,enroll,Long Statement,The length of the statement "representationData.put("statusMonitorUrl"`"http://" + request().host() + routes.OrganizationApp.organization(organizationName).url());" is 134.,40
+naver_yobi,controllers,EnrollOrganizationApp,cancelEnroll,Long Statement,The length of the statement "representationData.put("statusMonitorUrl"`"http://" + request().host() + routes.OrganizationApp.organization(organizationName).url());" is 134.,75
+naver_yobi,controllers,AttachmentApp,logIfOriginFileIsNotValid,Long Statement,The length of the statement "Logger.error("The origin file '" + hash + "' cannot be "+ "found even if the file is still referred by some"+ "attachments.");" is 126.,186
+naver_yobi,controllers,AttachmentApp,logIfOriginFileIsNotValid,Long Statement,The length of the statement "Logger.warn("The attachment is removed successfully` but its " + "origin file '" + hash + "' still exists abnormally even if the file "+ "referred by nowhere.");" is 161.,186
+naver_yobi,controllers,UserApp,loginByFormRequest,Complex Method,Cyclomatic complexity of the method is 8,135
+naver_yobi,controllers,UserApp,collectDatum,Long Parameter List,The method has 6 parameters. ,518
+naver_yobi,controllers,UserApp,editUserInfoByTabForm,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@23487a50,565
+naver_yobi,controllers,UserApp,editUserInfo,Empty catch clause,The method has an empty catch block.,611
+naver_yobi,controllers,UserApp,addEmail,Complex Conditional,The conditional expression User.isEmailExist(newEmail) || Email.exists(newEmail`true) || currentUser.has(newEmail) is complex.,699
+naver_yobi,controllers,UserApp,deleteEmail,Complex Conditional,The conditional expression currentUser == null || currentUser.isAnonymous() || email == null is complex.,730
+naver_yobi,controllers,UserApp,sendValidationEmail,Complex Conditional,The conditional expression currentUser == null || currentUser.isAnonymous() || email == null is complex.,747
+naver_yobi,controllers,UserApp,setAsMainEmail,Complex Conditional,The conditional expression currentUser == null || currentUser.isAnonymous() || email == null is complex.,782
+naver_yobi,controllers,UserApp,validate,Long Statement,The length of the statement "if (User.isLoginIdExist(newUserForm.field("loginId").value()) || Organization.isNameExist(newUserForm.field("loginId").value())) {" is 130.,837
+naver_yobi,controllers,UserApp,updatePreferredLanguage,Magic Number,The method contains a magic number: 255,880
+naver_yobi,controllers,UserApp,resetUserPasswordBySiteManager,Magic Number,The method contains a magic number: 6,904
+naver_yobi,controllers,LabelApp,categories,Long Statement,The length of the statement "sqlCountQuery=Ebean.createSqlQuery("SELECT COUNT(*) AS cnt FROM (" + sqlString + ")").setParameter("category"`"%" + query.toLowerCase() + "%");" is 143.,75
+naver_yobi,controllers,SvnApp,service,Magic Number,The method contains a magic number: 3,73
+naver_yobi,controllers,SvnApp,service,Magic Number,The method contains a magic number: 3,73
+naver_yobi,controllers,SvnApp,service,Magic Number,The method contains a magic number: 2,73
+naver_yobi,controllers,SvnApp,service,Magic Number,The method contains a magic number: 2,73
+naver_yobi,controllers,SvnApp,startDavService,Magic Number,The method contains a magic number: 500,140
+naver_yobi,controllers,SvnApp,run,Magic Number,The method contains a magic number: 500,148
+naver_yobi,controllers,SvnApp,sendResponse,Complex Conditional,The conditional expression statusCode < 200 || statusCode == 204 || statusCode == 304 || requestMethod.toUpperCase().equals("HEAD") is complex.,165
+naver_yobi,controllers,SvnApp,sendResponse,Magic Number,The method contains a magic number: 200,165
+naver_yobi,controllers,SvnApp,sendResponse,Magic Number,The method contains a magic number: 204,165
+naver_yobi,controllers,SvnApp,sendResponse,Magic Number,The method contains a magic number: 304,165
+naver_yobi,controllers,SvnApp,sendResponse,Magic Number,The method contains a magic number: 205,165
+naver_yobi,controllers,SvnApp,getRequestedOperation,Complex Conditional,The conditional expression DAVHandlerFactory.METHOD_OPTIONS.equals(method) || DAVHandlerFactory.METHOD_PROPFIND.equals(method) || DAVHandlerFactory.METHOD_GET.equals(method)|| DAVHandlerFactory.METHOD_REPORT.equals(method) is complex.,183
+naver_yobi,controllers,SvnApp,getRequestedOperation,Long Statement,The length of the statement "if (DAVHandlerFactory.METHOD_OPTIONS.equals(method) || DAVHandlerFactory.METHOD_PROPFIND.equals(method) || DAVHandlerFactory.METHOD_GET.equals(method)|| DAVHandlerFactory.METHOD_REPORT.equals(method)) {" is 202.,183
+naver_yobi,controllers,BoardApp,newPostForm,Long Statement,The length of the statement "boolean isAllowedToNotice=AccessControl.isProjectResourceCreatable(UserApp.currentUser()`project`ResourceType.BOARD_NOTICE);" is 124.,95
+naver_yobi,controllers,BoardApp,newPost,Long Statement,The length of the statement "boolean isAllowedToNotice=AccessControl.isProjectResourceCreatable(UserApp.currentUser()`project`ResourceType.BOARD_NOTICE);" is 124.,119
+naver_yobi,controllers,BoardApp,editPost,Long Statement,The length of the statement "boolean isAllowedToNotice=AccessControl.isProjectResourceCreatable(UserApp.currentUser()`project`ResourceType.BOARD_NOTICE);" is 124.,210
+naver_yobi,controllers,BoardApp,editPost,Long Statement,The length of the statement "return badRequest(edit.render("error.validation"`postForm`Posting.findByNumber(project`number)`number`project`isAllowedToNotice));" is 130.,210
+naver_yobi,controllers,SiteApp,mailList,Complex Method,Cyclomatic complexity of the method is 9,208
+naver_yobi,controllers,SearchApp,searchInAll,Complex Method,Cyclomatic complexity of the method is 11,39
+naver_yobi,controllers,SearchApp,searchInAGroup,Complex Conditional,The conditional expression StringUtils.isEmpty(organizationName) || StringUtils.isEmpty(keyword) || StringUtils.isEmpty(searchTypeValue) is complex.,107
+naver_yobi,controllers,SearchApp,searchInAGroup,Complex Method,Cyclomatic complexity of the method is 11,107
+naver_yobi,controllers,SearchApp,searchInAProject,Complex Conditional,The conditional expression StringUtils.isEmpty(keyword) || StringUtils.isEmpty(searchTypeValue) || project == null is complex.,180
+naver_yobi,controllers,SearchApp,searchInAProject,Complex Method,Cyclomatic complexity of the method is 10,180
+naver_yobi,controllers,CodeHistoryApp,show,Long Statement,The length of the statement "List<CommitComment> comments=CommitComment.find.where().eq("commitId"`commitId).eq("project.id"`project.id).order("createdDate").findList();" is 140.,94
+naver_yobi,controllers,ImportApp,saveProjectMenuSetting,Long Identifier,The length of the identifier filledUpdatedProjectMenuSettingForm is 35.,119
+naver_yobi,controllers,CommentThreadApp,updateState,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1fcaa5,38
+naver_yobi,controllers,WatchApp,unwatch,Long Statement,The length of the statement "return forbidden(views.html.error.forbidden.render(Messages.get("issue.error.unwatch.anonymous")`resource.getProject()));" is 121.,56
+naver_yobi,controllers,WatchApp,unwatch,Long Statement,The length of the statement "return forbidden(views.html.error.forbidden.render(Messages.get("issue.error.unwatch.permission")`resource.getProject()));" is 122.,56
+naver_yobi,controllers,WatchApp,getUnwatchMessage,Complex Method,Cyclomatic complexity of the method is 8,87
+naver_yobi,controllers,WatchApp,getUnwatchMessage,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3b37862,87
+naver_yobi,controllers,OrganizationApp,validateForDeleteMember,Long Statement,The length of the statement "if (!AccessControl.isAllowed(currentUser`organization.asResource()`Operation.UPDATE) && !currentUser.id.equals(userId)) {" is 121.,181
+naver_yobi,controllers,OrganizationApp,validateForUpdate,Complex Method,Cyclomatic complexity of the method is 8,358
+naver_yobi,controllers,CodeApp,codeBrowser,Magic Number,The method contains a magic number: 3,54
+naver_yobi,controllers,CodeApp,codeBrowser,Magic Number,The method contains a magic number: 3,54
+naver_yobi,controllers,CodeApp,codeBrowser,Magic Number,The method contains a magic number: 2,54
+naver_yobi,controllers,PullRequestApp,newPullRequestForm,Long Statement,The length of the statement "return badRequest(ErrorViews.BadRequest.render("error.pullRequest.empty.from.repository"`fromProject`MenuType.PULL_REQUEST));" is 125.,162
+naver_yobi,controllers,PullRequestApp,newPullRequestForm,Long Statement,The length of the statement "final PullRequest pullRequest=PullRequest.createNewPullRequest(fromProject`toProject`StringUtils.defaultIfBlank(request().getQueryString("fromBranch")`fromBranches.get(0).getName())`StringUtils.defaultIfBlank(request().getQueryString("toBranch")`project.defaultBranch()));" is 272.,162
+naver_yobi,controllers,PullRequestApp,newPullRequestForm,Long Statement,The length of the statement "return ok(create.render("title.newPullRequest"`new Form<>(PullRequest.class).fill(pullRequest)`project`projects`fromProject`toProject`fromBranches`toBranches`pullRequest));" is 172.,162
+naver_yobi,controllers,PullRequestApp,getSelectedProject,Complex Conditional,The conditional expression isToProject && project.isForkedFromOrigin() && project.originalProject.menuSetting.code&& project.originalProject.menuSetting.pullRequest is complex.,194
+naver_yobi,controllers,PullRequestApp,getSelectedProject,Long Statement,The length of the statement "if (isToProject && project.isForkedFromOrigin() && project.originalProject.menuSetting.code&& project.originalProject.menuSetting.pullRequest) {" is 144.,194
+naver_yobi,controllers,PullRequestApp,mergeResult,Long Statement,The length of the statement "final PullRequest pullRequest=PullRequest.createNewPullRequest(fromProject`toProject`StringUtils.defaultIfBlank(request().getQueryString("fromBranch")`fromBranches.get(0).getName())`StringUtils.defaultIfBlank(request().getQueryString("toBranch")`toBranches.get(0).getName()));" is 276.,208
+naver_yobi,controllers,PullRequestApp,newPullRequest,Long Statement,The length of the statement "return ok(create.render("title.newPullRequest"`new Form<>(PullRequest.class)`project`null`null`null`fromBranches`toBranches`null));" is 131.,235
+naver_yobi,controllers,PullRequestApp,newPullRequest,Long Statement,The length of the statement "return redirect(routes.PullRequestApp.pullRequest(pullRequest.toProject.owner`pullRequest.toProject.name`sentRequest.number));" is 126.,235
+naver_yobi,controllers,PullRequestApp,newPullRequest,Long Statement,The length of the statement "Call pullRequestCall=routes.PullRequestApp.pullRequest(pullRequest.toProject.owner`pullRequest.toProject.name`pullRequest.number);" is 130.,235
+naver_yobi,controllers,PullRequestApp,newPullRequest,Long Statement,The length of the statement "PullRequestEventMessage message=new PullRequestEventMessage(UserApp.currentUser()`request()`pullRequest`notiEvent.eventType);" is 125.,235
+naver_yobi,controllers,PullRequestApp,accept,Long Statement,The length of the statement "final PullRequestEventMessage message=new PullRequestEventMessage(UserApp.currentUser()`request()`project`pullRequest.toBranch);" is 128.,385
+naver_yobi,controllers,PullRequestApp,newComment,Complex Method,Cyclomatic complexity of the method is 9,555
+naver_yobi,controllers,IssueApp,userIssues,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5c845dcc,57
+naver_yobi,controllers,IssueApp,issues,Long Parameter List,The method has 5 parameters. ,94
+naver_yobi,controllers,IssueApp,issues,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3c7e26f6,94
+naver_yobi,controllers,IssueApp,getItemsPerPage,Empty catch clause,The method has an empty catch block.,130
+naver_yobi,controllers,IssueApp,issuesAsExcel,Long Statement,The length of the statement "String filename=HttpUtil.encodeContentDisposition(project.name + "_issues_" + JodaDateUtil.today().getTime()+ "."+ EXCEL_EXT);" is 126.,152
+naver_yobi,controllers,IssueApp,issue,Magic Number,The method contains a magic number: 1000,208
+naver_yobi,controllers,IssueApp,massUpdate,Complex Method,Cyclomatic complexity of the method is 22,272
+naver_yobi,controllers,IssueApp,massUpdate,Long Method,The method has 100 lines of code.,272
+naver_yobi,controllers,IssueApp,newComment,Long Statement,The length of the statement "IssueEvent.addFromNotificationEvent(NotificationEvent.afterStateChanged(issue.previousState()`issue)`issue`UserApp.currentUser().loginId);" is 138.,572
+naver_yobi,controllers,GitApp,isCharsetAllowed,Magic Number,The method contains a magic number: 2,62
+naver_yobi,controllers,GitApp,service,Complex Method,Cyclomatic complexity of the method is 9,82
+naver_yobi,controllers,ReviewThreadAppTest,projectForbidden,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ReviewThreadApp.reviewThreads("laziel"`"Jindo")`fakeRequest(GET`"pageNum=1&state=OPEN&orderDir=desc&orderBy=createdDate"));" is 171.,63
+naver_yobi,controllers,UserAppTest,login_notComfirmedUser,Magic Number,The method contains a magic number: 31l,127
+naver_yobi,controllers,UserAppTest,login_notComfirmedUser,Magic Number,The method contains a magic number: 303,127
+naver_yobi,controllers,UserAppTest,newUser_confirmSignUpMode,Magic Number,The method contains a magic number: 303,172
+naver_yobi,controllers,UserAppTest,login,Long Statement,The length of the statement "assertThat(session(result)).includes(entry(UserApp.SESSION_USERID`String.valueOf(user.id))`entry(UserApp.SESSION_LOGINID`user.loginId)`entry(UserApp.SESSION_USERNAME`user.name));" is 178.,293
+naver_yobi,controllers,UserAppTest,currentUserToken,Long Statement,The length of the statement "assertThat(context.session()).includes(entry(UserApp.SESSION_USERID`String.valueOf(user.id))`entry(UserApp.SESSION_LOGINID`user.loginId)`entry(UserApp.SESSION_USERNAME`user.name));" is 180.,388
+naver_yobi,controllers,ProjectAppTest,label,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.attachLabel(user`projectName)`fakeRequest(POST`routes.ProjectApp.attachLabel(user`projectName).url()).withFormUrlEncodedBody(data).withHeader("Accept"`"application/json").withSession(UserApp.SESSION_USERID`admin.id.toString()));" is 287.,64
+naver_yobi,controllers,ProjectAppTest,labels,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.labels(user`projectName)`fakeRequest(GET`routes.ProjectApp.labels(user`projectName).url()).withHeader("Accept"`"application/json"));" is 191.,95
+naver_yobi,controllers,ProjectAppTest,detachLabel,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.detachLabel(user`projectName`labelId)`fakeRequest(POST`routes.ProjectApp.detachLabel(user`projectName`labelId).url()).withFormUrlEncodedBody(data).withHeader("Accept"`"application/json").withSession(UserApp.SESSION_USERID`admin.id.toString()));" is 303.,135
+naver_yobi,controllers,ProjectAppTest,detachLabel,Magic Number,The method contains a magic number: 204,135
+naver_yobi,controllers,ProjectAppTest,projectOverviewUpdateTest,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.projectOverviewUpdate("yobi"`"projectYobi")`fakeRequest(PUT`"/yobi/projectYobi").withJsonBody(requestJson).withHeader("Accept"`"application/json").withHeader("Content-Type"`"application/json").withSession(UserApp.SESSION_USERID`member.id.toString()));" is 310.,167
+naver_yobi,controllers,ProjectAppTest,projectOverviewUpdateTest,Magic Number,The method contains a magic number: 200,167
+naver_yobi,controllers,ProjectAppTest,deletePushedBranch,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.deletePushedBranch(project.owner`project.name`id)`fakeRequest(DELETE`"/yobi/projectYobi/deletePushedBranch/" + id).withSession(UserApp.SESSION_USERID`User.findByLoginId(loginId).id.toString()));" is 253.,194
+naver_yobi,controllers,ProjectAppTest,memberCanSearchPrivateProjects,Magic Number,The method contains a magic number: 3L,267
+naver_yobi,controllers,ProjectAppTest,memberCanSearchPrivateProjectsAsJson,Magic Number,The method contains a magic number: 3L,278
+naver_yobi,controllers,ProjectAppTest,memberCanSearchPublicProjects,Magic Number,The method contains a magic number: 2L,289
+naver_yobi,controllers,ProjectAppTest,memberCanSearchPublicProjectsAsJson,Magic Number,The method contains a magic number: 2L,300
+naver_yobi,controllers,ProjectAppTest,anonymousCannotSearchPrivateProjects,Long Statement,The length of the statement "testProjectSearch(anonymous`project`acceptHtml`doesNotContains(routes.ProjectApp.project(project.owner`project.name).url()));" is 125.,311
+naver_yobi,controllers,ProjectAppTest,delete,Magic Number,The method contains a magic number: 2L,355
+naver_yobi,controllers,ProjectAppTest,testProjectSearch,Long Statement,The length of the statement "Result result=callAction(routes.ref.ProjectApp.projects(query`1)`fakeRequest().withHeader(Http.HeaderNames.ACCEPT`accept).withSession(UserApp.SESSION_USERID`user.id.toString()));" is 178.,369
+naver_yobi,controllers,ProjectAppTest,testTransferProject,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.transferProject(project.owner`project.name)`fakeRequest(PUT`routes.ProjectApp.transferProject(project.owner`project.name).url() + "?owner=" + newOwner.loginId).withSession(UserApp.SESSION_USERID`oldOwner.id.toString()));" is 279.,385
+naver_yobi,controllers,ProjectAppTest,testTransferProject,Long Statement,The length of the statement "ProjectTransfer pt=ProjectTransfer.find.where().eq("project"`project).eq("sender"`oldOwner).eq("destination"`newOwner.loginId).findUnique();" is 140.,385
+naver_yobi,controllers,ProjectAppTest,testTransferProject,Magic Number,The method contains a magic number: 303,385
+naver_yobi,controllers,ProjectAppTest,testTransferProjectToWrongUser,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.transferProject(project.owner`project.name)`fakeRequest(PUT`routes.ProjectApp.transferProject(project.owner`project.name).url() + "?owner=" + newOwner.loginId).withSession(UserApp.SESSION_USERID`oldOwner.id.toString()));" is 279.,417
+naver_yobi,controllers,ProjectAppTest,testTransferProjectToWrongUser,Magic Number,The method contains a magic number: 400,417
+naver_yobi,controllers,ProjectAppTest,testAcceptTransfer,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.acceptTransfer(pt.id`pt.confirmKey)`fakeRequest(PUT`routes.ProjectApp.acceptTransfer(pt.id`pt.confirmKey).url()).withSession(UserApp.SESSION_USERID`newOwner.id.toString()));" is 232.,438
+naver_yobi,controllers,ProjectAppTest,testAcceptTransfer,Magic Number,The method contains a magic number: 303,438
+naver_yobi,controllers,ProjectAppTest,testAcceptTransferWithWrongKey,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.ProjectApp.acceptTransfer(pt.id`"wrongKey")`fakeRequest(PUT`routes.ProjectApp.acceptTransfer(pt.id`"wrongKey").url()).withSession(UserApp.SESSION_USERID`newOwner.id.toString()));" is 226.,464
+naver_yobi,controllers,ProjectAppTest,testAcceptTransferWithWrongKey,Magic Number,The method contains a magic number: 400,464
+naver_yobi,controllers,PullRequestAppTest,testCloseAnonymous,Magic Number,The method contains a magic number: 10L,85
+naver_yobi,controllers,PullRequestAppTest,testCloseNotExistProject,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.close(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/pullRequest/"+ pullRequestNumber).withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 269.,95
+naver_yobi,controllers,PullRequestAppTest,testCloseNotExistProject,Magic Number,The method contains a magic number: 10L,95
+naver_yobi,controllers,PullRequestAppTest,testCloseNotExistPullRequest,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.close(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/pullRequest/"+ pullRequestNumber).withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 269.,109
+naver_yobi,controllers,PullRequestAppTest,testCloseNotExistPullRequest,Magic Number,The method contains a magic number: 10L,109
+naver_yobi,controllers,PullRequestAppTest,testClosePullRequest,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.close(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/pullRequest/"+ pullRequestNumber).withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 269.,123
+naver_yobi,controllers,PullRequestAppTest,testClosePullRequestNotAllow,Long Statement,The length of the statement "callAction(controllers.routes.ref.PullRequestApp.open(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/pullRequest/"+ pullRequestNumber).withSession(UserApp.SESSION_USERID`projectOwner.id.toString()));" is 255.,138
+naver_yobi,controllers,PullRequestAppTest,testClosePullRequestNotAllow,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.close(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/pullRequest/"+ pullRequestNumber).withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 269.,138
+naver_yobi,controllers,PullRequestAppTest,testOpenAnonymous,Magic Number,The method contains a magic number: 10L,160
+naver_yobi,controllers,PullRequestAppTest,testOpenPullRequestBadRequest,Long Statement,The length of the statement "callAction(controllers.routes.ref.PullRequestApp.open(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`uri).withSession(UserApp.SESSION_USERID`projectOwner.id.toString()));" is 185.,170
+naver_yobi,controllers,PullRequestAppTest,testOpenPullRequestBadRequest,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.open(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`uri).withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 198.,170
+naver_yobi,controllers,PullRequestAppTest,testOpenPullRequest,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.open(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/pullRequest/"+ pullRequestNumber).withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 268.,194
+naver_yobi,controllers,PullRequestAppTest,testOpenPullRequest,Long Statement,The length of the statement "assertThat(PushedBranch.find.where().eq("project"`pullRequest.fromProject).eq("name"`pullRequest.fromBranch).findUnique()).isNull();" is 132.,194
+naver_yobi,controllers,PullRequestAppTest,testAcceptAnonymous,Magic Number,The method contains a magic number: 10L,220
+naver_yobi,controllers,PullRequestAppTest,testNewForkByAdmin,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.newFork(ownerLoginId`projectName`null)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/newFork").withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 234.,230
+naver_yobi,controllers,PullRequestAppTest,testNewForkByMember,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.newFork(ownerLoginId`projectName`null)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/newFork").withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 234.,244
+naver_yobi,controllers,PullRequestAppTest,testNewForkByNotMember,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.newFork(ownerLoginId`projectName`null)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/newFork").withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 234.,259
+naver_yobi,controllers,PullRequestAppTest,testNewForkPrivateProjectAndNotMember,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.newFork(ownerLoginId`projectName`null)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/newFork").withSession(UserApp.SESSION_USERID`currentUser.id.toString()));" is 234.,273
+naver_yobi,controllers,PullRequestAppTest,testForkAlreadyExistForkProject,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.fork(ownerLoginId`projectName)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/fork").withSession(UserApp.SESSION_USERID`currentUser.id.toString()).withFormUrlEncodedBody(data));" is 252.,287
+naver_yobi,controllers,PullRequestAppTest,testForkSampleName,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.PullRequestApp.fork(ownerLoginId`projectName)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/fork").withSession(UserApp.SESSION_USERID`currentUser.id.toString()).withFormUrlEncodedBody(data));" is 252.,307
+naver_yobi,controllers,PullRequestAppTest,testOpenRoute,Long Statement,The length of the statement "callAction(controllers.routes.ref.PullRequestApp.open(ownerLoginId`projectName`pullRequestNumber)`fakeRequest("GET"`"/" + ownerLoginId + "/"+ projectName+ "/pullRequest/"+ pullRequestNumber).withSession(UserApp.SESSION_USERID`projectOwner.id.toString()));" is 255.,353
+naver_yobi,controllers,CommentAppTest,commentByMember,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.IssueApp.newComment(projectOwner`projectName`issue.getNumber())`fakeRequest(POST`routes.IssueApp.newComment(projectOwner`projectName`issue.getNumber()).url()).withFormUrlEncodedBody(data).withSession(UserApp.SESSION_USERID`member.getId().toString()));" is 299.,100
+naver_yobi,controllers,PasswordResetAppTest,testRequestResetPassword_validLoginIdAndEmailAddress,Long Statement,The length of the statement "Result result=callAction(routes.ref.PasswordResetApp.requestResetPasswordEmail()`fakeRequest().withFormUrlEncodedBody(data));" is 125.,34
+naver_yobi,controllers,PasswordResetAppTest,run,Long Statement,The length of the statement "Result result=callAction(routes.ref.PasswordResetApp.requestResetPasswordEmail()`fakeRequest().withFormUrlEncodedBody(data));" is 125.,40
+naver_yobi,controllers,MarkdownAppTest,createCommit,Long Statement,The length of the statement "git.push().setRemote(GitRepository.getGitDirectoryURL(proejct)).setRefSpecs(new RefSpec(branchName + ":" + branchName)).setForce(true).call();" is 142.,115
+naver_yobi,controllers,MarkdownAppTest,test_ignorePattern,Long Statement,The length of the statement "String body="<a href='#'>#" + notMatchIssue.getNumber() + "</a>\n"+ "<code>\nhttp://yobi.navercorp.com #"+ notMatchIssue.getNumber()+ " http://yobi.navercorp.com\n</code>\n"+ "<div id='#"+ notMatchIssue.getNumber()+ "'>Test</div>";" is 231.,154
+naver_yobi,controllers,MarkdownAppTest,test_ignorePattern,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(issue.getBody()));" is 137.,154
+naver_yobi,controllers,MarkdownAppTest,test_WrappedPattern,Long Statement,The length of the statement "String body="_" + testOwner.loginId + "#"+ notMatchIssue.getNumber()+ "-\n"+ "A"+ testOwner.loginId+ "#"+ notMatchIssue.getNumber()+ "AA\n";" is 140.,176
+naver_yobi,controllers,MarkdownAppTest,test_WrappedPattern,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(issue.getBody()));" is 137.,176
+naver_yobi,controllers,MarkdownAppTest,test_issueNumber,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(notMatchIssue.getBody()));" is 145.,197
+naver_yobi,controllers,MarkdownAppTest,test_issueNumber,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue1.getBody()));" is 136.,197
+naver_yobi,controllers,MarkdownAppTest,test_issueNumber,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue2.getBody()));" is 136.,197
+naver_yobi,controllers,MarkdownAppTest,test_issueNumber,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue3.getBody()));" is 136.,197
+naver_yobi,controllers,MarkdownAppTest,test_SHA,Long Statement,The length of the statement "String notMatchBody="@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2 " + "@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2 " + "nforge@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2 "+ "nforge/yobi@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2";" is 221.,259
+naver_yobi,controllers,MarkdownAppTest,test_SHA,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(notMatchIssue.getBody()));" is 145.,259
+naver_yobi,controllers,MarkdownAppTest,test_SHA,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue1.getBody()));" is 136.,259
+naver_yobi,controllers,MarkdownAppTest,test_SHA,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue2.getBody()));" is 136.,259
+naver_yobi,controllers,MarkdownAppTest,test_SHA,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue3.getBody()));" is 136.,259
+naver_yobi,controllers,MarkdownAppTest,test_SHA,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue4.getBody()));" is 136.,259
+naver_yobi,controllers,MarkdownAppTest,testMention,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(notMatchIssue.getBody()));" is 145.,342
+naver_yobi,controllers,MarkdownAppTest,testMention,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue1.getBody()));" is 136.,342
+naver_yobi,controllers,MarkdownAppTest,testMention,Long Statement,The length of the statement "result=callAction(controllers.routes.ref.MarkdownApp.render(testProject.owner`testProject.name)`makeFakeRequest(matchIssue2.getBody()));" is 136.,342
+naver_yobi,controllers,WatchProjectAppTest,testWatch_NoProject,Long Statement,The length of the statement "Result result=callAction(routes.ref.WatchProjectApp.watch(ownerName`projectName)`fakeRequest("POST"`"/" + ownerName + "/"+ projectName+ "/watch"));" is 147.,58
+naver_yobi,controllers,WatchProjectAppTest,testWatch,Long Statement,The length of the statement "FakeRequest request=fakeRequest("POST"`"/" + ownerName + "/"+ projectName+ "/watch").withSession(UserApp.SESSION_USERID`String.valueOf(userId));" is 144.,90
+naver_yobi,controllers,WatchProjectAppTest,testWatch,Magic Number,The method contains a magic number: 3L,90
+naver_yobi,controllers,WatchProjectAppTest,testUnwatch_NoProject,Long Statement,The length of the statement "Result result=callAction(routes.ref.WatchProjectApp.unwatch(ownerName`projectName)`fakeRequest("POST"`"/" + ownerName + "/"+ projectName+ "/unwatch"));" is 151.,107
+naver_yobi,controllers,WatchProjectAppTest,testUnwatch,Long Statement,The length of the statement "FakeRequest request=fakeRequest("POST"`"/" + ownerName + "/"+ projectName+ "/unwatch").withSession(UserApp.SESSION_USERID`String.valueOf(userId));" is 146.,138
+naver_yobi,controllers,WatchProjectAppTest,testUnwatch,Magic Number,The method contains a magic number: 3L,138
+naver_yobi,controllers,WatchProjectAppTest,testToggleWatchingProject,Long Statement,The length of the statement "FakeRequest request=fakeRequest("POST"`"/noti/toggle/" + projectId + "/"+ eventTypeValue).withSession(UserApp.SESSION_USERID`String.valueOf(userId));" is 149.,156
+naver_yobi,controllers,WatchProjectAppTest,testToggleUnwatchingProject,Long Statement,The length of the statement "FakeRequest request=fakeRequest("POST"`"/noti/toggle/" + projectId + "/"+ eventTypeValue).withSession(UserApp.SESSION_USERID`String.valueOf(userId));" is 149.,182
+naver_yobi,controllers,WatchProjectAppTest,testToggleUnwatchingProject,Magic Number,The method contains a magic number: 2l,182
+naver_yobi,controllers,WatchProjectAppTest,testToggleNoProject,Long Statement,The length of the statement "FakeRequest request=fakeRequest("POST"`"/noti/toggle/" + projectId + "/"+ eventTypeValue).withSession(UserApp.SESSION_USERID`String.valueOf(userId));" is 149.,204
+naver_yobi,controllers,WatchProjectAppTest,testToggleNoProject,Magic Number,The method contains a magic number: 100l,204
+naver_yobi,controllers,WatchProjectAppTest,testTogglePrivateProject,Long Statement,The length of the statement "FakeRequest request=fakeRequest("POST"`"/noti/toggle/" + projectId + "/"+ eventTypeValue).withSession(UserApp.SESSION_USERID`String.valueOf(userId));" is 149.,221
+naver_yobi,controllers,WatchProjectAppTest,testTogglePrivateProject,Magic Number,The method contains a magic number: 2l,221
+naver_yobi,controllers,WatchProjectAppTest,testTogglePrivateProject,Magic Number,The method contains a magic number: 3l,221
+naver_yobi,controllers,WatchProjectAppTest,assertProjectIsNotInUserWatchingProjects,Long Statement,The length of the statement "assertThat(Project.findByOwnerAndProjectName(ownerName`projectName)).isNotIn(User.find.byId(userId).getWatchingProjects());" is 123.,247
+naver_yobi,controllers,IssueAppTest,postBy,Long Statement,The length of the statement "return callAction(controllers.routes.ref.IssueApp.newIssue(projectOwner`projectName)`fakeRequest(POST`routes.IssueApp.newIssue(projectOwner`projectName).url()).withFormUrlEncodedBody(data).withSession(UserApp.SESSION_USERID`user.getId().toString()));" is 250.,97
+naver_yobi,controllers,IssueAppTest,editBy,Long Statement,The length of the statement "return callAction(controllers.routes.ref.IssueApp.editIssue(projectOwner`projectName`issue.getNumber())`fakeRequest(POST`routes.IssueApp.editIssue(projectOwner`projectName`issue.getNumber()).url()).withFormUrlEncodedBody(data).withSession(UserApp.SESSION_USERID`user.id.toString()));" is 283.,111
+naver_yobi,controllers,IssueAppTest,deleteBy,Long Statement,The length of the statement "return callAction(controllers.routes.ref.IssueApp.deleteIssue(projectOwner`projectName`issue.getNumber())`fakeRequest(DELETE`routes.IssueApp.deleteIssue(projectOwner`projectName`issue.getNumber()).url()).withSession(UserApp.SESSION_USERID`user.id.toString()));" is 260.,126
+naver_yobi,controllers,IssueAppTest,commentBy,Long Statement,The length of the statement "return callAction(controllers.routes.ref.IssueApp.newComment(projectOwner`projectName`issue.getNumber())`fakeRequest(POST`routes.IssueApp.newComment(projectOwner`projectName`issue.getNumber()).url()).withFormUrlEncodedBody(data).withSession(UserApp.SESSION_USERID`user.getId().toString()));" is 290.,136
+naver_yobi,controllers,IssueAppTest,watch,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.WatchApp.watch(resource.asParameter())`fakeRequest().withSession(UserApp.SESSION_USERID`nonmember.id.toString()));" is 162.,389
+naver_yobi,controllers,IssueAppTest,watch,Long Statement,The length of the statement "assertThat(issue.getWatchers().contains(nonmember)).describedAs("A user becomes a watcher if the user explictly choose to watch the issue.").isTrue();" is 150.,389
+naver_yobi,controllers,IssueAppTest,watchByAuthor,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.WatchApp.watch(resource.asParameter())`fakeRequest().withSession(UserApp.SESSION_USERID`author.id.toString()));" is 159.,411
+naver_yobi,controllers,IssueAppTest,watchByAssignee,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.WatchApp.watch(resource.asParameter())`fakeRequest().withSession(UserApp.SESSION_USERID`assignee.id.toString()));" is 161.,428
+naver_yobi,controllers,IssueAppTest,unwatch,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.WatchApp.unwatch(resource.asParameter())`fakeRequest().withSession(UserApp.SESSION_USERID`nonmember.id.toString()));" is 164.,445
+naver_yobi,controllers,IssueAppTest,unwatch,Long Statement,The length of the statement "assertThat(issue.getWatchers().contains(nonmember)).describedAs("A user becomes a unwatcher if the user explictly choose not to watch the issue.").isFalse();" is 157.,445
+naver_yobi,controllers,IssueAppTest,unwatchByAuthor,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.WatchApp.unwatch(resource.asParameter())`fakeRequest().withSession(UserApp.SESSION_USERID`author.id.toString()));" is 161.,468
+naver_yobi,controllers,IssueAppTest,unwatchByAssignee,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.WatchApp.unwatch(resource.asParameter())`fakeRequest().withSession(UserApp.SESSION_USERID`assignee.id.toString()));" is 163.,485
+naver_yobi,controllers,SiteAppTest,testToggleUserAccountLock,Long Statement,The length of the statement "Result result=callAction(controllers.routes.ref.SiteApp.toggleAccountLock(loginId`""`"")`fakeRequest(POST`routes.SiteApp.toggleAccountLock(loginId`""`"").url()).withFormUrlEncodedBody(data).withSession("loginId"`admin.loginId).withSession(UserApp.SESSION_USERID`admin.id.toString()));" is 284.,51
+naver_yobi,controllers,ImportAppTest,importFormAnonymous,Long Statement,The length of the statement "assertThat(header(LOCATION`result)).isEqualTo(routes.UserApp.loginForm().url() + "?redirectUrl=" + routes.ImportApp.importForm().url());" is 136.,71
+naver_yobi,controllers,ImportAppTest,importForm,Long Statement,The length of the statement "Result result=callAction(ref.ImportApp.importForm()`fakeRequest().withSession(UserApp.SESSION_USERID`String.valueOf(user.id)));" is 127.,84
+naver_yobi,controllers,ImportAppTest,importForm,Magic Number,The method contains a magic number: 2L,84
+naver_yobi,controllers,ImportAppTest,newProject,Long Statement,The length of the statement "Result result=callAction(ref.ImportApp.newProject()`fakeRequest().withSession(UserApp.SESSION_USERID`String.valueOf(yobi.id)).withFormUrlEncodedBody(formData));" is 160.,97
+naver_yobi,controllers,ImportAppTest,newProjectNoUrl,Long Statement,The length of the statement "Result result=callAction(ref.ImportApp.newProject()`fakeRequest().withSession(UserApp.SESSION_USERID`String.valueOf(yobi.id)).withFormUrlEncodedBody(formData).withHeader(Http.HeaderNames.ACCEPT_LANGUAGE`Lang.defaultLang().language()));" is 235.,128
+naver_yobi,controllers,ImportAppTest,newProjectDuplicatedName,Long Statement,The length of the statement "Result result=callAction(ref.ImportApp.newProject()`fakeRequest().withSession(UserApp.SESSION_USERID`String.valueOf(yobi.id)).withFormUrlEncodedBody(formData).withHeader(Http.HeaderNames.ACCEPT_LANGUAGE`Lang.defaultLang().language()));" is 235.,148
+naver_yobi,controllers,ImportAppTest,newProjectWrongName,Long Statement,The length of the statement "Result result=callAction(ref.ImportApp.newProject()`fakeRequest().withSession(UserApp.SESSION_USERID`String.valueOf(yobi.id)).withFormUrlEncodedBody(formData).withHeader(Http.HeaderNames.ACCEPT_LANGUAGE`Lang.defaultLang().language()));" is 235.,169
+naver_yobi,controllers,EnrollProjectAppTest,enrollProjectNotExist,Long Statement,The length of the statement "Result result=callAction(routes.ref.EnrollProjectApp.enroll(loginId`projectName)`fakeRequest(POST`routes.EnrollProjectApp.enroll(loginId`projectName).url()));" is 158.,49
+naver_yobi,controllers,EnrollProjectAppTest,enrollNotGuest,Long Statement,The length of the statement "Result result=callAction(routes.ref.EnrollProjectApp.enroll(project.owner`project.name)`fakeRequest(POST`routes.EnrollProjectApp.enroll(project.owner`project.name).url()).withSession(UserApp.SESSION_USERID`admin.id.toString()));" is 228.,63
+naver_yobi,controllers,EnrollProjectAppTest,enroll,Long Statement,The length of the statement "Result result=callAction(routes.ref.EnrollProjectApp.enroll(project.owner`project.name)`fakeRequest(POST`routes.EnrollProjectApp.enroll(project.owner`project.name).url()).withSession(UserApp.SESSION_USERID`user.id.toString()));" is 227.,79
+naver_yobi,controllers,EnrollProjectAppTest,enroll,Magic Number,The method contains a magic number: 6L,79
+naver_yobi,controllers,EnrollProjectAppTest,enrollDuplicated,Long Statement,The length of the statement "callAction(routes.ref.EnrollProjectApp.enroll(project.owner`project.name)`fakeRequest(POST`routes.EnrollProjectApp.enroll(project.owner`project.name).url()).withSession(UserApp.SESSION_USERID`user.id.toString()));" is 213.,96
+naver_yobi,controllers,EnrollProjectAppTest,enrollDuplicated,Long Statement,The length of the statement "Result result=callAction(routes.ref.EnrollProjectApp.enroll(project.owner`project.name)`fakeRequest(POST`routes.EnrollProjectApp.enroll(project.owner`project.name).url()).withSession(UserApp.SESSION_USERID`user.id.toString()));" is 227.,96
+naver_yobi,controllers,EnrollProjectAppTest,enrollDuplicated,Magic Number,The method contains a magic number: 6L,96
+naver_yobi,controllers,EnrollProjectAppTest,cancelEnrollProjectNotExist,Long Statement,The length of the statement "Result result=callAction(routes.ref.EnrollProjectApp.cancelEnroll(loginId`projectName)`fakeRequest(POST`routes.EnrollProjectApp.cancelEnroll(loginId`projectName).url()));" is 170.,117
+naver_yobi,controllers,EnrollProjectAppTest,cancelEnrollNotGuest,Long Statement,The length of the statement "Result result=callAction(routes.ref.EnrollProjectApp.cancelEnroll(project.owner`project.name)`fakeRequest(POST`routes.EnrollProjectApp.cancelEnroll(project.owner`project.name).url()).withSession(UserApp.SESSION_USERID`admin.id.toString()));" is 240.,131
+naver_yobi,controllers,EnrollProjectAppTest,cancelEnroll,Long Statement,The length of the statement "Result result=callAction(routes.ref.EnrollProjectApp.cancelEnroll(project.owner`project.name)`fakeRequest(POST`routes.EnrollProjectApp.cancelEnroll(project.owner`project.name).url()).withSession(UserApp.SESSION_USERID`user.id.toString()));" is 239.,148
+naver_yobi,controllers,EnrollProjectAppTest,cancelEnroll,Magic Number,The method contains a magic number: 6L,148
+naver_yobi,models,Role,findOrganizationRoleByIds,Long Statement,The length of the statement "return find.where().eq("organizationUsers.user.id"`userId).eq("organizationUsers.organization.id"`organizationId).findUnique();" is 127.,63
+naver_yobi,models,IssueLabel,exists,Long Statement,The length of the statement "return finder.where().eq("project.id"`project.id).eq("category"`category).eq("name"`name).eq("color"`color).findRowCount() > 0;" is 127.,79
+naver_yobi,models,IssueLabel,hashCode,Magic Number,The method contains a magic number: 31,133
+naver_yobi,models,IssueLabel,hashCode,Magic Number,The method contains a magic number: 31,133
+naver_yobi,models,IssueLabel,hashCode,Magic Number,The method contains a magic number: 31,133
+naver_yobi,models,PushedBranch,removeByPullRequestFrom,Long Statement,The length of the statement "PushedBranch pushedBranch=find.where().eq("project"`pullRequest.fromProject).eq("name"`pullRequest.fromBranch).findUnique();" is 124.,64
+naver_yobi,models,CommitComment,findByCommits,Long Statement,The length of the statement "list.addAll(CommitComment.find.where().eq("project.id"`project.id).eq("commitId"`commit.getCommitId()).setOrderBy("createdDate asc").findList());" is 145.,107
+naver_yobi,models,PullRequestCommit,getByCommitId,Long Statement,The length of the statement "return find.select("state").where().eq("pullRequest"`pullRequest).eq("commitId"`commitId).orderBy().desc("created").setMaxRows(1).findUnique();" is 143.,101
+naver_yobi,models,CodeCommentThread,isOutdated,Complex Conditional,The conditional expression codeRange.startLine == null || prevCommitId == null || commitId == null is complex.,76
+naver_yobi,models,CodeCommentThread,isOutdated,Complex Method,Cyclomatic complexity of the method is 9,76
+naver_yobi,models,Attachment,findBy,Long Statement,The length of the statement "return find.where().eq("name"`attach.name).eq("hash"`attach.hash).eq("containerType"`attach.containerType).eq("containerId"`attach.containerId).findUnique();" is 157.,78
+naver_yobi,models,Attachment,moveFileIntoUploadDirectory,Magic Number,The method contains a magic number: 10240,207
+naver_yobi,models,Attachment,cleanupTemporaryUploadFilesWithSchedule,Long Statement,The length of the statement "Akka.system().scheduler().schedule(Duration.create(0`TimeUnit.SECONDS)`Duration.create(AttachmentApp.TEMPORARYFILES_KEEPUP_TIME_MILLIS`TimeUnit.MILLISECONDS)`new Runnable(){" is 173.,442
+naver_yobi,models,Attachment,cleanupTemporaryUploadFilesWithSchedule,Long Statement,The length of the statement "List<Attachment> attachmentList=Attachment.find.where().eq("containerType"`ResourceType.USER).ge("createdDate"`JodaDateUtil.beforeByMillis(AttachmentApp.TEMPORARYFILES_KEEPUP_TIME_MILLIS)).findList();" is 200.,442
+naver_yobi,models,Attachment,cleanupTemporaryUploadFilesWithSchedule,Long Statement,The length of the statement "play.Logger.error(String.format("Failed to delete user temporary files.\nExpected: %d Actual: %d"`attachmentList.size()`deletedFileCount));" is 139.,442
+naver_yobi,models,Attachment,removeUserTemporaryFiles,Long Statement,The length of the statement "List<Attachment> attachmentList=Attachment.find.where().eq("containerType"`ResourceType.USER).ge("createdDate"`JodaDateUtil.beforeByMillis(AttachmentApp.TEMPORARYFILES_KEEPUP_TIME_MILLIS)).findList();" is 200.,460
+naver_yobi,models,Attachment,removeUserTemporaryFiles,Long Statement,The length of the statement "play.Logger.error(String.format("Failed to delete user temporary files.\nExpected: %d Actual: %d"`attachmentList.size()`deletedFileCount));" is 139.,460
+naver_yobi,models,Attachment,toString,Long Statement,The length of the statement "return "Attachment{" + "id=" + id + "` name='"+ name+ '\''+ "` hash='"+ hash+ '\''+ "` containerType="+ containerType+ "` mimeType='"+ mimeType+ '\''+ "` size="+ size+ "` containerId='"+ containerId+ '\''+ "` createdDate="+ createdDate+ '}';" is 241.,487
+naver_yobi,models,Attachment,store,Magic Number,The method contains a magic number: 10240,501
+naver_yobi,models,Attachment,save,Empty catch clause,The method has an empty catch block.,527
+naver_yobi,models,Email,sendValidationEmail,Magic Number,The method contains a magic number: 50,105
+naver_yobi,models,OrganizationUser,contains,Long Statement,The length of the statement "int rowCount=find.where().eq("organization.id"`organizationId).eq("user.id"`userId).eq("role.id"`Role.findByRoleType(roleType).id).findRowCount();" is 146.,109
+naver_yobi,models,PullRequest,toString,Long Statement,The length of the statement "return "PullRequest{" + "id=" + id + "` title='"+ title+ '\''+ "` body='"+ body+ '\''+ "` toProject="+ toProject+ "` fromProject="+ fromProject+ "` toBranch='"+ toBranch+ '\''+ "` fromBranch='"+ fromBranch+ '\''+ "` contributor="+ contributor+ "` receiver="+ receiver+ "` created="+ created+ "` updated="+ updated+ "` received="+ received+ "` state="+ state+ '}';" is 363.,171
+naver_yobi,models,PullRequest,findDuplicatedPullRequest,Long Statement,The length of the statement "return finder.where().eq("fromBranch"`pullRequest.fromBranch).eq("toBranch"`pullRequest.toBranch).eq("fromProject"`pullRequest.fromProject).eq("toProject"`pullRequest.toProject).eq("state"`State.OPEN).findUnique();" is 214.,215
+naver_yobi,models,PullRequest,findOpendPullRequestsByDaysAgo,Long Statement,The length of the statement "return finder.where().eq("toProject"`project).eq("state"`State.OPEN).ge("created"`JodaDateUtil.before(days)).order().desc("created").findList();" is 144.,233
+naver_yobi,models,PullRequest,findClosedPullRequests,Long Statement,The length of the statement "return finder.where().eq("toProject"`project).or(eq("state"`State.CLOSED)`eq("state"`State.MERGED)).order().desc("created").findList();" is 135.,242
+naver_yobi,models,PullRequest,findAcceptedPullRequests,Long Statement,The length of the statement "return finder.where().eq("fromProject"`project).or(eq("state"`State.CLOSED)`eq("state"`State.MERGED)).order().desc("created").findList();" is 137.,257
+naver_yobi,models,PullRequest,findRecentlyReceivedOpen,Long Statement,The length of the statement "return finder.where().eq("toProject"`project).eq("state"`State.OPEN).order().desc("created").findPagingList(size).getPage(0).getList();" is 135.,280
+naver_yobi,models,PullRequest,findRelatedPullRequests,Long Statement,The length of the statement "return finder.where().or(Expr.and(eq("fromProject"`project)`eq("fromBranch"`branch))`Expr.and(eq("toProject"`project)`eq("toBranch"`branch))).ne("state"`State.CLOSED).ne("state"`State.MERGED).findList();" is 203.,296
+naver_yobi,models,PullRequest,findByFromProjectAndBranch,Long Statement,The length of the statement "return finder.where().eq("fromProject"`fromProject).eq("fromBranch"`fromBranch).or(eq("state"`State.OPEN)`eq("state"`State.REJECTED)).findList();" is 145.,692
+naver_yobi,models,PullRequest,nextPullRequestNumber,Long Statement,The length of the statement "PullRequest maxNumberedPullRequest=PullRequest.finder.where().eq("toProject"`project).order().desc("number").setMaxRows(1).findUnique();" is 136.,705
+naver_yobi,models,PullRequest,findPagingList,Long Statement,The length of the statement "return createSearchExpressionList(condition).order().desc(condition.category.order()).findPagingList(ITEMS_PER_PAGE).getPage(condition.pageNum - 1);" is 148.,764
+naver_yobi,models,PullRequest,createSearchExpressionList,Long Statement,The length of the statement "ids.addAll(el.query().copy().where().eq("pullRequestCommits.state"`PullRequestCommit.State.CURRENT).or(icontains("pullRequestCommits.commitMessage"`condition.filter)`icontains("pullRequestCommits.commitId"`condition.filter)).findIds());" is 236.,775
+naver_yobi,models,PullRequest,createSearchExpressionList,Long Statement,The length of the statement "junction.icontains("title"`condition.filter).icontains("body"`condition.filter).icontains("mergedCommitIdTo"`condition.filter);" is 127.,775
+naver_yobi,models,PullRequest,createStateSearchExpression,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@42ca993e,808
+naver_yobi,models,PullRequest,deleteIssueEvents,Long Statement,The length of the statement "List<IssueEvent> oldEvents=IssueEvent.find.where().eq("newValue"`newValue).eq("senderLoginId"`this.contributor.loginId).eq("eventType"`EventType.ISSUE_REFERRED_FROM_PULL_REQUEST).findList();" is 190.,834
+naver_yobi,models,PullRequest,fetchSourceBranchTo,Long Statement,The length of the statement "return new Git(getRepository()).fetch().setRemote(GitRepository.getGitDirectoryURL(fromProject)).setRefSpecs(new RefSpec().setSource(fromBranch).setDestination(destination).setForceUpdate(true)).call();" is 202.,864
+naver_yobi,models,PullRequest,updateMerge,Long Statement,The length of the statement "pullRequestMergeResult.setGitCommits(GitRepository.diffCommits(getRepository()`mergeResult.getLeftParentId()`mergeResult.getRightParentId()));" is 142.,875
+naver_yobi,models,PullRequest,fetchSourceTemporarilly,Long Statement,The length of the statement "String tempBranchToCheckConflict=String.format("refs/yobi/pull-check/%s/%s/%s"`fromProject.owner`fromProject.name`fromBranch);" is 126.,916
+naver_yobi,models,PullRequest,attemptMerge,Long Statement,The length of the statement "pullRequestMergeResult.setGitCommits(GitRepository.diffCommits(getRepository()`mergeResult.getLeftParentId()`mergeResult.getRightParentId()));" is 142.,925
+naver_yobi,models,PullRequest,getCodeCommentThreadsForChanges,Complex Method,Cyclomatic complexity of the method is 8,1067
+naver_yobi,models,PullRequest,getCodeCommentThreadsForChanges,Long Statement,The length of the statement "if (noChangesBetween(repository`mergedCommitIdFrom`repository`codeCommentThread.prevCommitId`codeCommentThread.codeRange.path) && noChangesBetween(repository`mergedCommitIdTo`repository`codeCommentThread.commitId`codeCommentThread.codeRange.path)) {" is 249.,1067
+naver_yobi,models,PullRequest,noChangesBetween,Long Parameter List,The method has 5 parameters. ,1150
+naver_yobi,models,NotificationEvent,findReceivers,Long Statement,The length of the statement "String sql="select n4user.id from n4user where id in (select n4user_id " + "from notification_event_n4user where " + "notification_event_id = '" + id + "')";" is 157.,100
+naver_yobi,models,NotificationEvent,getMessage,Complex Method,Cyclomatic complexity of the method is 28,129
+naver_yobi,models,NotificationEvent,getMessage,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6d0699f9,129
+naver_yobi,models,NotificationEvent,buildCommentedCodeMessage,Complex Conditional,The conditional expression reviewComment.thread == null || !reviewComment.thread.getFirstReviewComment().equals(reviewComment) || !(reviewComment.thread instanceof CodeCommentThread) is complex.,208
+naver_yobi,models,NotificationEvent,buildCommentedCodeMessage,Complex Method,Cyclomatic complexity of the method is 12,208
+naver_yobi,models,NotificationEvent,buildCommentedCodeMessage,Long Statement,The length of the statement "if (reviewComment.thread == null || !reviewComment.thread.getFirstReviewComment().equals(reviewComment) || !(reviewComment.thread instanceof CodeCommentThread)) {" is 162.,208
+naver_yobi,models,NotificationEvent,buildCommentedCodeMessage,Long Statement,The length of the statement "message.append(String.format("> @@ -%d` %d +%d` %d @@\n"`hunk.beginA + 1`(hunk.endA - hunk.beginA)`hunk.beginB + 1`(hunk.endB - hunk.beginB)));" is 143.,208
+naver_yobi,models,NotificationEvent,getProject,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5270b6f0,326
+naver_yobi,models,NotificationEvent,getOrganization,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4bf84c0c,346
+naver_yobi,models,NotificationEvent,add,Long Statement,The length of the statement "NotificationEvent lastEvent=NotificationEvent.find.where().eq("resourceId"`event.resourceId).eq("resourceType"`event.resourceType).gt("created"`draftDate).orderBy("id desc").setMaxRows(1).findUnique();" is 201.,359
+naver_yobi,models,NotificationEvent,deleteBy,Long Statement,The length of the statement "for ( NotificationEvent event : NotificationEvent.find.where().where().eq("resourceType"`resource.getType()).eq("resourceId"`resource.getId()).findList()) {" is 156.,424
+naver_yobi,models,NotificationEvent,getUrlToView,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7add9c35,445
+naver_yobi,models,NotificationEvent,newPullRequestCommitChangedMessage,Long Statement,The length of the statement "List<PullRequestCommit> commits=PullRequestCommit.find.where().eq("pullRequest"`pullRequest).orderBy().desc("authorDate").findList();" is 133.,525
+naver_yobi,models,NotificationEvent,afterMerge,Long Statement,The length of the statement "notiEvent.receivers=state == State.MERGED ? getReceiversWithRelatedAuthors(sender`pullRequest) : getReceivers(sender`pullRequest);" is 130.,542
+naver_yobi,models,NotificationEvent,afterNewCommits,Long Parameter List,The method has 6 parameters. ,856
+naver_yobi,models,NotificationEvent,newCommitsMessage,Long Statement,The length of the statement "result.append("[" + refName + "]("+ routes.CodeHistoryApp.history(project.owner`project.name`URLEncoder.encode(refName`"UTF-8")`"")+ ")");" is 138.,892
+naver_yobi,models,NotificationEvent,getReceiversWithRelatedAuthors,Long Statement,The length of the statement "receivers.addAll(GitRepository.getRelatedAuthors(new GitRepository(pullRequest.toProject).getRepository()`pullRequest.mergedCommitIdFrom`pullRequest.mergedCommitIdTo));" is 168.,987
+naver_yobi,models,NotificationEvent,findByReceiver,Long Statement,The length of the statement "String sql="select t1.id` t1.title` t1.sender_id` t1.created` t1.resource_type` t1.resource_id` t1.event_type` " + "t1.old_value` t1.new_value " + "from n4user t0 "+ "left outer join notification_event_n4user t1z_ on t1z_.n4user_id = t0.id "+ "left outer join notification_event t1 on t1.id = t1z_.notification_event_id "+ "left outer join notification_mail t2 on t2.notification_event_id = t1.id "+ "where t0.id = " + user.id + " and t1.id IS NOT NULL "+ "order by t1.created DESC";" is 483.,1158
+naver_yobi,models,NotificationEvent,getNotificationsCount,Long Statement,The length of the statement "String sql="select t1.id " + "from n4user t0 " + "left outer join notification_event_n4user t1z_ on t1z_.n4user_id = t0.id "+ "left outer join notification_event t1 on t1.id = t1z_.notification_event_id "+ "left outer join notification_mail t2 on t2.notification_event_id = t1.id "+ "where t0.id = " + user.id + " and t1.id IS NOT NULL ";" is 338.,1183
+naver_yobi,models,PullRequestEvent,getLatestEventInDraftTime,Long Statement,The length of the statement "return PullRequestEvent.finder.where().eq("pull_request_id"`event.pullRequest.id).gt("created"`draftDate).orderBy("created desc").setMaxRows(1).findUnique();" is 157.,86
+naver_yobi,models,PullRequestEvent,needToDeleteEvent,Long Statement,The length of the statement "return lastEvent != null && currentEvent.eventType == EventType.PULL_REQUEST_REVIEW_STATE_CHANGED && lastEvent.eventType == EventType.PULL_REQUEST_REVIEW_STATE_CHANGED && StringUtils.equals(currentEvent.senderLoginId`lastEvent.senderLoginId);" is 242.,97
+naver_yobi,models,Posting,findRecentlyCreated,Long Statement,The length of the statement "return Posting.finder.where().eq("project.id"`project.id).order().desc("createdDate").findPagingList(size).getPage(0).getList();" is 128.,70
+naver_yobi,models,Posting,findRecentlyCreatedByDaysAgo,Long Statement,The length of the statement "return Posting.finder.where().eq("project.id"`project.id).ge("createdDate"`JodaDateUtil.before(days)).order().desc("createdDate").findList();" is 141.,78
+naver_yobi,models,ProjectTransfer,requestNewTransfer,Magic Number,The method contains a magic number: 50,69
+naver_yobi,models,ProjectTransfer,requestNewTransfer,Magic Number,The method contains a magic number: 50,69
+naver_yobi,models,History,makeHistory,Long Parameter List,The method has 6 parameters. ,113
+naver_yobi,models,User,findUsersByProject,Long Statement,The length of the statement "return find.where().eq("projectUser.project.id"`projectId).ne("projectUser.role.id"`RoleType.SITEMANAGER.roleType()).orderBy().asc("name").findList();" is 150.,326
+naver_yobi,models,User,resetPassword,Magic Number,The method contains a magic number: 1024,402
+naver_yobi,models,User,findIssueAuthorsByProjectIdAndMe,Long Statement,The length of the statement "String sql="SELECT DISTINCT t0.id AS id` t0.name AS name` t0.login_id AS loginId " + "FROM n4user t0 JOIN issue t1 ON t0.id = t1.author_id";" is 140.,610
+naver_yobi,models,User,findIssueAuthorsByProjectIdAndMe,Long Statement,The length of the statement "List<User> users=find.setRawSql(RawSqlBuilder.parse(sql).create()).where().eq("t1.project_id"`projectId).orderBy().asc("t0.name").findList();" is 141.,610
+naver_yobi,models,User,findIssueAssigneeByProjectIdAndMe,Long Statement,The length of the statement "String sql="SELECT DISTINCT t0.id AS id` t0.name AS name` t0.login_id AS loginId " + "FROM n4user t0 JOIN assignee t1 ON t0.id = t1.user_id";" is 141.,635
+naver_yobi,models,User,findIssueAssigneeByProjectIdAndMe,Long Statement,The length of the statement "List<User> users=find.setRawSql(RawSqlBuilder.parse(sql).create()).where().eq("t1.project_id"`projectId).orderBy().asc("t0.name").findList();" is 141.,635
+naver_yobi,models,User,findPullRequestContributorsByProjectId,Long Statement,The length of the statement "String sql="SELECT DISTINCT t0.id AS id` t0.name AS name` t0.login_id AS loginId " + "FROM n4user t0 JOIN pull_request t1 ON t0.id = t1.contributor_id";" is 152.,657
+naver_yobi,models,User,findPullRequestContributorsByProjectId,Long Statement,The length of the statement "return find.setRawSql(RawSqlBuilder.parse(sql).create()).where().eq("t1.to_project_id"`projectId).orderBy().asc("t0.name").findList();" is 134.,657
+naver_yobi,models,User,findUsersByProject,Long Statement,The length of the statement "return find.where().eq("projectUser.project.id"`projectId).eq("projectUser.role.id"`roleType.roleType()).orderBy().asc("name").findList();" is 138.,672
+naver_yobi,models,User,findUsersByOrganization,Long Statement,The length of the statement "return find.where().eq("organizationUsers.organization.id"`organizationId).eq("organizationUsers.role.id"`roleType.roleType()).orderBy().asc("name").findList();" is 160.,684
+naver_yobi,models,User,hashCode,Magic Number,The method contains a magic number: 37,783
+naver_yobi,models,User,hashCode,Magic Number,The method contains a magic number: 37,783
+naver_yobi,models,ProjectUser,findByIds,Long Statement,The length of the statement "return find.where().eq("user.id"`userId).eq("project.id"`projectId).ne("role.id"`RoleType.SITEMANAGER.roleType()).findUnique();" is 127.,89
+naver_yobi,models,ProjectUser,findMemberListByProject,Long Statement,The length of the statement "return find.fetch("user").fetch("role"`"name").where().eq("project.id"`projectId).ne("role.id"`RoleType.SITEMANAGER.roleType()).orderBy("user.name ASC").findList();" is 164.,94
+naver_yobi,models,ProjectUser,checkOneMangerPerOneProject,Long Statement,The length of the statement "int findRowCount=find.where().eq("role.id"`RoleType.MANAGER.roleType()).eq("project.id"`projectId).ne("user.id"`userId).findRowCount();" is 135.,101
+naver_yobi,models,ProjectUser,isManager,Long Statement,The length of the statement "int findRowCount=find.where().eq("user.id"`userId).eq("role.id"`RoleType.MANAGER.roleType()).eq("project.id"`projectId).findRowCount();" is 135.,108
+naver_yobi,models,AbstractPosting,save,Long Statement,The length of the statement "play.Logger.warn(String.format("%s/%s: Invalid last number %d is fixed to %d"`asResource().getProject()`asResource().getType()`oldNumber`number));" is 146.,112
+naver_yobi,models,YobiUpdate,onStart,Long Identifier,The length of the field UPDATE_NOTIFICATION_INTERVAL_IN_MILLIS is 38.,52
+naver_yobi,models,YobiUpdate,onStart,Long Identifier,The length of the field UPDATE_NOTIFICATION_INITDELAY_IN_MILLIS is 39.,52
+naver_yobi,models,YobiUpdate,onStart,Long Statement,The length of the statement "Akka.system().scheduler().schedule(Duration.create(UPDATE_NOTIFICATION_INITDELAY_IN_MILLIS`TimeUnit.MILLISECONDS)`Duration.create(UPDATE_NOTIFICATION_INTERVAL_IN_MILLIS`TimeUnit.MILLISECONDS)`new Runnable(){" is 207.,52
+naver_yobi,models,NotificationMail,startSchedule,Long Identifier,The length of the identifier MAIL_NOTIFICATION_INITDELAY_IN_MILLIS is 37.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Identifier,The length of the identifier MAIL_NOTIFICATION_INTERVAL_IN_MILLIS is 36.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Identifier,The length of the identifier MAIL_NOTIFICATION_DELAY_IN_MILLIS is 33.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Statement,The length of the statement "final Long MAIL_NOTIFICATION_INITDELAY_IN_MILLIS=Configuration.root().getMilliseconds("application.notification.bymail.initdelay"`5 * 1000L);" is 141.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Statement,The length of the statement "final Long MAIL_NOTIFICATION_INTERVAL_IN_MILLIS=Configuration.root().getMilliseconds("application.notification.bymail.interval"`60 * 1000L);" is 140.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Statement,The length of the statement "final int MAIL_NOTIFICATION_DELAY_IN_MILLIS=Configuration.root().getMilliseconds("application.notification.bymail.delay"`180 * 1000L).intValue();" is 145.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Statement,The length of the statement "Akka.system().scheduler().schedule(Duration.create(MAIL_NOTIFICATION_INITDELAY_IN_MILLIS`TimeUnit.MILLISECONDS)`Duration.create(MAIL_NOTIFICATION_INTERVAL_IN_MILLIS`TimeUnit.MILLISECONDS)`new Runnable(){" is 203.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Statement,The length of the statement "* Sends notification mails. Get and send notification mails for the events which satisfy all of following conditions: - {@code application.notification.bymail.delay} of timepassed since the event is created. - The base resource still exists. In the case of an event for new comment` the comment still exists. Every mail will be deleted regardless of whether it is sent or not." is 376.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Statement,The length of the statement "List<NotificationMail> mails=find.where().lt("notificationEvent.created"`createdUntil).orderBy("notificationEvent.created ASC").findList();" is 139.,101
+naver_yobi,models,NotificationMail,startSchedule,Long Statement,The length of the statement "* Extracts events from the given mails and delete the mails. Collects {@link models.NotificationMail#notificationEvent}field of the given mails` delete the mails and return the events. If an exception occurs while deleting a mail` the event from the email is not collected and the exception is logged with a warning message." is 324.,101
+naver_yobi,models,NotificationMail,startSchedule,Magic Number,The method contains a magic number: 5,101
+naver_yobi,models,NotificationMail,startSchedule,Magic Number,The method contains a magic number: 1000L,101
+naver_yobi,models,NotificationMail,startSchedule,Magic Number,The method contains a magic number: 60,101
+naver_yobi,models,NotificationMail,startSchedule,Magic Number,The method contains a magic number: 1000L,101
+naver_yobi,models,NotificationMail,startSchedule,Magic Number,The method contains a magic number: 180,101
+naver_yobi,models,NotificationMail,startSchedule,Magic Number,The method contains a magic number: 1000L,101
+naver_yobi,models,NotificationMail,sendMail,Long Statement,The length of the statement "List<NotificationMail> mails=find.where().lt("notificationEvent.created"`createdUntil).orderBy("notificationEvent.created ASC").findList();" is 139.,129
+naver_yobi,models,NotificationMail,mergeEvents,Complex Method,Cyclomatic complexity of the method is 10,201
+naver_yobi,models,NotificationMail,mergeEvents,Long Statement,The length of the statement "MergedNotificationEvent mergedEvent=new MergedNotificationEvent(stateChangedEvent`Arrays.asList(event`stateChangedEvent));" is 122.,201
+naver_yobi,models,NotificationMail,mergeEvents,Magic Number,The method contains a magic number: 31,201
+naver_yobi,models,NotificationMail,sendNotification,Complex Method,Cyclomatic complexity of the method is 9,378
+naver_yobi,models,NotificationMail,getReplyTo,Complex Method,Cyclomatic complexity of the method is 11,527
+naver_yobi,models,NotificationMail,getReplyTo,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@234d0bc6,527
+naver_yobi,models,NotificationMail,getHtmlMessage,Long Parameter List,The method has 5 parameters. ,565
+naver_yobi,models,NotificationMail,getHtmlMessage,Long Statement,The length of the statement "String content=views.html.common.notificationMail.render(lang`Markdown.render(message)`urlToView`resource`acceptsReply).toString();" is 131.,565
+naver_yobi,models,IssueEvent,add,Long Statement,The length of the statement "IssueEvent lastEvent=IssueEvent.find.where().eq("issue.id"`event.issue.id).gt("created"`draftDate).orderBy("id desc").setMaxRows(1).findUnique();" is 145.,63
+naver_yobi,models,SearchResult,updateSearchType,Complex Method,Cyclomatic complexity of the method is 10,109
+naver_yobi,models,Milestone,getCompletionRate,Magic Number,The method contains a magic number: 100,133
+naver_yobi,models,Search,usersEL,Long Statement,The length of the statement "el.disjunction().add(Expr.icontains("name"`keyword)).add(Expr.icontains("loginId"`keyword)).endJunction().orderBy().asc("name");" is 128.,360
+naver_yobi,models,Search,usersEL,Long Statement,The length of the statement "el.disjunction().add(Expr.icontains("name"`keyword)).add(Expr.icontains("loginId"`keyword)).endJunction().orderBy().asc("name");" is 128.,395
+naver_yobi,models,Search,usersEL,Long Statement,The length of the statement "el.disjunction().add(Expr.icontains("name"`keyword)).add(Expr.icontains("loginId"`keyword)).endJunction().orderBy().asc("name");" is 128.,430
+naver_yobi,models,Search,findProjects,Long Statement,The length of the statement "return projectsEL(keyword`user).eq("organization"`organization).findPagingList(pageParam.getSize()).getPage(pageParam.getPage());" is 129.,471
+naver_yobi,models,Search,reviewsEL,Long Identifier,The length of the field containsKeywordInReviewComment is 30.,705
+naver_yobi,models,Search,reviewsEL,Long Identifier,The length of the field containsKeywordInReviewComment is 30.,742
+naver_yobi,models,Search,inProjectsTemplate,Long Parameter List,The method has 6 parameters. ,765
+naver_yobi,models,Search,inProjectsTemplate,Long Statement,The length of the statement "ExpressionList<Project> pel=Project.find.where().eq("organization"`organization).disjunction().add(Expr.eq("projectUser.user.id"`user.id));" is 139.,765
+naver_yobi,models,Search,inProjectsTemplate,Long Parameter List,The method has 5 parameters. ,795
+naver_yobi,models,Search,inProjectsTemplate,Long Statement,The length of the statement "ExpressionList<Project> pel=Project.find.where().disjunction().add(Expr.eq("projectScope"`ProjectScope.PUBLIC)).add(Expr.eq("projectUser.user.id"`user.id));" is 156.,795
+naver_yobi,models,Search,equalsUserTemplate,Long Parameter List,The method has 5 parameters. ,823
+naver_yobi,models,PullRequestMergeResult,findNewCommits,Long Statement,The length of the statement "List<PullRequestCommit> pullRequestCommits=PullRequestCommit.find.where().eq("pullRequest"`pullRequest).eq("state"`PullRequestCommit.State.CURRENT).findList();" is 159.,58
+naver_yobi,models,Comment,equals,Long Statement,The length of the statement "return new EqualsBuilder().appendSuper(super.equals(obj)).append(this.id`rhs.id).append(this.contents`rhs.contents).append(this.createdDate`rhs.createdDate).append(this.authorId`rhs.authorId).append(this.authorLoginId`rhs.authorLoginId).append(this.authorName`rhs.authorName).isEquals();" is 287.,121
+naver_yobi,models,Comment,hashCode,Long Statement,The length of the statement "return new HashCodeBuilder().appendSuper(super.hashCode()).append(id).append(contents).append(createdDate).append(authorId).append(authorLoginId).append(authorName).toHashCode();" is 178.,144
+naver_yobi,models,CommentThread,toString,Long Statement,The length of the statement "return "CommentThread{" + "id=" + id + "` author="+ author+ "` reviewComments="+ reviewComments+ "` state="+ state+ "` createdDate="+ createdDate+ "` project="+ project+ '}';" is 174.,100
+naver_yobi,models,CommentThread,count,Complex Conditional,The conditional expression path != null && thread instanceof CodeCommentThread && !((CodeCommentThread)thread).codeRange.path.equals(path) is complex.,179
+naver_yobi,models,CommentThread,countOnCommit,Complex Conditional,The conditional expression path != null && thread instanceof CodeCommentThread && !((CodeCommentThread)thread).codeRange.path.equals(path) is complex.,198
+naver_yobi,models,CommentThread,countOnCommit,Long Statement,The length of the statement "List<CommentThread> threads=find.where().eq("commitId"`commitId).eq("project.id"`project.id).eq("pullRequest.id"`null).order().desc("createdDate").findList();" is 158.,198
+naver_yobi,models,Project,isOnlyManager,Long Statement,The length of the statement "List<Project> projects=find.select("id").select("name").where().eq("projectUser.user.id"`userId).eq("projectUser.role.id"`RoleType.MANAGER.roleType()).findList();" is 162.,172
+naver_yobi,models,Project,findProjectsJustMemberAndNotOwner,Long Statement,The length of the statement "ExpressionList<Project> el=find.where().eq("projectUser.user.id"`user.id).ne("projectUser.role.id"`RoleType.SITEMANAGER.roleType()).ne("owner"`user.loginId);" is 157.,197
+naver_yobi,models,Project,lastUpdateDate,Magic Number,The method contains a magic number: 2,227
+naver_yobi,models,Project,defaultBranch,Empty catch clause,The method has an empty catch block.,250
+naver_yobi,models,Project,getAssignableUsersAndAssignee,Complex Conditional,The conditional expression issue != null && issue.assignee != null && !users.contains(issue.assignee.user) is complex.,476
+naver_yobi,models,Project,delete,Complex Method,Cyclomatic complexity of the method is 8,585
+naver_yobi,models,Project,getRecentlyPushedBranches,Long Statement,The length of the statement "return PushedBranch.find.where().eq("project"`this).gt("pushedDate"`DateTime.now().minusMillis(DRAFT_TIME_IN_MILLIS).toDate()).findList();" is 138.,717
+naver_yobi,models,Project,getOldPushedBranches,Long Statement,The length of the statement "return PushedBranch.find.where().eq("project"`this).lt("pushedDate"`DateTime.now().minusMillis(DRAFT_TIME_IN_MILLIS).toDate()).findList();" is 138.,724
+naver_yobi,models,Project,getAssociationProjects,Complex Conditional,The conditional expression isForkedFromOrigin() && originalProject.menuSetting.code && originalProject.menuSetting.pullRequest is complex.,735
+naver_yobi,models,Mention,update,Long Statement,The length of the statement "for ( Mention mention : find.where().eq("resourceType"`resource.getType()).eq("resourceId"`resource.getId()).findList()) {" is 122.,48
+naver_yobi,models,Issue,updateAssignee,Complex Conditional,The conditional expression assignee != null && assignee.id == null && assignee.user.id != null is complex.,138
+naver_yobi,models,Issue,checkLabels,Long Statement,The length of the statement "throw new IssueLabel.IssueLabelException("This category does " + "not allow an issue to have two or more labels of " + "the category");" is 135.,156
+naver_yobi,models,Issue,excelFrom,Long Statement,The length of the statement "WritableFont wf1=new WritableFont(WritableFont.TIMES`13`WritableFont.BOLD`false`UnderlineStyle.SINGLE`Colour.BLUE_GREY`ScriptStyle.NORMAL_SCRIPT);" is 146.,219
+naver_yobi,models,Issue,excelFrom,Long Statement,The length of the statement "WritableFont wf2=new WritableFont(WritableFont.TAHOMA`11`WritableFont.NO_BOLD`false`UnderlineStyle.NO_UNDERLINE`Colour.BLACK`ScriptStyle.NORMAL_SCRIPT);" is 152.,219
+naver_yobi,models,Issue,excelFrom,Magic Number,The method contains a magic number: 13,219
+naver_yobi,models,Issue,excelFrom,Magic Number,The method contains a magic number: 11,219
+naver_yobi,models,Issue,excelFrom,Magic Number,The method contains a magic number: 20,219
+naver_yobi,models,Issue,assignedUserEquals,Complex Conditional,The conditional expression assignee == null || assignee.user == null || assignee.user.isAnonymous() is complex.,367
+naver_yobi,models,Issue,assignedUserEquals,Complex Conditional,The conditional expression otherAssignee == null || otherAssignee.user == null || otherAssignee.user.isAnonymous() is complex.,367
+naver_yobi,models,Issue,findRecentlyOpendIssuesByDaysAgo,Long Statement,The length of the statement "return finder.where().eq("project.id"`project.id).eq("state"`State.OPEN).ge("createdDate"`JodaDateUtil.before(days)).order().desc("createdDate").findList();" is 156.,377
+naver_yobi,models,AttachmentTest,testSaveInUserTemporaryArea,Magic Number,The method contains a magic number: 1024,41
+naver_yobi,models,AttachmentTest,testAttachFiles,Magic Number,The method contains a magic number: 2,87
+naver_yobi,models,CommitCommentTest,testHasLocation,Magic Number,The method contains a magic number: 10,29
+naver_yobi,models,SearchTests,startApp,Long Method,The method has 116 lines of code.,55
+naver_yobi,models,SearchTests,startApp,Magic Number,The method contains a magic number: 6l,55
+naver_yobi,models,SearchTests,startApp,Magic Number,The method contains a magic number: 2l,55
+naver_yobi,models,SearchTests,startApp,Magic Number,The method contains a magic number: 3l,55
+naver_yobi,models,SearchTests,startApp,Magic Number,The method contains a magic number: 4l,55
+naver_yobi,models,SearchTests,startApp,Magic Number,The method contains a magic number: 5l,55
+naver_yobi,models,SearchTests,findUser_from_public_project,Magic Number,The method contains a magic number: 2l,227
+naver_yobi,models,SearchTests,anonymous_findProjects,Magic Number,The method contains a magic number: 2,246
+naver_yobi,models,SearchTests,groupMember_findProjects,Magic Number,The method contains a magic number: 4,260
+naver_yobi,models,SearchTests,projectMember_findProjects,Magic Number,The method contains a magic number: 4,272
+naver_yobi,models,SearchTests,projectAndGroupMember_findProjects,Magic Number,The method contains a magic number: 5,284
+naver_yobi,models,SearchTests,autor_findPosts_from_all_repos,Magic Number,The method contains a magic number: 2,310
+naver_yobi,models,SearchTests,groupMember_findPosts_from_all_repos,Magic Number,The method contains a magic number: 2,321
+naver_yobi,models,SearchTests,projectMember_findPosts_from_all_repos,Magic Number,The method contains a magic number: 2,331
+naver_yobi,models,SearchTests,groupMemberAndProjectMember_findPosts_from_all_repos,Magic Number,The method contains a magic number: 3,342
+naver_yobi,models,SearchTests,groupMember_findPosts_from_group,Magic Number,The method contains a magic number: 2,485
+naver_yobi,models,SearchTests,projectMember_findPosts_from_group,Magic Number,The method contains a magic number: 2,496
+naver_yobi,models,SearchTests,projectAndGroupMember_findPosts_from_group,Magic Number,The method contains a magic number: 3,507
+naver_yobi,models,SearchTests,author_findPosts_from_group,Magic Number,The method contains a magic number: 2,518
+naver_yobi,models,SearchTests,projectMember_findIssues_from_all_repos,Magic Number,The method contains a magic number: 2,541
+naver_yobi,models,SearchTests,groupMember_findIssues_from_all_repos,Magic Number,The method contains a magic number: 2,551
+naver_yobi,models,SearchTests,assignee_findIssues_from_all_repos,Magic Number,The method contains a magic number: 2,561
+naver_yobi,models,SearchTests,projectMember_findIssues_from_group,Magic Number,The method contains a magic number: 2,580
+naver_yobi,models,SearchTests,groupMember_findIssues_from_group,Magic Number,The method contains a magic number: 2,590
+naver_yobi,models,SearchTests,groupAndProjectMember_findIssues_from_group,Magic Number,The method contains a magic number: 3,600
+naver_yobi,models,SearchTests,author_findIssues_from_group,Magic Number,The method contains a magic number: 2,611
+naver_yobi,models,SearchTests,assignee_findIssues_from_group,Magic Number,The method contains a magic number: 2,621
+naver_yobi,models,SearchTests,groupMember_findMilestone_from_all_repos,Magic Number,The method contains a magic number: 2,773
+naver_yobi,models,SearchTests,projectMember_findMilestone_from_all_repos,Magic Number,The method contains a magic number: 2,783
+naver_yobi,models,SearchTests,projectAndGroupMember_findMilestone_from_all_repos,Magic Number,The method contains a magic number: 3,793
+naver_yobi,models,SearchTests,projectAndGroupMember_findMilestone_from_public_project,Long Statement,The length of the statement "List<Milestone> milestones=Search.findMilestones("milestone"`groupAndProjectMember`publicProject`onePageFiveSize).getList();" is 124.,849
+naver_yobi,models,SearchTests,projectAndGroupMember_findMilestone_from_protected_project,Long Statement,The length of the statement "List<Milestone> milestones=Search.findMilestones("milestone"`groupAndProjectMember`protectedProject`onePageFiveSize).getList();" is 127.,858
+naver_yobi,models,SearchTests,projectAndGroupMember_findMilestone_from_private_project,Long Statement,The length of the statement "List<Milestone> milestones=Search.findMilestones("milestone"`groupAndProjectMember`privateProject`onePageFiveSize).getList();" is 125.,867
+naver_yobi,models,SearchTests,groupMember_findMilestone_from_group,Magic Number,The method contains a magic number: 2,885
+naver_yobi,models,SearchTests,projectMember_findMilestone_from_group,Magic Number,The method contains a magic number: 2,895
+naver_yobi,models,SearchTests,projectAndGroupMember_findMilestone_from_group,Magic Number,The method contains a magic number: 3,905
+naver_yobi,models,SearchTests,groupMember_findIssueComments_from_all_repos,Magic Number,The method contains a magic number: 2,929
+naver_yobi,models,SearchTests,projectMember_findIssueComments_from_all_repos,Magic Number,The method contains a magic number: 2,939
+naver_yobi,models,SearchTests,projectAndGroupMember_findIssueComments_from_all_repos,Magic Number,The method contains a magic number: 3,949
+naver_yobi,models,SearchTests,author_findIssueComments_from_all_repos,Magic Number,The method contains a magic number: 2,960
+naver_yobi,models,SearchTests,anonymous_findIssueComments_from_protected_project,Long Statement,The length of the statement "List<IssueComment> comments=Search.findIssueComments("comment"`User.anonymous`protectedProject`onePageFiveSize).getList();" is 122.,979
+naver_yobi,models,SearchTests,projectMember_findIssueComments_from_protected_project,Long Statement,The length of the statement "List<IssueComment> comments=Search.findIssueComments("comment"`projectMember`protectedProject`onePageFiveSize).getList();" is 121.,1030
+naver_yobi,models,SearchTests,groupAndProjectMember_findIssueComments_from_public_project,Long Statement,The length of the statement "List<IssueComment> comments=Search.findIssueComments("comment"`groupAndProjectMember`publicProject`onePageFiveSize).getList();" is 126.,1047
+naver_yobi,models,SearchTests,groupAndProjectMember_findIssueComments_from_protected_project,Long Statement,The length of the statement "List<IssueComment> comments=Search.findIssueComments("comment"`groupAndProjectMember`protectedProject`onePageFiveSize).getList();" is 129.,1056
+naver_yobi,models,SearchTests,groupAndProjectMember_findIssueComments_from_private_project,Long Statement,The length of the statement "List<IssueComment> comments=Search.findIssueComments("comment"`groupAndProjectMember`privateProject`onePageFiveSize).getList();" is 127.,1065
+naver_yobi,models,SearchTests,groupMember_findIssueComments_from_group,Magic Number,The method contains a magic number: 2,1110
+naver_yobi,models,SearchTests,projectMember_findIssueComments_from_group,Magic Number,The method contains a magic number: 2,1120
+naver_yobi,models,SearchTests,groupAndProjectMember_findIssueComments_from_group,Magic Number,The method contains a magic number: 3,1130
+naver_yobi,models,SearchTests,author_findIssueComments_from_group,Magic Number,The method contains a magic number: 2,1141
+naver_yobi,models,SearchTests,groupMember_findPostComments_from_all_repos,Magic Number,The method contains a magic number: 2,1164
+naver_yobi,models,SearchTests,projectMember_findPostComments_from_all_repos,Magic Number,The method contains a magic number: 2,1174
+naver_yobi,models,SearchTests,projectAndGroupMember_findPostComments_from_all_repos,Magic Number,The method contains a magic number: 3,1184
+naver_yobi,models,SearchTests,author_findPostComments_from_all_repos,Magic Number,The method contains a magic number: 2,1195
+naver_yobi,models,SearchTests,anonymous_findPostComments_from_protected_project,Long Statement,The length of the statement "List<PostingComment> comments=Search.findPostComments("comment"`User.anonymous`protectedProject`onePageFiveSize).getList();" is 123.,1214
+naver_yobi,models,SearchTests,anonymous_findPostComments_from_private_project,Long Statement,The length of the statement "List<PostingComment> comments=Search.findPostComments("comment"`User.anonymous`privateProject`onePageFiveSize).getList();" is 121.,1222
+naver_yobi,models,SearchTests,projectMember_findPostComments_from_protected_project,Long Statement,The length of the statement "List<PostingComment> comments=Search.findPostComments("comment"`projectMember`protectedProject`onePageFiveSize).getList();" is 122.,1265
+naver_yobi,models,SearchTests,groupAndProjectMember_findPostComments_from_public_project,Long Statement,The length of the statement "List<PostingComment> comments=Search.findPostComments("comment"`groupAndProjectMember`publicProject`onePageFiveSize).getList();" is 127.,1282
+naver_yobi,models,SearchTests,groupAndProjectMember_findPostComments_from_protected_project,Long Statement,The length of the statement "List<PostingComment> comments=Search.findPostComments("comment"`groupAndProjectMember`protectedProject`onePageFiveSize).getList();" is 130.,1291
+naver_yobi,models,SearchTests,groupAndProjectMember_findPostComments_from_private_project,Long Statement,The length of the statement "List<PostingComment> comments=Search.findPostComments("comment"`groupAndProjectMember`privateProject`onePageFiveSize).getList();" is 128.,1300
+naver_yobi,models,SearchTests,groupMember_findPostComments_from_group,Magic Number,The method contains a magic number: 2,1345
+naver_yobi,models,SearchTests,projectMember_findPostComments_from_group,Magic Number,The method contains a magic number: 2,1355
+naver_yobi,models,SearchTests,groupAndProjectMember_findPostComments_from_group,Magic Number,The method contains a magic number: 3,1365
+naver_yobi,models,SearchTests,author_findPostComments_from_group,Magic Number,The method contains a magic number: 2,1376
+naver_yobi,models,SearchTests,groupMember_findReviews_from_all_repos,Magic Number,The method contains a magic number: 2,1399
+naver_yobi,models,SearchTests,projectMember_findReviews_from_all_repos,Magic Number,The method contains a magic number: 2,1409
+naver_yobi,models,SearchTests,projectAndGroupMember_findReviews_from_all_repos,Magic Number,The method contains a magic number: 3,1419
+naver_yobi,models,SearchTests,author_findReviews_from_all_repos,Magic Number,The method contains a magic number: 2,1430
+naver_yobi,models,SearchTests,groupAndProjectMember_findReviews_from_protected_project,Long Statement,The length of the statement "List<ReviewComment> reviews=Search.findReviews("review"`groupAndProjectMember`protectedProject`onePageFiveSize).getList();" is 122.,1526
+naver_yobi,models,SearchTests,groupMember_findReviews_from_group,Magic Number,The method contains a magic number: 2,1580
+naver_yobi,models,SearchTests,projectMember_findReviews_from_group,Magic Number,The method contains a magic number: 2,1590
+naver_yobi,models,SearchTests,groupAndProjectMember_findReviews_from_group,Magic Number,The method contains a magic number: 3,1600
+naver_yobi,models,SearchTests,author_findReviews_from_group,Magic Number,The method contains a magic number: 2,1611
+naver_yobi,models,ProjectTest,findMilestonesById,Magic Number,The method contains a magic number: 2,57
+naver_yobi,models,ProjectTest,findIssueById,Magic Number,The method contains a magic number: 7,66
+naver_yobi,models,ProjectTest,isOnlyManager,Magic Number,The method contains a magic number: 2l,105
+naver_yobi,models,ProjectTest,isOnlyManager,Magic Number,The method contains a magic number: 5l,105
+naver_yobi,models,ProjectTest,findProjectsByMember,Magic Number,The method contains a magic number: 2l,116
+naver_yobi,models,ProjectTest,findProjectsByMember,Magic Number,The method contains a magic number: 2,116
+naver_yobi,models,WatchTest,findWatchers,Magic Number,The method contains a magic number: 2L,79
+naver_yobi,models,WatchTest,findWatchers,Magic Number,The method contains a magic number: 3L,79
+naver_yobi,models,WatchTest,findUnwatchers,Magic Number,The method contains a magic number: 2L,95
+naver_yobi,models,WatchTest,findUnwatchers,Magic Number,The method contains a magic number: 3L,95
+naver_yobi,models,WatchTest,findWatchedResourceIds,Magic Number,The method contains a magic number: 2L,111
+naver_yobi,models,WatchTest,findWatchedResourceIds,Magic Number,The method contains a magic number: 2L,111
+naver_yobi,models,WatchTest,isWatching,Magic Number,The method contains a magic number: 2L,127
+naver_yobi,models,WatchTest,isWatching,Magic Number,The method contains a magic number: 3L,127
+naver_yobi,models,WatchTest,isWatching,Magic Number,The method contains a magic number: 2L,127
+naver_yobi,models,WatchTest,findActualWatchers,Magic Number,The method contains a magic number: 5L,145
+naver_yobi,models,WatchTest,findActualWatchers,Magic Number,The method contains a magic number: 2L,145
+naver_yobi,models,WatchTest,findActualWatchers,Magic Number,The method contains a magic number: 3L,145
+naver_yobi,models,WatchTest,findActualWatchers,Magic Number,The method contains a magic number: 4L,145
+naver_yobi,models,WatchTest,findActualWatchers,Magic Number,The method contains a magic number: 5L,145
+naver_yobi,models,WatchTest,findActualWatchers,Magic Number,The method contains a magic number: 6L,145
+naver_yobi,models,NotificationEventTest,add_with_filter,Magic Number,The method contains a magic number: 2L,84
+naver_yobi,models,NotificationEventTest,add_with_filter,Magic Number,The method contains a magic number: 3L,84
+naver_yobi,models,ReviewCommentTest,addTestData,Magic Number,The method contains a magic number: 3,137
+naver_yobi,models,ReviewCommentTest,addTestData,Magic Number,The method contains a magic number: 3,137
+naver_yobi,models,ReviewCommentTest,addTestData,Magic Number,The method contains a magic number: 2,137
+naver_yobi,models,ReviewCommentTest,addTestData,Magic Number,The method contains a magic number: 100,137
+naver_yobi,models,ReviewCommentTest,addTestData,Magic Number,The method contains a magic number: 10,137
+naver_yobi,models,ReviewCommentTest,addTestData,Magic Number,The method contains a magic number: 2,137
+naver_yobi,models,ReviewCommentTest,addTestData,Magic Number,The method contains a magic number: 2,137
+naver_yobi,models,PullRequestTest,initRepositories,Long Statement,The length of the statement "Git git=Git.cloneRepository().setURI(GitRepository.getGitDirectoryURL(project)).setDirectory(new File(localRepoPath)).call();" is 125.,66
+naver_yobi,models,PullRequestTest,initRepositories,Long Statement,The length of the statement "Git git=Git.cloneRepository().setURI(GitRepository.getGitDirectoryURL(forkedProject)).setDirectory(new File(localRepoPath)).call();" is 131.,66
+naver_yobi,models,PullRequestTest,addIssueEvent,Magic Number,The method contains a magic number: 2,131
+naver_yobi,models,PullRequestTest,getWatchers_explicitly_watch_unwatch,Magic Number,The method contains a magic number: 2L,192
+naver_yobi,models,PullRequestTest,getWatchers_explicitly_watch_unwatch,Magic Number,The method contains a magic number: 3L,192
+naver_yobi,models,PullRequestTest,getWatchers_private_project,Magic Number,The method contains a magic number: 2L,210
+naver_yobi,models,PullRequestTest,testReviewer,Magic Number,The method contains a magic number: 2L,246
+naver_yobi,models,PullRequestTest,getDiff1,Long Statement,The length of the statement "expected.get(0).editList=DiffAlgorithm.getAlgorithm(DiffAlgorithm.SupportedAlgorithm.HISTOGRAM).diff(RawTextComparator.DEFAULT`expected.get(0).a`expected.get(0).b);" is 164.,270
+naver_yobi,models,CommentThreadTest,findByCommitId,Magic Number,The method contains a magic number: 2,86
+naver_yobi,models,CommentThreadTest,findByCommitId,Magic Number,The method contains a magic number: 2,86
+naver_yobi,models,CommentThreadTest,findByCommitId,Magic Number,The method contains a magic number: 3,86
+naver_yobi,models,CommentThreadTest,addTestData,Magic Number,The method contains a magic number: 3,109
+naver_yobi,models,CommentThreadTest,addTestData,Magic Number,The method contains a magic number: 100,109
+naver_yobi,models,CommentThreadTest,addTestData,Magic Number,The method contains a magic number: 10,109
+naver_yobi,models,CommentThreadTest,addTestData,Magic Number,The method contains a magic number: 2,109
+naver_yobi,models,ModelTest,getTestUser,Magic Number,The method contains a magic number: 2l,46
+naver_yobi,models,MilestoneTest,create,Magic Number,The method contains a magic number: 3l,44
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 2012,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 12,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 23,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 59,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 59,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 2,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 2,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 4,62
+naver_yobi,models,MilestoneTest,findById,Magic Number,The method contains a magic number: 50,62
+naver_yobi,models,MilestoneTest,findByProjectId,Magic Number,The method contains a magic number: 2,111
+naver_yobi,models,MilestoneTest,findByProjectId,Magic Number,The method contains a magic number: 2l,111
+naver_yobi,models,MilestoneTest,findByProjectId,Magic Number,The method contains a magic number: 2l,111
+naver_yobi,models,MilestoneTest,findByProjectId,Magic Number,The method contains a magic number: 2,111
+naver_yobi,models,MilestoneTest,findByProjectId,Magic Number,The method contains a magic number: 3l,111
+naver_yobi,models,MilestoneTest,findByProjectId,Magic Number,The method contains a magic number: 4l,111
+naver_yobi,models,MilestoneTest,findClosedMilestones,Magic Number,The method contains a magic number: 2l,136
+naver_yobi,models,MilestoneTest,findOpenMilestones,Magic Number,The method contains a magic number: 2,151
+naver_yobi,models,MilestoneTest,findOpenMilestones,Magic Number,The method contains a magic number: 2l,151
+naver_yobi,models,MilestoneTest,findMilestones,Magic Number,The method contains a magic number: 2,168
+naver_yobi,models,MilestoneTest,findMilestones,Magic Number,The method contains a magic number: 2l,168
+naver_yobi,models,MilestoneTest,findMilestones,Magic Number,The method contains a magic number: 2l,168
+naver_yobi,models,MilestoneTest,findMilestones,Magic Number,The method contains a magic number: 2,168
+naver_yobi,models,MilestoneTest,getDueDateString,Magic Number,The method contains a magic number: 4l,192
+naver_yobi,models,MilestoneTest,options,Magic Number,The method contains a magic number: 2,209
+naver_yobi,models,MilestoneTest,addIssue,Magic Number,The method contains a magic number: 5l,218
+naver_yobi,models,MilestoneTest,addIssue,Magic Number,The method contains a magic number: 5l,218
+naver_yobi,models,MilestoneTest,addIssue,Magic Number,The method contains a magic number: 5l,218
+naver_yobi,models,MilestoneTest,updateIssue,Magic Number,The method contains a magic number: 6l,243
+naver_yobi,models,MilestoneTest,updateIssue,Magic Number,The method contains a magic number: 100,243
+naver_yobi,models,MilestoneTest,updateIssue,Magic Number,The method contains a magic number: 5l,243
+naver_yobi,models,MilestoneTest,updateIssue,Magic Number,The method contains a magic number: 2,243
+naver_yobi,models,MilestoneTest,updateIssue,Magic Number,The method contains a magic number: 50,243
+naver_yobi,models,MilestoneTest,deleteIssue,Magic Number,The method contains a magic number: 7l,266
+naver_yobi,models,MilestoneTest,deleteIssue,Magic Number,The method contains a magic number: 2,266
+naver_yobi,models,MilestoneTest,deleteIssue,Magic Number,The method contains a magic number: 50,266
+naver_yobi,models,MilestoneTest,deleteIssue,Magic Number,The method contains a magic number: 100,266
+naver_yobi,models,MilestoneTest,untilOver,Magic Number,The method contains a magic number: 3,302
+naver_yobi,models,MilestoneTest,untilLeft,Magic Number,The method contains a magic number: 3,329
+naver_yobi,models,FileDiffTest,getHunks,Magic Number,The method contains a magic number: 3,39
+naver_yobi,models,FileDiffTest,getHunks,Magic Number,The method contains a magic number: 3,39
+naver_yobi,models,FileDiffTest,getHunks,Magic Number,The method contains a magic number: 2,39
+naver_yobi,models,FileDiffTest,getHunks,Magic Number,The method contains a magic number: 2,39
+naver_yobi,models,IssueTest,vote,Magic Number,The method contains a magic number: 2,78
+naver_yobi,models,IssueTest,watchersAfterVoting,Magic Number,The method contains a magic number: 3,101
+naver_yobi,models,UserTest,save,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(user).size()).describedAs("'.foo' should NOT be accepted.").isGreaterThan(0);" is 123.,37
+naver_yobi,models,UserTest,save,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(user).size()).describedAs("'foo.' should NOT be accepted.").isGreaterThan(0);" is 123.,37
+naver_yobi,models,UserTest,save,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(user).size()).describedAs("'_foo' should NOT be accepted.").isGreaterThan(0);" is 123.,37
+naver_yobi,models,UserTest,save,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(user).size()).describedAs("'foo_' should NOT be accepted.").isGreaterThan(0);" is 123.,37
+naver_yobi,models,UserTest,findById,Magic Number,The method contains a magic number: 2l,69
+naver_yobi,models,UserTest,findNameById,Magic Number,The method contains a magic number: 2l,78
+naver_yobi,models,UserTest,options,Magic Number,The method contains a magic number: 7,87
+naver_yobi,models,UserTest,findByLoginId,Magic Number,The method contains a magic number: 3l,96
+naver_yobi,models,UserTest,findUsersByProject,Magic Number,The method contains a magic number: 2l,114
+naver_yobi,models,UserTest,findUsersByProject,Magic Number,The method contains a magic number: 2,114
+naver_yobi,models,OrganizationUserTest,listOrganization,Magic Number,The method contains a magic number: 5,124
+naver_yobi,models,OrganizationUserTest,listOrganization,Magic Number,The method contains a magic number: 5,124
+naver_yobi,models,OrganizationTest,validateName,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(org).size()).describedAs("'.foo' should NOT be accepted.").isGreaterThan(0);" is 122.,61
+naver_yobi,models,OrganizationTest,validateName,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(org).size()).describedAs("'foo.' should NOT be accepted.").isGreaterThan(0);" is 122.,61
+naver_yobi,models,OrganizationTest,validateName,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(org).size()).describedAs("'_foo' should NOT be accepted.").isGreaterThan(0);" is 122.,61
+naver_yobi,models,OrganizationTest,validateName,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(org).size()).describedAs("'foo_' should NOT be accepted.").isGreaterThan(0);" is 122.,61
+naver_yobi,models,OrganizationTest,validateName,Long Statement,The length of the statement "assertThat(Validation.getValidator().validate(org).size()).describedAs("'foo bar' should NOT be accepted.").isGreaterThan(0);" is 125.,61
+naver_yobi,models,PullRequestEventTest,getPullRequestCommits,Magic Number,The method contains a magic number: 2,33
+naver_yobi,models,NotificationMailTest,handleLinks,Long Statement,The length of the statement "Document doc=Jsoup.parse("<a href=\"http://y/foo/bar\">external link</a>" + "<a href=\"http://y/foo/bar\" rel=\"nofollow\">external link</a>" + "<a href=\"http://yobi.io/foo/bar\">internal link</a>"+ "<a href=\"/foo/bar\">relative link</a>"+ "<a href=\"http://yobi.io/%ag\">malformed link</a>");" is 295.,56
+naver_yobi,models,NotificationMailTest,handleLinks,Long Statement,The length of the statement "assertThat(links.get(1).attr("rel")).describedAs("rel attribute of external link whose rel attribute was 'nofollow'").isEqualTo("nofollow noreferrer");" is 151.,56
+naver_yobi,models,NotificationMailTest,handleLinks,Magic Number,The method contains a magic number: 2,56
+naver_yobi,models,NotificationMailTest,handleLinks,Magic Number,The method contains a magic number: 3,56
+naver_yobi,models,NotificationMailTest,handleLinks,Magic Number,The method contains a magic number: 4,56
+naver_yobi,models,PostingTest,findById,Magic Number,The method contains a magic number: 2l,44
+naver_yobi,models,PostingTest,findOnePage,Long Statement,The length of the statement "SearchParams searchParam=new SearchParams().add("project.owner"`"yobi"`Matching.EQUALS).add("project.name"`"projectYobi"`Matching.EQUALS).add("body"`""`Matching.CONTAINS);" is 171.,55
+naver_yobi,models,PostingTest,author,Magic Number,The method contains a magic number: 2l,132
+naver_yobi,models,PasswordResetTest,testGenerateResetHash,Magic Number,The method contains a magic number: 40,40
+naver_yobi,models,PasswordResetTest,testIsValidResetHash_expiredHash,Magic Number,The method contains a magic number: 1000,115
+naver_yobi,models,SearchResultTests,makeSnipet,Long Statement,The length of the statement "String contents="자동링크로 바꿀 수 있는 url은 자동링크처럼 보여주기 이슈 본문이나 댓글 등에 Yobi의 어떤 페이지에 대한 링크를 넣었을 때` 이를 렌더링해서 보여줄 때는 자동링크로 보여주면 좋을 것 같습니다. 예를 들어 `http://yobi.navercorp.com/dlab/hive/issue/1478`를 자동으로 #1478 로 보여준다거나` `http://yobi.navercorp.com/dlab/hive/commit/2f0ef4c0bbe535eb3475b0e7cdaadf86add6f220?branch=master`는 2f0ef4c로 보여주는 식입니다.";" is 327.,14
+naver_yobi,models,SearchResultTests,makeSnipet,Magic Number,The method contains a magic number: 10,14
+naver_yobi,models,SearchResultTests,merge_overlap,Long Statement,The length of the statement "String contents="#1477 마일스톤 이슈리스트 화면 개선 #1466 이슈에서 응준님께서 말씀주신 내용을 처리하고자 의견을 기다립니다. 1. github에서처럼 마일스톤내의 이슈검색시` 이슈리스트로 해당마일스톤을 검색필터로 선정하여 이동 * 별다른 개발없이 링크만 바꿔주면됨 * back버튼으로 마일스톤 리스트화면으로 이동이 가능하며` 이슈리스트의 검색기능을 그대로 활용가능 2. 마일스톤내 이슈화면에 검색기능을 추가 * 추가기능을 개발하다보면` 이슈리스트화면과 같아짐 * 향후` 마일스톤내 이슈페이지만의 기능을 넣고자 한다면` 이 방법이 나아보임 그럼 의견주시면 주신대로 작업진행하도록 하겠습니다~";" is 344.,30
+naver_yobi,models,SearchResultTests,merge_overlap,Long Statement,The length of the statement "assertThat(snipets).contains("#1477 마일스톤 이슈리스트 화면 개선 #1466 이슈에서 응준님께서 말씀주신 내용을 처리하고자 의견을 기다립니다. 1. github에서처럼 마일스톤내의 이슈검색시` 이슈리스트로 해당마일스톤을 검색필터로 선정하여 이동 * 별다른 개발없이 링크");" is 169.,30
+naver_yobi,models,SearchResultTests,merge_overlap,Long Statement,The length of the statement "assertThat(snipets).contains("바꿔주면됨 * back버튼으로 마일스톤 리스트화면으로 이동이 가능하며` 이슈리스트의 검색기능을 그대로 활용가능 2. 마일스톤내 이슈화면에 검색기능을 추가 * 추가기능을 개발하다보면` 이슈리스트화면과 같아짐 * 향후` 마일스톤내 이슈페이지만의 기능을 넣고자 한다면` 이 방법이 나아보임 그럼 의견주시면 주");" is 202.,30
+naver_yobi,models,SearchResultTests,merge_overlap,Magic Number,The method contains a magic number: 40,30
+naver_yobi,models,SearchResultTests,merge_overlap,Magic Number,The method contains a magic number: 2,30
+naver_yobi,models,RoleTest,findRoleByIds,Magic Number,The method contains a magic number: 2l,61
+naver_yobi,models,ProjectUserTest,findByIds,Magic Number,The method contains a magic number: 2l,29
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 2l,38
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 3l,38
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 2l,38
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 2l,38
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 3l,38
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 2l,38
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 2l,38
+naver_yobi,models,ProjectUserTest,create,Magic Number,The method contains a magic number: 3l,38
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 3l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 3l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 2l,50
+naver_yobi,models,ProjectUserTest,assignRole,Magic Number,The method contains a magic number: 3l,50
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 2l,65
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 3l,65
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 2l,65
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 5l,65
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 3l,65
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 3l,65
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 2l,65
+naver_yobi,models,ProjectUserTest,isManager,Magic Number,The method contains a magic number: 3l,65
+naver_yobi,models,ProjectUserTest,isMember,Magic Number,The method contains a magic number: 2l,82
+naver_yobi,models,ProjectUserTest,isMember,Magic Number,The method contains a magic number: 2l,82
+naver_yobi,models,ProjectUserTest,isMember,Magic Number,The method contains a magic number: 2l,82
+naver_yobi,models,ProjectUserTest,isMember,Magic Number,The method contains a magic number: 3l,82
+naver_yobi,models,ProjectUserTest,findMemberListByProject,Magic Number,The method contains a magic number: 2,99
+naver_yobi,models,ProjectUserTest,findMemberListByProject,Magic Number,The method contains a magic number: 3l,99
+naver_yobi,models,ProjectUserTest,isGuest,Magic Number,The method contains a magic number: 3L,158
+naver_yobi,models,ProjectUserTest,isGuest,Magic Number,The method contains a magic number: 4L,158
+naver_yobi,models,RecentlyVisitedProjectsTest,addVisitsWithTheDiffrentProjects,Magic Number,The method contains a magic number: 2,81
+naver_yobi,models,RecentlyVisitedProjectsTest,addVisitsWithDifferentUsers,Magic Number,The method contains a magic number: 2,96
+naver_yobi,models,RecentlyVisitedProjectsTest,recentlyVisitedProjects,Magic Number,The method contains a magic number: 1000l,112
+naver_yobi,models,RecentlyVisitedProjectsTest,recentlyVisitedProjects,Magic Number,The method contains a magic number: 2,112
+naver_yobi,models,RecentlyVisitedProjectsTest,recentlyVisitedProjects,Magic Number,The method contains a magic number: 2,112
+naver_yobi,models,RecentlyVisitedProjectsTest,recentlyVisitedProjectsWithRevisitation,Magic Number,The method contains a magic number: 1000l,128
+naver_yobi,models,RecentlyVisitedProjectsTest,recentlyVisitedProjectsWithRevisitation,Magic Number,The method contains a magic number: 1000l,128
+naver_yobi,models,RecentlyVisitedProjectsTest,recentlyVisitedProjectsWithRevisitation,Magic Number,The method contains a magic number: 2,128
+naver_yobi,models,RecentlyVisitedProjectsTest,recentlyVisitedProjectsWithRevisitation,Magic Number,The method contains a magic number: 2,128
+naver_yobi,models.resource,Resource,exists,Complex Method,Cyclomatic complexity of the method is 17,34
+naver_yobi,models.resource,Resource,exists,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@74ddfe69,34
+naver_yobi,models.resource,Resource,get,Complex Method,Cyclomatic complexity of the method is 17,107
+naver_yobi,models.resource,Resource,get,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7d4c44d2,107
+naver_yobi,models.resource,Resource,hashCode,Magic Number,The method contains a magic number: 31,201
+naver_yobi,models.resource,Resource,hashCode,Magic Number,The method contains a magic number: 31,201
+naver_yobi,models.resource,Resource,getResourceObject,Complex Method,Cyclomatic complexity of the method is 9,218
+naver_yobi,models.resource,Resource,getResourceObject,Magic Number,The method contains a magic number: 3,218
+naver_yobi,models.resource,Resource,getResourceObject,Magic Number,The method contains a magic number: 3,218
+naver_yobi,models.resource,Resource,getResourceObject,Magic Number,The method contains a magic number: 3,218
+naver_yobi,models.resource,Resource,getResourceObject,Magic Number,The method contains a magic number: 4,218
+naver_yobi,models.resource,Resource,getResourceObject,Magic Number,The method contains a magic number: 3,218
+naver_yobi,models.resource,Resource,getResourceObject,Magic Number,The method contains a magic number: 5,218
+naver_yobi,models.resource,Resource,getResourceObject,Magic Number,The method contains a magic number: 5,218
+naver_yobi,models.resource,Resource,getResourceObject,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6be6437a,218
+naver_yobi,models.resource,Resource,findByPath,Magic Number,The method contains a magic number: 2,244
+naver_yobi,models.resource,ResourceParam,javascriptUnbind,Long Statement,The length of the statement "return "function(k`v) { return encodeURIComponent(k+'.type')+'='+v" + ".resource.type+'&'+encodeURIComponent(k+'.id')+'='+v.resource.id; }";" is 140.,57
+naver_yobi,models.support,FinderTemplate,makeExpressionList,Complex Method,Cyclomatic complexity of the method is 17,32
+naver_yobi,models.support,FinderTemplate,makeExpressionList,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@20be76fb,32
+naver_yobi,models.support,FinderTemplate,getPage,Long Parameter List,The method has 5 parameters. ,100
+naver_yobi,models.support,ReviewSearchCondition,asExpressionList,Long Statement,The length of the statement "junction.icontains("reviewComments.contents"`filter).icontains("commitId"`filter).icontains("path"`filter).endJunction();" is 121.,48
+naver_yobi,models.support,SearchCondition,asExpressionList,Complex Method,Cyclomatic complexity of the method is 14,149
+naver_yobi,models.support,SearchCondition,getMentioningIssueIds,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3b0bfa33,217
+naver_yobi,models.support,SearchCondition,asExpressionList,Complex Method,Cyclomatic complexity of the method is 17,250
+naver_yobi,models.support,FinderTemplateTest,findBy,Magic Number,The method contains a magic number: 2l,40
+naver_yobi,models.support,FinderTemplateTest,findBy,Magic Number,The method contains a magic number: 3,40
+naver_yobi,models.support,FinderTemplateTest,findBy,Magic Number,The method contains a magic number: 2,40
+naver_yobi,models.support,ReviewSearchConditionTest,filterForAll,Magic Number,The method contains a magic number: 3,113
+naver_yobi,models.support,ReviewSearchConditionTest,searchingAuthor,Magic Number,The method contains a magic number: 2,132
+naver_yobi,models.support,ReviewSearchConditionTest,searchingParticipant,Magic Number,The method contains a magic number: 2,150
+naver_yobi,models.support,ReviewSearchConditionTest,addTestThread2,Magic Number,The method contains a magic number: 2,198
+naver_yobi,models.support,ReviewSearchConditionTest,addTestThread3,Magic Number,The method contains a magic number: 3,209
+naver_yobi,mailbox,CreationViaEmail,makeNewComment,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@247e4354,123
+naver_yobi,mailbox,CreationViaEmail,saveIssue,Long Parameter List,The method has 6 parameters. ,176
+naver_yobi,mailbox,CreationViaEmail,saveReviewComment,Long Parameter List,The method has 5 parameters. ,233
+naver_yobi,mailbox,CreationViaEmail,saveAttachment,Long Statement,The length of the statement "Logger.info("The email says the content type is '" + partToAttach.getContentType() + "' but Yobi determines it is '"+ attach.mimeType+ "'");" is 140.,482
+naver_yobi,mailbox,MailboxService,connect,Long Statement,The length of the statement "throw new IllegalStateException("Cannot connect to the IMAP server because these are" + " not configured: " + missingKeys);" is 123.,100
+naver_yobi,mailbox,MailboxService,stop,Complex Conditional,The conditional expression folder == null && store == null && pollingSchedule == null is complex.,130
+naver_yobi,mailbox,MailboxService,startEmailPolling,Long Statement,The length of the statement "pollingSchedule=Akka.system().scheduler().schedule(Duration.create(0`TimeUnit.MINUTES)`Duration.create(Configuration.root().getMilliseconds("application.mailbox.polling.interval"`5 * 60 * 1000L)`TimeUnit.MILLISECONDS)`polling`Akka.system().dispatcher());" is 254.,231
+naver_yobi,mailbox,MailboxService,startEmailPolling,Magic Number,The method contains a magic number: 5,231
+naver_yobi,mailbox,MailboxService,startEmailPolling,Magic Number,The method contains a magic number: 60,231
+naver_yobi,mailbox,MailboxService,startEmailPolling,Magic Number,The method contains a magic number: 1000L,231
+naver_yobi,mailbox,MailboxService,updateLastSeenUID,Empty catch clause,The method has an empty catch block.,340
+naver_yobi,mailbox,IMAPMessageUtil,asString,Long Statement,The length of the statement "return String.format("{Subject: %s` From: %s` To: %s}"`msg.getSubject()`ArrayUtils.toString(msg.getFrom())`ArrayUtils.toString(msg.getAllRecipients()));" is 152.,42
+naver_yobi,mailbox,EmailHandler,handleNewMessages,Complex Conditional,The conditional expression lastUIDValidity != null && lastUIDValidity.equals(uidValidity) && lastSeenUID != null is complex.,63
+naver_yobi,mailbox,EmailHandler,handleMessages,Long Statement,The length of the statement "play.Logger.warn("Failed to compare uids of " + m1 + " and "+ m2+ " while sorting messages by the uid; "+ "There is some remote chance of loss of "+ "mail requests.");" is 167.,127
+naver_yobi,mailbox,EmailHandler,compare,Long Statement,The length of the statement "play.Logger.warn("Failed to compare uids of " + m1 + " and "+ m2+ " while sorting messages by the uid; "+ "There is some remote chance of loss of "+ "mail requests.");" is 167.,140
+naver_yobi,mailbox,EmailHandler,handleMessage,Complex Method,Cyclomatic complexity of the method is 8,160
+naver_yobi,mailbox,EmailHandler,handleMessage,Long Statement,The length of the statement "String warn=String.format("This email '%s' is ignored because an email with" + " the same id '%s' was already handled at '%s'"`msg`sameMessage.messageId`sameMessage.getHandledDate());" is 183.,160
+naver_yobi,mailbox,EmailHandler,isAutoReplied,Long Statement,The length of the statement "return new MailHeader(message`"Auto-Submitted").containsIgnoreCase("auto-replied") || new MailHeader(message`"X-Naver-Absent").containsIgnoreCase("yes");" is 153.,293
+naver_yobi,mailbox,EmailHandler,createResources,Complex Method,Cyclomatic complexity of the method is 8,303
+naver_yobi,mailbox,EmailHandler,getThreads,Complex Method,Cyclomatic complexity of the method is 12,373
+naver_yobi,mailbox,EmailHandler,getThreads,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7d5a2932,373
+naver_yobi,mailbox,EmailHandler,getResourceFromDetail,Magic Number,The method contains a magic number: 3,430
+naver_yobi,mailbox,EmailHandler,getResourceFromDetail,Magic Number,The method contains a magic number: 3,430
+naver_yobi,mailbox,EmailHandler,getResourceFromDetail,Magic Number,The method contains a magic number: 2,430
+naver_yobi,mailbox,EmailHandler,getProjectFromDetail,Magic Number,The method contains a magic number: 2,446
+naver_yobi,mailbox,CreationViaEmailTest,saveReviewComment,Long Statement,The length of the statement "ReviewComment comment=CreationViaEmail.saveReviewComment(thread.asResource()`member`content`"<message-id-3@domain>"`recipients);" is 128.,132
+naver_yobi,mailbox,EmailAddressWithDetailTest,email,Long Statement,The length of the statement "assertThat(addr1.equalsExceptDetails(addr2)).describedAs("test@mail.com equals " + "test+1234@mail.com except its details").isTrue();" is 133.,29
+naver_yobi,playRepository,RepositoryService,getRepository,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2e0091cc,118
+naver_yobi,playRepository,RepositoryService,gitRpc,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4abe3c5d,207
+naver_yobi,playRepository,RepositoryService,receivePack,Long Parameter List,The method has 5 parameters. ,277
+naver_yobi,playRepository,GitRef,name,Magic Number,The method contains a magic number: 3,28
+naver_yobi,playRepository,GitRef,name,Magic Number,The method contains a magic number: 3,28
+naver_yobi,playRepository,GitRef,name,Magic Number,The method contains a magic number: 2,28
+naver_yobi,playRepository,BareRepository,getRepository,Long Statement,The length of the statement "RepositoryCache.FileKey fileKey=RepositoryCache.FileKey.exact(RepositoryService.getRepository(project).getDirectory()`FS.DETECTED);" is 131.,64
+naver_yobi,playRepository,BareRepository,READMEFileNameFilter,Magic Number,The method contains a magic number: 4,114
+naver_yobi,playRepository,BareRepository,READMEFileNameFilter,Magic Number,The method contains a magic number: 2,114
+naver_yobi,playRepository,BareRepository,READMEFileNameFilter,Magic Number,The method contains a magic number: 3,114
+naver_yobi,playRepository,DiffLine,DiffLine,Long Parameter List,The method has 5 parameters. ,30
+naver_yobi,playRepository,DiffLine,equals,Complex Method,Cyclomatic complexity of the method is 8,39
+naver_yobi,playRepository,DiffLine,hashCode,Magic Number,The method contains a magic number: 31,56
+naver_yobi,playRepository,DiffLine,hashCode,Magic Number,The method contains a magic number: 31,56
+naver_yobi,playRepository,DiffLine,hashCode,Magic Number,The method contains a magic number: 31,56
+naver_yobi,playRepository,DiffLine,hashCode,Magic Number,The method contains a magic number: 31,56
+naver_yobi,playRepository,GitRepository,fileAsJson,Magic Number,The method contains a magic number: 1000L,308
+naver_yobi,playRepository,GitRepository,getAvatar,Magic Number,The method contains a magic number: 34,353
+naver_yobi,playRepository,GitRepository,isWellKnownRef,Long Statement,The length of the statement "return refName.startsWith(Constants.R_HEADS) || refName.startsWith(Constants.R_TAGS) || refName.startsWith(Constants.R_REMOTES);" is 128.,826
+naver_yobi,playRepository,GitRepository,cloneRepository,Long Statement,The length of the statement "Git.cloneRepository().setURI(gitUrl).setDirectory(getGitDirectory(forkingProject)).setCloneAllBranches(true).setBare(true).call();" is 130.,965
+naver_yobi,playRepository,GitRepository,cloneRepository,Long Statement,The length of the statement "Git.cloneRepository().setURI(gitUrl).setDirectory(getGitDirectory(forkingProject)).setCloneAllBranches(true).setBare(true).setCredentialsProvider(new UsernamePasswordCredentialsProvider(authId`authPw)).call();" is 209.,986
+naver_yobi,playRepository,GitRepository,getRelatedAuthors,Long Statement,The length of the statement "String msg=String.format("Reject to get related authors " + "from changes because of performance issue: The " + "changes include %d files and it exceeds our limit "+ "of '%d' files."`diffs.size()`BLAME_FILE_LIMIT);" is 214.,1045
+naver_yobi,playRepository,GitRepository,getAuthorsFromDiffEntry,Long Statement,The length of the statement "BlameResult blameResult=new Git(repository).blame().setFilePath(diff.getOldPath()).setFollowFileRenames(true).setStartCommit(start).call();" is 139.,1128
+naver_yobi,playRepository,GitRepository,restoreBranch,Long Statement,The length of the statement "new Git(repo).branchCreate().setName(pullRequest.fromBranch.replaceAll("refs/heads/"`"")).setStartPoint(pullRequest.lastCommitId).call();" is 137.,1321
+naver_yobi,playRepository,GitRepository,getFileDiffs,Complex Conditional,The conditional expression fileDiff.a != null && fileDiff.b != null && !(fileDiff.isBinaryA || fileDiff.isBinaryB) && Arrays.asList(MODIFY`RENAME).contains(diff.getChangeType()) is complex.,1461
+naver_yobi,playRepository,GitRepository,getFileDiffs,Complex Conditional,The conditional expression fileDiff.b != null && !fileDiff.isBinaryB && diff.getChangeType().equals(ADD) is complex.,1461
+naver_yobi,playRepository,GitRepository,getFileDiffs,Complex Conditional,The conditional expression fileDiff.a != null && !fileDiff.isBinaryA && diff.getChangeType().equals(DELETE) is complex.,1461
+naver_yobi,playRepository,GitRepository,getFileDiffs,Complex Method,Cyclomatic complexity of the method is 15,1461
+naver_yobi,playRepository,GitRepository,getFileDiffs,Long Method,The method has 155 lines of code.,1461
+naver_yobi,playRepository,GitRepository,getFileDiffs,Long Statement,The length of the statement "if (fileDiff.a != null && fileDiff.b != null && !(fileDiff.isBinaryA || fileDiff.isBinaryB) && Arrays.asList(MODIFY`RENAME).contains(diff.getChangeType())) {" is 157.,1461
+naver_yobi,playRepository,GitRepository,getFileDiffs,Long Statement,The length of the statement "DiffAlgorithm diffAlgorithm=DiffAlgorithm.getAlgorithm(repositoryB.getConfig().getEnum(ConfigConstants.CONFIG_DIFF_SECTION`null`ConfigConstants.CONFIG_KEY_ALGORITHM`DiffAlgorithm.SupportedAlgorithm.HISTOGRAM));" is 210.,1461
+naver_yobi,playRepository,GitRepository,setDefaultBranch,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1c0ca2bd,1797
+naver_yobi,playRepository,GitRepository,move,Long Statement,The length of the statement "play.Logger.debug("[Transfer] Move from: " + srcGitDirectoryForMerging.getAbsolutePath() + "to "+ destGitDirectoryForMerging);" is 126.,1862
+naver_yobi,playRepository,FileDiff,getHunks,Complex Method,Cyclomatic complexity of the method is 16,100
+naver_yobi,playRepository,FileDiff,getHunks,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@30330bb7,100
+naver_yobi,playRepository,FileDiff,combineA,Magic Number,The method contains a magic number: 2,205
+naver_yobi,playRepository,FileDiff,combineB,Magic Number,The method contains a magic number: 2,209
+naver_yobi,playRepository,FileDiff,refreshErrors,Complex Conditional,The conditional expression editList == null && a != null && isRawTextSizeExceeds(a) is complex.,280
+naver_yobi,playRepository,FileDiff,refreshErrors,Complex Conditional,The conditional expression editList == null && b != null && isRawTextSizeExceeds(b) is complex.,280
+naver_yobi,playRepository,FileDiff,equals,Complex Method,Cyclomatic complexity of the method is 9,305
+naver_yobi,playRepository,FileDiff,hashCode,Magic Number,The method contains a magic number: 31,326
+naver_yobi,playRepository,FileDiff,hashCode,Magic Number,The method contains a magic number: 31,326
+naver_yobi,playRepository,FileDiff,hashCode,Magic Number,The method contains a magic number: 31,326
+naver_yobi,playRepository,FileDiff,hashCode,Magic Number,The method contains a magic number: 31,326
+naver_yobi,playRepository,FileDiff,hashCode,Magic Number,The method contains a magic number: 31,326
+naver_yobi,playRepository,FileDiff,toString,Long Statement,The length of the statement "return "FileDiff{" + "commitA='" + commitA + '\''+ "` commitB='"+ commitB+ '\''+ "` pathA='"+ pathA+ '\''+ "` pathB='"+ pathB+ '\''+ "` changeType="+ changeType+ '}';" is 166.,337
+naver_yobi,playRepository,Commit,getWatchers,Complex Method,Cyclomatic complexity of the method is 8,46
+naver_yobi,playRepository,Commit,getWatchers,Long Statement,The length of the statement "List<CommentThread> threads=CommentThread.find.where().eq("project.id"`project.id).eq("commitId"`getId()).eq("pullRequest.id"`null).findList();" is 143.,46
+naver_yobi,playRepository,Hunk,equals,Complex Method,Cyclomatic complexity of the method is 8,43
+naver_yobi,playRepository,Hunk,hashCode,Magic Number,The method contains a magic number: 31,59
+naver_yobi,playRepository,Hunk,hashCode,Magic Number,The method contains a magic number: 31,59
+naver_yobi,playRepository,Hunk,hashCode,Magic Number,The method contains a magic number: 31,59
+naver_yobi,playRepository,Hunk,hashCode,Magic Number,The method contains a magic number: 31,59
+naver_yobi,playRepository,SVNRepository,getAvatar,Magic Number,The method contains a magic number: 34,140
+naver_yobi,playRepository,SVNRepository,getPatch,Long Statement,The length of the statement "diffClient.doDiff(svnURL`null`SVNRevision.create(revA)`SVNRevision.create(revB)`SVNDepth.INFINITY`true`byteArrayOutputStream);" is 126.,230
+naver_yobi,playRepository,GitCommit,getShortId,Magic Number,The method contains a magic number: 7,172
+naver_yobi,playRepository,GitCommit,parsePersonIdent,Complex Conditional,The conditional expression emailB >= raw.length || raw[emailB] == '\n' || (emailE >= raw.length - 1 && raw[emailE - 1] != '>') is complex.,254
+naver_yobi,playRepository,GitCommit,parsePersonIdent,Magic Number,The method contains a magic number: 2,254
+naver_yobi,playRepository,GitCommit,parsePersonIdent,Magic Number,The method contains a magic number: 2,254
+naver_yobi,playRepository,GitCommit,parsePersonIdent,Magic Number,The method contains a magic number: 2,254
+naver_yobi,playRepository,GitCommit,parsePersonIdent,Magic Number,The method contains a magic number: 2,254
+naver_yobi,playRepository,GitCommit,parsePersonIdent,Magic Number,The method contains a magic number: 1000L,254
+naver_yobi,playRepository,GitRepositoryTest,getHistory,Magic Number,The method contains a magic number: 2,143
+naver_yobi,playRepository,GitRepositoryTest,getHistory,Magic Number,The method contains a magic number: 5,143
+naver_yobi,playRepository,GitRepositoryTest,getHistory,Magic Number,The method contains a magic number: 2,143
+naver_yobi,playRepository,GitRepositoryTest,getHistory,Magic Number,The method contains a magic number: 2,143
+naver_yobi,playRepository,GitRepositoryTest,getHistory,Magic Number,The method contains a magic number: 3,143
+naver_yobi,playRepository,GitRepositoryTest,getHistory,Magic Number,The method contains a magic number: 2,143
+naver_yobi,playRepository,GitRepositoryTest,getHistory,Magic Number,The method contains a magic number: 2,143
+naver_yobi,playRepository,GitRepositoryTest,addCommit,Long Parameter List,The method has 5 parameters. ,305
+naver_yobi,playRepository,GitRepositoryTest,testGetAllBranches,Long Statement,The length of the statement "git.push().setRemote(GitRepository.getGitDirectoryURL(project)).setRefSpecs(new RefSpec(branchName + ":" + branchName)).setForce(true).call();" is 142.,350
+naver_yobi,playRepository,GitRepositoryTest,getDiff_bigFile,Long Statement,The length of the statement "assertThat(diff.hasError(FileDiff.Error.OTHERS_SIZE_EXCEEDED)).describedAs("The others exceeds the size limit.").isFalse();" is 123.,457
+naver_yobi,playRepository,GitRepositoryTest,getDiff_manyLines,Long Statement,The length of the statement "assertThat(diff.hasError(FileDiff.Error.OTHERS_SIZE_EXCEEDED)).describedAs("The others exceeds the size limit.").isFalse();" is 123.,496
+naver_yobi,playRepository,GitRepositoryTest,getDiff_smallChangeOfBigFile,Long Statement,The length of the statement "assertThat(diff.hasError(FileDiff.Error.OTHERS_SIZE_EXCEEDED)).describedAs("The others exceeds the size limit.").isFalse();" is 123.,534
+naver_yobi,playRepository,GitRepositoryTest,getDiff_manyFiles,Long Statement,The length of the statement "assertThat(diff.hasError(FileDiff.Error.OTHERS_SIZE_EXCEEDED)).describedAs("The others exceeds the size limit.").isTrue();" is 122.,578
+naver_yobi,playRepository,GitRepositoryTest,getDiff_manyFiles,Magic Number,The method contains a magic number: 4,578
+naver_yobi,playRepository,GitRepositoryTest,getDiff_manyFiles,Magic Number,The method contains a magic number: 4,578
+naver_yobi,playRepository,CommitTest,getWatchers_with_commet_git,Magic Number,The method contains a magic number: 2L,69
+naver_yobi,playRepository,CommitTest,getWatchers_with_commet_git,Magic Number,The method contains a magic number: 3L,69
+naver_yobi,playRepository,CommitTest,getWatchers_with_comment_svn,Magic Number,The method contains a magic number: 4L,94
+naver_yobi,playRepository,CommitTest,getWatchers_with_comment_svn,Magic Number,The method contains a magic number: 3L,94
+naver_yobi,playRepository,CommitTest,getWatchers_with_comment_svn,Magic Number,The method contains a magic number: 3l,94
+naver_yobi,playRepository,CommitTest,getWatchers_with_project_watcher,Magic Number,The method contains a magic number: 2L,116
+naver_yobi,playRepository,CommitTest,getWatchers_with_project_watcher,Magic Number,The method contains a magic number: 3L,116
+naver_yobi,playRepository,CommitTest,getWatchers_explicitly_watch_unwatch,Magic Number,The method contains a magic number: 2L,133
+naver_yobi,playRepository,CommitTest,getWatchers_explicitly_watch_unwatch,Magic Number,The method contains a magic number: 3L,133
+naver_yobi,playRepository,CommitTest,getWatchers_explicitly_watch_unwatch,Magic Number,The method contains a magic number: 4L,133
+naver_yobi,playRepository,CommitTest,getWatchers_private_project,Magic Number,The method contains a magic number: 5L,154
+naver_yobi,playRepository,CommitTest,getWatchers_private_project,Magic Number,The method contains a magic number: 2L,154
+naver_yobi,actions,NullProjectCheckAction,call,Long Statement,The length of the statement "promise=Promise.pure((Result)forbidden(ErrorViews.Forbidden.render("error.forbidden.or.notfound"`context.request().path())));" is 125.,47
+naver_yobi,actions,AbstractProjectCheckAction,call,Long Statement,The length of the statement "promise=Promise.pure((Result)forbidden(ErrorViews.Forbidden.render("error.forbidden.or.notfound"`context.request().path())));" is 125.,50
+naver_yobi,actions,AbstractProjectCheckAction,call,Long Statement,The length of the statement "promise=Promise.pure((Result)forbidden(ErrorViews.Forbidden.render("error.forbidden.or.notfound"`context.request().path())));" is 125.,50
+naver_yobi,actions,AnonymousCheckAction,call,Complex Conditional,The conditional expression (AccessControl.isAnonymousNotAllowed() || configuration.requiresLogin()) && UserApp.currentUser().isAnonymous() is complex.,44
+naver_yobi,actions,IsOnlyGitAvailableAction,call,Long Statement,The length of the statement "Promise<Result> promise=Promise.pure((Result)badRequest(ErrorViews.BadRequest.render("error.badrequest.only.available.for.git")));" is 130.,42
+naver_yobi,actions,IsAllowedAction,call,Long Statement,The length of the statement "Promise<Result> promise=Promise.pure((Result)notFound(ErrorViews.NotFound.render("error.notfound"`project`resourceType.resource())));" is 133.,51
+naver_yobi,actions.support,PathParserTest,testPathParser,Magic Number,The method contains a magic number: 3,32
+naver_yobi,actions.support,PathParserTest,testPathParserIncludeContext,Magic Number,The method contains a magic number: 3,43
+naver_yobi,actors,PullRequestActor,processPullRequestMerging,Long Statement,The length of the statement "PullRequestEvent.addCommitEvents(message.getSender()`pullRequest`mergeResult.getNewCommits()`getCommitEventOldValue(oldMergeCommitId`pullRequest.mergedCommitIdTo));" is 164.,32
+naver_yobi,actors,PullRequestActor,processPullRequestMerging,Long Statement,The length of the statement "NotificationEvent notiEvent=NotificationEvent.afterPullRequestUpdated(message.getSender()`pullRequest`pullRequest.state`State.MERGED);" is 134.,32
+naver_yobi,support,ExecutionTimeWatcher,finished,Magic Number,The method contains a magic number: 1000,18
+naver_yobi,support,ExecutionTimeWatcher,finished,Magic Number,The method contains a magic number: 3,18
+naver_yobi,support,ExecutionTimeWatcher,finished,Magic Number,The method contains a magic number: 1000,18
+naver_yobi,support,ExecutionTimeWatcher,finished,Magic Number,The method contains a magic number: 1000,18
+naver_yobi,support,Helpers,insertTestData,Long Statement,The length of the statement "YamlUtil.insertDataFromYaml("test-data.yml"`new String[]{"users"`"projects"`"pullRequests"`"milestones"`"issues"`"issueComments"`"postings"`"postingComments"`"projectUsers"`"organization"`"organizationUsers"`"projectMenuSettings"});" is 232.,78
+naver_yobi,support,ContextTest,initContext,Long Statement,The length of the statement "context=new FakeContext(1L`mock(RequestHeader.class)`mock(Request.class)`Collections.<String`String>emptyMap()`Collections.<String`String>emptyMap()`Collections.<String`Object>emptyMap());" is 188.,37

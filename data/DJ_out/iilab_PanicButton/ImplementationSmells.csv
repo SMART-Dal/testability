@@ -1,0 +1,318 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+iilab_PanicButton,org.iilab.pb.trigger,HardwareTriggerReceiver,onReceive,Complex Conditional,The conditional expression !isCallActive(context) && (action.equals(ACTION_SCREEN_OFF) || action.equals(ACTION_SCREEN_ON)) is complex.,22
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,registerClick,Complex Conditional,The conditional expression isFirstClick() || notWithinLimit(eventTime) || !isPowerClickBecauseOfUser() is complex.,36
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,registerClick,Long Identifier,The length of the identifier isConfirmationClickedBeforeVibrationEnded is 41.,36
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,registerClick,Long Identifier,The length of the identifier isConfirmationClickedWithinTimeLimit is 36.,36
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,registerClick,Long Identifier,The length of the field TIME_INTERVAL_FOR_CONFIRMATION is 30.,36
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,registerClick,Long Statement,The length of the statement "boolean isConfirmationClickedWithinTimeLimit=(vibrationDuration + TIME_INTERVAL_FOR_CONFIRMATION) >= confirmationDuration;" is 122.,36
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,isPowerClickBecauseOfUser,Long Identifier,The length of the field EVENT_LOG_TAG_POWER_SCREEN_STATE is 32.,91
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,isPowerClickBecauseOfUser,Long Identifier,The length of the field IS_STATE_CHANGE_USER_TRIGERRED is 30.,91
+iilab_PanicButton,org.iilab.pb.trigger,MultiClickEvent,isPowerClickBecauseOfUser,Magic Number,The method contains a magic number: 2,91
+iilab_PanicButton,org.iilab.pb.trigger,HardwareTriggerReceiverTest,shouldActivateAlertWhenTheMultiClickEventIsActivatedAndResetTheEvent,Long Statement,The length of the statement "MultiClickEvent actualEvent=(MultiClickEvent)ReflectionUtils.getValueIncludingSuperclasses("multiClickEvent"`spyHardwareTriggerReceiver);" is 137.,57
+iilab_PanicButton,org.iilab.pb,HomeActivity,onCreate,Complex Method,Cyclomatic complexity of the method is 8,37
+iilab_PanicButton,org.iilab.pb,PanicButtonActivity,alertStatusStripColor,Long Statement,The length of the statement "return ApplicationSettings.isAlertActive(this) ? getResources().getColor(R.color.active_color) : getResources().getColor(R.color.standby_color);" is 144.,35
+iilab_PanicButton,org.iilab.pb,MainActivity,onCreate,Complex Method,Cyclomatic complexity of the method is 12,43
+iilab_PanicButton,org.iilab.pb,MainActivity,onCreate,Long Statement,The length of the statement "if (currentPage.getComponent().equals("contacts")) fragment=new SetupContactsFragment().newInstance(pageId`AppConstants.FROM_MAIN_ACTIVITY);" is 140.,43
+iilab_PanicButton,org.iilab.pb,MainActivity,onCreate,Long Statement,The length of the statement "else if (currentPage.getComponent().equals("message")) fragment=new SetupMessageFragment().newInstance(pageId`AppConstants.FROM_MAIN_ACTIVITY);" is 143.,43
+iilab_PanicButton,org.iilab.pb,MainActivity,onCreate,Long Statement,The length of the statement "else if (currentPage.getComponent().equals("code")) fragment=new SetupCodeFragment().newInstance(pageId`AppConstants.FROM_MAIN_ACTIVITY);" is 137.,43
+iilab_PanicButton,org.iilab.pb,MainActivity,onCreate,Long Statement,The length of the statement "else if (currentPage.getComponent().equals("alert")) fragment=new MainSetupAlertFragment().newInstance(pageId`AppConstants.FROM_MAIN_ACTIVITY);" is 143.,43
+iilab_PanicButton,org.iilab.pb,MainActivity,onCreate,Long Statement,The length of the statement "else if (currentPage.getComponent().equals("language")) fragment=new LanguageSettingsFragment().newInstance(pageId`AppConstants.FROM_MAIN_ACTIVITY);" is 148.,43
+iilab_PanicButton,org.iilab.pb,MainActivity,changeAppIcontoPB,Long Statement,The length of the statement "getPackageManager().setComponentEnabledSetting(new ComponentName("org.iilab.pb"`"org.iilab.pb.HomeActivity-setup")`PackageManager.COMPONENT_ENABLED_STATE_ENABLED`PackageManager.DONT_KILL_APP);" is 192.,140
+iilab_PanicButton,org.iilab.pb,MainActivity,changeAppIcontoPB,Long Statement,The length of the statement "getPackageManager().setComponentEnabledSetting(new ComponentName("org.iilab.pb"`"org.iilab.pb.HomeActivity-calculator")`PackageManager.COMPONENT_ENABLED_STATE_DISABLED`PackageManager.DONT_KILL_APP);" is 198.,140
+iilab_PanicButton,org.iilab.pb,LoginActivity,onCreate,Long Statement,The length of the statement "AppUtil.setError(LoginActivity.this`passwordEditText`((tryCount < 2) ? R.string.incorrect_pin : R.string.incorrect_pin_3_times));" is 129.,20
+iilab_PanicButton,org.iilab.pb,LoginActivity,onCreate,Long Statement,The length of the statement "AppUtil.setError(LoginActivity.this`passwordEditText`((tryCount < 2) ? R.string.incorrect_pin : R.string.incorrect_pin_3_times));" is 129.,20
+iilab_PanicButton,org.iilab.pb,LoginActivity,onCreate,Magic Number,The method contains a magic number: 2,20
+iilab_PanicButton,org.iilab.pb,LoginActivity,onCreate,Magic Number,The method contains a magic number: 2,20
+iilab_PanicButton,org.iilab.pb,LoginActivity,onKey,Long Statement,The length of the statement "AppUtil.setError(LoginActivity.this`passwordEditText`((tryCount < 2) ? R.string.incorrect_pin : R.string.incorrect_pin_3_times));" is 129.,27
+iilab_PanicButton,org.iilab.pb,LoginActivity,onKey,Magic Number,The method contains a magic number: 2,27
+iilab_PanicButton,org.iilab.pb,LoginActivity,onClick,Long Statement,The length of the statement "AppUtil.setError(LoginActivity.this`passwordEditText`((tryCount < 2) ? R.string.incorrect_pin : R.string.incorrect_pin_3_times));" is 129.,56
+iilab_PanicButton,org.iilab.pb,LoginActivity,onClick,Magic Number,The method contains a magic number: 2,56
+iilab_PanicButton,org.iilab.pb,CalculatorActivity,onClick,Complex Method,Cyclomatic complexity of the method is 23,52
+iilab_PanicButton,org.iilab.pb,CalculatorActivity,onTouch,Complex Conditional,The conditional expression (x < 0 - slop) || (x >= v.getWidth() + slop) || (y < 0 - slop)|| (y >= v.getHeight() + slop) is complex.,136
+iilab_PanicButton,org.iilab.pb,CalculatorActivity,onTouch,Complex Method,Cyclomatic complexity of the method is 9,136
+iilab_PanicButton,org.iilab.pb,CalculatorActivity,onTouch,Magic Number,The method contains a magic number: 3000,136
+iilab_PanicButton,org.iilab.pb,CalculatorActivity,onTouch,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6433f21,136
+iilab_PanicButton,org.iilab.pb,MainModalActivity,onCreate,Complex Method,Cyclomatic complexity of the method is 10,41
+iilab_PanicButton,org.iilab.pb,WizardModalActivity,onCreate,Complex Method,Cyclomatic complexity of the method is 12,42
+iilab_PanicButton,org.iilab.pb,WizardModalActivity,onCreate,Long Statement,The length of the statement "AppUtil.updateImages(true`currentPage.getContent()`WizardModalActivity.this`metrics`tvContent`AppConstants.IMAGE_INLINE);" is 121.,42
+iilab_PanicButton,org.iilab.pb,WizardActivity,onCreate,Complex Method,Cyclomatic complexity of the method is 22,39
+iilab_PanicButton,org.iilab.pb,WizardActivity,onCreate,Long Method,The method has 104 lines of code.,39
+iilab_PanicButton,org.iilab.pb,WizardActivity,onCreate,Long Statement,The length of the statement "if (currentPage.getComponent().equals("contacts")) fragment=new SetupContactsFragment().newInstance(pageId`AppConstants.FROM_WIZARD_ACTIVITY);" is 142.,39
+iilab_PanicButton,org.iilab.pb,WizardActivity,onCreate,Long Statement,The length of the statement "else if (currentPage.getComponent().equals("message")) fragment=new SetupMessageFragment().newInstance(pageId`AppConstants.FROM_WIZARD_ACTIVITY);" is 145.,39
+iilab_PanicButton,org.iilab.pb,WizardActivity,onCreate,Long Statement,The length of the statement "else if (currentPage.getComponent().equals("code")) fragment=new SetupCodeFragment().newInstance(pageId`AppConstants.FROM_WIZARD_ACTIVITY);" is 139.,39
+iilab_PanicButton,org.iilab.pb,WizardActivity,onCreate,Long Statement,The length of the statement "else if (currentPage.getComponent().equals("language")) fragment=new LanguageSettingsFragment().newInstance(pageId`AppConstants.FROM_WIZARD_ACTIVITY);" is 150.,39
+iilab_PanicButton,org.iilab.pb,WizardActivity,onCreate,Long Statement,The length of the statement "getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);" is 122.,39
+iilab_PanicButton,org.iilab.pb,WizardActivity,changeAppIcontoCalculator,Long Statement,The length of the statement "getPackageManager().setComponentEnabledSetting(new ComponentName("org.iilab.pb"`"org.iilab.pb.HomeActivity-calculator")`PackageManager.COMPONENT_ENABLED_STATE_ENABLED`PackageManager.DONT_KILL_APP);" is 197.,157
+iilab_PanicButton,org.iilab.pb,WizardActivity,changeAppIcontoCalculator,Long Statement,The length of the statement "getPackageManager().setComponentEnabledSetting(new ComponentName("org.iilab.pb"`"org.iilab.pb.HomeActivity-setup")`PackageManager.COMPONENT_ENABLED_STATE_DISABLED`PackageManager.DONT_KILL_APP);" is 193.,157
+iilab_PanicButton,org.iilab.pb,WizardActivity,onResume,Complex Method,Cyclomatic complexity of the method is 8,214
+iilab_PanicButton,org.iilab.pb,WizardActivity,onUserInteraction,Complex Conditional,The conditional expression currentPage != null && currentPage.getComponent() != null && (currentPage.getComponent().equals("alarm-test-hardware") || currentPage.getComponent().equals("alarm-test-disguise") || currentPage.getComponent().equals("disguise-test-open")|| currentPage.getComponent().equals("disguise-test-unlock")|| currentPage.getComponent().equals("disguise-test-code")) is complex.,283
+iilab_PanicButton,org.iilab.pb,WizardActivity,onUserInteraction,Long Statement,The length of the statement "if (currentPage != null && currentPage.getComponent() != null && (currentPage.getComponent().equals("alarm-test-hardware") || currentPage.getComponent().equals("alarm-test-disguise") || currentPage.getComponent().equals("disguise-test-open")|| currentPage.getComponent().equals("disguise-test-unlock")|| currentPage.getComponent().equals("disguise-test-code"))) {" is 363.,283
+iilab_PanicButton,org.iilab.pb,WizardActivity,onUserInteraction,Magic Number,The method contains a magic number: 1000,283
+iilab_PanicButton,org.iilab.pb,WizardActivity,confirmationToastMessage,Long Statement,The length of the statement "tvToastMessage.setText(Html.fromHtml(getApplication().getString(R.string.confirmation_message)`null`new MyTagHandler()));" is 121.,306
+iilab_PanicButton,org.iilab.pb,PanicButtonActivityTest,shouldShowAmberAlertStripWhenAlertStatusIsStandby,Long Statement,The length of the statement "assertThat(alertStatusStrip.getBackgroundColor()`Is.is(Robolectric.application.getResources().getColor(R.color.standby_color)));" is 128.,52
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,shouldVibrateOnPressingButtonRepeatedlyFourTimes,Magic Number,The method contains a magic number: 4,62
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,shouldActivateAlertOnPressingButtonFifthTime,Magic Number,The method contains a magic number: 4,70
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,shouldActivateAlertOnPressingButtonFifthTime,Magic Number,The method contains a magic number: 1000,70
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,shouldVibrateOnPressingButtonRepeatedlyFourTimesAfterOtherButtons,Magic Number,The method contains a magic number: 4,87
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,shouldNotVibrateOnPressingButtonRepeatedlyLessThanFiveTimes,Magic Number,The method contains a magic number: 3,96
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,shouldNotVibrateOnPressingButtonRepeatedlyLessThanFiveTimesAfterOtherButtons,Magic Number,The method contains a magic number: 3,104
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,shouldNotVibrateOnPressingButtonRepeatedlyMixedWithOtherButtons,Magic Number,The method contains a magic number: 4,113
+iilab_PanicButton,org.iilab.pb,CalculatorActivityTest,testPressingCalculatorButtonsAffectsDisplay,Long Statement,The length of the statement "int[] ids={R.id.one`R.id.two`R.id.three`R.id.plus`R.id.four`R.id.five`R.id.six`R.id.minus`R.id.seven`R.id.eight`R.id.multiply`R.id.nine`R.id.zero`R.id.equals_sign};" is 164.,122
+iilab_PanicButton,org.iilab.pb.data,PageItemDbManager,insert,Magic Number,The method contains a magic number: 2,45
+iilab_PanicButton,org.iilab.pb.data,PageItemDbManager,insert,Magic Number,The method contains a magic number: 3,45
+iilab_PanicButton,org.iilab.pb.data,PageItemDbManager,insert,Magic Number,The method contains a magic number: 4,45
+iilab_PanicButton,org.iilab.pb.data,PageItemDbManager,retrieve,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_ITEM`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 123.,71
+iilab_PanicButton,org.iilab.pb.data,PageItemDbManager,isExist,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_ITEM`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 123.,101
+iilab_PanicButton,org.iilab.pb.data,PBDatabase,insertOrUpdatePage,Complex Method,Cyclomatic complexity of the method is 10,81
+iilab_PanicButton,org.iilab.pb.data,PageTimerDbManager,insert,Magic Number,The method contains a magic number: 2,44
+iilab_PanicButton,org.iilab.pb.data,PageTimerDbManager,insert,Magic Number,The method contains a magic number: 3,44
+iilab_PanicButton,org.iilab.pb.data,PageTimerDbManager,insert,Magic Number,The method contains a magic number: 4,44
+iilab_PanicButton,org.iilab.pb.data,PageTimerDbManager,insert,Magic Number,The method contains a magic number: 5,44
+iilab_PanicButton,org.iilab.pb.data,PageTimerDbManager,retrieve,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_TIMER`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 124.,73
+iilab_PanicButton,org.iilab.pb.data,PageTimerDbManager,isExist,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_TIMER`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 124.,101
+iilab_PanicButton,org.iilab.pb.data,PageStatusDbManager,insert,Magic Number,The method contains a magic number: 2,47
+iilab_PanicButton,org.iilab.pb.data,PageStatusDbManager,insert,Magic Number,The method contains a magic number: 3,47
+iilab_PanicButton,org.iilab.pb.data,PageStatusDbManager,insert,Magic Number,The method contains a magic number: 4,47
+iilab_PanicButton,org.iilab.pb.data,PageStatusDbManager,insert,Magic Number,The method contains a magic number: 5,47
+iilab_PanicButton,org.iilab.pb.data,PageStatusDbManager,retrieve,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_STATUS`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 125.,76
+iilab_PanicButton,org.iilab.pb.data,PageStatusDbManager,isExist,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_STATUS`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 125.,108
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,insert,Complex Method,Cyclomatic complexity of the method is 8,50
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,insert,Magic Number,The method contains a magic number: 2,50
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,insert,Magic Number,The method contains a magic number: 3,50
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,insert,Magic Number,The method contains a magic number: 4,50
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,insert,Magic Number,The method contains a magic number: 5,50
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,insert,Magic Number,The method contains a magic number: 6,50
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,insert,Magic Number,The method contains a magic number: 7,50
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,retrieve,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_ACTION`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 125.,84
+iilab_PanicButton,org.iilab.pb.data,PageActionDbManager,isExist,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_ACTION`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 125.,122
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Complex Method,Cyclomatic complexity of the method is 13,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 2,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 3,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 4,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 5,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 6,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 7,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 8,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 9,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 10,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 11,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,insert,Magic Number,The method contains a magic number: 12,61
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,retrieve,Long Statement,The length of the statement "page=new Page(pageId`lang`pageType`pageTitle`pageIntro`pageWarning`pageComponent`statusList`actionList`itemList`pageContent`timer`successId`failedId`checkList`heading`secOrder);" is 177.,94
+iilab_PanicButton,org.iilab.pb.data,PageDbManager,retrieve,Long Statement,The length of the statement "Page page=new Page(pageId`lang`pageType`pageTitle`pageIntro`pageWarning`pageComponent`statusList`actionList`itemList`pageContent`timer`successId`failedId`checkList`heading`secOrder);" is 182.,124
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,insert,Complex Method,Cyclomatic complexity of the method is 8,59
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,insert,Magic Number,The method contains a magic number: 2,59
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,insert,Magic Number,The method contains a magic number: 3,59
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,insert,Magic Number,The method contains a magic number: 4,59
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,insert,Magic Number,The method contains a magic number: 5,59
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,insert,Magic Number,The method contains a magic number: 6,59
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,insert,Magic Number,The method contains a magic number: 7,59
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,update,Long Statement,The length of the statement "return db.update(TABLE_CONTENT_HELP`cv`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{page.getId()`page.getLang()});" is 124.,132
+iilab_PanicButton,org.iilab.pb.data,HelpPageDbManager,isExist,Long Statement,The length of the statement "Cursor c=db.query(TABLE_CONTENT_HELP`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 126.,146
+iilab_PanicButton,org.iilab.pb.data,PageChecklistDbManager,insert,Magic Number,The method contains a magic number: 2,45
+iilab_PanicButton,org.iilab.pb.data,PageChecklistDbManager,insert,Magic Number,The method contains a magic number: 3,45
+iilab_PanicButton,org.iilab.pb.data,PageChecklistDbManager,insert,Magic Number,The method contains a magic number: 4,45
+iilab_PanicButton,org.iilab.pb.data,PageChecklistDbManager,retrieve,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_CHECKLIST`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 128.,71
+iilab_PanicButton,org.iilab.pb.data,PageChecklistDbManager,isExist,Long Statement,The length of the statement "Cursor c=db.query(TABLE_PAGE_CHECKLIST`null`PAGE_ID + "=? AND " + PAGE_LANGUAGE+ "=?"`new String[]{pageId`lang}`null`null`null);" is 128.,101
+iilab_PanicButton,org.iilab.pb.common,NestedListView,onMeasure,Long Statement,The length of the statement "for (listPosition=0; listPosition < listAdapter.getCount() && listPosition < MAXIMUM_LIST_ITEMS_VIEWABLE; listPosition++) {" is 123.,42
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Complex Method,Cyclomatic complexity of the method is 19,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 3,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 2,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 2,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 8,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 2,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 4,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 3,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 2,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 4,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 4,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 2,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Magic Number,The method contains a magic number: 0xff,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,setPixels,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@69ea6ed5,112
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,read,Empty catch clause,The method has an empty catch block.,211
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,decodeBitmapData,Complex Method,Cyclomatic complexity of the method is 19,239
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,decodeBitmapData,Long Statement,The length of the statement "int available` clear` code_mask` code_size` end_of_information` in_code` old_code` bits` code` count` i` datum` data_size` first` top` bi` pi;" is 142.,239
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,decodeBitmapData,Magic Number,The method contains a magic number: 2,239
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,decodeBitmapData,Magic Number,The method contains a magic number: 0xff,239
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,decodeBitmapData,Magic Number,The method contains a magic number: 8,239
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,decodeBitmapData,Magic Number,The method contains a magic number: 2,239
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,decodeBitmapData,Magic Number,The method contains a magic number: 0xff,239
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 3,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 256,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 0xff,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 0xff,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 0xff,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 0xff000000,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 16,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readColorTable,Magic Number,The method contains a magic number: 8,405
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Complex Method,Cyclomatic complexity of the method is 12,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Magic Number,The method contains a magic number: 0x2C,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Magic Number,The method contains a magic number: 0x21,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Magic Number,The method contains a magic number: 0xf9,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Magic Number,The method contains a magic number: 0xff,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Magic Number,The method contains a magic number: 11,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Magic Number,The method contains a magic number: 0xfe,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Magic Number,The method contains a magic number: 0x3b,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4764e06b,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readContents,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@57d48bdd,438
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readGraphicControlExt,Magic Number,The method contains a magic number: 0x1c,488
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readGraphicControlExt,Magic Number,The method contains a magic number: 2,488
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readGraphicControlExt,Magic Number,The method contains a magic number: 10,488
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readHeader,Magic Number,The method contains a magic number: 6,504
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readBitmap,Complex Method,Cyclomatic complexity of the method is 8,523
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readBitmap,Magic Number,The method contains a magic number: 0x80,523
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readBitmap,Magic Number,The method contains a magic number: 2,523
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readBitmap,Magic Number,The method contains a magic number: 0x07,523
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readBitmap,Magic Number,The method contains a magic number: 0x40,523
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readLSD,Magic Number,The method contains a magic number: 0x80,575
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readLSD,Magic Number,The method contains a magic number: 2,575
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readLSD,Magic Number,The method contains a magic number: 7,575
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readNetscapeExt,Magic Number,The method contains a magic number: 0xff,592
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readNetscapeExt,Magic Number,The method contains a magic number: 2,592
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readNetscapeExt,Magic Number,The method contains a magic number: 0xff,592
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readNetscapeExt,Magic Number,The method contains a magic number: 8,592
+iilab_PanicButton,org.iilab.pb.common,GifDecoder,readShort,Magic Number,The method contains a magic number: 8,607
+iilab_PanicButton,org.iilab.pb.common,MyTagHandler,handleTag,Complex Method,Cyclomatic complexity of the method is 18,35
+iilab_PanicButton,org.iilab.pb.common,MyTagHandler,handleTag,Magic Number,The method contains a magic number: 2,35
+iilab_PanicButton,org.iilab.pb.common,MyTagHandler,handleTag,Magic Number,The method contains a magic number: 2,35
+iilab_PanicButton,org.iilab.pb.common,MyTagHandler,handleTag,Magic Number,The method contains a magic number: 2,35
+iilab_PanicButton,org.iilab.pb.common,MyTagHandler,handleTag,Magic Number,The method contains a magic number: 2,35
+iilab_PanicButton,org.iilab.pb.common,ApplicationSettings,setFirstMsgWithLocationTriggered,Long Identifier,The length of the field IS_FIRST_MSG_WITH_LOCATION_TRIGGERED is 36.,171
+iilab_PanicButton,org.iilab.pb.common,ApplicationSettings,isFirstMsgWithLocationTriggered,Long Identifier,The length of the field IS_FIRST_MSG_WITH_LOCATION_TRIGGERED is 36.,175
+iilab_PanicButton,org.iilab.pb.common,AppUtil,capitalizeString,Complex Conditional,The conditional expression str == null || str.equals("") || str.length() == 0 is complex.,72
+iilab_PanicButton,org.iilab.pb.common,AppUtil,setDownloadedImageMetrices,Empty catch clause,The method has an empty catch block.,99
+iilab_PanicButton,org.iilab.pb.common,AppUtil,setDownloadedImageMetrices,Long Statement,The length of the statement "Log.e("AppUtil -> setDownloadedImageMetrices"`"originalWidthScaled = " + originalWidthScaled + " and originalHeightScaled = "+ originalHeightScaled);" is 149.,99
+iilab_PanicButton,org.iilab.pb.common,AppUtil,updateImages,Long Parameter List,The method has 6 parameters. ,172
+iilab_PanicButton,org.iilab.pb.common,AppUtil,updateImages,Long Statement,The length of the statement "drawable=AppUtil.setDownloadedImageMetrices(drawable`metrics`AppConstants.IMAGE_SCALABILITY_FACTOR * metrics.scaledDensity`imageScaleFlag);" is 139.,172
+iilab_PanicButton,org.iilab.pb.common,AppUtil,getDrawable,Long Statement,The length of the statement "drawable=AppUtil.setDownloadedImageMetrices(drawable`metrics`AppConstants.IMAGE_SCALABILITY_FACTOR * metrics.scaledDensity`imageScaleFlag);" is 139.,177
+iilab_PanicButton,org.iilab.pb.common,ContactEditTexts,hasAtleastOneValidPhoneNumber,Complex Method,Cyclomatic complexity of the method is 8,58
+iilab_PanicButton,org.iilab.pb.common,GifDecoderView,setDownloadedImageMetrices,Empty catch clause,The method has an empty catch block.,105
+iilab_PanicButton,org.iilab.pb.common,GifDecoderView,setDownloadedImageMetrices,Long Statement,The length of the statement "Log.e(">>>>>>>>>"`"image full width -> metrics widthpixel = " + metrics.widthPixels + " drawable.getIntrinsicWidth = "+ drawable.getIntrinsicWidth());" is 150.,105
+iilab_PanicButton,org.iilab.pb.common,ContactPickerFragmentTest,shouldDisplayTheSelectedContactNumber,Magic Number,The method contains a magic number: 100,69
+iilab_PanicButton,org.iilab.pb.common,ContactPickerFragmentTest,shouldNotChangeThePhoneForNonContactApplication,Magic Number,The method contains a magic number: 7,81
+iilab_PanicButton,org.iilab.pb.common,ContactPickerFragmentTest,shouldNotChangeThePhoneWhenContactApplicationIsCanceled,Magic Number,The method contains a magic number: 100,87
+iilab_PanicButton,org.iilab.pb.common,MessageLimitWatcherTest,shouldUpdateMessageLimitOnMainTextChange,Magic Number,The method contains a magic number: 85,16
+iilab_PanicButton,org.iilab.pb.common,MessageFragmentTest,setup,Long Statement,The length of the statement "when(mockFragmentActivity.obtainStyledAttributes(mockAttrs`R.styleable.MessageFragmentArguments)).thenReturn(mockTypedArrays);" is 126.,46
+iilab_PanicButton,org.iilab.pb.common,MessageFragmentTest,setup,Magic Number,The method contains a magic number: 85,46
+iilab_PanicButton,org.iilab.pb.common,MessageFragmentTest,shouldSetTheMessageHeaderAndCharsLeftTextOnCreate,Magic Number,The method contains a magic number: 85,81
+iilab_PanicButton,org.iilab.pb.adapter,PageLanguageSettingsAdapter,getView,Long Statement,The length of the statement "changeStaticLanguageSettings(((item.getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : item.getConfirmation()));" is 134.,58
+iilab_PanicButton,org.iilab.pb.adapter,PageLanguageSettingsAdapter,onClick,Long Statement,The length of the statement "changeStaticLanguageSettings(((item.getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : item.getConfirmation()));" is 134.,79
+iilab_PanicButton,org.iilab.pb.adapter,PageActionAdapter,getView,Complex Method,Cyclomatic complexity of the method is 11,50
+iilab_PanicButton,org.iilab.pb.fragment,SetupMessageFragment,onCreateView,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,68
+iilab_PanicButton,org.iilab.pb.fragment,SetupMessageFragment,onClick,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,79
+iilab_PanicButton,org.iilab.pb.fragment,SetupCodeFragment,onCreateView,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,69
+iilab_PanicButton,org.iilab.pb.fragment,SetupCodeFragment,onCreateView,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,69
+iilab_PanicButton,org.iilab.pb.fragment,SetupCodeFragment,onKey,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,75
+iilab_PanicButton,org.iilab.pb.fragment,SetupCodeFragment,onClick,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,116
+iilab_PanicButton,org.iilab.pb.fragment,SimpleFragment,onActivityCreated,Complex Method,Cyclomatic complexity of the method is 10,172
+iilab_PanicButton,org.iilab.pb.fragment,SimpleFragment,onActivityCreated,Magic Number,The method contains a magic number: 1000,172
+iilab_PanicButton,org.iilab.pb.fragment,WizardAlarmTestHardwareFragment,onActivityCreated,Long Statement,The length of the statement "wakeLock=pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP | PowerManager.ON_AFTER_RELEASE`"TEST");" is 138.,68
+iilab_PanicButton,org.iilab.pb.fragment,WizardTestDisguiseUnlockFragment,onTouch,Complex Conditional,The conditional expression (x < 0 - slop) || (x >= v.getWidth() + slop) || (y < 0 - slop)|| (y >= v.getHeight() + slop) is complex.,110
+iilab_PanicButton,org.iilab.pb.fragment,WizardTestDisguiseUnlockFragment,onTouch,Complex Method,Cyclomatic complexity of the method is 9,110
+iilab_PanicButton,org.iilab.pb.fragment,WizardTestDisguiseUnlockFragment,onTouch,Magic Number,The method contains a magic number: 3000,110
+iilab_PanicButton,org.iilab.pb.fragment,WizardTestDisguiseUnlockFragment,onTouch,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@65242332,110
+iilab_PanicButton,org.iilab.pb.fragment,MainSetupAlertFragment,onCreateView,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,77
+iilab_PanicButton,org.iilab.pb.fragment,MainSetupAlertFragment,onClick,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,99
+iilab_PanicButton,org.iilab.pb.fragment,WizardTestDisguiseOpenFragment,onActivityCreated,Complex Conditional,The conditional expression otherPackageCount < 15 && (packageName.startsWith("com.android.") || packageName.startsWith(" com.google.android.")) is complex.,84
+iilab_PanicButton,org.iilab.pb.fragment,WizardTestDisguiseOpenFragment,onActivityCreated,Long Statement,The length of the statement "if (otherPackageCount < 15 && (packageName.startsWith("com.android.") || packageName.startsWith(" com.google.android."))) {" is 123.,84
+iilab_PanicButton,org.iilab.pb.fragment,WizardTestDisguiseOpenFragment,onActivityCreated,Magic Number,The method contains a magic number: 15,84
+iilab_PanicButton,org.iilab.pb.fragment,SetupContactsFragment,onCreateView,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,66
+iilab_PanicButton,org.iilab.pb.fragment,SetupContactsFragment,onClick,Long Statement,The length of the statement "String confirmation=(currentPage.getAction().get(0).getConfirmation() == null) ? AppConstants.DEFAULT_CONFIRMATION_MESSAGE : currentPage.getAction().get(0).getConfirmation();" is 174.,76
+iilab_PanicButton,org.iilab.pb.fragment,WizardAlarmTestDisguiseFragment,onClick,Long Statement,The length of the statement "Toast.makeText(activity`"Press the button '" + text + "' once the vibration ends to trigger alerts"`Toast.LENGTH_LONG).show();" is 126.,114
+iilab_PanicButton,org.iilab.pb.model,HelpPage,HelpPage,Long Parameter List,The method has 8 parameters. ,34
+iilab_PanicButton,org.iilab.pb.model,SMSSettings,hashCode,Magic Number,The method contains a magic number: 31,134
+iilab_PanicButton,org.iilab.pb.model,PageAction,PageAction,Long Parameter List,The method has 5 parameters. ,26
+iilab_PanicButton,org.iilab.pb.model,Page,Page,Long Parameter List,The method has 17 parameters. ,38
+iilab_PanicButton,org.iilab.pb.model,SMSSettingsTest,shouldMaskPhoneNumberExceptTheLastTwoChars,Magic Number,The method contains a magic number: 2,49
+iilab_PanicButton,org.iilab.pb.model,SMSSettingsTest,shouldMaskPhoneNumberExceptTheLastTwoChars,Magic Number,The method contains a magic number: 3,49
+iilab_PanicButton,org.iilab.pb.model,SMSSettingsTest,shouldMaskPhoneNumberExceptTheLastTwoChars,Magic Number,The method contains a magic number: 4,49
+iilab_PanicButton,org.iilab.pb.model,SMSSettingsTest,shouldMaskPhoneNumberExceptTheLastTwoChars,Magic Number,The method contains a magic number: 5,49
+iilab_PanicButton,org.iilab.pb.model,SMSSettingsTest,shouldMaskPhoneNumberExceptTheLastTwoChars,Magic Number,The method contains a magic number: 6,49
+iilab_PanicButton,org.iilab.pb.model,SMSSettingsTest,shouldReturnValidPhoneNumbers,Magic Number,The method contains a magic number: 2,101
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Complex Method,Cyclomatic complexity of the method is 18,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 2,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 3,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 4,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 5,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 6,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 7,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 8,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Magic Number,The method contains a magic number: 9,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,handleButtonPress,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5f827585,24
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,popResult,Complex Conditional,The conditional expression operand1 == null || operand2 == null || operation == null is complex.,190
+iilab_PanicButton,org.iilab.pb.calculator,CalculatorImpl,popResult,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3f85a1a6,190
+iilab_PanicButton,org.iilab.pb.location,LocationFormatter,format,Long Statement,The length of the statement "return context.getResources().getString(R.string.i_am_at) + " " + GOOGLE_MAP_URL+ latitude+ "`"+ longitude+ VIA+ provider;" is 122.,20
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiver,onReceive,Long Statement,The length of the statement "Log.e(">>>>>>>>"`"location update received in LocationUpdateReceiver at current time in millis = " + System.currentTimeMillis() % 100000);" is 138.,20
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiver,onReceive,Magic Number,The method contains a magic number: 100000,20
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiver,isBetterLocation,Complex Conditional,The conditional expression isNewer && !isSignificantlyLessAccurate && isFromSameProvider is complex.,48
+iilab_PanicButton,org.iilab.pb.location,LocationFormatterTest,shouldReturnGoogleMapUrlForTheGivenLocation,Magic Number,The method contains a magic number: 183.123456,19
+iilab_PanicButton,org.iilab.pb.location,LocationFormatterTest,shouldReturnGoogleMapUrlForTheGivenLocation,Magic Number,The method contains a magic number: 78.654321,19
+iilab_PanicButton,org.iilab.pb.location,LocationFormatterTest,shouldReturnGoogleMapUrlForTheGivenLocation,Magic Number,The method contains a magic number: 10.0f,19
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnBestKnowLocation,Magic Number,The method contains a magic number: 10.0,48
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnBestKnowLocation,Magic Number,The method contains a magic number: 20.0,48
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 12.0,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 20.0,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 90,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 10.0,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 20.0,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 80,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 11.0,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnSignificantlyLatestLocation,Magic Number,The method contains a magic number: 20.0,56
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 12.0,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 20.0,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 11.5,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 20.0,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 40,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 11.0,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 20.0,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnMoreAccurateLocation,Magic Number,The method contains a magic number: 20,70
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationWhichHasAlmostSameAccuracyAndRelativelyNew,Magic Number,The method contains a magic number: 12.0,83
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationWhichHasAlmostSameAccuracyAndRelativelyNew,Magic Number,The method contains a magic number: 20.0,83
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationWhichHasAlmostSameAccuracyAndRelativelyNew,Magic Number,The method contains a magic number: 10,83
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationWhichHasAlmostSameAccuracyAndRelativelyNew,Magic Number,The method contains a magic number: 12.0,83
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationWhichHasAlmostSameAccuracyAndRelativelyNew,Magic Number,The method contains a magic number: 20.0,83
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationWhichHasAlmostSameAccuracyAndRelativelyNew,Magic Number,The method contains a magic number: 12.0,83
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationWhichHasAlmostSameAccuracyAndRelativelyNew,Magic Number,The method contains a magic number: 20.0,83
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Long Identifier,The length of the identifier diffMoreAccurateProviderLocation is 32.,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Long Identifier,The length of the identifier significantlyLessAccurateLocation is 33.,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Long Statement,The length of the statement "Location diffMoreAccurateProviderLocation=location(GPS_PROVIDER`12.0`20.0`offsetCurrentTimeBy(20)`VERY_LESS_ACCURATE - 10.0f);" is 126.,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Long Statement,The length of the statement "Location significantlyLessAccurateLocation=location(NETWORK_PROVIDER`13.0`20.0`offsetCurrentTimeBy(10)`SIGNIFICANTLY_LESS_ACCURATE);" is 132.,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 12.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 20.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 12.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 20.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 10,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 12.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 20.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 20,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 10.0f,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 13.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 20.0,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,shouldReturnLocationFromSameProviderAndNotSignificantlyAccurateButRelativelyNew,Magic Number,The method contains a magic number: 10,97
+iilab_PanicButton,org.iilab.pb.location,LocationUpdateReceiverTest,offsetCurrentTimeBy,Magic Number,The method contains a magic number: 1000,118
+iilab_PanicButton,org.iilab.pb.location,LocationTestUtil,location,Long Parameter List,The method has 5 parameters. ,7
+iilab_PanicButton,org.iilab.pb.alert,AlarmReceiver,onReceive,Long Statement,The length of the statement "Log.e(">>>>>>>>"`"alert update received in AlarmReceiver at current time in millis = " + System.currentTimeMillis() % 100000);" is 126.,17
+iilab_PanicButton,org.iilab.pb.alert,AlarmReceiver,onReceive,Long Statement,The length of the statement "Log.e(">>>>>>>>"`"alert update(single) received in AlarmReceiver at current time in millis = " + System.currentTimeMillis() % 100000);" is 134.,17
+iilab_PanicButton,org.iilab.pb.alert,AlarmReceiver,onReceive,Magic Number,The method contains a magic number: 100000,17
+iilab_PanicButton,org.iilab.pb.alert,AlarmReceiver,onReceive,Magic Number,The method contains a magic number: 100000,17
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,scheduleFutureAlert,Long Statement,The length of the statement "long firstTimeTriggerAt=SystemClock.elapsedRealtime() + AppConstants.ONE_MINUTE * ApplicationSettings.getAlertDelay(context);" is 125.,111
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,registerLocationUpdate,Complex Method,Cyclomatic complexity of the method is 8,118
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,registerLocationUpdate,Long Statement,The length of the statement "if (locationManager.getAllProviders().contains(LocationManager.GPS_PROVIDER)) locationManager.requestLocationUpdates(GPS_PROVIDER`AppConstants.GPS_MIN_TIME_IN_FIRST_ONE_MINUTE`AppConstants.GPS_MIN_DISTANCE`locationPendingIntent(context));" is 238.,118
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,registerLocationUpdate,Long Statement,The length of the statement "if (locationManager.getAllProviders().contains(LocationManager.NETWORK_PROVIDER)) locationManager.requestLocationUpdates(NETWORK_PROVIDER`AppConstants.NETWORK_MIN_TIME_IN_FIRST_ONE_MINUTE`AppConstants.NETWORK_MIN_DISTANCE`locationPendingIntent(context));" is 254.,118
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,registerLocationUpdate,Long Statement,The length of the statement "if (locationManager.getAllProviders().contains(LocationManager.GPS_PROVIDER)) locationManager.requestLocationUpdates(GPS_PROVIDER`AppConstants.GPS_MIN_TIME`AppConstants.GPS_MIN_DISTANCE`locationPendingIntent(context));" is 218.,118
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,registerLocationUpdate,Long Statement,The length of the statement "if (locationManager.getAllProviders().contains(LocationManager.NETWORK_PROVIDER)) locationManager.requestLocationUpdates(NETWORK_PROVIDER`AppConstants.NETWORK_MIN_TIME`AppConstants.NETWORK_MIN_DISTANCE`locationPendingIntent(context));" is 234.,118
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,registerLocationUpdate,Magic Number,The method contains a magic number: 4,118
+iilab_PanicButton,org.iilab.pb.alert,PanicAlert,registerLocationUpdate,Magic Number,The method contains a magic number: 20000,118
+iilab_PanicButton,org.iilab.pb.alert,SMSAdapterTest,shouldIgnoreErrorsWhileSendingSMS,Long Statement,The length of the statement "doThrow(new RuntimeException("Test Exception")).when(mockSmsManager).sendTextMessage(phoneNumber`null`message`null`null);" is 121.,45
+iilab_PanicButton,org.iilab.pb.alert,PanicAlertTest,shouldActiveTheAlertWithHapticFeedback,Magic Number,The method contains a magic number: 500,101
+iilab_PanicButton,org.iilab.pb.alert,PanicAlertTest,shouldNotActiveAgainIfItIsAlreadyActive,Magic Number,The method contains a magic number: 500,112
+iilab_PanicButton,org.iilab.pb.alert,PanicAlertTest,shouldScheduleForContinuousAlertOnActivationAndGoToHomeScreen,Magic Number,The method contains a magic number: 2,153
+iilab_PanicButton,org.iilab.pb.alert,PanicAlertTest,shouldScheduleForContinuousAlertOnActivationAndGoToHomeScreen,Magic Number,The method contains a magic number: 1000,153
+iilab_PanicButton,org.iilab.pb.alert,PanicAlertTest,shouldScheduleForContinuousAlertOnActivationAndGoToHomeScreen,Magic Number,The method contains a magic number: 60,153
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,setUp,Long Statement,The length of the statement "finerLocation=LocationTestUtil.location(LocationManager.NETWORK_PROVIDER`finerLatitude`finerLongitude`currentTimeMillis()`10.0f);" is 129.,38
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,setUp,Magic Number,The method contains a magic number: 12.9839562,38
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,setUp,Magic Number,The method contains a magic number: 80.2467788,38
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,setUp,Magic Number,The method contains a magic number: 12.983956212345,38
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,setUp,Magic Number,The method contains a magic number: 80.246778812345,38
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,setUp,Magic Number,The method contains a magic number: 10.0f,38
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,setUp,Magic Number,The method contains a magic number: 10.0f,38
+iilab_PanicButton,org.iilab.pb.alert,PanicMessageTest,shouldTruncateTheMessagePartIfItExceeds,Long Statement,The length of the statement "String expectedMessage="Normal test message.Normal test message.Normal test message.Normal test messag" + finerLocationText;" is 124.,113

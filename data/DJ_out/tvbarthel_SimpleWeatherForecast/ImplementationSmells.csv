@@ -1,0 +1,189 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,DailyForecastJsonParserTest,testSyncParsing,Magic Number,The method contains a magic number: 14,28
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,DailyForecastJsonParserTest,testAsyncParsing,Magic Number,The method contains a magic number: 14,35
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,DailyForecastJsonParserTest,onPostExecute,Magic Number,The method contains a magic number: 14,37
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,ApplicationTest,testDailyForecastModel,Magic Number,The method contains a magic number: 1404154265017l,16
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,ApplicationTest,testDailyForecastModel,Magic Number,The method contains a magic number: 10,16
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,ApplicationTest,testDailyForecastModel,Magic Number,The method contains a magic number: 20d,16
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,ApplicationTest,testDailyForecastModel,Magic Number,The method contains a magic number: 10d,16
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.tests,ApplicationTest,testDailyForecastModel,Magic Number,The method contains a magic number: 15d,16
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.utils,TemperatureUtils,convertTemperature,Magic Number,The method contains a magic number: 1.8f,13
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.utils,TemperatureUtils,convertTemperature,Magic Number,The method contains a magic number: 32f,13
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.utils,TemperatureUtils,convertTemperature,Magic Number,The method contains a magic number: 273.15f,13
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.utils,SharedPreferenceUtils,getTemperatureUnitSymbol,Long Statement,The length of the statement "return getDefaultSharedPreferences(context).getString(KEY_TEMPERATURE_UNIT_SYMBOL`context.getString(R.string.temperature_unit_celsius_symbol));" is 143.,45
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.utils,ConnectivityUtils,isConnected,Long Statement,The length of the statement "final ConnectivityManager connectivityManager=(ConnectivityManager)context.getSystemService(Service.CONNECTIVITY_SERVICE);" is 122.,10
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.services,DailyForecastUpdateService,onStartCommand,Complex Conditional,The conditional expression intent != null && ACTION_UPDATE.equals(intent.getAction()) && !mIsUpdatingTemperature is complex.,73
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.receivers,WeatherWidgetReceiver,onReceive,Complex Conditional,The conditional expression ConnectivityManager.CONNECTIVITY_ACTION.equals(action) && ConnectivityUtils.isConnected(context) && SharedPreferenceUtils.isWeatherOutdated(context`false) is complex.,41
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.receivers,WeatherWidgetReceiver,onReceive,Long Statement,The length of the statement "else if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action) && ConnectivityUtils.isConnected(context) && SharedPreferenceUtils.isWeatherOutdated(context`false)) {" is 166.,41
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.receivers,WeatherWidgetReceiver,buildLayout,Long Statement,The length of the statement "final PendingIntent onClickPendingIntent=PendingIntent.getActivity(context`0`onClickIntent`PendingIntent.FLAG_UPDATE_CURRENT);" is 126.,55
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,onOptionsItemSelected,Complex Method,Cyclomatic complexity of the method is 9,194
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,onOptionsItemSelected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@418f0f27,194
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,handleActionContactUs,Long Statement,The length of the statement "final String uriString=getString(R.string.contact_us_uri`Uri.encode(getString(R.string.contact_us_email))`Uri.encode(getString(R.string.contact_us_default_subject)));" is 166.,259
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,handleActionUnitPicker,Long Statement,The length of the statement "(TemperatureUnitPickerDialogFragment.newInstance(temperatureUnitNames`temperatureUnitSymbols)).show(getSupportFragmentManager()`"dialog_unit_picker");" is 150.,280
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,initViewPager,Magic Number,The method contains a magic number: 2,321
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,setGradientBackgroundColor,Long Statement,The length of the statement "final GradientDrawable g=new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT`new int[]{getColor(currentPosition`positionOffset)`getColor(currentPosition`(float)Math.pow(positionOffset`0.40))});" is 202.,398
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,setGradientBackgroundColor,Magic Number,The method contains a magic number: 0.40,398
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,setActionBarAlpha,Long Statement,The length of the statement "mActionBarSpannableTitle.setSpan(mAlphaForegroundColorSpan`0`mActionBarSpannableTitle.length()`Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);" is 129.,409
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,updateActionBarTitle,Magic Number,The method contains a magic number: 2,416
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,updateActionBarTitle,Magic Number,The method contains a magic number: 0.5,416
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,updateActionBarTitle,Magic Number,The method contains a magic number: 0.5f,416
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,updateActionBarTitle,Magic Number,The method contains a magic number: 2,416
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,setActionBarTitle,Long Statement,The length of the statement "mActionBarSpannableTitle.setSpan(mTypefaceSpanLight`0`mActionBarSpannableTitle.length()`Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);" is 122.,426
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,getActionBarTitle,Magic Number,The method contains a magic number: 1000,435
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,getColor,Long Statement,The length of the statement "return Color.argb(255`Color.red(currentColor) + deltaR`Color.green(currentColor) + deltaG`Color.blue(currentColor) + deltaB);" is 125.,441
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast,MainActivity,getColor,Magic Number,The method contains a magic number: 255,441
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,AboutDialogFragment,onCreateDialog,Long Statement,The length of the statement "builder.setCancelable(true).setPositiveButton(android.R.string.ok`null).setTitle(R.string.dialog_about_title).setView(dialogView).setInverseBackgroundForced(true);" is 163.,18
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,LicenseDialogFragment,onCreateDialog,Long Statement,The length of the statement "dialogBuilder.setCancelable(true).setView(dialogView).setPositiveButton(android.R.string.ok`null).setTitle(R.string.dialog_license_title).setInverseBackgroundForced(true);" is 171.,18
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,ForecastFragment,onCreateView,Long Statement,The length of the statement "final long temperature=TemperatureUtils.convertTemperature(getActivity()`dailyForecastModel.getTemperature()`temperatureUnit);" is 126.,31
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,ForecastFragment,onCreateView,Long Statement,The length of the statement "final long minTemperature=TemperatureUtils.convertTemperature(getActivity()`dailyForecastModel.getMinTemperature()`temperatureUnit);" is 132.,31
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,ForecastFragment,onCreateView,Long Statement,The length of the statement "final long maxTemperature=TemperatureUtils.convertTemperature(getActivity()`dailyForecastModel.getMaxTemperature()`temperatureUnit);" is 132.,31
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,ForecastFragment,onCreateView,Long Statement,The length of the statement "((TextView)v.findViewById(R.id.fragment_forecast_min_max)).setText(getString(R.string.forecast_fragment_min_max_temperature`minTemperature`maxTemperature));" is 156.,31
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,TemperatureUnitPickerDialogFragment,newInstance,Long Identifier,The length of the field BUNDLE_TEMPERATURE_UNIT_SYMBOLS is 31.,19
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,TemperatureUnitPickerDialogFragment,onCreateDialog,Long Identifier,The length of the field BUNDLE_TEMPERATURE_UNIT_SYMBOLS is 31.,28
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.fragments,TemperatureUnitPickerDialogFragment,onCreateDialog,Long Statement,The length of the statement "final ArrayAdapter<String> temperatureUnitNameAdapter=new ArrayAdapter<String>(getActivity()`android.R.layout.simple_expandable_list_item_1`temperatureUnitNames);" is 162.,28
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.ui,WeatherRemoteViewsFactory,getViewAt,Magic Number,The method contains a magic number: 1000,65
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.ui,AlphaForegroundColorSpan,getAlphaColor,Long Statement,The length of the statement "return Color.argb((int)(mAlpha * 255)`Color.red(foregroundColor)`Color.green(foregroundColor)`Color.blue(foregroundColor));" is 123.,39
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.simpleweatherforcast.ui,AlphaForegroundColorSpan,getAlphaColor,Magic Number,The method contains a magic number: 255,39
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.billing.utils,SupportUtils,checkSupport,Complex Method,Cyclomatic complexity of the method is 11,94
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.billing.utils,SupportUtils,checkSupport,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@208ce928,94
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.billing,SupportActivity,onCreate,Long Statement,The length of the statement "mIabHelper.launchPurchaseFlow(SupportActivity.this`mCoffeeAdapter.getItem(position).getSkuDetails().getSku()`SupportUtils.REQUEST_CODE_SUPPORT_DEV`mPurchaseFinishedListener);" is 174.,105
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.billing,SupportActivity,onItemClick,Long Statement,The length of the statement "mIabHelper.launchPurchaseFlow(SupportActivity.this`mCoffeeAdapter.getItem(position).getSkuDetails().getSku()`SupportUtils.REQUEST_CODE_SUPPORT_DEV`mPurchaseFinishedListener);" is 174.,121
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.billing,SupportActivity,initConsumeListener,Long Statement,The length of the statement "mIabHelper.launchPurchaseFlow(SupportActivity.this`purchase.getSku()`SupportUtils.REQUEST_CODE_SUPPORT_DEV`mPurchaseFinishedListener);" is 134.,251
+tvbarthel_SimpleWeatherForecast,fr.tvbarthel.apps.billing,SupportActivity,onConsumeFinished,Long Statement,The length of the statement "mIabHelper.launchPurchaseFlow(SupportActivity.this`purchase.getSku()`SupportUtils.REQUEST_CODE_SUPPORT_DEV`mPurchaseFinishedListener);" is 134.,256
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Security,verifyPurchase,Complex Conditional,The conditional expression TextUtils.isEmpty(signedData) || TextUtils.isEmpty(base64PublicKey) || TextUtils.isEmpty(signature) is complex.,49
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Long Parameter List,The method has 6 parameters. ,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 8,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 16,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 24,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 6,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 6,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 18,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 12,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 2,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Magic Number,The method contains a magic number: 3,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode3to4,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@71eb4ea4,174
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Long Parameter List,The method has 5 parameters. ,261
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Long Parameter List,The method has 5 parameters. ,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Long Statement,The length of the statement "int inBuff=((source[d + off] << 24) >>> 8) | ((source[d + 1 + off] << 24) >>> 16) | ((source[d + 2 + off] << 24) >>> 24);" is 121.,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 3,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 3,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 8,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 16,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 24,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 18,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 12,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 2,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 6,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 3,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 0x3f,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,encode,Magic Number,The method contains a magic number: 4,289
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Long Parameter List,The method has 5 parameters. ,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((decodabet[source[srcOffset]] << 24) >>> 6) | ((decodabet[source[srcOffset + 1]] << 24) >>> 12) | ((decodabet[source[srcOffset + 2]] << 24) >>> 18);" is 161.,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((decodabet[source[srcOffset]] << 24) >>> 6) | ((decodabet[source[srcOffset + 1]] << 24) >>> 12) | ((decodabet[source[srcOffset + 2]] << 24) >>> 18)| ((decodabet[source[srcOffset + 3]] << 24) >>> 24);" is 212.,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 18,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 8,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 6,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 12,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 18,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 24,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 16,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 8,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 2,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode4to3,Magic Number,The method contains a magic number: 3,352
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Complex Conditional,The conditional expression (b4Posn == 3 && bytesLeft > 2) || (b4Posn == 4 && bytesLeft > 1) is complex.,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Complex Method,Cyclomatic complexity of the method is 11,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 3,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 2,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 0x7f,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 0x7f,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 3,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 2,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,Base64,decode,Magic Number,The method contains a magic number: 4,492
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,startSetup,Complex Method,Cyclomatic complexity of the method is 10,196
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,startSetup,Long Identifier,The length of the field BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE is 43.,196
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,startSetup,Long Statement,The length of the statement "listener.onIabSetupFinished(new IabResult(IABHELPER_REMOTE_EXCEPTION`"RemoteException while setting up in-app billing."));" is 122.,196
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,startSetup,Long Statement,The length of the statement "listener.onIabSetupFinished(new IabResult(BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE`"Billing service unavailable on device."));" is 129.,196
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,startSetup,Magic Number,The method contains a magic number: 3,196
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,startSetup,Magic Number,The method contains a magic number: 3,196
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,onServiceConnected,Long Statement,The length of the statement "listener.onIabSetupFinished(new IabResult(IABHELPER_REMOTE_EXCEPTION`"RemoteException while setting up in-app billing."));" is 122.,217
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,onServiceConnected,Magic Number,The method contains a magic number: 3,217
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,onServiceConnected,Magic Number,The method contains a magic number: 3,217
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,launchPurchaseFlow,Long Parameter List,The method has 5 parameters. ,334
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,launchSubscriptionPurchaseFlow,Long Parameter List,The method has 5 parameters. ,344
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,launchPurchaseFlow,Long Identifier,The length of the field IABHELPER_SUBSCRIPTIONS_NOT_AVAILABLE is 37.,349
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,launchPurchaseFlow,Long Parameter List,The method has 6 parameters. ,349
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,launchPurchaseFlow,Long Statement,The length of the statement "act.startIntentSenderForResult(pendingIntent.getIntentSender()`requestCode`new Intent()`Integer.valueOf(0)`Integer.valueOf(0)`Integer.valueOf(0));" is 146.,349
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,launchPurchaseFlow,Magic Number,The method contains a magic number: 3,349
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,handleActivityResult,Complex Method,Cyclomatic complexity of the method is 16,422
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,handleActivityResult,Long Identifier,The length of the field IABHELPER_UNKNOWN_PURCHASE_RESPONSE is 35.,422
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,handleActivityResult,Long Statement,The length of the statement "logError("Purchase failed. Result code: " + Integer.toString(resultCode) + ". Response: "+ getResponseDesc(responseCode));" is 122.,422
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,queryInventory,Complex Method,Cyclomatic complexity of the method is 8,523
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,consume,Magic Number,The method contains a magic number: 3,645
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,getResponseDesc,Long Statement,The length of the statement "String[] iab_msgs=("0:OK/1:User Canceled/2:Unknown/" + "3:Billing Unavailable/4:Item unavailable/" + "5:Developer Error/6:Error/7:Item Already Owned/"+ "8:Item not owned").split("/");" is 183.,741
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,getResponseDesc,Long Statement,The length of the statement "String[] iabhelper_msgs=("0:OK/-1001:Remote exception during initialization/" + "-1002:Bad response received/" + "-1003:Purchase signature verification failed/"+ "-1004:Send intent failed/"+ "-1005:User cancelled/"+ "-1006:Unknown purchase response/"+ "-1007:Missing token/"+ "-1008:Unknown error/"+ "-1009:Subscriptions not available/"+ "-1010:Invalid consumption attempt").split("/");" is 386.,741
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,flagStartAsync,Long Statement,The length of the statement "if (mAsyncInProgress) throw new IllegalStateException("Can't start async operation (" + operation + ") because another async operation("+ mAsyncOperation+ ") is in progress.");" is 176.,816
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,queryPurchases,Complex Conditional,The conditional expression !ownedItems.containsKey(RESPONSE_INAPP_ITEM_LIST) || !ownedItems.containsKey(RESPONSE_INAPP_PURCHASE_DATA_LIST) || !ownedItems.containsKey(RESPONSE_INAPP_SIGNATURE_LIST) is complex.,831
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,queryPurchases,Long Identifier,The length of the field RESPONSE_INAPP_PURCHASE_DATA_LIST is 33.,831
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,queryPurchases,Long Statement,The length of the statement "if (!ownedItems.containsKey(RESPONSE_INAPP_ITEM_LIST) || !ownedItems.containsKey(RESPONSE_INAPP_PURCHASE_DATA_LIST) || !ownedItems.containsKey(RESPONSE_INAPP_SIGNATURE_LIST)) {" is 176.,831
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,queryPurchases,Magic Number,The method contains a magic number: 3,831
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,querySkuDetails,Complex Method,Cyclomatic complexity of the method is 8,894
+tvbarthel_SimpleWeatherForecast,com.android.vending.billing.util,IabHelper,querySkuDetails,Magic Number,The method contains a magic number: 3,894

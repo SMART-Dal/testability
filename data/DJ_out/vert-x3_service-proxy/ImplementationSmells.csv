@@ -1,0 +1,609 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+vert-x3_service-proxy,examples,Examples,unregister,Long Statement,The length of the statement "MessageConsumer<JsonObject> consumer=binder.setAddress("database-service-address").register(SomeDatabaseService.class`service);" is 127.,70
+vert-x3_service-proxy,examples,Examples,secureDeprecated,Long Statement,The length of the statement "new ServiceBinder(vertx).setAddress("database-service-address").addInterceptor("action"`new ServiceAuthInterceptor().setAuthenticationProvider(JWTAuth.create(vertx`new JWTAuthOptions())).addAuthorization(RoleBasedAuthorization.create("admin")).addAuthorization(PermissionBasedAuthorization.create("print")).setAuthorizationProvider(JWTAuthorization.create("permissions"))).register(SomeDatabaseService.class`service);" is 417.,96
+vert-x3_service-proxy,examples,Examples,secure,Long Statement,The length of the statement "new ServiceBinder(vertx).setAddress("database-service-address").addInterceptor("action"`AuthenticationInterceptor.create(JWTAuth.create(vertx`new JWTAuthOptions()))).addInterceptor(AuthorizationInterceptor.create(JWTAuthorization.create("permissions")).addAuthorization(RoleBasedAuthorization.create("admin")).addAuthorization(PermissionBasedAuthorization.create("print"))).register(SomeDatabaseService.class`service);" is 418.,124
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxEBProxy,SomeDatabaseServiceVertxEBProxy,Empty catch clause,The method has an empty catch block.,55
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,SomeDatabaseServiceVertxProxyHandler,Empty catch clause,The method has an empty catch block.,76
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,SomeDatabaseServiceVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,76
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,SomeDatabaseServiceVertxProxyHandler,Magic Number,The method contains a magic number: 1000,76
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,SomeDatabaseServiceVertxProxyHandler,Magic Number,The method contains a magic number: 2,76
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,SomeDatabaseServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,76
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,SomeDatabaseServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,76
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,98
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,117
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,117
+vert-x3_service-proxy,examples,SomeDatabaseServiceVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6d3b9139,117
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceExceptionMessageCodec,decodeFromWire,Magic Number,The method contains a magic number: 4,44
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceExceptionMessageCodec,decodeFromWire,Magic Number,The method contains a magic number: 4,44
+vert-x3_service-proxy,io.vertx.serviceproxy,ProxyHelper,registerService,Long Parameter List,The method has 5 parameters. ,65
+vert-x3_service-proxy,io.vertx.serviceproxy,ProxyHelper,registerService,Long Parameter List,The method has 6 parameters. ,73
+vert-x3_service-proxy,io.vertx.serviceproxy,ProxyHelper,registerService,Long Statement,The length of the statement "return new ServiceBinder(vertx).setAddress(address).setTopLevel(topLevel).setTimeoutSeconds(timeoutSeconds).register(clazz`service);" is 132.,73
+vert-x3_service-proxy,io.vertx.serviceproxy,ProxyHelper,registerLocalService,Long Parameter List,The method has 5 parameters. ,100
+vert-x3_service-proxy,io.vertx.serviceproxy,ProxyHelper,registerLocalService,Long Parameter List,The method has 6 parameters. ,108
+vert-x3_service-proxy,io.vertx.serviceproxy,ProxyHelper,registerLocalService,Long Statement,The length of the statement "return new ServiceBinder(vertx).setAddress(address).setTopLevel(topLevel).setTimeoutSeconds(timeoutSeconds).registerLocal(clazz`service);" is 137.,108
+vert-x3_service-proxy,io.vertx.serviceproxy,HelperUtils,convertStackTrace,Long Statement,The length of the statement "return Arrays.stream(cause.getStackTrace()).map(StackTraceElement::toString).collect(JsonArray::new`JsonArray::add`JsonArray::addAll);" is 134.,150
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceAuthInterceptor,apply,Complex Method,Cyclomatic complexity of the method is 8,92
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceAuthInterceptor,apply,Magic Number,The method contains a magic number: 500,92
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceAuthInterceptor,apply,Magic Number,The method contains a magic number: 500,92
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceAuthInterceptor,apply,Magic Number,The method contains a magic number: 401,92
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceAuthInterceptor,apply,Magic Number,The method contains a magic number: 500,92
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceAuthInterceptor,apply,Magic Number,The method contains a magic number: 403,92
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceAuthInterceptor,apply,Magic Number,The method contains a magic number: 401,92
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceJWTInterceptor,apply,Complex Method,Cyclomatic complexity of the method is 11,96
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceJWTInterceptor,apply,Magic Number,The method contains a magic number: 401,96
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceJWTInterceptor,apply,Magic Number,The method contains a magic number: 500,96
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceJWTInterceptor,apply,Magic Number,The method contains a magic number: 403,96
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceJWTInterceptor,apply,Magic Number,The method contains a magic number: 403,96
+vert-x3_service-proxy,io.vertx.serviceproxy,ServiceJWTInterceptor,apply,Magic Number,The method contains a magic number: 500,96
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthenticationInterceptorImpl,intercept,Long Statement,The length of the statement "return vertxContext.failedFuture(new ReplyException(ReplyFailure.RECIPIENT_FAILURE`500`"No AuthenticationProvider present"));" is 125.,44
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthenticationInterceptorImpl,intercept,Long Statement,The length of the statement "return authenticationProvider.authenticate(tokenCredentials).recover(err -> vertxContext.failedFuture(new ReplyException(ReplyFailure.RECIPIENT_FAILURE`500`err.getMessage()))).compose(user -> {" is 193.,44
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthenticationInterceptorImpl,intercept,Magic Number,The method contains a magic number: 500,44
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthenticationInterceptorImpl,intercept,Magic Number,The method contains a magic number: 500,44
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthenticationInterceptorImpl,intercept,Magic Number,The method contains a magic number: 401,44
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthenticationInterceptorImpl,intercept,Magic Number,The method contains a magic number: 401,44
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthorizationInterceptorImpl,intercept,Long Statement,The length of the statement "return authorizationProvider.getAuthorizations(user).recover(err -> vertxContext.failedFuture(new ReplyException(ReplyFailure.RECIPIENT_FAILURE`500`err.getMessage()))).compose(voidResult -> {" is 191.,75
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthorizationInterceptorImpl,intercept,Magic Number,The method contains a magic number: 500,75
+vert-x3_service-proxy,io.vertx.serviceproxy.impl,AuthorizationInterceptorImpl,intercept,Magic Number,The method contains a magic number: 403,75
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,render,Long Statement,The length of the statement "writer.code("@SuppressWarnings({\"unchecked\"` \"rawtypes\"})\n").code("public class " + className + " implements "+ model.getIfaceSimpleName()+ " {\n").indent().stmt("private Vertx _vertx").stmt("private String _address").stmt("private DeliveryOptions _options").stmt("private boolean closed").newLine().code("public " + className + "(Vertx vertx` String address) {\n").indent().stmt("this(vertx` address` null)").unindent().code("}\n").newLine().code("public " + className + "(Vertx vertx` String address` DeliveryOptions options) {\n").indent().stmt("this._vertx = vertx").stmt("this._address = address").stmt("this._options = options").code("try {").indent().stmt("this._vertx.eventBus().registerDefaultCodec(ServiceException.class` new ServiceExceptionMessageCodec())").unindent().code("} catch (IllegalStateException ex) {\n}").unindent().code("}\n").newLine();" is 867.,42
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateMethodBody,Long Statement,The length of the statement "List<ParamInfo> paramsExcludedHandler=(method.getParams().isEmpty()) ? new ArrayList<>() : (method.getKind() == MethodKind.CALLBACK) ? method.getParams().subList(0`method.getParams().size() - 1) : method.getParams();" is 216.,112
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateMethodBody,Long Statement,The length of the statement "writer.stmt("DeliveryOptions _deliveryOptions = (_options != null) ? new DeliveryOptions(_options) : new DeliveryOptions()");" is 125.,112
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateAddToJsonStmt,Complex Method,Cyclomatic complexity of the method is 12,151
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateAddToJsonStmt,Long Statement,The length of the statement "else if ("java.lang.Character".equals(t.getName())) writer.stmt("_json.put(\"" + name + "\"` "+ name+ " == null ? null : (int)"+ name+ ")");" is 140.,151
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateAddToJsonStmt,Long Statement,The length of the statement "writer.stmt(String.format("_json.put(\"%s\"` %s)"`name`GeneratorUtils.generateSerializeDataObject(name`(ClassTypeInfo)t)));" is 123.,151
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateAddToJsonStmt,Long Statement,The length of the statement "writer.stmt(String.format("_json.put(\"%s\"` new JsonArray(%s == null ? java.util.Collections.emptyList() : %s.stream().map(v -> %s).collect(Collectors.toList())))"`name`name`name`GeneratorUtils.generateSerializeDataObject("v"`doType)));" is 237.,151
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateAddToJsonStmt,Long Statement,The length of the statement "writer.stmt(String.format("_json.put(\"%s\"` new JsonArray(%s == null ? java.util.Collections.emptyList() : %s.stream().map(v -> %s).collect(Collectors.toList())))"`name`name`name`GeneratorUtils.generateSerializeDataObject("v"`doType)));" is 237.,151
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateAddToJsonStmt,Long Statement,The length of the statement "writer.stmt(String.format("_json.put(\"%s\"` new JsonObject(%s == null ? java.util.Collections.emptyMap() : %s.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey` e -> %s))))"`name`name`name`GeneratorUtils.generateSerializeDataObject("e.getValue()"`doType)));" is 271.,151
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,generateAddToJsonStmt,Long Statement,The length of the statement "writer.stmt(String.format("_json.put(\"%s\"` %s)"`name`GeneratorUtils.generateSerializeDataObject(name`(ClassTypeInfo)t)));" is 123.,151
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Complex Conditional,The conditional expression t.getKind() == ClassKind.API && t instanceof ApiTypeInfo && ((ApiTypeInfo)t).isProxyGen() is complex.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Complex Method,Cyclomatic complexity of the method is 17,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "if ("java.lang.Character".equals(((ParameterizedTypeInfo)t).getArg(0).getName())) writer.print("ProxyUtils.convertToListChar(" + resultStr + ".body())");" is 153.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "writer.indent().codeln(".map(v -> " + GeneratorUtils.generateDeserializeDataObject("v"`doType) + ")").code(".collect(Collectors.toList())").unindent();" is 151.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "if ("java.lang.Character".equals(((ParameterizedTypeInfo)t).getArg(0).getName())) writer.print("ProxyUtils.convertToSetChar(" + resultStr + ".body())");" is 152.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "writer.indent().codeln(".map(v -> " + GeneratorUtils.generateDeserializeDataObject("v"`doType) + ")").code(".collect(Collectors.toSet())").unindent();" is 150.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "if ("java.lang.Character".equals(((ParameterizedTypeInfo)t).getArg(1).getName())) writer.print("ProxyUtils.convertToMapChar(" + resultStr + ".body())");" is 152.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "writer.indent().code(".collect(Collectors.toMap(Map.Entry::getKey` e -> " + GeneratorUtils.generateDeserializeDataObject("e.getValue()"`doType) + "))").unindent();" is 163.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "else if (t.isDataObjectHolder()) writer.print(GeneratorUtils.generateDeserializeDataObject(resultStr + ".body()"`(ClassTypeInfo)t));" is 132.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyGen,wrapResult,Long Statement,The length of the statement "else if (t.getKind() == ClassKind.ENUM) writer.print(resultStr + ".body() == null ? null : " + t.getSimpleName()+ ".valueOf("+ resultStr+ ".body())");" is 150.,221
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,GeneratorUtils,additionalImports,Long Statement,The length of the statement "return Stream.concat(Stream.concat(model.getImportedTypes().stream()`model.getReferencedDataObjectTypes().stream().filter(t -> t.isDataObjectHolder() && t.getDataObject().getJsonType() instanceof ClassTypeInfo).map(t -> (ClassTypeInfo)t.getDataObject().getJsonType())).filter(c -> !c.getPackageName().equals("java.lang") && !c.getPackageName().equals("io.vertx.core.json")).map(ClassTypeInfo::toString)`model.getReferencedTypes().stream().filter(t -> t.isProxyGen() && !t.getPackageName().equals(model.getIfacePackageName())).map(t -> t.getName() + "VertxEBProxy")).distinct();" is 577.,37
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,GeneratorUtils,isResultHandler,Long Statement,The length of the statement "return param != null && param.getType().getKind() == ClassKind.HANDLER && ((ParameterizedTypeInfo)param.getType()).getArg(0).getKind() == ClassKind.ASYNC_RESULT;" is 161.,87
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,GeneratorUtils,generateDeserializeDataObject,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5e8203ab,93
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,GeneratorUtils,generateSerializeDataObject,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@32ccceb8,114
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,render,Long Statement,The length of the statement "writer.code("@SuppressWarnings({\"unchecked\"` \"rawtypes\"})\n").code("public class " + className + " extends ProxyHandler {\n").newLine().indent().code("public static final long DEFAULT_CONNECTION_TIMEOUT = 5 * 60; // 5 minutes \n").stmt("private final Vertx vertx").stmt("private final " + model.getIfaceSimpleName() + " service").stmt("private final long timerID").stmt("private long lastAccessed").stmt("private final long timeoutSeconds").stmt("private final boolean includeDebugInfo").newLine().code("public " + className + "(Vertx vertx` "+ model.getIfaceSimpleName()+ " service){\n").indent().stmt("this(vertx` service` DEFAULT_CONNECTION_TIMEOUT)").unindent().code("}\n").newLine().code("public " + className + "(Vertx vertx` "+ model.getIfaceSimpleName()+ " service` long timeoutInSecond){\n").indent().stmt("this(vertx` service` true` timeoutInSecond)").unindent().code("}\n").newLine().code("public " + className + "(Vertx vertx` "+ model.getIfaceSimpleName()+ " service` boolean topLevel` long timeoutInSecond){\n").indent().stmt("this(vertx` service` true` timeoutInSecond` false)").unindent().code("}\n").newLine().code("public " + className + "(Vertx vertx` "+ model.getIfaceSimpleName()+ " service` boolean topLevel` long timeoutSeconds` boolean includeDebugInfo) {\n");" is 1288.,64
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,render,Long Statement,The length of the statement "writer.code("private void checkTimedOut(long id) {\n").indent().stmt("long now = System.nanoTime()").code("if (now - lastAccessed > timeoutSeconds * 1000000000) {\n").indent();" is 176.,64
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,render,Long Statement,The length of the statement "writer.code("public void handle(Message<JsonObject> msg) {\n").indent().code("try{\n").indent().stmt("JsonObject json = msg.body()").stmt("String action = msg.headers().get(\"action\")").stmt("if (action == null) throw new IllegalStateException(\"action not specified\")").stmt("accessed()").code("switch (action) {\n").indent();" is 329.,64
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,render,Long Statement,The length of the statement "model.getMethods().stream().filter(m -> !m.isStaticMethod()).forEach(m -> generateActionSwitchEntry((ProxyMethodInfo)m`writer));" is 128.,64
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,render,Long Statement,The length of the statement "writer.code("default: throw new IllegalStateException(\"Invalid action: \" + action);\n").unindent().code("}\n").unindent().code("} catch (Throwable t) {\n").indent().stmt("if (includeDebugInfo) msg.reply(new ServiceException(500` t.getMessage()` HelperUtils.generateDebugInfo(t)))").stmt("else msg.reply(new ServiceException(500` t.getMessage()))").stmt("throw t").unindent().code("}\n").unindent().code("}\n");" is 412.,64
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateActionSwitchEntry,Long Statement,The length of the statement "writer.writeSeq(Stream.concat(m.getParams().subList(0`m.getParams().size() - 1).stream().map(this::generateJsonParamExtract)`Stream.of(generateHandler(typeArg)))`"`\n" + writer.indentation());" is 192.,160
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Complex Conditional,The conditional expression typeName.equals("byte") || typeName.equals("java.lang.Byte") || typeName.equals("short")|| typeName.equals("java.lang.Short")|| typeName.equals("int")|| typeName.equals("java.lang.Integer")|| typeName.equals("long")|| typeName.equals("java.lang.Long") is complex.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Complex Conditional,The conditional expression typeName.equals("float") || typeName.equals("java.lang.Float") || typeName.equals("double")|| typeName.equals("java.lang.Double") is complex.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Complex Conditional,The conditional expression typeArg.getName().equals("java.lang.Byte") || typeArg.getName().equals("java.lang.Short") || typeArg.getName().equals("java.lang.Integer")|| typeArg.getName().equals("java.lang.Long") is complex.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Complex Conditional,The conditional expression typeArg.getName().equals("java.lang.Byte") || typeArg.getName().equals("java.lang.Short") || typeArg.getName().equals("java.lang.Integer")|| typeArg.getName().equals("java.lang.Long")|| typeArg.getName().equals("java.lang.Float")|| typeArg.getName().equals("java.lang.Double") is complex.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Complex Method,Cyclomatic complexity of the method is 13,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "if (typeName.equals("char") || typeName.equals("java.lang.Character")) return "json.getInteger(\"" + name + "\") == null ? null : (char)(int)(json.getInteger(\""+ name+ "\"))";" is 176.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "if (typeName.equals("byte") || typeName.equals("java.lang.Byte") || typeName.equals("short")|| typeName.equals("java.lang.Short")|| typeName.equals("int")|| typeName.equals("java.lang.Integer")|| typeName.equals("long")|| typeName.equals("java.lang.Long")) return "json.getValue(\"" + name + "\") == null ? null : (json.getLong(\""+ name+ "\")."+ numericMapping.get(typeName)+ "Value())";" is 388.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "if (typeName.equals("float") || typeName.equals("java.lang.Float") || typeName.equals("double")|| typeName.equals("java.lang.Double")) return "json.getValue(\"" + name + "\") == null ? null : (json.getDouble(\""+ name+ "\")."+ numericMapping.get(typeName)+ "Value())";" is 268.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "return "json.getString(\"" + name + "\") == null ? null : "+ param.getType().getName()+ ".valueOf(json.getString(\""+ name+ "\"))";" is 131.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "return String.format("json.getJsonArray(\"%s\").stream().map(v -> %s).collect(Collectors.to%s())"`name`GeneratorUtils.generateDeserializeDataObject("v"`doType)`coll);" is 166.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "if (typeArg.getName().equals("java.lang.Byte") || typeArg.getName().equals("java.lang.Short") || typeArg.getName().equals("java.lang.Integer")|| typeArg.getName().equals("java.lang.Long")) return "json.getJsonArray(\"" + name + "\").stream().map(o -> ((Number)o)."+ numericMapping.get(typeArg.getName())+ "Value()).collect(Collectors.to"+ coll+ "())";" is 351.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "if (typeArg.getName().equals("java.lang.Byte") || typeArg.getName().equals("java.lang.Short") || typeArg.getName().equals("java.lang.Integer")|| typeArg.getName().equals("java.lang.Long")|| typeArg.getName().equals("java.lang.Float")|| typeArg.getName().equals("java.lang.Double")) return "json.getJsonObject(\"" + name + "\").getMap().entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey` entry -> ((java.lang.Number)entry.getValue())."+ numericMapping.get(typeArg.getName())+ "Value()))";" is 500.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateJsonParamExtract,Long Statement,The length of the statement "return String.format("json.getJsonObject(\"%s\").stream().collect(Collectors.toMap(Map.Entry::getKey` e -> %s))"`name`GeneratorUtils.generateDeserializeDataObject("e.getValue()"`doType));" is 187.,202
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,resolveDataObjectJsonExtractorMethod,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2c82d1b4,266
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateHandler,Complex Method,Cyclomatic complexity of the method is 9,276
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateHandler,Long Statement,The length of the statement "if (innerTypeArg.getName().equals("java.lang.Character")) return "HelperUtils.create" + coll + "CharHandler(msg` includeDebugInfo)";" is 132.,276
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateHandler,Long Statement,The length of the statement "if (innerTypeArg.isDataObjectHolder()) return "res -> {\n" + " if (res.failed()) {\n" + " HelperUtils.manageFailure(msg` res.cause()` includeDebugInfo);\n"+ " } else {\n"+ " msg.reply(new JsonArray(res.result().stream().map(v -> " + GeneratorUtils.generateSerializeDataObject("v"`(ClassTypeInfo)innerTypeArg) + ").collect(Collectors.toList())));\n"+ " }\n"+ " }";" is 363.,276
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateHandler,Long Statement,The length of the statement "if (innerTypeArg.getName().equals("java.lang.Character")) return "HelperUtils.createMapCharHandler(msg` includeDebugInfo)";" is 123.,276
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateHandler,Long Statement,The length of the statement "if (innerTypeArg.isDataObjectHolder()) return "res -> {\n" + " if (res.failed()) {\n" + " if (res.cause() instanceof ServiceException) {\n"+ " msg.reply(res.cause());\n"+ " } else {\n"+ " msg.reply(new ServiceException(-1` res.cause().getMessage()));\n"+ " }\n"+ " } else {\n"+ " msg.reply(new JsonObject(res.result().entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey` e -> " + GeneratorUtils.generateSerializeDataObject("e.getValue()"`(ClassTypeInfo)innerTypeArg) + "))));\n"+ " }\n"+ " }";" is 504.,276
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateHandler,Long Statement,The length of the statement "if (typeArg.isDataObjectHolder()) return "res -> {\n" + " if (res.failed()) {\n" + " HelperUtils.manageFailure(msg` res.cause()` includeDebugInfo);\n"+ " } else {\n"+ " msg.reply(" + GeneratorUtils.generateSerializeDataObject("res.result()"`(ClassTypeInfo)typeArg) + ");\n"+ " }\n"+ " }";" is 288.,276
+vert-x3_service-proxy,io.vertx.serviceproxy.generator,ServiceProxyHandlerGen,generateHandler,Long Statement,The length of the statement "if (typeArg.getKind() == ClassKind.API && ((ApiTypeInfo)typeArg).isProxyGen()) return "res -> {\n" + " if (res.failed()) {\n" + " HelperUtils.manageFailure(msg` res.cause()` includeDebugInfo);\n"+ " } else {\n"+ " String proxyAddress = UUID.randomUUID().toString();\n"+ " new ServiceBinder(vertx).setAddress(proxyAddress).setTopLevel(false).setTimeoutSeconds(timeoutSeconds).register(" + typeArg.getSimpleName() + ".class` res.result());\n"+ " msg.reply(null` new DeliveryOptions().addHeader(\"proxyaddr\"` proxyAddress));\n"+ " }\n"+ " }";" is 540.,276
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,checkParamType,Complex Method,Cyclomatic complexity of the method is 9,50
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,checkParamType,Long Parameter List,The method has 5 parameters. ,50
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,checkMethod,Long Statement,The length of the statement "throw new GenException(this.modelElt`"Overloaded methods are not allowed in ProxyGen interfaces " + methodInfo.getName());" is 122.,103
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,createMethodInfo,Long Parameter List,The method has 18 parameters. ,112
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,createMethodInfo,Long Statement,The length of the statement "AnnotationMirror proxyIgnoreAnnotation=Helper.resolveMethodAnnotation(ProxyIgnore.class`elementUtils`typeUtils`declaringElt`methodElt);" is 135.,112
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,createMethodInfo,Long Statement,The length of the statement "AnnotationMirror proxyCloseAnnotation=Helper.resolveMethodAnnotation(ProxyClose.class`elementUtils`typeUtils`declaringElt`methodElt);" is 133.,112
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,createMethodInfo,Long Statement,The length of the statement "ProxyMethodInfo proxyMeth=new ProxyMethodInfo(ownerTypes`methodName`returnType`returnDescription`isFluent`isCacheReturn`mParams`comment`doc`isStatic`isDefault`typeParams`isProxyIgnore`isProxyClose`methodDeprecated`methodDeprecatedDesc`useFutures`methodOverride);" is 262.,112
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,createMethodInfo,Long Statement,The length of the statement "throw new GenException(this.modelElt`"@ProxyClose parameter must be " + "Handler<AsyncResult<Void>> instead of " + type);" is 121.,112
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,isLegalAsyncResultType,Complex Conditional,The conditional expression resultType.getKind().json || resultType.getKind().basic || isLegalContainerParam(resultType)|| resultType.getKind() == ClassKind.VOID || resultType.getKind() == ClassKind.ENUM || resultType.isDataObjectHolder() is complex.,138
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,isLegalAsyncResultType,Long Statement,The length of the statement "if (resultType.getKind().json || resultType.getKind().basic || isLegalContainerParam(resultType)|| resultType.getKind() == ClassKind.VOID || resultType.getKind() == ClassKind.ENUM || resultType.isDataObjectHolder()) {" is 217.,138
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,isLegalContainerParam,Complex Conditional,The conditional expression argument.getKind().basic || argument.getKind().json || isValidDataObject(argument) is complex.,164
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,isLegalContainerParam,Complex Conditional,The conditional expression argument1.getKind().basic || argument1.getKind().json || isValidDataObject(argument1) is complex.,164
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyModel,isValidDataObject,Long Statement,The length of the statement "return typeInfo.isDataObjectHolder() && typeInfo.getDataObject().isSerializable() && typeInfo.getDataObject().isDeserializable();" is 129.,184
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyMethodInfo,ProxyMethodInfo,Long Parameter List,The method has 18 parameters. ,39
+vert-x3_service-proxy,io.vertx.serviceproxy.generator.model,ProxyMethodInfo,ProxyMethodInfo,Long Statement,The length of the statement "super(ownerTypes`name`returnType`returnDescription`fluent`cacheReturn`params`comment`doc`staticMethod`defaultMethod`typeParams`deprecated`deprecatedDesc`useFutures`methodOverride);" is 180.,39
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen.proxytestapi,ValidProxy,basicTypes,Long Parameter List,The method has 9 parameters. ,23
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen.proxytestapi,ValidProxy,basicBoxedTypes,Long Parameter List,The method has 9 parameters. ,25
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen.proxytestapi,ValidProxy,methodWithListParams,Long Parameter List,The method has 7 parameters. ,30
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen.proxytestapi,ValidProxy,methodWithSetParams,Long Parameter List,The method has 7 parameters. ,32
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen.proxytestapi,ValidProxy,methodWithMapParams,Long Parameter List,The method has 7 parameters. ,34
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,generateProxyModel,Long Statement,The length of the statement "return new GeneratorHelper().registerConverter(ZonedDateTime.class`Mappers.class`"serializeZonedDateTime").registerConverter(ZonedDateTime.class`Mappers.class`"deserializeZonedDateTime").generateClass(codegen -> (ProxyModel)codegen.getModel(c.getCanonicalName()`"proxy")`c`rest);" is 279.,23
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidOverloaded,Empty catch clause,The method has an empty catch block.,36
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidParams1,Empty catch clause,The method has an empty catch block.,46
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidParams2,Empty catch clause,The method has an empty catch block.,56
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidParams3,Empty catch clause,The method has an empty catch block.,66
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidParams4,Empty catch clause,The method has an empty catch block.,76
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidParamsDataObject,Empty catch clause,The method has an empty catch block.,86
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidReturn1,Empty catch clause,The method has an empty catch block.,96
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidReturn2,Empty catch clause,The method has an empty catch block.,106
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidReturn3,Empty catch clause,The method has an empty catch block.,116
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testValid,Magic Number,The method contains a magic number: 52,126
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidClose1,Empty catch clause,The method has an empty catch block.,161
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidClose2,Empty catch clause,The method has an empty catch block.,171
+vert-x3_service-proxy,io.vertx.serviceproxy.codegen,ProxyTest,testInvalidClose3,Empty catch clause,The method has an empty catch block.,181
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxEBProxy,TestSubConnectionVertxEBProxy,Empty catch clause,The method has an empty catch block.,51
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,TestSubConnectionVertxProxyHandler,Empty catch clause,The method has an empty catch block.,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,TestSubConnectionVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,TestSubConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 1000,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,TestSubConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 2,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,TestSubConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 10000,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,TestSubConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 10000,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,94
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,114
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,114
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.sub,TestSubConnectionVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@21b0b488,114
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestDataObject,hashCode,Magic Number,The method contains a magic number: 31,97
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestDataObject,hashCode,Magic Number,The method contains a magic number: 31,97
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,createProxyLongDelivery,Magic Number,The method contains a magic number: 20,54
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,createProxyLongDelivery,Magic Number,The method contains a magic number: 1000L,54
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,basicTypes,Long Parameter List,The method has 9 parameters. ,74
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,basicBoxedTypes,Long Parameter List,The method has 9 parameters. ,76
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,basicBoxedTypesNull,Long Parameter List,The method has 9 parameters. ,79
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,listParams,Long Parameter List,The method has 8 parameters. ,128
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,setParams,Long Parameter List,The method has 8 parameters. ,130
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,mapParams,Long Parameter List,The method has 7 parameters. ,132
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestService,invokeWithMessage,Long Parameter List,The method has 6 parameters. ,192
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,MyServiceExceptionMessageCodec,decodeFromWire,Magic Number,The method contains a magic number: 4,35
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,MyServiceExceptionMessageCodec,decodeFromWire,Magic Number,The method contains a magic number: 4,35
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,MyServiceExceptionMessageCodec,decodeFromWire,Magic Number,The method contains a magic number: 4,35
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,TestBaseImportsServiceVertxProxyHandler,Empty catch clause,The method has an empty catch block.,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,TestBaseImportsServiceVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,TestBaseImportsServiceVertxProxyHandler,Magic Number,The method contains a magic number: 1000,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,TestBaseImportsServiceVertxProxyHandler,Magic Number,The method contains a magic number: 2,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,TestBaseImportsServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,TestBaseImportsServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,72
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,94
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,113
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,113
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4dfc3f74,113
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,OKServiceVertxProxyHandler,Empty catch clause,The method has an empty catch block.,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,OKServiceVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,OKServiceVertxProxyHandler,Magic Number,The method contains a magic number: 1000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,OKServiceVertxProxyHandler,Magic Number,The method contains a magic number: 2,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,OKServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,OKServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,97
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,116
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,116
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5a3259b2,116
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,TestServiceVertxEBProxy,Empty catch clause,The method has an empty catch block.,66
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,createConnection,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(new TestConnectionVertxEBProxy(_vertx`res.result().headers().get("proxyaddr"))));" is 125.,114
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,createSubConnection,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(new TestSubConnectionVertxEBProxy(_vertx`res.result().headers().get("proxyaddr"))));" is 128.,134
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,basicTypes,Long Parameter List,The method has 9 parameters. ,164
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,basicBoxedTypes,Long Parameter List,The method has 9 parameters. ,183
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,basicBoxedTypesNull,Long Parameter List,The method has 9 parameters. ,202
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,enumCustomType,Long Statement,The length of the statement "_json.put("someEnum"`someEnum != null ? io.vertx.serviceproxy.testmodel.Mappers.serializeSomeEnumWithCustomConstructor(someEnum) : null);" is 137.,305
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,enumCustomTypeNull,Long Statement,The length of the statement "_json.put("someEnum"`someEnum != null ? io.vertx.serviceproxy.testmodel.Mappers.serializeSomeEnumWithCustomConstructor(someEnum) : null);" is 137.,316
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,enumCustomTypeAsResult,Long Statement,The length of the statement "someEnum.handle(Future.succeededFuture(res.result().body() != null ? io.vertx.serviceproxy.testmodel.Mappers.deserializeSomeEnumWithCustomConstructor((String)res.result().body()) : null));" is 188.,327
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,enumCustomTypeAsResultNull,Long Statement,The length of the statement "someEnum.handle(Future.succeededFuture(res.result().body() != null ? io.vertx.serviceproxy.testmodel.Mappers.deserializeSomeEnumWithCustomConstructor((String)res.result().body()) : null));" is 188.,346
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listdataObjectType,Long Statement,The length of the statement "_json.put("list"`new JsonArray(list == null ? java.util.Collections.emptyList() : list.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 167.,376
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setdataObjectType,Long Statement,The length of the statement "_json.put("set"`new JsonArray(set == null ? java.util.Collections.emptyList() : set.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 164.,387
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,dateTimeType,Long Statement,The length of the statement "_json.put("dateTime"`dateTime != null ? io.vertx.serviceproxy.testmodel.Mappers.serializeZonedDateTime(dateTime) : null);" is 121.,409
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listDateTimeType,Long Statement,The length of the statement "_json.put("list"`new JsonArray(list == null ? java.util.Collections.emptyList() : list.stream().map(v -> v != null ? io.vertx.serviceproxy.testmodel.Mappers.serializeZonedDateTime(v) : null).collect(Collectors.toList())));" is 222.,420
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setDateTimeType,Long Statement,The length of the statement "_json.put("set"`new JsonArray(set == null ? java.util.Collections.emptyList() : set.stream().map(v -> v != null ? io.vertx.serviceproxy.testmodel.Mappers.serializeZonedDateTime(v) : null).collect(Collectors.toList())));" is 219.,431
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,mapDateTimeType,Long Statement,The length of the statement "_json.put("map"`new JsonObject(map == null ? java.util.Collections.emptyMap() : map.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey`e -> e.getValue() != null ? io.vertx.serviceproxy.testmodel.Mappers.serializeZonedDateTime(e.getValue()) : null))));" is 263.,442
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listdataObjectTypeHavingNullValues,Long Statement,The length of the statement "_json.put("list"`new JsonArray(list == null ? java.util.Collections.emptyList() : list.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 167.,453
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setdataObjectTypeHavingNullValues,Long Statement,The length of the statement "_json.put("set"`new JsonArray(set == null ? java.util.Collections.emptyList() : set.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 164.,464
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listdataObjectTypeNull,Long Statement,The length of the statement "_json.put("list"`new JsonArray(list == null ? java.util.Collections.emptyList() : list.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 167.,475
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setdataObjectTypeNull,Long Statement,The length of the statement "_json.put("set"`new JsonArray(set == null ? java.util.Collections.emptyList() : set.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 164.,486
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,mapDataObjectType,Long Statement,The length of the statement "_json.put("map"`new JsonObject(map == null ? java.util.Collections.emptyMap() : map.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey`e -> e.getValue() != null ? e.getValue().toJson() : null))));" is 208.,497
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listParams,Long Parameter List,The method has 8 parameters. ,508
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listParams,Long Statement,The length of the statement "_json.put("listDataObject"`new JsonArray(listDataObject == null ? java.util.Collections.emptyList() : listDataObject.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 197.,508
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setParams,Long Parameter List,The method has 8 parameters. ,526
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setParams,Long Statement,The length of the statement "_json.put("setDataObject"`new JsonArray(setDataObject == null ? java.util.Collections.emptyList() : setDataObject.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 194.,526
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,mapParams,Long Parameter List,The method has 7 parameters. ,544
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,dataObjectHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body() != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)res.result().body()) : null));" is 167.,979
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,dataObjectNullHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body() != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)res.result().body()) : null));" is 167.,998
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,invokeWithMessage,Long Parameter List,The method has 6 parameters. ,1087
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listDataObjectHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)v) : null).collect(Collectors.toList())));" is 199.,1320
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setDataObjectHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)v) : null).collect(Collectors.toSet())));" is 198.,1759
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,mapDataObject,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().collect(Collectors.toMap(Map.Entry::getKey`e -> e.getValue() != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)e.getValue()) : null))));" is 232.,1780
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listDataObjectContainingNullHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)v) : null).collect(Collectors.toList())));" is 199.,1820
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setDataObjectContainingNullHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)v) : null).collect(Collectors.toSet())));" is 198.,1841
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,zonedDateTimeHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body() != null ? io.vertx.serviceproxy.testmodel.Mappers.deserializeZonedDateTime((String)res.result().body()) : null));" is 177.,1862
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,listZonedDateTimeHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? io.vertx.serviceproxy.testmodel.Mappers.deserializeZonedDateTime((String)v) : null).collect(Collectors.toList())));" is 209.,1881
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,setZonedDateTimeHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? io.vertx.serviceproxy.testmodel.Mappers.deserializeZonedDateTime((String)v) : null).collect(Collectors.toSet())));" is 208.,1902
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxEBProxy,mapZonedDateTimeHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(res.result().body().stream().collect(Collectors.toMap(Map.Entry::getKey`e -> e.getValue() != null ? io.vertx.serviceproxy.testmodel.Mappers.deserializeZonedDateTime((String)e.getValue()) : null))));" is 242.,1923
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,TestConnectionVertxProxyHandler,Empty catch clause,The method has an empty catch block.,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,TestConnectionVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,TestConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 1000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,TestConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 2,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,TestConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 10000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,TestConnectionVertxProxyHandler,Magic Number,The method contains a magic number: 10000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,97
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,handle,Complex Method,Cyclomatic complexity of the method is 8,117
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,117
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,117
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7cc25ae7,117
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestConnectionVertxEBProxy,TestConnectionVertxEBProxy,Empty catch clause,The method has an empty catch block.,54
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,TestServiceVertxProxyHandler,Empty catch clause,The method has an empty catch block.,87
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,TestServiceVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,87
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,TestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 1000,87
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,TestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 2,87
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,TestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,87
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,TestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,87
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,109
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,handle,Complex Method,Cyclomatic complexity of the method is 127,128
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,128
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,128
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestServiceVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5872b503,128
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,TestBaseImportsServiceVertxEBProxy,TestBaseImportsServiceVertxEBProxy,Empty catch clause,The method has an empty catch block.,51
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel,OKServiceVertxEBProxy,OKServiceVertxEBProxy,Empty catch clause,The method has an empty catch block.,54
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Long Parameter List,The method has 9 parameters. ,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Magic Number,The method contains a magic number: 123,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Magic Number,The method contains a magic number: 1234,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Magic Number,The method contains a magic number: 12345,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Magic Number,The method contains a magic number: 123456l,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Magic Number,The method contains a magic number: 12345,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Magic Number,The method contains a magic number: 12.34f,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicTypes,Magic Number,The method contains a magic number: 12.3456d,61
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicBoxedTypes,Long Parameter List,The method has 9 parameters. ,76
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,basicBoxedTypesNull,Long Parameter List,The method has 9 parameters. ,81
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,dataObjectType,Magic Number,The method contains a magic number: 123,153
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listdataObjectType,Magic Number,The method contains a magic number: 2,159
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listdataObjectType,Magic Number,The method contains a magic number: 123,159
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listdataObjectType,Magic Number,The method contains a magic number: 456,159
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setdataObjectType,Magic Number,The method contains a magic number: 2,167
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setdataObjectType,Magic Number,The method contains a magic number: 123,167
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setdataObjectType,Magic Number,The method contains a magic number: 456,167
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDateTimeType,Magic Number,The method contains a magic number: 2,188
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDateTimeType,Magic Number,The method contains a magic number: 2,196
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 3,213
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 123,213
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 456,213
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 2,213
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 3,222
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 123,222
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 456,222
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Long Parameter List,The method has 8 parameters. ,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Long Statement,The length of the statement "assertEquals(new JsonObject().put("number"`1).put("string"`"String 1").put("bool"`false)`listDataObject.get(0).toJson());" is 121.,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 12,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 13,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 123,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 134,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 1234,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 1235,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 12345l,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 12346l,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listParams,Magic Number,The method contains a magic number: 2,232
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Long Parameter List,The method has 8 parameters. ,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 12,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 13,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 123,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 134,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 1234,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 1235,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 12345l,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 12346l,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setParams,Magic Number,The method contains a magic number: 2,254
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Long Parameter List,The method has 7 parameters. ,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 12,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 13,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 123,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 134,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 1234,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 1235,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 12345l,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapParams,Magic Number,The method contains a magic number: 12356l,285
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,byteHandler,Magic Number,The method contains a magic number: 123,315
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,shortHandler,Magic Number,The method contains a magic number: 1234,325
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,intHandler,Magic Number,The method contains a magic number: 12345,335
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,longHandler,Magic Number,The method contains a magic number: 123456l,345
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,floatHandler,Magic Number,The method contains a magic number: 12.34f,355
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,doubleHandler,Magic Number,The method contains a magic number: 12.3456d,365
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,dataObjectHandler,Magic Number,The method contains a magic number: 123,415
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,invokeWithMessage,Long Parameter List,The method has 6 parameters. ,448
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,invokeWithMessage,Magic Number,The method contains a magic number: 1234,448
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listByteHandler,Magic Number,The method contains a magic number: 2,464
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listByteHandler,Magic Number,The method contains a magic number: 3,464
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listShortHandler,Magic Number,The method contains a magic number: 11,470
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listShortHandler,Magic Number,The method contains a magic number: 12,470
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listShortHandler,Magic Number,The method contains a magic number: 13,470
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listIntHandler,Magic Number,The method contains a magic number: 100,476
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listIntHandler,Magic Number,The method contains a magic number: 101,476
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listIntHandler,Magic Number,The method contains a magic number: 102,476
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listLongHandler,Magic Number,The method contains a magic number: 1000l,482
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listLongHandler,Magic Number,The method contains a magic number: 1001l,482
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listLongHandler,Magic Number,The method contains a magic number: 1002l,482
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listFloatHandler,Magic Number,The method contains a magic number: 1.1f,488
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listFloatHandler,Magic Number,The method contains a magic number: 1.2f,488
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listFloatHandler,Magic Number,The method contains a magic number: 1.3f,488
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDoubleHandler,Magic Number,The method contains a magic number: 1.11d,494
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDoubleHandler,Magic Number,The method contains a magic number: 1.12d,494
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDoubleHandler,Magic Number,The method contains a magic number: 1.13d,494
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listJsonObjectHandler,Long Statement,The length of the statement "List<JsonObject> list=Arrays.asList(new JsonObject().put("a"`"foo")`new JsonObject().put("b"`"bar")`new JsonObject().put("c"`"wibble"));" is 136.,512
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setByteHandler,Magic Number,The method contains a magic number: 2,532
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setByteHandler,Magic Number,The method contains a magic number: 3,532
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setShortHandler,Magic Number,The method contains a magic number: 11,538
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setShortHandler,Magic Number,The method contains a magic number: 12,538
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setShortHandler,Magic Number,The method contains a magic number: 13,538
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setIntHandler,Magic Number,The method contains a magic number: 100,544
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setIntHandler,Magic Number,The method contains a magic number: 101,544
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setIntHandler,Magic Number,The method contains a magic number: 102,544
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setLongHandler,Magic Number,The method contains a magic number: 1000l,550
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setLongHandler,Magic Number,The method contains a magic number: 1001l,550
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setLongHandler,Magic Number,The method contains a magic number: 1002l,550
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setFloatHandler,Magic Number,The method contains a magic number: 1.1f,556
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setFloatHandler,Magic Number,The method contains a magic number: 1.2f,556
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setFloatHandler,Magic Number,The method contains a magic number: 1.3f,556
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDoubleHandler,Magic Number,The method contains a magic number: 1.11d,562
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDoubleHandler,Magic Number,The method contains a magic number: 1.12d,562
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDoubleHandler,Magic Number,The method contains a magic number: 1.13d,562
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapByteHandler,Magic Number,The method contains a magic number: 2,589
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapByteHandler,Magic Number,The method contains a magic number: 3,589
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapShortHandler,Magic Number,The method contains a magic number: 11,598
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapShortHandler,Magic Number,The method contains a magic number: 12,598
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapShortHandler,Magic Number,The method contains a magic number: 13,598
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapIntHandler,Magic Number,The method contains a magic number: 100,607
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapIntHandler,Magic Number,The method contains a magic number: 101,607
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapIntHandler,Magic Number,The method contains a magic number: 102,607
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapLongHandler,Magic Number,The method contains a magic number: 1000l,616
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapLongHandler,Magic Number,The method contains a magic number: 1001l,616
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapLongHandler,Magic Number,The method contains a magic number: 1002l,616
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapFloatHandler,Magic Number,The method contains a magic number: 1.1f,625
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapFloatHandler,Magic Number,The method contains a magic number: 1.2f,625
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapFloatHandler,Magic Number,The method contains a magic number: 1.3f,625
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapDoubleHandler,Magic Number,The method contains a magic number: 1.11d,634
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapDoubleHandler,Magic Number,The method contains a magic number: 1.12d,634
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapDoubleHandler,Magic Number,The method contains a magic number: 1.13d,634
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setJsonObjectHandler,Long Statement,The length of the statement "Set<JsonObject> set=new LinkedHashSet<>(Arrays.asList(new JsonObject().put("a"`"foo")`new JsonObject().put("b"`"bar")`new JsonObject().put("c"`"wibble")));" is 155.,661
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setJsonArrayHandler,Long Statement,The length of the statement "Set<JsonArray> set=new LinkedHashSet<>(Arrays.asList(new JsonArray().add("foo")`new JsonArray().add("bar")`new JsonArray().add("wibble")));" is 139.,677
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDataObjectHandler,Long Statement,The length of the statement "List<TestDataObject> list=Arrays.asList(new TestDataObject().setNumber(1).setString("String 1").setBool(false)`new TestDataObject().setNumber(2).setString("String 2").setBool(true));" is 182.,698
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDataObjectHandler,Magic Number,The method contains a magic number: 2,698
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDataObjectHandler,Long Statement,The length of the statement "Set<TestDataObject> set=new LinkedHashSet<>(Arrays.asList(new TestDataObject().setNumber(1).setString("String 1").setBool(false)`new TestDataObject().setNumber(2).setString("String 2").setBool(true)));" is 201.,705
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDataObjectHandler,Magic Number,The method contains a magic number: 2,705
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapDataObject,Magic Number,The method contains a magic number: 2,712
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,longDeliverySuccess,Magic Number,The method contains a magic number: 10,720
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,longDeliverySuccess,Magic Number,The method contains a magic number: 1000L,720
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,longDeliveryFailed,Magic Number,The method contains a magic number: 30,727
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,longDeliveryFailed,Magic Number,The method contains a magic number: 1000L,727
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,failingCall,Magic Number,The method contains a magic number: 25,734
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,failingCall,Magic Number,The method contains a magic number: 25,734
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDataObjectContainingNullHandler,Long Statement,The length of the statement "List<TestDataObject> list=Arrays.asList(new TestDataObject().setNumber(1).setString("String 1").setBool(false)`null`new TestDataObject().setNumber(2).setString("String 2").setBool(true));" is 187.,747
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listDataObjectContainingNullHandler,Magic Number,The method contains a magic number: 2,747
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDataObjectContainingNullHandler,Long Statement,The length of the statement "Set<TestDataObject> set=new LinkedHashSet<>(Arrays.asList(new TestDataObject().setNumber(1).setString("String 1").setBool(false)`null`new TestDataObject().setNumber(2).setString("String 2").setBool(true)));" is 206.,757
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setDataObjectContainingNullHandler,Magic Number,The method contains a magic number: 2,757
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,listZonedDateTimeHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(Arrays.asList(ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]")`ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]").plusHours(1))));" is 206.,772
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,setZonedDateTimeHandler,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(new HashSet<>(Arrays.asList(ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]")`ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]").plusHours(1)))));" is 221.,780
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel.impl,TestServiceImpl,mapDataObjectType,Magic Number,The method contains a magic number: 2,808
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,setUp,Magic Number,The method contains a magic number: 10,30
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,setUp,Magic Number,The method contains a magic number: 10,30
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testHello,Magic Number,The method contains a magic number: 10,55
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testEnumAsParameter,Magic Number,The method contains a magic number: 10,67
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testEnumAsResult,Magic Number,The method contains a magic number: 10,78
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testVertxEnumAsResult,Magic Number,The method contains a magic number: 10,89
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithDataObject,Magic Number,The method contains a magic number: 25,100
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithDataObject,Magic Number,The method contains a magic number: 10,100
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithDataObject,Magic Number,The method contains a magic number: 25,100
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfDataObject,Magic Number,The method contains a magic number: 25,116
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfDataObject,Magic Number,The method contains a magic number: 26,116
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfDataObject,Magic Number,The method contains a magic number: 10,116
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfDataObject,Magic Number,The method contains a magic number: 25,116
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfDataObject,Magic Number,The method contains a magic number: 26,116
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithStringDataObject,Magic Number,The method contains a magic number: 10,139
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfStringDataObject,Magic Number,The method contains a magic number: 10,153
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfJsonObject,Magic Number,The method contains a magic number: 25,172
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfJsonObject,Magic Number,The method contains a magic number: 26,172
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfJsonObject,Magic Number,The method contains a magic number: 10,172
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfJsonObject,Magic Number,The method contains a magic number: 25,172
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithListOfJsonObject,Magic Number,The method contains a magic number: 26,172
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithJsonObject,Magic Number,The method contains a magic number: 25,198
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithJsonObject,Magic Number,The method contains a magic number: 10,198
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithJsonObject,Magic Number,The method contains a magic number: 25,198
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithJsonArray,Magic Number,The method contains a magic number: 25,214
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithJsonArray,Magic Number,The method contains a magic number: 10,214
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithJsonArray,Magic Number,The method contains a magic number: 25,214
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithFailingResult,Magic Number,The method contains a magic number: 30,234
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithFailingResult,Magic Number,The method contains a magic number: 10,234
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithFailingResultServiceExceptionSubclass,Magic Number,The method contains a magic number: 30,247
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testWithFailingResultServiceExceptionSubclass,Magic Number,The method contains a magic number: 10,247
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testLocalServiceShouldBeUnreachable,Long Statement,The length of the statement "assertThat(ar.succeeded()).isFalse().withFailMessage("Local service should not be accessible from a different node in the cluster");" is 132.,260
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ClusteredTest,testLocalServiceShouldBeUnreachable,Magic Number,The method contains a magic number: 10,260
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceProvider,methodWthFailingResult,Magic Number,The method contains a magic number: 30,98
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceProvider,methodWthFailingResult,Magic Number,The method contains a magic number: 30,98
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,ServiceVertxEBProxy,Empty catch clause,The method has an empty catch block.,61
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,methodReturningCustomEnum,Long Statement,The length of the statement "result.handle(Future.succeededFuture(res.result().body() != null ? io.vertx.serviceproxy.testmodel.Mappers.deserializeSomeEnumWithCustomConstructor((String)res.result().body()) : null));" is 186.,174
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,methodWithDataObject,Long Statement,The length of the statement "result.handle(Future.succeededFuture(res.result().body() != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)res.result().body()) : null));" is 160.,257
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,methodWithListOfDataObject,Long Statement,The length of the statement "_json.put("list"`new JsonArray(list == null ? java.util.Collections.emptyList() : list.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 167.,278
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,methodWithListOfDataObject,Long Statement,The length of the statement "result.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? new io.vertx.serviceproxy.testmodel.TestDataObject((JsonObject)v) : null).collect(Collectors.toList())));" is 192.,278
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,methodWithStringDataObject,Long Statement,The length of the statement "result.handle(Future.succeededFuture(res.result().body() != null ? new io.vertx.serviceproxy.testmodel.StringDataObject((String)res.result().body()) : null));" is 158.,301
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,methodWithListOfStringDataObject,Long Statement,The length of the statement "_json.put("list"`new JsonArray(list == null ? java.util.Collections.emptyList() : list.stream().map(v -> v != null ? v.toJson() : null).collect(Collectors.toList())));" is 167.,322
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxEBProxy,methodWithListOfStringDataObject,Long Statement,The length of the statement "result.handle(Future.succeededFuture(res.result().body().stream().map(v -> v != null ? new io.vertx.serviceproxy.testmodel.StringDataObject((String)v) : null).collect(Collectors.toList())));" is 190.,322
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,ServiceVertxProxyHandler,Empty catch clause,The method has an empty catch block.,82
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,ServiceVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,82
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,ServiceVertxProxyHandler,Magic Number,The method contains a magic number: 1000,82
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,ServiceVertxProxyHandler,Magic Number,The method contains a magic number: 2,82
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,ServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,82
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,ServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,82
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,104
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,handle,Complex Method,Cyclomatic complexity of the method is 23,123
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,123
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,123
+vert-x3_service-proxy,io.vertx.serviceproxy.clustered,ServiceVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@74d936e6,123
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,setUp,Long Statement,The length of the statement "consumerWithDebugEnabled=new ServiceBinder(vertx).setAddress(SERVICE_WITH_DEBUG_ADDRESS).setIncludeDebugInfo(true).register(TestService.class`service);" is 151.,56
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testErrorHandling,Magic Number,The method contains a magic number: 25,89
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testErrorHandlingServiceExceptionSubclass,Magic Number,The method contains a magic number: 25,101
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicTypes,Magic Number,The method contains a magic number: 123,136
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicTypes,Magic Number,The method contains a magic number: 1234,136
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicTypes,Magic Number,The method contains a magic number: 12345,136
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicTypes,Magic Number,The method contains a magic number: 123456l,136
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicTypes,Magic Number,The method contains a magic number: 12.34f,136
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicTypes,Magic Number,The method contains a magic number: 12.3456d,136
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicBoxedTypes,Magic Number,The method contains a magic number: 123,142
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicBoxedTypes,Magic Number,The method contains a magic number: 1234,142
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicBoxedTypes,Magic Number,The method contains a magic number: 12345,142
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicBoxedTypes,Magic Number,The method contains a magic number: 123456l,142
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicBoxedTypes,Magic Number,The method contains a magic number: 12.34f,142
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testBasicBoxedTypes,Magic Number,The method contains a magic number: 12.3456d,142
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testDataObjectType,Magic Number,The method contains a magic number: 123,242
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListdataObjectType,Long Statement,The length of the statement "List<TestDataObject> testDataList=Arrays.asList(new TestDataObject().setString("foo").setNumber(123).setBool(true)`new TestDataObject().setString("bar").setNumber(456).setBool(false));" is 184.,248
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListdataObjectType,Magic Number,The method contains a magic number: 123,248
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListdataObjectType,Magic Number,The method contains a magic number: 456,248
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetdataObjectType,Long Statement,The length of the statement "Set<TestDataObject> testDataSet=new HashSet<>(Arrays.asList(new TestDataObject().setString("String foo").setNumber(123).setBool(true)`new TestDataObject().setString("String bar").setNumber(456).setBool(false)));" is 211.,257
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetdataObjectType,Magic Number,The method contains a magic number: 123,257
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetdataObjectType,Magic Number,The method contains a magic number: 456,257
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapdataObjectType,Magic Number,The method contains a magic number: 2,266
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListDateTimeType,Long Statement,The length of the statement "proxy.listDateTimeType(Arrays.asList(ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]")`ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]").plusHours(1)));" is 184.,281
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetDateTimeType,Long Statement,The length of the statement "proxy.setDateTimeType(new HashSet<>(Arrays.asList(ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]")`ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]").plusHours(1))));" is 198.,292
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testlistdataObjectTypeHavingNullValues,Long Statement,The length of the statement "List<TestDataObject> testDataList=Arrays.asList(new TestDataObject().setString("foo").setNumber(123).setBool(true)`null`new TestDataObject().setString("bar").setNumber(456).setBool(false));" is 189.,318
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testlistdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 123,318
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testlistdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 456,318
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetdataObjectTypeHavingNullValues,Long Statement,The length of the statement "Set<TestDataObject> testDataSet=new HashSet<>(Arrays.asList(new TestDataObject().setString("String foo").setNumber(123).setBool(true)`null`new TestDataObject().setString("String bar").setNumber(456).setBool(false)));" is 216.,334
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 123,334
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetdataObjectTypeHavingNullValues,Magic Number,The method contains a magic number: 456,334
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Long Statement,The length of the statement "proxy.listParams(Arrays.asList("foo"`"bar")`Arrays.asList((byte)12`(byte)13)`Arrays.asList((short)123`(short)134)`Arrays.asList(1234`1235)`Arrays.asList(12345l`12346l)`Arrays.asList(new JsonObject().put("foo"`"bar")`new JsonObject().put("blah"`"eek"))`Arrays.asList(new JsonArray().add("foo")`new JsonArray().add("blah"))`Arrays.asList(new TestDataObject().setNumber(1).setString("String 1").setBool(false)`new TestDataObject().setNumber(2).setString("String 2").setBool(true)));" is 479.,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 12,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 13,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 123,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 134,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 1234,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 1235,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 12345l,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 12346l,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListTypes,Magic Number,The method contains a magic number: 2,350
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Long Statement,The length of the statement "proxy.setParams(new HashSet<>(Arrays.asList("foo"`"bar"))`new HashSet<>(Arrays.asList((byte)12`(byte)13))`new HashSet<>(Arrays.asList((short)123`(short)134))`new HashSet<>(Arrays.asList(1234`1235))`new HashSet<>(Arrays.asList(12345l`12346l))`new HashSet<>(Arrays.asList(new JsonObject().put("foo"`"bar")`new JsonObject().put("blah"`"eek")))`new HashSet<>(Arrays.asList(new JsonArray().add("foo")`new JsonArray().add("blah")))`new HashSet<>(Arrays.asList(new TestDataObject().setNumber(1).setString("String 1").setBool(false)`new TestDataObject().setNumber(2).setString("String 2").setBool(true))));" is 598.,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 12,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 13,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 123,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 134,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 1234,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 1235,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 12345l,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 12346l,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetTypes,Magic Number,The method contains a magic number: 2,359
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 12,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 13,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 123,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 134,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 1234,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 1235,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 12345l,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapTypes,Magic Number,The method contains a magic number: 12356l,369
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testByteHandler,Magic Number,The method contains a magic number: 123,420
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testShortHandler,Magic Number,The method contains a magic number: 1234,438
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testIntHandler,Magic Number,The method contains a magic number: 12345,456
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testLongHandler,Magic Number,The method contains a magic number: 123456l,474
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testFloatHandler,Magic Number,The method contains a magic number: 12.34f,492
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testDoubleHandler,Magic Number,The method contains a magic number: 12.3456d,510
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testDataObjectHandler,Magic Number,The method contains a magic number: 123,600
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessage,Long Statement,The length of the statement "vertx.eventBus().<String>request("someaddress"`message`new DeliveryOptions().addHeader("action"`"invokeWithMessage")`onSuccess(res -> {" is 135.,658
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessage,Magic Number,The method contains a magic number: 1234,658
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessageInvalidAction,Long Statement,The length of the statement "vertx.eventBus().request(SERVICE_WITH_DEBUG_ADDRESS`message`new DeliveryOptions().addHeader("action"`"yourmum").setSendTimeout(500)`onFailure(t -> {" is 148.,673
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessageInvalidAction,Magic Number,The method contains a magic number: 1234,673
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessageInvalidAction,Magic Number,The method contains a magic number: 500,673
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessageParamWrongType,Long Statement,The length of the statement "vertx.eventBus().request(SERVICE_WITH_DEBUG_ADDRESS`message`new DeliveryOptions().addHeader("action"`"invokeWithMessage").setSendTimeout(500)`onFailure(t -> {" is 158.,690
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessageParamWrongType,Magic Number,The method contains a magic number: 76523,690
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessageParamWrongType,Magic Number,The method contains a magic number: 1234,690
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testCallWithMessageParamWrongType,Magic Number,The method contains a magic number: 500,690
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListStringHandler,Magic Number,The method contains a magic number: 2,710
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListByteHandler,Magic Number,The method contains a magic number: 2,721
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListByteHandler,Magic Number,The method contains a magic number: 3,721
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListByteHandler,Magic Number,The method contains a magic number: 2,721
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListShortHandler,Magic Number,The method contains a magic number: 11,732
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListShortHandler,Magic Number,The method contains a magic number: 12,732
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListShortHandler,Magic Number,The method contains a magic number: 13,732
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListShortHandler,Magic Number,The method contains a magic number: 2,732
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListIntHandler,Magic Number,The method contains a magic number: 100,743
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListIntHandler,Magic Number,The method contains a magic number: 101,743
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListIntHandler,Magic Number,The method contains a magic number: 102,743
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListIntHandler,Magic Number,The method contains a magic number: 2,743
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListLongHandler,Magic Number,The method contains a magic number: 1000l,754
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListLongHandler,Magic Number,The method contains a magic number: 1001l,754
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListLongHandler,Magic Number,The method contains a magic number: 1002l,754
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListLongHandler,Magic Number,The method contains a magic number: 2,754
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListFloatHandler,Magic Number,The method contains a magic number: 1.1f,765
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListFloatHandler,Magic Number,The method contains a magic number: 1.2f,765
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListFloatHandler,Magic Number,The method contains a magic number: 1.3f,765
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListFloatHandler,Magic Number,The method contains a magic number: 2,765
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListDoubleHandler,Magic Number,The method contains a magic number: 1.11d,776
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListDoubleHandler,Magic Number,The method contains a magic number: 1.12d,776
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListDoubleHandler,Magic Number,The method contains a magic number: 1.13d,776
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListDoubleHandler,Magic Number,The method contains a magic number: 2,776
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListCharHandler,Magic Number,The method contains a magic number: 2,787
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListBoolHandler,Magic Number,The method contains a magic number: 2,798
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListJsonObjectHandler,Magic Number,The method contains a magic number: 2,809
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListJsonArrayHandler,Magic Number,The method contains a magic number: 2,820
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetByteHandler,Magic Number,The method contains a magic number: 2,842
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetByteHandler,Magic Number,The method contains a magic number: 3,842
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetShortHandler,Magic Number,The method contains a magic number: 11,853
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetShortHandler,Magic Number,The method contains a magic number: 12,853
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetShortHandler,Magic Number,The method contains a magic number: 13,853
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetIntHandler,Magic Number,The method contains a magic number: 100,864
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetIntHandler,Magic Number,The method contains a magic number: 101,864
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetIntHandler,Magic Number,The method contains a magic number: 102,864
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetLongHandler,Magic Number,The method contains a magic number: 1000l,875
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetLongHandler,Magic Number,The method contains a magic number: 1001l,875
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetLongHandler,Magic Number,The method contains a magic number: 1002l,875
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetFloatHandler,Magic Number,The method contains a magic number: 1.1f,886
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetFloatHandler,Magic Number,The method contains a magic number: 1.2f,886
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetFloatHandler,Magic Number,The method contains a magic number: 1.3f,886
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetDoubleHandler,Magic Number,The method contains a magic number: 1.11d,897
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetDoubleHandler,Magic Number,The method contains a magic number: 1.12d,897
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetDoubleHandler,Magic Number,The method contains a magic number: 1.13d,897
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapByteHandler,Magic Number,The method contains a magic number: 2,942
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapByteHandler,Magic Number,The method contains a magic number: 3,942
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapShortHandler,Magic Number,The method contains a magic number: 11,955
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapShortHandler,Magic Number,The method contains a magic number: 12,955
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapShortHandler,Magic Number,The method contains a magic number: 13,955
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapIntHandler,Magic Number,The method contains a magic number: 100,968
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapIntHandler,Magic Number,The method contains a magic number: 101,968
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapIntHandler,Magic Number,The method contains a magic number: 102,968
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapLongHandler,Magic Number,The method contains a magic number: 1000l,981
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapLongHandler,Magic Number,The method contains a magic number: 1001l,981
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapLongHandler,Magic Number,The method contains a magic number: 1002l,981
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapFloatHandler,Magic Number,The method contains a magic number: 1.1f,994
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapFloatHandler,Magic Number,The method contains a magic number: 1.2f,994
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapFloatHandler,Magic Number,The method contains a magic number: 1.3f,994
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapDoubleHandler,Magic Number,The method contains a magic number: 1.11d,1007
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapDoubleHandler,Magic Number,The method contains a magic number: 1.12d,1007
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapDoubleHandler,Magic Number,The method contains a magic number: 1.13d,1007
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListDataObjectHandler,Magic Number,The method contains a magic number: 2,1094
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetDataObjectHandler,Magic Number,The method contains a magic number: 2,1108
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetDataObjectHandler,Magic Number,The method contains a magic number: 2,1108
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testMapDataObjectHandler,Magic Number,The method contains a magic number: 2,1120
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testListDateTimeHandler,Long Statement,The length of the statement "assertEquals(Arrays.asList(ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]")`ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]").plusHours(1))`list);" is 179.,1141
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testSetDateTimeHandler,Long Statement,The length of the statement "assertEquals(new HashSet<>(Arrays.asList(ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]")`ZonedDateTime.parse("2019-03-25T17:08:31.069+01:00[Europe/Rome]").plusHours(1)))`set);" is 193.,1153
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testProxyIgnore,Magic Number,The method contains a magic number: 500,1177
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testConnectionTimeout,Magic Number,The method contains a magic number: 2,1211
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testConnectionTimeout,Magic Number,The method contains a magic number: 2L,1211
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testLocalServiceConnectionTimeout,Long Statement,The length of the statement "localConsumer=new ServiceBinder(vertx).setAddress(SERVICE_LOCAL_ADDRESS).setTimeoutSeconds(2).register(TestService.class`localService);" is 135.,1225
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testLocalServiceConnectionTimeout,Magic Number,The method contains a magic number: 2,1225
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testLocalServiceConnectionTimeout,Magic Number,The method contains a magic number: 2L,1225
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testAListContainingNullValues,Magic Number,The method contains a magic number: 2,1310
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testAListContainingNullValues,Magic Number,The method contains a magic number: 2,1310
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testAListContainingNullValues,Magic Number,The method contains a magic number: 2,1310
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testAListContainingNullValues,Magic Number,The method contains a magic number: 2,1310
+vert-x3_service-proxy,io.vertx.serviceproxy.test,ServiceProxyTest,testASetContainingNullValues,Magic Number,The method contains a magic number: 2,1331
+vert-x3_service-proxy,io.vertx.serviceproxy.test,FuturizedServiceProxyTest,setUp,Long Statement,The length of the statement "consumerWithDebugEnabled=new ServiceBinder(vertx).setAddress(SERVICE_WITH_DEBUG_ADDRESS).setIncludeDebugInfo(true).register(FuturizedTestService.class`service);" is 160.,42
+vert-x3_service-proxy,io.vertx.serviceproxy.test,FuturizedServiceProxyTest,setUp,Long Statement,The length of the statement "localConsumer=new ServiceBinder(vertx).setAddress(SERVICE_LOCAL_ADDRESS).registerLocal(FuturizedTestService.class`localService);" is 128.,42
+vert-x3_service-proxy,io.vertx.serviceproxy.test,SecureServiceBinderTest,getJWTConfig,Long Statement,The length of the statement "return new JWTAuthOptions().setKeyStore(new KeyStoreOptions().setPath("keystore.jceks").setType("jceks").setPassword("secret"));" is 128.,49
+vert-x3_service-proxy,io.vertx.serviceproxy.test,SecureServiceBinderTest,setUp,Long Statement,The length of the statement "ServiceBinder serviceBinder=new ServiceBinder(vertx).setAddress(SERVICE_ADDRESS).addInterceptor(AuthenticationInterceptor.create(JWTAuth.create(vertx`getJWTConfig()))).addInterceptor(AuthorizationInterceptor.create(JWTAuthorization.create("permissions")).addAuthorization(RoleBasedAuthorization.create("admin")).addAuthorization(PermissionBasedAuthorization.create("print")));" is 376.,57
+vert-x3_service-proxy,io.vertx.serviceproxy.test,SecureServiceBinderTest,setUp,Long Statement,The length of the statement "ServiceBinder localServiceBinder=new ServiceBinder(vertx).setAddress(SERVICE_LOCAL_ADDRESS).addInterceptor(AuthenticationInterceptor.create(JWTAuth.create(vertx`getJWTConfig()))).addInterceptor(AuthorizationInterceptor.create(JWTAuthorization.create("permissions")).addAuthorization(RoleBasedAuthorization.create("admin")).addAuthorization(PermissionBasedAuthorization.create("print")));" is 387.,57
+vert-x3_service-proxy,io.vertx.serviceproxy.test,SecureServiceBinderTest,checkResult,Magic Number,The method contains a magic number: 401,153
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxEBProxy,FuturizedTestServiceVertxEBProxy,Empty catch clause,The method has an empty catch block.,54
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,FuturizedTestServiceVertxProxyHandler,Empty catch clause,The method has an empty catch block.,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,FuturizedTestServiceVertxProxyHandler,Long Parameter List,The method has 5 parameters. ,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,FuturizedTestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 1000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,FuturizedTestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 2,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,FuturizedTestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,FuturizedTestServiceVertxProxyHandler,Magic Number,The method contains a magic number: 10000,75
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,checkTimedOut,Magic Number,The method contains a magic number: 1000000000,97
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,116
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,handle,Magic Number,The method contains a magic number: 500,116
+vert-x3_service-proxy,io.vertx.serviceproxy.testmodel2,FuturizedTestServiceVertxProxyHandler,handle,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3c6e0e06,116

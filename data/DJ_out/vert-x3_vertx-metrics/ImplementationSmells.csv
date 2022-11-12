@@ -1,0 +1,304 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+vert-x3_vertx-metrics,examples,MetricsExamples,setupJMXWithDomain,Long Statement,The length of the statement "Vertx vertx=Vertx.vertx(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setJmxEnabled(true).setJmxDomain("mydomain")));" is 139.,52
+vert-x3_vertx-metrics,examples,MetricsExamples,setupMonitoredHandlers,Long Statement,The length of the statement "Vertx vertx=Vertx.vertx(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).addMonitoredEventBusHandler(new Match().setValue("some-address")).addMonitoredEventBusHandler(new Match().setValue("business-.*").setType(MatchType.REGEX))));" is 267.,60
+vert-x3_vertx-metrics,examples,MetricsExamples,setupMonitoredUris,Long Statement,The length of the statement "Vertx vertx=Vertx.vertx(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).addMonitoredHttpServerUri(new Match().setValue("/")).addMonitoredHttpServerUri(new Match().setValue("/foo/.*").setType(MatchType.REGEX))));" is 248.,71
+vert-x3_vertx-metrics,examples,MetricsExamples,setupMonitoredUrisWithAliases,Long Statement,The length of the statement "Vertx vertx=Vertx.vertx(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).addMonitoredHttpServerUri(new Match().setValue("/users/.*").setAlias("users").setType(MatchType.REGEX))));" is 215.,82
+vert-x3_vertx-metrics,examples,MetricsExamples,setupMonitoredRoutes,Long Statement,The length of the statement "Vertx vertx=Vertx.vertx(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).addMonitoredHttpServerRoute(new Match().setValue("/users/.*").setType(MatchType.REGEX))));" is 199.,90
+vert-x3_vertx-metrics,examples,MetricsExamples,setupMonitoredEndpoints,Long Statement,The length of the statement "Vertx vertx=Vertx.vertx(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).addMonitoredHttpClientEndpoint(new Match().setValue("some-host:80")).addMonitoredHttpClientEndpoint(new Match().setValue("another-host:.*").setType(MatchType.REGEX))));" is 277.,98
+vert-x3_vertx-metrics,examples,MetricsExamples,getRegistry,Long Statement,The length of the statement "VertxOptions options=new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).setRegistryName("my-registry"));" is 138.,150
+vert-x3_vertx-metrics,examples,MetricsExamples,example4,Long Statement,The length of the statement "Vertx vertx=Vertx.vertx(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).setJmxEnabled(true).setJmxDomain("vertx-metrics")));" is 161.,160
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.reporters,JmxReporter,JmxReporter,Long Parameter List,The method has 5 parameters. ,755
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_SERVER_URIS is 34.,78
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_SERVER_ROUTES is 36.,78
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_CLIENT_URIS is 34.,78
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_CLIENT_ENDPOINTS is 39.,78
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_SERVER_URIS is 34.,90
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_SERVER_ROUTES is 36.,90
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_CLIENT_URIS is 34.,90
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Identifier,The length of the field DEFAULT_MONITORED_HTTP_CLIENT_ENDPOINTS is 39.,90
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Statement,The length of the statement "monitoredEventBusHandlers=other.monitoredEventBusHandlers == null ? null : new ArrayList<>(other.monitoredEventBusHandlers);" is 124.,105
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Statement,The length of the statement "monitoredHttpServerRoutes=other.monitoredHttpServerRoutes == null ? null : new ArrayList<>(other.monitoredHttpServerRoutes);" is 124.,105
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptions,DropwizardMetricsOptions,Long Statement,The length of the statement "monitoredHttpClientEndpoints=other.monitoredHttpClientEndpoints == null ? null : new ArrayList<>(other.monitoredHttpClientEndpoints);" is 133.,105
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MatchConverter,fromJson,Complex Method,Cyclomatic complexity of the method is 8,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptionsConverter,fromJson,Complex Method,Cyclomatic complexity of the method is 31,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptionsConverter,fromJson,Long Statement,The length of the statement "if (item instanceof JsonObject) obj.addMonitoredEventBusHandler(new io.vertx.ext.dropwizard.Match((io.vertx.core.json.JsonObject)item));" is 136.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptionsConverter,fromJson,Long Statement,The length of the statement "if (item instanceof JsonObject) obj.addMonitoredHttpClientEndpoint(new io.vertx.ext.dropwizard.Match((io.vertx.core.json.JsonObject)item));" is 139.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptionsConverter,fromJson,Long Statement,The length of the statement "if (item instanceof JsonObject) obj.addMonitoredHttpClientUri(new io.vertx.ext.dropwizard.Match((io.vertx.core.json.JsonObject)item));" is 134.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptionsConverter,fromJson,Long Statement,The length of the statement "if (item instanceof JsonObject) obj.addMonitoredHttpServerRoute(new io.vertx.ext.dropwizard.Match((io.vertx.core.json.JsonObject)item));" is 136.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptionsConverter,fromJson,Long Statement,The length of the statement "if (item instanceof JsonObject) obj.addMonitoredHttpServerUri(new io.vertx.ext.dropwizard.Match((io.vertx.core.json.JsonObject)item));" is 134.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,DropwizardMetricsOptionsConverter,toJson,Complex Method,Cyclomatic complexity of the method is 10,105
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,getOptions,Long Statement,The length of the statement "return new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).setJmxEnabled(true).addMonitoredEventBusHandler(new Match().setValue("foo")).addMonitoredEventBusHandler(new Match().setValue("juu.*").setType(MatchType.REGEX)).addMonitoredEventBusHandler(new Match().setValue("user:.*").setType(MatchType.REGEX).setAlias("user-handlers")).addMonitoredHttpServerUri(new Match().setValue("/get")).addMonitoredHttpServerUri(new Match().setValue("/p.*").setType(MatchType.REGEX)).addMonitoredHttpServerUri(new Match().setValue("/users/.*").setAlias("users").setType(MatchType.REGEX)).addMonitoredHttpServerRoute(new Match().setValue(".*").setType(MatchType.REGEX)).addMonitoredHttpClientEndpoint(new Match().setValue("localhost:8080")).addMonitoredHttpClientUri(new Match().setValue("/books/.*").setAlias("books").setType(MatchType.REGEX)));" is 863.,75
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 500,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 1000,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 300,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 100,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 10,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 8080,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 2,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 2,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 8080,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 7500L,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 2000L,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 2000L,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetrics,Magic Number,The method contains a magic number: 7500L,97
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpChunkWritesMetrics,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,154
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpChunkWritesMetrics,Magic Number,The method contains a magic number: 10,154
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpChunkWritesMetrics,Magic Number,The method contains a magic number: 1000,154
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpChunkWritesMetrics,Magic Number,The method contains a magic number: 50,154
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpChunkWritesMetrics,Magic Number,The method contains a magic number: 8080,154
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpChunkWritesMetrics,Magic Number,The method contains a magic number: 8080,154
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/get").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 121.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/users/1").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 125.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/users/2").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 125.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/users/3").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 125.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/internal/users/3").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 134.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.POST`8080`"localhost"`"/post").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 123.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.PUT`8080`"localhost"`"/put").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 121.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.DELETE`8080`"localhost"`"/delete").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 127.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.OPTIONS`8080`"localhost"`"/options").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 129.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.HEAD`8080`"localhost"`"/head").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 123.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.TRACE`8080`"localhost"`"/trace").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 125.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.CONNECT`8080`"localhost"`"/connect").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 129.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Long Statement,The length of the statement "client.request(HttpMethod.PATCH`8080`"localhost"`"/patch").onSuccess(req -> req.send().onSuccess(resp -> latch.countDown()));" is 125.,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 13,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 8080,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 100,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 5L,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 3L,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 3L,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 3L,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMethodAndUriAndRouteMetrics,Magic Number,The method contains a magic number: 3L,215
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsResponseCode2xx,Magic Number,The method contains a magic number: 200,305
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsResponseCode3xx,Magic Number,The method contains a magic number: 300,310
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsResponseCode4xx,Magic Number,The method contains a magic number: 404,315
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsResponseCode5xx,Magic Number,The method contains a magic number: 500,320
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,test,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,325
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,test,Magic Number,The method contains a magic number: 2,325
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,test,Magic Number,The method contains a magic number: 8080,325
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,test,Magic Number,The method contains a magic number: 8080,325
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsOnClose,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8081)).requestHandler(req -> {" is 124.,368
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsOnClose,Magic Number,The method contains a magic number: 6,368
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsOnClose,Magic Number,The method contains a magic number: 8081,368
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpMetricsOnClose,Magic Number,The method contains a magic number: 8081,368
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 500,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 1000,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 300,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 100,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 8080,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 8080,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 1502L,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 402L,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 402L,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpWebSocketMetrics,Magic Number,The method contains a magic number: 1502L,405
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpSendFile,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,463
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpSendFile,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/file").compose(req -> req.send().compose(HttpClientResponse::body)).onComplete(onSuccess(buff -> {" is 147.,463
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpSendFile,Magic Number,The method contains a magic number: 10000,463
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpSendFile,Magic Number,The method contains a magic number: 8080,463
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpSendFile,Magic Number,The method contains a magic number: 8080,463
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientMetricsName,Magic Number,The method contains a magic number: 10,496
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedHttpClientMetrics,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,508
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedHttpClientMetrics,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/file").compose(req -> req.send().compose(HttpClientResponse::body)).onComplete(onSuccess(buff -> {" is 147.,508
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedHttpClientMetrics,Magic Number,The method contains a magic number: 10,508
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedHttpClientMetrics,Magic Number,The method contains a magic number: 8080,508
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedHttpClientMetrics,Magic Number,The method contains a magic number: 8080,508
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientMetricsWithMatchIdentifier,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,537
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientMetricsWithMatchIdentifier,Long Statement,The length of the statement "client.request(HttpMethod.GET`8080`"localhost"`"/books/1").compose(req -> req.send().compose(HttpClientResponse::body)).compose(body1 -> client.request(HttpMethod.GET`8080`"localhost"`"/books/2").compose(req -> req.send().compose(HttpClientResponse::body))).onComplete(onSuccess(body2 -> {" is 289.,537
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientMetricsWithMatchIdentifier,Magic Number,The method contains a magic number: 8080,537
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientMetricsWithMatchIdentifier,Magic Number,The method contains a magic number: 8080,537
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientMetricsWithMatchIdentifier,Magic Number,The method contains a magic number: 8080,537
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientMetricsWithMatchIdentifier,Magic Number,The method contains a magic number: 2L,537
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetrics,Magic Number,The method contains a magic number: 500,566
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetrics,Magic Number,The method contains a magic number: 300,566
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetrics,Magic Number,The method contains a magic number: 13,566
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetrics,Magic Number,The method contains a magic number: 2,566
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetrics,Magic Number,The method contains a magic number: 300,566
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetrics,Magic Number,The method contains a magic number: 500,566
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedNetClientMetrics,Long Statement,The length of the statement "NetServer server=vertx.createNetServer(new NetServerOptions().setHost("localhost").setPort(8080)).connectHandler(socket -> {" is 124.,617
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedNetClientMetrics,Magic Number,The method contains a magic number: 2,617
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedNetClientMetrics,Magic Number,The method contains a magic number: 10,617
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedNetClientMetrics,Magic Number,The method contains a magic number: 8080,617
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedNetClientMetrics,Magic Number,The method contains a magic number: 8080,617
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNamedNetClientMetrics,Magic Number,The method contains a magic number: 8L,617
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetricsOnClose,Long Statement,The length of the statement "NetServer server=vertx.createNetServer(new NetServerOptions().setHost("localhost").setPort(1235).setReceiveBufferSize(50)).connectHandler(socket -> {" is 149.,648
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetricsOnClose,Magic Number,The method contains a magic number: 8,648
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetricsOnClose,Magic Number,The method contains a magic number: 1235,648
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetricsOnClose,Magic Number,The method contains a magic number: 50,648
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetricsOnClose,Magic Number,The method contains a magic number: 1235,648
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetricsOnClose,Magic Number,The method contains a magic number: 50,648
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testNetMetricsOnClose,Magic Number,The method contains a magic number: 2,648
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDatagramMetrics,Magic Number,The method contains a magic number: 1823,689
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDatagramMetrics,Magic Number,The method contains a magic number: 123,689
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDatagramMetrics,Magic Number,The method contains a magic number: 1236,689
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDatagramMetrics,Magic Number,The method contains a magic number: 1236,689
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDatagramMetrics,Magic Number,The method contains a magic number: 1236,689
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDatagramMetrics,Magic Number,The method contains a magic number: 2L,689
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDatagramMetrics,Magic Number,The method contains a magic number: 2L,689
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsWithoutHandler,Magic Number,The method contains a magic number: 12,731
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsWithoutHandler,Magic Number,The method contains a magic number: 7,731
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsWithoutHandler,Magic Number,The method contains a magic number: 19L,731
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsWithHandler,Long Statement,The length of the statement "assertEquals("Was expecting to have at least " + (messages - 1) + " pending messages: "+ metrics`messagesPending`messages);" is 123.,749
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsWithHandler,Magic Number,The method contains a magic number: 13,749
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsHandlerRegexMatchWithIdentifier,Magic Number,The method contains a magic number: 3,894
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsHandlerRegexMatchWithIdentifier,Magic Number,The method contains a magic number: 3L,894
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsHandlerMultiMatch,Magic Number,The method contains a magic number: 3,919
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsReplyNoHandlers,Magic Number,The method contains a magic number: 300,945
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusByteMetrics,Magic Number,The method contains a magic number: 2,959
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusByteMetrics,Magic Number,The method contains a magic number: 1000,959
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusByteMetrics,Magic Number,The method contains a magic number: 1000,959
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusByteMetrics,Magic Number,The method contains a magic number: 1000,959
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsReplyTimeout,Long Statement,The length of the statement "assertCount(() -> metricsService.getMetricsSnapshot(vertx.eventBus()).getJsonObject("messages.reply-failures." + ReplyFailure.TIMEOUT)`1L);" is 139.,976
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsReplyTimeout,Magic Number,The method contains a magic number: 300,976
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testEventBusMetricsReplyRecipientFailure,Long Statement,The length of the statement "assertCount(() -> metricsService.getMetricsSnapshot(vertx.eventBus()).getJsonObject("messages.reply-failures." + ReplyFailure.RECIPIENT_FAILURE)`1L);" is 149.,988
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testPendingCount,Magic Number,The method contains a magic number: 30,1000
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDiscardMessage,Magic Number,The method contains a magic number: 10,1024
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDiscardMessage,Magic Number,The method contains a magic number: 10L,1024
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testDiscardMessage,Magic Number,The method contains a magic number: 11L,1024
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScheduledMetricConsumer,Long Statement,The length of the statement "ScheduledMetricsConsumer consumer=new ScheduledMetricsConsumer(vertx).filter((name`metric) -> name.startsWith(baseName));" is 121.,1060
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScheduledMetricConsumer,Magic Number,The method contains a magic number: 18,1060
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScheduledMetricConsumer,Magic Number,The method contains a magic number: 300,1060
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMetricsCleanupedOnVertxClose,Magic Number,The method contains a magic number: 8080,1087
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMetricsCleanupedOnVertxClose,Magic Number,The method contains a magic number: 1234,1087
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScaleHttpServers,Magic Number,The method contains a magic number: 3,1128
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScaleHttpServers,Magic Number,The method contains a magic number: 8080,1128
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScaleHttpServers,Magic Number,The method contains a magic number: 8080,1128
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScaleHttpServers,Magic Number,The method contains a magic number: 200,1128
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScaleHttpServers,Magic Number,The method contains a magic number: 3,1128
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testScaleHttpServers,Magic Number,The method contains a magic number: 3,1128
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 8080,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 7,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 8080,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 5,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 2,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 5,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 2,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testHttpClientConnectionQueue,Magic Number,The method contains a magic number: 7,1168
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Long Statement,The length of the statement "assertWaitUntil(() -> metricsService.getMetricsSnapshot(clients[0]).getJsonObject("connections.max-pool-size").getInteger("value").equals(expected));" is 149.,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 8080,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 8080,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 15,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 15,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 2,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 10,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 5,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testMultiHttpClients,Magic Number,The method contains a magic number: 3,1201
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testJsonMetricsTypes,Magic Number,The method contains a magic number: 10,1323
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 5,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 6,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 5,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 5,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 10,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 5,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 5,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 6,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetrics,Magic Number,The method contains a magic number: 6,1340
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testThreadPoolMetricsOnClose,Magic Number,The method contains a magic number: 10,1407
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testClientMetricsReporting,Magic Number,The method contains a magic number: 8080,1424
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testClientMetricsLifecycle,Magic Number,The method contains a magic number: 8080,1451
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsTest,testClientMetricsLifecycle,Magic Number,The method contains a magic number: 2,1451
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InternalMetricsTest,getOptions,Long Statement,The length of the statement "return new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().addMonitoredEventBusHandler(new Match().setType(MatchType.REGEX).setValue(".*")).setEnabled(true).setJmxEnabled(true));" is 194.,47
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InternalMetricsTest,testWebsocketDontProduceEventBusMetrics,Magic Number,The method contains a magic number: 500,57
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InternalMetricsTest,testWebsocketDontProduceEventBusMetrics,Magic Number,The method contains a magic number: 1000,57
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InternalMetricsTest,testWebsocketDontProduceEventBusMetrics,Magic Number,The method contains a magic number: 300,57
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InternalMetricsTest,testWebsocketDontProduceEventBusMetrics,Magic Number,The method contains a magic number: 100,57
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InternalMetricsTest,testWebsocketDontProduceEventBusMetrics,Magic Number,The method contains a magic number: 8080,57
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InternalMetricsTest,testWebsocketDontProduceEventBusMetrics,Magic Number,The method contains a magic number: 8080,57
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,ReuseSharedRegistryTest,getOptions,Long Statement,The length of the statement "return new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).setRegistryName("the_name"));" is 121.,31
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,getOptions,Long Statement,The length of the statement "DropwizardMetricsOptions metrics=new DropwizardMetricsOptions().setJmxDomain(name.getMethodName()).setEnabled(true).setJmxEnabled(true);" is 136.,33
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,testDistinctHttpServerMBeans,Long Statement,The length of the statement "HttpServer server1=vertx.createHttpServer().requestHandler(req -> req.response().end()).listen(port1`onSuccess(server -> listenLatch.countDown()));" is 147.,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,testDistinctHttpServerMBeans,Long Statement,The length of the statement "HttpServer server2=vertx.createHttpServer().requestHandler(req -> req.response().end()).listen(port2`onSuccess(server -> listenLatch.countDown()));" is 147.,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,testDistinctHttpServerMBeans,Long Statement,The length of the statement "assertTrue(mBeanServer.isRegistered(new ObjectName(name.getMethodName()`"name"`"\"vertx.http.servers.0.0.0.0:" + port1 + ".requests\"")));" is 138.,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,testDistinctHttpServerMBeans,Long Statement,The length of the statement "assertTrue(mBeanServer.isRegistered(new ObjectName(name.getMethodName()`"name"`"\"vertx.http.servers.0.0.0.0:" + port2 + ".requests\"")));" is 138.,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,testDistinctHttpServerMBeans,Magic Number,The method contains a magic number: 8080,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,testDistinctHttpServerMBeans,Magic Number,The method contains a magic number: 8888,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MBeansTest,testDistinctHttpServerMBeans,Magic Number,The method contains a magic number: 2,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InstantThroughputTest,testCompute,Magic Number,The method contains a magic number: 1000,13
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InstantThroughputTest,testCompute,Magic Number,The method contains a magic number: 1000,13
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InstantThroughputTest,testCompute,Magic Number,The method contains a magic number: 1000,13
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,InstantThroughputTest,testCompute,Magic Number,The method contains a magic number: 1000,13
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,SharedRegistryTest,getOptions,Long Statement,The length of the statement "return new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).setRegistryName("the_name"));" is 121.,31
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricRegistryTest,getOptionsWithSetMetricRegistry,Long Statement,The length of the statement "return new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setEnabled(true).setMetricRegistry(metricRegistry));" is 127.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testCopyOptions,Magic Number,The method contains a magic number: 100,58
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testCopyOptions,Magic Number,The method contains a magic number: 100,58
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testCopyOptions,Magic Number,The method contains a magic number: 100,58
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testJsonOptions,Long Statement,The length of the statement "options=new DropwizardMetricsOptions(new JsonObject().put("enabled"`metricsEnabled).put("registryName"`registryName).put("jmxEnabled"`jmxEnabled).put("jmxDomain"`jmxDomain).put("configPath"`configPath));" is 203.,81
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testJsonOptions,Magic Number,The method contains a magic number: 100,81
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testJsonOptions,Magic Number,The method contains a magic number: 100,81
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testJsonOptions,Magic Number,The method contains a magic number: 100,81
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Long Statement,The length of the statement "JsonArray monitoredHttpServerUris=new JsonArray().add(new JsonObject().put("value"`"/test/server/1").put("type"`"EQUALS")).add(new JsonObject().put("value"`"^/server/test/2/.*").put("type"`"REGEX"));" is 199.,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Long Statement,The length of the statement "JsonArray monitoredHttpServerRoutes=new JsonArray().add(new JsonObject().put("value"`"/test/server/:serverId").put("type"`"EQUALS")).add(new JsonObject().put("value"`"^/server/test/:name/.*").put("type"`"REGEX"));" is 213.,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Long Statement,The length of the statement "JsonArray monitoredHttpClientUris=new JsonArray().add(new JsonObject().put("value"`"/test/client/1").put("type"`"EQUALS")).add(new JsonObject().put("value"`"^/client/test/2/.*").put("type"`"REGEX"));" is 199.,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Long Statement,The length of the statement "JsonArray monitoredEventBusHandlers=new JsonArray().add(new JsonObject().put("value"`"test.address.1").put("type"`"EQUALS")).add(new JsonObject().put("value"`"^test.2.*").put("type"`"REGEX"));" is 192.,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Long Statement,The length of the statement "JsonObject config=new JsonObject().put("registryName"`"testRegistry").put("jmxEnabled"`true).put("jmxDomain"`"testJmxDomain").put("monitoredHttpServerUris"`monitoredHttpServerUris).put("monitoredHttpServerRoutes"`monitoredHttpServerRoutes).put("monitoredHttpClientUris"`monitoredHttpClientUris).put("monitoredEventBusHandlers"`monitoredEventBusHandlers).put("configPath"`"the_config_file").put("baseName"`"the_base_name");" is 422.,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Magic Number,The method contains a magic number: 2,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Magic Number,The method contains a magic number: 2,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Magic Number,The method contains a magic number: 2,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testFullJsonOptions,Magic Number,The method contains a magic number: 2,107
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testInvalidAndEmptyMonitoredEntries,Long Statement,The length of the statement "JsonArray monitoredHttpServerUris=new JsonArray().add(new JsonObject().put("value"`"/test/server/1").put("type"`"EQUALS"));" is 123.,170
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testInvalidAndEmptyMonitoredEntries,Long Statement,The length of the statement "JsonArray monitoredHttpClientUris=new JsonArray().add(new JsonObject().put("value"`"/test/client/1").put("type"`"EQUALS")).add("Just a string");" is 144.,170
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsOptionsTest,testInvalidAndEmptyMonitoredEntries,Long Statement,The length of the statement "JsonObject config=new JsonObject().put("registryName"`"testRegistry").put("jmxEnabled"`true).put("jmxDomain"`"testJmxDomain").put("monitoredHttpServerUris"`monitoredHttpServerUris).put("monitoredHttpClientUris"`monitoredHttpClientUris);" is 236.,170
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Long Statement,The length of the statement "HttpServer server=vertx.createHttpServer(new HttpServerOptions().setHost("localhost").setPort(8080)).requestHandler(req -> {" is 124.,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Long Statement,The length of the statement "client.request(HttpMethod.POST`8080`"localhost"`uri).compose(req -> req.send(body).compose(HttpClientResponse::body)).onSuccess(buff -> latch.countDown());" is 155.,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 500,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 1000,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 300,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 100,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 10,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 8080,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 2,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 2,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard,MetricsNotEnabledTest,testHttpMetrics,Magic Number,The method contains a magic number: 8080,54
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,HttpClientMetricsImpl,HttpClientMetricsImpl,Long Parameter List,The method has 5 parameters. ,42
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricsFactoryImpl,metrics,Complex Method,Cyclomatic complexity of the method is 8,46
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricsFactoryImpl,metrics,Empty catch clause,The method has an empty catch block.,46
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricsFactoryImpl,metrics,Long Statement,The length of the statement "MetricRegistry registry=metricsOptions.getMetricRegistry() != null ? metricsOptions.getMetricRegistry() : new MetricRegistry();" is 127.,46
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,EventBusMetricsImpl,EventBusMetricsImpl,Long Statement,The length of the statement "handlerMatcher=options.getMonitoredEventBusHandlers() == null ? null : new Matcher(options.getMonitoredEventBusHandlers());" is 123.,62
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,AbstractMetrics,metrics,Long Statement,The length of the statement "Map<String`Object> map=registry.getMetrics().entrySet().stream().filter(e -> e.getKey().startsWith(baseName)).collect(Collectors.toMap(e -> projectName(e.getKey())`e -> Helper.convertMetric(e.getValue()`TimeUnit.SECONDS`TimeUnit.MILLISECONDS)));" is 245.,63
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,Matcher,Matcher,Long Statement,The length of the statement "exactMatches=matches.stream().filter(match -> match.getType() == MatchType.EQUALS && match.getValue() != null).collect(Collectors.toMap(Match::getValue`match -> match.getAlias() != null ? match.getAlias() : match.getValue()));" is 226.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,Matcher,Matcher,Long Statement,The length of the statement "@SuppressWarnings("unchecked") Entry<Pattern`String>[] entries=matches.stream().filter(match -> match.getType() == MatchType.REGEX && match.getValue() != null).map(match -> new SimpleEntry<>(Pattern.compile(match.getValue())`match.getAlias())).toArray(Entry[]::new);" is 266.,20
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,HttpMetricsImpl,HttpMetricsImpl,Long Statement,The length of the statement "responses=new ThroughputMeter[]{throughputMeter("responses-1xx")`throughputMeter("responses-2xx")`throughputMeter("responses-3xx")`throughputMeter("responses-4xx")`throughputMeter("responses-5xx")};" is 198.,41
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,HttpMetricsImpl,end,Complex Method,Cyclomatic complexity of the method is 10,68
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,HttpMetricsImpl,end,Magic Number,The method contains a magic number: 100,68
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,HttpMetricsImpl,end,Magic Number,The method contains a magic number: 5,68
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricsImpl,VertxMetricsImpl,Long Parameter List,The method has 5 parameters. ,50
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricsImpl,createHttpServerMetrics,Long Statement,The length of the statement "return new HttpServerMetricsImpl(registry`baseName`this.options.getMonitoredHttpServerUris()`this.options.getMonitoredHttpServerRoutes()`localAddress);" is 151.,75
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricsImpl,createHttpClientMetrics,Long Statement,The length of the statement "HttpClientReporter reporter=clientReporters.computeIfAbsent(baseName`n -> new HttpClientReporter(registry`baseName`null));" is 122.,98
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricsImpl,createHttpClientMetrics,Long Statement,The length of the statement "return new HttpClientMetricsImpl(this`reporter`options`this.options.getMonitoredHttpClientUris()`this.options.getMonitoredHttpClientEndpoint());" is 144.,98
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,HttpServerMetricsImpl,HttpServerMetricsImpl,Long Parameter List,The method has 5 parameters. ,38
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricFactoryImplTest,testLoadingFromFileFromJson,Long Statement,The length of the statement "VertxOptions vertxOptions=new VertxOptions(new JsonObject().put("metricsOptions"`new JsonObject().put("configPath"`filePath)));" is 127.,50
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricFactoryImplTest,testLoadingWithMissingFile,Long Statement,The length of the statement "DropwizardMetricsOptions dmo=new DropwizardMetricsOptions().setJmxEnabled(true).setJmxDomain("non-file-jmx").setConfigPath(filePath);" is 133.,117
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricFactoryImplTest,testFromJson,Long Statement,The length of the statement "VertxMetricsImpl metrics=(VertxMetricsImpl)vmfi.metrics(new VertxOptions(new JsonObject().put("metricsOptions"`new JsonObject().put("enabled"`true).put("monitoredEventBusHandlers"`new JsonArray().add(new JsonObject().put("value"`"foo"))).put("monitoredHttpServerUris"`new JsonArray().add(new JsonObject().put("value"`"http://www.bar.com"))).put("monitoredHttpClientUris"`new JsonArray().add(new JsonObject().put("value"`"http://www.baz.com"))).put("monitoredHttpClientEndpoints"`new JsonArray().add(new JsonObject().put("value"`"http://www.foobar.com"))))));" is 558.,136
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricFactoryImplTest,testFromJsonMixed,Long Statement,The length of the statement "VertxMetricsImpl metrics=(VertxMetricsImpl)vmfi.metrics(new VertxOptions(new JsonObject().put("metricsOptions"`new JsonObject().put("enabled"`true).put("monitoredEventBusHandlers"`new JsonArray().add(new JsonObject().put("value"`"foo"))).put("monitoredHttpServerUris"`new JsonArray().add(new JsonObject().put("value"`"http://www.bar.com"))).put("monitoredHttpClientUris"`new JsonArray().add(new JsonObject().put("value"`"http://www.baz.com"))).put("monitoredHttpClientEndpoints"`new JsonArray().add(new JsonObject().put("value"`"http://www.foobar.com"))).put("monitoredHandlers"`new JsonArray().add(new JsonObject().put("value"`"will be ignored"))).put("monitoredServerUris"`new JsonArray().add(new JsonObject().put("value"`"will be ignored"))).put("monitoredClientUris"`new JsonArray().add(new JsonObject().put("value"`"will be ignored"))).put("monitoredClientEndpoints"`new JsonArray().add(new JsonObject().put("value"`"will be ignored"))))));" is 945.,170
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricFactoryImplTest,testDefaultBaseName,Long Statement,The length of the statement "VertxMetricsImpl metrics=(VertxMetricsImpl)vmfi.metrics(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions()));" is 126.,213
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl,VertxMetricFactoryImplTest,testOverrideBaseName,Long Statement,The length of the statement "VertxMetricsImpl metrics=(VertxMetricsImpl)vmfi.metrics(new VertxOptions().setMetricsOptions(new DropwizardMetricsOptions().setBaseName("Foo")));" is 145.,220
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsHistogram,process,Complex Method,Cyclomatic complexity of the method is 8,44
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsHistogram,process,Long Statement,The length of the statement "headerColumns.addAll(columns.stream().map(String::trim).distinct().map(String::toUpperCase).filter(f -> availableColumns.contains(f)).collect(Collectors.toList()));" is 164.,44
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsHistogram,process,Long Statement,The length of the statement "Map<String`Object> histogramMetrics=metrics.getMetricsSnapshot(name).stream().filter(e -> ((JsonObject)e.getValue()).getString("type").equals("histogram")).collect(Collectors.toMap(Map.Entry::getKey`Map.Entry::getValue));" is 221.,44
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsHistogram,process,Magic Number,The method contains a magic number: 3,44
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsHistogram,process,Magic Number,The method contains a magic number: 3,44
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsHistogram,process,Magic Number,The method contains a magic number: 1000,44
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsHistogram,process,Magic Number,The method contains a magic number: 2,44
+vert-x3_vertx-metrics,io.vertx.ext.dropwizard.impl.shell,MetricsCommandPack,resolver,Long Statement,The length of the statement "handler.handle(Future.succeededFuture(() -> Stream.of(MetricsInfo.class`MetricsLs.class`MetricsHistogram.class).map(cmd -> Command.create(vertx`cmd)).collect(Collectors.toList())));" is 181.,19

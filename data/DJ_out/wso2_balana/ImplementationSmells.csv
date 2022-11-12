@@ -1,0 +1,777 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+wso2_balana,org.wso2.balana,VersionConstraints,compareHelper,Complex Method,Cyclomatic complexity of the method is 13,154
+wso2_balana,org.wso2.balana,MatchResult,MatchResult,Complex Conditional,The conditional expression (result != MATCH) && (result != NO_MATCH) && (result != INDETERMINATE) is complex.,124
+wso2_balana,org.wso2.balana,MatchResult,MatchResult,Long Statement,The length of the statement "if ((result != MATCH) && (result != NO_MATCH) && (result != INDETERMINATE)) throw new IllegalArgumentException("Input result is not a valid" + "value");" is 152.,124
+wso2_balana,org.wso2.balana,Rule,Rule,Long Parameter List,The method has 8 parameters. ,89
+wso2_balana,org.wso2.balana,Rule,Rule,Long Parameter List,The method has 6 parameters. ,116
+wso2_balana,org.wso2.balana,Rule,Rule,Long Parameter List,The method has 5 parameters. ,142
+wso2_balana,org.wso2.balana,Rule,getInstance,Complex Method,Cyclomatic complexity of the method is 14,182
+wso2_balana,org.wso2.balana,Rule,getInstance,Long Statement,The length of the statement "if ("AdviceExpression".equals(DOMHelper.getLocalName(node))) adviceExpressions.add(AdviceExpression.getInstance(node`metaData));" is 128.,182
+wso2_balana,org.wso2.balana,Rule,getInstance,Long Statement,The length of the statement "return new Rule(id`effect`description`target`condition`obligationExpressions`adviceExpressions`metaData.getXACMLVersion());" is 123.,182
+wso2_balana,org.wso2.balana,Rule,evaluate,Complex Method,Cyclomatic complexity of the method is 11,339
+wso2_balana,org.wso2.balana,Rule,encode,Complex Method,Cyclomatic complexity of the method is 10,475
+wso2_balana,org.wso2.balana,ConfigurationStore,setupConfig,Complex Method,Cyclomatic complexity of the method is 18,191
+wso2_balana,org.wso2.balana,ConfigurationStore,setupConfig,Long Statement,The length of the statement "if (pdpConfigMap.containsKey(elementName)) throw new ParsingException("more that one pdp with " + "name \"" + elementName + "\"");" is 130.,191
+wso2_balana,org.wso2.balana,ConfigurationStore,setupConfig,Long Statement,The length of the statement "if (attributeMap.containsKey(elementName)) throw new ParsingException("more that one " + "attributeFactory with name " + elementName + "\"");" is 141.,191
+wso2_balana,org.wso2.balana,ConfigurationStore,setupConfig,Long Statement,The length of the statement "if (combiningMap.containsKey(elementName)) throw new ParsingException("more that one " + "combiningAlgFactory with " + "name \"" + elementName + "\"");" is 151.,191
+wso2_balana,org.wso2.balana,ConfigurationStore,setupConfig,Long Statement,The length of the statement "if (functionMap.containsKey(elementName)) throw new ParsingException("more that one functionFactory" + " with name \"" + elementName + "\"");" is 141.,191
+wso2_balana,org.wso2.balana,ConfigurationStore,parseFunctionFactory,Complex Method,Cyclomatic complexity of the method is 10,464
+wso2_balana,org.wso2.balana,ConfigurationStore,loadClass,Complex Method,Cyclomatic complexity of the method is 10,576
+wso2_balana,org.wso2.balana,TargetMatch,TargetMatch,Complex Conditional,The conditional expression (type != SUBJECT) && (type != RESOURCE) && (type != ACTION)&& (type != ENVIRONMENT) is complex.,111
+wso2_balana,org.wso2.balana,TargetMatch,TargetMatch,Long Statement,The length of the statement "if ((type != SUBJECT) && (type != RESOURCE) && (type != ACTION)&& (type != ENVIRONMENT)) throw new IllegalArgumentException("Unknown TargetMatch type");" is 152.,111
+wso2_balana,org.wso2.balana,TargetMatch,getInstance,Long Statement,The length of the statement "else if (!(XACMLConstants.XACML_VERSION_3_0 == metaData.getXACMLVersion()) && (NAMES[matchType] + "AttributeDesignator").equals(name)) {" is 136.,194
+wso2_balana,org.wso2.balana,TargetMatch,match,Complex Method,Cyclomatic complexity of the method is 9,313
+wso2_balana,org.wso2.balana,AbstractPolicy,AbstractPolicy,Long Parameter List,The method has 5 parameters. ,118
+wso2_balana,org.wso2.balana,AbstractPolicy,AbstractPolicy,Long Parameter List,The method has 6 parameters. ,133
+wso2_balana,org.wso2.balana,AbstractPolicy,AbstractPolicy,Long Parameter List,The method has 9 parameters. ,149
+wso2_balana,org.wso2.balana,AbstractPolicy,AbstractPolicy,Abstract Function Call From Constructor,The constructor AbstractPolicy calls a virtual method createAlgorithm.,207
+wso2_balana,org.wso2.balana,AbstractPolicy,AbstractPolicy,Complex Method,Cyclomatic complexity of the method is 14,207
+wso2_balana,org.wso2.balana,AbstractPolicy,AbstractPolicy,Long Statement,The length of the statement "if (!(combiningAlg instanceof RuleCombiningAlgorithm)) throw new ParsingException("Policy must use a Rule " + "Combining Algorithm");" is 133.,207
+wso2_balana,org.wso2.balana,AbstractPolicy,AbstractPolicy,Long Statement,The length of the statement "if (!(combiningAlg instanceof PolicyCombiningAlgorithm)) throw new ParsingException("PolicySet must use a Policy " + "Combining Algorithm");" is 140.,207
+wso2_balana,org.wso2.balana,AbstractPolicy,parseAdviceExpressions,Long Statement,The length of the statement "if (DOMHelper.getLocalName(node).equals("AdviceExpression")) adviceExpressions.add(AdviceExpression.getInstance(node`metaData));" is 128.,353
+wso2_balana,org.wso2.balana,AbstractPolicy,encodeCommonElements,Complex Method,Cyclomatic complexity of the method is 8,623
+wso2_balana,org.wso2.balana,PolicySet,PolicySet,Long Parameter List,The method has 6 parameters. ,91
+wso2_balana,org.wso2.balana,PolicySet,PolicySet,Long Parameter List,The method has 7 parameters. ,111
+wso2_balana,org.wso2.balana,PolicySet,PolicySet,Long Parameter List,The method has 8 parameters. ,132
+wso2_balana,org.wso2.balana,PolicySet,PolicySet,Long Parameter List,The method has 9 parameters. ,171
+wso2_balana,org.wso2.balana,PolicySet,PolicySet,Complex Method,Cyclomatic complexity of the method is 14,216
+wso2_balana,org.wso2.balana,PolicySet,encode,Long Statement,The length of the statement "builder.append("<PolicySet xmlns=\"").append(xacmlVersionId).append("\" PolicySetId=\"").append(getId().toString()).append("\" PolicyCombiningAlgId=\"").append(getCombiningAlg().getIdentifier().toString()).append("\">\n");" is 222.,385
+wso2_balana,org.wso2.balana,PolicySet,encode,Long Statement,The length of the statement "builder.append("<PolicySetDefaults><XPathVersion>").append(xPathVersion).append("</XPathVersion></PolicySetDefaults>\n");" is 121.,385
+wso2_balana,org.wso2.balana,PolicyReference,PolicyReference,Long Parameter List,The method has 5 parameters. ,125
+wso2_balana,org.wso2.balana,PolicyReference,PolicyReference,Long Statement,The length of the statement "if ((policyType != POLICY_REFERENCE) && (policyType != POLICYSET_REFERENCE)) throw new IllegalArgumentException("Input policyType is not a" + "valid value");" is 157.,125
+wso2_balana,org.wso2.balana,PolicyReference,resolvePolicy,Long Statement,The length of the statement "logger.warn("PolicyReference with id " + reference.toString() + " was queried but was "+ "not configured with a PolicyFinder");" is 127.,401
+wso2_balana,org.wso2.balana,PolicyReference,encode,Long Statement,The length of the statement "builder.append("<PolicyIdReference").append(encodeConstraints()).append(">").append(reference.toString()).append("</PolicyIdReference>");" is 137.,472
+wso2_balana,org.wso2.balana,PolicyReference,encode,Long Statement,The length of the statement "builder.append("<PolicySetIdReference").append(encodeConstraints()).append(">").append(reference.toString()).append("</PolicySetIdReference>");" is 143.,472
+wso2_balana,org.wso2.balana,Policy,Policy,Long Parameter List,The method has 6 parameters. ,96
+wso2_balana,org.wso2.balana,Policy,Policy,Long Parameter List,The method has 7 parameters. ,116
+wso2_balana,org.wso2.balana,Policy,Policy,Long Parameter List,The method has 8 parameters. ,137
+wso2_balana,org.wso2.balana,Policy,Policy,Long Parameter List,The method has 9 parameters. ,161
+wso2_balana,org.wso2.balana,Policy,Policy,Long Parameter List,The method has 10 parameters. ,205
+wso2_balana,org.wso2.balana,Policy,Policy,Complex Method,Cyclomatic complexity of the method is 11,257
+wso2_balana,org.wso2.balana,Policy,encode,Long Statement,The length of the statement "builder.append("<Policy xmlns=\"").append(xacmlVersionId).append("\" PolicyId=\"").append(getId().toString()).append("\" Version=\"").append(version).append("\" RuleCombiningAlgId=\"").append(getCombiningAlg().getIdentifier().toString()).append("\">\n");" is 254.,405
+wso2_balana,org.wso2.balana,Balana,Balana,Complex Method,Cyclomatic complexity of the method is 16,98
+wso2_balana,org.wso2.balana,Balana,Balana,Empty catch clause,The method has an empty catch block.,98
+wso2_balana,org.wso2.balana,Balana,Balana,Long Statement,The length of the statement "String configFile=(new File(".")).getCanonicalPath() + File.separator + "src"+ File.separator+ "main"+ File.separator+ "resources"+ File.separator+ "config.xml";" is 161.,98
+wso2_balana,org.wso2.balana,PDP,evaluate,Long Statement,The length of the statement "return new ResponseCtx(ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE`status`request.getXacmlVersion()));" is 133.,137
+wso2_balana,org.wso2.balana,PDP,evaluate,Long Statement,The length of the statement "return new ResponseCtx(ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE`multipleCtxResult.getStatus()`context));" is 138.,169
+wso2_balana,org.wso2.balana,PDP,evaluate,Long Statement,The length of the statement "Status status=new Status(code`"PDP does not supports multiple decision profile. " + "Multiple AttributesType elements with the same Category can be existed");" is 158.,169
+wso2_balana,org.wso2.balana,PDP,evaluate,Long Statement,The length of the statement "Status status=new Status(code`"PDP does not supports multiple decision profile. " + "Multiple decision is not existed to combine them");" is 136.,169
+wso2_balana,org.wso2.balana,PDP,evaluate,Long Statement,The length of the statement "response=new ResponseCtx(ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE`status`XACMLConstants.XACML_VERSION_3_0));" is 142.,301
+wso2_balana,org.wso2.balana,TestAttributeFinderModule,findAttribute,Long Parameter List,The method has 6 parameters. ,128
+wso2_balana,org.wso2.balana,TestAttributeFinderModule,findAttribute,Long Statement,The length of the statement "if (!attributeId.toString().equals(ROLE_IDENTIFIER)) return new EvaluationResult(BagAttribute.createEmptyBag(attributeType));" is 125.,128
+wso2_balana,org.wso2.balana,TestAttributeFinderModule,findAttribute,Long Statement,The length of the statement "if (!attributeType.toString().equals(StringAttribute.identifier)) return new EvaluationResult(BagAttribute.createEmptyBag(attributeType));" is 138.,128
+wso2_balana,org.wso2.balana,TestResourceFinderModule,findChildResources,Empty catch clause,The method has an empty catch block.,86
+wso2_balana,org.wso2.balana,TestResourceFinderModule,findDescendantResources,Empty catch clause,The method has an empty catch block.,116
+wso2_balana,org.wso2.balana,TestUtil,isMatching,Complex Conditional,The conditional expression decision == 4 || decision == 5 || decision == 6 is complex.,69
+wso2_balana,org.wso2.balana,TestUtil,isMatching,Complex Method,Cyclomatic complexity of the method is 37,69
+wso2_balana,org.wso2.balana,TestUtil,isMatching,Long Method,The method has 135 lines of code.,69
+wso2_balana,org.wso2.balana,TestUtil,isMatching,Magic Number,The method contains a magic number: 4,69
+wso2_balana,org.wso2.balana,TestUtil,isMatching,Magic Number,The method contains a magic number: 5,69
+wso2_balana,org.wso2.balana,TestUtil,isMatching,Magic Number,The method contains a magic number: 6,69
+wso2_balana,org.wso2.balana,TestUtil,isMatching,Magic Number,The method contains a magic number: 2,69
+wso2_balana,org.wso2.balana,TestUtil,createRequest,Long Statement,The length of the statement "String filePath=file.getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ rootDirectory+ File.separator+ versionDirectory+ File.separator+ TestConstants.REQUEST_DIRECTORY+ File.separator+ requestId;" is 228.,270
+wso2_balana,org.wso2.balana,TestUtil,createResponse,Long Statement,The length of the statement "String filePath=file.getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ rootDirectory+ File.separator+ versionDirectory+ File.separator+ TestConstants.RESPONSE_DIRECTORY+ File.separator+ responseId;" is 230.,316
+wso2_balana,org.wso2.balana.cond,BagFunction,BagFunction,Long Parameter List,The method has 7 parameters. ,190
+wso2_balana,org.wso2.balana.cond,ExpressionHandler,parseExpression,Complex Method,Cyclomatic complexity of the method is 11,34
+wso2_balana,org.wso2.balana.cond,DateMathFunction,getReturnType,Long Identifier,The length of the field NAME_DATE_ADD_YEARMONTHDURATION is 31.,189
+wso2_balana,org.wso2.balana.cond,DateMathFunction,getReturnType,Long Identifier,The length of the field NAME_DATE_SUBTRACT_YEARMONTHDURATION is 36.,189
+wso2_balana,org.wso2.balana.cond,DateMathFunction,getReturnType,Long Statement,The length of the statement "if (functionName.equals(NAME_DATE_ADD_YEARMONTHDURATION) || functionName.equals(NAME_DATE_SUBTRACT_YEARMONTHDURATION)) return DateAttribute.identifier;" is 151.,189
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 20,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Long Identifier,The length of the field ID_DATETIME_ADD_DAYTIMEDURATION is 31.,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Long Identifier,The length of the field ID_DATETIME_SUBTRACT_DAYTIMEDURATION is 36.,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Long Identifier,The length of the field ID_DATETIME_ADD_YEARMONTHDURATION is 33.,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Long Identifier,The length of the field ID_DATETIME_SUBTRACT_YEARMONTHDURATION is 38.,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Long Identifier,The length of the field ID_DATE_SUBTRACT_YEARMONTHDURATION is 34.,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Long Statement,The length of the statement "attrResult=new DateTimeAttribute(new Date(millis)`(int)nanoseconds`dateTime.getTimeZone()`dateTime.getDefaultedTimeZone());" is 123.,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Long Statement,The length of the statement "attrResult=new DateTimeAttribute(cal.getTime()`dateTime.getNanoseconds()`dateTime.getTimeZone()`dateTime.getDefaultedTimeZone());" is 129.,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Magic Number,The method contains a magic number: 1000000000,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Magic Number,The method contains a magic number: 1000000000,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Magic Number,The method contains a magic number: 1000,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Magic Number,The method contains a magic number: 1000000000,211
+wso2_balana,org.wso2.balana.cond,DateMathFunction,evaluate,Magic Number,The method contains a magic number: 1000,211
+wso2_balana,org.wso2.balana.cond,VariableManager,discoverApplyType,Empty catch clause,The method has an empty catch block.,163
+wso2_balana,org.wso2.balana.cond,Apply,Apply,Long Statement,The length of the statement "if (isCondition) throw new IllegalArgumentException("As of version 2.0 an Apply" + " may not represent a" + " Condition");" is 122.,96
+wso2_balana,org.wso2.balana.cond,Apply,getConditionInstance,Long Statement,The length of the statement "return getInstance(root`FunctionFactory.getConditionInstance()`new PolicyMetaData(XACMLConstants.XACML_1_0_IDENTIFIER`xpathVersion)`manager);" is 141.,125
+wso2_balana,org.wso2.balana.cond,Apply,getConditionInstance,Long Statement,The length of the statement "return getInstance(root`FunctionFactory.getConditionInstance()`new PolicyMetaData(XACMLConstants.XACML_1_0_IDENTIFIER`xpathVersion)`null);" is 138.,152
+wso2_balana,org.wso2.balana.cond,Apply,getInstance,Long Statement,The length of the statement "return getInstance(root`FunctionFactory.getGeneralInstance()`new PolicyMetaData(XACMLConstants.XACML_1_0_IDENTIFIER`xpathVersion)`null);" is 136.,191
+wso2_balana,org.wso2.balana.cond,StringNormalizeFunction,getId,Long Identifier,The length of the field NAME_STRING_NORMALIZE_TO_LOWER_CASE is 35.,86
+wso2_balana,org.wso2.balana.cond,StringNormalizeFunction,getId,Long Identifier,The length of the field ID_STRING_NORMALIZE_TO_LOWER_CASE is 33.,86
+wso2_balana,org.wso2.balana.cond,StringNormalizeFunction,getSupportedIdentifiers,Long Identifier,The length of the field NAME_STRING_NORMALIZE_TO_LOWER_CASE is 35.,98
+wso2_balana,org.wso2.balana.cond,StringNormalizeFunction,evaluate,Long Identifier,The length of the field ID_STRING_NORMALIZE_TO_LOWER_CASE is 33.,112
+wso2_balana,org.wso2.balana.cond,ConditionSetFunction,evaluate,Long Identifier,The length of the field ID_BASE_AT_LEAST_ONE_MEMBER_OF is 30.,172
+wso2_balana,org.wso2.balana.cond,ConditionSetFunction,evaluate,Magic Number,The method contains a magic number: 2,172
+wso2_balana,org.wso2.balana.cond,GeneralSetFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 8,153
+wso2_balana,org.wso2.balana.cond,GeneralSetFunction,evaluate,Magic Number,The method contains a magic number: 2,153
+wso2_balana,org.wso2.balana.cond,IPInRangeFunction,IPInRangeFunction,Magic Number,The method contains a magic number: 3,41
+wso2_balana,org.wso2.balana.cond,IPInRangeFunction,evaluate,Magic Number,The method contains a magic number: 2,48
+wso2_balana,org.wso2.balana.cond,IPInRangeFunction,ipToLong,Magic Number,The method contains a magic number: 8,84
+wso2_balana,org.wso2.balana.cond,IPInRangeFunction,ipToLong,Magic Number,The method contains a magic number: 0xff,84
+wso2_balana,org.wso2.balana.cond,URLStringCatFunction,checkInputs,Long Statement,The length of the statement "if (((Expression)(it.next())).returnsBag()) throw new IllegalArgumentException(NAME_URI_STRING_CONCATENATE + " doesn't accept bags");" is 133.,74
+wso2_balana,org.wso2.balana.cond,URLStringCatFunction,checkInputsNoBag,Long Statement,The length of the statement "if (!((Expression)(it.next())).getType().toString().equals(AnyURIAttribute.identifier)) throw new IllegalArgumentException("illegal parameter");" is 144.,94
+wso2_balana,org.wso2.balana.cond,URLStringCatFunction,checkInputsNoBag,Long Statement,The length of the statement "if (!((Expression)(it.next())).getType().toString().equals(StringAttribute.identifier)) throw new IllegalArgumentException("illegal parameter");" is 144.,94
+wso2_balana,org.wso2.balana.cond,URLStringCatFunction,checkInputsNoBag,Magic Number,The method contains a magic number: 2,94
+wso2_balana,org.wso2.balana.cond,Condition,checkExpression,Long Statement,The length of the statement "if (!xpr.getType().equals(booleanIdentifier)) throw new IllegalArgumentException("A Condition must return a " + "boolean...cannot create " + "with "+ xpr.getType());" is 165.,141
+wso2_balana,org.wso2.balana.cond,FunctionFactory,registerFactory,Long Statement,The length of the statement "if (registeredFactories.containsKey(identifier)) throw new IllegalArgumentException("Identifier is already " + "registered as " + "FunctionFactory: "+ identifier);" is 163.,238
+wso2_balana,org.wso2.balana.cond,AddFunction,AddFunction,Magic Number,The method contains a magic number: 2,73
+wso2_balana,org.wso2.balana.cond,LogicalFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 8,114
+wso2_balana,org.wso2.balana.cond,SetFunction,getAtLeastOneInstance,Long Identifier,The length of the field NAME_BASE_AT_LEAST_ONE_MEMBER_OF is 32.,150
+wso2_balana,org.wso2.balana.cond,SetFunction,SetFunction,Long Parameter List,The method has 5 parameters. ,208
+wso2_balana,org.wso2.balana.cond,SetFunction,SetFunction,Magic Number,The method contains a magic number: 2,208
+wso2_balana,org.wso2.balana.cond,ModFunction,ModFunction,Magic Number,The method contains a magic number: 2,62
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,ComparisonFunction,Magic Number,The method contains a magic number: 2,289
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 26,332
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,evaluate,Long Identifier,The length of the field ID_INTEGER_GREATER_THAN_OR_EQUAL is 32.,332
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,evaluate,Long Identifier,The length of the field ID_DOUBLE_GREATER_THAN_OR_EQUAL is 31.,332
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,evaluate,Long Identifier,The length of the field ID_STRING_GREATER_THAN_OR_EQUAL is 31.,332
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,evaluate,Long Identifier,The length of the field ID_DATETIME_GREATER_THAN_OR_EQUAL is 33.,332
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,evaluate,Long Identifier,The length of the field ID_DATETIME_LESS_THAN_OR_EQUAL is 30.,332
+wso2_balana,org.wso2.balana.cond,ComparisonFunction,evaluate,Long Method,The method has 177 lines of code.,332
+wso2_balana,org.wso2.balana.cond,BaseFunctionFactory,createAbstractFunction,Long Statement,The length of the statement "throw new UnknownIdentifierException("abstract functions of " + "type " + identity + " are not supported by "+ "this factory");" is 127.,295
+wso2_balana,org.wso2.balana.cond,MultiplyFunction,MultiplyFunction,Magic Number,The method contains a magic number: 2,73
+wso2_balana,org.wso2.balana.cond,GeneralBagFunction,GeneralBagFunction,Long Statement,The length of the statement "super(functionName`getId(functionName)`getArgumentType(functionName)`getIsBag(functionName)`getNumArgs(functionName)`getReturnType(functionName)`getReturnsBag(functionName));" is 174.,113
+wso2_balana,org.wso2.balana.cond,GeneralBagFunction,GeneralBagFunction,Long Statement,The length of the statement "super(functionName`getId(functionType)`datatype`getIsBag(functionType)`getNumArgs(functionType)`getCustomReturnType(functionType`datatype)`getReturnsBag(functionType));" is 168.,129
+wso2_balana,org.wso2.balana.cond,GeneralBagFunction,evaluate,Long Statement,The length of the statement "if (bag.size() != 1) return makeProcessingError(getFunctionName() + " expects " + "a bag that contains a single "+ "element` got a bag with "+ bag.size()+ " elements");" is 168.,224
+wso2_balana,org.wso2.balana.cond,MapFunction,checkInputs,Magic Number,The method contains a magic number: 2,269
+wso2_balana,org.wso2.balana.cond,DivideFunction,DivideFunction,Magic Number,The method contains a magic number: 2,73
+wso2_balana,org.wso2.balana.cond,FunctionBase,FunctionBase,Long Parameter List,The method has 7 parameters. ,107
+wso2_balana,org.wso2.balana.cond,FunctionBase,FunctionBase,Long Parameter List,The method has 8 parameters. ,134
+wso2_balana,org.wso2.balana.cond,FunctionBase,FunctionBase,Long Parameter List,The method has 6 parameters. ,164
+wso2_balana,org.wso2.balana.cond,FunctionBase,checkInputs,Complex Method,Cyclomatic complexity of the method is 10,336
+wso2_balana,org.wso2.balana.cond,FunctionBase,checkInputs,Long Statement,The length of the statement "if ((!eval.getType().toString().equals(paramType)) || (eval.returnsBag() != paramIsBag)) throw new IllegalArgumentException("illegal parameter");" is 145.,336
+wso2_balana,org.wso2.balana.cond,FunctionBase,checkInputs,Long Statement,The length of the statement "if (paramTypes.length != inputs.size()) throw new IllegalArgumentException("wrong number of args" + " to " + functionName);" is 123.,336
+wso2_balana,org.wso2.balana.cond,FunctionBase,checkInputs,Long Statement,The length of the statement "if ((!eval.getType().toString().equals(paramTypes[i])) || (eval.returnsBag() != paramsAreBags[i])) throw new IllegalArgumentException("illegal parameter");" is 155.,336
+wso2_balana,org.wso2.balana.cond,FunctionBase,checkInputsNoBag,Complex Method,Cyclomatic complexity of the method is 11,387
+wso2_balana,org.wso2.balana.cond,FunctionBase,checkInputsNoBag,Long Statement,The length of the statement "if (paramTypes.length != inputs.size()) throw new IllegalArgumentException("wrong number of args" + " to " + functionName);" is 123.,387
+wso2_balana,org.wso2.balana.cond,FunctionBase,checkInputsNoBag,Long Statement,The length of the statement "if ((!eval.getType().toString().equals(paramTypes[i])) || (paramsAreBags[i])) throw new IllegalArgumentException("illegal parameter");" is 134.,387
+wso2_balana,org.wso2.balana.cond,SubtractFunction,SubtractFunction,Magic Number,The method contains a magic number: 2,73
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 16,221
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,evaluate,Magic Number,The method contains a magic number: 2,221
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,checkInputs,Complex Method,Cyclomatic complexity of the method is 9,369
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,checkInputs,Long Statement,The length of the statement "if (!function.getReturnType().toString().equals(BooleanAttribute.identifier)) throw new IllegalArgumentException("higher-order function must " + "use a boolean function");" is 171.,369
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,checkInputs,Magic Number,The method contains a magic number: 3,369
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,checkInputs,Magic Number,The method contains a magic number: 2,369
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,any,Long Parameter List,The method has 5 parameters. ,437
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,anyAndAllHelper,Long Parameter List,The method has 6 parameters. ,454
+wso2_balana,org.wso2.balana.cond,HigherOrderFunction,allAnyHelper,Long Parameter List,The method has 5 parameters. ,505
+wso2_balana,org.wso2.balana.cond,StandardFunctionFactory,getConditionFactory,Long Statement,The length of the statement "if (conditionFactory == null) conditionFactory=new StandardFunctionFactory(conditionFunctions`conditionAbstractFunctions);" is 122.,276
+wso2_balana,org.wso2.balana.cond,MatchFunction,getId,Complex Method,Cyclomatic complexity of the method is 10,162
+wso2_balana,org.wso2.balana.cond,MatchFunction,getArgumentTypes,Complex Method,Cyclomatic complexity of the method is 10,188
+wso2_balana,org.wso2.balana.cond,MatchFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 14,237
+wso2_balana,org.wso2.balana.cond,MatchFunction,regexpHelper,Magic Number,The method contains a magic number: 5,363
+wso2_balana,org.wso2.balana.cond,MatchFunction,regexpHelper,Magic Number,The method contains a magic number: 5,363
+wso2_balana,org.wso2.balana.cond,MatchFunction,regexpHelper,Magic Number,The method contains a magic number: 2,363
+wso2_balana,org.wso2.balana.cond,NOfFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 9,97
+wso2_balana,org.wso2.balana.cond,NOfFunction,checkInputs,Long Statement,The length of the statement "for (int i=0; i < list.length; i++) if (((Evaluatable)(list[i])).returnsBag()) throw new IllegalArgumentException("n-of can't use bags");" is 137.,161
+wso2_balana,org.wso2.balana.cond,NOfFunction,checkInputsNoBag,Long Statement,The length of the statement "if (!eval.getType().toString().equals(IntegerAttribute.identifier)) throw new IllegalArgumentException("first argument to n-of must" + " be an integer");" is 153.,176
+wso2_balana,org.wso2.balana.cond,NOfFunction,checkInputsNoBag,Long Statement,The length of the statement "if (!((Evaluatable)(list[i])).getType().toString().equals(BooleanAttribute.identifier)) throw new IllegalArgumentException("invalid parameter in n-of" + ": expected boolean");" is 175.,176
+wso2_balana,org.wso2.balana.cond,EqualFunction,EqualFunction,Magic Number,The method contains a magic number: 2,225
+wso2_balana,org.wso2.balana.cond,StringFunction,StringFunction,Magic Number,The method contains a magic number: 2,63
+wso2_balana,org.wso2.balana.cond,TimeInRangeFunction,TimeInRangeFunction,Magic Number,The method contains a magic number: 3,75
+wso2_balana,org.wso2.balana.cond,TimeInRangeFunction,evaluate,Magic Number,The method contains a magic number: 2,82
+wso2_balana,org.wso2.balana.cond.xacml3,XPathFunction,XPathFunction,Long Statement,The length of the statement "super(functionName`getId(functionName)`XPathAttribute.identifier`false`getNumArgs(functionName)`getReturnType(functionName)`false);" is 131.,81
+wso2_balana,org.wso2.balana.cond.xacml3,XPathFunction,getNumArgs,Magic Number,The method contains a magic number: 2,130
+wso2_balana,org.wso2.balana.cond.xacml3,XPathFunction,getXPathResults,Complex Conditional,The conditional expression XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace) is complex.,216
+wso2_balana,org.wso2.balana.cond.xacml3,XPathFunction,getXPathResults,Long Statement,The length of the statement "if (XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace)) {" is 204.,216
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,checkInputs,Complex Method,Cyclomatic complexity of the method is 11,116
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,checkInputs,Long Statement,The length of the statement "if (!function.getReturnType().toString().equals(BooleanAttribute.identifier)) throw new IllegalArgumentException("higher-order function must " + "use a boolean function");" is 171.,116
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,checkInputs,Long Statement,The length of the statement "throw new IllegalArgumentException("The arguments can be are either primitive data types or " + "bags of primitive types. " + getIdentifier());" is 143.,116
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,checkInputs,Magic Number,The method contains a magic number: 2,116
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,evaluate,Complex Method,Cyclomatic complexity of the method is 8,202
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,anyAndAllHelper,Long Parameter List,The method has 5 parameters. ,245
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,anyOfAny,Complex Conditional,The conditional expression result != null && (result.indeterminate() || ((BooleanAttribute)(result.getAttributeValue())).getValue()) is complex.,261
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,anyOfAny,Complex Method,Cyclomatic complexity of the method is 10,261
+wso2_balana,org.wso2.balana.cond.xacml3,XACML3HigherOrderFunction,getEvaluationResult,Long Parameter List,The method has 5 parameters. ,305
+wso2_balana,org.wso2.balana.cond.xacml3,SubStringFunction,SubStringFunction,Magic Number,The method contains a magic number: 3,58
+wso2_balana,org.wso2.balana.cond.xacml3,SubStringFunction,evaluate,Long Statement,The length of the statement "String processedString=argValues[0].encode().substring(Integer.parseInt(argValues[1].encode())`Integer.parseInt(argValues[2].encode()));" is 136.,117
+wso2_balana,org.wso2.balana.cond.xacml3,SubStringFunction,evaluate,Magic Number,The method contains a magic number: 2,117
+wso2_balana,org.wso2.balana.cond.xacml3,StringComparingFunction,StringComparingFunction,Magic Number,The method contains a magic number: 2,82
+wso2_balana,org.wso2.balana.cond.xacml3,StringComparingFunction,getArgumentType,Complex Conditional,The conditional expression functionName.equals(NAME_STRING_START_WITH) || functionName.equals(NAME_STRING_ENDS_WITH) || functionName.equals(NAME_STRING_CONTAIN) is complex.,119
+wso2_balana,org.wso2.balana.cond.xacml3,StringComparingFunction,getArgumentType,Long Statement,The length of the statement "if (functionName.equals(NAME_STRING_START_WITH) || functionName.equals(NAME_STRING_ENDS_WITH) || functionName.equals(NAME_STRING_CONTAIN)) {" is 140.,119
+wso2_balana,org.wso2.balana.ctx,ResponseCtx,getInstance,Long Statement,The length of the statement "else if (XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(requestCtxNs.trim()) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(requestCtxNs.trim())) {" is 162.,91
+wso2_balana,org.wso2.balana.ctx,Attribute,Attribute,Long Parameter List,The method has 6 parameters. ,97
+wso2_balana,org.wso2.balana.ctx,Attribute,Attribute,Long Parameter List,The method has 5 parameters. ,113
+wso2_balana,org.wso2.balana.ctx,Attribute,Attribute,Long Parameter List,The method has 7 parameters. ,128
+wso2_balana,org.wso2.balana.ctx,Attribute,getInstance,Complex Method,Cyclomatic complexity of the method is 12,151
+wso2_balana,org.wso2.balana.ctx,Attribute,getInstance,Long Statement,The length of the statement "throw new ParsingException("Attribute object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 126.,151
+wso2_balana,org.wso2.balana.ctx,AbstractResult,AbstractResult,Complex Conditional,The conditional expression (decision != DECISION_PERMIT) && (decision != DECISION_DENY) && (decision != DECISION_INDETERMINATE)&& (decision != DECISION_NOT_APPLICABLE)&& (decision != DECISION_INDETERMINATE_DENY)&& (decision != DECISION_INDETERMINATE_PERMIT)&& (decision != DECISION_INDETERMINATE_DENY_OR_PERMIT) is complex.,103
+wso2_balana,org.wso2.balana.ctx,AbstractResult,AbstractResult,Long Identifier,The length of the field DECISION_INDETERMINATE_DENY_OR_PERMIT is 37.,103
+wso2_balana,org.wso2.balana.ctx,AbstractResult,AbstractResult,Long Statement,The length of the statement "if ((decision != DECISION_PERMIT) && (decision != DECISION_DENY) && (decision != DECISION_INDETERMINATE)&& (decision != DECISION_NOT_APPLICABLE)&& (decision != DECISION_INDETERMINATE_DENY)&& (decision != DECISION_INDETERMINATE_PERMIT)&& (decision != DECISION_INDETERMINATE_DENY_OR_PERMIT)) {" is 291.,103
+wso2_balana,org.wso2.balana.ctx,AbstractResult,AbstractResult,Complex Conditional,The conditional expression (decision != DECISION_PERMIT) && (decision != DECISION_DENY) && (decision != DECISION_INDETERMINATE)&& (decision != DECISION_NOT_APPLICABLE)&& (decision != DECISION_INDETERMINATE_DENY)&& (decision != DECISION_INDETERMINATE_PERMIT)&& (decision != DECISION_INDETERMINATE_DENY_OR_PERMIT) is complex.,133
+wso2_balana,org.wso2.balana.ctx,AbstractResult,AbstractResult,Long Identifier,The length of the field DECISION_INDETERMINATE_DENY_OR_PERMIT is 37.,133
+wso2_balana,org.wso2.balana.ctx,AbstractResult,AbstractResult,Long Parameter List,The method has 5 parameters. ,133
+wso2_balana,org.wso2.balana.ctx,AbstractResult,AbstractResult,Long Statement,The length of the statement "if ((decision != DECISION_PERMIT) && (decision != DECISION_DENY) && (decision != DECISION_INDETERMINATE)&& (decision != DECISION_NOT_APPLICABLE)&& (decision != DECISION_INDETERMINATE_DENY)&& (decision != DECISION_INDETERMINATE_PERMIT)&& (decision != DECISION_INDETERMINATE_DENY_OR_PERMIT)) {" is 291.,133
+wso2_balana,org.wso2.balana.ctx,StatusDetail,StatusDetail,Empty catch clause,The method has an empty catch block.,127
+wso2_balana,org.wso2.balana.ctx,MissingAttributeDetail,MissingAttributeDetail,Long Parameter List,The method has 6 parameters. ,67
+wso2_balana,org.wso2.balana.ctx,MissingAttributeDetail,MissingAttributeDetail,Long Parameter List,The method has 5 parameters. ,87
+wso2_balana,org.wso2.balana.ctx,MissingAttributeDetail,getInstance,Long Statement,The length of the statement "throw new ParsingException("MissingAttributeDetailType object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 143.,114
+wso2_balana,org.wso2.balana.ctx,MissingAttributeDetail,getEncoded,Complex Method,Cyclomatic complexity of the method is 8,203
+wso2_balana,org.wso2.balana.ctx,InputParser,parseInput,Long Statement,The length of the statement "if (nodes.getLength() != 1) throw new ParsingException("Only one " + rootTag + "Type allowed "+ "at the root of a Context doc");" is 128.,104
+wso2_balana,org.wso2.balana.ctx,InputParser,fatalError,Long Statement,The length of the statement "if (logger.isErrorEnabled()) logger.error("FatalError on line " + exception.getLineNumber() + ": "+ exception.getMessage());" is 124.,181
+wso2_balana,org.wso2.balana.ctx,ResultFactory,getResult,Long Parameter List,The method has 5 parameters. ,109
+wso2_balana,org.wso2.balana.ctx,RequestCtxFactory,getRequestCtx,Long Statement,The length of the statement "else if (XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(requestCtxNs.trim()) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(requestCtxNs.trim())) {" is 162.,53
+wso2_balana,org.wso2.balana.ctx,RequestCtxFactory,getRequestCtx,Long Statement,The length of the statement "else if (XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(requestCtxNs.trim()) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(requestCtxNs.trim())) {" is 162.,79
+wso2_balana,org.wso2.balana.ctx,RequestCtxFactory,getRequestCtx,Long Statement,The length of the statement "else if (XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(requestCtxNs.trim()) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(requestCtxNs.trim())) {" is 162.,107
+wso2_balana,org.wso2.balana.ctx,AttributeAssignment,AttributeAssignment,Long Parameter List,The method has 5 parameters. ,61
+wso2_balana,org.wso2.balana.ctx,AttributeAssignment,getInstance,Long Statement,The length of the statement "throw new ParsingException("AttributeAssignment object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 136.,79
+wso2_balana,org.wso2.balana.ctx,EvaluationCtx,getAttribute,Long Parameter List,The method has 5 parameters. ,118
+wso2_balana,org.wso2.balana.ctx,Status,Status,Complex Conditional,The conditional expression c.equals(STATUS_OK) || c.equals(STATUS_SYNTAX_ERROR) || c.equals(STATUS_PROCESSING_ERROR) is complex.,124
+wso2_balana,org.wso2.balana.ctx,Status,Status,Long Statement,The length of the statement "if (c.equals(STATUS_OK) || c.equals(STATUS_SYNTAX_ERROR) || c.equals(STATUS_PROCESSING_ERROR)) throw new IllegalArgumentException("status detail cannot be " + "included with " + c);" is 181.,124
+wso2_balana,org.wso2.balana.ctx,BasicEvaluationCtx,getAttribute,Long Parameter List,The method has 5 parameters. ,155
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getAttribute,Complex Conditional,The conditional expression attribute.getId().toString().equals(id.toString()) && attribute.getType().toString().equals(type.toString()) && (issuer == null || issuer.equals(attribute.getIssuer()))&& attribute.getValue() != null is complex.,124
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getAttribute,Long Statement,The length of the statement "if (attribute.getId().toString().equals(id.toString()) && attribute.getType().toString().equals(type.toString()) && (issuer == null || issuer.equals(attribute.getIssuer()))&& attribute.getValue() != null) {" is 206.,124
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getAttribute,Complex Method,Cyclomatic complexity of the method is 11,151
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getAttribute,Long Parameter List,The method has 5 parameters. ,151
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,setupAttributes,Complex Method,Cyclomatic complexity of the method is 13,205
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getMultipleEvaluationCtx,Complex Method,Cyclomatic complexity of the method is 20,263
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processMultiRequestElement,Complex Method,Cyclomatic complexity of the method is 9,353
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processMultipleAttributes,Long Statement,The length of the statement "Set<Set<Attributes>> tempRequestAttributes=new HashSet<Set<Attributes>>(Arrays.asList(evaluationCtx.getAttributesSet()));" is 121.,402
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processHierarchicalAttributes,Complex Method,Cyclomatic complexity of the method is 9,441
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processHierarchicalAttributes,Empty catch clause,The method has an empty catch block.,441
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processHierarchicalAttributes,Long Statement,The length of the statement "Attribute attribute=new Attribute(new URI(XACMLConstants.RESOURCE_ID)`resourceId.getIssuer()`null`resource`resourceId.isIncludeInResult()`XACMLConstants.XACML_VERSION_3_0);" is 172.,441
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processHierarchicalAttributes,Long Statement,The length of the statement "Attributes newAttributes=new Attributes(new URI(XACMLConstants.RESOURCE_CATEGORY)`(Node)attributes.getContent()`attributeSet`attributes.getId());" is 145.,441
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processMultipleContentSelectors,Complex Method,Cyclomatic complexity of the method is 13,507
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processMultipleContentSelectors,Long Statement,The length of the statement "AttributeValue newValue=Balana.getInstance().getAttributeFactory().createValue(value.getType()`xPath`new String[]{xPathAttribute.getXPathCategory()});" is 150.,507
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,processMultipleContentSelectors,Long Statement,The length of the statement "Attribute newAttribute=new Attribute(new URI(XACMLConstants.CONTENT_SELECTOR)`attribute.getIssuer()`attribute.getIssueInstant()`newValue`attribute.isIncludeInResult()`XACMLConstants.XACML_VERSION_3_0);" is 201.,507
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,setResourceId,Long Statement,The length of the statement "attributeSet.add(new Attribute(resourceIdAttribute.getId()`resourceIdAttribute.getIssuer()`resourceIdAttribute.getIssueInstant()`resourceId`resourceIdAttribute.isIncludeInResult()`XACMLConstants.XACML_VERSION_3_0));" is 215.,581
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getChildXPaths,Complex Conditional,The conditional expression XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace) is complex.,617
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getChildXPaths,Complex Conditional,The conditional expression (nodeType == Node.CDATA_SECTION_NODE) || (nodeType == Node.COMMENT_NODE) || (nodeType == Node.TEXT_NODE)|| (nodeType == Node.ATTRIBUTE_NODE) is complex.,617
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getChildXPaths,Complex Method,Cyclomatic complexity of the method is 9,617
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getChildXPaths,Empty catch clause,The method has an empty catch block.,617
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getChildXPaths,Long Statement,The length of the statement "if (XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace)) {" is 204.,617
+wso2_balana,org.wso2.balana.ctx.xacml3,XACML3EvaluationCtx,getChildXPaths,Long Statement,The length of the statement "if ((nodeType == Node.CDATA_SECTION_NODE) || (nodeType == Node.COMMENT_NODE) || (nodeType == Node.TEXT_NODE)|| (nodeType == Node.ATTRIBUTE_NODE)) {" is 147.,617
+wso2_balana,org.wso2.balana.ctx.xacml3,RequestCtx,RequestCtx,Long Parameter List,The method has 6 parameters. ,93
+wso2_balana,org.wso2.balana.ctx.xacml3,RequestCtx,getInstance,Complex Method,Cyclomatic complexity of the method is 11,118
+wso2_balana,org.wso2.balana.ctx.xacml3,RequestCtx,encode,Long Statement,The length of the statement "out.println(indent + "<Request xmlns=\"" + XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER+ "\" ReturnPolicyIdList=\""+ returnPolicyIdList+ "\" CombinedDecision=\""+ combinedDecision+ "\" >");" is 190.,235
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,Result,Long Parameter List,The method has 5 parameters. ,55
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,Result,Long Parameter List,The method has 6 parameters. ,74
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,getInstance,Complex Method,Cyclomatic complexity of the method is 16,91
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,processAttributes,Long Statement,The length of the statement "Attributes newAttributes=new Attributes(attributes.getCategory()`attributes.getContent()`newAttributeSet`attributes.getId());" is 125.,242
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,encode,Complex Conditional,The conditional expression decision == 4 || decision == 5 || decision == 6 is complex.,277
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,encode,Complex Method,Cyclomatic complexity of the method is 11,277
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,encode,Magic Number,The method contains a magic number: 4,277
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,encode,Magic Number,The method contains a magic number: 5,277
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,encode,Magic Number,The method contains a magic number: 6,277
+wso2_balana,org.wso2.balana.ctx.xacml3,Result,encode,Magic Number,The method contains a magic number: 2,277
+wso2_balana,org.wso2.balana.ctx.xacml2,RequestCtx,RequestCtx,Long Parameter List,The method has 7 parameters. ,144
+wso2_balana,org.wso2.balana.ctx.xacml2,RequestCtx,getInstance,Complex Method,Cyclomatic complexity of the method is 13,168
+wso2_balana,org.wso2.balana.ctx.xacml2,RequestCtx,parseAttributes,Long Statement,The length of the statement "if (DOMHelper.getLocalName(node).equals("Attribute")) set.add(Attribute.getInstance(node`XACMLConstants.XACML_VERSION_2_0));" is 124.,275
+wso2_balana,org.wso2.balana.ctx.xacml2,RequestCtx,encode,Long Statement,The length of the statement "if (resourceContent != null) out.println(indenter.makeString() + "<ResourceContent>" + resourceContent+ "</ResourceContent>");" is 126.,346
+wso2_balana,org.wso2.balana.ctx.xacml2,Result,getInstance,Complex Method,Cyclomatic complexity of the method is 11,85
+wso2_balana,org.wso2.balana.ctx.xacml2,XACML2EvaluationCtx,setupResource,Complex Method,Cyclomatic complexity of the method is 9,160
+wso2_balana,org.wso2.balana.ctx.xacml2,XACML2EvaluationCtx,setResourceId,Long Statement,The length of the statement "attrSet.add(new Attribute(attr.getId()`attr.getIssuer()`attr.getIssueInstant()`resourceId`XACMLConstants.XACML_VERSION_2_0));" is 125.,263
+wso2_balana,org.wso2.balana.ctx.xacml2,XACML2EvaluationCtx,getGenericAttributes,Complex Conditional,The conditional expression (attr.getType().equals(type)) && ((issuer == null) || ((attr.getIssuer() != null) && (attr.getIssuer().equals(issuer)))) is complex.,370
+wso2_balana,org.wso2.balana.ctx.xacml2,XACML2EvaluationCtx,getGenericAttributes,Long Parameter List,The method has 5 parameters. ,370
+wso2_balana,org.wso2.balana.ctx.xacml2,XACML2EvaluationCtx,getGenericAttributes,Long Statement,The length of the statement "if ((attr.getType().equals(type)) && ((issuer == null) || ((attr.getIssuer() != null) && (attr.getIssuer().equals(issuer))))) {" is 127.,370
+wso2_balana,org.wso2.balana.ctx.xacml2,XACML2EvaluationCtx,getGenericAttributes,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("Attribute not in request: " + id.toString() + " ... querying AttributeFinder");" is 122.,370
+wso2_balana,org.wso2.balana.attr,RFC822NameAttribute,RFC822NameAttribute,Magic Number,The method contains a magic number: 2,87
+wso2_balana,org.wso2.balana.attr,BagAttribute,BagAttribute,Long Statement,The length of the statement "if (!type.toString().equals(attr.getType().toString())) throw new IllegalArgumentException("Bag items must all be of " + "the same type");" is 138.,60
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,AttributeDesignator,Long Parameter List,The method has 5 parameters. ,130
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,AttributeDesignator,Complex Conditional,The conditional expression (target != SUBJECT_TARGET) && (target != RESOURCE_TARGET) && (target != ACTION_TARGET)&& (target != ENVIRONMENT_TARGET) is complex.,146
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,AttributeDesignator,Long Parameter List,The method has 6 parameters. ,146
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,AttributeDesignator,Long Statement,The length of the statement "if ((target != SUBJECT_TARGET) && (target != RESOURCE_TARGET) && (target != ACTION_TARGET)&& (target != ENVIRONMENT_TARGET)) throw new IllegalArgumentException("Input target is not a valid" + "value");" is 201.,146
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,getInstance,Complex Method,Cyclomatic complexity of the method is 13,171
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,getInstance,Long Statement,The length of the statement "throw new ParsingException("AttributeDesignator cannot be constructed using " + "type: " + DOMHelper.getLocalName(root));" is 121.,171
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,evaluate,Complex Method,Cyclomatic complexity of the method is 10,341
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,evaluate,Long Statement,The length of the statement "MissingAttributeDetail missingAttribute=new MissingAttributeDetail(id`type`category`issuer`null`XACMLConstants.XACML_VERSION_3_0);" is 130.,341
+wso2_balana,org.wso2.balana.attr,AttributeDesignator,evaluate,Long Statement,The length of the statement "MissingAttributeDetail missingAttribute=new MissingAttributeDetail(id`type`category`issuer`null`XACMLConstants.XACML_VERSION_3_0);" is 130.,341
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Complex Method,Cyclomatic complexity of the method is 10,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Long Statement,The length of the statement "boolean hasTimeZone=((value.charAt(len - 3) == ':') && ((value.charAt(len - 6) == '-') || (value.charAt(len - 6) == '+')));" is 123.,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 3,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 6,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 6,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 6,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 9,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 9,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 9,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 9,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 6,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 3,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 2,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 60000,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,getInstance,Magic Number,The method contains a magic number: 60000,251
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,hashCode,Magic Number,The method contains a magic number: 31,461
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,encode,Magic Number,The method contains a magic number: 9,494
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 35,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 4,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 2,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 2,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 2,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 2,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 2,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 9,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 60,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 2,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 60,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,formatDateTimeWithTZ,Magic Number,The method contains a magic number: 2,527
+wso2_balana,org.wso2.balana.attr,DateTimeAttribute,combineNanos,Complex Conditional,The conditional expression (milliCarry == 0) && (nanoseconds > 0) && (nanoseconds < DateAttribute.NANOS_PER_SECOND) is complex.,610
+wso2_balana,org.wso2.balana.attr,TimeAttribute,TimeAttribute,Long Statement,The length of the statement "if ((timeZone == TZ_UNSPECIFIED) && (defaultedTimeZone == TZ_UNSPECIFIED)) throw new ProcessingException("default timezone must be specified" + "when a timezone is provided");" is 175.,160
+wso2_balana,org.wso2.balana.attr,TimeAttribute,hashCode,Magic Number,The method contains a magic number: 32,342
+wso2_balana,org.wso2.balana.attr,TimeAttribute,hashCode,Magic Number,The method contains a magic number: 31,342
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 1000,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 60,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 60,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 60,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 60,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 10,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 10,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,toString,Magic Number,The method contains a magic number: 10,360
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Complex Method,Cyclomatic complexity of the method is 8,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 27,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 2,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 2,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 2,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 9,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 60,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 2,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 60,390
+wso2_balana,org.wso2.balana.attr,TimeAttribute,encode,Magic Number,The method contains a magic number: 2,390
+wso2_balana,org.wso2.balana.attr,YearMonthDurationAttribute,YearMonthDurationAttribute,Long Statement,The length of the statement "if (bigTotal.compareTo(bigMaxLong) == 1) throw new IllegalArgumentException("total number of " + "months " + "exceeds Long.MAX_VALUE");" is 135.,152
+wso2_balana,org.wso2.balana.attr,YearMonthDurationAttribute,YearMonthDurationAttribute,Magic Number,The method contains a magic number: 12,152
+wso2_balana,org.wso2.balana.attr,YearMonthDurationAttribute,hashCode,Magic Number,The method contains a magic number: 32,336
+wso2_balana,org.wso2.balana.attr,YearMonthDurationAttribute,encode,Magic Number,The method contains a magic number: 10,362
+wso2_balana,org.wso2.balana.attr,IPv6AddressAttribute,getV6Instance,Long Statement,The length of the statement "if ((endIndex != (len - 1)) && (value.charAt(endIndex + 1) == ':')) range=PortRange.getInstance(value.substring(endIndex + 2`len));" is 131.,90
+wso2_balana,org.wso2.balana.attr,IPv6AddressAttribute,getV6Instance,Magic Number,The method contains a magic number: 3,90
+wso2_balana,org.wso2.balana.attr,IPv6AddressAttribute,getV6Instance,Magic Number,The method contains a magic number: 2,90
+wso2_balana,org.wso2.balana.attr,StringAttribute,getInstance,Complex Conditional,The conditional expression (type == Node.TEXT_NODE) || (type == Node.CDATA_SECTION_NODE) || (type == Node.COMMENT_NODE) is complex.,116
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,hashCode,Magic Number,The method contains a magic number: 31,154
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,hexToBinNibble,Magic Number,The method contains a magic number: 10,188
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,hexToBinNibble,Magic Number,The method contains a magic number: 10,188
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,hexToBin,Magic Number,The method contains a magic number: 2,209
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,hexToBin,Magic Number,The method contains a magic number: 2,209
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,hexToBin,Magic Number,The method contains a magic number: 16,209
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,binToHexNibble,Magic Number,The method contains a magic number: 10,235
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,binToHexNibble,Magic Number,The method contains a magic number: 10,235
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,binToHex,Magic Number,The method contains a magic number: 2,252
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,binToHex,Magic Number,The method contains a magic number: 4,252
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,binToHex,Magic Number,The method contains a magic number: 0xf,252
+wso2_balana,org.wso2.balana.attr,HexBinaryAttribute,binToHex,Magic Number,The method contains a magic number: 0xf,252
+wso2_balana,org.wso2.balana.attr,AttributeSelector,AttributeSelector,Long Parameter List,The method has 5 parameters. ,102
+wso2_balana,org.wso2.balana.attr,AttributeSelector,getInstance,Long Statement,The length of the statement "if (xpathVersion == null) throw new ParsingException("An XPathVersion is required for " + "any policies that use selectors");" is 125.,145
+wso2_balana,org.wso2.balana.attr,Base64BinaryAttribute,hashCode,Magic Number,The method contains a magic number: 31,176
+wso2_balana,org.wso2.balana.attr,IPAddressAttribute,equals,Complex Method,Cyclomatic complexity of the method is 8,188
+wso2_balana,org.wso2.balana.attr,DateAttribute,getInstance,Magic Number,The method contains a magic number: 6,288
+wso2_balana,org.wso2.balana.attr,DateAttribute,getInstance,Magic Number,The method contains a magic number: 3,288
+wso2_balana,org.wso2.balana.attr,DateAttribute,getInstance,Magic Number,The method contains a magic number: 6,288
+wso2_balana,org.wso2.balana.attr,DateAttribute,getInstance,Magic Number,The method contains a magic number: 3,288
+wso2_balana,org.wso2.balana.attr,DateAttribute,getInstance,Magic Number,The method contains a magic number: 2,288
+wso2_balana,org.wso2.balana.attr,DateAttribute,getInstance,Magic Number,The method contains a magic number: 60000,288
+wso2_balana,org.wso2.balana.attr,DateAttribute,getInstance,Magic Number,The method contains a magic number: 60000,288
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 16,497
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 4,497
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 2,497
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 2,497
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 60,497
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 2,497
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 60,497
+wso2_balana,org.wso2.balana.attr,DateAttribute,formatDateWithTZ,Magic Number,The method contains a magic number: 2,497
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Complex Conditional,The conditional expression (days > Integer.MAX_VALUE) || (hours > Integer.MAX_VALUE) || (minutes > Integer.MAX_VALUE)|| (seconds > Integer.MAX_VALUE) is complex.,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Long Parameter List,The method has 6 parameters. ,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Long Statement,The length of the statement "if ((days > Integer.MAX_VALUE) || (hours > Integer.MAX_VALUE) || (minutes > Integer.MAX_VALUE)|| (seconds > Integer.MAX_VALUE)) {" is 129.,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Long Statement,The length of the statement "BigInteger bigTotal=bigDays.multiply(big24).add(bigHours).multiply(big60).add(bigMinutes).multiply(big60).add(bigSeconds).multiply(big1000);" is 140.,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Long Statement,The length of the statement "if (bigTotal.compareTo(bigMaxLong) == 1) throw new IllegalArgumentException("total number of " + "milliseconds " + "exceeds Long.MAX_VALUE");" is 141.,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Magic Number,The method contains a magic number: 24,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Magic Number,The method contains a magic number: 60,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Magic Number,The method contains a magic number: 60,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,DayTimeDurationAttribute,Magic Number,The method contains a magic number: 1000,184
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,getInstance,Complex Method,Cyclomatic complexity of the method is 9,276
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,getInstance,Long Statement,The length of the statement "if (value.charAt(value.length() - 1) == 'T') throw new ParsingException("'T' must be absent if all" + "time items are absent");" is 127.,276
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,getInstance,Magic Number,The method contains a magic number: 9,276
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,getInstance,Magic Number,The method contains a magic number: 9,276
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,getInstance,Magic Number,The method contains a magic number: 9,276
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,getInstance,Magic Number,The method contains a magic number: 9,276
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,hashCode,Magic Number,The method contains a magic number: 32,454
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,hashCode,Magic Number,The method contains a magic number: 31,454
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,encode,Complex Conditional,The conditional expression (hours != 0) || (minutes != 0) || (seconds != 0)|| (nanoseconds != 0) is complex.,492
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,encode,Complex Method,Cyclomatic complexity of the method is 10,492
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,encode,Magic Number,The method contains a magic number: 10,492
+wso2_balana,org.wso2.balana.attr,DayTimeDurationAttribute,encode,Magic Number,The method contains a magic number: 9,492
+wso2_balana,org.wso2.balana.attr,Base64,encode,Complex Method,Cyclomatic complexity of the method is 8,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 7,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 5,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 3,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 2,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 0x3F,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 4,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 0x030,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 4,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 0xF,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 2,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 0x03C,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 2,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 2,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 6,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 0x3,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 2,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 2,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 0x3F,139
+wso2_balana,org.wso2.balana.attr,Base64,encode,Magic Number,The method contains a magic number: 3,139
+wso2_balana,org.wso2.balana.attr,Base64,decode,Complex Method,Cyclomatic complexity of the method is 18,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 4,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 3,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 3,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 2,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 0xFC,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 4,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 0x3,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 4,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 0xF0,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 2,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 0x0F,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 2,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 6,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 0xC0,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 2,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 2,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 2,222
+wso2_balana,org.wso2.balana.attr,Base64,decode,Magic Number,The method contains a magic number: 3,222
+wso2_balana,org.wso2.balana.attr,PortRange,hashCode,Magic Number,The method contains a magic number: 31,210
+wso2_balana,org.wso2.balana.attr,DoubleAttribute,hashCode,Magic Number,The method contains a magic number: 32,178
+wso2_balana,org.wso2.balana.attr,AttributeFactory,registerFactory,Long Statement,The length of the statement "if (registeredFactories.containsKey(identifier)) throw new IllegalArgumentException("Identifier is already " + "registered as " + "AttributeFactory: "+ identifier);" is 164.,135
+wso2_balana,org.wso2.balana.attr,BooleanAttribute,hashCode,Magic Number,The method contains a magic number: 1231,228
+wso2_balana,org.wso2.balana.attr,BooleanAttribute,hashCode,Magic Number,The method contains a magic number: 1237,228
+wso2_balana,org.wso2.balana.attr.xacml3,AttributeDesignator,AttributeDesignator,Long Parameter List,The method has 5 parameters. ,74
+wso2_balana,org.wso2.balana.attr.xacml3,AttributeDesignator,getInstance,Long Statement,The length of the statement "throw new ParsingException("AttributeDesignator cannot be constructed using " + "type: " + DOMHelper.getLocalName(root));" is 121.,94
+wso2_balana,org.wso2.balana.attr.xacml3,AttributeDesignator,evaluate,Long Statement,The length of the statement "MissingAttributeDetail missingAttribute=new MissingAttributeDetail(id`type`category`issuer`null`XACMLConstants.XACML_VERSION_3_0);" is 130.,234
+wso2_balana,org.wso2.balana.attr.xacml3,AttributeSelector,AttributeSelector,Long Parameter List,The method has 6 parameters. ,66
+wso2_balana,org.wso2.balana.finder,AttributeFinder,findAttribute,Complex Method,Cyclomatic complexity of the method is 9,128
+wso2_balana,org.wso2.balana.finder,AttributeFinder,findAttribute,Long Parameter List,The method has 5 parameters. ,128
+wso2_balana,org.wso2.balana.finder,AttributeFinder,findAttribute,Long Statement,The length of the statement "if (!module.getSupportedCategories().contains(category.toString()) || !module.getSupportedIds().contains(attributeId.toString())) {" is 131.,128
+wso2_balana,org.wso2.balana.finder,AttributeFinder,findAttribute,Long Parameter List,The method has 6 parameters. ,255
+wso2_balana,org.wso2.balana.finder,PolicyFinder,findPolicy,Long Statement,The length of the statement "logger.error("An error occured while trying to find a " + "single applicable policy for a request: " + newResult.getStatus().getMessage());" is 139.,153
+wso2_balana,org.wso2.balana.finder,PolicyFinder,findPolicy,Long Statement,The length of the statement "if ((type != PolicyReference.POLICY_REFERENCE) && (type != PolicyReference.POLICYSET_REFERENCE)) throw new IllegalArgumentException("Unknown reference type");" is 158.,208
+wso2_balana,org.wso2.balana.finder,PolicyFinder,findPolicy,Long Statement,The length of the statement "logger.error("An error occured while trying to find the " + "referenced policy " + idReference.toString() + ": "+ newResult.getStatus().getMessage());" is 150.,208
+wso2_balana,org.wso2.balana.finder,AttributeFinderModule,findAttribute,Long Parameter List,The method has 5 parameters. ,135
+wso2_balana,org.wso2.balana.finder,AttributeFinderModule,findAttribute,Long Parameter List,The method has 6 parameters. ,155
+wso2_balana,org.wso2.balana.finder.impl,FileBasedPolicyFinderModule,findPolicy,Complex Method,Cyclomatic complexity of the method is 8,96
+wso2_balana,org.wso2.balana.finder.impl,FileBasedPolicyFinderModule,findPolicy,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@432473be,96
+wso2_balana,org.wso2.balana.finder.impl,CurrentEnvModule,findAttribute,Long Parameter List,The method has 5 parameters. ,111
+wso2_balana,org.wso2.balana.finder.impl,CurrentEnvModule,handleDateTime,Long Statement,The length of the statement "if (!type.toString().equals(DateTimeAttribute.identifier)) return new EvaluationResult(BagAttribute.createEmptyBag(type));" is 122.,171
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Complex Conditional,The conditional expression XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace) is complex.,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Complex Conditional,The conditional expression XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace) is complex.,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Complex Conditional,The conditional expression (nodeType == Node.CDATA_SECTION_NODE) || (nodeType == Node.COMMENT_NODE) || (nodeType == Node.TEXT_NODE)|| (nodeType == Node.ATTRIBUTE_NODE) is complex.,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Complex Method,Cyclomatic complexity of the method is 17,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Empty catch clause,The method has an empty catch block.,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Long Method,The method has 133 lines of code.,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Long Parameter List,The method has 6 parameters. ,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Long Statement,The length of the statement "if (XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace)) {" is 204.,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Long Statement,The length of the statement "if (XACMLConstants.REQUEST_CONTEXT_3_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_2_0_IDENTIFIER.equals(namespace) || XACMLConstants.REQUEST_CONTEXT_1_0_IDENTIFIER.equals(namespace)) {" is 204.,103
+wso2_balana,org.wso2.balana.finder.impl,SelectorModule,findAttribute,Long Statement,The length of the statement "if ((nodeType == Node.CDATA_SECTION_NODE) || (nodeType == Node.COMMENT_NODE) || (nodeType == Node.TEXT_NODE)|| (nodeType == Node.ATTRIBUTE_NODE)) {" is 147.,103
+wso2_balana,org.wso2.balana.combine,StandardCombiningAlgFactory,getStandardAlgorithms,Complex Conditional,The conditional expression xacmlVersion.equals(XACMLConstants.XACML_1_0_IDENTIFIER) || xacmlVersion.equals(XACMLConstants.XACML_2_0_IDENTIFIER) || xacmlVersion.equals(XACMLConstants.XACML_3_0_IDENTIFIER) is complex.,202
+wso2_balana,org.wso2.balana.combine,StandardCombiningAlgFactory,getStandardAlgorithms,Long Statement,The length of the statement "if (xacmlVersion.equals(XACMLConstants.XACML_1_0_IDENTIFIER) || xacmlVersion.equals(XACMLConstants.XACML_2_0_IDENTIFIER) || xacmlVersion.equals(XACMLConstants.XACML_3_0_IDENTIFIER)) {" is 183.,202
+wso2_balana,org.wso2.balana.combine,PolicyCombinerElement,encode,Long Statement,The length of the statement "if (ref.getReferenceType() == PolicyReference.POLICY_REFERENCE) encodeParamaters(builder`"Policy"`ref.getReference().toString());" is 129.,90
+wso2_balana,org.wso2.balana.combine,PolicyCombinerElement,encodeParamaters,Long Statement,The length of the statement "builder.append("<").append(prefix).append("CombinerParameters ").append(prefix).append("IdRef=\"").append(id).append("\">\n");" is 126.,118
+wso2_balana,org.wso2.balana.combine,CombiningAlgFactory,registerFactory,Long Statement,The length of the statement "if (registeredFactories.containsKey(identifier)) throw new IllegalArgumentException("Identifier is already " + "registered as " + "CombiningAlgFactory: "+ identifier);" is 167.,131
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesRuleAlg,combine,Complex Conditional,The conditional expression atLeastOneErrorP && (atLeastOneErrorD || atLeastOneDeny) is complex.,82
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesRuleAlg,combine,Complex Method,Cyclomatic complexity of the method is 12,82
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesRuleAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT`firstIndeterminateResultP.getStatus()`context);" is 144.,82
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesRuleAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_PERMIT`firstIndeterminateResultP.getStatus()`context);" is 136.,82
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesPolicyAlg,combine,Complex Conditional,The conditional expression atLeastOneErrorD && (atLeastOneErrorP && atLeastOnePermit) is complex.,83
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesPolicyAlg,combine,Complex Method,Cyclomatic complexity of the method is 18,83
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesPolicyAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT`firstIndeterminateResultD.getStatus()`context);" is 144.,83
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesRuleAlg,combine,Complex Conditional,The conditional expression atLeastOneErrorD && (atLeastOneErrorP || atLeastOnePermit) is complex.,82
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesRuleAlg,combine,Complex Method,Cyclomatic complexity of the method is 13,82
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesRuleAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT`firstIndeterminateResultD.getStatus()`context);" is 144.,82
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesRuleAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_DENY`firstIndeterminateResultD.getStatus()`context);" is 134.,82
+wso2_balana,org.wso2.balana.combine.xacml3,DenyOverridesRuleAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_PERMIT`firstIndeterminateResultP.getStatus()`context);" is 136.,82
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesPolicyAlg,combine,Complex Conditional,The conditional expression atLeastOneErrorP && (atLeastOneErrorD || atLeastOneDeny) is complex.,81
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesPolicyAlg,combine,Complex Method,Cyclomatic complexity of the method is 18,81
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesPolicyAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT`firstIndeterminateResultP.getStatus()`context);" is 144.,81
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesPolicyAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_PERMIT`firstIndeterminateResultP.getStatus()`context);" is 136.,81
+wso2_balana,org.wso2.balana.combine.xacml3,PermitOverridesPolicyAlg,combine,Long Statement,The length of the statement "return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE_DENY`firstIndeterminateResultD.getStatus()`context);" is 134.,81
+wso2_balana,org.wso2.balana.combine.xacml2,PermitOverridesRuleAlg,combine,Complex Conditional,The conditional expression value == AbstractResult.DECISION_INDETERMINATE || value == AbstractResult.DECISION_INDETERMINATE_DENY || value == AbstractResult.DECISION_INDETERMINATE_PERMIT || value == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT is complex.,103
+wso2_balana,org.wso2.balana.combine.xacml2,PermitOverridesRuleAlg,combine,Complex Method,Cyclomatic complexity of the method is 10,103
+wso2_balana,org.wso2.balana.combine.xacml2,PermitOverridesRuleAlg,combine,Long Statement,The length of the statement "if (value == AbstractResult.DECISION_INDETERMINATE || value == AbstractResult.DECISION_INDETERMINATE_DENY || value == AbstractResult.DECISION_INDETERMINATE_PERMIT || value == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT) {" is 230.,103
+wso2_balana,org.wso2.balana.combine.xacml2,FirstApplicablePolicyAlg,combine,Long Statement,The length of the statement "if (match.getResult() == MatchResult.INDETERMINATE) return ResultFactory.getFactory().getResult(AbstractResult.DECISION_INDETERMINATE`match.getStatus()`context);" is 161.,93
+wso2_balana,org.wso2.balana.combine.xacml2,DenyOverridesPolicyAlg,combine,Complex Conditional,The conditional expression effect == AbstractResult.DECISION_INDETERMINATE || effect == AbstractResult.DECISION_INDETERMINATE_DENY || effect == AbstractResult.DECISION_INDETERMINATE_PERMIT || effect == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT is complex.,103
+wso2_balana,org.wso2.balana.combine.xacml2,DenyOverridesPolicyAlg,combine,Complex Method,Cyclomatic complexity of the method is 8,103
+wso2_balana,org.wso2.balana.combine.xacml2,DenyOverridesPolicyAlg,combine,Long Statement,The length of the statement "if (effect == AbstractResult.DECISION_INDETERMINATE || effect == AbstractResult.DECISION_INDETERMINATE_DENY || effect == AbstractResult.DECISION_INDETERMINATE_PERMIT || effect == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT) {" is 234.,103
+wso2_balana,org.wso2.balana.combine.xacml2,DenyOverridesRuleAlg,combine,Complex Conditional,The conditional expression value == AbstractResult.DECISION_INDETERMINATE || value == AbstractResult.DECISION_INDETERMINATE_DENY || value == AbstractResult.DECISION_INDETERMINATE_PERMIT || value == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT is complex.,103
+wso2_balana,org.wso2.balana.combine.xacml2,DenyOverridesRuleAlg,combine,Complex Method,Cyclomatic complexity of the method is 10,103
+wso2_balana,org.wso2.balana.combine.xacml2,DenyOverridesRuleAlg,combine,Long Statement,The length of the statement "if (value == AbstractResult.DECISION_INDETERMINATE || value == AbstractResult.DECISION_INDETERMINATE_DENY || value == AbstractResult.DECISION_INDETERMINATE_PERMIT || value == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT) {" is 230.,103
+wso2_balana,org.wso2.balana.combine.xacml2,PermitOverridesPolicyAlg,combine,Complex Conditional,The conditional expression effect == AbstractResult.DECISION_INDETERMINATE || effect == AbstractResult.DECISION_INDETERMINATE_DENY || effect == AbstractResult.DECISION_INDETERMINATE_PERMIT || effect == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT is complex.,104
+wso2_balana,org.wso2.balana.combine.xacml2,PermitOverridesPolicyAlg,combine,Complex Method,Cyclomatic complexity of the method is 11,104
+wso2_balana,org.wso2.balana.combine.xacml2,PermitOverridesPolicyAlg,combine,Long Statement,The length of the statement "else if (effect == AbstractResult.DECISION_INDETERMINATE || effect == AbstractResult.DECISION_INDETERMINATE_DENY || effect == AbstractResult.DECISION_INDETERMINATE_PERMIT || effect == AbstractResult.DECISION_INDETERMINATE_DENY_OR_PERMIT) {" is 239.,104
+wso2_balana,org.wso2.balana.xacml3,Attributes,getInstance,Complex Method,Cyclomatic complexity of the method is 8,85
+wso2_balana,org.wso2.balana.xacml3,Attributes,getInstance,Empty catch clause,The method has an empty catch block.,85
+wso2_balana,org.wso2.balana.xacml3,Attributes,getInstance,Long Statement,The length of the statement "throw new ParsingException("Attributes object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 127.,85
+wso2_balana,org.wso2.balana.xacml3,AdviceExpression,AdviceExpression,Long Identifier,The length of the parameter attributeAssignmentExpressions is 30.,58
+wso2_balana,org.wso2.balana.xacml3,AdviceExpression,AdviceExpression,Long Identifier,The length of the field attributeAssignmentExpressions is 30.,58
+wso2_balana,org.wso2.balana.xacml3,AdviceExpression,evaluate,Long Identifier,The length of the field attributeAssignmentExpressions is 30.,146
+wso2_balana,org.wso2.balana.xacml3,AdviceExpression,encode,Long Identifier,The length of the field attributeAssignmentExpressions is 30.,164
+wso2_balana,org.wso2.balana.xacml3,AdviceExpression,encode,Long Statement,The length of the statement "builder.append("<AdviceExpression AdviceId=\"" + adviceId + "\" AppliesTo=\""+ AbstractResult.DECISIONS[appliesTo]+ "\">");" is 123.,164
+wso2_balana,org.wso2.balana.xacml3,MultiRequests,getInstance,Complex Method,Cyclomatic complexity of the method is 8,50
+wso2_balana,org.wso2.balana.xacml3,MultiRequests,getInstance,Long Statement,The length of the statement "throw new ParsingException("MultiRequests object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 130.,50
+wso2_balana,org.wso2.balana.xacml3,Advice,getInstance,Long Statement,The length of the statement "throw new ParsingException("Advice object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 123.,76
+wso2_balana,org.wso2.balana.xacml3,AttributeAssignmentExpression,getInstance,Long Statement,The length of the statement "throw new ParsingException("ObligationExpression object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 137.,82
+wso2_balana,org.wso2.balana.xacml3,AttributeAssignmentExpression,evaluate,Long Statement,The length of the statement "AttributeAssignment assignment=new AttributeAssignment(attributeId`bagValue.getType()`category`bagValue.encode()`issuer);" is 121.,145
+wso2_balana,org.wso2.balana.xacml3,AttributeAssignmentExpression,evaluate,Long Statement,The length of the statement "AttributeAssignment assignment=new AttributeAssignment(attributeId`attributeValue.getType()`category`attributeValue.encode()`issuer);" is 133.,145
+wso2_balana,org.wso2.balana.xacml3,Obligation,getInstance,Long Statement,The length of the statement "throw new ParsingException("Obligation object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 127.,64
+wso2_balana,org.wso2.balana.xacml3,ObligationExpression,getInstance,Long Statement,The length of the statement "throw new ParsingException("ObligationExpression object cannot be created " + "with root node of type: " + DOMHelper.getLocalName(root));" is 137.,64
+wso2_balana,org.wso2.balana.xacml3,ObligationExpression,encode,Long Statement,The length of the statement "builder.append("<ObligationExpression ObligationId=\"").append(obligationId.toString()).append("\" FulfillOn=\"").append(AbstractResult.DECISIONS[fulfillOn]).append("\">\n");" is 174.,136
+wso2_balana,org.wso2.balana.xacml2,Target,Target,Complex Conditional,The conditional expression (subjectsSection == null) || (resourcesSection == null) || (actionsSection == null) is complex.,73
+wso2_balana,org.wso2.balana.xacml2,Target,Target,Long Statement,The length of the statement "if ((subjectsSection == null) || (resourcesSection == null) || (actionsSection == null)) throw new ProcessingException("All sections of a Target must " + "be non-null");" is 169.,73
+wso2_balana,org.wso2.balana.xacml2,Target,Target,Complex Conditional,The conditional expression (subjectsSection == null) || (resourcesSection == null) || (actionsSection == null)|| (environmentsSection == null) is complex.,98
+wso2_balana,org.wso2.balana.xacml2,Target,Target,Long Statement,The length of the statement "if ((subjectsSection == null) || (resourcesSection == null) || (actionsSection == null)|| (environmentsSection == null)) throw new ProcessingException("All sections of a Target must " + "be non-null");" is 201.,98
+wso2_balana,org.wso2.balana.xacml2,Target,getInstance,Complex Method,Cyclomatic complexity of the method is 11,144
+wso2_balana,org.wso2.balana.xacml2,Target,matchesAny,Long Statement,The length of the statement "return subjectsSection.matchesAny() && resourcesSection.matchesAny() && actionsSection.matchesAny()&& environmentsSection.matchesAny();" is 135.,237
+wso2_balana,org.wso2.balana.xacml2,Target,match,Complex Method,Cyclomatic complexity of the method is 10,247
+wso2_balana,org.wso2.balana.xacml2,Target,encode,Long Statement,The length of the statement "boolean matchesAny=(subjectsSection.matchesAny() && resourcesSection.matchesAny() && actionsSection.matchesAny()&& environmentsSection.matchesAny());" is 149.,330
+wso2_balana,org.wso2.balana.xacml2,Obligation,encode,Long Statement,The length of the statement "builder.append("<Obligation ObligationId=\"").append(obligationId.toString()).append("\" FulfillOn=\"").append(Result.DECISIONS[fulfillOn]).append("\">\n");" is 156.,156
+wso2_balana,org.wso2.balana.xacml2,Obligation,encode,Long Statement,The length of the statement "builder.append("<AttributeAssignment AttributeId=\"").append(assignment.getId().toString()).append("\" DataType=\"").append(assignment.getType().toString()).append("\">").append(assignment.getValue().encode()).append("</AttributeAssignment>\n");" is 245.,156
+wso2_balana,org.wso2.balana.basic,TestMultipleRequestV3,testBasicTest0001,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0014_" + reqResNo + ".xml");" is 127.,56
+wso2_balana,org.wso2.balana.basic,TestMultipleRequestV3,testBasicTest0001,Magic Number,The method contains a magic number: 2,56
+wso2_balana,org.wso2.balana.basic,TestMultipleRequestV3,testBasicTest0001,Magic Number,The method contains a magic number: 10,56
+wso2_balana,org.wso2.balana.basic,TestMultipleRequestV3,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,97
+wso2_balana,org.wso2.balana.basic,TestMultipleRequestV3,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,97
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0001,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0007_" + reqResNo + ".xml");" is 127.,54
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0001,Magic Number,The method contains a magic number: 4,54
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0001,Magic Number,The method contains a magic number: 10,54
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0002,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0008_" + reqResNo + ".xml");" is 127.,95
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0002,Magic Number,The method contains a magic number: 4,95
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0002,Magic Number,The method contains a magic number: 10,95
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0003,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0009_" + reqResNo + ".xml");" is 127.,135
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0003,Magic Number,The method contains a magic number: 4,135
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0003,Magic Number,The method contains a magic number: 10,135
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0004,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0010_" + reqResNo + ".xml");" is 127.,175
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0004,Magic Number,The method contains a magic number: 4,175
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0004,Magic Number,The method contains a magic number: 10,175
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0005,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0011_" + reqResNo + ".xml");" is 127.,215
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0005,Magic Number,The method contains a magic number: 4,215
+wso2_balana,org.wso2.balana.basic,TestXPathV3,testBasicTest0005,Magic Number,The method contains a magic number: 10,215
+wso2_balana,org.wso2.balana.basic,TestXPathV3,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,255
+wso2_balana,org.wso2.balana.basic,TestXPathV3,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,255
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0001,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0001_" + reqResNo + ".xml");" is 127.,56
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0001,Magic Number,The method contains a magic number: 8,56
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0001,Magic Number,The method contains a magic number: 10,56
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0002,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0002_" + reqResNo + ".xml");" is 127.,97
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0002,Magic Number,The method contains a magic number: 4,97
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0002,Magic Number,The method contains a magic number: 10,97
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0003,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0003_" + reqResNo + ".xml");" is 127.,137
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0003,Magic Number,The method contains a magic number: 4,137
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0003,Magic Number,The method contains a magic number: 10,137
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0004,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0004_" + reqResNo + ".xml");" is 127.,177
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0004,Magic Number,The method contains a magic number: 4,177
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0004,Magic Number,The method contains a magic number: 10,177
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0005,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0005_" + reqResNo + ".xml");" is 127.,217
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0005,Magic Number,The method contains a magic number: 4,217
+wso2_balana,org.wso2.balana.basic,BasicTestV3,testBasicTest0005,Magic Number,The method contains a magic number: 10,217
+wso2_balana,org.wso2.balana.basic,BasicTestV3,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,263
+wso2_balana,org.wso2.balana.basic,BasicTestV3,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,263
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,testBasicTest0001,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0019_" + reqResNo + ".xml");" is 127.,55
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,testBasicTest0001,Magic Number,The method contains a magic number: 4,55
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,testBasicTest0001,Magic Number,The method contains a magic number: 10,55
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,testBasicTest0002,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0020_" + reqResNo + ".xml");" is 127.,96
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,testBasicTest0002,Magic Number,The method contains a magic number: 4,96
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,testBasicTest0002,Magic Number,The method contains a magic number: 10,96
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,143
+wso2_balana,org.wso2.balana.basic,TestAlgorithmsV3,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,143
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0001,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0006_" + reqResNo + ".xml");" is 127.,55
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0001,Magic Number,The method contains a magic number: 4,55
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0001,Magic Number,The method contains a magic number: 10,55
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0002,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0015_" + reqResNo + ".xml");" is 127.,96
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0002,Magic Number,The method contains a magic number: 4,96
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0002,Magic Number,The method contains a magic number: 10,96
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0003,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0016_" + reqResNo + ".xml");" is 127.,137
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0003,Magic Number,The method contains a magic number: 4,137
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0003,Magic Number,The method contains a magic number: 10,137
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0004,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0017_" + reqResNo + ".xml");" is 127.,179
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0004,Magic Number,The method contains a magic number: 4,179
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0004,Magic Number,The method contains a magic number: 10,179
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0005,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0018_" + reqResNo + ".xml");" is 127.,220
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0005,Magic Number,The method contains a magic number: 4,220
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,testBasicTest0005,Magic Number,The method contains a magic number: 10,220
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,266
+wso2_balana,org.wso2.balana.basic,TestFunctionV3,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,266
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,testAdvanceTest0001,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0002_" + reqResNo + ".xml");" is 127.,54
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,testAdvanceTest0001,Magic Number,The method contains a magic number: 2,54
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,testAdvanceTest0001,Magic Number,The method contains a magic number: 10,54
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,testAdvanceTest0003,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"response_0003_" + reqResNo + ".xml");" is 127.,94
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,testAdvanceTest0003,Magic Number,The method contains a magic number: 2,94
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,testAdvanceTest0003,Magic Number,The method contains a magic number: 10,94
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,134
+wso2_balana,org.wso2.balana.advance,AdvanceTestV3,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,134
+wso2_balana,org.wso2.balana.advance,XACML3HigherOrderFunctionTest,testCheckInputs,Empty catch clause,The method has an empty catch block.,48
+wso2_balana,org.wso2.balana.advance,XACML3HigherOrderFunctionTest,testCheckInputs,Empty catch clause,The method has an empty catch block.,48
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Complex Conditional,The conditional expression i == 2 || i == 4 || i == 14 is complex.,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Complex Method,Cyclomatic complexity of the method is 8,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"IIA" + policyNumber + "Response.xml");" is 128.,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Magic Number,The method contains a magic number: 22,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Magic Number,The method contains a magic number: 2,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Magic Number,The method contains a magic number: 4,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Magic Number,The method contains a magic number: 14,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Magic Number,The method contains a magic number: 10,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Magic Number,The method contains a magic number: 9,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestA,Magic Number,The method contains a magic number: 100,70
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Complex Method,Cyclomatic complexity of the method is 8,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"IIB" + policyNumber + "Response.xml");" is 128.,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Magic Number,The method contains a magic number: 54,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Magic Number,The method contains a magic number: 28,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Magic Number,The method contains a magic number: 29,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Magic Number,The method contains a magic number: 10,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Magic Number,The method contains a magic number: 9,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestB,Magic Number,The method contains a magic number: 100,120
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Complex Conditional,The conditional expression i == 3 || i == 12 || i == 14 || i == 23 || i == 54 || i == 55 || i == 88 || i == 89 || i == 92 || i == 93 || i == 98 || i == 99 || i == 105 is complex.,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Complex Method,Cyclomatic complexity of the method is 8,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Long Statement,The length of the statement "if (i == 3 || i == 12 || i == 14 || i == 23 || i == 54 || i == 55 || i == 88 || i == 89 || i == 92 || i == 93 || i == 98 || i == 99 || i == 105) {" is 146.,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"IIC" + policyNumber + "Response.xml");" is 128.,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 233,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 3,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 12,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 14,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 23,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 54,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 55,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 88,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 89,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 92,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 93,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 98,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 99,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 105,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 10,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 9,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestC,Magic Number,The method contains a magic number: 100,170
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestD,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"IID" + policyNumber + "Response.xml");" is 128.,222
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestD,Magic Number,The method contains a magic number: 29,222
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestD,Magic Number,The method contains a magic number: 10,222
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestD,Magic Number,The method contains a magic number: 9,222
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,testConformanceTestD,Magic Number,The method contains a magic number: 100,222
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,394
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV2,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,394
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV3,testConformanceTestA,Long Statement,The length of the statement "ResponseCtx expectedResponseCtx=TestUtil.createResponse(ROOT_DIRECTORY`VERSION_DIRECTORY`"IIIA" + policyNumber + "Response.xacml3.xml");" is 136.,72
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV3,testConformanceTestA,Magic Number,The method contains a magic number: 29,72
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV3,testConformanceTestA,Magic Number,The method contains a magic number: 10,72
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV3,testConformanceTestA,Magic Number,The method contains a magic number: 9,72
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV3,testConformanceTestA,Magic Number,The method contains a magic number: 100,72
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV3,getPDPNewInstance,Empty catch clause,The method has an empty catch block.,116
+wso2_balana,org.wso2.balana.conformance,ConformanceTestV3,getPDPNewInstance,Long Statement,The length of the statement "String policyPath=(new File(".")).getCanonicalPath() + File.separator + TestConstants.RESOURCE_PATH+ File.separator+ ROOT_DIRECTORY+ File.separator+ VERSION_DIRECTORY+ File.separator+ TestConstants.POLICY_DIRECTORY+ File.separator+ policy;" is 239.,116
+wso2_balana,org.wso2.balana.utils,Utils,getSecuredDocumentBuilderFactory,Long Statement,The length of the statement "logger.error("Failed to load XML Processor Feature " + Constants.EXTERNAL_GENERAL_ENTITIES_FEATURE + " or "+ Constants.EXTERNAL_PARAMETER_ENTITIES_FEATURE+ " or "+ Constants.LOAD_EXTERNAL_DTD_FEATURE);" is 201.,89
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createPolicyElement,Complex Method,Cyclomatic complexity of the method is 13,39
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createPolicyElement,Long Statement,The length of the statement "if (policyElementDTO.getRuleCombiningAlgorithms() != null && policyElementDTO.getRuleCombiningAlgorithms().trim().length() > 0) {" is 129.,39
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createPolicySetElement,Complex Method,Cyclomatic complexity of the method is 17,134
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createPolicySetElement,Long Statement,The length of the statement "if (policyElementDTO.getPolicyCombiningAlgId() != null && policyElementDTO.getPolicyCombiningAlgId().trim().length() > 0) {" is 123.,134
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createRequestElement,Long Statement,The length of the statement "requestElement.setAttribute(PolicyConstants.Request.RETURN_POLICY_LIST`Boolean.toString(requestElementDTO.isReturnPolicyIdList()));" is 131.,245
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createRequestElement,Long Statement,The length of the statement "requestElement.setAttribute(PolicyConstants.Request.COMBINED_DECISION`Boolean.toString(requestElementDTO.isCombinedDecision()));" is 128.,245
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeValueElement,Long Statement,The length of the statement "if (attributeValueElementDTO.getAttributeValue() != null && attributeValueElementDTO.getAttributeValue().trim().length() > 0) {" is 127.,303
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeValueElement,Long Statement,The length of the statement "if (attributeValueElementDTO.getAttributeDataType() != null && attributeValueElementDTO.getAttributeDataType().trim().length() > 0) {" is 133.,303
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeDesignatorElement,Complex Conditional,The conditional expression attributeId != null && attributeId.trim().length() > 0 && category != null && category.trim().length() > 0 is complex.,396
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeDesignatorElement,Long Identifier,The length of the identifier attributeDesignatorElementName is 30.,396
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeDesignatorElement,Long Statement,The length of the statement "if (attributeDesignatorDTO.getMustBePresent() != null && attributeDesignatorDTO.getMustBePresent().trim().length() > 0) {" is 121.,396
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeSelectorElement,Long Statement,The length of the statement "if (attributeSelectorDTO.getAttributeSelectorRequestContextPath() != null && attributeSelectorDTO.getAttributeSelectorRequestContextPath().trim().length() > 0) {" is 161.,453
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeSelectorElement,Long Statement,The length of the statement "attributeSelectorElement.setAttribute(PolicyConstants.REQUEST_CONTEXT_PATH`PolicyConstants.ATTRIBUTE_NAMESPACE + attributeSelectorDTO.getAttributeSelectorRequestContextPath());" is 176.,453
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeSelectorElement,Long Statement,The length of the statement "if (attributeSelectorDTO.getAttributeSelectorDataType() != null && attributeSelectorDTO.getAttributeSelectorDataType().trim().length() > 0) {" is 141.,453
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeSelectorElement,Long Statement,The length of the statement "if (attributeSelectorDTO.getAttributeSelectorMustBePresent() != null && attributeSelectorDTO.getAttributeSelectorMustBePresent().trim().length() > 0) {" is 151.,453
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAttributeSelectorElement,Long Statement,The length of the statement "attributeSelectorElement.setAttribute(PolicyConstants.MUST_BE_PRESENT`attributeSelectorDTO.getAttributeSelectorMustBePresent());" is 128.,453
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createObligationsElement,Complex Conditional,The conditional expression id != null && id.trim().length() > 0 && effect != null is complex.,493
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createObligationsElement,Complex Method,Cyclomatic complexity of the method is 8,493
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAdvicesElement,Complex Conditional,The conditional expression id != null && id.trim().length() > 0 && effect != null is complex.,540
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createAdvicesElement,Complex Method,Cyclomatic complexity of the method is 8,540
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createRuleElement,Complex Method,Cyclomatic complexity of the method is 11,676
+wso2_balana,org.wso2.balana.utils,PolicyUtils,createApplyElement,Complex Method,Cyclomatic complexity of the method is 11,783
+wso2_balana,org.wso2.balana.utils.policy.dto,AttributeSelectorDTO,getAttributeSelectorRequestContextPath,Long Identifier,The length of the field attributeSelectorRequestContextPath is 35.,38
+wso2_balana,org.wso2.balana.utils.policy.dto,AttributeSelectorDTO,setAttributeSelectorRequestContextPath,Long Identifier,The length of the parameter attributeSelectorRequestContextPath is 35.,42
+wso2_balana,org.wso2.balana.utils.policy.dto,AttributeSelectorDTO,setAttributeSelectorRequestContextPath,Long Identifier,The length of the field attributeSelectorRequestContextPath is 35.,42
+wso2_balana,org.wso2.balana.utils.policy.dto,AttributeSelectorDTO,getAttributeSelectorMustBePresent,Long Identifier,The length of the field attributeSelectorMustBePresent is 30.,54
+wso2_balana,org.wso2.balana.utils.policy.dto,AttributeSelectorDTO,setAttributeSelectorMustBePresent,Long Identifier,The length of the parameter attributeSelectorMustBePresent is 30.,58
+wso2_balana,org.wso2.balana.utils.policy.dto,AttributeSelectorDTO,setAttributeSelectorMustBePresent,Long Identifier,The length of the field attributeSelectorMustBePresent is 30.,58
+wso2_balana,org.wso2.balana.utils.policy.dto,ApplyElementDTO,getAttributeDesignatorsElementCount,Long Identifier,The length of the field attributeDesignatorsElementCount is 32.,136
+wso2_balana,org.wso2.balana.utils.policy.dto,ApplyElementDTO,setAttributeDesignatorsElementCount,Long Identifier,The length of the parameter attributeDesignatorsElementCount is 32.,140
+wso2_balana,org.wso2.balana.utils.policy.dto,ApplyElementDTO,setAttributeDesignatorsElementCount,Long Identifier,The length of the field attributeDesignatorsElementCount is 32.,140
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createPolicyElement,Complex Method,Cyclomatic complexity of the method is 8,42
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Complex Conditional,The conditional expression resourcesElement != null || actionsElement != null || subjectsElement != null || environmentsElement != null is complex.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Complex Conditional,The conditional expression basicRuleDTO.getRuleId() != null && basicRuleDTO.getRuleId().trim().length() > 0 && basicRuleDTO.getRuleEffect() != null && basicRuleDTO.getRuleEffect().trim().length() > 0 is complex.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Complex Method,Cyclomatic complexity of the method is 55,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Method,The method has 270 lines of code.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions(functionOnResources`resources[0].trim()`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resourceDataType);" is 176.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "resourceApplyElementDTO=processGreaterLessThanFunctions(functionOnResources`resourceDataType`resourceNames`designatorDTO);" is 122.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "resourceApplyElementDTO=createApplyElementForBagFunctions(functionOnResources`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resources`resourceDataType);" is 155.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "resourceApplyElementDTO=createApplyElementForNonBagFunctions(functionOnResources`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resources[0].trim()`resourceDataType);" is 168.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions(functionOnActions`actions[0].trim()`PolicyConstants.ACTION_CATEGORY_URI`actionId`actionDataType);" is 166.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "actionApplyElementDTO=createApplyElementForBagFunctions(functionOnActions`PolicyConstants.ACTION_CATEGORY_URI`actionId`actions`actionDataType);" is 143.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "actionApplyElementDTO=createApplyElementForNonBagFunctions(functionOnActions`PolicyConstants.ACTION_CATEGORY_URI`actionId`actions[0].trim()`actionDataType);" is 156.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions(functionOnEnvironment`environments[0].trim()`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environmentDataType);" is 190.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "environmentApplyElementDTO=processGreaterLessThanFunctions(functionOnEnvironment`environmentDataType`environmentNames`designatorDTO);" is 133.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "environmentApplyElementDTO=createApplyElementForBagFunctions(functionOnEnvironment`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environments`environmentDataType);" is 172.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "environmentApplyElementDTO=createApplyElementForNonBagFunctions(functionOnEnvironment`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environments[0].trim()`environmentDataType);" is 185.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "subjectApplyElementDTO=createApplyElementForNonBagFunctionsWithAnyOf(functionOnSubjects`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjectDataType`subjects[0].trim());" is 171.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "subjectApplyElementDTO=createApplyElementForBagFunctions(functionOnSubjects`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjects`subjectDataType);" is 149.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "subjectApplyElementDTO=createApplyElementForNonBagFunctions(functionOnSubjects`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjects[0].trim()`subjectDataType);" is 162.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Long Statement,The length of the statement "if (basicRuleDTO.getRuleId() != null && basicRuleDTO.getRuleId().trim().length() > 0 && basicRuleDTO.getRuleEffect() != null && basicRuleDTO.getRuleEffect().trim().length() > 0) {" is 179.,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Magic Number,The method contains a magic number: 2,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Magic Number,The method contains a magic number: 3,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Magic Number,The method contains a magic number: 2,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Magic Number,The method contains a magic number: 4,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Magic Number,The method contains a magic number: 2,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createRuleElement,Magic Number,The method contains a magic number: 3,108
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Complex Method,Cyclomatic complexity of the method is 69,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Method,The method has 284 lines of code.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "if (functionOnResources.equals(PolicyConstants.Functions.FUNCTION_EQUAL) || functionOnResources.equals(PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)) {" is 160.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions(functionOnResources`resources[0].trim()`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resourceDataType);" is 176.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions(PolicyConstants.Functions.FUNCTION_EQUAL`resource`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resourceDataType);" is 186.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`resource`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resourceDataType);" is 201.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL)`resource`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resourceDataType);" is 188.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`resource`PolicyConstants.RESOURCE_CATEGORY_URI`resourceId`resourceDataType);" is 201.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "if (functionOnActions.equals(PolicyConstants.Functions.FUNCTION_EQUAL) || functionOnActions.equals(PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)) {" is 156.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((functionOnActions)`actions[0].trim()`PolicyConstants.ACTION_CATEGORY_URI`actionId`actionDataType);" is 168.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL)`action`PolicyConstants.ACTION_CATEGORY_URI`actionId`actionDataType);" is 180.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`action`PolicyConstants.ACTION_CATEGORY_URI`actionId`actionDataType);" is 193.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`action`PolicyConstants.ACTION_CATEGORY_URI`actionId`actionDataType);" is 193.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL)`action`PolicyConstants.ACTION_CATEGORY_URI`actionId`actionDataType);" is 180.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "if (functionOnEnvironment.equals(PolicyConstants.Functions.FUNCTION_EQUAL) || functionOnEnvironment.equals(PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)) {" is 164.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((functionOnEnvironment)`environments[0].trim()`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environmentDataType);" is 192.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL)`environment`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environmentDataType);" is 200.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`environment`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environmentDataType);" is 213.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`environment`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environmentDataType);" is 213.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL)`environment`PolicyConstants.ENVIRONMENT_CATEGORY_URI`environmentId`environmentDataType);" is 200.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "if (PolicyConstants.Functions.FUNCTION_EQUAL.equals(functionOnSubjects) || PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP.equals(functionOnSubjects)) {" is 158.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((functionOnSubjects)`subjects[0].trim()`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjectDataType);" is 173.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL)`subject`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjectDataType);" is 184.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`subject`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjectDataType);" is 197.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL)`subject`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjectDataType);" is 184.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createTargetElement,Long Statement,The length of the statement "MatchElementDTO matchElementDTO=createMatchElementForNonBagFunctions((PolicyConstants.Functions.FUNCTION_EQUAL_MATCH_REGEXP)`subject`PolicyConstants.SUBJECT_CATEGORY_URI`subjectId`subjectDataType);" is 197.,434
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForBagFunctions,Complex Conditional,The conditional expression attributeValues != null && functionId != null && functionId.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeId != null && attributeId.trim().length() > 0 is complex.,760
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForBagFunctions,Long Parameter List,The method has 5 parameters. ,760
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForBagFunctions,Long Statement,The length of the statement "if (attributeValues != null && functionId != null && functionId.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeId != null && attributeId.trim().length() > 0) {" is 196.,760
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForNonBagFunctions,Complex Conditional,The conditional expression attributeValue != null && attributeValue.trim().length() > 0 && functionId != null && functionId.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeId != null && attributeId.trim().length() > 0 is complex.,805
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForNonBagFunctions,Long Parameter List,The method has 5 parameters. ,805
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForNonBagFunctions,Long Statement,The length of the statement "if (attributeValue != null && attributeValue.trim().length() > 0 && functionId != null && functionId.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeId != null && attributeId.trim().length() > 0) {" is 233.,805
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForNonBagFunctionsWithAnyOf,Complex Conditional,The conditional expression attributeValue != null && attributeValue.trim().length() > 0 && functionId != null && functionId.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeDesignatorId != null && attributeDesignatorId.trim().length() > 0 is complex.,844
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForNonBagFunctionsWithAnyOf,Long Parameter List,The method has 5 parameters. ,844
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createApplyElementForNonBagFunctionsWithAnyOf,Long Statement,The length of the statement "if (attributeValue != null && attributeValue.trim().length() > 0 && functionId != null && functionId.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeDesignatorId != null && attributeDesignatorId.trim().length() > 0) {" is 253.,844
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createMatchElementForNonBagFunctions,Complex Conditional,The conditional expression functionId != null && functionId.trim().length() > 0 && attributeValue != null && attributeValue.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeId != null && attributeId.trim().length() > 0 is complex.,885
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createMatchElementForNonBagFunctions,Long Parameter List,The method has 5 parameters. ,885
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,createMatchElementForNonBagFunctions,Long Statement,The length of the statement "if (functionId != null && functionId.trim().length() > 0 && attributeValue != null && attributeValue.trim().length() > 0 && category != null && category.trim().length() > 0 && attributeId != null && attributeId.trim().length() > 0) {" is 233.,885
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,processGreaterLessThanFunctions,Complex Conditional,The conditional expression PolicyConstants.Functions.FUNCTION_GREATER_EQUAL_AND_LESS_EQUAL.equals(function) || PolicyConstants.Functions.FUNCTION_GREATER_AND_LESS_EQUAL.equals(function) || PolicyConstants.Functions.FUNCTION_GREATER_EQUAL_AND_LESS.equals(function)|| PolicyConstants.Functions.FUNCTION_GREATER_AND_LESS.equals(function) is complex.,923
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,processGreaterLessThanFunctions,Complex Method,Cyclomatic complexity of the method is 9,923
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,processGreaterLessThanFunctions,Long Statement,The length of the statement "if (PolicyConstants.Functions.FUNCTION_GREATER_EQUAL_AND_LESS_EQUAL.equals(function) || PolicyConstants.Functions.FUNCTION_GREATER_AND_LESS_EQUAL.equals(function) || PolicyConstants.Functions.FUNCTION_GREATER_EQUAL_AND_LESS.equals(function)|| PolicyConstants.Functions.FUNCTION_GREATER_AND_LESS.equals(function)) {" is 314.,923
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,processGreaterLessThanFunctions,Long Statement,The length of the statement "throw new PolicyBuilderException("Can not create Apply element:" + "Missing required attribute values for function : " + function);" is 131.,923
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,processGreaterLessThanFunctions,Long Statement,The length of the statement "if (PolicyConstants.Functions.FUNCTION_GREATER_AND_LESS.equals(function) || PolicyConstants.Functions.FUNCTION_GREATER_AND_LESS_EQUAL.equals(function)) {" is 153.,923
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,processGreaterLessThanFunctions,Long Statement,The length of the statement "if (PolicyConstants.Functions.FUNCTION_GREATER_AND_LESS.equals(function) || PolicyConstants.Functions.FUNCTION_GREATER_EQUAL_AND_LESS.equals(function)) {" is 153.,923
+wso2_balana,org.wso2.balana.utils.policy,BasicPolicyHelper,processGreaterLessThanFunctions,Magic Number,The method contains a magic number: 2,923
+wso2_balana,org.wso2.balana.samples.kmarket.trading,SampleAttributeFinderModule,SampleAttributeFinderModule,Empty catch clause,The method has an empty catch block.,44
+wso2_balana,org.wso2.balana.samples.kmarket.trading,SampleAttributeFinderModule,findAttribute,Complex Conditional,The conditional expression result != null && result.getAttributeValue() != null && result.getAttributeValue().isBag() is complex.,68
+wso2_balana,org.wso2.balana.samples.kmarket.trading,SampleAttributeFinderModule,findAttribute,Long Parameter List,The method has 5 parameters. ,68
+wso2_balana,org.wso2.balana.samples.kmarket.trading,KMarketAccessControl,main,Complex Method,Cyclomatic complexity of the method is 9,55
+wso2_balana,org.wso2.balana.samples.kmarket.trading,KMarketAccessControl,printDescription,Long Statement,The length of the statement "System.out.println("\nK-Market is on-line trading company. They have implemented some access " + "control over the on-line trading using XACML policies. K-Martket has separated their " + "customers in to three groups and has put limit on on-line buying items.\n");" is 264.,225
+wso2_balana,org.wso2.balana.samples.kmarket.trading,KMarketAccessControl,createXACMLRequest,Long Statement,The length of the statement "return "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n" + "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:action\">\n" + "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:action:action-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">buy</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:1.0:subject-category:access-subject\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:subject:subject-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">" + userName + "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:resource\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">"+ resource+ "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"http://kmarket.com/category\">\n"+ "<Attribute AttributeId=\"http://kmarket.com/id/amount\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#integer\">"+ amount+ "</AttributeValue>\n"+ "</Attribute>\n"+ "<Attribute AttributeId=\"http://kmarket.com/id/totalAmount\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#integer\">"+ totalAmount+ "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "</Request>";" is 1667.,233
+wso2_balana,org.wso2.balana.samples.custom.algo,Main,createXACMLRequest,Long Statement,The length of the statement "return "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n" + "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:action\">\n" + "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:action:action-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">access</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:1.0:subject-category:access-subject\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:subject:subject-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">" + userName + "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:resource\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">"+ content+ "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "</Request>";" is 1159.,117
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,SampleAttributeFinderModule,SampleAttributeFinderModule,Empty catch clause,The method has an empty catch block.,42
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,SampleAttributeFinderModule,findAttribute,Complex Conditional,The conditional expression result != null && result.getAttributeValue() != null && result.getAttributeValue().isBag() is complex.,66
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,SampleAttributeFinderModule,findAttribute,Long Parameter List,The method has 5 parameters. ,66
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,HierarchicalResourceFinder,findChildResources,Empty catch clause,The method has an empty catch block.,48
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,HierarchicalResourceFinder,findDescendantResources,Empty catch clause,The method has an empty catch block.,72
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,Main,main,Complex Method,Cyclomatic complexity of the method is 11,51
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,Main,main,Long Statement,The length of the statement "System.out.println("\nYou can check the authorization for children or descendants resource " + "under root resources \n");" is 122.,51
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,Main,printDescription,Long Statement,The length of the statement "System.out.println("\nThis sample shows the use of Multiple decision profile " + "and Hierarchical resource profile in XACML 3.0 \n");" is 134.,212
+wso2_balana,org.wso2.balana.samples.hierarchical.resource,Main,createXACMLRequest,Long Statement,The length of the statement "return "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n" + "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:action\">\n" + "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:action:action-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">access</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:1.0:subject-category:access-subject\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:subject:subject-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">" + userName + "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:resource\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">root</AttributeValue>\n"+ "</Attribute>\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:2.0:resource:scope\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">"+ type+ "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "</Request>";" is 1372.,220
+wso2_balana,org.wso2.balana.samples.image.filtering,SampleAttributeFinderModule,SampleAttributeFinderModule,Empty catch clause,The method has an empty catch block.,42
+wso2_balana,org.wso2.balana.samples.image.filtering,SampleAttributeFinderModule,findAttribute,Complex Conditional,The conditional expression result != null && result.getAttributeValue() != null && result.getAttributeValue().isBag() is complex.,66
+wso2_balana,org.wso2.balana.samples.image.filtering,SampleAttributeFinderModule,findAttribute,Long Parameter List,The method has 5 parameters. ,66
+wso2_balana,org.wso2.balana.samples.image.filtering,ImageFilter,main,Complex Method,Cyclomatic complexity of the method is 9,54
+wso2_balana,org.wso2.balana.samples.image.filtering,ImageFilter,printDescription,Long Statement,The length of the statement "System.out.println("\nIn a web page` there can be various static contents. Lets assume web page " + "contains various type of static images. These images are not authorized to view for all users. " + "There are specific permissions for each image. Therefore before web page is viewed by user` "+ "authorization must be done for each images and dynamically filter the authorized content for user. "+ "To achieve` in a fine grained` dynamic and attribute based authorization manner` we can use XACML "+ "based authorization engine such as WSO2 Balana.\n");" is 554.,183
+wso2_balana,org.wso2.balana.samples.image.filtering,ImageFilter,createXACMLRequest,Long Statement,The length of the statement "return "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n" + "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:action\">\n" + "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:action:action-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">view</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:1.0:subject-category:access-subject\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:subject:subject-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">" + userName + "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:resource\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">index.jsp</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">add.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">edit.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">delete.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">cancel.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">copy.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">move.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">view.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:image\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"true\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">help.gif</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "</Request>";" is 3795.,195
+wso2_balana,org.wso2.balana.balanasamples,SampleAttributeFinderModule,SampleAttributeFinderModule,Empty catch clause,The method has an empty catch block.,41
+wso2_balana,org.wso2.balana.balanasamples,SampleAttributeFinderModule,findAttribute,Complex Conditional,The conditional expression result != null && result.getAttributeValue() != null && result.getAttributeValue().isBag() is complex.,65
+wso2_balana,org.wso2.balana.balanasamples,SampleAttributeFinderModule,findAttribute,Long Parameter List,The method has 5 parameters. ,65
+wso2_balana,org.wso2.balana.balanasamples,Utilities,createXACMLRequest,Long Statement,The length of the statement "return "<Request xmlns=\"urn:oasis:names:tc:xacml:3.0:core:schema:wd-17\" CombinedDecision=\"false\" ReturnPolicyIdList=\"false\">\n" + "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:action\">\n" + "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:action:action-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">buy</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:1.0:subject-category:access-subject\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:subject:subject-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">" + userName + "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"urn:oasis:names:tc:xacml:3.0:attribute-category:resource\">\n"+ "<Attribute AttributeId=\"urn:oasis:names:tc:xacml:1.0:resource:resource-id\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#string\">"+ resource+ "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "<Attributes Category=\"http://kmarket.com/category\">\n"+ "<Attribute AttributeId=\"http://kmarket.com/id/amount\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#integer\">"+ amount+ "</AttributeValue>\n"+ "</Attribute>\n"+ "<Attribute AttributeId=\"http://kmarket.com/id/totalAmount\" IncludeInResult=\"false\">\n"+ "<AttributeValue DataType=\"http://www.w3.org/2001/XMLSchema#integer\">"+ totalAmount+ "</AttributeValue>\n"+ "</Attribute>\n"+ "</Attributes>\n"+ "</Request>";" is 1667.,86
+wso2_balana,org.wso2.balana.balanasamples,PDPController,evaluate,Long Statement,The length of the statement "String xacmlRequest=Utilities.createXACMLRequest(request.getUsername()`request.getProductName()`request.getNumberOfProducts()`totalAmount);" is 139.,34

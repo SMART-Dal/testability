@@ -1,0 +1,110 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,encode,Magic Number,The method contains a magic number: 2,12
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,encode,Magic Number,The method contains a magic number: 0xF0,12
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,encode,Magic Number,The method contains a magic number: 4,12
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,encode,Magic Number,The method contains a magic number: 0x0F,12
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,decode,Magic Number,The method contains a magic number: 2,27
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,decode,Magic Number,The method contains a magic number: 2,27
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,decode,Magic Number,The method contains a magic number: 2,27
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,decode,Magic Number,The method contains a magic number: 16,27
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,decode,Magic Number,The method contains a magic number: 16,27
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,decode,Magic Number,The method contains a magic number: 2,27
+paukiatwee_budgetapp,io.budgetapp.crypto,Hex,decode,Magic Number,The method contains a magic number: 4,27
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,FinanceService,Long Parameter List,The method has 8 parameters. ,66
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findUsageSummaryByUser,Long Statement,The length of the statement "double income=budgets.stream().filter(p -> p.getCategory().getType() == CategoryType.INCOME).mapToDouble(Budget::getActual).sum();" is 130.,183
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findUsageSummaryByUser,Long Statement,The length of the statement "double budget=budgets.stream().filter(p -> p.getCategory().getType() == CategoryType.EXPENDITURE).mapToDouble(Budget::getProjected).sum();" is 138.,183
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findUsageSummaryByUser,Long Statement,The length of the statement "double spent=budgets.stream().filter(p -> p.getCategory().getType() == CategoryType.EXPENDITURE).mapToDouble(Budget::getActual).sum();" is 134.,183
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,addRecurring,Long Statement,The length of the statement "throw new DataConstraintException("recurringAt"`"Recurring Date must within " + Util.toFriendlyMonthDisplay(now) + " "+ (now.getYear() + 1900));" is 144.,336
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,addRecurring,Magic Number,The method contains a magic number: 1900,336
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,addTransactions,Complex Method,Cyclomatic complexity of the method is 9,432
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,addTransactions,Long Statement,The length of the statement "Set<Long> budgetIds=transactionForms.stream().map(TransactionForm::getBudget).map(Budget::getId).collect(Collectors.toSet());" is 125.,432
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,addTransactions,Long Statement,The length of the statement "throw new DataConstraintException("transactionOn"`"Transaction Date must within " + Util.toFriendlyMonthDisplay(budget.getPeriod()) + " "+ (budget.getPeriod().getYear() + 1900));" is 178.,432
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,addTransactions,Magic Number,The method contains a magic number: 1900,432
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findRecentTransactions,Magic Number,The method contains a magic number: 20,519
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findTransactionUsage,Long Statement,The length of the statement "Map<Date`List<Transaction>> groups=transactions.stream().collect(Collectors.groupingBy(Transaction::getTransactionOn`TreeMap::new`Collectors.toList()));" is 152.,547
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findTransactionUsage,Magic Number,The method contains a magic number: 7,547
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findTransactionUsage,Magic Number,The method contains a magic number: 7,547
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findUsageByCategory,Long Statement,The length of the statement "Map<Category`List<Budget>> groups=budgets.stream().filter(b -> b.getCategory().getType() == CategoryType.EXPENDITURE).collect(Collectors.groupingBy(Budget::getCategory));" is 170.,625
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findMonthlyTransactionUsage,Long Statement,The length of the statement "List<Budget> budgets=budgetDAO.findByRange(user`start.getMonthValue()`start.getYear()`end.getMonthValue()`end.getYear());" is 121.,652
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findMonthlyTransactionUsage,Long Statement,The length of the statement "Map<Date`List<Budget>> groups=budgets.stream().collect(Collectors.groupingBy(Budget::getPeriod`TreeMap::new`Collectors.toList()));" is 130.,652
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findMonthlyTransactionUsage,Long Statement,The length of the statement "double budget=entry.getValue().stream().filter(b -> b.getCategory().getType() == CategoryType.EXPENDITURE).mapToDouble(Budget::getProjected).sum();" is 147.,652
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findMonthlyTransactionUsage,Long Statement,The length of the statement "double spending=entry.getValue().stream().filter(b -> b.getActual() > 0).filter(b -> b.getCategory().getType() == CategoryType.EXPENDITURE).mapToDouble(Budget::getActual).sum();" is 177.,652
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findMonthlyTransactionUsage,Magic Number,The method contains a magic number: 6,652
+paukiatwee_budgetapp,io.budgetapp.service,FinanceService,findMonthlyTransactionUsage,Magic Number,The method contains a magic number: 6,652
+paukiatwee_budgetapp,io.budgetapp.resource,ResourceIT,assertCreated,Magic Number,The method contains a magic number: 201,118
+paukiatwee_budgetapp,io.budgetapp.resource,ResourceIT,assertOk,Magic Number,The method contains a magic number: 200,122
+paukiatwee_budgetapp,io.budgetapp.resource,ResourceIT,assertBadRequest,Magic Number,The method contains a magic number: 400,134
+paukiatwee_budgetapp,io.budgetapp.resource,ResourceIT,randomAlphabets,Magic Number,The method contains a magic number: 8,138
+paukiatwee_budgetapp,io.budgetapp.resource,RecurringResourceIT,shouldAbleCreateRecurring,Magic Number,The method contains a magic number: 10.00,30
+paukiatwee_budgetapp,io.budgetapp.resource,TransactionResourceIT,shouldAbleCreateTransaction,Magic Number,The method contains a magic number: 10.00,35
+paukiatwee_budgetapp,io.budgetapp.resource,TransactionResourceIT,shouldAbleDeleteValidTransaction,Magic Number,The method contains a magic number: 10.00,51
+paukiatwee_budgetapp,io.budgetapp.resource,TransactionResourceIT,shouldAbleFindValidTransaction,Magic Number,The method contains a magic number: 10.00,81
+paukiatwee_budgetapp,io.budgetapp.resource,TransactionResourceIT,shouldAbleFindTransactionsByBudget,Magic Number,The method contains a magic number: 10.00,97
+paukiatwee_budgetapp,io.budgetapp.resource,BudgetResourceIT,shouldBeAbleUpdateBudget,Magic Number,The method contains a magic number: 100,62
+paukiatwee_budgetapp,io.budgetapp.resource,BudgetResourceIT,shouldBeAbleUpdateBudget,Magic Number,The method contains a magic number: 100,62
+paukiatwee_budgetapp,io.budgetapp.resource,BudgetResourceIT,shouldNotAbleDeleteBudgetWithChild,Magic Number,The method contains a magic number: 10.00,102
+paukiatwee_budgetapp,io.budgetapp.auth,DefaultUnauthorizedHandler,buildResponse,Long Statement,The length of the statement "return Response.status(Response.Status.UNAUTHORIZED).header(HttpHeaders.AUTHORIZATION`String.format(CHALLENGE_FORMAT`prefix`realm)).entity(VALIDATION_MESSAGE).type(MediaType.APPLICATION_JSON_TYPE).build();" is 205.,19
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testIsoDate,Magic Number,The method contains a magic number: 2014,11
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testIsoDate,Magic Number,The method contains a magic number: 8,11
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testIsoDate,Magic Number,The method contains a magic number: 15,11
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testIsoDate,Magic Number,The method contains a magic number: 2016,11
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testIsoDate,Magic Number,The method contains a magic number: 2,11
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testIsoDate,Magic Number,The method contains a magic number: 29,11
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 30,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 2014,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 10,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 14,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 2014,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 10,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 15,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 30,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 2014,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 10,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testYesterday,Magic Number,The method contains a magic number: 31,32
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 52,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 2014,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 53,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 2014,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 7,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 2014,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 8,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 52,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 2014,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 12,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastWeek,Magic Number,The method contains a magic number: 31,39
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 12,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 2014,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 12,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 2014,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 31,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 2014,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 2,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 11,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 2014,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 12,47
+paukiatwee_budgetapp,io.budgetapp.util,UtilTest,testLastMonth,Magic Number,The method contains a magic number: 31,47
+paukiatwee_budgetapp,io.budgetapp.model,Recurring,toString,Long Statement,The length of the statement "return "Recurring{" + "createdAt=" + createdAt + "` recurringType="+ recurringType+ "` amount="+ amount+ "` id="+ id+ '}';" is 122.,135
+paukiatwee_budgetapp,io.budgetapp.model,Category,toString,Long Statement,The length of the statement "return "Category{" + "id=" + id + "` name='"+ name+ '\''+ "` type="+ type+ "` createdAt="+ createdAt+ "` user="+ user+ '}';" is 123.,97
+paukiatwee_budgetapp,io.budgetapp.model.form,TransactionForm,toString,Long Statement,The length of the statement "return "TransactionForm{" + "amount=" + amount + "` remark='"+ remark+ '\''+ "` transactionOn="+ transactionOn+ "` recurring="+ recurring+ "` recurringType="+ recurringType+ "` budget="+ budget+ '}';" is 199.,77
+paukiatwee_budgetapp,io.budgetapp.model.form,SignUpForm,getPassword,Magic Number,The method contains a magic number: 6,29
+paukiatwee_budgetapp,io.budgetapp.model.form.user,Password,getPassword,Magic Number,The method contains a magic number: 6,30
+paukiatwee_budgetapp,io.budgetapp.dao,CategoryDAO,findSuggestions,Long Statement,The length of the statement "Query<String> query=currentSession().createQuery("SELECT c.name FROM Category c WHERE c.user != :user AND LOWER(c.name) LIKE :q"`String.class);" is 143.,89
+paukiatwee_budgetapp,io.budgetapp.dao,RecurringDAO,findRecurrings,Long Statement,The length of the statement "return currentSession().createQuery("SELECT r FROM Recurring r JOIN r.budgetType budgetType WHERE budgetType IN (SELECT budget.budgetType FROM Budget budget WHERE budget.user = :user)").setParameter("user"`user).list();" is 219.,30
+paukiatwee_budgetapp,io.budgetapp.dao,RecurringDAO,find,Long Statement,The length of the statement "return (Recurring)currentSession().createQuery("SELECT r FROM Recurring r JOIN r.budgetType budgetType WHERE budgetType IN (FROM Budget budget WHERE budget.user = :user and r.id = :id)").setParameter("user"`user).setParameter("id"`recurringId).uniqueResult();" is 259.,40
+paukiatwee_budgetapp,io.budgetapp.dao,RecurringDAO,findByBudgetTypeId,Long Statement,The length of the statement "return currentSession().createQuery("SELECT r FROM Recurring r WHERE r.budgetType.id = :budgetTypeId").setParameter("budgetTypeId"`budgetTypeId).list();" is 152.,46
+paukiatwee_budgetapp,io.budgetapp.dao,RecurringDAO,findActiveRecurrings,Long Statement,The length of the statement "return currentSession().createQuery("SELECT r FROM Recurring r WHERE " + "(r.recurringType = :daily AND DAY(r.lastRunAt) = :yesterday) OR " + "(r.recurringType = :weekly AND WEEK(r.lastRunAt) = :lastWeek AND DAYOFWEEK(r.lastRunAt) = DAYOFWEEK(CURRENT_TIMESTAMP)) OR "+ "(r.recurringType = :monthly AND MONTH(r.lastRunAt) = :lastMonth AND DAY(r.lastRunAt) = DAY(CURRENT_TIMESTAMP)) OR "+ "(r.recurringType = :yearly AND YEAR(r.lastRunAt) = :lastYear AND MONTH(r.lastRunAt) = MONTH(CURRENT_TIMESTAMP)) OR "+ "r.lastRunAt IS NULL").setParameter("daily"`RecurringType.DAILY).setParameter("yesterday"`Util.yesterday(now)).setParameter("weekly"`RecurringType.WEEKLY).setParameter("lastWeek"`Util.lastWeek(now)).setParameter("monthly"`RecurringType.MONTHLY).setParameter("lastMonth"`Util.lastMonth(now)).setParameter("yearly"`RecurringType.YEARLY).setParameter("lastYear"`now.minusYears(1).getYear()).list();" is 901.,52
+paukiatwee_budgetapp,io.budgetapp.dao,TransactionDAO,find,Long Statement,The length of the statement "Query<Transaction> query=query("FROM Transaction t WHERE t.budget.user = :user ORDER BY t.transactionOn DESC` t.id ASC");" is 121.,44
+paukiatwee_budgetapp,io.budgetapp.dao,TransactionDAO,findByRecurring,Long Statement,The length of the statement "Query<Transaction> query=query("FROM Transaction t WHERE t.budget.user = :user AND t.recurring.id = :recurringId ORDER BY t.transactionOn DESC` t.id ASC");" is 155.,77
+paukiatwee_budgetapp,io.budgetapp.dao,TransactionDAO,findByRange,Long Statement,The length of the statement "Query<Transaction> query=query("FROM Transaction t WHERE t.budget.user = :user AND t.transactionOn BETWEEN :start AND :end ORDER BY t.transactionOn DESC` t.id ASC");" is 165.,84
+paukiatwee_budgetapp,io.budgetapp.dao,TransactionDAO,findTransactions,Complex Method,Cyclomatic complexity of the method is 8,94
+paukiatwee_budgetapp,io.budgetapp.dao,BudgetDAO,findByRange,Long Parameter List,The method has 5 parameters. ,170
+paukiatwee_budgetapp,io.budgetapp.dao,BudgetDAO,findSuggestions,Long Statement,The length of the statement "Query<String> query=currentSession().createQuery("SELECT b.name FROM Budget l WHERE b.user != :user AND LOWER(b.name) LIKE :q"`String.class);" is 141.,198
+paukiatwee_budgetapp,io.budgetapp,BudgetApplication,initialize,Long Statement,The length of the statement "bootstrap.setConfigurationSourceProvider(new SubstitutingSourceProvider(bootstrap.getConfigurationSourceProvider()`new EnvironmentVariableSubstitutor(false)));" is 159.,71
+paukiatwee_budgetapp,io.budgetapp,BudgetApplication,run,Long Statement,The length of the statement "final FinanceService financeService=new FinanceService(userDAO`budgetDAO`budgetTypeDAO`categoryDAO`transactionDAO`recurringDAO`authTokenDAO`passwordEncoder);" is 157.,93
+paukiatwee_budgetapp,io.budgetapp,BudgetApplication,run,Long Statement,The length of the statement "final RecurringJob recurringJob=new UnitOfWorkAwareProxyFactory(hibernate).create(RecurringJob.class`FinanceService.class`financeService);" is 138.,93
+paukiatwee_budgetapp,io.budgetapp,BudgetApplication,run,Long Statement,The length of the statement "TokenAuthenticator tokenAuthenticator=new UnitOfWorkAwareProxyFactory(hibernate).create(TokenAuthenticator.class`FinanceService.class`financeService);" is 150.,93
+paukiatwee_budgetapp,io.budgetapp,BudgetApplication,run,Long Statement,The length of the statement "final OAuthCredentialAuthFilter<User> authFilter=new OAuthCredentialAuthFilter.Builder<User>().setAuthenticator(tokenAuthenticator).setPrefix("Bearer").setAuthorizer(new DefaultAuthorizer()).setUnauthorizedHandler(new DefaultUnauthorizedHandler()).buildAuthFilter();" is 266.,93
+paukiatwee_budgetapp,io.budgetapp.managed,JobsManaged,start,Magic Number,The method contains a magic number: 10,22
+paukiatwee_budgetapp,io.budgetapp.application,SQLConstraintViolationExceptionMapper,toResponse,Long Statement,The length of the statement "return Response.status(Response.Status.BAD_REQUEST).entity(Collections.singletonMap("errors"`Collections.singletonMap("message"`getMessage(e)))).build();" is 153.,22
+paukiatwee_budgetapp,io.budgetapp.application,DataConstraintExceptionMapper,toResponse,Long Statement,The length of the statement "return Response.status(Response.Status.BAD_REQUEST).entity(Collections.singletonMap("errors"`Collections.singletonMap(e.getPath()`Collections.singletonList(e.getMessage())))).build();" is 183.,14
+paukiatwee_budgetapp,io.budgetapp.application,ConstraintViolationExceptionMapper,toResponse,Long Statement,The length of the statement "String name=StreamSupport.stream(cv.getPropertyPath().spliterator()`false).map(Path.Node::getName).reduce((first`second) -> second).orElseGet(() -> cv.getPropertyPath().toString());" is 181.,26

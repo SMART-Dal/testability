@@ -1,0 +1,357 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+mapzen_on-the-road,com.mapzen.turnbyturn.sample,MainActivity,configureLanguageSpinner,Long Statement,The length of the statement "ArrayAdapter<CharSequence> spinnerAdapter=ArrayAdapter.createFromResource(this`R.array.languages_array`android.R.layout.simple_spinner_item);" is 141.,65
+mapzen_on-the-road,com.mapzen.turnbyturn.sample,MainActivity,configureCostingSpinner,Long Statement,The length of the statement "ArrayAdapter<CharSequence> spinnerAdapter=ArrayAdapter.createFromResource(this`R.array.costing_types_array`android.R.layout.simple_spinner_item);" is 145.,74
+mapzen_on-the-road,com.mapzen.turnbyturn.sample,MainActivity,generateRoute,Complex Conditional,The conditional expression startLat.isEmpty() || startLng.isEmpty() || endLat.isEmpty()|| endLng.isEmpty() is complex.,167
+mapzen_on-the-road,com.mapzen.helpers,RouteEngine,onLocationChanged,Complex Conditional,The conditional expression routeState == RouteState.PRE_INSTRUCTION && route.getDistanceToNextInstruction() < ALERT_RADIUS && route.getNextInstructionIndex() != null is complex.,42
+mapzen_on-the-road,com.mapzen.helpers,RouteEngine,onLocationChanged,Long Statement,The length of the statement "if (routeState == RouteState.PRE_INSTRUCTION && route.getDistanceToNextInstruction() < ALERT_RADIUS && route.getNextInstructionIndex() != null) {" is 145.,42
+mapzen_on-the-road,com.mapzen.helpers,RouteEngine,onLocationChanged,Magic Number,The method contains a magic number: 2,42
+mapzen_on-the-road,com.mapzen.helpers,RouteEngine,onLocationChanged,Magic Number,The method contains a magic number: 4,42
+mapzen_on-the-road,com.mapzen.helpers,RouteEngine,checkApproachMilestone,Complex Conditional,The conditional expression routeState == RouteState.PRE_INSTRUCTION && Math.abs(route.getDistanceToNextInstruction() - distance) < APPROACH_RADIUS && lastMilestoneUpdate != milestone && route.getNextInstructionIndex() != null is complex.,92
+mapzen_on-the-road,com.mapzen.helpers,RouteEngine,checkApproachMilestone,Long Statement,The length of the statement "if (routeState == RouteState.PRE_INSTRUCTION && Math.abs(route.getDistanceToNextInstruction() - distance) < APPROACH_RADIUS && lastMilestoneUpdate != milestone && route.getNextInstructionIndex() != null) {" is 205.,92
+mapzen_on-the-road,com.mapzen.helpers,RouteEngine,youHaveArrived,Long Statement,The length of the statement "return getLocationForDestination() != null && snapLocation != null && snapLocation.distanceTo(getLocationForDestination()) < DESTINATION_RADIUS;" is 144.,125
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,format,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7e3b101b,79
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,formatMiles,Magic Number,The method contains a magic number: 10,108
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,formatMiles,Magic Number,The method contains a magic number: 10,108
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,formatKilometers,Magic Number,The method contains a magic number: 100,119
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,formatKilometers,Magic Number,The method contains a magic number: 10,119
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,formatDistanceInKilometers,Magic Number,The method contains a magic number: 1000,145
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,roundDownToNearestTen,Magic Number,The method contains a magic number: 10,168
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatter,roundDownToNearestTen,Magic Number,The method contains a magic number: 10,168
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelper,getBearing,Magic Number,The method contains a magic number: 360,6
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelper,getBearing,Magic Number,The method contains a magic number: 360,6
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,getZoom,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@62284954,36
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,getTurnRadius,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4ca50bb9,49
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,getDrivingSpeed,Magic Number,The method contains a magic number: 15,124
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,getDrivingSpeed,Magic Number,The method contains a magic number: 25,124
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,getDrivingSpeed,Magic Number,The method contains a magic number: 35,124
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,getDrivingSpeed,Magic Number,The method contains a magic number: 50,124
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,metersPerSecondToMilesPerHour,Long Identifier,The length of the field ONE_METER_PER_SECOND_IN_MILES_PER_HOUR is 38.,143
+mapzen_on-the-road,com.mapzen.helpers,ZoomController,milesPerHourToMetersPerSecond,Long Identifier,The length of the field ONE_METER_PER_SECOND_IN_MILES_PER_HOUR is 38.,147
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewZoomWhileWalking,Magic Number,The method contains a magic number: 15,60
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewZoomWhileWalking,Magic Number,The method contains a magic number: 15,60
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewZoomWhileBiking,Magic Number,The method contains a magic number: 15,67
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewZoomWhileBiking,Magic Number,The method contains a magic number: 15,67
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewZoomWhileDriving,Magic Number,The method contains a magic number: 15,74
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewZoomWhileDriving,Magic Number,The method contains a magic number: 15,74
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeedZero_shouldReturnZoomForZeroTo15Mph,Magic Number,The method contains a magic number: 15,91
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeedZero_shouldReturnZoomForZeroTo15Mph,Magic Number,The method contains a magic number: 15,91
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed20_shouldReturnZoomFor15To25Mph,Magic Number,The method contains a magic number: 20,99
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed20_shouldReturnZoomFor15To25Mph,Magic Number,The method contains a magic number: 14,99
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed20_shouldReturnZoomFor15To25Mph,Magic Number,The method contains a magic number: 14,99
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed30_shouldReturnZoomFor25To35Mph,Magic Number,The method contains a magic number: 30,107
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed30_shouldReturnZoomFor25To35Mph,Magic Number,The method contains a magic number: 13,107
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed30_shouldReturnZoomFor25To35Mph,Magic Number,The method contains a magic number: 13,107
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed40_shouldReturnZoomFor35To50Mph,Magic Number,The method contains a magic number: 40,115
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed40_shouldReturnZoomFor35To50Mph,Magic Number,The method contains a magic number: 12,115
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed40_shouldReturnZoomFor35To50Mph,Magic Number,The method contains a magic number: 12,115
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed50_shouldReturnZoomForOver50Mph,Magic Number,The method contains a magic number: 50,123
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed50_shouldReturnZoomForOver50Mph,Magic Number,The method contains a magic number: 11,123
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,averageDrivingSpeed50_shouldReturnZoomForOver50Mph,Magic Number,The method contains a magic number: 11,123
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewTurnRadiusWhileWalking,Magic Number,The method contains a magic number: 5,154
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewTurnRadiusWhileWalking,Magic Number,The method contains a magic number: 5,154
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewTurnRadiusWhileBiking,Magic Number,The method contains a magic number: 10,161
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewTurnRadiusWhileBiking,Magic Number,The method contains a magic number: 10,161
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewTurnRadiusWhileDriving,Magic Number,The method contains a magic number: 15,168
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,shouldReturnNewTurnRadiusWhileDriving,Magic Number,The method contains a magic number: 15,168
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeedZero_shouldReturnTurnRadiusForZeroTo15Mph,Magic Number,The method contains a magic number: 60,175
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeedZero_shouldReturnTurnRadiusForZeroTo15Mph,Magic Number,The method contains a magic number: 60,175
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed20_shouldReturnTurnRadiusFor15To25Mph,Magic Number,The method contains a magic number: 20,183
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed20_shouldReturnTurnRadiusFor15To25Mph,Magic Number,The method contains a magic number: 70,183
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed20_shouldReturnTurnRadiusFor15To25Mph,Magic Number,The method contains a magic number: 70,183
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed30_shouldReturnTurnRadiusFor25To35Mph,Magic Number,The method contains a magic number: 30,191
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed30_shouldReturnTurnRadiusFor25To35Mph,Magic Number,The method contains a magic number: 80,191
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed30_shouldReturnTurnRadiusFor25To35Mph,Magic Number,The method contains a magic number: 80,191
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed40_shouldReturnTurnRadiusFor35To50Mph,Magic Number,The method contains a magic number: 40,199
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed40_shouldReturnTurnRadiusFor35To50Mph,Magic Number,The method contains a magic number: 90,199
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed40_shouldReturnTurnRadiusFor35To50Mph,Magic Number,The method contains a magic number: 90,199
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed50_shouldReturnTurnRadiusForOver50Mph,Magic Number,The method contains a magic number: 50,207
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed50_shouldReturnTurnRadiusForOver50Mph,Magic Number,The method contains a magic number: 100,207
+mapzen_on-the-road,com.mapzen.helpers,ZoomControllerTest,currentDrivingSpeed50_shouldReturnTurnRadiusForOver50Mph,Magic Number,The method contains a magic number: 100,207
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceTenMiles_shouldReturnTenMiles,Magic Number,The method contains a magic number: 10,19
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceTenthOfMile_shouldReturnOneTenthOfAMile,Magic Number,The method contains a magic number: 10,29
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceLessThanTenthOfMile_shouldReturnFeetRoundedDown,Magic Number,The method contains a magic number: 10,34
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceLessThanTenthOfMile_shouldReturnFeetRoundedDown,Magic Number,The method contains a magic number: 2,34
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceLessThanTenFeet_shouldReturnActualNumberOfFeet,Magic Number,The method contains a magic number: 2,39
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceLessThanTenFeet_shouldReturnActualNumberOfFeet,Magic Number,The method contains a magic number: 3,39
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceLessThanTenFeet_shouldReturnNowForRealTimeFormat,Magic Number,The method contains a magic number: 2,46
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterFeetTest,distanceLessThanTenFeet_shouldReturnNowForRealTimeFormat,Magic Number,The method contains a magic number: 3,46
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onSnapLocation_shouldReturnCorrectedLocation,Magic Number,The method contains a magic number: 40.7444114,58
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onSnapLocation_shouldReturnCorrectedLocation,Magic Number,The method contains a magic number: 73.9904202,58
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onApproachInstruction_shouldNotFireForDestination,Magic Number,The method contains a magic number: 3,76
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onApproachInstruction_shouldNotFireForDestination,Magic Number,The method contains a magic number: 3,76
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldReturnDistanceToNextInstruction,Long Statement,The length of the statement "assertThat((double)listener.distanceToNextInstruction).isEqualTo(route.getRouteInstructions().get(0).getDistance()`Offset.offset(1.0));" is 135.,95
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldHaveZeroDistanceToNextInstructionAtStart,Long Statement,The length of the statement "assertThat((double)listener.distanceToNextInstruction).isEqualTo(route.getRouteInstructions().get(0).getDistance()`Offset.offset(1.0));" is 135.,109
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldCountdownDistanceToDestinationAtTurn,Long Statement,The length of the statement "assertThat((double)listener.distanceToDestination).isEqualTo((double)(route.getTotalDistance() - route.getRouteInstructions().get(0).getDistance())`Offset.offset(2.0));" is 168.,116
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldCountdownDistanceToDestinationAtTurn,Magic Number,The method contains a magic number: 2.0,116
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldCountdownInstructionDistance,Magic Number,The method contains a magic number: 40.743810,125
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldCountdownInstructionDistance,Magic Number,The method contains a magic number: 73.989053,125
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldCountdownDistanceToDestinationAlongRoute,Magic Number,The method contains a magic number: 40.743810,135
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldCountdownDistanceToDestinationAlongRoute,Magic Number,The method contains a magic number: 73.989053,135
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onUpdateDistance_shouldCountdownDistanceToDestinationAlongRoute,Magic Number,The method contains a magic number: 2.0,135
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onRouteComplete_shouldTriggerAtDestination,Magic Number,The method contains a magic number: 3,165
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onRouteComplete_shouldOnlyTriggerOnce,Magic Number,The method contains a magic number: 2,171
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onRouteComplete_shouldOnlyTriggerOnce,Magic Number,The method contains a magic number: 3,171
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onRouteComplete_shouldOnlyTriggerOnce,Magic Number,The method contains a magic number: 3,171
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onMilestoneReached_shouldNotifyAtQuarterMile,Magic Number,The method contains a magic number: 4,191
+mapzen_on-the-road,com.mapzen.helpers,RouteEngineTest,onMilestoneReached_shouldNotNotifyTwiceForQuarterMile,Magic Number,The method contains a magic number: 4,212
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterConfigTest,shouldUseDefaultLocale,Magic Number,The method contains a magic number: 1000,14
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterConfigTest,shouldUseDefaultLocale,Magic Number,The method contains a magic number: 1000,14
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterConfigTest,shouldUseGivenLocale,Magic Number,The method contains a magic number: 1000,23
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterConfigTest,shouldUseGivenLocale,Magic Number,The method contains a magic number: 1000,23
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterConfigTest,shouldUseGivenDistanceUnits,Magic Number,The method contains a magic number: 1000,32
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterConfigTest,shouldUseGivenDistanceUnits,Magic Number,The method contains a magic number: 1000,32
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Long Statement,The length of the statement "assertThat(Math.round(GeometryHelper.getBearing(entry.getValue().get(0)`entry.getValue().get(1)))).isEqualTo(Math.round(entry.getKey()));" is 137.,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.660713,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.989341,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.659816,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.98784,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 128,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.659816,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.98784,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.660202,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.987441,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 38,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.660202,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.987441,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.660397,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.987601,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 328,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.660735,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.987878,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.661404,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.988983,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 308,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.661404,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.988983,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 40.660713,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 73.989341,22
+mapzen_on-the-road,com.mapzen.helpers,GeometryHelperTest,testGetBearing,Magic Number,The method contains a magic number: 202,22
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterMetersTest,distanceTenKilometers_shouldReturnTenKilometers,Magic Number,The method contains a magic number: 10000,18
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterMetersTest,distanceIncrements_shouldHaveHundredsIncrements,Magic Number,The method contains a magic number: 10200,23
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterMetersTest,distanceOneKilometer_shouldReturnOneKilometer,Magic Number,The method contains a magic number: 1000,28
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterMetersTest,distanceOneTenthKilometer_shouldReturnOneTenth,Magic Number,The method contains a magic number: 100,33
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterMetersTest,distanceLessThan100Meters_shouldReturnMeters,Magic Number,The method contains a magic number: 99,38
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterMetersTest,distanceLessThanTenFeet_shouldReturnNowForRealTimeFormat,Magic Number,The method contains a magic number: 2,43
+mapzen_on-the-road,com.mapzen.helpers,DistanceFormatterMetersTest,distanceLessThanTenFeet_shouldReturnNowForRealTimeFormat,Magic Number,The method contains a magic number: 3,43
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Long Parameter List,The method has 5 parameters. ,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Long Statement,The length of the statement "deltaSigma=B * sinSigma * (cos2SM + (B / 4.0) * (cosSigma * (-1.0 + 2.0 * cos2SMSq) - (B / 6.0) * cos2SM * (-3.0 + 4.0 * sinSigma * sinSigma)* (-3.0 + 4.0 * cos2SMSq)));" is 169.,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 20,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 180.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 180.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 180.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 180.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 6378137.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 6356752.3142,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 2.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 16384.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 4096.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 768,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 320.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 175.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 1024.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 256.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 128.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 74.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 47.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 16.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 4.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 4.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 3.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 4.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 2.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 6.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 3.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 4.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 3.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 4.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 2.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 1.0e-12,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 180.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 2,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 180.0,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,computeDistanceAndBearing,Magic Number,The method contains a magic number: 2,46
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,distanceTo,Complex Conditional,The conditional expression mLatitude != mLat1 || mLongitude != mLon1 || dest.mLatitude != mLat2 || dest.mLongitude != mLon2 is complex.,147
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,bearingTo,Complex Conditional,The conditional expression mLatitude != mLat1 || mLongitude != mLon1 || dest.mLatitude != mLat2 || dest.mLongitude != mLon2 is complex.,173
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,setBearing,Magic Number,The method contains a magic number: 360.0f,242
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,setBearing,Magic Number,The method contains a magic number: 360.0f,242
+mapzen_on-the-road,com.mapzen.model,ValhallaLocation,setBearing,Magic Number,The method contains a magic number: 360.0f,242
+mapzen_on-the-road,com.mapzen.model,LocationTest,setLatitude_shouldSetLatitude,Magic Number,The method contains a magic number: 8,17
+mapzen_on-the-road,com.mapzen.model,LocationTest,setLatitude_shouldSetLatitude,Magic Number,The method contains a magic number: 8,17
+mapzen_on-the-road,com.mapzen.model,LocationTest,setLongitude_shouldSetLatitude,Magic Number,The method contains a magic number: 8,24
+mapzen_on-the-road,com.mapzen.model,LocationTest,setLongitude_shouldSetLatitude,Magic Number,The method contains a magic number: 8,24
+mapzen_on-the-road,com.mapzen.model,LocationTest,setBearing_shouldSetBearing,Magic Number,The method contains a magic number: 8,31
+mapzen_on-the-road,com.mapzen.model,LocationTest,setBearing_shouldSetBearing,Magic Number,The method contains a magic number: 8,31
+mapzen_on-the-road,com.mapzen.model,LocationTest,setBearing_shouldSetHasBearing,Magic Number,The method contains a magic number: 8,38
+mapzen_on-the-road,com.mapzen.model,LocationTest,distanceTo_shouldReturnThreeHundredThousand,Magic Number,The method contains a magic number: 37.5,45
+mapzen_on-the-road,com.mapzen.model,LocationTest,distanceTo_shouldReturnThreeHundredThousand,Magic Number,The method contains a magic number: 74.0,45
+mapzen_on-the-road,com.mapzen.model,LocationTest,distanceTo_shouldReturnThreeHundredThousand,Magic Number,The method contains a magic number: 1.5f,45
+mapzen_on-the-road,com.mapzen.model,LocationTest,distanceTo_shouldReturnThreeHundredThousand,Magic Number,The method contains a magic number: 40.5,45
+mapzen_on-the-road,com.mapzen.model,LocationTest,distanceTo_shouldReturnThreeHundredThousand,Magic Number,The method contains a magic number: 75.0,45
+mapzen_on-the-road,com.mapzen.model,LocationTest,distanceTo_shouldReturnThreeHundredThousand,Magic Number,The method contains a magic number: 0.5f,45
+mapzen_on-the-road,com.mapzen.model,LocationTest,distanceTo_shouldReturnThreeHundredThousand,Magic Number,The method contains a magic number: 344120.63f,45
+mapzen_on-the-road,com.mapzen.model,LocationTest,bearingTo_shouldReturnNegativeFourteen,Magic Number,The method contains a magic number: 37.5,61
+mapzen_on-the-road,com.mapzen.model,LocationTest,bearingTo_shouldReturnNegativeFourteen,Magic Number,The method contains a magic number: 74.0,61
+mapzen_on-the-road,com.mapzen.model,LocationTest,bearingTo_shouldReturnNegativeFourteen,Magic Number,The method contains a magic number: 1.5f,61
+mapzen_on-the-road,com.mapzen.model,LocationTest,bearingTo_shouldReturnNegativeFourteen,Magic Number,The method contains a magic number: 40.5,61
+mapzen_on-the-road,com.mapzen.model,LocationTest,bearingTo_shouldReturnNegativeFourteen,Magic Number,The method contains a magic number: 75.0,61
+mapzen_on-the-road,com.mapzen.model,LocationTest,bearingTo_shouldReturnNegativeFourteen,Magic Number,The method contains a magic number: 0.5f,61
+mapzen_on-the-road,com.mapzen.model,LocationTest,bearingTo_shouldReturnNegativeFourteen,Magic Number,The method contains a magic number: 14.266873f,61
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializer,serialize,Magic Number,The method contains a magic number: 360,12
+mapzen_on-the-road,com.mapzen.valhalla,HttpHandler,configure,Long Statement,The length of the statement "final OkHttpClient.Builder builder=Tls12OkHttpClientFactory.Companion.enableTls12OnPreLollipop(new OkHttpClient.Builder());" is 123.,65
+mapzen_on-the-road,com.mapzen.valhalla,HttpHandler,configure,Long Statement,The length of the statement "final OkHttpClient client=builder.addNetworkInterceptor(requestInterceptor).addNetworkInterceptor(new HttpLoggingInterceptor().setLevel(logLevel)).build();" is 155.,65
+mapzen_on-the-road,com.mapzen.valhalla,HttpHandler,configure,Long Statement,The length of the statement "this.adapter=new Retrofit.Builder().baseUrl(endpoint).client(client).addConverterFactory(ScalarsConverterFactory.create()).addConverterFactory(new Converter.Factory(){" is 167.,65
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializerTest,shouldExcludeHeadingEqualTo360,Long Statement,The length of the statement "assertThat(locationSerializer.serialize(location`JSON.Location.class`null).toString()).doesNotContain("\"heading\":360");" is 121.,37
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializerTest,shouldExcludeHeadingEqualTo360,Magic Number,The method contains a magic number: 360,37
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializerTest,shouldExcludeHeadingGreaterThan360,Long Statement,The length of the statement "assertThat(locationSerializer.serialize(location`JSON.Location.class`null).toString()).doesNotContain("\"heading\":361");" is 121.,43
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializerTest,shouldExcludeHeadingGreaterThan360,Magic Number,The method contains a magic number: 361,43
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializerTest,shouldExcludeOnlyHeadingsOutOfRange,Magic Number,The method contains a magic number: 2d,49
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializerTest,shouldExcludeOnlyHeadingsOutOfRange,Magic Number,The method contains a magic number: 3d,49
+mapzen_on-the-road,com.mapzen.valhalla,LocationSerializerTest,shouldExcludeOnlyHeadingsOutOfRange,Magic Number,The method contains a magic number: 4d,49
+mapzen_on-the-road,com.mapzen.valhalla,TransitStopTest,hasLat,Magic Number,The method contains a magic number: 40.741302,64
+mapzen_on-the-road,com.mapzen.valhalla,TransitStopTest,hasLon,Magic Number,The method contains a magic number: 73.989342,69
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTotalDistance,Magic Number,The method contains a magic number: 1541,40
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,shouldConvertTotalDistanceInMilesToMeters,Magic Number,The method contains a magic number: 0.712,45
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTotalTime,Magic Number,The method contains a magic number: 225,57
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasRouteInstructions,Magic Number,The method contains a magic number: 6,62
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectNumberOfInstructionsInBrooklyn,Magic Number,The method contains a magic number: 6,73
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 40.66071,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 73.98933,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 40.65982,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 73.98784,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 40.65925,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 73.98843,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 40.66325,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 73.99504,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 40.66732,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 73.99117,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 40.66631,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,hasCorrectTurnByTurnCoordinatesInBrooklyn,Magic Number,The method contains a magic number: 73.98909,80
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,shouldHaveStartCoordinates,Magic Number,The method contains a magic number: 40.660708,146
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,shouldHaveStartCoordinates,Magic Number,The method contains a magic number: 73.989332,146
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldStayOnLeg,Magic Number,The method contains a magic number: 40.660250,160
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldStayOnLeg,Magic Number,The method contains a magic number: 73.988105,160
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToBeginning,Magic Number,The method contains a magic number: 40.660860,179
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToBeginning,Magic Number,The method contains a magic number: 73.989602,179
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToNextLeg,Magic Number,The method contains a magic number: 40.659740,187
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToNextLeg,Magic Number,The method contains a magic number: 73.987802,187
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToNextLeg,Magic Number,The method contains a magic number: 40.659762,187
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToNextLeg,Magic Number,The method contains a magic number: 73.987821,187
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToNextLeg,Magic Number,The method contains a magic number: 40.659781,187
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSnapToNextLeg,Magic Number,The method contains a magic number: 73.987890,187
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldAdvanceToNextLegButNotSnapToThatBeginning,Magic Number,The method contains a magic number: 40.659826,202
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldAdvanceToNextLegButNotSnapToThatBeginning,Magic Number,The method contains a magic number: 73.987838,202
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldAdvanceToNextLegButNotSnapToThatBeginning,Magic Number,The method contains a magic number: 40.659847,202
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldAdvanceToNextLegButNotSnapToThatBeginning,Magic Number,The method contains a magic number: 73.987835,202
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRealizeItsLost,Magic Number,The method contains a magic number: 40.660480,216
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRealizeItsLost,Magic Number,The method contains a magic number: 73.988908,216
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRealizeItsLost,Magic Number,The method contains a magic number: 40.662046,216
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRealizeItsLost,Magic Number,The method contains a magic number: 73.987089,216
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRealizeLostTooFarFromRoute,Magic Number,The method contains a magic number: 40.658742,226
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRealizeLostTooFarFromRoute,Magic Number,The method contains a magic number: 73.987235,226
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldBeFinalDestination,Magic Number,The method contains a magic number: 40.661434,236
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldBeFinalDestination,Magic Number,The method contains a magic number: 73.989030,236
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSetBearing,Magic Number,The method contains a magic number: 40.659740,246
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldSetBearing,Magic Number,The method contains a magic number: 73.987802,246
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotGoAgainstBearing,Magic Number,The method contains a magic number: 40.660835,253
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotGoAgainstBearing,Magic Number,The method contains a magic number: 73.989436,253
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotRecalculateWhenBeginningRoute,Magic Number,The method contains a magic number: 40.662046,263
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotRecalculateWhenBeginningRoute,Magic Number,The method contains a magic number: 73.987089,263
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotRecalculateWhenBeginningRouteAndGoingTowardsPolyLine,Magic Number,The method contains a magic number: 40.662046,272
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotRecalculateWhenBeginningRouteAndGoingTowardsPolyLine,Magic Number,The method contains a magic number: 73.987089,272
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotRecalculateWhenBeginningRouteAndGoingTowardsPolyLine,Magic Number,The method contains a magic number: 40.661786,272
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldNotRecalculateWhenBeginningRouteAndGoingTowardsPolyLine,Magic Number,The method contains a magic number: 73.987561,272
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRecalculateWhenTravellingAndFarFromRoute,Magic Number,The method contains a magic number: 40.660326,282
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRecalculateWhenTravellingAndFarFromRoute,Magic Number,The method contains a magic number: 73.988687,282
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRecalculateWhenTravellingAndFarFromRoute,Magic Number,The method contains a magic number: 40.661986,282
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldRecalculateWhenTravellingAndFarFromRoute,Magic Number,The method contains a magic number: 73.987014,282
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentRotationBearing_shouldBeSameAsInstruction,Long Statement,The length of the statement "assertThat(Math.round(myroute.getCurrentRotationBearing())).isEqualTo(myroute.getRouteInstructions().get(0).getRotationBearing());" is 130.,291
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getRouteInstructions_shouldAttachCorrectLocation,Long Statement,The length of the statement "assertThat(instruction.getLocation().getLatitude()).isEqualTo(locations.get(instruction.getBeginPolygonIndex()).getLatitude());" is 127.,347
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getRouteInstructions_shouldAttachCorrectLocation,Long Statement,The length of the statement "assertThat(instruction.getLocation().getLongitude()).isEqualTo(locations.get(instruction.getBeginPolygonIndex()).getLongitude());" is 129.,347
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getRouteInstructions_shouldPopulateLastInstruction,Long Statement,The length of the statement "assertThat(instructions.get(instructions.size() - 1).getHumanTurnInstruction()).isEqualTo("You have arrived at your destination.");" is 131.,360
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getDistanceToNextInstruction_shouldbe78,Magic Number,The method contains a magic number: 40.743814,387
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getDistanceToNextInstruction_shouldbe78,Magic Number,The method contains a magic number: 73.989035,387
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getDistanceToNextInstruction_shouldbe78,Magic Number,The method contains a magic number: 233,387
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getRemainingDistanceToDestination_shouldBeFullDistance,Long Statement,The length of the statement "assertThat((double)myroute.getRemainingDistanceToDestination()).isEqualTo((double)myroute.getTotalDistance()`Offset.offset(1.0));" is 129.,397
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getRouteInstructions_shouldNotStompOnPopulatedFields,Magic Number,The method contains a magic number: 4,442
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getRouteInstructions_shouldNotStompOnPopulatedFields,Magic Number,The method contains a magic number: 4,442
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentInstruction_shouldReturnOneThatHasntyetbeencompleted,Magic Number,The method contains a magic number: 40.743814,462
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentInstruction_shouldReturnOneThatHasntyetbeencompleted,Magic Number,The method contains a magic number: 73.989035,462
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentInstruction_shouldReturnOneThatHasntyetbeencompleted,Magic Number,The method contains a magic number: 40.74277,462
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentInstruction_shouldReturnOneThatHasntyetbeencompleted,Magic Number,The method contains a magic number: 73.98660,462
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentInstruction_shouldReturnOneThatHasntyetbeencompleted,Magic Number,The method contains a magic number: 40.74463,462
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentInstruction_shouldReturnOneThatHasntyetbeencompleted,Magic Number,The method contains a magic number: 73.98525,462
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,getCurrentInstruction_shouldReturnOneThatHasntyetbeencompleted,Magic Number,The method contains a magic number: 2,462
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldUpdateAllLiveDistances,Magic Number,The method contains a magic number: 40.743814,501
+mapzen_on-the-road,com.mapzen.valhalla,RouteTest,snapToRoute_shouldUpdateAllLiveDistances,Magic Number,The method contains a magic number: 73.989035,501
+mapzen_on-the-road,com.mapzen.valhalla,TransitInfoTest,hasColor,Magic Number,The method contains a magic number: 16737049,56
+mapzen_on-the-road,com.mapzen.valhalla,HttpHandlerTest,shouldHaveLogLevel,Long Statement,The length of the statement "final HttpLoggingInterceptor.Level logLevel=(HttpLoggingInterceptor.Level)Whitebox.getInternalState(httpHandler`"logLevel");" is 124.,31
+mapzen_on-the-road,com.mapzen.valhalla,HttpHandlerTest,shouldAddHeaders,Long Statement,The length of the statement "Router router=new ValhallaRouter().setHttpHandler(httpHandler).setLocation(new double[]{40.659241`-73.983776}).setLocation(new double[]{40.671773`-73.981115});" is 159.,37
+mapzen_on-the-road,com.mapzen.valhalla,HttpHandlerTest,shouldAddHeaders,Magic Number,The method contains a magic number: 73.983776,37
+mapzen_on-the-road,com.mapzen.valhalla,HttpHandlerTest,shouldAddHeaders,Magic Number,The method contains a magic number: 73.981115,37
+mapzen_on-the-road,com.mapzen.valhalla,JSONTest,shouldThrowIfHeadingEquals360,Magic Number,The method contains a magic number: 360,22
+mapzen_on-the-road,com.mapzen.valhalla,JSONTest,shouldThrowIfHeadingIsGreaterThan360,Magic Number,The method contains a magic number: 361,30
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasCorrectDistance,Magic Number,The method contains a magic number: 161,114
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasNEdirectionAngle,Magic Number,The method contains a magic number: 315f,188
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasEdirectionAngle,Magic Number,The method contains a magic number: 270f,194
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasSEdirectionAngle,Magic Number,The method contains a magic number: 225f,200
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasSdirectionAngle,Magic Number,The method contains a magic number: 180f,206
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasSWdirectionAngle,Magic Number,The method contains a magic number: 135f,212
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasWdirectionAngle,Magic Number,The method contains a magic number: 90f,218
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasNWdirectionAngle,Magic Number,The method contains a magic number: 45f,224
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasRotationBearingAngle,Magic Number,The method contains a magic number: 360,230
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasRotationBearingAngle,Magic Number,The method contains a magic number: 129,230
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,hasBearingAngle,Magic Number,The method contains a magic number: 129,237
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,canSetCoordinates,Magic Number,The method contains a magic number: 3.3,249
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,canSetCoordinates,Magic Number,The method contains a magic number: 4.4,249
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,constructor_shouldParseDistanceInKilometers,Magic Number,The method contains a magic number: 161,315
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,constructor_shouldParseDistanceInMiles,Magic Number,The method contains a magic number: 259,321
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Complex Method,Cyclomatic complexity of the method is 8,328
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Magic Number,The method contains a magic number: 315,328
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Magic Number,The method contains a magic number: 270,328
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Magic Number,The method contains a magic number: 225,328
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Magic Number,The method contains a magic number: 180,328
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Magic Number,The method contains a magic number: 135,328
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Magic Number,The method contains a magic number: 90,328
+mapzen_on-the-road,com.mapzen.valhalla,InstructionTest,getInstructionWithDirection,Magic Number,The method contains a magic number: 45,328
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldClearLocations,Magic Number,The method contains a magic number: 3.0,161
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldClearLocations,Magic Number,The method contains a magic number: 5.0,161
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddLocations,Magic Number,The method contains a magic number: 2.0,188
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddLocations,Magic Number,The method contains a magic number: 3.0,188
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddLocations,Magic Number,The method contains a magic number: 4.0,188
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 2.0,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 3.0,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 4.0,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 2,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 5.0,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 2,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 6.0,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 3,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 7.0,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 3,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldAddWaypoints,Magic Number,The method contains a magic number: 8.0,202
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRoute,Long Statement,The length of the statement "Router router=new ValhallaRouter().setHttpHandler(httpHandler).setLocation(new double[]{40.659241`-73.983776}).setLocation(new double[]{40.671773`-73.981115});" is 159.,224
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRoute,Magic Number,The method contains a magic number: 73.983776,224
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRoute,Magic Number,The method contains a magic number: 73.981115,224
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetError,Long Statement,The length of the statement "Router router=new ValhallaRouter().setHttpHandler(httpHandler).setLocation(new double[]{40.659241`-73.983776}).setLocation(new double[]{40.671773`-73.981115});" is 159.,239
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetError,Magic Number,The method contains a magic number: 500,239
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetError,Magic Number,The method contains a magic number: 73.983776,239
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetError,Magic Number,The method contains a magic number: 73.981115,239
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetError,Magic Number,The method contains a magic number: 500,239
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetNotFound,Long Statement,The length of the statement "Router router=new ValhallaRouter().setHttpHandler(httpHandler).setLocation(new double[]{40.659241`-73.983776}).setLocation(new double[]{40.671773`-73.981115});" is 159.,253
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetNotFound,Magic Number,The method contains a magic number: 404,253
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetNotFound,Magic Number,The method contains a magic number: 73.983776,253
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetNotFound,Magic Number,The method contains a magic number: 73.981115,253
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetNotFound,Magic Number,The method contains a magic number: 404,253
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRouteNotFound,Long Statement,The length of the statement "Router router=new ValhallaRouter().setHttpHandler(httpHandler).setLocation(new double[]{40.659241`-73.983776}).setLocation(new double[]{40.671773`-73.981115});" is 159.,267
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRouteNotFound,Magic Number,The method contains a magic number: 400,267
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRouteNotFound,Magic Number,The method contains a magic number: 73.983776,267
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRouteNotFound,Magic Number,The method contains a magic number: 73.981115,267
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldGetRouteNotFound,Magic Number,The method contains a magic number: 400,267
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldStoreRawRoute,Long Statement,The length of the statement "Router router=new ValhallaRouter().setHttpHandler(httpHandler).setLocation(new double[]{40.659241`-73.983776}).setLocation(new double[]{40.671773`-73.981115});" is 159.,281
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldStoreRawRoute,Magic Number,The method contains a magic number: 73.983776,281
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,shouldStoreRawRoute,Magic Number,The method contains a magic number: 73.981115,281
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,setLocation_shouldAppendStreetAddress,Long Statement,The length of the statement "assertThat(gson.toJson(router.getJSONRequest())).contains("{\"lat\":1.0`\"lon\":2.0`" + "\"name\":\"Acme\"`" + "\"street\":\"North Main Street\"`"+ "\"city\":\"Doylestown\"`"+ "\"state\":\"PA\"}");" is 197.,326
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,setLocation_shouldIncludeHeading,Magic Number,The method contains a magic number: 180,342
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,setEndpoint_shouldUpdateBaseRequestUrl,Long Statement,The length of the statement "Router router=new ValhallaRouter().setHttpHandler(httpHandler).setLocation(new double[]{40.659241`-73.983776}).setLocation(new double[]{40.671773`-73.981115});" is 159.,350
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,setEndpoint_shouldUpdateBaseRequestUrl,Magic Number,The method contains a magic number: 73.983776,350
+mapzen_on-the-road,com.mapzen.valhalla,RouterTest,setEndpoint_shouldUpdateBaseRequestUrl,Magic Number,The method contains a magic number: 73.981115,350

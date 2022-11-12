@@ -1,0 +1,488 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,spread,Magic Number,The method contains a magic number: 16,658
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,tableSizeFor,Magic Number,The method contains a magic number: 2,678
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,tableSizeFor,Magic Number,The method contains a magic number: 4,678
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,tableSizeFor,Magic Number,The method contains a magic number: 8,678
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,tableSizeFor,Magic Number,The method contains a magic number: 16,678
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,comparableClassFor,Complex Conditional,The conditional expression ((t=ts[i]) instanceof ParameterizedType) && ((p=(ParameterizedType)t).getRawType() == Comparable.class) && (as=p.getActualTypeArguments()) != null && as.length == 1 && as[0] == c is complex.,692
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,comparableClassFor,Long Statement,The length of the statement "if (((t=ts[i]) instanceof ParameterizedType) && ((p=(ParameterizedType)t).getRawType() == Comparable.class) && (as=p.getActualTypeArguments()) != null && as.length == 1 && as[0] == c) return c;" is 193.,692
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,ConcurrentHashMapV8,Long Statement,The length of the statement "int cap=((initialCapacity >= (MAXIMUM_CAPACITY >>> 1)) ? MAXIMUM_CAPACITY : tableSizeFor(initialCapacity + (initialCapacity >>> 1) + 1));" is 137.,821
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,ConcurrentHashMapV8,Complex Conditional,The conditional expression !(loadFactor > 0.0f) || initialCapacity < 0 || concurrencyLevel <= 0 is complex.,869
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,get,Complex Conditional,The conditional expression (tab=table) != null && (n=tab.length) > 0 && (e=tabAt(tab`(n - 1) & h)) != null is complex.,920
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,get,Complex Conditional,The conditional expression (ek=e.key) == key || (ek != null && key.equals(ek)) is complex.,920
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,get,Complex Conditional,The conditional expression e.hash == h && ((ek=e.key) == key || (ek != null && key.equals(ek))) is complex.,920
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,containsValue,Complex Conditional,The conditional expression (v=p.val) == value || (v != null && value.equals(v)) is complex.,966
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,putVal,Complex Conditional,The conditional expression e.hash == hash && ((ek=e.key) == key || (ek != null && key.equals(ek))) is complex.,1010
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,putVal,Complex Method,Cyclomatic complexity of the method is 19,1010
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,putVal,Magic Number,The method contains a magic number: 2,1010
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,replaceNode,Complex Conditional,The conditional expression tab == null || (n=tab.length) == 0 || (f=tabAt(tab`i=(n - 1) & hash)) == null is complex.,1103
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,replaceNode,Complex Conditional,The conditional expression e.hash == hash && ((ek=e.key) == key || (ek != null && key.equals(ek))) is complex.,1103
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,replaceNode,Complex Conditional,The conditional expression cv == null || cv == ev || (ev != null && cv.equals(ev)) is complex.,1103
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,replaceNode,Complex Conditional,The conditional expression cv == null || cv == pv || (pv != null && cv.equals(pv)) is complex.,1103
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,replaceNode,Complex Method,Cyclomatic complexity of the method is 20,1103
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,equals,Complex Conditional,The conditional expression v == null || (v != val && !v.equals(val)) is complex.,1339
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,equals,Complex Conditional,The conditional expression (mk=e.getKey()) == null || (mv=e.getValue()) == null || (v=get(mk)) == null || (mv != v && !mv.equals(v)) is complex.,1339
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,equals,Long Statement,The length of the statement "if ((mk=e.getKey()) == null || (mv=e.getValue()) == null || (v=get(mk)) == null || (mv != v && !mv.equals(v))) return false;" is 124.,1339
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,writeObject,Magic Number,The method contains a magic number: 32,1386
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,readObject,Complex Conditional,The conditional expression q.hash == h && ((qk=q.key) == k || (qk != null && k.equals(qk))) is complex.,1430
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,readObject,Complex Method,Cyclomatic complexity of the method is 15,1430
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,readObject,Magic Number,The method contains a magic number: 2,1430
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,replace,Complex Conditional,The conditional expression key == null || oldValue == null || newValue == null is complex.,1558
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,computeIfAbsent,Complex Conditional,The conditional expression e.hash == h && ((ek=e.key) == key || (ek != null && key.equals(ek))) is complex.,1632
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,computeIfAbsent,Complex Method,Cyclomatic complexity of the method is 22,1632
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,computeIfAbsent,Magic Number,The method contains a magic number: 2,1632
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,computeIfPresent,Complex Conditional,The conditional expression e.hash == h && ((ek=e.key) == key || (ek != null && key.equals(ek))) is complex.,1735
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,computeIfPresent,Complex Method,Cyclomatic complexity of the method is 19,1735
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,computeIfPresent,Magic Number,The method contains a magic number: 2,1735
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,compute,Complex Conditional,The conditional expression e.hash == h && ((ek=e.key) == key || (ek != null && key.equals(ek))) is complex.,1825
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,compute,Complex Method,Cyclomatic complexity of the method is 26,1825
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,merge,Complex Conditional,The conditional expression key == null || value == null || remappingFunction == null is complex.,1951
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,merge,Complex Conditional,The conditional expression e.hash == h && ((ek=e.key) == key || (ek != null && key.equals(ek))) is complex.,1951
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,merge,Complex Method,Cyclomatic complexity of the method is 22,1951
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,merge,Magic Number,The method contains a magic number: 2,1951
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,initTable,Magic Number,The method contains a magic number: 2,2223
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,addCount,Complex Conditional,The conditional expression (hc=threadCounterHashCode.get()) == null || as == null || (m=as.length - 1) < 0 || (a=as[m & hc.code]) == null || !(uncontended=U.compareAndSwapLong(a`CELLVALUE`v=a.value`v + x)) is complex.,2249
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,addCount,Complex Conditional,The conditional expression sc == -1 || transferIndex <= transferOrigin || (nt=nextTable) == null is complex.,2249
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,addCount,Complex Method,Cyclomatic complexity of the method is 10,2249
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,addCount,Long Statement,The length of the statement "if ((hc=threadCounterHashCode.get()) == null || as == null || (m=as.length - 1) < 0 || (a=as[m & hc.code]) == null || !(uncontended=U.compareAndSwapLong(a`CELLVALUE`v=a.value`v + x))) {" is 185.,2249
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,addCount,Magic Number,The method contains a magic number: 2,2249
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,helpTransfer,Complex Conditional,The conditional expression nextTab == nextTable && tab == table && transferIndex > transferOrigin && (sc=sizeCtl) < -1 && U.compareAndSwapInt(this`SIZECTL`sc`sc - 1) is complex.,2295
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,helpTransfer,Long Statement,The length of the statement "if (nextTab == nextTable && tab == table && transferIndex > transferOrigin && (sc=sizeCtl) < -1 && U.compareAndSwapInt(this`SIZECTL`sc`sc - 1)) transfer(tab`nextTab);" is 166.,2295
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,tryPresize,Magic Number,The method contains a magic number: 2,2311
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,tryPresize,Magic Number,The method contains a magic number: 2,2311
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,transfer,Complex Conditional,The conditional expression i < 0 || i >= n || i + n >= nextn is complex.,2345
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,transfer,Complex Method,Cyclomatic complexity of the method is 31,2345
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,transfer,Long Method,The method has 133 lines of code.,2345
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,transfer,Magic Number,The method contains a magic number: 3,2345
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,treeifyBin,Complex Conditional,The conditional expression tab == table && (sc=sizeCtl) >= 0 && U.compareAndSwapInt(this`SIZECTL`sc`-2) is complex.,2500
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,treeifyBin,Complex Method,Cyclomatic complexity of the method is 8,2500
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,treeifyBin,Magic Number,The method contains a magic number: 2,2500
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,fullAddCount,Complex Conditional,The conditional expression (rs=counterCells) != null && (m=rs.length) > 0 && rs[j=(m - 1) & h] == null is complex.,4000
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,fullAddCount,Complex Conditional,The conditional expression cellsBusy == 0 && counterCells == as && U.compareAndSwapInt(this`CELLSBUSY`0`1) is complex.,4000
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,fullAddCount,Complex Method,Cyclomatic complexity of the method is 20,4000
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,fullAddCount,Magic Number,The method contains a magic number: 13,4000
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,fullAddCount,Magic Number,The method contains a magic number: 17,4000
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,fullAddCount,Magic Number,The method contains a magic number: 5,4000
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,fullAddCount,Magic Number,The method contains a magic number: 2,4000
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentHashMapV8,getUnsafe,Empty catch clause,The method has an empty catch block.,4127
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentLinkedHashMap,ConcurrentLinkedHashMap,Long Statement,The length of the statement "pendingNotifications=(listener == DiscardingListener.INSTANCE) ? (Queue<Node<K`V>>)DISCARDING_QUEUE : new ConcurrentLinkedQueue<Node<K`V>>();" is 141.,213
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentLinkedHashMap,ConcurrentLinkedHashMap,Magic Number,The method contains a magic number: 0.75f,213
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentLinkedHashMap,put,Complex Method,Cyclomatic complexity of the method is 8,706
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentLinkedHashMap,orderedKeySet,Magic Number,The method contains a magic number: 16,929
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentLinkedHashMap,orderedMap,Magic Number,The method contains a magic number: 16,1039
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,asEntryWeigher,Magic Number,The method contains a magic number: 2,68
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,asEntryWeigher,Magic Number,The method contains a magic number: 3,68
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,asEntryWeigher,Magic Number,The method contains a magic number: 2,68
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,asEntryWeigher,Magic Number,The method contains a magic number: 3,68
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,asEntryWeigher,Magic Number,The method contains a magic number: 3,68
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,singleton_entry,Magic Number,The method contains a magic number: 2,78
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,singleton_entry,Magic Number,The method contains a magic number: 3,78
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,singleton_entry,Magic Number,The method contains a magic number: 2,78
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,singleton_entry,Magic Number,The method contains a magic number: 3,78
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,singleton,Magic Number,The method contains a magic number: 2,85
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,singleton,Magic Number,The method contains a magic number: 3,85
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,byteArray,Magic Number,The method contains a magic number: 3,92
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,iterable,Long Statement,The length of the statement "when(iterable.iterator()).thenReturn(ImmutableList.<Integer>of().iterator()).thenReturn(ImmutableList.<Integer>of(1`2`3).iterator());" is 133.,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,iterable,Magic Number,The method contains a magic number: 2,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,iterable,Magic Number,The method contains a magic number: 3,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,iterable,Magic Number,The method contains a magic number: 2,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,iterable,Magic Number,The method contains a magic number: 3,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,iterable,Magic Number,The method contains a magic number: 3,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,iterable,Magic Number,The method contains a magic number: 3,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,collection,Magic Number,The method contains a magic number: 2,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,collection,Magic Number,The method contains a magic number: 3,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,collection,Magic Number,The method contains a magic number: 3,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,list,Magic Number,The method contains a magic number: 2,118
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,list,Magic Number,The method contains a magic number: 3,118
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,list,Magic Number,The method contains a magic number: 3,118
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,set,Magic Number,The method contains a magic number: 2,125
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,set,Magic Number,The method contains a magic number: 3,125
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,set,Magic Number,The method contains a magic number: 3,125
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,map,Magic Number,The method contains a magic number: 2,132
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,map,Magic Number,The method contains a magic number: 2,132
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,map,Magic Number,The method contains a magic number: 2,132
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,map,Magic Number,The method contains a magic number: 3,132
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,map,Magic Number,The method contains a magic number: 3,132
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,map,Magic Number,The method contains a magic number: 4,132
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,map,Magic Number,The method contains a magic number: 3,132
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_withNegativeWeight,Magic Number,The method contains a magic number: 2,139
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_withZeroWeight,Magic Number,The method contains a magic number: 2,148
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_withNoOverflow,Magic Number,The method contains a magic number: 2,157
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_withNoOverflow,Magic Number,The method contains a magic number: 2,157
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_withNoOverflow,Magic Number,The method contains a magic number: 3,157
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_withNoOverflow,Magic Number,The method contains a magic number: 3,157
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_withNoOverflow,Magic Number,The method contains a magic number: 2,157
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put,Magic Number,The method contains a magic number: 2,172
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put,Magic Number,The method contains a magic number: 3,172
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put,Magic Number,The method contains a magic number: 3L,172
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_sameWeight,Magic Number,The method contains a magic number: 2,179
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_sameWeight,Magic Number,The method contains a magic number: 3,179
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_sameWeight,Magic Number,The method contains a magic number: 2,179
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_sameWeight,Magic Number,The method contains a magic number: 3,179
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_sameWeight,Magic Number,The method contains a magic number: 2,179
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_sameWeight,Magic Number,The method contains a magic number: 4L,179
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_changeWeight,Magic Number,The method contains a magic number: 2,188
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_changeWeight,Magic Number,The method contains a magic number: 3,188
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_changeWeight,Magic Number,The method contains a magic number: 2,188
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_changeWeight,Magic Number,The method contains a magic number: 3,188
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_changeWeight,Magic Number,The method contains a magic number: 4,188
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_changeWeight,Magic Number,The method contains a magic number: 2,188
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,put_changeWeight,Magic Number,The method contains a magic number: 5L,188
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_sameWeight,Magic Number,The method contains a magic number: 2,197
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_sameWeight,Magic Number,The method contains a magic number: 3,197
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_sameWeight,Magic Number,The method contains a magic number: 2,197
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_sameWeight,Magic Number,The method contains a magic number: 3,197
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_sameWeight,Magic Number,The method contains a magic number: 2,197
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_sameWeight,Magic Number,The method contains a magic number: 4L,197
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_changeWeight,Magic Number,The method contains a magic number: 2,206
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_changeWeight,Magic Number,The method contains a magic number: 3,206
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_changeWeight,Magic Number,The method contains a magic number: 2,206
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_changeWeight,Magic Number,The method contains a magic number: 3,206
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_changeWeight,Magic Number,The method contains a magic number: 4,206
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_changeWeight,Magic Number,The method contains a magic number: 2,206
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replace_changeWeight,Magic Number,The method contains a magic number: 5L,206
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 2,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 3,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 2,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 3,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 4,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 5,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 6,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 2,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_sameWeight,Magic Number,The method contains a magic number: 4L,215
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 2,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 3,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 2,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 3,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 2,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 3,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 4,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 2,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_changeWeight,Magic Number,The method contains a magic number: 5L,224
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_fails,Magic Number,The method contains a magic number: 2,233
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_fails,Magic Number,The method contains a magic number: 3,233
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_fails,Magic Number,The method contains a magic number: 4,233
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_fails,Magic Number,The method contains a magic number: 5,233
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_fails,Magic Number,The method contains a magic number: 2,233
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,replaceConditionally_fails,Magic Number,The method contains a magic number: 4L,233
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,remove,Magic Number,The method contains a magic number: 2,242
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,remove,Magic Number,The method contains a magic number: 3,242
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,remove,Magic Number,The method contains a magic number: 2,242
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,remove,Magic Number,The method contains a magic number: 3,242
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally,Magic Number,The method contains a magic number: 2,251
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally,Magic Number,The method contains a magic number: 3,251
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally,Magic Number,The method contains a magic number: 2,251
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally,Magic Number,The method contains a magic number: 3,251
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally_fails,Magic Number,The method contains a magic number: 2,260
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally_fails,Magic Number,The method contains a magic number: 3,260
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally_fails,Magic Number,The method contains a magic number: 2,260
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally_fails,Magic Number,The method contains a magic number: 3,260
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally_fails,Magic Number,The method contains a magic number: 2,260
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,removeConditionally_fails,Magic Number,The method contains a magic number: 4L,260
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,clear,Magic Number,The method contains a magic number: 2,269
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,WeigherTest,clear,Magic Number,The method contains a magic number: 3,269
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,AbstractTest,newGuardedWeightedMap,Long Statement,The length of the statement "return new Builder<K`Iterable<V>>().maximumWeightedCapacity(capacity()).weigher(Weighers.<V>iterable()).listener(guardingListener).build();" is 139.,184
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,equalsAndHashCodeFails,Magic Number,The method contains a magic number: 50,131
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,equalsAndHashCodeFails,Magic Number,The method contains a magic number: 50,131
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,equalsAndHashCodeFails,Magic Number,The method contains a magic number: 100,131
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,put_withNullKey,Magic Number,The method contains a magic number: 2,216
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,put,Magic Number,The method contains a magic number: 2,231
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,put,Magic Number,The method contains a magic number: 3,231
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,put,Magic Number,The method contains a magic number: 2,231
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,put,Magic Number,The method contains a magic number: 3,231
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,putAll_whenPopulated,Magic Number,The method contains a magic number: 50,250
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,putIfAbsent_withNullKey,Magic Number,The method contains a magic number: 2,258
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,remove,Magic Number,The method contains a magic number: 2,293
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,remove,Magic Number,The method contains a magic number: 2,293
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,remove,Magic Number,The method contains a magic number: 2,293
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,removeConditionally_withNullKey,Magic Number,The method contains a magic number: 2,304
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,removeConditionally_whenEmpty,Magic Number,The method contains a magic number: 2,319
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,removeConditionally,Magic Number,The method contains a magic number: 2,324
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,removeConditionally,Magic Number,The method contains a magic number: 2,324
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,removeConditionally,Magic Number,The method contains a magic number: 2,324
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,removeConditionally,Magic Number,The method contains a magic number: 2,324
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replace_withNullKey,Magic Number,The method contains a magic number: 2,335
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replace_whenEmpty,Magic Number,The method contains a magic number: 2,350
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replace_whenPopulated,Magic Number,The method contains a magic number: 2,355
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replace_whenPopulated,Magic Number,The method contains a magic number: 3,355
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replace_whenPopulated,Magic Number,The method contains a magic number: 2,355
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replace_whenPopulated,Magic Number,The method contains a magic number: 3,355
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_withNullKey,Magic Number,The method contains a magic number: 2,363
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_withNullKey,Magic Number,The method contains a magic number: 3,363
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_withNullOldValue,Magic Number,The method contains a magic number: 3,368
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_withNullNewValue,Magic Number,The method contains a magic number: 2,373
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_withNullKeyAndOldValue,Magic Number,The method contains a magic number: 3,378
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_withNullKeyAndNewValue,Magic Number,The method contains a magic number: 2,383
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenEmpty,Magic Number,The method contains a magic number: 2,398
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenEmpty,Magic Number,The method contains a magic number: 3,398
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenPopulated,Magic Number,The method contains a magic number: 2,403
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenPopulated,Magic Number,The method contains a magic number: 3,403
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenPopulated,Magic Number,The method contains a magic number: 4,403
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenPopulated,Magic Number,The method contains a magic number: 2,403
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenPopulated,Magic Number,The method contains a magic number: 3,403
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,replaceConditionally_whenPopulated,Magic Number,The method contains a magic number: 3,403
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,toString_whenPopulated,Magic Number,The method contains a magic number: 10,417
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,serialize_withCustomSettings,Long Statement,The length of the statement "Map<Integer`Collection<Integer>> map=new Builder<Integer`Collection<Integer>>().listener(new SerializableEvictionListener()).weigher(Weighers.<Integer>collection()).maximumWeightedCapacity(500).initialCapacity(100).concurrencyLevel(32).build();" is 244.,438
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,serialize_withCustomSettings,Magic Number,The method contains a magic number: 500,438
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,serialize_withCustomSettings,Magic Number,The method contains a magic number: 100,438
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,serialize_withCustomSettings,Magic Number,The method contains a magic number: 32,438
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,serialize_withCustomSettings,Magic Number,The method contains a magic number: 2,438
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,entrySet_addIsSupported,Magic Number,The method contains a magic number: 2,645
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,entrySet_addIsSupported,Magic Number,The method contains a magic number: 2,645
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,writeThroughEntry,Magic Number,The method contains a magic number: 2,700
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,writeThroughEntry,Magic Number,The method contains a magic number: 3,700
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,ConcurrentMapTest,writeThroughEntry,Magic Number,The method contains a magic number: 3,700
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,IsValidConcurrentLinkedHashMap,checkLinks,Long Statement,The length of the statement "builder.expectThat("WeightedSize != link weights" + " [" + map.weightedSize() + " vs. "+ weightedSize+ "]"+ " {size: "+ map.size()+ " vs. "+ seen.size()+ "}"`map.weightedSize()`is(weightedSize));" is 195.,106
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,IsValidConcurrentLinkedHashMap,checkNode,Long Statement,The length of the statement "builder.expectThat("weight"`((WeightedValue)node.get()).weight`is(((EntryWeigher)map.weigher).weightOf(node.key`node.getValue())));" is 131.,125
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,capacity_increase,Magic Number,The method contains a magic number: 2,81
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,capacity_decrease,Magic Number,The method contains a magic number: 2,103
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,checkDecreasedCapacity,Long Statement,The length of the statement "ConcurrentLinkedHashMap<Integer`Integer> map=new Builder<Integer`Integer>().maximumWeightedCapacity(capacity()).listener(listener).build();" is 139.,113
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_alwaysDiscard,Long Statement,The length of the statement "ConcurrentLinkedHashMap<Integer`Integer> map=new Builder<Integer`Integer>().maximumWeightedCapacity(0).listener(listener).build();" is 130.,152
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_alwaysDiscard,Magic Number,The method contains a magic number: 100,152
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_alwaysDiscard,Magic Number,The method contains a magic number: 100,152
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict,Long Statement,The length of the statement "ConcurrentLinkedHashMap<Integer`Integer> map=new Builder<Integer`Integer>().maximumWeightedCapacity(10).listener(listener).build();" is 131.,164
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict,Magic Number,The method contains a magic number: 10,164
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict,Magic Number,The method contains a magic number: 20,164
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict,Magic Number,The method contains a magic number: 10,164
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict,Magic Number,The method contains a magic number: 10L,164
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict,Magic Number,The method contains a magic number: 10,164
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Long Statement,The length of the statement "ConcurrentLinkedHashMap<Integer`Collection<Integer>> map=builder.weigher(Weighers.<Integer>collection()).maximumWeightedCapacity(10).build();" is 141.,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 10,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 2,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 2,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 3,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 4,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 5,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 6,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 7,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 3,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 8,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 9,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 10,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 10L,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 4,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 11,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 9L,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 5,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 12,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 13,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 14,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 15,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 16,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 17,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 18,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 19,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 20,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_weighted,Magic Number,The method contains a magic number: 10L,178
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_maximumCapacity,Magic Number,The method contains a magic number: 2,202
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_maximumCapacity,Magic Number,The method contains a magic number: 2,202
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_maximumCapacity,Magic Number,The method contains a magic number: 3,202
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_maximumCapacity,Magic Number,The method contains a magic number: 2,202
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_maximumCapacity,Magic Number,The method contains a magic number: 3,202
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_alreadyRemoved,Long Statement,The length of the statement "final ConcurrentLinkedHashMap<Integer`Integer> map=new Builder<Integer`Integer>().maximumWeightedCapacity(1).listener(listener).build();" is 136.,216
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 10,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 10,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 2,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 3,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 4,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 5,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 6,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 7,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 8,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 9,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 2,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 3,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 4,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 5,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 6,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 7,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 8,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 9,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 2,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 10,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 11,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 12,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 6,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 7,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 8,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 9,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 2,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 10,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 11,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 12,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 6,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 7,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 8,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 9,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 2,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 10,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 11,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 12,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 6,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 7,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 8,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 13,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 14,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 15,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 2,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 10,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 11,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 12,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 6,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 7,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 8,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 13,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 14,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_lru,Magic Number,The method contains a magic number: 15,262
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_efficiency,Long Statement,The length of the statement "Map<String`String> expected=new CacheFactory().maximumCapacity((int)capacity()).makeCache(CacheType.LinkedHashMap_Lru_Sync);" is 124.,313
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_efficiency,Magic Number,The method contains a magic number: 10,313
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,evict_efficiency,Magic Number,The method contains a magic number: 10,313
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingKeySetWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,609
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingKeySetWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,609
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingKeySetWithLimit_lessThan,Magic Number,The method contains a magic number: 2,617
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingKeySetWithLimit_snapshot,Magic Number,The method contains a magic number: 2,625
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingKeySetWithLimit_snapshot,Magic Number,The method contains a magic number: 2,625
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingKeySetWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,671
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingKeySetWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,671
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingKeySetWithLimit_lessThan,Magic Number,The method contains a magic number: 2,680
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingKeySetWithLimit_snapshot,Magic Number,The method contains a magic number: 2,689
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingKeySetWithLimit_snapshot,Magic Number,The method contains a magic number: 2,689
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingMapWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,733
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingMapWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,733
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingMapWithLimit_lessThan,Magic Number,The method contains a magic number: 2,741
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingMapWithLimit_snapshot,Magic Number,The method contains a magic number: 2,749
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,ascendingMapWithLimit_snapshot,Magic Number,The method contains a magic number: 2,749
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingMapWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,794
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingMapWithLimit_greaterThan,Magic Number,The method contains a magic number: 2,794
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingMapWithLimit_lessThan,Magic Number,The method contains a magic number: 2,803
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingMapWithLimit_snapshot,Magic Number,The method contains a magic number: 2,812
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,EvictionTest,descendingMapWithLimit_snapshot,Magic Number,The method contains a magic number: 2,812
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,Profile,Profile,Long Statement,The length of the statement "map=new CacheFactory().concurrencyLevel(NUM_THREADS).initialCapacity(MAX_SIZE).maximumCapacity(MAX_SIZE).makeCache(type);" is 121.,42
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,LinkedDequeTest,contains_whenFound,Magic Number,The method contains a magic number: 2,85
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,LinkedDequeTest,moveToFront_middle,Magic Number,The method contains a magic number: 2,103
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,LinkedDequeTest,moveToBack_middle,Magic Number,The method contains a magic number: 2,124
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,IsReserializable,matchesSafely,Long Statement,The length of the statement "builder.append(((BoundedEntryWeigher<?`?>)original.weigher).weigher.getClass()`((BoundedEntryWeigher<?`?>)copy.weigher).weigher.getClass());" is 140.,62
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,IsReserializable,matchesSafely,Long Statement,The length of the statement "return builder.append(valid().matches(original)`true).append(valid().matches(copy)`true).append(data.isEmpty()`emptyMap().matches(original)).append(data.isEmpty()`emptyMap().matches(copy)).append(original.weigher.getClass()`copy.weigher.getClass()).append(original.listener.getClass()`copy.listener.getClass()).append(original.concurrencyLevel`copy.concurrencyLevel).append(original.hashCode()`copy.hashCode()).append(original.capacity()`copy.capacity()).append(original`data).isEquals();" is 488.,62
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,TestStatusListener,log,Magic Number,The method contains a magic number: 40,81
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,BuilderTest,initialCapacity_withNegative,Magic Number,The method contains a magic number: 100,46
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,BuilderTest,initialCapacity_withCustom,Magic Number,The method contains a magic number: 100,57
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,BuilderTest,initialCapacity_withCustom,Magic Number,The method contains a magic number: 100,57
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,BuilderTest,maximumWeightedCapacity_withNegative,Magic Number,The method contains a magic number: 100,63
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,BuilderTest,concurrencyLevel_withNegative,Magic Number,The method contains a magic number: 100,84
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,BuilderTest,concurrencyLevel_withCustom,Magic Number,The method contains a magic number: 32,94
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,BuilderTest,concurrencyLevel_withCustom,Magic Number,The method contains a magic number: 32,94
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,MultiThreadedTest,concurrency,Long Statement,The length of the statement "final ConcurrentLinkedHashMap<Integer`Integer> map=builder.maximumWeightedCapacity(capacity()).concurrencyLevel(threads).build();" is 129.,80
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,MultiThreadedTest,concurrency,Magic Number,The method contains a magic number: 100,80
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,MultiThreadedTest,weightedConcurrency,Long Statement,The length of the statement "final ConcurrentLinkedHashMap<Integer`List<Integer>> map=builder.weigher(Weighers.<Integer>list()).maximumWeightedCapacity(threads).concurrencyLevel(threads).build();" is 166.,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,MultiThreadedTest,weightedConcurrency,Magic Number,The method contains a magic number: 10,99
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,MultiThreadedTest,call,Magic Number,The method contains a magic number: 10,113
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,MultiThreadedTest,run,Magic Number,The method contains a magic number: 10,115
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap,MultiThreadedTest,handleTimout,Magic Number,The method contains a magic number: 10,340
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Complex Method,Cyclomatic complexity of the method is 12,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 2,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 3,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 0.75f,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 16,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 4,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 5,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 6,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 7,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 8,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 16,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 9,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 256,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 10,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 4096,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Magic Number,The method contains a magic number: 11,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,make_map,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@62197085,31
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,benchmark,Long Parameter List,The method has 6 parameters. ,94
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Long Statement,The length of the statement "System.out.println("Usage: PerfHashBenchmark" + " read%[0=churn test]" + " thread-min thread-max thread-increment"+ " hash_table_size"+ " impl[All=0`Hashtable=1`HerlihyHashSet=2`CHM_16=3`CHM_256=4`CHM_4096=5`NonBlockingHashMap=6`LHM=7`CLHM_16=8`CLHM_256=9`CLHM_4096=10]");" is 272.,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Long Statement,The length of the statement "System.out.print(_read_ratio + "% gets` " + ((100 - _read_ratio) >> 1)+ "% inserts` "+ ((100 - _read_ratio) >> 1)+ "% removes` "+ "table_size="+ _table_size);" is 158.,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100000,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 2,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100000,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 3,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100000,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 4,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100000000,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 5,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 20,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 20,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 100,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 1024,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 1024,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 64,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 17,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 123,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 32,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 6,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 2,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 2,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,main,Magic Number,The method contains a magic number: 7,111
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 4,180
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 6,180
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Complex Method,Cyclomatic complexity of the method is 18,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 100,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 1000L,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 100,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 2,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_till_stable,Magic Number,The method contains a magic number: 100,193
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Complex Method,Cyclomatic complexity of the method is 15,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Empty catch clause,The method has an empty catch block.,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 1024,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 1024,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 3,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 15,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 15,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 1024,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 1024,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 1024,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 1024,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 100,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_once,Magic Number,The method contains a magic number: 2000,310
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run,Empty catch clause,The method has an empty catch block.,381
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_churn,Magic Number,The method contains a magic number: 10,413
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_normal,Magic Number,The method contains a magic number: 20,440
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_normal,Magic Number,The method contains a magic number: 20,467
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_normal,Magic Number,The method contains a magic number: 20,494
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,PerfHashBenchmark,run_normal,Magic Number,The method contains a magic number: 20,521
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,CacheBenchmark,benchmark,Long Parameter List,The method has 5 parameters. ,51
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,CacheBenchmark,init,Long Statement,The length of the statement "map=new CacheFactory().concurrencyLevel(concurrencyLevel).initialCapacity(initialCapacity).maximumCapacity(maximumCapacity).makeCache(cache);" is 141.,73
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.benchmark,CacheBenchmark,getInfo,Long Statement,The length of the statement "return (cache.policy() == Policy.UNBOUNDED) ? "size/capacity: " + map.size() + "/"+ maximumCapacity : "size: " + map.size();" is 124.,106
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,SkewedLatestGenerator,main,Magic Number,The method contains a magic number: 1000,48
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ScrambledZipfianGenerator,FNVhash64,Magic Number,The method contains a magic number: 8,122
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ScrambledZipfianGenerator,FNVhash64,Magic Number,The method contains a magic number: 0x00ff,122
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ScrambledZipfianGenerator,FNVhash64,Magic Number,The method contains a magic number: 8,122
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ScrambledZipfianGenerator,main,Magic Number,The method contains a magic number: 10000,144
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ScrambledZipfianGenerator,main,Magic Number,The method contains a magic number: 1000000,144
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ZipfianGenerator,ZipfianGenerator,Magic Number,The method contains a magic number: 2,144
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ZipfianGenerator,ZipfianGenerator,Magic Number,The method contains a magic number: 2.0,144
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ZipfianGenerator,nextLong,Long Statement,The length of the statement "System.err.println("WARNING: Recomputing Zipfian distribtion. This is slow and should be avoided. (itemcount=" + itemcount + " countforzeta="+ countforzeta+ ")");" is 162.,256
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ZipfianGenerator,nextLong,Magic Number,The method contains a magic number: 2.0,256
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ZipfianGenerator,nextLong,Magic Number,The method contains a magic number: 2.0,256
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.generator,ZipfianGenerator,nextLong,Magic Number,The method contains a magic number: 0.5,256
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,ProductionMap,ProductionMap,Magic Number,The method contains a magic number: 0.75f,80
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,ProductionMap,remove,Complex Conditional,The conditional expression (node != null) && node.value.equals(value) && data.remove(key`new Identity(node)) is complex.,253
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,BoundedLinkedHashMap,BoundedLinkedHashMap,Magic Number,The method contains a magic number: 0.75f,46
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,CacheConcurrentLIRS,getHash,Magic Number,The method contains a magic number: 20,213
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,CacheConcurrentLIRS,getHash,Magic Number,The method contains a magic number: 12,213
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,CacheConcurrentLIRS,getHash,Magic Number,The method contains a magic number: 7,213
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,CacheConcurrentLIRS,getHash,Magic Number,The method contains a magic number: 4,213
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,CacheConcurrentLIRS,newInstance,Magic Number,The method contains a magic number: 16,290
+ben-manes_concurrentlinkedhashmap,com.googlecode.concurrentlinkedhashmap.caches,CacheConcurrentLIRS,newInstance,Magic Number,The method contains a magic number: 100,290

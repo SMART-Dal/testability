@@ -1,0 +1,39 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json,JsonFactory,create,Long Statement,The length of the statement "return new FactoryOptions(Option.FIELD_ACCESS`Option.VALUES_UTF8).option(Option.COLLECTION_CLASS`ArrayList.class).create();" is 123.,27
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json,TestParser1,testParser01,Magic Number,The method contains a magic number: 3,31
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json,TestParser1,testParser02,Long Statement,The length of the statement "ObjectMapper objectMapper=JsonFactory.option(Option.FIELD_ACCESS`Option.VALUES_ASCII).option(Option.COLLECTION_CLASS`LinkedList.class).create();" is 144.,44
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json,TestParser1,testParser02,Magic Number,The method contains a magic number: 3,44
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json,TestParser1,testParser03,Magic Number,The method contains a magic number: 3,58
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json,TestParser1,testParser04,Magic Number,The method contains a magic number: 1.2,72
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json,TestParser1,loadTest,Magic Number,The method contains a magic number: 10_000_000,84
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Phield,Phield,Long Statement,The length of the statement "collectionParameterClazz2=(actualTypeArguments.length == 2) ? ClassUtils.reflect((Class<?>)actualTypeArguments[1]) : null;" is 122.,30
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Phield,Phield,Magic Number,The method contains a magic number: 2,30
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Phield,getType,Complex Method,Cyclomatic complexity of the method is 12,113
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,findEndQuote,Magic Number,The method contains a magic number: 0x22,28
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,findEndQuote,Magic Number,The method contains a magic number: 0x5c,28
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,findEndQuoteAndHash,Magic Number,The method contains a magic number: 0x22,39
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,findEndQuoteAndHash,Magic Number,The method contains a magic number: 0x5c,39
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,findEndQuoteAndHash,Magic Number,The method contains a magic number: 31,39
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,findEndQuoteUTF8,Magic Number,The method contains a magic number: 0x22,52
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,findEndQuoteUTF8,Magic Number,The method contains a magic number: 0x5c,52
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,seekBackUtf8Boundary,Complex Conditional,The conditional expression currentChar >> 5 == 0b110 || currentChar >> 4 == 0b1110 || currentChar >> 5 == 0b11110 is complex.,66
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,seekBackUtf8Boundary,Magic Number,The method contains a magic number: 5,66
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,seekBackUtf8Boundary,Magic Number,The method contains a magic number: 4,66
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Utf8Utils,seekBackUtf8Boundary,Magic Number,The method contains a magic number: 5,66
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.util,Clazz,Clazz,Magic Number,The method contains a magic number: 32,17
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseMember,Complex Conditional,The conditional expression (phield.isCollection || phield.isArray) && (phield.collectionClass == null && collectionClass != null) is complex.,113
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseValue,Complex Conditional,The conditional expression (b > '1' - 1 && b < '9' + 1) || b == HYPHEN is complex.,146
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseValue,Complex Method,Cyclomatic complexity of the method is 11,146
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseValue,Long Statement,The length of the statement "return skipCommaOrUptoCurly(((context.holderType & Types.INTEGRAL_TYPE) > 0) ? parseInteger(bufferIndex - 1`context) : parseDecimal(bufferIndex - 1`context));" is 158.,146
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseArray,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2dd3d39d,188
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseString,Magic Number,The method contains a magic number: 2,213
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseMemberHashOnly,Magic Number,The method contains a magic number: 2,247
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseAsciiString,Magic Number,The method contains a magic number: 2,275
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseInteger,Magic Number,The method contains a magic number: 10,303
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseDecimal,Complex Method,Cyclomatic complexity of the method is 11,340
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseDecimal,Magic Number,The method contains a magic number: 10,340
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseDecimal,Magic Number,The method contains a magic number: 10,340
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseDecimal,Magic Number,The method contains a magic number: 10,340
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseDecimal,Magic Number,The method contains a magic number: 10,340
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,parseDecimal,Magic Number,The method contains a magic number: 10,340
+brettwooldridge_HikariJSON,com.zaxxer.hikari.json.serializer,FieldBasedJsonMapper,setMember,Complex Method,Cyclomatic complexity of the method is 14,408

@@ -1,0 +1,630 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+sdbg_sdbg,com.github.sdbg.integration.jdt,JDTSourceLookupExtensions,isJavaProject,Long Statement,The length of the statement "return project != null && project.exists() && project.isAccessible() && project.hasNature("org.eclipse.jdt.core.javanature");" is 125.,34
+sdbg_sdbg,com.github.sdbg.integration.jdt,JDTBreakpointPathResolver,getLocalPath,Complex Conditional,The conditional expression bp.getMarker() != null && bp.getMarker().getResource() != null && bp.getMarker().getResource().getType() == IResource.FILE is complex.,43
+sdbg_sdbg,com.github.sdbg.integration.jdt,JDTBreakpointPathResolver,getLocalPath,Long Statement,The length of the statement "if (bp.getMarker() != null && bp.getMarker().getResource() != null && bp.getMarker().getResource().getType() == IResource.FILE) {" is 129.,43
+sdbg_sdbg,com.github.sdbg.integration.jdt,JDTSourcePathComputerDelegate,computeSourceContainers,Long Statement,The length of the statement "IRuntimeClasspathEntry[] resolved=new JDTSourcePathProvider().resolveClasspath(new JDTSourcePathProvider().computeUnresolvedClasspath(configuration)`configuration);" is 164.,15
+sdbg_sdbg,com.github.sdbg.integration.jdt,ChromeDebugLaunch,launch,Complex Conditional,The conditional expression project == null || url == null || mode == null is complex.,28
+sdbg_sdbg,com.github.sdbg.integration.jdt,ChromeDebugLaunch,chooseConfig,Long Statement,The length of the statement "ElementListSelectionDialog dialog=new ElementListSelectionDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell()`labelProvider);" is 144.,60
+sdbg_sdbg,com.github.sdbg.integration.jdt,ChromeDebugLaunch,createConfig,Long Statement,The length of the statement "ILaunchConfigurationWorkingCopy launchConfig=type.newInstance(null`manager.generateLaunchConfigurationName(project.getName()));" is 127.,77
+sdbg_sdbg,com.github.sdbg.integration.jdt,ChromeDebugLaunch,getAssociatedConfigs,Long Statement,The length of the statement "ILaunchConfiguration[] configs=DebugPlugin.getDefault().getLaunchManager().getLaunchConfigurations(getConfigurationType());" is 123.,116
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,isValueStringComputedByLogicalStructure,Complex Conditional,The conditional expression value instanceof ISDBGValue && !(value instanceof GWTSDMValue) && !isExcludedFromLogicalStructure(value) is complex.,235
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,fetchAllJavaFields,Complex Conditional,The conditional expression !name.equals("$H") && !isGWTInit(name) && !isGWTClass(name)&& !isGWTCastableTypeMap(name)&& !(var.getValue() != null && ((ISDBGValue)var.getValue()).isFunction()) is complex.,261
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,fetchAllJavaFields,Long Statement,The length of the statement "if (!name.equals("$H") && !isGWTInit(name) && !isGWTClass(name)&& !isGWTCastableTypeMap(name)&& !(var.getValue() != null && ((ISDBGValue)var.getValue()).isFunction())) {" is 169.,261
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,getLong,Complex Conditional,The conditional expression !name.equals("h") && !name.equals("m") && !name.equals("l") is complex.,287
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,getLong,Complex Method,Cyclomatic complexity of the method is 8,287
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,getLong,Magic Number,The method contains a magic number: 4,287
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,getLong,Magic Number,The method contains a magic number: 44,287
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,getLong,Magic Number,The method contains a magic number: 22,287
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,isExcludedFromLogicalStructure,Long Identifier,The length of the identifier excludeFromLogicalStructureStr is 30.,346
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,removeGWTSuffix,Magic Number,The method contains a magic number: 3,390
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,removeGWTSuffix,Magic Number,The method contains a magic number: 4,390
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt,GWTSDMStructureType,removeGWTSuffix,Magic Number,The method contains a magic number: 3,390
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMBuilder,fullBuild,Long Statement,The length of the statement "marker.setAttribute(IMarker.MESSAGE`"GWT SDM recompilation failed for module " + codeServerAPI.getModule() + ". Check your Code Server log ("+ logUri.toASCIIString()+ ").");" is 173.,54
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMBuilder,fullBuild,Long Statement,The length of the statement "SDBGDebugCorePlugin.logInfo("Code Server " + codeServerAPI.getCodeServerUri().toString() + " seems to be down. Skipping GWT SDM recompilation for module "+ codeServerAPI.getModule());" is 183.,54
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMBuilder,getCodeServerAPI,Long Statement,The length of the statement "return new GWTSDMCodeServerAPI(new URI("http"`null`properties.getCodeServerHost()`properties.getCodeServerPort()`"/"`null`null)`moduleName);" is 140.,109
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMBuilder,notifyBuildCompleted,Complex Conditional,The conditional expression getProject() != null && tracker.getProject() != null && getProject().getName().equals(tracker.getProject().getName()) is complex.,126
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMBuilder,notifyBuildCompleted,Long Statement,The length of the statement "if (getProject() != null && tracker.getProject() != null && getProject().getName().equals(tracker.getProject().getName())) {" is 124.,126
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMCodeServerAPI,openConnection,Magic Number,The method contains a magic number: 200,120
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMCodeServerAPI,openConnection,Magic Number,The method contains a magic number: 299,120
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMCodeServerAPI,openReader,Long Statement,The length of the statement "return contentEncoding != null ? new InputStreamReader(con.getInputStream()`contentEncoding) : new InputStreamReader(con.getInputStream());" is 139.,141
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMCodeServerAPI,trackProgress,Magic Number,The method contains a magic number: 500L,154
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMCodeServerAPI,trackProgress,Magic Number,The method contains a magic number: 10000,154
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMCodeServerAPI,trackProgress,Magic Number,The method contains a magic number: 100,154
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMDOMResourceTracker,uploadLatestScript,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2697e325,48
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMProperties,getHotCodeReplacePolicy,Long Identifier,The length of the field PROPERTY_HOT_CODE_REPLACE_POLICY is 32.,59
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMProperties,getHotCodeReplacePolicy,Long Identifier,The length of the field DEFVALUE_HOT_CODE_REPLACE_POLICY is 32.,59
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMProperties,getHotCodeReplacePolicy,Long Statement,The length of the statement "return HotCodeReplacePolicy.valueOf(getProperty(PROPERTY_HOT_CODE_REPLACE_POLICY`DEFVALUE_HOT_CODE_REPLACE_POLICY.toString()));" is 127.,59
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build,GWTSDMProperties,setHotCodeReplacePolicy,Long Identifier,The length of the field PROPERTY_HOT_CODE_REPLACE_POLICY is 32.,87
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,getErrorMessage,Magic Number,The method contains a magic number: 65535,35
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,createContents,Long Statement,The length of the statement "hotCodeReplacePolicyGroup.setLayoutData(GridDataFactory.swtDefaults().align(SWT.FILL`SWT.TOP).grab(true`false).create());" is 121.,72
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,createContents,Long Statement,The length of the statement "label.setText("\nNote:" + "\n- For Hot Code Replace to work` you need an active SDBG debug session" + "\n- Chrome Live Edit will likely crash your browser with anything but the smallest GWT project");" is 200.,72
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,createContents,Magic Number,The method contains a magic number: 2,72
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,createContents,Magic Number,The method contains a magic number: 2,72
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,createContents,Magic Number,The method contains a magic number: 60,72
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,createContents,Magic Number,The method contains a magic number: 2,72
+sdbg_sdbg,com.github.sdbg.integration.jdt.gwt.build.ui,GWTSDMPropertyPage,createContents,Magic Number,The method contains a magic number: 700,72
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ADBManager,copy,Magic Number,The method contains a magic number: 4086,35
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ADBManager,getAdbExecutable,Complex Conditional,The conditional expression platform.equals("macosx_x86_64") || platform.equals("linux_x86") || platform.equals("linux_x86_64") is complex.,59
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ADBManager,executeADB,Long Statement,The length of the statement "throw new IOException("ADB returned unexpected error code: " + runner.getExitCode() + "\n\nERR STREAM: "+ runner.getStdErr());" is 126.,200
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,start,Empty catch clause,The method has an empty catch block.,33
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,start,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"No USB-attached Android devices found.\n\nPlease make sure you have enabled USB debugging on your device and you have attached it to the PC via USB."));" is 233.,33
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,start,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.INFO`SDBGDebugCorePlugin.PLUGIN_ID`"Reverse port forwarding launch cancelled."));" is 125.,33
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,start,Long Statement,The length of the statement "IProcess process=new RuntimeProcess(launch`prepareDeviceExecutableProcess(manager`deviceInfo.getId()`deviceCommandPort`forwards)`"Forwarder"`Collections.<String`String>emptyMap()){" is 180.,33
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,start,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Reverse port forwarding launch failed."));" is 123.,33
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,start,Magic Number,The method contains a magic number: 6565,33
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,start,Magic Number,The method contains a magic number: 100,33
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Empty catch clause,The method has an empty catch block.,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Empty catch clause,The method has an empty catch block.,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Empty catch clause,The method has an empty catch block.,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Empty catch clause,The method has an empty catch block.,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Long Statement,The length of the statement "IProcess process=new RuntimeProcess(launch`new ProcessBuilder("notepad").start()`"Forwarder"`Collections.<String`String>emptyMap()){" is 132.,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Reverse port forwarding launch failed."));" is 123.,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Magic Number,The method contains a magic number: 6565,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Magic Number,The method contains a magic number: 2000,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,testStart,Magic Number,The method contains a magic number: 100,99
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,terminated,Empty catch clause,The method has an empty catch block.,126
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,prepareDeviceExecutableProcess,Long Statement,The length of the statement "return manager.asyncShell(deviceId`"export ANDROID_DATA=" + APP_DIR + ";dalvikvm -cp "+ APP_DIR+ "/"+ APP_FILE_NAME+ " "+ MAIN_CLASS_NAME+ " "+ deviceCommandPort+ " "+ devicePortsStr);" is 184.,177
+sdbg_sdbg,com.github.sdbg.debug.core.internal.android,ReversePortForwarderUtils,pushDeviceExecutable,Magic Number,The method contains a magic number: 8192,190
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,Tunnel,getLeftToRight,Magic Number,The method contains a magic number: 8192,36
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,Tunnel,getRightToLeft,Magic Number,The method contains a magic number: 8192,48
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,Tunnel,close,Empty catch clause,The method has an empty catch block.,90
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,Tunnel,spool,Complex Conditional,The conditional expression logger != null && logger.isLoggable(Level.FINEST) && oldPos < buff.position() is complex.,100
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,Tunnel,spool,Complex Method,Cyclomatic complexity of the method is 11,100
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,Tunnel,spool,Long Statement,The length of the statement "logger.finest("Tunnel " + id + " spooling:\n"+ "==== BEGIN DUMP ====\n"+ new String(buff.array()`oldPos`buff.position())+ "\n==== END DUMP ====");" is 146.,100
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,ReversePortForwarder,done,Empty catch clause,The method has an empty catch block.,70
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,ReversePortForwarder,init,Magic Number,The method contains a magic number: 8192,108
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,ReversePortForwarder,init,Magic Number,The method contains a magic number: 8192,108
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,ReversePortForwarder,processCommand,Long Identifier,The length of the field CMD_UNKNOWN_OR_UNEXPECTED_COMMAND is 33.,116
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,run,Magic Number,The method contains a magic number: 10000,54
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,done,Empty catch clause,The method has an empty catch block.,86
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,done,Empty catch clause,The method has an empty catch block.,86
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,processKey,Complex Method,Cyclomatic complexity of the method is 9,140
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,processKey,Magic Number,The method contains a magic number: 5,140
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,accept,Long Statement,The length of the statement "logger.fine("New incoming connection to device port " + serverSocketChannel.socket().getLocalPort() + "; tunnel "+ tunnelId);" is 125.,198
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,acceptCommand,Magic Number,The method contains a magic number: 5,223
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,close,Empty catch clause,The method has an empty catch block.,247
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,DeviceReversePortForwarder,close,Empty catch clause,The method has an empty catch block.,256
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,ShellFormatter,format,Empty catch clause,The method has an empty catch block.,27
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,HostReversePortForwarder,connect,Empty catch clause,The method has an empty catch block.,61
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,HostReversePortForwarder,connect,Long Statement,The length of the statement "commandChannel=SocketChannel.open(commandHost != null ? new InetSocketAddress(commandHost`commandPort) : new InetSocketAddress(commandPort));" is 141.,61
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,HostReversePortForwarder,stop,Empty catch clause,The method has an empty catch block.,121
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,HostReversePortForwarder,stop,Empty catch clause,The method has an empty catch block.,121
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,HostReversePortForwarder,stop,Empty catch clause,The method has an empty catch block.,121
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,HostReversePortForwarder,done,Empty catch clause,The method has an empty catch block.,156
+sdbg_sdbg,com.github.sdbg.debug.core.internal.forwarder,HostReversePortForwarder,processCommand,Magic Number,The method contains a magic number: 8,183
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Complex Conditional,The conditional expression indexes.length == 1 || indexes.length == 4 || indexes.length == 5 is complex.,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Magic Number,The method contains a magic number: 4,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Magic Number,The method contains a magic number: 5,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Magic Number,The method contains a magic number: 4,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Magic Number,The method contains a magic number: 2,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Magic Number,The method contains a magic number: 3,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Magic Number,The method contains a magic number: 4,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMapDecoder,decodeLine,Magic Number,The method contains a magic number: 4,60
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,SourceMap,createFrom,Magic Number,The method contains a magic number: 3,125
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues1,Magic Number,The method contains a magic number: 64,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues1,Magic Number,The method contains a magic number: 64,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues1,Magic Number,The method contains a magic number: 64,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues1,Magic Number,The method contains a magic number: 64,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues2,Magic Number,The method contains a magic number: 30,30
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues2,Magic Number,The method contains a magic number: 2,30
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues2,Magic Number,The method contains a magic number: 30,30
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedSignedValues2,Magic Number,The method contains a magic number: 2,30
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedValues1,Magic Number,The method contains a magic number: 63,45
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedValues2,Magic Number,The method contains a magic number: 30,51
+sdbg_sdbg,com.github.sdbg.debug.core.internal.sourcemaps,VlqDecoderTest,testBase64VLQSelectedValues2,Magic Number,The method contains a magic number: 2,51
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,UIDeviceChooser,get,Long Statement,The length of the statement "IExtensionPoint extensionPoint=Platform.getExtensionRegistry().getExtensionPoint("com.github.sdbg.debug.core.uiDeviceChooser");" is 127.,14
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,URLFilterTabChooser,chooseTab,Complex Method,Cyclomatic complexity of the method is 8,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,URLFilterTabChooser,chooseTab,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"No tab found with URL matching \"" + urlFilter + "\". Connection cancelled."));" is 160.,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,DefaultBrowserTabChooser,chooseTab,Long Identifier,The length of the field CHROMIUM_INITIAL_PAGE_FRAGMENT is 30.,35
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,CoreLaunchUtils,removeTerminatedLaunches,Complex Conditional,The conditional expression launch.getLaunchConfiguration() == null || (launch.getLaunchConfiguration().getType().getIdentifier().startsWith("com.github.sdbg") && launch.isTerminated()) is complex.,78
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,CoreLaunchUtils,removeTerminatedLaunches,Long Statement,The length of the statement "if (launch.getLaunchConfiguration() == null || (launch.getLaunchConfiguration().getType().getIdentifier().startsWith("com.github.sdbg") && launch.isTerminated())) {" is 164.,78
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,DebuggerUtils,printString,Complex Conditional,The conditional expression str.length() > 1 && str.startsWith("\"") && str.endsWith("\"") is complex.,40
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,IDFilterDeviceChooser,chooseDevice,Complex Method,Cyclomatic complexity of the method is 8,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,IDFilterDeviceChooser,chooseDevice,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"No Android device found with ID matching \"" + idFilter + "\". Connection cancelled."));" is 169.,24
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,DOMResourceTrackersManager,initialize,Long Statement,The length of the statement "IExtensionPoint extensionPoint=Platform.getExtensionRegistry().getExtensionPoint("com.github.sdbg.debug.core.domResourceTracker");" is 130.,31
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Long Parameter List,The method has 7 parameters. ,84
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Long Statement,The length of the statement "return connectToChromiumDebug("Chrome Remote Connection"`launch`launchConfig`null`monitor`null`timer`true`host`port`0L`null`null`resourceResolver`browserTabChooser`true);" is 170.,84
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Long Parameter List,The method has 6 parameters. ,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"No USB-attached Android devices found.\n\nPlease make sure you have enabled USB debugging on your device and you have attached it to the PC via USB."));" is 233.,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Long Statement,The length of the statement "return connectToChromiumDebug("Mobile Chrome Remote Connection"`launch`launchConfig`null`monitor`null`timer`true`"127.0.0.1"`port`launchTab ? 10 * 1000L : 0L`null`null`resourceResolver`browserTabChooser`true);" is 209.,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Unable to connect to debugger in Chrome: " + e.getMessage()`e));" is 144.,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.INFO`SDBGDebugCorePlugin.PLUGIN_ID`"No Android device was chosen. Connection cancelled."));" is 135.,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Magic Number,The method contains a magic number: 10,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Magic Number,The method contains a magic number: 1000L,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Magic Number,The method contains a magic number: 10,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connect,Magic Number,The method contains a magic number: 1000L,127
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Complex Conditional,The conditional expression !restart && url != null && resourceResolver != null is complex.,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Complex Method,Cyclomatic complexity of the method is 9,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Long Parameter List,The method has 8 parameters. ,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Long Statement,The length of the statement "boolean restart=browserProcess == null || isProcessTerminated(browserProcess) || WebkitDebugTarget.getActiveTarget() == null || !WebkitDebugTarget.getActiveTarget().canTerminate();" is 180.,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Long Statement,The length of the statement "ListeningStream browserOutput=startNewBrowserProcess(launchConfig`delaySettingUrl ? null : url`monitor`enableDebugging`processDescription`extraCommandLineArgs`devToolsPortNumberHolder);" is 185.,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Could not launch browser - process terminated on startup" + getProcessStreamMessage(browserOutput.toString())));" is 192.,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Long Statement,The length of the statement "connectToChromiumDebug(browserExecutable.getName()`launch`launchConfig`delaySettingUrl ? url : null`monitor`browserProcess`timer`true`null`devToolsPortNumberHolder[0]`20 * 1000L`browserOutput`processDescription.toString()`resourceResolver`browserTabChooser`false);" is 264.,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Long Statement,The length of the statement "registerProcess(launch`launchConfig`DebugPlugin.newProcess(launch`browserProcess`browserExecutable.getName() + " - run only` debugging DISABLED (" + new Date()+ ")")`processDescription.toString());" is 197.,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Magic Number,The method contains a magic number: 7,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Magic Number,The method contains a magic number: 2,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Magic Number,The method contains a magic number: 100,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Magic Number,The method contains a magic number: 20,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,launchBrowser,Magic Number,The method contains a magic number: 1000L,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Long Parameter List,The method has 16 parameters. ,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Unable to connect to Chrome at address " + (host != null ? host : "") + ":"+ port+ "; error: "+ e.getMessage()`e));" is 195.,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.INFO`SDBGDebugCorePlugin.PLUGIN_ID`"No Chrome tab was chosen. Connection cancelled."));" is 131.,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Unable to connect to Chrome" + (remote ? ".\n\nPossible reason: another debugger (e.g. Chrome DevTools) or another Eclipse debugging session is already attached to that particular Chrome tab." : "")));" is 282.,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Long Statement,The length of the statement "final WebkitDebugTarget debugTarget=new WebkitDebugTarget(browserName`connection`launch`runtimeProcess`launchConfig.getProject()`resolver`adbManager`enableBreakpoints`remote);" is 175.,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Unable to connect to Chrome tab at address " + (tab.getHost() != null ? tab.getHost() : "") + ":"+ tab.getPort()+ " ("+ tab.getWebSocketDebuggerFile()+ "): "+ e.getMessage()`e));" is 258.,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Magic Number,The method contains a magic number: 2,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,connectToChromiumDebug,Magic Number,The method contains a magic number: 100,418
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,findChromeExecutable,Complex Method,Cyclomatic complexity of the method is 14,547
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,findChromeExecutable,Long Statement,The length of the statement "File file=findChromeExecutable("system property " + CHROME_EXECUTABLE_PROPERTY`System.getProperty(CHROME_EXECUTABLE_PROPERTY)`true);" is 132.,547
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,findChromeExecutable,Long Statement,The length of the statement "file=findChromeExecutable("environment vairable " + CHROME_ENVIRONMENT_VARIABLE`System.getenv(CHROME_ENVIRONMENT_VARIABLE)`true);" is 129.,547
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,findChromeExecutable,Long Statement,The length of the statement "file=findChromeExecutable("heuristics"`new File(userHome`"Local Settings\\Application Data\\Google\\Chrome\\Application")`false);" is 129.,547
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,findChromeExecutable,Long Statement,The length of the statement "throw new RuntimeException("Uable to locate the Chrome executable at the usual locations.\n" + "Please append at the end of your eclipse.ini file the following property:\n" + "-D" + CHROME_EXECUTABLE_PROPERTY + "=<path-to-chrome-executable>");" is 243.,547
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,findChromeExecutable,Complex Method,Cyclomatic complexity of the method is 13,650
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,getChromiumTab,Complex Conditional,The conditional expression targetTab != null || System.currentTimeMillis() > endTime && runtimeProcess == null is complex.,764
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,getChromiumTab,Long Parameter List,The method has 6 parameters. ,764
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,getChromiumTab,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Could not launch browser - process terminated while trying to connect. " + "Try closing any running Chrome instances." + getProcessStreamMessage(browserOutput.toString())));" is 253.,764
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,getChromiumTab,Long Statement,The length of the statement "ChromiumTabInfo targetTab=(ChromiumTabInfo)findTargetTab(browserTabChooser`ChromiumConnector.getAvailableTabs(host`port));" is 122.,764
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,getChromiumTab,Magic Number,The method contains a magic number: 25,764
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,readFromProcessPipes,Empty catch clause,The method has an empty catch block.,861
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,readFromProcessPipes,Magic Number,The method contains a magic number: 2048,861
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,run,Empty catch clause,The method has an empty catch block.,865
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,run,Magic Number,The method contains a magic number: 2048,865
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,sleep,Empty catch clause,The method has an empty catch block.,909
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,startNewBrowserProcess,Long Parameter List,The method has 7 parameters. ,917
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,startNewBrowserProcess,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Unable to locate an available port for the browser debugger"));" is 143.,917
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,startNewBrowserProcess,Long Statement,The length of the statement "List<String> arguments=buildArgumentsList(launchConfig`url != null ? url : INITIAL_PAGE`devToolsPortNumber`extraArguments);" is 123.,917
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,startNewBrowserProcess,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Could not launch browser: " + e.toString()));" is 125.,917
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,terminateExistingBrowserProcess,Magic Number,The method contains a magic number: 200,987
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,BrowserManager,waitForProcessToTerminate,Magic Number,The method contains a magic number: 10,1008
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,HttpUrlConnector,getContentLength,Empty catch clause,The method has an empty catch block.,51
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,HttpUrlConnector,connect,Magic Number,The method contains a magic number: 2,79
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,HttpUrlConnector,parseHeaderLine,Empty catch clause,The method has an empty catch block.,133
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,LogTimer,getSeconds,Magic Number,The method contains a magic number: 1000.0,107
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,URLStorage,hashCode,Magic Number,The method contains a magic number: 31,67
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,GenericDOMResourceTracker,handleFileChanged,Complex Conditional,The conditional expression uri.getScheme().equals("http") && uri.getPort() != 80 || uri.getScheme().equals("https") && uri.getPort() != 443 is complex.,49
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,GenericDOMResourceTracker,handleFileChanged,Long Statement,The length of the statement "InputStreamReader reader=fileEncoding != null ? new InputStreamReader(file.getContents(true)`fileEncoding) : new InputStreamReader(file.getContents(true));" is 155.,49
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,GenericDOMResourceTracker,handleFileChanged,Magic Number,The method contains a magic number: 80,49
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,GenericDOMResourceTracker,handleFileChanged,Magic Number,The method contains a magic number: 443,49
+sdbg_sdbg,com.github.sdbg.debug.core.internal.util,UIBrowserTabChooser,get,Long Statement,The length of the statement "IExtensionPoint extensionPoint=Platform.getExtensionRegistry().getExtensionPoint("com.github.sdbg.debug.core.uiBrowserTabChooser");" is 131.,14
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitWorker,handleWorkerNotification,Complex Method,Cyclomatic complexity of the method is 9,147
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitRemoteObject,getListLength,Empty catch clause,The method has an empty catch block.,91
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitRemoteObject,getListLength,Magic Number,The method contains a magic number: 3,91
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitPropertyDescriptor,createFrom,Complex Method,Cyclomatic complexity of the method is 10,75
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitConnection,notifyClosed,Empty catch clause,The method has an empty catch block.,302
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDebugger,evaluateOnCallFrame,Long Statement,The length of the statement "request.put("params"`new JSONObject().put("callFrameId"`callFrameId).put("expression"`expression).put("objectGroup"`OBJECT_GROUP_KEY).put("returnByValue"`false).put("includeCommandLineAPI"`true).put("doNotPauseOnExceptionsAndMuteConsole"`false));" is 246.,247
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDebugger,setBreakpointByUrl,Long Parameter List,The method has 5 parameters. ,464
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDebugger,handleDebuggerNotification,Complex Method,Cyclomatic complexity of the method is 15,665
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDebugger,handleDebuggerNotification,Long Identifier,The length of the field DEBUGGER_GLOBAL_OBJECT_CLEARED is 30.,665
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDebugger,clearRemoteObjects,Empty catch clause,The method has an empty catch block.,734
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,TestMain,main,Long Statement,The length of the statement "@Override public void debuggerPaused( PausedReasonType reason` List<WebkitCallFrame> frames` WebkitRemoteObject exception){" is 123.,34
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitConsole,handleConsoleNotification,Complex Method,Cyclomatic complexity of the method is 8,161
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitPage,handlePageNotification,Complex Method,Cyclomatic complexity of the method is 15,234
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitRuntime,callFunctionOn,Long Parameter List,The method has 5 parameters. ,97
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitRuntime,callListLength,Long Statement,The length of the statement "request.put("params"`new JSONObject().put("objectId"`objectId).put("functionDeclaration"`"function(){return this.length;}").put("returnByValue"`false));" is 152.,143
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitRuntime,callToString,Long Statement,The length of the statement "request.put("params"`new JSONObject().put("objectId"`objectId).put("functionDeclaration"`"function(){return this.toString();}").put("returnByValue"`false));" is 156.,184
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDom,getDocumentSync,Empty catch clause,The method has an empty catch block.,271
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDom,highlightRect,Long Parameter List,The method has 6 parameters. ,348
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitDom,highlightRect,Long Statement,The length of the statement "request.put("params"`new JSONObject().put("x"`x).put("y"`y).put("width"`width).put("height"`height).put("color"`color.toJSONObject()).put("outlineColor"`outlineColor.toJSONObject()));" is 183.,348
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitNetwork,handleNetworkNotification,Complex Method,Cyclomatic complexity of the method is 15,205
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.protocol,WebkitCSS,handleCssNotification,Complex Method,Cyclomatic complexity of the method is 9,209
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitStreamMonitor,messageAdded,Complex Method,Cyclomatic complexity of the method is 8,62
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitStreamMonitor,shouldIgnoreMessage,Long Statement,The length of the statement "if (message.indexOf("Invalid CSS property name: -webkit") != -1 || message.indexOf("Invalid CSS property value: -webkit") != -1) {" is 130.,136
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitScriptStorage,hashCode,Magic Number,The method contains a magic number: 31,78
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugProcess,waitForExit,Empty catch clause,The method has an empty catch block.,208
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitRemoteScriptSourceContainer,findSourceElements,Magic Number,The method contains a magic number: 2,50
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitRemoteScriptSourceContainer,run,Magic Number,The method contains a magic number: 2,59
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitRemoteScriptSourceContainer,convertDataUrl,Magic Number,The method contains a magic number: 40,105
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitRemoteScriptSourceContainer,convertDataUrl,Magic Number,The method contains a magic number: 40,105
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,getMappingFor,Complex Method,Cyclomatic complexity of the method is 8,202
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,getMappingFor,Long Statement,The length of the statement "SourceLocation location=new SourceLocation(resolvedStorage`relativePath`mapping.getLine()`mapping.getColumn()`mapping.getName());" is 129.,202
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,getReverseMappingsFor,Long Statement,The length of the statement "List<SourceMapInfo> reverseMappings=visitor.getMatchingSourceMap().getReverseMappingsFor(visitor.getMatchingSourcePath()`line);" is 127.,253
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,getReverseMappingsFor,Long Statement,The length of the statement "mappings.add(new SourceLocation(mapSource`mapSource.getFullPath().toPortableString()`reverseMapping.getLine()`reverseMapping.getColumn()`reverseMapping.getName()));" is 164.,253
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,isDownloadable,Long Statement,The length of the statement "return uri.getScheme().equals("file") || (uri.getScheme().equals("http") || uri.getScheme().equals("https")) && uri.getHost() != null && uri.getHost().length() > 0;" is 164.,390
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,processScript,Complex Method,Cyclomatic complexity of the method is 11,408
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,processScript,Magic Number,The method contains a magic number: 2,408
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,resolveStorage,Complex Method,Cyclomatic complexity of the method is 11,474
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,resolveStorage,Long Statement,The length of the statement "uri=new URI(relativeUri.getScheme()`null`relativeUri.getHost()`relativeUri.getPort()`newPath.toPortableString()`null`null);" is 123.,474
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,SourceMapManager,visit,Long Statement,The length of the statement "for ( IStorage scriptStorage : forScriptStorage != null ? Collections.singleton(forScriptStorage) : sourceMapsStorages.keySet()) {" is 130.,555
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugTarget,WebkitDebugTarget,Long Parameter List,The method has 9 parameters. ,95
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugTarget,WebkitDebugTarget,Long Statement,The length of the statement "this(target.debugTargetName`new WebkitConnection(target.connection)`target.launch`null`target.project`target.resourceResolver`target.adbManager`target.enableBreakpoints`false);" is 176.,132
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugTarget,openConnection,Long Statement,The length of the statement "@Override public void debuggerPaused( PausedReasonType reason` List<WebkitCallFrame> frames` WebkitRemoteObject exception){" is 123.,329
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugTarget,terminate,Empty catch clause,The method has an empty catch block.,514
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugTarget,getScriptStorage,Complex Conditional,The conditional expression script.isSystemScript() || script.isDataUrl() || script.isChromeExtensionUrl() is complex.,558
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugTarget,checkForDebuggerExtension,Long Statement,The length of the statement "writeToStdout("WARNING: Chrome content script extension detected. Many of these extensions " + "interfere with the debug\nexperience` including preventing breakpoints from working. " + "These extensions include but are not limited\nto SpeedTracer and the WebGL inspector. "+ "You can disable them in Webkit via Tools > Extensions.");" is 333.,667
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugIsolateFrame,getVariables,Empty catch clause,The method has an empty catch block.,104
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugIsolateFrame,getVariables,Long Statement,The length of the statement "VariableCollector variableCollector=VariableCollector.createCollector(getTarget()`null`Collections.singletonList(librariesScope));" is 130.,104
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,VariableCollector,createCollector,Long Statement,The length of the statement "collector.collectFields(result`!obj.isList()`variable != null && variable.isScope() && "global".equals(variable.getName())`variable != null && variable.isScope() && "local".equals(variable.getName()));" is 201.,47
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,VariableCollector,handleResult,Long Statement,The length of the statement "collector.collectFields(result`!obj.isList()`variable != null && variable.isScope() && "global".equals(variable.getName())`variable != null && variable.isScope() && "local".equals(variable.getName()));" is 201.,61
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,VariableCollector,createCollector,Complex Method,Cyclomatic complexity of the method is 8,85
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,VariableCollector,createCollector,Long Parameter List,The method has 5 parameters. ,85
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,VariableCollector,createCollector,Long Statement,The length of the statement "target.getConnection().getRuntime().getProperties(scope.getObject()`true`false`new WebkitCallback<WebkitPropertyDescriptor[]>(){" is 128.,85
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,VariableCollector,createExceptionVariable,Long Statement,The length of the statement "WebkitDebugVariable variable=new WebkitDebugVariable(target`WebkitPropertyDescriptor.createObjectDescriptor(thisObject`"exception")`true);" is 138.,244
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,VariableCollector,createScopeVariable,Long Statement,The length of the statement "WebkitDebugVariable variable=new WebkitDebugVariable(target`WebkitPropertyDescriptor.createObjectDescriptor(object`name)`true);" is 127.,261
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugIndexedValue,getIndexAt,Long Statement,The length of the statement "getConnection().getRuntime().callFunctionOn(listObject.getObjectId()`"function(){return this[" + offset + "];}"`null`false`new WebkitCallback<WebkitRemoteObject>(){" is 164.,110
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugIndexedValue,getIndexAt,Magic Number,The method contains a magic number: 3,110
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,computeDetail,Complex Conditional,The conditional expression value.isPrimitive() || variable != null && variable.isScope() || !SDBGDebugCorePlugin.getPlugin().getInvokeToString() is complex.,68
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,computeDetail,Long Statement,The length of the statement "if (value.isPrimitive() || variable != null && variable.isScope() || !SDBGDebugCorePlugin.getPlugin().getInvokeToString()) {" is 124.,68
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,evaluateExpression,Long Statement,The length of the statement "getConnection().getRuntime().callFunctionOn(value.getObjectId()`"function(){return " + exprText + ";}"`null`false`new WebkitCallback<WebkitRemoteObject>(){" is 155.,102
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,evaluateExpression,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.value(expression`WebkitDebugValue.create(getTarget()`null`result.getResult())));" is 135.,102
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,evaluateExpression,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.exception(expression`new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`e.toString()`e))));" is 169.,102
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,handleResult,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.value(expression`WebkitDebugValue.create(getTarget()`null`result.getResult())));" is 135.,122
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,getClassValue,Empty catch clause,The method has an empty catch block.,152
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,getLibraryValue,Empty catch clause,The method has an empty catch block.,189
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,evalOnGlobalContext,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.value(expression`WebkitDebugValue.create(getTarget()`null`originalResult.getResult())));" is 143.,336
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,evalOnGlobalContext,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.value(expression`WebkitDebugValue.create(getTarget()`null`result.getResult())));" is 135.,336
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,evalOnGlobalContext,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.exception(expression`new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`e.toString()`e))));" is 169.,336
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,handleResult,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.value(expression`WebkitDebugValue.create(getTarget()`null`originalResult.getResult())));" is 143.,344
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,handleResult,Long Statement,The length of the statement "listener.watchEvaluationFinished(WatchExpressionResult.value(expression`WebkitDebugValue.create(getTarget()`null`result.getResult())));" is 135.,344
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,getDisplayString,Complex Conditional,The conditional expression variable != null && (variable.isLibraryObject() || variable.isScope()) is complex.,372
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugValue,getDisplayString,Complex Method,Cyclomatic complexity of the method is 8,372
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugThread,isStepping,Long Statement,The length of the statement "return expectedResumeReason == DebugEvent.STEP_INTO || expectedResumeReason == DebugEvent.STEP_OVER || expectedResumeReason == DebugEvent.STEP_RETURN || expectedSuspendReason == DebugEvent.STEP_END;" is 198.,129
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugStackFrame,evaluateExpression,Long Statement,The length of the statement "getConnection().getDebugger().evaluateOnCallFrame(webkitFrame.getCallFrameId()`expression`new WebkitCallback<WebkitRemoteObject>(){" is 131.,109
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugStackFrame,findVariable,Complex Method,Cyclomatic complexity of the method is 12,150
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugStackFrame,getExceptionDisplayText,Magic Number,The method contains a magic number: 1000,213
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugStackFrame,getLongName,Empty catch clause,The method has an empty catch block.,256
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDebugStackFrame,getMappedLocationPath,Long Statement,The length of the statement "SourceMapManager.trace("[" + scriptPath + "`"+ sourceLocation.getLineNumber()+ "`"+ sourceLocation.getColumnNumber()+ "] ==> mapped to "+ targetLocation);" is 154.,446
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDOMResourceTrackersManager,getResources,Long Statement,The length of the statement "references.add(new WebkitDOMResourceReference(WebkitDOMResourceReference.Type.ROOT`Integer.toString(rootNode.getNodeId())`rootNode.getDocumentURL()));" is 150.,70
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDOMResourceTrackersManager,getResources,Long Statement,The length of the statement "references.add(new WebkitDOMResourceReference(WebkitDOMResourceReference.Type.SCRIPT`script.getScriptId()`script.getUrl()));" is 124.,70
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDOMResourceTrackersManager,getResources,Long Statement,The length of the statement "references.add(new WebkitDOMResourceReference(WebkitDOMResourceReference.Type.CSS`styleSheetRef.getStyleSheetId()`styleSheetRef.getSourceURL()));" is 145.,70
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitDOMResourceTrackersManager,uploadNewSource,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@44508740,104
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitResteppingManagerImpl,onDebuggerPaused,Complex Conditional,The conditional expression SDBGDebugCorePlugin.getPlugin().getUseSmartStepInOut() && currentLocation == null && stepLocation != null is complex.,38
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitResteppingManagerImpl,onDebuggerPaused,Complex Conditional,The conditional expression SDBGDebugCorePlugin.getPlugin().getUseSmartStepOver() && exception == null && reason == PausedReasonType.other && currentLocation != null && stepLocation != null && stepCommand != null && currentLocation.getPath().equals(stepLocation.getPath()) && currentLocation.getLine() == stepLocation.getLine() is complex.,38
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,WebkitResteppingManagerImpl,onDebuggerPaused,Long Statement,The length of the statement "else if (SDBGDebugCorePlugin.getPlugin().getUseSmartStepOver() && exception == null && reason == PausedReasonType.other && currentLocation != null && stepLocation != null && stepCommand != null && currentLocation.getPath().equals(stepLocation.getPath()) && currentLocation.getLine() == stepLocation.getLine()) {" is 311.,38
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,BreakpointManager,getBreakpointFor,Complex Method,Cyclomatic complexity of the method is 8,225
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,BreakpointManager,getBreakpointFor,Long Statement,The length of the statement "IBreakpoint[] breakpoints=DebugPlugin.getDefault().getBreakpointManager().getBreakpoints(SDBGDebugCorePlugin.DEBUG_MODEL_ID);" is 125.,225
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,BreakpointManager,handleBreakpointResolved,Long Statement,The length of the statement "String message="[breakpoint in " + (breakpoint instanceof SDBGBreakpoint ? ((SDBGBreakpoint)breakpoint).getName() : breakpoint.getMarker().getResource().getName()) + " moved from line "+ breakpoint.getLineNumber()+ " to "+ eclipseLine+ "]";" is 240.,272
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,BreakpointManager,addBreakpoint,Complex Method,Cyclomatic complexity of the method is 11,322
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,BreakpointManager,addBreakpoint,Long Statement,The length of the statement "trace("Breakpoint [" + path + "`"+ (breakpoint instanceof ILineBreakpoint ? breakpoint.getLineNumber() : "")+ "`-1] ==> mapped to ["+ mappedPath+ "`"+ location.getLine()+ "`"+ location.getColumn()+ "]");" is 203.,322
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,BreakpointManager,addBreakpoint,Long Statement,The length of the statement "debugTarget.getWebkitConnection().getDebugger().setBreakpointByUrl(null`mappedPath`location.getLine()`location.getColumn()`new WebkitCallback<String>(){" is 152.,322
+sdbg_sdbg,com.github.sdbg.debug.core.internal.webkit.model,BreakpointManager,getBreakpointPath,Empty catch clause,The method has an empty catch block.,416
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGReverseForwardsLaunchConfigWrapper,getReverseForwardDevicePort,Magic Number,The method contains a magic number: 2,36
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGReverseForwardsLaunchConfigWrapper,getReverseForwardDevicePort,Magic Number,The method contains a magic number: 2,36
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGReverseForwardsLaunchConfigWrapper,getDeviceCommandPort,Magic Number,The method contains a magic number: 6565,86
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGReverseForwardsLaunchConfigWrapper,getDeviceCommandPort,Magic Number,The method contains a magic number: 6565,86
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGDebugCorePlugin,getExcludeFromLogicalStructure,Long Identifier,The length of the field PREFS_EXCLUDE_FROM_LOGICAL_STRUCTURE is 36.,234
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGDebugCorePlugin,setExcludeFromLogicalStructure,Long Identifier,The length of the field PREFS_EXCLUDE_FROM_LOGICAL_STRUCTURE is 36.,303
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGDebugCorePlugin,setUseSmartStepInOut,Empty catch clause,The method has an empty catch block.,327
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGDebugCorePlugin,setUseSmartStepOver,Empty catch clause,The method has an empty catch block.,337
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGDebugCorePlugin,setUseSourceMaps,Empty catch clause,The method has an empty catch block.,347
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGDebugCorePlugin,start,Magic Number,The method contains a magic number: 4,357
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGLaunchConfigurationDelegate,doLaunch,Long Parameter List,The method has 5 parameters. ,40
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGLaunchConfigWrapper,getConnectionPort,Magic Number,The method contains a magic number: 9222,148
+sdbg_sdbg,com.github.sdbg.debug.core,SDBGLaunchConfigWrapper,getConnectionPort,Magic Number,The method contains a magic number: 9222,148
+sdbg_sdbg,com.github.sdbg.debug.core,ChromeBrowserConfig,fromToken,Magic Number,The method contains a magic number: 2,20
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServer,getAllExecutableFiles,Empty catch clause,The method has an empty catch block.,198
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServer,startServer,Empty catch clause,The method has an empty catch block.,266
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServer,webSafe,Complex Conditional,The conditional expression c > 127 || c == '"' || c == '<' || c == '>' is complex.,283
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServer,webSafe,Magic Number,The method contains a magic number: 127,283
+sdbg_sdbg,com.github.sdbg.debug.core.util,RemoteConnectionPreferenceManager,setAllowRemoteConnectionPreference,Empty catch clause,The method has an empty catch block.,58
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,setupExtraMappings,Long Statement,The length of the statement "BufferedReader reader=new BufferedReader(new InputStreamReader(ResourceServerHandler.class.getResourceAsStream("mime.txt")));" is 125.,277
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,run,Complex Method,Cyclomatic complexity of the method is 8,305
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,createGETResponse,Complex Method,Cyclomatic complexity of the method is 12,388
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,createGETResponse,Empty catch clause,The method has an empty catch block.,388
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,createNotAllowedResponse,Long Statement,The length of the statement "response.responseBodyText="<html><head><title>401 Unauthorized</title></head><body>User agent not allowed.</body></html>";" is 122.,501
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,createPOSTResponse,Magic Number,The method contains a magic number: 200000,517
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,createPOSTResponse,Magic Number,The method contains a magic number: 100,517
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,decodeWebChars,Magic Number,The method contains a magic number: 2,562
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,decodeWebChars,Magic Number,The method contains a magic number: 2,562
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,decodeWebChars,Magic Number,The method contains a magic number: 2,562
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,hex2Int,Magic Number,The method contains a magic number: 16,671
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,locateMappedFile,Long Statement,The length of the statement "IResource resource=ResourcesPlugin.getWorkspace().getRoot().getFileForLocation(Path.fromOSString(file.getAbsolutePath()));" is 122.,803
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,parseHeader,Magic Number,The method contains a magic number: 2,825
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,parseHeader,Magic Number,The method contains a magic number: 2,825
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,safeClose,Empty catch clause,The method has an empty catch block.,903
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,sendResponse,Magic Number,The method contains a magic number: 2048,911
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,serveEmbeddedResource,Magic Number,The method contains a magic number: 2,963
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerHandler,stripQuotes,Complex Conditional,The conditional expression str.length() > 1 && str.startsWith("\"") && str.endsWith("\"") is complex.,996
+sdbg_sdbg,com.github.sdbg.debug.core.util,SourceUtils,getSourceName,Long Statement,The length of the statement "SDBGDebugCorePlugin.logWarning("Unhandled type " + object.getClass() + " in DartSourceLookupParticipant.getSourceName()");" is 122.,9
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,decode,Magic Number,The method contains a magic number: 3,559
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,decode,Magic Number,The method contains a magic number: 4,559
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 3,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 4,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 3,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 4,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 3,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 2,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 2,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 3,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 3,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,Base64,encode,Magic Number,The method contains a magic number: 2,623
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerTest,test_404MissingResource,Magic Number,The method contains a magic number: 404,37
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerTest,test_canServeResource,Magic Number,The method contains a magic number: 200,48
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerTest,test_canServeResource,Magic Number,The method contains a magic number: 3,48
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerTest,test_onlyServeWorkspaceFiles,Magic Number,The method contains a magic number: 404,65
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerTest,test_onlyServeWorkspaceFilesBadPath,Magic Number,The method contains a magic number: 404,84
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerTest,createConnection,Magic Number,The method contains a magic number: 3000,119
+sdbg_sdbg,com.github.sdbg.debug.core.util,ResourceServerTest,createConnection,Magic Number,The method contains a magic number: 3000,119
+sdbg_sdbg,com.github.sdbg.debug.core.util,HttpUrlConnectorTest,test_localHostConnect_fail,Magic Number,The method contains a magic number: 404,26
+sdbg_sdbg,com.github.sdbg.debug.core.util,HttpUrlConnectorTest,test_localHostConnect_succeed,Magic Number,The method contains a magic number: 200,42
+sdbg_sdbg,com.github.sdbg.debug.core.util,HistoryListTest,testRemoveMatching,Magic Number,The method contains a magic number: 5,80
+sdbg_sdbg,com.github.sdbg.debug.core.util,HistoryListTest,testRemoveMatching,Magic Number,The method contains a magic number: 3,80
+sdbg_sdbg,com.github.sdbg.debug.core.util,HistoryListTest,testRemoveMatching,Magic Number,The method contains a magic number: 2,80
+sdbg_sdbg,com.github.sdbg.debug.core.util,JsonTests,xxx_test_parse100,Magic Number,The method contains a magic number: 100,47
+sdbg_sdbg,com.github.sdbg.debug.core.util,JsonTests,xxx_test_parse100,Magic Number,The method contains a magic number: 1024.0,47
+sdbg_sdbg,com.github.sdbg.debug.core.util,JsonTests,xxx_test_parse100,Magic Number,The method contains a magic number: 1024.0,47
+sdbg_sdbg,com.github.sdbg.debug.core.util,JsonTests,xxx_test_parse100,Magic Number,The method contains a magic number: 1000,47
+sdbg_sdbg,com.github.sdbg.debug.core.util,JsonTests,xxx_test_parse100,Magic Number,The method contains a magic number: 1000,47
+sdbg_sdbg,com.github.sdbg.debug.core.util,JsonTests,xxx_test_parse100,Magic Number,The method contains a magic number: 1000.0,47
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeAppLaunchConfigurationDelegate,doLaunch,Long Parameter List,The method has 5 parameters. ,192
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeAppLaunchConfigurationDelegate,doLaunch,Long Statement,The length of the statement "browserManager.launchBrowser(launch`configuration`null`new ChromeAppBrowserTabChooser()`null`monitor`ILaunchManager.DEBUG_MODE.equals(mode)`extraCommandLineArgs);" is 162.,192
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeConnLaunchConfigurationDelegate,doLaunch,Long Parameter List,The method has 5 parameters. ,42
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeConnLaunchConfigurationDelegate,doLaunch,Long Statement,The length of the statement "browserManager.connect(launch`configuration`new LaunchConfigResourceResolver(launchConfig)`new URLFilterTabChooser(launchConfig.getUrl()`UIBrowserTabChooser.get())`launchConfig.getConnectionHost()`launchConfig.getConnectionPort()`monitor);" is 239.,42
+sdbg_sdbg,com.github.sdbg.debug.core.configs,AndroidReverseForwardsLaunchConfigurationDelegate,launch,Complex Conditional,The conditional expression host != null && port != null && devicePort != null is complex.,52
+sdbg_sdbg,com.github.sdbg.debug.core.configs,AndroidReverseForwardsLaunchConfigurationDelegate,launch,Long Statement,The length of the statement "ReversePortForwarderUtils.start(launch`new IDFilterDeviceChooser(launchConfig.getDevice()`UIDeviceChooser.get())`launchConfig.getDeviceCommandPort()`forwards);" is 159.,52
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeLaunchConfigurationDelegate,doLaunch,Long Parameter List,The method has 5 parameters. ,84
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeLaunchConfigurationDelegate,doLaunch,Long Statement,The length of the statement "browserManager.launchBrowser(launch`configuration`resourceResolver`new ChromeLaunchBrowserTabChooser()`resolveLaunchUrl(resourceResolver`launchConfig)`monitor`ILaunchManager.DEBUG_MODE.equals(mode)`Collections.<String>emptyList());" is 231.,84
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeMobileConnLaunchConfigurationDelegate,doLaunch,Long Parameter List,The method has 5 parameters. ,45
+sdbg_sdbg,com.github.sdbg.debug.core.configs,ChromeMobileConnLaunchConfigurationDelegate,doLaunch,Long Statement,The length of the statement "browserManager.connect(launch`configuration`new LaunchConfigResourceResolver(launchConfig)`new IDFilterDeviceChooser(launchConfig.getDevice()`UIDeviceChooser.get())`new URLFilterTabChooser(launchConfig.getUrl()`UIBrowserTabChooser.get())`monitor);" is 247.,45
+sdbg_sdbg,com.github.sdbg.debug.core.breakpoints,SDBGBreakpoint,getCharset,Empty catch clause,The method has an empty catch block.,95
+sdbg_sdbg,com.github.sdbg.debug.core.breakpoints,SDBGBreakpoint,getContents,Empty catch clause,The method has an empty catch block.,107
+sdbg_sdbg,com.github.sdbg.debug.core.breakpoints,SDBGBreakpoint,updateLineNumber,Empty catch clause,The method has an empty catch block.,194
+sdbg_sdbg,com.github.sdbg.utilities,ResourceUtil,getResourceMap,Complex Conditional,The conditional expression type == IResource.FILE || type == IResource.FOLDER || type == IResource.PROJECT is complex.,171
+sdbg_sdbg,com.github.sdbg.utilities,ResourceUtil,visit,Complex Conditional,The conditional expression type == IResource.FILE || type == IResource.FOLDER || type == IResource.PROJECT is complex.,183
+sdbg_sdbg,com.github.sdbg.utilities,IFileUtilities,getContents,Empty catch clause,The method has an empty catch block.,30
+sdbg_sdbg,com.github.sdbg.utilities,IFileUtilities,getContents,Long Statement,The length of the statement "InputStreamReader reader=fileEncoding == null ? new InputStreamReader(input) : new InputStreamReader(input`fileEncoding);" is 121.,30
+sdbg_sdbg,com.github.sdbg.utilities,StringUtilities,parseArgumentString,Complex Conditional,The conditional expression !prevWasSlash && (c == '\'' || c == '"') is complex.,234
+sdbg_sdbg,com.github.sdbg.utilities,StringUtilities,stripQuotes,Complex Conditional,The conditional expression (str.startsWith("'") && str.endsWith("'")) || (str.startsWith("\"") && str.endsWith("\"")) is complex.,277
+sdbg_sdbg,com.github.sdbg.utilities,URIUtilities,makeAbsolute,Complex Conditional,The conditional expression scheme == null || scheme.isEmpty() || scheme.equals("file") is complex.,36
+sdbg_sdbg,com.github.sdbg.utilities,URIUtilities,uriEncode,Complex Method,Cyclomatic complexity of the method is 11,92
+sdbg_sdbg,com.github.sdbg.utilities,URIUtilities,uriEncode,Magic Number,The method contains a magic number: 2,92
+sdbg_sdbg,com.github.sdbg.utilities,URIUtilities,uriEncode,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7377eb93,92
+sdbg_sdbg,com.github.sdbg.utilities,NetUtils,findUnusedPort,Empty catch clause,The method has an empty catch block.,51
+sdbg_sdbg,com.github.sdbg.utilities,Streams,load,Magic Number,The method contains a magic number: 4000,13
+sdbg_sdbg,com.github.sdbg.utilities,Streams,loadAndClose,Magic Number,The method contains a magic number: 4000,23
+sdbg_sdbg,com.github.sdbg.utilities,ProcessRunner,await,Magic Number,The method contains a magic number: 100,48
+sdbg_sdbg,com.github.sdbg.utilities,ProcessRunner,runSync,Magic Number,The method contains a magic number: 100,148
+sdbg_sdbg,com.github.sdbg.utilities,ProcessRunner,pipeOutput,Empty catch clause,The method has an empty catch block.,220
+sdbg_sdbg,com.github.sdbg.utilities,ProcessRunner,pipeOutput,Magic Number,The method contains a magic number: 512,220
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.launch,RunAbstractAction,fillMenu,Long Statement,The length of the statement "InstrumentedAction launchAction=new InstrumentedAction(LaunchUtils.getLongLaunchName(config)`DebugUITools.getDefaultImageDescriptor(config)){" is 141.,178
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.launch,RunLastAction,doLaunch,Long Statement,The length of the statement "MessageDialog.openInformation(window.getShell()`"Unable to Run"`"Unable to run current selection - please select a runnable resource.");" is 136.,50
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.launch,RunLastAction,doLaunch,Long Statement,The length of the statement "DebugErrorHandler.errorDialog(window.getShell()`"Error During Launch"`"Internal error during launch - please report this using the feedback mechanism!"`exception);" is 163.,50
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.launch,RunInBrowserAction,doLaunch,Long Statement,The length of the statement "DebugErrorHandler.errorDialog(window.getShell()`"Error Launching"`"Unable to launch " + resource.getName() + "."`exception);" is 124.,48
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.launch,RunAction,doLaunch,Long Statement,The length of the statement "MessageDialog.openInformation(getWindow().getShell()`"Unable to Run"`"Unable to run the current selection. Please choose a file in a library with a main() function.");" is 167.,85
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.launch,RunAction,doLaunch,Long Statement,The length of the statement "DebugErrorHandler.errorDialog(window.getShell()`"Error Launching Application"`ce.getStatus().getMessage()`ce.getStatus());" is 122.,85
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.launch,RunInChromeAction,doLaunch,Long Statement,The length of the statement "DebugErrorHandler.errorDialog(window.getShell()`"Error Launching"`"Unable to launch " + resource.getName() + "."`exception);" is 124.,48
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,SDBGDebugUserAgentManager,askUserAllows,Long Statement,The length of the statement "MessageDialog dialog=new MessageDialog(shell`"Allow Remote Device Connection"`null`"Allow a remote device from " + remoteAddress.getHostAddress() + " to connect to and run your Dart applications?\n\n"+ agent`MessageDialog.CONFIRM`new String[]{IDialogConstants.OK_LABEL`IDialogConstants.CANCEL_LABEL}`1);" is 303.,113
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,SDBGDebugUserAgentManager,run,Long Statement,The length of the statement "MessageDialog dialog=new MessageDialog(shell`"Allow Remote Device Connection"`null`"Allow a remote device from " + remoteAddress.getHostAddress() + " to connect to and run your Dart applications?\n\n"+ agent`MessageDialog.CONFIRM`new String[]{IDialogConstants.OK_LABEL`IDialogConstants.CANCEL_LABEL}`1);" is 303.,117
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,DebugErrorHandler,errorDialog,Long Statement,The length of the statement "status=new Status(IStatus.ERROR`SDBGDebugUIPlugin.PLUGIN_ID`IDebugUIConstants.INTERNAL_ERROR`"Error within Debug UI: "`exception);" is 130.,46
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,SDBGDebugUIPlugin,getCombinedPreferenceStore,Long Statement,The length of the statement "combinedPreferenceStore=new ChainedPreferenceStore(new IPreferenceStore[]{getPreferenceStore()`new PreferencesAdapter(SDBGDebugCorePlugin.getPlugin().getPluginPreferences())`generalTextStore});" is 193.,109
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,DebugInstrumentationUtilities,recordLaunchConfiguration,Empty catch clause,The method has an empty catch block.,14
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,DebugInstrumentationUtilities,recordLaunchConfiguration,Long Statement,The length of the statement "instrumentation.metric("LaunchConfig-getUseDefaultBrowser"`String.valueOf(SDBGDebugCorePlugin.getPlugin().getIsDefaultBrowser()));" is 130.,27
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,DefaultDebugUIHelper,bringWindowToFrontWin32_impl,Magic Number,The method contains a magic number: 0x2,140
+sdbg_sdbg,com.github.sdbg.debug.ui.internal,DefaultDebugUIHelper,OS_GetWindowText,Magic Number,The method contains a magic number: 2,192
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorContentProvider,computeParitionSize,Empty catch clause,The method has an empty catch block.,111
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorContentProvider,getArrayPartitionSize,Magic Number,The method contains a magic number: 100,143
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,createPartControl,Long Method,The method has 128 lines of code.,302
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,createPartControl,Magic Number,The method contains a magic number: 2,302
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,createPartControl,Magic Number,The method contains a magic number: 120,302
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,createPartControl,Magic Number,The method contains a magic number: 140,302
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,createPartControl,Magic Number,The method contains a magic number: 100,302
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,createPartControl,Magic Number,The method contains a magic number: 2,302
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,init,Long Statement,The length of the statement "IWorkbenchSiteProgressService progressService=(IWorkbenchSiteProgressService)getViewSite().getAdapter(IWorkbenchSiteProgressService.class);" is 139.,480
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,restoreState,Empty catch clause,The method has an empty catch block.,494
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,restoreState,Empty catch clause,The method has an empty catch block.,494
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,restoreState,Magic Number,The method contains a magic number: 2,494
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,inspectValueImpl,Empty catch clause,The method has an empty catch block.,647
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,detailComputed,Empty catch clause,The method has an empty catch block.,652
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,run,Empty catch clause,The method has an empty catch block.,655
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ObjectInspectorView,getValue,Empty catch clause,The method has an empty catch block.,814
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ExpressionEvaluateJob,run,Empty catch clause,The method has an empty catch block.,60
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,ExpressionEvaluateJob,run,Empty catch clause,The method has an empty catch block.,60
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,InspectorVariable,setValue,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`DebugException.NOT_SUPPORTED`null`null));" is 121.,101
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,InspectorVariable,setValue,Long Statement,The length of the statement "throw new DebugException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`DebugException.NOT_SUPPORTED`null`null));" is 121.,111
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.objectinspector,HistoryAction,HistoryAction,Long Statement,The length of the statement "super(isForwardAction ? "Forward" : "Back"`isForwardAction ? SDBGDebugUIPlugin.getImageDescriptor("obj16/forward_nav.gif") : SDBGDebugUIPlugin.getImageDescriptor("obj16/backward_nav.gif"));" is 189.,39
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnLaunchShortcut,launch,Long Statement,The length of the statement "ILaunchConfigurationWorkingCopy launchConfig=type.newInstance(null`manager.generateLaunchConfigurationName(getLaunchName(resource)));" is 133.,91
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,165
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,165
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,165
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnMainTab,createControl,Long Statement,The length of the statement "instructionsLabel.setText("Make sure that \"USB debugging\" is enabled on your Android device. Then connect it to your PC via USB.");" is 133.,55
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnMainTab,createControl,Magic Number,The method contains a magic number: 3,55
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnMainTab,createControl,Magic Number,The method contains a magic number: 2,55
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnMainTab,createControl,Magic Number,The method contains a magic number: 12,55
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnMainTab,createControl,Magic Number,The method contains a magic number: 6,55
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromemobileconn,ChromeMobileConnMainTab,createControl,Magic Number,The method contains a magic number: 200,55
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppMainTab,createControl,Magic Number,The method contains a magic number: 3,76
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppMainTab,createControl,Magic Number,The method contains a magic number: 2,76
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppMainTab,createControl,Magic Number,The method contains a magic number: 2,76
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppMainTab,createControl,Magic Number,The method contains a magic number: 2,76
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppMainTab,createControl,Magic Number,The method contains a magic number: 3,76
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppMainTab,handleBrowseButton,Complex Conditional,The conditional expression (results != null) && (results.length > 0) && (results[0] instanceof IFile) is complex.,191
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppTabGroup,createTabs,Long Statement,The length of the statement "setTabs(new ILaunchConfigurationTab[]{new ChromeAppMainTab()`new SourceLookupTab()`new EnvironmentTab()`new CommonTab()});" is 122.,33
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppLaunchShortcut,launch,Long Statement,The length of the statement "ILaunchConfigurationWorkingCopy launchConfig=type.newInstance(null`manager.generateLaunchConfigurationName(getLaunchName(resource)));" is 133.,114
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,187
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,187
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeapp,ChromeAppLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,187
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsEditor,JsEditor,Long Statement,The length of the statement "setKeyBindingScopes(new String[]{"org.eclipse.ui.textEditorScope"`"com.github.sdbg.debug.ui.internal.editors.JsEditor.context"});" is 129.,29
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsEditor,updateScalabilityMode,Long Statement,The length of the statement "scalabilityModeEnabled=getDocumentProvider().getDocument(input) != null && getDocumentProvider().getDocument(input).getLength() > 1024 * 1024;" is 142.,52
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsEditor,updateScalabilityMode,Magic Number,The method contains a magic number: 1024,52
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsEditor,updateScalabilityMode,Magic Number,The method contains a magic number: 1024,52
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JavascriptUtil,getSurroundingIdentifierRegion,Complex Method,Cyclomatic complexity of the method is 11,61
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JavascriptUtil,isJsIdentifierCharacter,Long Statement,The length of the statement "return qualified ? QUALIFIED_ID_PATTERN.matcher(String.valueOf(ch)).find() : ID_PATTERN.matcher(String.valueOf(ch)).find();" is 123.,128
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsSourceViewerConfiguration,getPresentationReconciler,Long Statement,The length of the statement "setDamagerRepairer(pr`new DefaultDamagerRepairer(new MultilineCommentScanner(scanner.getCommentAttribute()))`JsPartitionScanner.MULTILINE_COMMENT);" is 147.,41
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsSourceViewerConfiguration,getPresentationReconciler,Long Statement,The length of the statement "setDamagerRepairer(pr`new DefaultDamagerRepairer(new MultilineCommentScanner(scanner.getJsDocAttribute()))`JsPartitionScanner.JSDOC);" is 133.,41
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,EditorColors,rgbToInteger,Magic Number,The method contains a magic number: 0xFF,33
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,EditorColors,rgbToInteger,Magic Number,The method contains a magic number: 16,33
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,EditorColors,rgbToInteger,Magic Number,The method contains a magic number: 0xFF,33
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,EditorColors,rgbToInteger,Magic Number,The method contains a magic number: 8,33
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,EditorColors,rgbToInteger,Magic Number,The method contains a magic number: 0xFF,33
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsPartitionScanner,JsPartitionScanner,Long Statement,The length of the statement "setPredicateRules(new IPredicateRule[]{new EndOfLineRule("//"`Token.UNDEFINED)`new SingleLineRule("\""`"\""`Token.UNDEFINED`'\\')`new SingleLineRule("'"`"'"`Token.UNDEFINED`'\\')`new EmptyCommentPredicateRule(multilineCommentToken)`new MultiLineRule("/**"`"*/"`jsDocToken`(char)0`true)`new MultiLineRule("/*"`"*/"`multilineCommentToken`(char)0`true)});" is 352.,67
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsCodeScanner,createRules,Long Statement,The length of the statement "setRules(new IRule[]{new EndOfLineRule("//"`commentToken)`new KeywordRule(keywordToken)`new MultiLineRule("/**"`"*/"`jsDocToken`(char)0`false)`new MultiLineRule("/*"`"*/"`commentToken`(char)0`false)`new SingleLineRule("\""`"\""`stringToken`'\\')`new SingleLineRule("/"`"/"`stringToken`'\\')`new SingleLineRule("'"`"'"`stringToken`'\\')`new WhitespaceRule(new IWhitespaceDetector(){" is 381.,114
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsCodeScanner,createRules,Magic Number,The method contains a magic number: 127,114
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsCodeScanner,createRules,Magic Number,The method contains a magic number: 85,114
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsCodeScanner,createRules,Magic Number,The method contains a magic number: 42,114
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.editors,JsCodeScanner,createRules,Magic Number,The method contains a magic number: 255,114
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnLaunchShortcut,launch,Long Statement,The length of the statement "ILaunchConfigurationWorkingCopy launchConfig=type.newInstance(null`manager.generateLaunchConfigurationName(getLaunchName(resource)));" is 133.,90
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,164
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,164
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,164
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Long Statement,The length of the statement "noteLabel.setText("Note for beginners: it is much easier to get started with the \"Launch Chrome\" Debug Configuration.\nConsider switching to it.");" is 149.,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Long Statement,The length of the statement "instructionsLabel.setText("To start Chrome with remote connections enabled` use the following flag(s):\n--remote-debugging-port=<port> [--user-data-dir=<remote-profile>]");" is 172.,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Magic Number,The method contains a magic number: 3,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Magic Number,The method contains a magic number: 2,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Magic Number,The method contains a magic number: 12,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Magic Number,The method contains a magic number: 6,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Magic Number,The method contains a magic number: 200,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chromeconn,ChromeConnMainTab,createControl,Magic Number,The method contains a magic number: 200,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsLaunchShortcut,getConfigurationType,Long Statement,The length of the statement "ILaunchConfigurationType type=manager.getLaunchConfigurationType(SDBGDebugCorePlugin.ANDROIDREVERSEFORWARDS_LAUNCH_CONFIG_ID);" is 126.,66
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsLaunchShortcut,launch,Long Statement,The length of the statement "ILaunchConfigurationType type=manager.getLaunchConfigurationType(SDBGDebugCorePlugin.ANDROIDREVERSEFORWARDS_LAUNCH_CONFIG_ID);" is 126.,91
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsLaunchShortcut,launch,Long Statement,The length of the statement "ILaunchConfigurationWorkingCopy launchConfig=type.newInstance(null`manager.generateLaunchConfigurationName(getLaunchName(resource)));" is 133.,91
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,166
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,166
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsLaunchShortcut,parseNameFromJson,Empty catch clause,The method has an empty catch block.,166
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Long Statement,The length of the statement "instructionsLabel.setText("Make sure that \"USB debugging\" is enabled on your Android device. Then connect it to your PC via USB.\n\n" + "Use this feature to expose to the mobile browser development websites running on your PC or LAN (e.g. http://localhost:8080/<my-j2ee-app>).\n\n" + "This method may not work for public websites that inspect the HTTP Host header (e.g. http://gwtproject.org).");" is 398.,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 3,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 5,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 12,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 6,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 40,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 8,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 12,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 6,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 3,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 3,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 40,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 20,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 40,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,createControl,Magic Number,The method contains a magic number: 400,59
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,getErrorMessage,Complex Conditional,The conditional expression host.length() > 0 || portStr.length() > 0 || devicePortStr.length() > 0 is complex.,156
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,getErrorMessage,Complex Method,Cyclomatic complexity of the method is 12,156
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,getErrorMessage,Magic Number,The method contains a magic number: 65535,156
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,getErrorMessage,Magic Number,The method contains a magic number: 65535,156
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,getErrorMessage,Magic Number,The method contains a magic number: 65535,156
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,performApply,Complex Conditional,The conditional expression host.length() > 0 || portStr.length() > 0 || devicePortStr.length() > 0 is complex.,253
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.androidreverseforwards,AndroidReverseForwardsMainTab,setDefaults,Magic Number,The method contains a magic number: 6565,295
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.hover,DebugHover,shorten,Magic Number,The method contains a magic number: 400,82
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.hover,DebugHover,findWord,Complex Method,Cyclomatic complexity of the method is 8,151
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.hover,DebugHover,findWord,Empty catch clause,The method has an empty catch block.,151
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.hover,DebugHover,findWord,Magic Number,The method contains a magic number: 2,151
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.hover,DebugTooltipControl,createContent,Complex Method,Cyclomatic complexity of the method is 8,227
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.hover,DebugTooltipControl,createContent,Magic Number,The method contains a magic number: 2,227
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,LaunchTargetComposite,Long Parameter List,The method has 5 parameters. ,77
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,LaunchTargetComposite,Magic Number,The method contains a magic number: 3,77
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,LaunchTargetComposite,Magic Number,The method contains a magic number: 3,77
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,LaunchTargetComposite,Magic Number,The method contains a magic number: 4,77
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,getErrorMessage,Complex Conditional,The conditional expression htmlButton != null && htmlButton.getSelection() && htmlText.getText().length() == 0 is complex.,106
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,getErrorMessage,Complex Conditional,The conditional expression urlButton != null || urlLaunchTabCheck != null && urlLaunchTabCheck.getSelection() is complex.,106
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,getErrorMessage,Complex Method,Cyclomatic complexity of the method is 8,106
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createHtmlField,Magic Number,The method contains a magic number: 400,197
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createUrlField,Long Statement,The length of the statement "urlButton.setText(urlIsFilter ? ChromeLaunchMessages.ChromeMainTab_UrlFilterLabel : ChromeLaunchMessages.ChromeMainTab_UrlLabel);" is 129.,228
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createUrlField,Long Statement,The length of the statement "urlLabel.setText(urlIsFilter ? ChromeLaunchMessages.ChromeMainTab_UrlFilterLabel : ChromeLaunchMessages.ChromeMainTab_UrlLabel);" is 128.,228
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createUrlField,Magic Number,The method contains a magic number: 80,228
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createUrlField,Magic Number,The method contains a magic number: 2,228
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createUrlField,Magic Number,The method contains a magic number: 3,228
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createUrlField,Magic Number,The method contains a magic number: 5,228
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,createUrlField,Magic Number,The method contains a magic number: 20,228
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,handleApplicationBrowseButton,Complex Conditional,The conditional expression (results != null) && (results.length > 0) && (results[0] instanceof IFile) is complex.,304
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,updateUrlLabel,Long Statement,The length of the statement "urlButton.setText(urlLaunchTabCheck.getSelection() ? ChromeLaunchMessages.ChromeMainTab_UrlLabel : ChromeLaunchMessages.ChromeMainTab_UrlFilterLabel);" is 150.,374
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,updateUrlLabel,Long Statement,The length of the statement "urlLabel.setText(urlLaunchTabCheck.getSelection() ? ChromeLaunchMessages.ChromeMainTab_UrlLabel : ChromeLaunchMessages.ChromeMainTab_UrlFilterLabel);" is 149.,374
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchTargetComposite,chooseProject,Empty catch clause,The method has an empty catch block.,388
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,SelectionUtil,selectAndReveal,Complex Conditional,The conditional expression window == null || resources == null || Arrays.asList(resources).contains(null) is complex.,52
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,SelectionUtil,selectAndReveal,Complex Method,Cyclomatic complexity of the method is 10,52
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,AbstractLaunchShortcut,getAssociatedLaunchConfigurations,Long Statement,The length of the statement "ILaunchConfiguration[] configs=DebugPlugin.getDefault().getLaunchManager().getLaunchConfigurations(getConfigurationType());" is 123.,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,AbstractLaunchShortcut,chooseConfiguration,Long Statement,The length of the statement "ElementListSelectionDialog dialog=new ElementListSelectionDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell()`labelProvider);" is 144.,163
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,SWTUtil,setItemHeightForFont,Empty catch clause,The method has an empty catch block.,379
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,SWTUtil,setItemHeightForFont,Magic Number,The method contains a magic number: 16,379
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,chooseConfiguration,Long Statement,The length of the statement "ElementListSelectionDialog dialog=new ElementListSelectionDialog(PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell()`labelProvider);" is 144.,117
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,getAllLaunchShortcuts,Long Statement,The length of the statement "IExtensionPoint extensionPoint=Platform.getExtensionRegistry().getExtensionPoint(IDebugUIConstants.PLUGIN_ID`IDebugUIConstants.EXTENSION_POINT_LAUNCH_SHORTCUTS);" is 161.,205
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,getSelectedResource,Complex Method,Cyclomatic complexity of the method is 13,351
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,launch,Empty catch clause,The method has an empty catch block.,417
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,launchInExternalBrowser,Complex Method,Cyclomatic complexity of the method is 9,450
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,launchInExternalBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugUIPlugin.PLUGIN_ID`"Specify browser to launch in Preferences > Run and Debug"));" is 138.,450
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,launchInExternalBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugUIPlugin.PLUGIN_ID`"Could not launch browser \"" + browserName + "\" : \n\n"+ runner.getStdErr()));" is 157.,450
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,launchInExternalBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_BrowserNotFound`e));" is 143.,450
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,launchInExternalBrowser,Magic Number,The method contains a magic number: 500,450
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,openBrowser,Long Statement,The length of the statement "browser=PlatformUI.getWorkbench().getBrowserSupport().createBrowser(IWorkbenchBrowserSupport.AS_EXTERNAL`"defaultBrowser"`"Default Browser"`"Browser");" is 151.,518
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,openBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_DefaultBrowserNotFound));" is 148.,518
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.util,LaunchUtils,openBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_UrlError));" is 134.,518
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.pubserve,PubServeMainTab,createControl,Magic Number,The method contains a magic number: 3,79
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.pubserve,PubServeMainTab,createControl,Magic Number,The method contains a magic number: 3,79
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.pubserve,PubServeMainTab,createControl,Magic Number,The method contains a magic number: 400,79
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.pubserve,PubServeMainTab,createControl,Magic Number,The method contains a magic number: 3,79
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.pubserve,PubServeMainTab,createControl,Magic Number,The method contains a magic number: 5,79
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.pubserve,PubServeMainTab,createControl,Magic Number,The method contains a magic number: 2,79
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.pubserve,PubServeMainTab,handleApplicationBrowseButton,Complex Conditional,The conditional expression (results != null) && (results.length > 0) && (results[0] instanceof IFile) is complex.,187
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,ShowInspectorAction,run,Empty catch clause,The method has an empty catch block.,41
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,ShowInspectorAction,run,Long Statement,The length of the statement "PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView("com.github.sdbg.debug.objectInspectorView");" is 123.,41
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerPatternMatchListener,matchFound,Empty catch clause,The method has an empty catch block.,138
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerPatternMatchListener,matchFound,Long Statement,The length of the statement "console.addHyperlink(new FileLink(location.getFile()`null`-1`-1`location.getLine())`event.getOffset() + match.start(1)`match.end(2) - match.start(1));" is 150.,138
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerPatternMatchListener,matchFound,Magic Number,The method contains a magic number: 2,138
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerPatternMatchListener,matchFound,Magic Number,The method contains a magic number: 2,138
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerPatternMatchListener,parseForLocation,Complex Method,Cyclomatic complexity of the method is 10,199
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,BlankSeparator,fill,Magic Number,The method contains a magic number: 12,33
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerViewManager,launchAdded,Long Statement,The length of the statement "if (launch.getLaunchConfiguration().getType().getIdentifier().startsWith("com.google") && launch.getLaunchMode().equals(ILaunchManager.DEBUG_MODE)) {" is 149.,97
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerViewManager,launchRemoved,Complex Conditional,The conditional expression launch != null && launch.getLaunchConfiguration() != null && launch.getLaunchMode() != null is complex.,119
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerViewManager,launchRemoved,Long Statement,The length of the statement "if (launch.getLaunchConfiguration().getType().getIdentifier().startsWith("com.google") && launch.getLaunchMode().equals(ILaunchManager.DEBUG_MODE)) {" is 149.,119
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerView,createPartControl,Long Statement,The length of the statement "CONNECTED_IMAGE=SDBGDebugUIPlugin.getImage(new DecorationOverlayIcon(NOT_CONNECTED_IMAGE`SDBGDebugUIPlugin.getImageDescriptor("ovr16/play.png")`IDecoration.BOTTOM_RIGHT));" is 171.,92
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerView,updateSashOrientation,Magic Number,The method contains a magic number: 1.25,265
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.view,DebuggerView,restoreSashWeights,Magic Number,The method contains a magic number: 2,294
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,openBrowser,Long Statement,The length of the statement "browser=PlatformUI.getWorkbench().getBrowserSupport().createBrowser(IWorkbenchBrowserSupport.AS_EXTERNAL`"defaultBrowser"`"Default Browser"`"Browser");" is 151.,58
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,openBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_DefaultBrowserNotFound));" is 148.,58
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,openBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_UrlError));" is 134.,58
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,doLaunch,Long Parameter List,The method has 5 parameters. ,97
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,doLaunch,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_HtmlFileNotFound));" is 142.,97
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,doLaunch,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`"Could not launch browser - unable to start embedded server"`ioe));" is 146.,97
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,doLaunch,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_UrlError));" is 134.,97
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,launchInExternalBrowser,Complex Method,Cyclomatic complexity of the method is 9,162
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,launchInExternalBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugUIPlugin.PLUGIN_ID`"Specify browser to launch in Preferences > Run and Debug"));" is 138.,162
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,launchInExternalBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugUIPlugin.PLUGIN_ID`"Could not launch browser \"" + browserName + "\" : \n\n"+ runner.getStdErr()));" is 157.,162
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,launchInExternalBrowser,Long Statement,The length of the statement "throw new CoreException(new Status(IStatus.ERROR`SDBGDebugCorePlugin.PLUGIN_ID`Messages.BrowserLaunchConfigurationDelegate_BrowserNotFound`e));" is 143.,162
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserLaunchConfigurationDelegate,launchInExternalBrowser,Magic Number,The method contains a magic number: 500,162
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.browser,BrowserMainTab,createControl,Magic Number,The method contains a magic number: 3,38
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chrome,DevToolsDisconnectManager,handleShellActivated,Empty catch clause,The method has an empty catch block.,111
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chrome,ChromeMainTab,createControl,Magic Number,The method contains a magic number: 3,63
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chrome,ChromeMainTab,createControl,Magic Number,The method contains a magic number: 3,63
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chrome,ChromeMainTab,createControl,Magic Number,The method contains a magic number: 5,63
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chrome,ChromeMainTab,createControl,Magic Number,The method contains a magic number: 3,63
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.chrome,ChromeMainTab,createControl,Magic Number,The method contains a magic number: 2,63
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,performOk,Long Identifier,The length of the field excludeFromLogicalStructureText is 31.,63
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Long Identifier,The length of the identifier excludeFromLogicalStructureLabel is 32.,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Long Identifier,The length of the field excludeFromLogicalStructureText is 31.,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Long Statement,The length of the statement "exceptionsCombo.setItems(new String[]{BreakOnExceptions.none.toString()`BreakOnExceptions.uncaught.toString()`BreakOnExceptions.all.toString()});" is 145.,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 10,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 8,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 10,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 2,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 8,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 8,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 2,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 2,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 2,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 2,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,createContents,Magic Number,The method contains a magic number: 2,81
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.preferences,DebugPreferencePage,initFromPrefs,Long Identifier,The length of the field excludeFromLogicalStructureText is 31.,191
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.actions,GlobalVariablesFilterAction,runWithEvent,Long Statement,The length of the statement "if (!MessageDialog.openConfirm(view.getViewSite().getShell()`"Warning"`"Vizualizing global variables can significantly slow down the debugger.\nWould you like to still shown them?")) {" is 184.,31
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.breakpoints,RetargetToggleBreakpointAction,getOperationUnavailableMessage,Long Statement,The length of the statement "return "The operation is unavailable on the current selection. Please place the cursor in a valid location for a breakpoint.";" is 126.,37
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.breakpoints,SDBGBreakpointAdapterFactory,getAdapter,Complex Method,Cyclomatic complexity of the method is 8,40
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.breakpoints,RulerEnableDisableBreakpointAction,run,Long Statement,The length of the statement "DebugErrorHandler.errorDialog(getEditor().getSite().getShell()`Messages.breakpointAction_error`Messages.breakpointAction_errorTogglingBreakpoint`e.getStatus());" is 160.,42
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.breakpoints,RulerEnableDisableBreakpointAction,update,Empty catch clause,The method has an empty catch block.,57
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.breakpoints,SDBGBreakpointAdapter,toggleLineBreakpoints,Complex Method,Cyclomatic complexity of the method is 9,65
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.breakpoints,SDBGBreakpointAdapter,toggleLineBreakpoints,Empty catch clause,The method has an empty catch block.,65
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.breakpoints,SDBGBreakpointAdapter,toggleLineBreakpoints,Long Statement,The length of the statement "IBreakpoint[] breakpoints=DebugPlugin.getDefault().getBreakpointManager().getBreakpoints(SDBGDebugCorePlugin.DEBUG_MODEL_ID);" is 125.,65
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getEditorInput,Complex Method,Cyclomatic complexity of the method is 11,154
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getImage,Complex Conditional,The conditional expression variable.isStatic() || variable.isScope() && "global".equals(variable.getName()) is complex.,219
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getImage,Complex Conditional,The conditional expression variable.isLocal() || variable.isScope() && "local".equals(variable.getName()) is complex.,219
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getImage,Complex Method,Cyclomatic complexity of the method is 9,219
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getImage,Long Statement,The length of the statement "DecorationOverlayIcon overlayDescriptor=new DecorationOverlayIcon(image`SDBGDebugUIPlugin.getImageDescriptor("ovr16/mapped.png")`IDecoration.BOTTOM_RIGHT);" is 155.,219
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getInstructionPointerImage,Empty catch clause,The method has an empty catch block.,284
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getBreakpointText,Long Statement,The length of the statement "text=file.getProject().getName() + "` " + file.getProjectRelativePath().toPortableString()+ "` line "+ NumberFormat.getNumberInstance().format(sdbgBreakpoint.getLine());" is 169.,394
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getBreakpointText,Long Statement,The length of the statement "text=bp.getMarker().getResource().getProject().getName() + "` " + bp.getMarker().getResource().getProjectRelativePath().toPortableString();" is 139.,394
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getValueDetailText,Magic Number,The method contains a magic number: 3,437
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getLineExtract,Long Statement,The length of the statement "r=new InputStreamReader(((IFile)bp.getMarker().getResource()).getContents()`((IFile)bp.getMarker().getResource()).getCharset());" is 128.,497
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getLogicalStructureTypeExtensions,Complex Method,Cyclomatic complexity of the method is 8,528
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getLogicalStructureTypeExtensions,Long Statement,The length of the statement "return (ISDBGLogicalStructureTypeExtensions)((IAdaptable)delegateType).getAdapter(ISDBGLogicalStructureTypeExtensions.class);" is 125.,528
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGDebugModelPresentation,getSourcePresentations,Long Statement,The length of the statement "IExtensionPoint extensionPoint=Platform.getExtensionRegistry().getExtensionPoint("com.github.sdbg.debug.ui.sourcePresentation");" is 128.,565
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGLaunchContentProvider,getChildren,Long Parameter List,The method has 5 parameters. ,41
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGSourceNotFoundEditor,createPartControl,Magic Number,The method contains a magic number: 6,75
+sdbg_sdbg,com.github.sdbg.debug.ui.internal.presentation,SDBGSourceNotFoundEditor,createPartControl,Magic Number,The method contains a magic number: 6,75
+sdbg_sdbg,com.github.sdbg.core.util.io,PrintStringWriter,printTable,Complex Method,Cyclomatic complexity of the method is 9,109
+sdbg_sdbg,com.github.sdbg.core.test.util,TestProject,waitForAutoBuild,Empty catch clause,The method has an empty catch block.,43
+sdbg_sdbg,com.github.sdbg.core.test.util,TestProject,dispose,Empty catch clause,The method has an empty catch block.,122
+sdbg_sdbg,com.github.sdbg.core.test.util,ProgressMonitorLatch,await,Magic Number,The method contains a magic number: 10,36
+sdbg_sdbg,com.github.sdbg.core.test.util,TestUtilities,delay,Empty catch clause,The method has an empty catch block.,230
+sdbg_sdbg,com.github.sdbg.core.test.util,TestUtilities,deleteProject,Magic Number,The method contains a magic number: 10,278
+sdbg_sdbg,com.github.sdbg.core.test.util,TestUtilities,refreshWorkspace,Empty catch clause,The method has an empty catch block.,487
+sdbg_sdbg,com.github.sdbg.core.test.util,TestUtilities,wait,Empty catch clause,The method has an empty catch block.,515
+sdbg_sdbg,com.github.sdbg.core.test.util,TestUtilities,wait,Empty catch clause,The method has an empty catch block.,515
+sdbg_sdbg,com.github.sdbg.core.test.util,TestUtilities,wait,Magic Number,The method contains a magic number: 10,515
+sdbg_sdbg,com.github.sdbg.core.test.util,TestUtilities,wait,Magic Number,The method contains a magic number: 10,515
+sdbg_sdbg,com.github.sdbg.core.test.util,FileUtilities,copyFile,Empty catch clause,The method has an empty catch block.,81
+sdbg_sdbg,com.github.sdbg.core.test.util,FileUtilities,copyFile,Empty catch clause,The method has an empty catch block.,81
+sdbg_sdbg,com.github.sdbg.core.test.util,FileUtilities,copyFile,Magic Number,The method contains a magic number: 8192,81

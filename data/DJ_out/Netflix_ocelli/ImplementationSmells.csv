@@ -1,0 +1,276 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Netflix_ocelli,netflix.ocelli,InstanceQuarantiner,call,Long Statement,The length of the statement "Observable<Instance<T>> o=Observable.just(Instance.create(factory.create(primaryInstance.getValue()`metrics`lifecycle)`lifecycle));" is 131.,123
+Netflix_ocelli,netflix.ocelli,InstanceQuarantiner,call,Long Statement,The length of the statement "Observable<Instance<T>> o=Observable.just(Instance.create(factory.create(primaryInstance.getValue()`metrics`lifecycle)`lifecycle));" is 131.,126
+Netflix_ocelli,netflix.ocelli,InstanceQuarantiner,call,Long Statement,The length of the statement "Observable<Instance<T>> o=Observable.just(Instance.create(factory.create(primaryInstance.getValue()`metrics`lifecycle)`lifecycle));" is 131.,132
+Netflix_ocelli,netflix.ocelli,LoadBalancerEventListener,onEvent,Long Parameter List,The method has 5 parameters. ,12
+Netflix_ocelli,netflix.ocelli,AbstractLoadBalancerEvent,hashCode,Magic Number,The method contains a magic number: 31,55
+Netflix_ocelli,netflix.ocelli,AbstractLoadBalancerEvent,hashCode,Magic Number,The method contains a magic number: 31,55
+Netflix_ocelli,netflix.ocelli,InstanceEventListener,onEvent,Long Parameter List,The method has 5 parameters. ,7
+Netflix_ocelli,netflix.ocelli,InstanceToNotification,call,Long Statement,The length of the statement "return Observable.just(new InstanceNotification<T>(instance`Kind.OnAdd)).concatWith(instance.getLifecycle().materialize().map(new Func1<Notification<Void>`InstanceNotification<T>>(){" is 182.,41
+Netflix_ocelli,netflix.ocelli,Host,hashCode,Magic Number,The method contains a magic number: 31,57
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Empty catch clause,The method has an empty catch block.,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Empty catch clause,The method has an empty catch block.,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Empty catch clause,The method has an empty catch block.,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Long Statement,The length of the statement "final LoadBalancer<Client> lb=LoadBalancer.fromSource(instances.map(Client.connector())).withQuarantiner(Client.incarnationFactory()`Delays.fixed(1`TimeUnit.SECONDS)`scheduler).build(RoundRobinLoadBalancer.<Client>create());" is 224.,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Magic Number,The method contains a magic number: 2,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Magic Number,The method contains a magic number: 2,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Magic Number,The method contains a magic number: 2,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,basicTest,Magic Number,The method contains a magic number: 3,120
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,test,Long Statement,The length of the statement "final LoadBalancer<Client> lb=LoadBalancer.fromSource(instances.map(Client.connector())).withQuarantiner(Client.incarnationFactory()`Delays.fixed(1`TimeUnit.SECONDS)`scheduler).build(RoundRobinLoadBalancer.<Client>create());" is 224.,182
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,test,Magic Number,The method contains a magic number: 2,182
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,test,Magic Number,The method contains a magic number: 100,182
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,test,Magic Number,The method contains a magic number: 10,182
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,integrationTest,Long Statement,The length of the statement "final LoadBalancer<Client> lb=LoadBalancer.fromSource(instances.map(Client.connector())).withQuarantiner(Client.incarnationFactory()`Delays.fixed(1`TimeUnit.SECONDS)`scheduler).build(ChoiceOfTwoLoadBalancer.<Client>create(Client.compareByMetric()));" is 249.,225
+Netflix_ocelli,netflix.ocelli,InstanceQuarantinerTest,integrationTest,Magic Number,The method contains a magic number: 2,225
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedList,Long Statement,The length of the statement "LoadBalancer<String> lb=LoadBalancer.fromFixedSource(Lists.newArrayList("host1:8080"`"host2:8080")).build(RoundRobinLoadBalancer.<String>create(0)`InstanceCollector.create(new Func0<Map<String`Subscription>>(){" is 210.,39
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedListAndConvertToDifferentType,Long Statement,The length of the statement "LoadBalancer<ClientWithWeight> lb=LoadBalancer.fromFixedSource(Lists.newArrayList("host1:8080"`"host2:8080")).convertTo(CLIENT_FROM_ADDRESS).build(RoundRobinLoadBalancer.<ClientWithWeight>create(0)`InstanceCollector.create(new Func0<Map<ClientWithWeight`Subscription>>(){" is 271.,56
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedListWithAdvancedAlgorithm,Long Statement,The length of the statement "LoadBalancer<ClientWithWeight> lb=LoadBalancer.fromFixedSource(Lists.newArrayList(new ClientWithWeight("host1:8080"`1)`new ClientWithWeight("host2:8080"`2))).build(ChoiceOfTwoLoadBalancer.create(COMPARE_BY_WEIGHT)`InstanceCollector.create(new Func0<Map<ClientWithWeight`Subscription>>(){" is 287.,74
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedListWithAdvancedAlgorithm,Magic Number,The method contains a magic number: 2,74
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedAndUseQuaratiner,Long Statement,The length of the statement "LoadBalancer<ClientWithLifecycle> lb=LoadBalancer.fromFixedSource(Lists.newArrayList(new ClientWithLifecycle("host1:8080")`new ClientWithLifecycle("host2:8080"))).withQuarantiner(new IncarnationFactory<ClientWithLifecycle>(){" is 225.,92
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedAndUseQuaratiner,Long Statement,The length of the statement "@Override public ClientWithLifecycle create( ClientWithLifecycle client` InstanceEventListener listener` Observable<Void> lifecycle){" is 133.,92
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedAndUseQuaratiner,Long Statement,The length of the statement "`Delays.fixed(10`TimeUnit.SECONDS)`scheduler).build(RoundRobinLoadBalancer.<ClientWithLifecycle>create(0)`InstanceCollector.create(new Func0<Map<ClientWithLifecycle`Subscription>>(){" is 182.,92
+Netflix_ocelli,netflix.ocelli,LoadBalancerTest,createFromFixedAndUseQuaratiner,Magic Number,The method contains a magic number: 10,92
+Netflix_ocelli,netflix.ocelli.retrys,BackupRequestRetryStrategy,call,Long Statement,The length of the statement "return Observable.just(timedO`timedO.delaySubscription(metric.get()`TimeUnit.MILLISECONDS`scheduler)).flatMap(new Func1<Observable<T>`Observable<T>>(){" is 151.,126
+Netflix_ocelli,netflix.ocelli.retrys,BackupRequestRetryStrategy,call,Magic Number,The method contains a magic number: 2,126
+Netflix_ocelli,netflix.ocelli.retrys,BackupRequestRetryStrategy,call,Magic Number,The method contains a magic number: 2,146
+Netflix_ocelli,netflix.ocelli.retrys,BackupRequestRetryStrategy,call,Magic Number,The method contains a magic number: 2,149
+Netflix_ocelli,netflix.ocelli.retrys,ExponentialBackoff,ExponentialBackoff,Long Parameter List,The method has 5 parameters. ,32
+Netflix_ocelli,netflix.ocelli.retrys,ExponentialBackoff,call,Magic Number,The method contains a magic number: 2,51
+Netflix_ocelli,netflix.ocelli.retrys,ExponentialBackoff,call,Magic Number,The method contains a magic number: 2,54
+Netflix_ocelli,netflix.ocelli.loadbalancer,RoundRobinLoadBalancer,create,Magic Number,The method contains a magic number: 1000,17
+Netflix_ocelli,netflix.ocelli.loadbalancer,RoundRobinLoadBalancer,RoundRobinLoadBalancer,Magic Number,The method contains a magic number: 1000,27
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testOne,Magic Number,The method contains a magic number: 100,38
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testTwo,Magic Number,The method contains a magic number: 2,50
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testTwo,Magic Number,The method contains a magic number: 100,50
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testTwo,Magic Number,The method contains a magic number: 100,50
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 2,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 3,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 4,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 5,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 6,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 7,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 8,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 9,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 10,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 100000,66
+Netflix_ocelli,netflix.ocelli.loadbalancer,ChoiceOfTwoLoadBalancerTest,testMany,Magic Number,The method contains a magic number: 100000.0,66
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,BaseWeightingStrategyTest,roundToNearest,Magic Number,The method contains a magic number: 2,81
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,BaseWeightingStrategyTest,printClients,Long Statement,The length of the statement "return Joiner.on("` ").join(Collections2.transform(Lists.newArrayList(clients)`new Function<IntClientAndMetrics`Integer>(){" is 123.,89
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,BaseWeightingStrategyTest,printMetrics,Long Statement,The length of the statement "return Joiner.on("` ").join(Collections2.transform(Lists.newArrayList(clients)`new Function<IntClientAndMetrics`Integer>(){" is 123.,98
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEmptyClients,Magic Number,The method contains a magic number: 1000,26
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEmptyClients,Magic Number,The method contains a magic number: 100,26
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 5,35
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 10,35
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 1000,35
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 100,35
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 1000,35
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 5,45
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 4000,45
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 100,45
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,45
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,45
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,45
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,45
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 5,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 2,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 3,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 4,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 4000,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 100,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 400,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 800,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 1200,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,LinearWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 1600,55
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEmptyClients,Magic Number,The method contains a magic number: 1000,25
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEmptyClients,Magic Number,The method contains a magic number: 100,25
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 5,34
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 10,34
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 1000,34
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 100,34
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testOneClient,Magic Number,The method contains a magic number: 1000,34
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 5,44
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 4000,44
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 100,44
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,44
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,44
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,44
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testEqualsWeights,Magic Number,The method contains a magic number: 1000,44
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 5,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 2,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 3,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 4,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 4000,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 100,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 1600,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 1200,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 800,54
+Netflix_ocelli,netflix.ocelli.loadbalancer.weighting,InverseMaxWeightingStrategyTest,testDifferentWeights,Magic Number,The method contains a magic number: 400,54
+Netflix_ocelli,netflix.ocelli.util,RpsEstimator,RpsEstimator,Magic Number,The method contains a magic number: 1000,21
+Netflix_ocelli,netflix.ocelli.util,RpsEstimator,addSample,Magic Number,The method contains a magic number: 2,26
+Netflix_ocelli,netflix.ocelli.util,RpsEstimator,addSample,Magic Number,The method contains a magic number: 2,26
+Netflix_ocelli,netflix.ocelli.util,RxUtil,rate,Long Statement,The length of the statement "final String sUnits=(interval == 1) ? TIME_UNIT[units.ordinal()] : String.format("({} {})"`interval`TIME_UNIT[units.ordinal()]);" is 128.,227
+Netflix_ocelli,netflix.ocelli.util,RxUtil,call,Long Statement,The length of the statement "final String sUnits=(interval == 1) ? TIME_UNIT[units.ordinal()] : String.format("({} {})"`interval`TIME_UNIT[units.ordinal()]);" is 128.,230
+Netflix_ocelli,netflix.ocelli.util,RxUtil,getSourceLabel,Magic Number,The method contains a magic number: 3,393
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,shouldBeInitiallyEmpty,Empty catch clause,The method has an empty catch block.,14
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,shouldBlockEmptyQueue,Magic Number,The method contains a magic number: 100,28
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,addRemoveAndShouldBlock,Magic Number,The method contains a magic number: 123,34
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,addRemoveAndShouldBlock,Magic Number,The method contains a magic number: 123,34
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,addRemoveAndShouldBlock,Magic Number,The method contains a magic number: 100,34
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,addOne,Empty catch clause,The method has an empty catch block.,44
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,addOne,Magic Number,The method contains a magic number: 123,44
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,addOne,Magic Number,The method contains a magic number: 123,44
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,addOne,Magic Number,The method contains a magic number: 123,44
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,removeIsRandom,Magic Number,The method contains a magic number: 1000,65
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,removeIsRandom,Magic Number,The method contains a magic number: 100,65
+Netflix_ocelli,netflix.ocelli.util,RandomQueueTest,removeIsRandom,Magic Number,The method contains a magic number: 100,65
+Netflix_ocelli,netflix.ocelli.stats,CKMSQuantiles,get,Magic Number,The method contains a magic number: 2,90
+Netflix_ocelli,netflix.ocelli.stats,CKMSQuantiles,compress,Magic Number,The method contains a magic number: 2,215
+Netflix_ocelli,netflix.ocelli.stats,ExponentialAverage,ExponentialAverage,Magic Number,The method contains a magic number: 2.0,22
+Netflix_ocelli,netflix.ocelli.functions,Delays,exp,Magic Number,The method contains a magic number: 30,26
+Netflix_ocelli,netflix.ocelli.functions,Delays,exp,Magic Number,The method contains a magic number: 30,26
+Netflix_ocelli,netflix.ocelli.functions,Delays,get,Magic Number,The method contains a magic number: 30,28
+Netflix_ocelli,netflix.ocelli.functions,Delays,get,Magic Number,The method contains a magic number: 30,28
+Netflix_ocelli,netflix.ocelli.functions,Delays,boundedExp,Magic Number,The method contains a magic number: 30,39
+Netflix_ocelli,netflix.ocelli.functions,Delays,boundedExp,Magic Number,The method contains a magic number: 30,39
+Netflix_ocelli,netflix.ocelli.functions,Delays,get,Magic Number,The method contains a magic number: 30,41
+Netflix_ocelli,netflix.ocelli.functions,Delays,get,Magic Number,The method contains a magic number: 30,41
+Netflix_ocelli,netflix.ocelli.functions,GuardsTest,shouldRejectAfter100Percent,Magic Number,The method contains a magic number: 0.90,8
+Netflix_ocelli,netflix.ocelli.functions,GuardsTest,shouldRejectAfter100Percent,Magic Number,The method contains a magic number: 30,8
+Netflix_ocelli,netflix.ocelli.functions,GuardsTest,shouldRejectAfter100Percent,Magic Number,The method contains a magic number: 100,8
+Netflix_ocelli,netflix.ocelli.functions,GuardsTest,shouldRejectAfter90Percent,Magic Number,The method contains a magic number: 0.90,22
+Netflix_ocelli,netflix.ocelli.functions,GuardsTest,shouldRejectAfter90Percent,Magic Number,The method contains a magic number: 30,22
+Netflix_ocelli,netflix.ocelli.functions,GuardsTest,shouldRejectAfter90Percent,Magic Number,The method contains a magic number: 100,22
+Netflix_ocelli,netflix.ocelli.functions,GuardsTest,shouldRejectAfter90Percent,Magic Number,The method contains a magic number: 5,22
+Netflix_ocelli,netflix.ocelli.client,TestClient,execute,Long Statement,The length of the statement "return behavior.call(this).doOnSubscribe(RxUtil.increment(onSubscribeCount)).doOnSubscribe(RxUtil.acquire(sem)).doOnUnsubscribe(RxUtil.increment(onUnSubscribeCount)).concatMap(operation).doOnEach(new Observer<String>(){" is 219.,140
+Netflix_ocelli,netflix.ocelli.client,TestClient,hashCode,Magic Number,The method contains a magic number: 31,170
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Long Statement,The length of the statement "members.doOnNext(RxUtil.info("add")).compose(mapper).compose(InstanceCollector.<Integer>create()).doOnNext(RxUtil.info("current")).subscribe(RxUtil.set(current));" is 162.,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 2,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 3,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 4,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 6,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 8,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 9,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 10,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 5,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 3,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 8,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 8,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 10,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 8,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 9,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 6,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 8,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 8,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 9,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 8,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 10,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 7,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 10,37
+Netflix_ocelli,netflix.ocelli.toplogies,TopologiesTest,test,Magic Number,The method contains a magic number: 11,37
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsFast,Long Statement,The length of the statement "BehaviorSubject<List<Observable<Integer>>> subject=BehaviorSubject.create(Arrays.asList(Observable.just(1)`Observable.just(2)`Observable.just(3)));" is 147.,47
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsFast,Long Statement,The length of the statement "LoadBalancer<Observable<Integer>> lb=LoadBalancer.fromSnapshotSource(subject).build(RoundRobinLoadBalancer.<Observable<Integer>>create(-1));" is 140.,47
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsFast,Long Statement,The length of the statement "lb.toObservable().doOnNext(RxUtil.increment(lbCounter)).flatMap(Operation).compose(strategy).doOnNext(RxUtil.set(result)).subscribe();" is 134.,47
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsFast,Magic Number,The method contains a magic number: 2,47
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsFast,Magic Number,The method contains a magic number: 3,47
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsFast,Magic Number,The method contains a magic number: 2,47
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstNeverSecondSucceeds,Long Statement,The length of the statement "BehaviorSubject<List<Observable<Integer>>> subject=BehaviorSubject.create(Arrays.asList(Observable.<Integer>never()`Observable.just(2)`Observable.just(3)));" is 156.,73
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstNeverSecondSucceeds,Long Statement,The length of the statement "LoadBalancer<Observable<Integer>> lb=LoadBalancer.fromSnapshotSource(subject).build(RoundRobinLoadBalancer.<Observable<Integer>>create(-1));" is 140.,73
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstNeverSecondSucceeds,Long Statement,The length of the statement "lb.toObservable().doOnNext(RxUtil.increment(lbCounter)).flatMap(Operation).compose(strategy).doOnNext(RxUtil.set(result)).subscribe();" is 134.,73
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstNeverSecondSucceeds,Magic Number,The method contains a magic number: 2,73
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstNeverSecondSucceeds,Magic Number,The method contains a magic number: 3,73
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstNeverSecondSucceeds,Magic Number,The method contains a magic number: 2,73
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstNeverSecondSucceeds,Magic Number,The method contains a magic number: 2,73
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstFailsSecondSucceeds,Long Statement,The length of the statement "BehaviorSubject<List<Observable<Integer>>> subject=BehaviorSubject.create(Arrays.asList(Observable.<Integer>error(new Exception("1"))`Observable.just(2)`Observable.just(3)));" is 174.,99
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstFailsSecondSucceeds,Long Statement,The length of the statement "LoadBalancer<Observable<Integer>> lb=LoadBalancer.fromSnapshotSource(subject).build(RoundRobinLoadBalancer.<Observable<Integer>>create(-1));" is 140.,99
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstFailsSecondSucceeds,Long Statement,The length of the statement "lb.toObservable().doOnNext(RxUtil.increment(lbCounter)).flatMap(Operation).compose(strategy).doOnNext(RxUtil.set(result)).subscribe();" is 134.,99
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstFailsSecondSucceeds,Magic Number,The method contains a magic number: 2,99
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstFailsSecondSucceeds,Magic Number,The method contains a magic number: 3,99
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstFailsSecondSucceeds,Magic Number,The method contains a magic number: 2,99
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstFailsSecondSucceeds,Magic Number,The method contains a magic number: 2,99
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Long Statement,The length of the statement "BehaviorSubject<List<Observable<Integer>>> subject=BehaviorSubject.create(Arrays.asList(Observable.just(1).delaySubscription(2`TimeUnit.SECONDS`scheduler)`Observable.just(2).delaySubscription(2`TimeUnit.SECONDS`scheduler)`Observable.just(3)));" is 243.,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Long Statement,The length of the statement "LoadBalancer<Observable<Integer>> lb=LoadBalancer.fromSnapshotSource(subject).build(RoundRobinLoadBalancer.<Observable<Integer>>create(-1));" is 140.,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Long Statement,The length of the statement "lb.toObservable().doOnNext(RxUtil.increment(lbCounter)).flatMap(Operation).compose(strategy).doOnNext(RxUtil.set(result)).subscribe();" is 134.,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Magic Number,The method contains a magic number: 2,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Magic Number,The method contains a magic number: 2,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Magic Number,The method contains a magic number: 2,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Magic Number,The method contains a magic number: 3,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Magic Number,The method contains a magic number: 3,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothDelayed,Magic Number,The method contains a magic number: 2,125
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothFailed,Long Statement,The length of the statement "BehaviorSubject<List<Observable<Integer>>> subject=BehaviorSubject.create(Arrays.asList(Observable.<Integer>error(new Exception("1"))`Observable.<Integer>error(new Exception("2"))`Observable.just(3)));" is 201.,152
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothFailed,Long Statement,The length of the statement "LoadBalancer<Observable<Integer>> lb=LoadBalancer.fromSnapshotSource(subject).build(RoundRobinLoadBalancer.<Observable<Integer>>create(-1));" is 140.,152
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothFailed,Long Statement,The length of the statement "lb.toObservable().doOnNext(RxUtil.increment(lbCounter)).flatMap(Operation).compose(strategy).doOnNext(RxUtil.set(result)).doOnError(new Action1<Throwable>(){" is 157.,152
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothFailed,Magic Number,The method contains a magic number: 3,152
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothFailed,Magic Number,The method contains a magic number: 3,152
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,bothFailed,Magic Number,The method contains a magic number: 2,152
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsSecondFailsAfterBackupStarted,Long Statement,The length of the statement "BehaviorSubject<List<Observable<Integer>>> subject=BehaviorSubject.create(Arrays.asList(Observable.just(1).delaySubscription(2`TimeUnit.SECONDS`scheduler)`Observable.<Integer>error(new Exception("2"))`Observable.just(3)));" is 222.,186
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsSecondFailsAfterBackupStarted,Long Statement,The length of the statement "LoadBalancer<Observable<Integer>> lb=LoadBalancer.fromSnapshotSource(subject).build(RoundRobinLoadBalancer.<Observable<Integer>>create(-1));" is 140.,186
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsSecondFailsAfterBackupStarted,Long Statement,The length of the statement "lb.toObservable().doOnNext(RxUtil.increment(lbCounter)).flatMap(Operation).compose(strategy).doOnNext(RxUtil.set(result)).subscribe();" is 134.,186
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsSecondFailsAfterBackupStarted,Magic Number,The method contains a magic number: 2,186
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsSecondFailsAfterBackupStarted,Magic Number,The method contains a magic number: 3,186
+Netflix_ocelli,netflix.ocelli.retry,BackupRequestStrategyTest,firstSucceedsSecondFailsAfterBackupStarted,Magic Number,The method contains a magic number: 2,186
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Long Statement,The length of the statement "eureka.newInterest().forApplication("foo").withRefreshInterval(1`TimeUnit.SECONDS).withScheduler(scheduler).asObservable().compose(InstanceCollector.<InstanceInfo>create()).subscribe(RxUtil.set(result));" is 203.,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Magic Number,The method contains a magic number: 2,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Magic Number,The method contains a magic number: 3,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Magic Number,The method contains a magic number: 4,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Magic Number,The method contains a magic number: 10,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Magic Number,The method contains a magic number: 10,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Magic Number,The method contains a magic number: 10,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,testAddRemoveInstances,Magic Number,The method contains a magic number: 10,34
+Netflix_ocelli,netflix.ocelli.eureka,EurekaInterestManagerTest,createInstance,Long Statement,The length of the statement "return InstanceInfo.Builder.newBuilder().setHostName("localhost:800" + id).setAppName("foo").setStatus(InstanceStatus.UP).build();" is 130.,72
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RoundRobin,main,Long Statement,The length of the statement ").retry((integer`throwable) -> throwable instanceof SocketException || throwable instanceof ConnectException || throwable instanceof InvalidResponseException).repeat(10).toBlocking().forEach(bb -> bb.toString(Charset.defaultCharset()));" is 236.,25
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RoundRobin,main,Magic Number,The method contains a magic number: 503,25
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RoundRobin,main,Magic Number,The method contains a magic number: 200,25
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RoundRobin,main,Magic Number,The method contains a magic number: 10,25
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RoundRobin,onResponseHeadersReceived,Magic Number,The method contains a magic number: 503,33
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,ChoiceOfTwo,main,Long Statement,The length of the statement ").retry((integer`throwable) -> throwable instanceof SocketException || throwable instanceof ConnectException || throwable instanceof InvalidResponseException).repeat(10).toBlocking().forEach(bb -> bb.toString(Charset.defaultCharset()));" is 236.,23
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,ChoiceOfTwo,main,Magic Number,The method contains a magic number: 5L,23
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,ChoiceOfTwo,main,Magic Number,The method contains a magic number: 2L,23
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,ChoiceOfTwo,main,Magic Number,The method contains a magic number: 503,23
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,ChoiceOfTwo,main,Magic Number,The method contains a magic number: 200,23
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,ChoiceOfTwo,main,Magic Number,The method contains a magic number: 10,23
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,ChoiceOfTwo,onResponseHeadersReceived,Magic Number,The method contains a magic number: 503,38
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,HttpExampleUtils,startServer,Long Statement,The length of the statement "return Observable.timer(latencyMillis`TimeUnit.MILLISECONDS).flatMap(aTick -> response.addHeader("X-Instance"`response.unsafeNettyChannel().localAddress()).setStatus(HttpResponseStatus.OK));" is 190.,38
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RandomWeighted,main,Long Statement,The length of the statement ").retry((integer`throwable) -> throwable instanceof SocketException || throwable instanceof ConnectException || throwable instanceof InvalidResponseException).repeat(10).toBlocking().forEach(bb -> bb.toString(Charset.defaultCharset()));" is 236.,24
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RandomWeighted,main,Magic Number,The method contains a magic number: 2L,24
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RandomWeighted,main,Magic Number,The method contains a magic number: 503,24
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RandomWeighted,main,Magic Number,The method contains a magic number: 200,24
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RandomWeighted,main,Magic Number,The method contains a magic number: 10,24
+Netflix_ocelli,netflix.ocelli.examples.rxnetty.http,RandomWeighted,onResponseHeadersReceived,Magic Number,The method contains a magic number: 503,39
+Netflix_ocelli,netflix.ocelli.eureka2,Eureka2InterestManager,forInterest,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2020083c,49
+Netflix_ocelli,netflix.ocelli.eureka2,Eureka2InterestManager,call,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2020083c,52
+Netflix_ocelli,netflix.ocelli.eureka2,Eureka2InterestManager,call,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2020083c,58
+Netflix_ocelli,netflix.ocelli.eureka2,Eureka2InterestManagerTest,testVipBasedInterest,Long Statement,The length of the statement "List<Instance<SocketAddress>> instances=membershipSource.forInterest(interest).take(2).toList().toBlocking().toFuture().get(1`TimeUnit.SECONDS);" is 144.,61
+Netflix_ocelli,netflix.ocelli.eureka2,Eureka2InterestManagerTest,testVipBasedInterest,Magic Number,The method contains a magic number: 2,61
+Netflix_ocelli,netflix.ocelli.eureka2,Eureka2InterestManagerTest,testVipBasedInterest,Magic Number,The method contains a magic number: 2,61
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,AbstractLoadBalancer,toConnectionProvider,Long Statement,The length of the statement "final Observable<Instance<ConnectionProvider<W`R>>> providerStream=hosts.map(new Func1<Instance<SocketAddress>`Instance<ConnectionProvider<W`R>>>(){" is 148.,67
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,AbstractLoadBalancerTest,testRoundRobin,Magic Number,The method contains a magic number: 60000,19
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancerRule,setup,Long Statement,The length of the statement "@Override protected ConnectionProvider<String`String> newConnectionProviderForHost( final Instance<SocketAddress> host` final ConnectionFactory<String`String> connectionFactory){" is 178.,100
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancerRule,newConnectionFactoryMock,Long Statement,The length of the statement "Mockito.when(cfMock.newConnection(instance.getValue())).thenReturn(ConnectionObservable.createNew(new OnSubcribeFunc<String`String>(){" is 134.,179
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancingProviderTest,testRoundRobin,Long Statement,The length of the statement "Observable<Instance<ConnectionProvider<String`String>>> providers=loadBalancerRule.getHostsAsConnectionProviders(cfMock);" is 121.,31
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancingProviderTest,testRoundRobin,Magic Number,The method contains a magic number: 60000,31
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancingProviderTest,testRoundRobin,Magic Number,The method contains a magic number: 2,31
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancingProviderTest,testRoundRobin,Magic Number,The method contains a magic number: 2,31
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancingProviderTest,testListenerSubscription,Long Statement,The length of the statement "Observable<Instance<ConnectionProvider<String`String>>> providers=loadBalancerRule.getHostsAsConnectionProviders(cfMock);" is 121.,56
+Netflix_ocelli,netflix.ocelli.rxnetty.internal,LoadBalancingProviderTest,testListenerSubscription,Magic Number,The method contains a magic number: 60000,56
+Netflix_ocelli,netflix.ocelli.rxnetty.protocol.tcp,TcpLoadBalancer,weigthedRandom,Long Statement,The length of the statement "LinearWeightingStrategy<HostConnectionProvider<W`R>> ws=new LinearWeightingStrategy<>(new Func1<HostConnectionProvider<W`R>`Integer>(){" is 135.,108
+Netflix_ocelli,netflix.ocelli.rxnetty.protocol.http,HttpLoadBalancer,weigthedRandom,Long Statement,The length of the statement "LinearWeightingStrategy<HostConnectionProvider<W`R>> ws=new LinearWeightingStrategy<>(new Func1<HostConnectionProvider<W`R>`Integer>(){" is 135.,106

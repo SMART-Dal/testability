@@ -1,0 +1,379 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Long Statement,The length of the statement "p.setDefinition(new CpsFlowDefinition("node('remote') {\n" + " writeFile file: 'x.xml'` text: '''<testsuite name='sweet' time='200.0'>" + "<testcase classname='Klazz' name='test1' time='198.0'><error message='failure'/></testcase>"+ "<testcase classname='Klazz' name='test2' time='2.0'/>"+ "<testcase classname='other.Klazz' name='test3'><skipped message='Not actually run.'/></testcase>"+ "</testsuite>'''\n"+ " def s = junit testResults: 'x.xml'` skipPublishingChecks: true\n"+ " echo(/summary: fail=$s.failCount skip=$s.skipCount pass=$s.passCount total=$s.totalCount/)\n"+ " writeFile file: 'x.xml'` text: '''<testsuite name='supersweet'>"+ "<testcase classname='another.Klazz' name='test1'><error message='another failure'/></testcase>"+ "</testsuite>'''\n"+ " s = junit testResults: 'x.xml'` skipPublishingChecks: true\n"+ " echo(/next summary: fail=$s.failCount skip=$s.skipCount pass=$s.passCount total=$s.totalCount/)\n"+ "}"`true));" is 942.,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Long Statement,The length of the statement "try (Connection connection=requireNonNull(GlobalDatabaseConfiguration.get().getDatabase()).getDataSource().getConnection();PreparedStatement statement=connection.prepareStatement("SELECT * FROM " + Impl.CASE_RESULTS_TABLE);ResultSet result=statement.executeQuery()){" is 266.,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Long Statement,The length of the statement "Document doc=DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new ByteArrayInputStream(buildXml.getBytes(StandardCharsets.UTF_8)));" is 146.,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 2,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 4,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 2,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 4,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 2,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 198.0f,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 2,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 4,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage,TestResultStorageJunitTest,smokes,Magic Number,The method contains a magic number: 200,122
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,extractChecksDetails,Long Statement,The length of the statement "ChecksOutput output=new ChecksOutput.ChecksOutputBuilder().withTitle(extractChecksTitle()).withSummary("<sub>Send us [feedback](https://github.com/jenkinsci/junit-plugin/issues)").withText(extractChecksText(testsURL)).build();" is 226.,45
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,extractChecksDetails,Long Statement,The length of the statement "return new ChecksDetails.ChecksDetailsBuilder().withName(checksName).withStatus(ChecksStatus.COMPLETED).withConclusion(summary.getFailCount() > 0 ? ChecksConclusion.FAILURE : ChecksConclusion.SUCCESS).withDetailsURL(testsURL).withOutput(output).build();" is 253.,45
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,extractChecksText,Long Statement,The length of the statement "builder.append("\n").append("more test results are not shown here` view them on [Jenkins](").append(testsURL).append(")");" is 122.,63
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,extractChecksText,Magic Number,The method contains a magic number: 1024,63
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,mapFailedTestToTestReport,Long Statement,The length of the statement "builder.append("<details><summary>Stack trace</summary>\n").append(codeTextFencedBlock(failedTest.getErrorStackTrace())).append("</details>\n");" is 144.,85
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,mapFailedTestToTestReport,Long Statement,The length of the statement "builder.append("<details><summary>Standard error</summary>\n").append(codeTextFencedBlock(failedTest.getStderr())).append("</details>\n");" is 138.,85
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,mapFailedTestToTestReport,Long Statement,The length of the statement "builder.append("<details><summary>Standard out</summary>\n").append(codeTextFencedBlock(failedTest.getStdout())).append("</details>\n");" is 136.,85
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisher,extractChecksTitle,Complex Method,Cyclomatic complexity of the method is 8,119
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,extractChecksDetailsPassingTestResults,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'test-result.xml'\n"+ " def results = junit(testResults: '*.xml')\n"+ " assert results.totalCount == 6\n"+ " }\n"+ "}\n"`true));" is 211.,48
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,extractChecksDetailsFailingSingleTestResult,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " def results = junit(testResults: '*.xml')\n"+ " assert results.totalCount == 6\n"+ " }\n"+ "}\n"`true));" is 181.,77
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,extractChecksDetailsFailingMultipleTests,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " def results = junit(testResults: '*.xml')\n"+ " assert results.totalCount == 6\n"+ " }\n"+ "}\n"`true));" is 181.,104
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,extractChecksDetailsCustomCheckName,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'test-result.xml'\n"+ " def results = junit(testResults: '*.xml'` checksName: 'Custom Checks Name')\n"+ " assert results.totalCount == 6\n"+ " }\n"+ "}\n"`true));" is 245.,131
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,extractChecksDetailsNoStageContext,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("node {\n" + " touch 'test-result.xml'\n" + " def results = junit(testResults: '*.xml')\n"+ " assert results.totalCount == 6\n"+ "}\n"`true));" is 180.,156
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,extractChecksDetailsNestedStages,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') { stage('second') {\n" + " node {\n" + " def results = junit(testResults: '*.xml')\n"+ " assert results.totalCount == 6\n"+ " }\n"+ "}}\n"`true));" is 200.,176
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,extractChecksDetailsEmptySuite,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " def results = junit(testResults: '*.xml'` allowEmptyResults: true)\n"+ " assert results.totalCount == 0\n"+ " }\n"+ "}\n"`true));" is 206.,197
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,withChecksContext,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'test-result.xml'\n"+ " withChecks('With Checks') {\n"+ " def results = junit '*.xml'\n"+ " assert results.totalCount == 6\n"+ " }\n"+ " }\n"+ "}\n"`true));" is 239.,220
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,withChecksContext,Magic Number,The method contains a magic number: 2,220
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,withChecksContextDeclarative,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("pipeline {\n" + " agent any\n" + " stages {\n"+ " stage('first') {\n"+ " steps {\n"+ " withChecks('With Checks') {\n"+ " junit(testResults: '*.xml')\n"+ " }\n"+ " }\n"+ " }\n"+ " }\n"+ "}"`true));" is 235.,254
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,withChecksContextDeclarative,Magic Number,The method contains a magic number: 2,254
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,withChecksContextWithCustomName,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'test-result.xml'\n"+ " withChecks('With Checks') {\n"+ " def results = junit(testResults: '*.xml'` checksName: 'Custom Checks Name')\n"+ " assert results.totalCount == 6\n"+ " }\n"+ " }\n"+ "}\n"`true));" is 287.,291
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.checks,JUnitChecksPublisherTest,withChecksContextWithCustomName,Magic Number,The method contains a magic number: 2,291
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultParser,parseResult,Long Parameter List,The method has 5 parameters. ,85
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultParser,parseResult,Long Parameter List,The method has 6 parameters. ,93
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultParser,parse,Long Statement,The length of the statement "if (Util.isOverridden(TestResultParser.class`getClass()`"parseResult"`String.class`Run.class`FilePath.class`Launcher.class`TaskListener.class)) {" is 145.,147
+jenkinsci_junit-plugin,hudson.tasks.test,DefaultTestResultParserImpl,parseResult,Long Parameter List,The method has 5 parameters. ,77
+jenkinsci_junit-plugin,hudson.tasks.test,DefaultTestResultParserImpl,parseResult,Long Statement,The length of the statement "if (paths.length == 0) throw new AbortException("No test reports that matches " + testResultLocations + " found. Configuration error?");" is 136.,77
+jenkinsci_junit-plugin,hudson.tasks.test,DefaultTestResultParserImpl,parseResult,Long Statement,The length of the statement "if (ignoreTimestampCheck || localBuildTime - hudson.tasks.junit.TestResult.FILE_TIME_PRECISION_MARGIN < report.lastModified()) {" is 128.,77
+jenkinsci_junit-plugin,hudson.tasks.test,DefaultTestResultParserImpl,parseResult,Long Statement,The length of the statement "throw new AbortException(String.format("Test reports were found but none of them are new. Did tests run? %n" + "For example` %s is %s old%n"`paths[0].getRemote()`Util.getTimeSpanString(localBuildTime - paths[0].lastModified())));" is 229.,77
+jenkinsci_junit-plugin,hudson.tasks.test,DefaultTestResultParserImpl,invoke,Long Statement,The length of the statement "if (paths.length == 0) throw new AbortException("No test reports that matches " + testResultLocations + " found. Configuration error?");" is 136.,84
+jenkinsci_junit-plugin,hudson.tasks.test,DefaultTestResultParserImpl,invoke,Long Statement,The length of the statement "if (ignoreTimestampCheck || localBuildTime - hudson.tasks.junit.TestResult.FILE_TIME_PRECISION_MARGIN < report.lastModified()) {" is 128.,84
+jenkinsci_junit-plugin,hudson.tasks.test,DefaultTestResultParserImpl,invoke,Long Statement,The length of the statement "throw new AbortException(String.format("Test reports were found but none of them are new. Did tests run? %n" + "For example` %s is %s old%n"`paths[0].getRemote()`Util.getTimeSpanString(localBuildTime - paths[0].lastModified())));" is 229.,84
+jenkinsci_junit-plugin,hudson.tasks.test,TestObject,getRelativePathFrom,Complex Method,Cyclomatic complexity of the method is 9,140
+jenkinsci_junit-plugin,hudson.tasks.test,TestObject,getRelativePathFrom,Long Statement,The length of the statement "LOGGER.fine("trying to get relative path` but it is not my ancestor` and we are not in a stapler request. Trying absolute jenkins url...");" is 139.,140
+jenkinsci_junit-plugin,hudson.tasks.test,TestObject,getTestActions,Magic Number,The method contains a magic number: 3,245
+jenkinsci_junit-plugin,hudson.tasks.test,TestObject,getDurationString,Magic Number,The method contains a magic number: 1000,314
+jenkinsci_junit-plugin,hudson.tasks.test,TestObject,safe,Long Statement,The length of the statement "return s.replace('/'`'_').replace('\\'`'_').replace(':'`'_').replace('?'`'_').replace('#'`'_').replace('%'`'_').replace('<'`'_').replace('>'`'_');" is 146.,412
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultProjectAction,createChartModel,Long Statement,The length of the statement "TestResultImpl pluggableStorage=storage.load(lastCompletedBuild.getParent().getFullName()`lastCompletedBuild.getNumber());" is 122.,128
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultProjectAction,doFlipTrend,Magic Number,The method contains a magic number: 2,193
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultProjectAction,doFlipTrend,Magic Number,The method contains a magic number: 60,193
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultProjectAction,doFlipTrend,Magic Number,The method contains a magic number: 60,193
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultProjectAction,doFlipTrend,Magic Number,The method contains a magic number: 24,193
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultProjectAction,doFlipTrend,Magic Number,The method contains a magic number: 365,193
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultDurationChart,getLinesChartModel,Long Statement,The length of the statement "LineSeries duration=new LineSeries(SECONDS`Palette.GREEN.getNormal()`LineSeries.StackedMode.STACKED`LineSeries.FilledMode.FILLED);" is 130.,30
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultTrendChart,getLinesChartModel,Long Statement,The length of the statement "LineSeries passed=new LineSeries("Passed"`passedColor == PassedColor.BLUE ? Palette.BLUE.getNormal() : Palette.GREEN.getNormal()`LineSeries.StackedMode.STACKED`LineSeries.FilledMode.FILLED);" is 190.,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultTrendChart,getLinesChartModel,Long Statement,The length of the statement "LineSeries skipped=new LineSeries("Skipped"`Palette.GRAY.getNormal()`LineSeries.StackedMode.STACKED`LineSeries.FilledMode.FILLED);" is 130.,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultTrendChart,getLinesChartModel,Long Statement,The length of the statement "LineSeries failed=new LineSeries("Failed"`Palette.RED.getNormal()`LineSeries.StackedMode.STACKED`LineSeries.FilledMode.FILLED);" is 127.,55
+jenkinsci_junit-plugin,hudson.tasks.test,PipelineBlockWithTests,equals,Long Statement,The length of the statement "return that.getBlockId().equals(getBlockId()) && that.getChildBlocks().equals(getChildBlocks()) && that.getLeafNodes().equals(getLeafNodes());" is 142.,57
+jenkinsci_junit-plugin,hudson.tasks.test,PipelineBlockWithTests,hashCode,Magic Number,The method contains a magic number: 31,75
+jenkinsci_junit-plugin,hudson.tasks.test,PipelineBlockWithTests,hashCode,Magic Number,The method contains a magic number: 31,75
+jenkinsci_junit-plugin,hudson.tasks.test,PipelineBlockWithTests,hashCode,Magic Number,The method contains a magic number: 31,75
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getFailCount,Magic Number,The method contains a magic number: 2,112
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getSkipCount,Magic Number,The method contains a magic number: 2,118
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getTotalCount,Magic Number,The method contains a magic number: 2,131
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getUrlName,Magic Number,The method contains a magic number: 2,152
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getBuildHealth,Long Statement,The length of the statement "int score=(totalCount == 0) ? 100 : (int)(100.0 * Math.max(0.0`Math.min(1.0`1.0 - (scaleFactor * failCount) / totalCount)));" is 124.,163
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getBuildHealth,Magic Number,The method contains a magic number: 1e-7,163
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getBuildHealth,Magic Number,The method contains a magic number: 100,163
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getBuildHealth,Magic Number,The method contains a magic number: 100.0,163
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,getPreviousResult,Long Statement,The length of the statement "loadedBuilds=((LazyBuildMixIn.LazyLoadingJob<?`?>)run.getParent()).getLazyBuildMixIn()._getRuns().getLoadedBuilds().keySet();" is 125.,222
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,calcDefaultSize,Magic Number,The method contains a magic number: 800,332
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,calcDefaultSize,Magic Number,The method contains a magic number: 250,332
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,calcDefaultSize,Magic Number,The method contains a magic number: 100,332
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,calcDefaultSize,Magic Number,The method contains a magic number: 500,332
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,calcDefaultSize,Magic Number,The method contains a magic number: 200,332
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,createChart,Magic Number,The method contains a magic number: 0.8f,369
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,createChart,Magic Number,The method contains a magic number: 2,369
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,createChart,Magic Number,The method contains a magic number: 5.0,369
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,createChart,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@25e8f113,369
+jenkinsci_junit-plugin,hudson.tasks.test,AbstractTestResultAction,generateToolTip,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@25e8f113,421
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,testDurationStyle,Magic Number,The method contains a magic number: 14.398,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,testDurationStyle,Magic Number,The method contains a magic number: 1000,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,testDurationStyle,Magic Number,The method contains a magic number: 3.377,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,testDurationStyle,Magic Number,The method contains a magic number: 1000,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,testDurationStyle,Magic Number,The method contains a magic number: 2.502,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,testDurationStyle,Magic Number,The method contains a magic number: 1000,55
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,configureTestBuild,Long Statement,The length of the statement "@Override @SuppressWarnings("null") public boolean perform( AbstractBuild<?`?> build` Launcher launcher` BuildListener listener) throws InterruptedException` IOException {" is 171.,91
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,configureTestBuild,Long Statement,The length of the statement "build.getWorkspace().child("junit.xml").copyFrom(getClass().getResource("/hudson/tasks/junit/junit-report-20090516.xml"));" is 122.,91
+jenkinsci_junit-plugin,hudson.tasks.test,TestReportUiTest,perform,Long Statement,The length of the statement "build.getWorkspace().child("junit.xml").copyFrom(getClass().getResource("/hudson/tasks/junit/junit-report-20090516.xml"));" is 122.,98
+jenkinsci_junit-plugin,hudson.tasks.test,BuildStatusSummaryTest,testBuildGotMoreFailingTests,Magic Number,The method contains a magic number: 2,107
+jenkinsci_junit-plugin,hudson.tasks.test,BuildStatusSummaryTest,testBuildGotMoreFailingTests,Magic Number,The method contains a magic number: 2,107
+jenkinsci_junit-plugin,hudson.tasks.test,BuildStatusSummaryTest,testBuildGotLessFailingTests,Magic Number,The method contains a magic number: 2,123
+jenkinsci_junit-plugin,hudson.tasks.test,AggregatedTestResultPublisherTest,aggregatedTestResultsOnly,Long Statement,The length of the statement "projectPage.getLatestAggregatedTestReportLink().assertHasLatestAggregatedTestResultText().assertHasTests().follow().hasLinkToTestResultOfBuild(TEST_PROJECT_NAME`1);" is 164.,55
+jenkinsci_junit-plugin,hudson.tasks.test,AggregatedTestResultPublisherTest,aggregatedTestResultsOnly,Long Statement,The length of the statement "buildPage.getAggregatedTestReportLink().assertHasAggregatedTestResultText().assertHasTests().follow().hasLinkToTestResultOfBuild(TEST_PROJECT_NAME`1);" is 150.,55
+jenkinsci_junit-plugin,hudson.tasks.test,AggregatedTestResultPublisherTest,testResultsAndAggregatedTestResults,Long Statement,The length of the statement "buildPage.getAggregatedTestReportLink().assertHasAggregatedTestResultText().assertHasTests().follow().hasLinkToTestResultOfBuild(TEST_PROJECT_NAME`1);" is 150.,104
+jenkinsci_junit-plugin,hudson.tasks.test,AggregatedTestResultPublisherTest,build,Long Statement,The length of the statement "List<AbstractBuild<?`?>> downstreamBuilds=StreamSupport.stream(build.getDownstreamBuilds(downstreamProject).spliterator()`false).collect(Collectors.toList());" is 158.,142
+jenkinsci_junit-plugin,hudson.tasks.test,TestObjectTest,uniquifyName,Magic Number,The method contains a magic number: 2,82
+jenkinsci_junit-plugin,hudson.tasks.test,TestObjectTest,uniquifyName,Magic Number,The method contains a magic number: 10,82
+jenkinsci_junit-plugin,hudson.tasks.test,TestObjectTest,uniquifyName,Magic Number,The method contains a magic number: 4,82
+jenkinsci_junit-plugin,hudson.tasks.test,TestResultExtensionTest,testTrivialRecorder,Magic Number,The method contains a magic number: 5,51
+jenkinsci_junit-plugin,hudson.tasks.junit,PackageResult,getName,Magic Number,The method contains a magic number: 999,68
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,CaseResult,Long Parameter List,The method has 9 parameters. ,136
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,possiblyTrimStdio,Long Statement,The length of the statement "return stdio.subSequence(0`halfMaxSize) + "\n...[truncated " + middle+ " chars]...\n"+ stdio.subSequence(len - halfMaxSize`len);" is 128.,198
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,possiblyTrimStdio,Magic Number,The method contains a magic number: 2,198
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,possiblyTrimStdio,Magic Number,The method contains a magic number: 1024,214
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,possiblyTrimStdio,Magic Number,The method contains a magic number: 1024,214
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,possiblyTrimStdio,Magic Number,The method contains a magic number: 2,214
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,getName,Magic Number,The method contains a magic number: 999,328
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,getDuration,Magic Number,The method contains a magic number: 9,350
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,getClassName,Magic Number,The method contains a magic number: 9,376
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,getFailedSince,Magic Number,The method contains a magic number: 9,438
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,getAge,Magic Number,The method contains a magic number: 9,477
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,isSkipped,Magic Number,The method contains a magic number: 9,620
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResult,getStatus,Magic Number,The method contains a magic number: 9,734
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultSummary,TestResultSummary,Long Statement,The length of the statement "throw new IllegalArgumentException("Attempt to construct TestResultSummary from TestResult without calling tally/freeze");" is 122.,30
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParser,parseResult,Long Parameter List,The method has 5 parameters. ,106
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParser,parseResult,Long Parameter List,The method has 6 parameters. ,114
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParser,parseResult,Long Statement,The length of the statement "return workspace.act(new DirectParseResultCallable(testResultLocations`build`keepLongStdio`allowEmptyResults`pipelineTestDetails`listener`skipOldReports));" is 155.,114
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParser,summarizeResult,Long Parameter List,The method has 7 parameters. ,122
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParser,summarizeResult,Long Statement,The length of the statement "return workspace.act(new StorageParseResultCallable(testResultLocations`build`keepLongStdio`allowEmptyResults`pipelineTestDetails`listener`storage.createRemotePublisher(build)`skipOldReports));" is 193.,122
+jenkinsci_junit-plugin,hudson.tasks.junit,TestDataPublisher,contributeTestData,Long Parameter List,The method has 5 parameters. ,51
+jenkinsci_junit-plugin,hudson.tasks.junit,TestDataPublisher,getTestData,Long Statement,The length of the statement "if (Util.isOverridden(TestDataPublisher.class`getClass()`"contributeTestData"`Run.class`FilePath.class`Launcher.class`TaskListener.class`TestResult.class)) {" is 157.,81
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,setFeatureQuietly,Empty catch clause,The method has an empty catch block.,186
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,parseSuite,Long Parameter List,The method has 5 parameters. ,195
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,parseSuite,Long Statement,The length of the statement "if (root.element("testcase") != null || root.element("error") != null) r.add(new SuiteResult(xmlReport`root`keepLongStdio`pipelineTestDetails));" is 144.,195
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,SuiteResult,Complex Method,Cyclomatic complexity of the method is 11,208
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getName,Magic Number,The method contains a magic number: 9,307
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getDuration,Magic Number,The method contains a magic number: 9,312
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getNodeId,Magic Number,The method contains a magic number: 9,317
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getEnclosingBlocks,Magic Number,The method contains a magic number: 9,328
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getEnclosingBlockNames,Magic Number,The method contains a magic number: 9,343
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getTimestamp,Magic Number,The method contains a magic number: 9,395
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getId,Magic Number,The method contains a magic number: 9,400
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,getCases,Magic Number,The method contains a magic number: 9,405
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult,merge,Long Statement,The length of the statement "LOGGER.warning("Merging of suiteresults with incompatible time attribute may lead to incorrect durations in reports.( " + getFile() + "` "+ sr.getFile()+ ")");" is 159.,462
+jenkinsci_junit-plugin,hudson.tasks.junit,History,retrieveHistorySummary,Magic Number,The method contains a magic number: 1000,145
+jenkinsci_junit-plugin,hudson.tasks.junit,History,getHistoryFromFileStorage,Long Statement,The length of the statement "return new HistoryTestResultSummary(build`resultInRun.getDuration()`resultInRun.getFailCount()`resultInRun.getSkipCount()`resultInRun.getPassCount()`resultInRun.getDescription());" is 179.,159
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,TestResult,Long Parameter List,The method has 5 parameters. ,160
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,parse,Long Statement,The length of the statement "if (skipOldReports && Files.getLastModifiedTime(reportFile.toPath()).toMillis() < filesTimestamp - FILE_TIME_PRECISION_MARGIN) {" is 128.,246
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,parse,Long Statement,The length of the statement "LOGGER.fine("file " + reportFile + " not parsed: skipOldReports-"+ skipOldReports+ "`lastModified:"+ Files.getLastModifiedTime(reportFile.toPath()).toMillis()+ "`filesTimestamp:"+ filesTimestamp);" is 196.,246
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,add,Complex Conditional,The conditional expression s.getName().equals(sr.getName()) && eitherNullOrEq(s.getId()`sr.getId()) && nullSafeEq(s.getNodeId()`sr.getNodeId())&& nullSafeEq(s.getEnclosingBlocks()`sr.getEnclosingBlocks())&& nullSafeEq(s.getEnclosingBlockNames()`sr.getEnclosingBlockNames()) is complex.,318
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,add,Long Statement,The length of the statement "if (s.getName().equals(sr.getName()) && eitherNullOrEq(s.getId()`sr.getId()) && nullSafeEq(s.getNodeId()`sr.getNodeId())&& nullSafeEq(s.getEnclosingBlocks()`sr.getEnclosingBlocks())&& nullSafeEq(s.getEnclosingBlockNames()`sr.getEnclosingBlockNames())) {" is 253.,318
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,parse,Long Statement,The length of the statement "LOGGER.fine("reportFile:" + reportFile + "` lastModified:"+ reportFile.lastModified()+ " found "+ suiteResults.size()+ " suite results");" is 137.,371
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,parse,Long Statement,The length of the statement "throw new IOException("Failed to read " + reportFile + "\n"+ "Is this really a JUnit report file? Your configuration must be matching too many files"`e);" is 153.,371
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,findCorrespondingResult,Complex Method,Cyclomatic complexity of the method is 8,426
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,getDuration,Magic Number,The method contains a magic number: 999,482
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,getPassCount,Magic Number,The method contains a magic number: 999,492
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,getFailCount,Magic Number,The method contains a magic number: 999,501
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,getSkipCount,Magic Number,The method contains a magic number: 999,513
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,isEmpty,Magic Number,The method contains a magic number: 999,530
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,getSuites,Magic Number,The method contains a magic number: 9,696
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,tally,Long Statement,The length of the statement "suitesByName.merge(s.getName()`Collections.singleton(s)`(a`b) -> Stream.concat(a.stream()`b.stream()).collect(Collectors.toList()));" is 132.,792
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,freeze,Complex Method,Cyclomatic complexity of the method is 14,841
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,freeze,Long Statement,The length of the statement "suitesByName.merge(s.getName()`Collections.singleton(s)`(a`b) -> Stream.concat(a.stream()`b.stream()).collect(Collectors.toList()));" is 132.,841
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResult,getCase,Long Statement,The length of the statement "return getSuites(suiteName).stream().map(suite -> suite.getCase(transformedFullDisplayName)).filter(Objects::nonNull).findFirst().orElse(null);" is 143.,977
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parse,Long Parameter List,The method has 5 parameters. ,146
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parse,Long Parameter List,The method has 7 parameters. ,154
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parse,Long Statement,The length of the statement "return new JUnitParser(task.isKeepLongStdio()`task.isAllowEmptyResults()`task.isSkipOldReports()).parseResult(expandedTestResults`run`pipelineTestDetails`workspace`launcher`listener);" is 183.,154
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parseAndAttach,Complex Method,Cyclomatic complexity of the method is 9,181
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parseAndAttach,Long Parameter List,The method has 6 parameters. ,181
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parseAndSummarize,Complex Method,Cyclomatic complexity of the method is 16,240
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parseAndSummarize,Long Parameter List,The method has 6 parameters. ,240
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiver,parseAndSummarize,Long Statement,The length of the statement "summary=new JUnitParser(task.isKeepLongStdio()`task.isAllowEmptyResults()`task.isSkipOldReports()).summarizeResult(testResults`build`pipelineTestDetails`workspace`launcher`listener`storage);" is 190.,240
+jenkinsci_junit-plugin,hudson.tasks.junit,ClassResult,getName,Magic Number,The method contains a magic number: 999,105
+jenkinsci_junit-plugin,hudson.tasks.junit,TimeToFloat,parse,Empty catch clause,The method has an empty catch block.,42
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTestResultSummary,HistoryTestResultSummary,Long Parameter List,The method has 5 parameters. ,15
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTestResultSummary,HistoryTestResultSummary,Long Parameter List,The method has 6 parameters. ,19
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTestResultSummary,getDurationString,Magic Number,The method contains a magic number: 1000,32
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultLinksTest,testFailureLinks,Magic Number,The method contains a magic number: 10,75
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultLinksTest,testNonDescendantRelativePath,Magic Number,The method contains a magic number: 10,107
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultLinksTest,testFailedSinceAfterSkip,Magic Number,The method contains a magic number: 2,145
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParserTest,testJustParsing,Long Identifier,The length of the identifier EXPECTED_FAILING_TEST_CLASSNAME is 31.,104
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParserTest,testJustParsing,Magic Number,The method contains a magic number: 100,104
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParserTest,testJustParsing,Magic Number,The method contains a magic number: 3,104
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParserTest,testJustParsing,Magic Number,The method contains a magic number: 131,104
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitParserTest,testJustParsing,Magic Number,The method contains a magic number: 132,104
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testFailedSince,Magic Number,The method contains a magic number: 4,70
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testFailedSince,Magic Number,The method contains a magic number: 7,70
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testFailedSince,Magic Number,The method contains a magic number: 2,70
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testFailedSince,Magic Number,The method contains a magic number: 3,70
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testFailedSince,Magic Number,The method contains a magic number: 5,70
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testFailedSince,Magic Number,The method contains a magic number: 3,70
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testXSS,Long Statement,The length of the statement "final Optional<HtmlTableCell> descr=table.getRows().stream().flatMap(row -> row.getCells().stream()).filter(cell -> cell.getTextContent().equals("<script>alert(\"<XSS>\")</script>")).findFirst();" is 195.,125
+jenkinsci_junit-plugin,hudson.tasks.junit,HistoryTest,testXSS,Magic Number,The method contains a magic number: 4,125
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,slave,Magic Number,The method contains a magic number: 56,136
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,assertTestResults,Magic Number,The method contains a magic number: 132,154
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,assertTestResults,Magic Number,The method contains a magic number: 132,154
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,persistence,Magic Number,The method contains a magic number: 60,173
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,setDescription,Magic Number,The method contains a magic number: 10,189
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,testSetDescription,Magic Number,The method contains a magic number: 10000L,208
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,doRepeatedArchiving,Magic Number,The method contains a magic number: 7,238
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,doRepeatedArchiving,Magic Number,The method contains a magic number: 8,238
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,doRepeatedArchiving,Magic Number,The method contains a magic number: 8,238
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,doRepeatedArchiving,Magic Number,The method contains a magic number: 87,238
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,configRoundTrip,Magic Number,The method contains a magic number: 0.77,296
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,configRoundTrip,Magic Number,The method contains a magic number: 0.77,296
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,configRoundTrip,Magic Number,The method contains a magic number: 0.01,296
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,specialCharsInRelativePath,Magic Number,The method contains a magic number: 10000L,383
+jenkinsci_junit-plugin,hudson.tasks.junit,JUnitResultArchiverTest,specialCharsInRelativePath,Magic Number,The method contains a magic number: 10000L,383
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 10,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 10,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 20,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 1000,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 1000,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 20,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 1000,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 1100,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResult2Test,sizeSurefire,Magic Number,The method contains a magic number: 2,39
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1233,Magic Number,The method contains a magic number: 2,68
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1233,Magic Number,The method contains a magic number: 3,68
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1233,Magic Number,The method contains a magic number: 4,68
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1463,Magic Number,The method contains a magic number: 2,80
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1463,Magic Number,The method contains a magic number: 3,80
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1463,Magic Number,The method contains a magic number: 4,80
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1463,Magic Number,The method contains a magic number: 5,80
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testIssue1472,Magic Number,The method contains a magic number: 20,100
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testErrorDetails,Long Statement,The length of the statement "assertEquals("Test class name is incorrect in " + caseResult.getName()`"some.package.somewhere.WhooHoo"`caseResult.getClassName());" is 131.,124
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteResultPersistence,Magic Number,The method contains a magic number: 0.1f,135
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimming,Magic Number,The method contains a magic number: 100,159
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimming,Magic Number,The method contains a magic number: 1030,159
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimmingOnFail,Magic Number,The method contains a magic number: 10000,188
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimmingOnFail,Magic Number,The method contains a magic number: 100032,188
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimmingSurefire,Magic Number,The method contains a magic number: 100,216
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimmingSurefire,Magic Number,The method contains a magic number: 1030,216
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimmingSurefireOnFail,Magic Number,The method contains a magic number: 10000,257
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testSuiteStdioTrimmingSurefireOnFail,Magic Number,The method contains a magic number: 100032,257
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testParseNestedTestSuites,Magic Number,The method contains a magic number: 3,314
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 2503.1f,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 2,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 22.0f,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 2,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 40.0f,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 2,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 2,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 20.0f,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 3,327
+jenkinsci_junit-plugin,hudson.tasks.junit,SuiteResultTest,testTestSuiteTimeAttribute,Magic Number,The method contains a magic number: 2,327
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testBasic,Magic Number,The method contains a magic number: 30,87
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Long Statement,The length of the statement "String[] packages={"org.jvnet.hudson.examples.small.AppTest"`"org.jvnet.hudson.examples.small.MiscTest"`"org.jvnet.hudson.examples.small.deep.DeepTest"};" is 153.,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Long Statement,The length of the statement "rule.assertXPathValue(xmlTestReportPage`"/testResult/suite/case[className/text()='org.jvnet.hudson.examples.small.AppTest']/status"`"PASSED");" is 142.,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Long Statement,The length of the statement "assertTestResultsAsExpected(wc`theRun`"/testReport"`"org.jvnet.hudson.examples.small.deep"`"4 ms"`"SUCCESS"`1`0`0`0`0`0);" is 121.,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Magic Number,The method contains a magic number: 3,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Magic Number,The method contains a magic number: 3,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Magic Number,The method contains a magic number: 3,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Magic Number,The method contains a magic number: 7,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testOpenJUnitPublishing,Magic Number,The method contains a magic number: 3,118
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testInterBuildDiffs,Magic Number,The method contains a magic number: 4,221
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testInterBuildDiffs,Magic Number,The method contains a magic number: 3,221
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,testHistoryPageOpenJunit,Magic Number,The method contains a magic number: 7,243
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,assertTestResultsAsExpected,Long Parameter List,The method has 12 parameters. ,320
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,assertTestResults,Magic Number,The method contains a magic number: 132,365
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultPublishingTest,assertTestResults,Magic Number,The method contains a magic number: 132,365
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testIssue20090516,Long Statement,The length of the statement "assertOutput(cr`"line #1\nhttp://nowhere.net/\nline #2\n"`"line #1\n<a href=\"http://nowhere.net/\">http://nowhere.net/</a>\nline #2\n");" is 137.,75
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testIssue20090516,Long Statement,The length of the statement "assertOutput(cr`"failed; see http://nowhere.net/"`"failed; see <a href=\"http://nowhere.net/\">http://nowhere.net/</a>");" is 121.,75
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testIssue20090516,Long Statement,The length of the statement "assertOutput(cr`"failed (see http://nowhere.net/)"`"failed (see <a href=\"http://nowhere.net/\">http://nowhere.net/</a>)");" is 123.,75
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testIssue20090516,Long Statement,The length of the statement "assertOutput(cr`"http://nowhere.net/ - failed: http://elsewhere.net/"`"<a href=\"http://nowhere.net/\">http://nowhere.net/</a> - failed: " + "<a href=\"http://elsewhere.net/\">http://elsewhere.net/</a>");" is 204.,75
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testIssue20090516,Long Statement,The length of the statement "assertOutput(cr`"http://google.com/?q=stuff&lang=en"`"<a href=\"http://google.com/?q=stuff&amp;lang=en\">http://google.com/?q=stuff&amp;lang=en</a>");" is 150.,75
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testIssue20090516,Long Statement,The length of the statement "assertOutput(cr`"http://localhost:8080/stuff/"`"<a href=\"http://localhost:8080/stuff/\">http://localhost:8080/stuff/</a>");" is 124.,75
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testIssue20090516,Magic Number,The method contains a magic number: 3,75
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testFreestyleErrorMsgAndStacktraceRender,Long Statement,The length of the statement "assertEquals(cr.annotate(cr.getErrorStackTrace()).replaceAll("&lt;"`"<").replace("\r\n"`"\n")`errorStackTrace.getTextContent());" is 128.,109
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testFreestyleErrorMsgAndStacktraceRender,Magic Number,The method contains a magic number: 3,109
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testRemoteApiDefaultVisibility,Long Statement,The length of the statement "XmlPage page=(XmlPage)rule.createWebClient().goTo("job/test-remoteapi/1/testReport/org.twia.vendor/VendorManagerTest/testCreateAdjustingFirm/api/xml"`"application/xml");" is 169.,145
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testRemoteApiNoDetails,Long Statement,The length of the statement "XmlPage page=(XmlPage)rule.createWebClient().goTo("job/test-remoteapi/1/testReport/org.twia.vendor/VendorManagerTest/testCreateAdjustingFirm/api/xml?depth=-1"`"application/xml");" is 178.,164
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testRemoteApiNameOnly,Long Statement,The length of the statement "XmlPage page=(XmlPage)rule.createWebClient().goTo("job/test-remoteapi/1/testReport/org.twia.vendor/VendorManagerTest/testCreateAdjustingFirm/api/xml?depth=-10"`"application/xml");" is 179.,183
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testAge,Long Statement,The length of the statement "public boolean perform( AbstractBuild<?`?> build` Launcher launcher` BuildListener listener) throws InterruptedException` IOException {" is 135.,216
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,testAge,Magic Number,The method contains a magic number: 2,216
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,configureTestBuild,Long Statement,The length of the statement "public boolean perform( AbstractBuild<?`?> build` Launcher launcher` BuildListener listener) throws InterruptedException` IOException {" is 135.,262
+jenkinsci_junit-plugin,hudson.tasks.junit,CaseResultTest,composeXPath,Magic Number,The method contains a magic number: 100,285
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testIpsTests,Magic Number,The method contains a magic number: 16,60
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testIpsTests,Magic Number,The method contains a magic number: 3366,60
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testXmlCompatibility,Magic Number,The method contains a magic number: 9,78
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testXmlCompatibility,Magic Number,The method contains a magic number: 0.576,78
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testXmlCompatibility,Magic Number,The method contains a magic number: 0.0001,78
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testXmlCompatibility,Magic Number,The method contains a magic number: 6,78
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testXmlCompatibility,Magic Number,The method contains a magic number: 5,78
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSkippedMessageIsAddedWhenTheMessageAttributeIsNull,Long Statement,The length of the statement "assertEquals("Given skip This Test........................................................pending\n"`caseResult.getSkippedMessage());" is 133.,113
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testDuplicateTestMethods,Magic Number,The method contains a magic number: 3,125
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testTestSuiteDistributedOverMultipleFilesIsCountedAsOne,Magic Number,The method contains a magic number: 2,142
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testTestSuiteDistributedOverMultipleFilesIsCountedAsOne,Magic Number,The method contains a magic number: 172.98,142
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testTestSuiteDistributedOverMultipleFilesIsCountedAsOne,Magic Number,The method contains a magic number: 0.1,142
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeWithTime,Magic Number,The method contains a magic number: 3,178
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeWithTime,Magic Number,The method contains a magic number: 100,178
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeWithTime,Magic Number,The method contains a magic number: 2,178
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeWithoutTime,Magic Number,The method contains a magic number: 3,191
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeWithoutTime,Magic Number,The method contains a magic number: 30,191
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeWithoutTime,Magic Number,The method contains a magic number: 2,191
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Long Statement,The length of the statement "SuiteResult suite=testResult.getSuite("org.catrobat.paintroid.test.integration.ActivityOpenedFromPocketCodeNewImageTest");" is 122.,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Long Statement,The length of the statement "CaseResult case1=suite.getCase("org.catrobat.paintroid.test.integration.BitmapIntegrationTest.testDrawingSurfaceBitmapIsScreenSize");" is 133.,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Long Statement,The length of the statement "CaseResult case2=suite.getCase("org.catrobat.paintroid.test.integration.LandscapeTest.testColorPickerDialogSwitchTabsInLandscape");" is 131.,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 11,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 2.0,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 0.1,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 2,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 5.0,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 0.1,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 93.0,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testSuiteWithMultipleClasses,Magic Number,The method contains a magic number: 0.1,204
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeOriginalAntOutput,Magic Number,The method contains a magic number: 2,238
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testMergeOriginalAntOutput,Magic Number,The method contains a magic number: 7,238
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,testNonDuplicatedTestSuiteIsCounted,Magic Number,The method contains a magic number: 3,252
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,skipOldReports,Magic Number,The method contains a magic number: 10,289
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,skipOldReports,Magic Number,The method contains a magic number: 4000,289
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,skipOldReports,Magic Number,The method contains a magic number: 2,289
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,skipOldReports,Magic Number,The method contains a magic number: 2,289
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,skipOldReports,Magic Number,The method contains a magic number: 3,289
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,parseOldReports,Magic Number,The method contains a magic number: 10,309
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,parseOldReports,Magic Number,The method contains a magic number: 4000,309
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,parseOldReports,Magic Number,The method contains a magic number: 2,309
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,parseOldReports,Magic Number,The method contains a magic number: 4,309
+jenkinsci_junit-plugin,hudson.tasks.junit,TestResultTest,parseOldReports,Magic Number,The method contains a magic number: 6,309
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepExecution,run,Long Statement,The length of the statement "TestResultSummary summary=JUnitResultArchiver.parseAndSummarize(step`pipelineTestDetails`run`workspace`launcher`listener);" is 122.,38
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,configRoundTrip,Long Statement,The length of the statement "st.assertRoundTrip(step`"junit allowEmptyResults: true` healthScaleFactor: 2.0` testResults: '**/target/surefire-reports/TEST-*.xml'");" is 135.,71
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,configRoundTrip,Long Statement,The length of the statement "st.assertRoundTrip(step`"junit allowEmptyResults: true` healthScaleFactor: 2.0` testDataPublishers: [[$class: 'MockTestDataPublisher'` name: 'testing']]` testResults: '**/target/surefire-reports/TEST-*.xml'");" is 209.,71
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,configRoundTrip,Long Statement,The length of the statement "st.assertRoundTrip(step`"junit allowEmptyResults: true` healthScaleFactor: 2.0` skipMarkingBuildUnstable: true` testDataPublishers: [[$class: 'MockTestDataPublisher'` name: 'testing']]` testResults: '**/target/surefire-reports/TEST-*.xml'");" is 241.,71
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,configRoundTrip,Magic Number,The method contains a magic number: 2.0,71
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,emptyFails,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + (Functions.isWindows() ? " bat 'echo hi'\n" : " sh 'echo hi'\n") + " junit('*.xml')\n"+ " }\n"+ "}\n"`true));" is 184.,87
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,allowEmpty,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + (Functions.isWindows() ? " bat 'echo hi'\n" : " sh 'echo hi'\n") + " def results = junit(testResults: '*.xml'` allowEmptyResults: true)\n"+ " assert results.totalCount == 0\n"+ " }\n"+ "}\n"`true));" is 273.,105
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,singleStep,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'test-result.xml'\n"+ " def results = junit(testResults: '*.xml')\n"+ " assert results.totalCount == 6\n"+ " }\n"+ "}\n"`true));" is 211.,123
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,singleStep,Magic Number,The method contains a magic number: 6,123
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,singleStep,Magic Number,The method contains a magic number: 6,123
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,twoSteps,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'first-result.xml'\n"+ " touch 'second-result.xml'\n"+ " def first = junit(testResults: 'first-result.xml')\n"+ " def second = junit(testResults: 'second-result.xml')\n"+ " assert first.totalCount == 6\n"+ " assert second.totalCount == 1\n"+ " }\n"+ "}\n"`true));" is 346.,149
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,twoSteps,Magic Number,The method contains a magic number: 2,149
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,twoSteps,Magic Number,The method contains a magic number: 7,149
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,twoSteps,Magic Number,The method contains a magic number: 6,149
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,twoSteps,Magic Number,The method contains a magic number: 2,149
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,twoSteps,Magic Number,The method contains a magic number: 7,149
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,twoStepsSkipOldReports,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch file:'first-result.xml'` timestamp: 2\n"+ " def first = junit(testResults: 'first-result.xml'` skipOldReports: true` allowEmptyResults: true)\n"+ " def second = junit(testResults: 'second-result.xml')\n"+ " assert first.totalCount == 0\n"+ " assert second.totalCount == 1\n"+ " }\n"+ "}\n"`true));" is 380.,186
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'first-result.xml'\n"+ " touch 'second-result.xml'\n"+ " touch 'third-result.xml'\n"+ " def first = junit(testResults: 'first-result.xml')\n"+ " def second = junit(testResults: 'second-result.xml')\n"+ " def third = junit(testResults: 'third-result.xml')\n"+ " assert first.totalCount == 6\n"+ " assert second.totalCount == 1\n"+ " }\n"+ "}\n"`true));" is 434.,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 5,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 10,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 6,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 3,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 3,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 2,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 7,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 4,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,threeSteps,Magic Number,The method contains a magic number: 9,224
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'first-result.xml'\n"+ " touch 'second-result.xml'\n"+ " touch 'third-result.xml'\n"+ " parallel(a: { def first = junit(testResults: 'first-result.xml'); assert first.totalCount == 6 }`\n"+ " b: { def second = junit(testResults: 'second-result.xml'); assert second.totalCount == 1 }`\n"+ " c: { def third = junit(testResults: 'third-result.xml'); assert third.totalCount == 3 })\n"+ " }\n"+ "}\n"`true));" is 487.,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Magic Number,The method contains a magic number: 5,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Magic Number,The method contains a magic number: 10,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Magic Number,The method contains a magic number: 6,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Magic Number,The method contains a magic number: 3,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Magic Number,The method contains a magic number: 3,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Magic Number,The method contains a magic number: 5,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,parallelInStage,Magic Number,The method contains a magic number: 10,272
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,stageInParallel,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('outer') {\n" + " node {\n" + " touch 'first-result.xml'\n"+ " touch 'second-result.xml'\n"+ " touch 'third-result.xml'\n"+ " parallel(a: { stage('a') { def first = junit(testResults: 'first-result.xml'); assert first.totalCount == 6 } }`\n"+ " b: { stage('b') { def second = junit(testResults: 'second-result.xml'); assert second.totalCount == 1 } }`\n"+ " c: { stage('d') { def third = junit(testResults: 'third-result.xml'); assert third.totalCount == 3 } })\n"+ " }\n"+ "}\n"`true));" is 532.,303
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,stageInParallel,Magic Number,The method contains a magic number: 5,303
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,stageInParallel,Magic Number,The method contains a magic number: 10,303
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,stageInParallel,Magic Number,The method contains a magic number: 6,303
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,stageInParallel,Magic Number,The method contains a magic number: 3,303
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,stageInParallel,Magic Number,The method contains a magic number: 3,303
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("node {\n" + " stage('first') {\n" + " touch 'junit-report-testTrends-first.xml'\n"+ " def first = junit(testResults: \"junit-report-testTrends-first.xml\")\n"+ " }\n"+ " stage('second') {\n"+ " touch 'junit-report-testTrends-second.xml'\n"+ " def second = junit(testResults: \"junit-report-testTrends-second.xml\")\n"+ " }\n"+ "}\n"`true));" is 379.,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Long Statement,The length of the statement "WorkflowRun secondRun=rule.assertBuildStatus(Result.UNSTABLE`rule.waitForCompletion(j.scheduleBuild2(0).waitForStart()));" is 121.,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 8,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 8,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 3,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 8,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 3,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 2,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 2,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,testTrends,Magic Number,The method contains a magic number: 3,339
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,currentBuildResultUnstable,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " def results = junit(testResults: '*.xml'` skipOldReports: true)\n"+ " assert results.totalCount == 8\n"+ " assert currentBuild.result == 'UNSTABLE'\n"+ " }\n"+ "}\n"`true));" is 250.,403
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,skipBuildUnstable,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('first') {\n" + " node {\n" + " touch 'test-result.xml'\n"+ " def results = junit(skipMarkingBuildUnstable: true` testResults: '*.xml')\n"+ " assert results.totalCount == 8\n"+ " assert currentBuild.result == null\n"+ " }\n"+ "}\n"`true));" is 284.,419
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,skipBuildUnstable,Magic Number,The method contains a magic number: 8,419
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,skipBuildUnstable,Magic Number,The method contains a magic number: 3,419
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,ageResetSameTestSuiteName,Long Statement,The length of the statement "j.setDefinition(new CpsFlowDefinition("stage('stage 1') {\n" + " node {\n" + " touch 'ageReset-1.xml'\n"+ " junit(testResults: '*-1.xml')\n"+ " }\n"+ "}\n"+ "stage('stage 2') {\n"+ " node {\n"+ " touch 'ageReset-2.xml'\n"+ " junit(testResults: '*-2.xml')\n"+ " }\n"+ "}\n"`true));" is 280.,436
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,ageResetSameTestSuiteName,Magic Number,The method contains a magic number: 2,436
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,ageResetSameTestSuiteName,Magic Number,The method contains a magic number: 2,436
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,branchForName,Long Statement,The length of the statement "return input -> input != null && input.getAction(LabelAction.class) != null && input.getAction(ThreadNameAction.class) != null && name.equals(input.getAction(ThreadNameAction.class).getThreadName());" is 199.,485
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,stageForName,Long Statement,The length of the statement "return input -> input instanceof StepStartNode && ((StepStartNode)input).getDescriptor() instanceof StageStep.DescriptorImpl && input.getDisplayName().equals(name);" is 164.,492
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,assertBranchResults,Long Parameter List,The method has 7 parameters. ,498
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,assertStageResults,Long Parameter List,The method has 5 parameters. ,514
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,assertBlockResults,Long Parameter List,The method has 5 parameters. ,522
+jenkinsci_junit-plugin,hudson.tasks.junit.pipeline,JUnitResultsStepTest,findJUnitSteps,Long Statement,The length of the statement "return new DepthFirstScanner().filteredNodes(Collections.singletonList(blockStart.getEndNode())`Collections.singletonList(blockStart)`node -> node instanceof StepAtomNode && ((StepAtomNode)node).getDescriptor() instanceof JUnitResultsStep.DescriptorImpl);" is 255.,564
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage.benchmarks,BenchmarkRunner,runJmhBenchmarks,Long Statement,The length of the statement "ChainedOptionsBuilder options=new OptionsBuilder().mode(Mode.AverageTime).forks(2).resultFormat(ResultFormatType.JSON).result("jmh-report.json");" is 145.,12
+jenkinsci_junit-plugin,io.jenkins.plugins.junit.storage.benchmarks,BenchmarkRunner,runJmhBenchmarks,Magic Number,The method contains a magic number: 2,12
+jenkinsci_junit-plugin,hudson.tasks.test.helper,LatestTestResultLink,assertHasLatestAggregatedTestResultText,Long Identifier,The length of the field LATEST_AGGREGATED_TEST_RESULT_STRING is 36.,22

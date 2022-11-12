@@ -1,0 +1,73 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,ProfilerServer,startServer,Long Parameter List,The method has 5 parameters. ,27
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,RequestHandler,getEnabledProfilers,Long Statement,The length of the statement "Collection<String> profilers=Collections2.transform(Collections2.filter(activeProfilers.entrySet()`new Predicate<Map.Entry<String`ScheduledFuture<?>>>(){" is 153.,117
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,ProfilerServerTest,setup,Long Statement,The length of the statement "ScheduledExecutorService scheduledExecutorService=MoreExecutors.getExitingScheduledExecutorService((ScheduledThreadPoolExecutor)Executors.newScheduledThreadPool(2`new ProfilerThreadFactory()));" is 193.,38
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,ProfilerServerTest,setup,Long Statement,The length of the statement "ScheduledFuture future1=scheduledExecutorService.scheduleAtFixedRate(worker1`0`profiler1.getPeriod()`profiler1.getTimeUnit());" is 126.,38
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,ProfilerServerTest,setup,Long Statement,The length of the statement "ScheduledFuture future2=scheduledExecutorService.scheduleAtFixedRate(worker2`0`profiler2.getPeriod()`profiler2.getTimeUnit());" is 126.,38
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,ProfilerServerTest,setup,Magic Number,The method contains a magic number: 8080,38
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,ProfilerServerTest,setup,Magic Number,The method contains a magic number: 2,38
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.server,ProfilerServerTest,httpRequestTest,Magic Number,The method contains a magic number: 200,103
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.profilers,MemoryProfiler,poolTypeToMetricName,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@46f32536,129
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.profilers,CPULoadProfiler,recordStats,Magic Number,The method contains a magic number: 1000,77
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.profilers,CPULoadProfiler,recordStats,Magic Number,The method contains a magic number: 10.0d,77
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,Range,hashCode,Magic Number,The method contains a magic number: 31,38
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFilter,getPackagePattern,Long Statement,The length of the statement "return Pattern.compile(String.format("(.*\\.|^)(%s).*"`Joiner.on("|").join(Lists.transform(packageWhitelist`new Function<String`String>(){" is 138.,76
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatter,formatStackTraceElement,Long Statement,The length of the statement "return String.format("%s-%s-%d"`element.getClassName().replace("."`"-")`element.getMethodName()`element.getLineNumber());" is 121.,16
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTraces,updateBounds,Magic Number,The method contains a magic number: 2,51
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTraces,updateBounds,Magic Number,The method contains a magic number: 2,51
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFilterTest,setup,Long Statement,The length of the statement "excludedTraces=Arrays.asList("com-etsy-statsd-profiler-profiler-util-StackTraceFormatter-formatStackTraceElement"`"com-timgroup-statsd-StatsDClient-send"`"com-etsy-statsd-profiler-profiler-util-StackTraceFormatter-formatStackTraceElement.com-etsy-Foo-fooTest");" is 261.,22
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFilterTest,testGetPackagePattern,Long Statement,The length of the statement "assertEquals(expected.toString()`filter.getPackagePattern(includePackages`StackTraceFilter.MATCH_EVERYTHING).toString());" is 121.,31
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFilterTest,testGetPackagePattern,Long Statement,The length of the statement "assertEquals(StackTraceFilter.MATCH_EVERYTHING.toString()`filter.getPackagePattern(null`StackTraceFilter.MATCH_EVERYTHING).toString());" is 135.,31
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFilterTest,testGetPackagePattern,Long Statement,The length of the statement "assertEquals(StackTraceFilter.MATCH_EVERYTHING.toString()`filter.getPackagePattern(new ArrayList<String>()`StackTraceFilter.MATCH_EVERYTHING).toString());" is 154.,31
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,MapUtilTest,testSetOrIncrementMap,Magic Number,The method contains a magic number: 2L,12
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTraceElement,Long Statement,The length of the statement "StackTraceElement element=new StackTraceElement("com.etsy.statsd.profiler.util.StackTraceFormatter"`"formatStackTraceElement"`"StackTraceFormatter.java"`21);" is 157.,8
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTraceElement,Long Statement,The length of the statement "StackTraceElement elementNoFile=new StackTraceElement("com.etsy.statsd.profiler.util.StackTraceFormatter"`"formatStackTraceElement"`null`21);" is 141.,8
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTraceElement,Magic Number,The method contains a magic number: 21,8
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTraceElement,Magic Number,The method contains a magic number: 21,8
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTrace,Long Statement,The length of the statement "stack[0]=new StackTraceElement("com.etsy.statsd.profiler.util.StackTraceFormatter"`"formatStackTraceElement"`"StackTraceFormatter.java"`21);" is 140.,28
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTrace,Long Statement,The length of the statement "stack[1]=new StackTraceElement("com.etsy.statsd.profiler.util.StackTraceFormatterTest"`"testFormatStackTraceElement"`"StackTraceFormatterTest.java"`17);" is 152.,28
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTrace,Long Statement,The length of the statement "String expected="cpu.trace.com-etsy-statsd-profiler-util-StackTraceFormatter-formatStackTraceElement-21.com-etsy-statsd-profiler-util-StackTraceFormatterTest-testFormatStackTraceElement-17";" is 190.,28
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTrace,Magic Number,The method contains a magic number: 2,28
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTrace,Magic Number,The method contains a magic number: 21,28
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,StackTraceFormatterTest,testFormatStackTrace,Magic Number,The method contains a magic number: 17,28
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetDataToFlush,Magic Number,The method contains a magic number: 3,19
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetDataToFlush,Magic Number,The method contains a magic number: 3L,19
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetDataToFlush,Magic Number,The method contains a magic number: 100,19
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetDataToFlush,Magic Number,The method contains a magic number: 3,19
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetDataToFlush,Magic Number,The method contains a magic number: 3L,19
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetDataToFlush,Magic Number,The method contains a magic number: 100L,19
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetBounds,Magic Number,The method contains a magic number: 3,40
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,CPUTracesTest,testGetBounds,Magic Number,The method contains a magic number: 5,40
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 100,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 10000,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 10,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 1000,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 10,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 10,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 100000,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 100,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.util,TimeUtilTest,testConvertReportingPeriod,Magic Number,The method contains a magic number: 10,10
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler,Agent,scheduleProfilers,Long Statement,The length of the statement "ScheduledExecutorService scheduledExecutorService=MoreExecutors.getExitingScheduledExecutorService((ScheduledThreadPoolExecutor)Executors.newScheduledThreadPool(profilers.size()`new ProfilerThreadFactory()));" is 208.,57
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler,Agent,scheduleProfilers,Long Statement,The length of the statement "ScheduledFuture future=scheduledExecutorService.scheduleAtFixedRate(worker`EXECUTOR_DELAY`profiler.getPeriod()`profiler.getTimeUnit());" is 135.,57
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler,Arguments,parseArgs,Magic Number,The method contains a magic number: 2,52
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler,Profiler,Profiler,Abstract Function Call From Constructor,The constructor Profiler calls a virtual method handleArguments.,20
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler,ArgumentsTest,testNoOptionalArguments,Magic Number,The method contains a magic number: 8125,46
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler,ArgumentsTest,testOptionalArguments,Magic Number,The method contains a magic number: 8125,56
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.worker,ProfilerWorkerThread,run,Long Statement,The length of the statement "errors.add(String.format("Received an error running profiler: %s` error: %s"`profiler.getClass().getName()`sw.toString()));" is 123.,24
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.worker,ProfilerWorkerThread,run,Magic Number,The method contains a magic number: 10,24
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,Reporter,Reporter,Abstract Function Call From Constructor,The constructor Reporter calls a virtual method handleArguments.,21
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporter,handleArguments,Long Statement,The length of the statement "logInfo(String.format("Received arguments: username = %s` password = XXXXX` database = %s` tagMapping= %s` useHttps = %s"`username`database`tagMapping`useHttps));" is 162.,120
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,constructReporter,Long Statement,The length of the statement "Arguments arguments=MockArguments.createArgs("localhost"`8888`"influxdb.reporter.test"`ImmutableMap.of("username"`"user"`"password"`"password"`"database"`"database"));" is 167.,23
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,constructReporter,Magic Number,The method contains a magic number: 8888,23
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testCase,Long Statement,The length of the statement "Point expectedPoint=Point.measurement("fake").field(InfluxDBReporter.VALUE_COLUMN`100L).tag(TagUtil.PREFIX_TAG`"influxdb.reporter.test").build();" is 145.,30
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testCase,Magic Number,The method contains a magic number: 100L,30
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testRecordGaugeValue,Magic Number,The method contains a magic number: 100L,55
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testHttpsUrlResolution,Long Statement,The length of the statement "Arguments arguments=MockArguments.createArgs("localhost"`443`"influxdb.reporter.test"`ImmutableMap.of("username"`"user"`"password"`"password"`"database"`"database"`"useHttps"`"true"));" is 184.,61
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testHttpsUrlResolution,Magic Number,The method contains a magic number: 443,61
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testHttpsUrlResolution,Magic Number,The method contains a magic number: 443,61
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testHttpUrlResolution,Long Statement,The length of the statement "Arguments arguments=MockArguments.createArgs("localhost"`8888`"influxdb.reporter.test"`ImmutableMap.of("username"`"user"`"password"`"password"`"database"`"database"`"useHttps"`"false"));" is 186.,70
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testHttpUrlResolution,Magic Number,The method contains a magic number: 8888,70
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,InfluxDBReporterTest,testHttpUrlResolution,Magic Number,The method contains a magic number: 8888,70
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,StatsDReporterTest,testCase,Magic Number,The method contains a magic number: 2,22
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,StatsDReporterTest,testCase,Magic Number,The method contains a magic number: 100L,22
+etsy_statsd-jvm-profiler,com.etsy.statsd.profiler.reporter,StatsDReporterTest,testRecordGaugeValue,Magic Number,The method contains a magic number: 100L,29

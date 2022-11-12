@@ -1,0 +1,79 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+tarql_tarql,org.deri.tarql,StreamRDFDedup,StreamRDFDedup,Magic Number,The method contains a magic number: 10000,22
+tarql_tarql,org.deri.tarql,StreamRDFDedup,StreamRDFDedup,Magic Number,The method contains a magic number: 3,26
+tarql_tarql,org.deri.tarql,StreamRDFDedup,StreamRDFDedup,Magic Number,The method contains a magic number: 2,26
+tarql_tarql,org.deri.tarql,CSVParser,CSVParser,Long Parameter List,The method has 5 parameters. ,53
+tarql_tarql,org.deri.tarql,CSVParser,toVar,Long Statement,The length of the statement "String PN_CHARS_BASE="A-Za-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD";" is 173.,78
+tarql_tarql,org.deri.tarql,CSVParser,sanitizeString,Magic Number,The method contains a magic number: 0x10,127
+tarql_tarql,org.deri.tarql,CSVParser,sanitizeString,Magic Number,The method contains a magic number: 0xFFFD,127
+tarql_tarql,org.deri.tarql,CSVParser,init,Complex Conditional,The conditional expression var == null || vars.contains(var) || var.equals(TarqlQuery.ROWNUM) is complex.,196
+tarql_tarql,org.deri.tarql,CSVParser,init,Complex Method,Cyclomatic complexity of the method is 8,196
+tarql_tarql,org.deri.tarql,CSVParser,init,Long Statement,The length of the statement "csv=new CSVReaderBuilder(reader).withCSVParser(new CSVParserBuilder().withSeparator(delimiter).withQuoteChar(quote).withEscapeChar(escape).build()).build();" is 156.,196
+tarql_tarql,org.deri.tarql,TarqlQuery,makeTest,Magic Number,The method contains a magic number: 5,66
+tarql_tarql,org.deri.tarql,TarqlQueryExecution,modifyQuery,Complex Conditional,The conditional expression query.isSelectType() && query.isQueryResultStar() && var.equals(TarqlQuery.ROWNUM) is complex.,61
+tarql_tarql,org.deri.tarql,CharsetDetectingReader,fillBuffer,Long Statement,The length of the statement "reader=new InputStreamReader(in`detectedEncoding == null ? (guessedEncoding == null ? "US-ASCII" : guessedEncoding) : detectedEncoding);" is 136.,75
+tarql_tarql,org.deri.tarql,CSVOptions,overrideWith,Complex Method,Cyclomatic complexity of the method is 9,66
+tarql_tarql,org.deri.tarql,CSVOptions,openParserFor,Long Statement,The length of the statement "return new CSVParser(openReaderFor(source)`columnNamesInFirstRow == null ? true : columnNamesInFirstRow`delimiter`quote`escape);" is 128.,227
+tarql_tarql,org.deri.tarql,tarql,processModulesAndArgs,Complex Method,Cyclomatic complexity of the method is 19,122
+tarql_tarql,org.deri.tarql,tarql,exec,Long Statement,The length of the statement "processResults(TarqlQueryExecutionFactory.create(q`InputStreamSource.fromFilenameOrIRI(parseResult.getRemainingURL())`parseResult.getOptions(options)));" is 152.,188
+tarql_tarql,org.deri.tarql,URLOptionsParser,checkForTSV,Empty catch clause,The method has an empty catch block.,68
+tarql_tarql,org.deri.tarql,URLOptionsParser,parseFragmentPart,Complex Method,Cyclomatic complexity of the method is 10,103
+tarql_tarql,org.deri.tarql,URLOptionsParser,parseFragmentPart,Empty catch clause,The method has an empty catch block.,103
+tarql_tarql,org.deri.tarql,CSVParserTest,testColumnName,Magic Number,The method contains a magic number: 2,21
+tarql_tarql,org.deri.tarql,CSVParserTest,testColumnName,Magic Number,The method contains a magic number: 25,21
+tarql_tarql,org.deri.tarql,CSVParserTest,testColumnName,Magic Number,The method contains a magic number: 26,21
+tarql_tarql,org.deri.tarql,CSVParserTest,testColumnName,Magic Number,The method contains a magic number: 27,21
+tarql_tarql,org.deri.tarql,CSVParserTest,testCountVars,Magic Number,The method contains a magic number: 3,31
+tarql_tarql,org.deri.tarql,TarqlTest,testNoInputFile,Empty catch clause,The method has an empty catch block.,130
+tarql_tarql,org.deri.tarql,TarqlTest,testMultipleInputFiles,Empty catch clause,The method has an empty catch block.,142
+tarql_tarql,org.deri.tarql,TarqlTest,testMultipleQueries,Long Statement,The length of the statement "String query="PREFIX ex: <http://example.com/>\n" + "CONSTRUCT { _:x ex:first ?a } {}\n" + "CONSTRUCT { _:x ex:last ?b } {}\n";" is 127.,175
+tarql_tarql,org.deri.tarql,TarqlTest,testConstructROWNUM,Long Statement,The length of the statement "String query="PREFIX ex: <http://example.com/>\n" + "CONSTRUCT { ?iri ex:first ?First; ex:last ?Last }\n" + "{ BIND (IRI(CONCAT(STR(ex:person)` STR(?ROWNUM))) AS ?iri) }";" is 171.,217
+tarql_tarql,org.deri.tarql,TarqlTest,testConstructROWNUM,Long Statement,The length of the statement "String ttl="@prefix ex: <http://example.com/>.\n" + "ex:person1 ex:first \"Alice\"; ex:last \"Smith\".\n" + "ex:person2 ex:first \"Bob\"; ex:last \"Miller\".\n";" is 161.,217
+tarql_tarql,org.deri.tarql,TarqlTest,testExpandPrefixFunction,Long Statement,The length of the statement "String query="PREFIX ex: <http://example.com/>\n" + "PREFIX aaa: <http://aaa.example.com/>\n" + "SELECT ?uri { BIND (URI(CONCAT(tarql:expandPrefix(STRBEFORE(?a` ':'))` STRAFTER(?a` ':'))) AS ?uri) }";" is 200.,263
+tarql_tarql,org.deri.tarql,TarqlTest,testBuiltInPrefixes,Long Statement,The length of the statement "assertSelect(tq`binding(vars`"'tarql'"`"<http://tarql.github.io/tarql#>")`binding(vars`"'apf'"`"<http://jena.apache.org/ARQ/property#>"));" is 138.,276
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testSimple,Magic Number,The method contains a magic number: 100,14
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testSimple,Magic Number,The method contains a magic number: 100,14
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testReadInBlocks,Magic Number,The method contains a magic number: 2,19
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testReadInBlocks,Magic Number,The method contains a magic number: 100,19
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testReadSmallDetectorBlocks,Magic Number,The method contains a magic number: 100,24
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testReadSmallDetectorBlocks,Magic Number,The method contains a magic number: 2,24
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testDetectUTF8,Magic Number,The method contains a magic number: 100,29
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testDetectUTF8,Magic Number,The method contains a magic number: 100,29
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testDetectISO_8859_1,Magic Number,The method contains a magic number: 100,34
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testDetectISO_8859_1,Magic Number,The method contains a magic number: 100,34
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testUTF8CharacterOnBlockBoundary,Magic Number,The method contains a magic number: 3,39
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testUTF8CharacterOnBlockBoundary,Magic Number,The method contains a magic number: 100,39
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testUTF8CharacterOnBlockBoundary,Magic Number,The method contains a magic number: 100,39
+tarql_tarql,org.deri.tarql,CharsetDetectingReaderTest,testUTF8CharacterOnBlockBoundary,Magic Number,The method contains a magic number: 3,39
+tarql_tarql,org.deri.tarql,StreamRDFDedupTest,shouldNotRemoveDuplicateOutsideWindow,Magic Number,The method contains a magic number: 2,43
+tarql_tarql,org.deri.tarql,Helpers,binding,Long Statement,The length of the statement "throw new IllegalArgumentException("header and values must have same length: " + header + "` "+ Arrays.toString(values));" is 121.,40
+tarql_tarql,org.deri.tarql,LargeInputTest,consume,Magic Number,The method contains a magic number: 1000,50
+tarql_tarql,org.deri.tarql,LargeInputTest,testDummyContentSource,Magic Number,The method contains a magic number: 5,108
+tarql_tarql,org.deri.tarql,LargeInputTest,testSmallInput,Magic Number,The method contains a magic number: 5,119
+tarql_tarql,org.deri.tarql,LargeInputTest,testInput5GB,Magic Number,The method contains a magic number: 50000000,127
+tarql_tarql,org.deri.tarql,LargeInputTest,testOutput100Mt,Magic Number,The method contains a magic number: 50000000,137
+tarql_tarql,org.deri.tarql,LargeInputTest,testOutput100Mt,Magic Number,The method contains a magic number: 2,137
+tarql_tarql,org.deri.tarql,LargeInputTest,testOutput100MtTurtle,Magic Number,The method contains a magic number: 50000000,146
+tarql_tarql,org.deri.tarql,LargeInputTest,testOutput100MtTurtle,Magic Number,The method contains a magic number: 100,146
+tarql_tarql,org.deri.tarql,LargeInputTest,testOutput100MtNTriples,Magic Number,The method contains a magic number: 50000000,157
+tarql_tarql,org.deri.tarql,LargeInputTest,testOutput100MtNTriples,Magic Number,The method contains a magic number: 100,157
+tarql_tarql,org.deri.tarql,LargeInputTest,testInput5GBWithRunawayQuoteButNoQuoteChar,Magic Number,The method contains a magic number: 50000000,168
+tarql_tarql,org.deri.tarql,LargeInputTest,testInput5GBWithRunawayQuoteButNoQuoteChar,Magic Number,The method contains a magic number: 11111,168
+tarql_tarql,org.deri.tarql,LargeInputTest,generateNonHeaderLine,Magic Number,The method contains a magic number: 11111,176
+tarql_tarql,org.deri.tarql,LargeInputTest,testDodgyVALUES,Magic Number,The method contains a magic number: 50000000,188
+tarql_tarql,org.deri.tarql,TarqlParserTest,testMultipleSELECT,Empty catch clause,The method has an empty catch block.,31
+tarql_tarql,org.deri.tarql,TarqlParserTest,testSELECTAndCONSTRUCT,Empty catch clause,The method has an empty catch block.,43
+tarql_tarql,org.deri.tarql,TarqlParserTest,testMultipleCONSTRUCT,Magic Number,The method contains a magic number: 2,55
+tarql_tarql,org.deri.tarql,TarqlParserTest,testIncrementalPrologue,Long Statement,The length of the statement "String s="PREFIX a: <http://example.com/a#> CONSTRUCT { [] a:a [] } WHERE {}\n" + "PREFIX b: <http://example.com/b#> CONSTRUCT { [] a:a [] } WHERE {}\n" + "PREFIX c: <http://example.com/c#> CONSTRUCT { [] b:b [] } WHERE {}\n";" is 226.,64
+tarql_tarql,org.deri.tarql,TarqlParserTest,testIncrementalPrologue,Magic Number,The method contains a magic number: 3,64
+tarql_tarql,org.deri.tarql,TarqlParserTest,testIncrementalPrologue,Magic Number,The method contains a magic number: 3,64
+tarql_tarql,org.deri.tarql,CSVTableTest,testSimpleTable,Magic Number,The method contains a magic number: 2,40
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixedNameTest,testUnboundArg,Empty catch clause,The method has an empty catch block.,25
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixedNameTest,testNonStringArg,Empty catch clause,The method has an empty catch block.,33
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixedNameTest,testUndefinedPrefix,Empty catch clause,The method has an empty catch block.,41
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixedNameTest,testNotAPrefixedName1,Empty catch clause,The method has an empty catch block.,49
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixedNameTest,testNotAPrefixedName2,Empty catch clause,The method has an empty catch block.,57
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixedNameTest,testNotAPrefixedName3,Empty catch clause,The method has an empty catch block.,65
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixTest,testUnboundArg,Empty catch clause,The method has an empty catch block.,25
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixTest,testNonStringArg,Empty catch clause,The method has an empty catch block.,33
+tarql_tarql,org.deri.tarql.functions,ExpandPrefixTest,testUndefinedPrefix,Empty catch clause,The method has an empty catch block.,41

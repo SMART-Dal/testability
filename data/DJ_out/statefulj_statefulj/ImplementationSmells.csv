@@ -1,0 +1,228 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPerister,JPAPerister,Long Parameter List,The method has 5 parameters. ,59
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPerister,JPAPerister,Long Statement,The length of the statement "this(states`null`startState`clazz`entityManagerFactory.getNativeEntityManagerFactory().createEntityManager()`transactionManager);" is 129.,59
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPerister,JPAPerister,Long Parameter List,The method has 6 parameters. ,63
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPerister,updateStateInDB,Empty catch clause,The method has an empty catch block.,136
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPerister,buildUpdate,Long Parameter List,The method has 6 parameters. ,185
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPerister,buildUpdate,Long Statement,The length of the statement "Predicate statePredicate=(current.equals(getStartState())) ? cb.or(cb.equal(statePath`current.getName())`cb.equal(statePath`cb.nullLiteral(String.class))) : cb.equal(statePath`current.getName());" is 195.,185
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 20,59
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 100,59
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 100,59
+statefulj_statefulj,org.statefulj.persistence.jpa,JPAPersisterTest,testInvalidStateChange,Magic Number,The method contains a magic number: 20,113
+statefulj_statefulj,org.statefulj.persistence.jpa.embedded,EmbeddedJPAPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 20,59
+statefulj_statefulj,org.statefulj.persistence.jpa.embedded,EmbeddedJPAPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 2L,59
+statefulj_statefulj,org.statefulj.persistence.jpa.embedded,EmbeddedJPAPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 100,59
+statefulj_statefulj,org.statefulj.persistence.jpa.embedded,EmbeddedJPAPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 100,59
+statefulj_statefulj,org.statefulj.persistence.jpa.embedded,EmbeddedJPAPersisterTest,testInvalidStateChange,Magic Number,The method contains a magic number: 20,117
+statefulj_statefulj,org.statefulj.persistence.common,AbstractPersister,AbstractPersister,Abstract Function Call From Constructor,The constructor AbstractPersister calls a virtual method findIdField.,47
+statefulj_statefulj,org.statefulj.persistence.common,AbstractPersister,AbstractPersister,Long Statement,The length of the statement "throw new RuntimeException(String.format("State field` %s` of class %s` is not of type %s"`stateField.getName()`clazz`getStateFieldType()));" is 140.,47
+statefulj_statefulj,org.statefulj.persistence.common,AbstractPersister,findStateField,Long Statement,The length of the statement "logger.error("Security exception trying to locate state field for {}` stateFieldName={}"`clazz.getName()`stateFieldName);" is 121.,151
+statefulj_statefulj,org.statefulj.persistence.mongo,MongoPersister,MongoPersister,Long Parameter List,The method has 5 parameters. ,89
+statefulj_statefulj,org.statefulj.persistence.mongo,MongoPersister,MongoPersister,Long Parameter List,The method has 5 parameters. ,127
+statefulj_statefulj,org.statefulj.persistence.mongo,MongoPersister,postProcessBeanDefinitionRegistry,Long Statement,The length of the statement "BeanDefinition mongoCascadeSupportBean=BeanDefinitionBuilder.genericBeanDefinition(MongoCascadeSupport.class).getBeanDefinition();" is 130.,242
+statefulj_statefulj,org.statefulj.persistence.mongo,MongoPersister,onAfterDelete,Long Statement,The length of the statement "Criteria criteria=new Criteria("managedId").is(obj.get(this.getIdField().getName())).and("managedCollection").is(getMongoTemplate().getCollectionName(getClazz())).and("managedField").is(this.getStateField().getName());" is 218.,428
+statefulj_statefulj,org.statefulj.persistence.mongo,MongoPersisterTest,testValidStateChange,Magic Number,The method contains a magic number: 20,69
+statefulj_statefulj,org.statefulj.persistence.mongo,MongoPersisterTest,testInvalidStateChange,Magic Number,The method contains a magic number: 20,111
+statefulj_statefulj,org.statefulj.persistence.mongo,MongoPersisterTest,testDeleteCascadeSupport,Magic Number,The method contains a magic number: 20,130
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildFinderBean,Long Statement,The length of the statement "BeanDefinition finderBean=BeanDefinitionBuilder.genericBeanDefinition(CrudRepositoryFinderImpl.class).getBeanDefinition();" is 122.,60
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildPersisterBean,Long Parameter List,The method has 6 parameters. ,70
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildPersisterBean,Long Statement,The length of the statement "BeanDefinition entityMgr=(BeanDefinition)repoBeanDefinitionFactory.getPropertyValues().getPropertyValue("entityManager").getValue();" is 132.,70
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildPersisterBean,Magic Number,The method contains a magic number: 2,70
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildPersisterBean,Magic Number,The method contains a magic number: 3,70
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildPersisterBean,Magic Number,The method contains a magic number: 4,70
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildPersisterBean,Magic Number,The method contains a magic number: 5,70
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildFSMHarnessBean,Long Parameter List,The method has 5 parameters. ,93
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildFSMHarnessBean,Magic Number,The method contains a magic number: 2,93
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildFSMHarnessBean,Magic Number,The method contains a magic number: 3,93
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAPersistenceSupportBeanFactory,buildFSMHarnessBean,Magic Number,The method contains a magic number: 4,93
+statefulj_statefulj,org.statefulj.framework.persistence.jpa,JPAFSMHarnessImpl,JPAFSMHarnessImpl,Long Parameter List,The method has 5 parameters. ,34
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildFinderBean,Long Statement,The length of the statement "BeanDefinition finderBean=BeanDefinitionBuilder.genericBeanDefinition(CrudRepositoryFinderImpl.class).getBeanDefinition();" is 122.,60
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildPersisterBean,Long Parameter List,The method has 6 parameters. ,70
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildPersisterBean,Magic Number,The method contains a magic number: 2,70
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildPersisterBean,Magic Number,The method contains a magic number: 3,70
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildPersisterBean,Magic Number,The method contains a magic number: 4,70
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildFSMHarnessBean,Long Parameter List,The method has 5 parameters. ,91
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildFSMHarnessBean,Magic Number,The method contains a magic number: 2,91
+statefulj_statefulj,org.statefulj.framework.persistence.mongo,MongoPersistenceSupportBeanFactory,buildFSMHarnessBean,Magic Number,The method contains a magic number: 3,91
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,mapEntityToRepository,Complex Conditional,The conditional expression Repository.class.isAssignableFrom((Class<?>)parmType.getRawType()) && parmType.getActualTypeArguments() != null && parmType.getActualTypeArguments().length > 0 is complex.,372
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,mapEntityToRepository,Long Statement,The length of the statement "if (Repository.class.isAssignableFrom((Class<?>)parmType.getRawType()) && parmType.getActualTypeArguments() != null && parmType.getActualTypeArguments().length > 0) {" is 166.,372
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Complex Method,Cyclomatic complexity of the method is 11,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Parameter List,The method has 6 parameters. ,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "StatefulController scAnnotation=ReflectionUtils.getFirstClassAnnotation(statefulControllerClass`StatefulController.class);" is 122.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "mapEventsTransitionsAndStates(statefulControllerClass`providersMappings`transitionMapping`anyMapping`states`blockingStates);" is 124.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "Class<?> binderClass=binder.bindEndpoints(statefulControllerBeanId`statefulControllerClass`factory.getIdType()`isDomainEntity`entry.getValue()`referenceFactory);" is 161.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "registerActionAndTransition(referenceFactory`statefulControllerClass`from`to`reload`entry.getKey()`entry.getValue()`isDomainEntity`controllerRef`transitionId`reg);" is 163.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "registerActionAndTransition(referenceFactory`statefulControllerClass`entry.getKey().from()`entry.getKey().to()`reload`entry.getKey()`entry.getValue()`isDomainEntity`controllerRef`transitionId`reg);" is 197.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "String persisterId=registerPersisterBean(referenceFactory`factory`scAnnotation`managedClass`repoBeanId`repoBeanDefinitionFactory`stateBeans`reg);" is 145.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "String fsmBeanId=registerFSM(referenceFactory`statefulControllerClass`scAnnotation`persisterId`managedClass`finderId`factory.getIdAnnotationType()`reg);" is 152.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,buildFramework,Long Statement,The length of the statement "registerFSMHarness(referenceFactory`factory`managedClass`statefulFSMBeanId`factoryId`finderId`repoBeanDefinitionFactory`reg);" is 125.,435
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,mapEventsTransitionsAndStates,Complex Method,Cyclomatic complexity of the method is 8,665
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,mapEventsTransitionsAndStates,Long Parameter List,The method has 6 parameters. ,665
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,mapEventsTransitionsAndStates,Long Statement,The length of the statement "mapEventsTransitionsAndStates(statefulControllerClass.getSuperclass()`providerMappings`transitionMapping`anyMapping`states`blockingStates);" is 139.,665
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,mapTransition,Long Parameter List,The method has 6 parameters. ,752
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,parseEvent,Magic Number,The method contains a magic number: 2,795
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,parseEvent,Magic Number,The method contains a magic number: 3,795
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerActionAndTransition,Long Parameter List,The method has 11 parameters. ,803
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerTransition,Long Parameter List,The method has 8 parameters. ,843
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerTransition,Long Statement,The length of the statement "args.addIndexedArgumentValue(4`(transition.from().equals(Transition.ANY_STATE) && transition.to().equals(Transition.ANY_STATE)));" is 129.,843
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerTransition,Magic Number,The method contains a magic number: 2,843
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerTransition,Magic Number,The method contains a magic number: 3,843
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerTransition,Magic Number,The method contains a magic number: 4,843
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerTransition,Magic Number,The method contains a magic number: 5,843
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerMethodInvocationAction,Long Parameter List,The method has 6 parameters. ,879
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerMethodInvocationAction,Long Statement,The length of the statement "Class<?> methodInvocationAction=(isDomainEntity) ? DomainEntityMethodInvocationAction.class : MethodInvocationAction.class;" is 123.,879
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerMethodInvocationAction,Magic Number,The method contains a magic number: 2,879
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerMethodInvocationAction,Magic Number,The method contains a magic number: 3,879
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerState,Long Parameter List,The method has 5 parameters. ,914
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerState,Magic Number,The method contains a magic number: 2,914
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSM,Long Parameter List,The method has 8 parameters. ,936
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSM,Magic Number,The method contains a magic number: 2,936
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSM,Magic Number,The method contains a magic number: 3,936
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSM,Magic Number,The method contains a magic number: 4,936
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSM,Magic Number,The method contains a magic number: 5,936
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSM,Magic Number,The method contains a magic number: 6,936
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSM,Magic Number,The method contains a magic number: 7,936
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerStatefulFSMBean,Long Parameter List,The method has 6 parameters. ,969
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerStatefulFSMBean,Magic Number,The method contains a magic number: 2,969
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFactoryBean,Long Statement,The length of the statement "throw new RuntimeException("PersistenceFactory is undefined and no factory bean was specified in the StatefulController Annotation for " + statefulContollerAnnotation.clazz());" is 176.,1002
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFinderBean,Long Parameter List,The method has 5 parameters. ,1023
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFinderBean,Long Statement,The length of the statement "throw new RuntimeException("PersistenceFactory is undefined and no finder bean was specified in the StatefulController Annotation for " + statefulContollerAnnotation.clazz());" is 175.,1023
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerPersisterBean,Long Parameter List,The method has 8 parameters. ,1048
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerPersisterBean,Long Statement,The length of the statement "throw new RuntimeException("PersistenceFactory is undefined and no persister bean was specified in the StatefulController Annotation for " + statefulContollerAnnotation.clazz());" is 178.,1048
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerPersisterBean,Long Statement,The length of the statement "reg.registerBeanDefinition(persisterId`persistenceFactory.buildPersisterBean(statefulClass`repoBeanId`repoBeanDefinitionFactory`statefulContollerAnnotation.stateField()`startStateId`stateBeans));" is 195.,1048
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSMHarness,Long Parameter List,The method has 8 parameters. ,1080
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,registerFSMHarness,Long Statement,The length of the statement "reg.registerBeanDefinition(fsmHarnessId`persistenceFactory.buildFSMHarnessBean(statefulClass`fsmBeanId`factoryId`finderId`repoBeanFactory));" is 140.,1080
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactory,loadPersistenceSupportBeanFactories,Long Statement,The length of the statement "Set<Class<? extends PersistenceSupportBeanFactory>> persistenceFactoryTypes=reflections.getSubTypesOf(PersistenceSupportBeanFactory.class);" is 139.,1198
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstruction,Long Statement,The length of the statement "BeanDefinition userRepo=BeanDefinitionBuilder.genericBeanDefinition(MockRepositoryFactoryBeanSupport.class).getBeanDefinition();" is 128.,45
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstruction,Magic Number,The method contains a magic number: 2,45
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstruction,Magic Number,The method contains a magic number: 20,45
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstruction,Magic Number,The method contains a magic number: 2,45
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstruction,Magic Number,The method contains a magic number: 250,45
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstruction,Magic Number,The method contains a magic number: 3,45
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstructionWithNonDefaultRetry,Long Statement,The length of the statement "BeanDefinition userRepo=BeanDefinitionBuilder.genericBeanDefinition(MockRepositoryFactoryBeanSupport.class).getBeanDefinition();" is 128.,90
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstructionWithNonDefaultRetry,Long Statement,The length of the statement "BeanDefinition noRetryController=BeanDefinitionBuilder.genericBeanDefinition(NoRetryController.class).getBeanDefinition();" is 122.,90
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstructionWithNonDefaultRetry,Magic Number,The method contains a magic number: 2,90
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testFSMConstructionWithNonDefaultRetry,Magic Number,The method contains a magic number: 3,90
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testAlternativePackages,Long Statement,The length of the statement "BeanDefinition testUserRepo=BeanDefinitionBuilder.genericBeanDefinition(AltTestRepositoryFactoryBeanSupport.class).getBeanDefinition();" is 135.,120
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testAlternativePackages,Long Statement,The length of the statement "BeanDefinition testUserController=BeanDefinitionBuilder.genericBeanDefinition(AltTestUserController.class).getBeanDefinition();" is 127.,120
+statefulj_statefulj,org.statefulj.framework.core,StatefulFactoryTest,testMemoryFailurePersistor,Long Statement,The length of the statement "BeanDefinition failedMemoryController=BeanDefinitionBuilder.genericBeanDefinition(FailedMemoryController.class).getBeanDefinition();" is 132.,186
+statefulj_statefulj,org.statefulj.framework.core.model,EndpointBinder,bindEndpoints,Long Parameter List,The method has 6 parameters. ,45
+statefulj_statefulj,org.statefulj.framework.core.model,PersistenceSupportBeanFactory,buildPersisterBean,Long Parameter List,The method has 6 parameters. ,43
+statefulj_statefulj,org.statefulj.framework.core.model,PersistenceSupportBeanFactory,buildFSMHarnessBean,Long Parameter List,The method has 5 parameters. ,51
+statefulj_statefulj,org.statefulj.framework.core.model.impl,MemoryPersistenceSupportBeanFactoryImpl,buildPersisterBean,Long Parameter List,The method has 6 parameters. ,86
+statefulj_statefulj,org.statefulj.framework.core.model.impl,MemoryPersistenceSupportBeanFactoryImpl,buildPersisterBean,Magic Number,The method contains a magic number: 2,86
+statefulj_statefulj,org.statefulj.framework.core.model.impl,MemoryPersistenceSupportBeanFactoryImpl,buildFSMHarnessBean,Long Parameter List,The method has 5 parameters. ,107
+statefulj_statefulj,org.statefulj.framework.core.model.impl,FSMHarnessImpl,onEvent,Long Statement,The length of the statement "throw new RuntimeException("Unable to locate object of type " + clazz.getName() + "` id="+ ((id == null) ? "null" : id)+ "` event="+ event);" is 140.,55
+statefulj_statefulj,org.statefulj.framework.core.actions,MethodInvocationAction,execute,Long Statement,The length of the statement "throw new RuntimeException("Incoming parameter list is incorrect` expected " + this.parameters.length + " parameters` but have "+ invokeParmList.size());" is 153.,68
+statefulj_statefulj,org.statefulj.framework.core.actions,MethodInvocationAction,buildInvokeParameters,Magic Number,The method contains a magic number: 2,152
+statefulj_statefulj,org.statefulj.framework.core.actions,MethodInvocationAction,parseResponse,Magic Number,The method contains a magic number: 2,165
+statefulj_statefulj,org.statefulj.framework.core.actions,MethodInvocationAction,parseResponse,Magic Number,The method contains a magic number: 3,165
+statefulj_statefulj,org.statefulj.framework.core.fsm,TransitionImpl,TransitionImpl,Long Parameter List,The method has 6 parameters. ,38
+statefulj_statefulj,org.statefulj.framework.core.fsm,FSM,FSM,Long Parameter List,The method has 8 parameters. ,57
+statefulj_statefulj,org.statefulj.framework.core.fsm,FSM,FSM,Long Parameter List,The method has 7 parameters. ,70
+statefulj_statefulj,org.statefulj.framework.core.fsm,FSM,transition,Long Parameter List,The method has 5 parameters. ,90
+statefulj_statefulj,org.statefulj.framework.core.fsm,FSM,autowire,Long Statement,The length of the statement "this.appContext.getAutowireCapableBeanFactory().autowireBeanProperties(stateful`AutowireCapableBeanFactory.AUTOWIRE_NO`false);" is 126.,122
+statefulj_statefulj,org.statefulj.framework.core.fsm,FSM,reload,Long Statement,The length of the statement "throw new RuntimeException("Reloading is not supported without a valid Finder. " + "Ensure that there is a Repository for " + this.clazz.getName() + " or provide a finderId in the StateController annotation");" is 209.,132
+statefulj_statefulj,org.statefulj.framework.core.fsm,ReloadTest,testReload,Long Statement,The length of the statement "FSM<Identifiable`Object> fsm=new FSM<Identifiable`Object>("fsm"`persister`1`1`Identifiable.class`Id.class`appContext`finder);" is 125.,51
+statefulj_statefulj,org.alternative,AltTestBinder,bindEndpoints,Long Parameter List,The method has 6 parameters. ,38
+statefulj_statefulj,org.statefulj.framework.core.mocks,MockBinder,bindEndpoints,Long Parameter List,The method has 6 parameters. ,37
+statefulj_statefulj,org.statefulj.framework.core.mocks,MockPersistenceSupportBeanFactory,buildPersisterBean,Long Parameter List,The method has 6 parameters. ,59
+statefulj_statefulj,org.statefulj.framework.core.mocks,MockPersistenceSupportBeanFactory,buildFSMHarnessBean,Long Parameter List,The method has 5 parameters. ,70
+statefulj_statefulj,org.statefulj.framework.tests,StatefulControllerTest,testStateTransitions,Long Statement,The length of the statement "assertEquals(mvcBinder.getClass().getMethod("$_handleError"`Exception.class)`ReflectionUtils.getFirstAnnotatedMethod(mvcBinder.getClass()`ExceptionHandler.class));" is 163.,103
+statefulj_statefulj,org.statefulj.framework.tests,StatefulControllerTest,testBlockedState,Long Statement,The length of the statement "org.statefulj.framework.core.fsm.FSM<User`?> fsm=(org.statefulj.framework.core.fsm.FSM<User`?>)this.appContext.getBean(refFactory.getFSMId());" is 142.,195
+statefulj_statefulj,org.statefulj.framework.tests,StatefulControllerTest,testTransitionOutOfBlocking,Magic Number,The method contains a magic number: 1500,221
+statefulj_statefulj,org.statefulj.framework.tests,StatefulControllerTest,doInTransaction,Magic Number,The method contains a magic number: 1500,234
+statefulj_statefulj,org.statefulj.framework.tests,StatefulControllerTest,run,Magic Number,The method contains a magic number: 1500,247
+statefulj_statefulj,org.statefulj.framework.tests.utils,ReflectionUtils,invoke,Complex Method,Cyclomatic complexity of the method is 9,42
+statefulj_statefulj,org.statefulj.framework.tests.ddd,DomainEntityTest,testDomainEntityFSM,Magic Number,The method contains a magic number: 2,50
+statefulj_statefulj,org.statefulj.framework.tests.ddd,DomainEntityTest,testDomainEntityFSM,Magic Number,The method contains a magic number: 2,50
+statefulj_statefulj,org.statefulj.framework.binders.jersey,JerseyBinder,bindEndpoints,Long Parameter List,The method has 6 parameters. ,59
+statefulj_statefulj,org.statefulj.framework.binders.jersey,JerseyBinder,buildProxy,Long Parameter List,The method has 8 parameters. ,86
+statefulj_statefulj,org.statefulj.framework.binders.jersey,JerseyBinder,buildProxy,Long Statement,The length of the statement "CtClass proxyClass=super.buildProxy(cp`beanName`proxyClassName`statefulControllerClass`idType`isDomainEntity`eventMapping`refFactory);" is 134.,86
+statefulj_statefulj,org.statefulj.framework.binders.springmvc,SpringMVCBinder,buildProxy,Long Parameter List,The method has 8 parameters. ,77
+statefulj_statefulj,org.statefulj.framework.binders.springmvc,SpringMVCBinder,buildProxy,Long Statement,The length of the statement "CtClass proxyClass=super.buildProxy(cp`beanName`proxyClassName`statefulControllerClass`idType`isDomainEntity`eventMapping`refFactory);" is 134.,77
+statefulj_statefulj,org.statefulj.framework.binders.common.utils,JavassistUtils,addClassAnnotation,Magic Number,The method contains a magic number: 2,58
+statefulj_statefulj,org.statefulj.framework.binders.common.utils,JavassistUtils,createMemberValue,Complex Method,Cyclomatic complexity of the method is 12,172
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,bindEndpoints,Long Parameter List,The method has 6 parameters. ,70
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,bindEndpoints,Long Statement,The length of the statement "return buildProxy(cp`beanName`proxyClassName`statefulControllerClass`idType`isDomainEntity`eventMapping`refFactory).toClass();" is 126.,70
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,buildProxy,Long Parameter List,The method has 8 parameters. ,106
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestMethods,Long Parameter List,The method has 5 parameters. ,140
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,createRequestMethod,Long Parameter List,The method has 5 parameters. ,160
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestParameters,Long Parameter List,The method has 6 parameters. ,178
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestParameters,Long Statement,The length of the statement "ParameterAnnotationsAttribute paramAtrributeInfo=new ParameterAnnotationsAttribute(methodInfo.getConstPool()`ParameterAnnotationsAttribute.visibleTag);" is 151.,178
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestParameters,Long Statement,The length of the statement "paramArrays[parmIndex]=createParameterAnnotations(parmName`ctMethod.getMethodInfo()`parmAnnotations[parmCnt]`paramAtrributeInfo.getConstPool());" is 144.,178
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestParameters,Magic Number,The method contains a magic number: 2,178
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestParameters,Magic Number,The method contains a magic number: 2,178
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestParameters,Magic Number,The method contains a magic number: 2,178
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,copyParameters,Long Statement,The length of the statement "ParameterAnnotationsAttribute paramAtrributeInfo=new ParameterAnnotationsAttribute(methodInfo.getConstPool()`ParameterAnnotationsAttribute.visibleTag);" is 151.,266
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,copyParameters,Long Statement,The length of the statement "paramArrays[parmIndex]=createParameterAnnotations(parmName`ctMethod.getMethodInfo()`parmAnnotations[parmIndex]`paramAtrributeInfo.getConstPool());" is 146.,266
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,parseMethod,Magic Number,The method contains a magic number: 2,314
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,parseMethod,Magic Number,The method contains a magic number: 3,314
+statefulj_statefulj,org.statefulj.framework.binders.common,AbstractRestfulBinder,addRequestMethod,Long Parameter List,The method has 6 parameters. ,354
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,lookupId,Empty catch clause,The method has an empty catch block.,67
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,lookupId,Empty catch clause,The method has an empty catch block.,67
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,lookupId,Empty catch clause,The method has an empty catch block.,67
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,bindEndpoints,Long Parameter List,The method has 6 parameters. ,109
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,addMethodBody,Long Statement,The length of the statement "String methodBody="{ " + "Object id = org.statefulj.framework.binders.camel.CamelBinder.lookupId($1); " + "$proceed(\"" + event + "\"` id` new Object[]{$1` $1});"+ "}";" is 168.,220
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,addMessageParameter,Long Statement,The length of the statement "Class<?> msgClass=(method != null && method.getParameterTypes().length == 3) ? method.getParameterTypes()[2] : Object.class;" is 124.,230
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,addMessageParameter,Magic Number,The method contains a magic number: 3,230
+statefulj_statefulj,org.statefulj.framework.binders.camel,CamelBinder,addMessageParameter,Magic Number,The method contains a magic number: 2,230
+statefulj_statefulj,org.statefulj.common.utils,ReflectionUtils,toFieldName,Magic Number,The method contains a magic number: 2,150
+statefulj_statefulj,org.statefulj.common.utils,ReflectionUtils,getReferencedField,Complex Conditional,The conditional expression method != null && (isGetter(method) || isSetter(method)) is complex.,155
+statefulj_statefulj,org.statefulj.common.utils,ReflectionUtils,getReferencedField,Empty catch clause,The method has an empty catch block.,155
+statefulj_statefulj,org.statefulj.common.utils,ReflectionUtils,getReferencedField,Empty catch clause,The method has an empty catch block.,155
+statefulj_statefulj,org.statefulj.common.utils,ReflectionUtils,getField,Empty catch clause,The method has an empty catch block.,180
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testTestClass1,Long Statement,The length of the statement "FieldAccessor<TestClass1`String> testClass1StringFieldAccessor=new FieldAccessor<TestClass1`String>(TestClass1.class`field);" is 124.,53
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testTestClass2,Long Statement,The length of the statement "FieldAccessor<TestClass2`String> testClass2StringFieldAccessor=new FieldAccessor<TestClass2`String>(TestClass2.class`field);" is 124.,64
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testTestClass3,Long Statement,The length of the statement "FieldAccessor<TestClass3`String> testClass3StringFieldAccessor=new FieldAccessor<TestClass3`String>(TestClass3.class`field);" is 124.,74
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testTestClass4,Long Statement,The length of the statement "FieldAccessor<TestClass4`String> testClass4StringFieldAccessor=new FieldAccessor<TestClass4`String>(TestClass4.class`field);" is 124.,84
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testSetFieldClass1,Long Statement,The length of the statement "FieldAccessor<TestClass1`String> testClass1StringFieldAccessor=new FieldAccessor<TestClass1`String>(TestClass1.class`field);" is 124.,93
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testSetFieldClass2,Long Statement,The length of the statement "FieldAccessor<TestClass2`String> testClass2StringFieldAccessor=new FieldAccessor<TestClass2`String>(TestClass2.class`field);" is 124.,103
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testSetFieldClass3,Long Statement,The length of the statement "FieldAccessor<TestClass3`String> testClass3StringFieldAccessor=new FieldAccessor<TestClass3`String>(TestClass3.class`field);" is 124.,113
+statefulj_statefulj,org.statefulj.common.utils,FieldAccessorTest,testSetFieldClass4,Long Statement,The length of the statement "FieldAccessor<TestClass4`String> testClass4StringFieldAccessor=new FieldAccessor<TestClass4`String>(TestClass4.class`field);" is 124.,123
+statefulj_statefulj,org.statefulj.persistence,StateFieldAccessor,init,Complex Conditional,The conditional expression getMethodName.equals("") && statePropertyDescriptor == null && accessorType == State.AccessorType.METHOD is complex.,25
+statefulj_statefulj,org.statefulj.persistence,StateFieldAccessor,init,Complex Conditional,The conditional expression setMethodName.equals("") && statePropertyDescriptor == null && accessorType == State.AccessorType.METHOD is complex.,25
+statefulj_statefulj,org.statefulj.persistence,StateFieldAccessor,init,Complex Conditional,The conditional expression accessorType == State.AccessorType.METHOD && (this.getMethod == null || this.setMethod == null) is complex.,25
+statefulj_statefulj,org.statefulj.persistence,StateFieldAccessor,init,Complex Method,Cyclomatic complexity of the method is 10,25
+statefulj_statefulj,org.statefulj.persistence,StateFieldAccessor,init,Long Statement,The length of the statement "this.getMethod=(getMethodName.equals("")) ? (statePropertyDescriptor != null) ? statePropertyDescriptor.getReadMethod() : null : clazz.getMethod(getMethodName);" is 160.,25
+statefulj_statefulj,org.statefulj.persistence,StateFieldAccessor,init,Long Statement,The length of the statement "this.setMethod=(setMethodName.equals("")) ? (statePropertyDescriptor != null) ? statePropertyDescriptor.getWriteMethod() : null : clazz.getMethod(setMethodName`String.class);" is 174.,25
+statefulj_statefulj,org.statefulj.persistence,StateFieldAccessor,init,Long Statement,The length of the statement "throw new RuntimeException("Unable to locate both a setter and getter for the state field for Class=" + this.clazz.getCanonicalName());" is 135.,25
+statefulj_statefulj,org.statefulj.fsm,FSM,onEvent,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("{}({})::{}({})->{}/noop"`this.name`stateful.getClass().getSimpleName()`current.getName()`event`current.getName());" is 157.,99
+statefulj_statefulj,org.statefulj.fsm,FSM,transition,Long Parameter List,The method has 5 parameters. ,600
+statefulj_statefulj,org.statefulj.fsm,FSM,executeAction,Long Parameter List,The method has 6 parameters. ,617
+statefulj_statefulj,org.statefulj.fsm,FSM,executeAction,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("{}({})::{}({})->{}/{}"`this.name`stateful.getClass().getSimpleName()`from`event`to`(action == null) ? "noop" : action.toString());" is 173.,617
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testNonDeterminsticTransition,Magic Number,The method contains a magic number: 2,111
+statefulj_statefulj,org.statefulj.fsm,FSMTest,getStateActionPair,Magic Number,The method contains a magic number: 2,133
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testConcurrency,Magic Number,The method contains a magic number: 100,169
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testConcurrency,Magic Number,The method contains a magic number: 250,169
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testConcurrency,Magic Number,The method contains a magic number: 5,169
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testConcurrency,Magic Number,The method contains a magic number: 2,169
+statefulj_statefulj,org.statefulj.fsm,FSMTest,execute,Magic Number,The method contains a magic number: 250,188
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testRetryInterval,Empty catch clause,The method has an empty catch block.,311
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testRetryInterval,Magic Number,The method contains a magic number: 500,311
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testRetryInterval,Magic Number,The method contains a magic number: 499,311
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testRetryInterval,Magic Number,The method contains a magic number: 600,311
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testRetryFailureOnTransition,Long Statement,The length of the statement "@Override public StateActionPair<Foo> getStateActionPair( Foo stateful` String event` Object... args) throws RetryException {" is 125.,377
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testTransitionOutOfBlocking,Magic Number,The method contains a magic number: 1000,432
+statefulj_statefulj,org.statefulj.fsm,FSMTest,testTransitionOutOfBlocking,Magic Number,The method contains a magic number: 500,432
+statefulj_statefulj,org.statefulj.fsm,FSMTest,run,Magic Number,The method contains a magic number: 500,467
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,setUp,Long Statement,The length of the statement "fsmBuilder.buildState("FOO").addTransition("noop"`"FOO").addTransition("to-bar"`"BAR").addTransition("to-baz"`"BAZ").done().buildState("BAR").addTransition("noop"`"BAR").addTransition("to-foo"`"FOO").addTransition("to-baz"`"BAZ").done().buildState("BAZ").setEndState(true).addTransition("noop"`"BAZ").addTransition("to-bar"`"BAR").addTransition("to-foo"`"FOO"`action).done();" is 375.,30
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testNoStateTransition2,Long Statement,The length of the statement "this.fooStateFSM=FSM.FSMBuilder.newBuilder(FooState.class).buildState("FOO").buildTransition("bar").setAction(new Action<FooState>(){" is 133.,137
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testBuildTransition,Long Statement,The length of the statement "this.fooStateFSM=FSM.FSMBuilder.newBuilder(FooState.class).buildState("FOO").buildTransition("bar").setToState("BAR").done().done().buildState("BAR").done().build();" is 165.,158
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testBuildTransition2,Long Statement,The length of the statement "this.fooStateFSM=FSM.FSMBuilder.newBuilder(FooState.class).buildState("FOO").buildTransition("bar").setToState(barState).done().done().addState(barState).build();" is 162.,175
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testTransitionWithSpecifiedState,Long Statement,The length of the statement "this.fooStateFSM=FSM.FSMBuilder.newBuilder(FooState.class).buildState("FOO").addTransition("bar"`barState`new Action<FooState>(){" is 129.,192
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testRetryAttempt,Magic Number,The method contains a magic number: 2,237
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testRetryAttempt,Magic Number,The method contains a magic number: 2,237
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testRetryInterval,Magic Number,The method contains a magic number: 2,249
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testRetryInterval,Magic Number,The method contains a magic number: 2,249
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testAddPersister,Long Statement,The length of the statement "this.fooStateFSM=FSM.FSMBuilder.newBuilder(FooState.class).setPerister(persister).buildState("FOO").done().buildState("BAR").done().buildState("BAZ").done().build();" is 165.,261
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testAddingTransition,Long Statement,The length of the statement "this.fooStateFSM=FSM.FSMBuilder.newBuilder(FooState.class).buildState("FOO").addTransition("test"`new Transition<FooState>(){" is 125.,280
+statefulj_statefulj,org.statefulj.fsm,FSMBuilderTest,testAddingTransition,Long Statement,The length of the statement "@Override public StateActionPair<FooState> getStateActionPair( FooState stateful` String event` Object... args) throws RetryException {" is 135.,280
+statefulj_statefulj,org.statefulj.fsm.model.impl,DeterministicTransitionImpl,toString,Long Statement,The length of the statement "return "DeterministicTransition[state=" + this.stateActionPair.getState().getName() + "` action="+ this.stateActionPair.getAction()+ "]";" is 137.,56
+statefulj_statefulj,org.statefulj.fsm.persistence,StateFieldAccessorTest,testStatePersisterStatefulClass1,Long Statement,The length of the statement "StateFieldAccessor<StatefulClass1> stateFieldAccessor=new StateFieldAccessor(StatefulClass1.class`ReflectionUtils.getFirstAnnotatedField(StatefulClass1.class`State.class));" is 172.,76
+statefulj_statefulj,org.statefulj.fsm.persistence,StateFieldAccessorTest,testStatePersisterStatefulClass2,Long Statement,The length of the statement "StateFieldAccessor<StatefulClass2> stateFieldAccessor=new StateFieldAccessor(StatefulClass2.class`ReflectionUtils.getFirstAnnotatedField(StatefulClass2.class`State.class));" is 172.,89
+statefulj_statefulj,org.statefulj.fsm.persistence,StateFieldAccessorTest,testStatePersisterStatefulClass3,Long Statement,The length of the statement "StateFieldAccessor<StatefulClass3> stateFieldAccessor=new StateFieldAccessor(StatefulClass3.class`ReflectionUtils.getFirstAnnotatedField(StatefulClass3.class`State.class));" is 172.,102
+statefulj_statefulj,org.statefulj.fsm.persistence,StateFieldAccessorTest,testGetterSetterStatefulClass1,Long Statement,The length of the statement "StateFieldAccessor<StatefulClass1> stateFieldAccessor=new StateFieldAccessor(StatefulClass1.class`ReflectionUtils.getFirstAnnotatedField(StatefulClass1.class`State.class));" is 172.,129
+statefulj_statefulj,org.statefulj.fsm.persistence,StateFieldAccessorTest,testGetterSetterStatefulClass2,Long Statement,The length of the statement "StateFieldAccessor<StatefulClass2> stateFieldAccessor=new StateFieldAccessor(StatefulClass2.class`ReflectionUtils.getFirstAnnotatedField(StatefulClass2.class`State.class));" is 172.,140
+statefulj_statefulj,org.statefulj.fsm.persistence,StateFieldAccessorTest,testGetterSetterStatefulClass3,Long Statement,The length of the statement "StateFieldAccessor<StatefulClass3> stateFieldAccessor=new StateFieldAccessor(StatefulClass3.class`ReflectionUtils.getFirstAnnotatedField(StatefulClass3.class`State.class));" is 172.,156
+statefulj_statefulj,org.statefulj.fsm.persistence,StateFieldAccessorTest,testStatePersisterStatefulClass6,Long Statement,The length of the statement "StateFieldAccessor<StatefulClass6> stateFieldAccessor=new StateFieldAccessor(StatefulClass6.class`ReflectionUtils.getFirstAnnotatedField(StatefulClass6.class`State.class));" is 172.,172

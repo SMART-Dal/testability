@@ -1,0 +1,13 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+pac4j_vertx-pac4j,org.pac4j.vertx.http,VertxHttpActionAdapter,adapt,Magic Number,The method contains a magic number: 400,25
+pac4j_vertx-pac4j,org.pac4j.vertx.handler.impl,CallbackDeployingPac4jAuthHandler,CallbackDeployingPac4jAuthHandler,Long Parameter List,The method has 7 parameters. ,38
+pac4j_vertx-pac4j,org.pac4j.vertx.handler.impl,SecurityHandler,SecurityHandler,Long Parameter List,The method has 5 parameters. ,46
+pac4j_vertx-pac4j,org.pac4j.vertx.handler.impl,LogoutHandler,handle,Long Statement,The length of the statement "bestLogic.perform(webContext`sessionStore`config`bestAdapter`defaultUrl`logoutUrlPattern`localLogout`destroySession`centralLogout);" is 131.,54
+pac4j_vertx-pac4j,org.pac4j.vertx.auth,Pac4jUser,isAuthorized,Long Statement,The length of the statement "resultHandler.handle(Future.succeededFuture(profiles.values().stream().anyMatch(p -> p.getRoles().contains(authorization))));" is 125.,36
+pac4j_vertx-pac4j,org.pac4j.vertx.auth,Pac4jUser,updatePrincipal,Long Statement,The length of the statement "profile.getAttributes().forEach((attributeName`attributeValue) -> jsonProfile.put(attributeName`attributeValue.toString()));" is 124.,61
+pac4j_vertx-pac4j,org.pac4j.vertx,VertxWebContext,VertxWebContext,Magic Number,The method contains a magic number: 80,39
+pac4j_vertx-pac4j,org.pac4j.vertx,VertxWebContext,VertxWebContext,Magic Number,The method contains a magic number: 443,39
+pac4j_vertx-pac4j,org.pac4j.vertx,VertxWebContext,getResponseHeaders,Long Statement,The length of the statement "return routingContext.response().headers().entries().stream().collect(Collectors.toMap(Map.Entry::getKey`Map.Entry::getValue));" is 127.,132
+pac4j_vertx-pac4j,org.pac4j.vertx,VertxWebContext,addResponseCookie,Long Statement,The length of the statement "io.vertx.core.http.Cookie vertxCookie=io.vertx.core.http.Cookie.cookie(cookie.getName()`cookie.getValue()).setHttpOnly(cookie.isHttpOnly()).setSecure(cookie.isSecure()).setDomain(cookie.getDomain()).setPath(cookie.getPath());" is 225.,179
+pac4j_vertx-pac4j,org.pac4j.vertx.core,DefaultJsonConverter,DefaultJsonConverter,Long Statement,The length of the statement "mapper.addMixIn(OAuth1RequestToken.class`OAuth1RequestTokenMixin.class).addMixIn(BearerAccessToken.class`BearerAccessTokenMixin.class).addMixIn(Scope.Value.class`ValueMixin.class).addMixIn(Token.class`TokenMixin.class);" is 219.,45
+pac4j_vertx-pac4j,org.pac4j.vertx.core.store,VertxClusteredMapStore,get,Long Statement,The length of the statement "rxVertx.sharedData().<K`V>rxGetClusterWideMap(PAC4J_SHARED_DATA_KEY).flatMap(map -> map.rxGet(key)).subscribe(valueFuture::complete);" is 133.,33

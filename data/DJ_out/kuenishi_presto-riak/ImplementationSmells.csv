@@ -1,0 +1,72 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+kuenishi_presto-riak,com.basho.riak.presto,RiakPartition,toString,Long Statement,The length of the statement "return Objects.toStringHelper(this).add("schemaName"`schemaName).add("tableName"`tableName).add("tupleDomain"`tupleDomain).add("indexColumns"`indexedColumns).toString();" is 169.,67
+kuenishi_presto-riak,com.basho.riak.presto,RiakClient,RiakClient,Long Statement,The length of the statement "RiakNode node=new RiakNode.Builder().withRemoteAddress(hp.getHostText()).withRemotePort(hp.getPortOrDefault(config.getPort())).withMaxConnections(10).withConnectionTimeout(CONNECTION_TIMEOUT_MIL).build();" is 204.,66
+kuenishi_presto-riak,com.basho.riak.presto,RiakClient,RiakClient,Magic Number,The method contains a magic number: 10,66
+kuenishi_presto-riak,com.basho.riak.presto,DirectConnection,processSplitIndex,Long Parameter List,The method has 5 parameters. ,137
+kuenishi_presto-riak,com.basho.riak.presto,RiakMetadata,getColumnMetadata,Long Statement,The length of the statement "checkArgument(((RiakTableHandle)tableHandle).getConnectorId().equals(connectorId)`"tableHandle is not for this connector");" is 123.,203
+kuenishi_presto-riak,com.basho.riak.presto,CoverageRecordSet,CoverageRecordSet,Long Parameter List,The method has 5 parameters. ,46
+kuenishi_presto-riak,com.basho.riak.presto,CoverageRecordCursor,fetchData,Complex Method,Cyclomatic complexity of the method is 9,99
+kuenishi_presto-riak,com.basho.riak.presto,CoverageRecordCursor,fetchData,Empty catch clause,The method has an empty catch block.,99
+kuenishi_presto-riak,com.basho.riak.presto,CoverageRecordCursor,buildQuery,Complex Method,Cyclomatic complexity of the method is 13,228
+kuenishi_presto-riak,com.basho.riak.presto,RiakConnectorFactory,create,Long Statement,The length of the statement "Injector injector=app.strictConfig().doNotInitializeLogging().setRequiredConfigurationProperties(requiredConfig).setOptionalConfigurationProperties(optionalConfig).initialize();" is 177.,45
+kuenishi_presto-riak,com.basho.riak.presto,InternalRiakObject,InternalRiakObject,Magic Number,The method contains a magic number: 2,38
+kuenishi_presto-riak,com.basho.riak.presto,InternalRiakObject,InternalRiakObject,Magic Number,The method contains a magic number: 3,38
+kuenishi_presto-riak,com.basho.riak.presto,InternalRiakObject,InternalRiakObject,Magic Number,The method contains a magic number: 2,38
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Complex Method,Cyclomatic complexity of the method is 8,40
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Magic Number,The method contains a magic number: 8087,40
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Magic Number,The method contains a magic number: 10017,40
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Magic Number,The method contains a magic number: 10027,40
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Magic Number,The method contains a magic number: 10037,40
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Magic Number,The method contains a magic number: 10047,40
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Magic Number,The method contains a magic number: 10057,40
+kuenishi_presto-riak,com.basho.riak.presto,RiakConfig,parsePort,Magic Number,The method contains a magic number: 10067,40
+kuenishi_presto-riak,com.basho.riak.presto,Coverage,plan,Magic Number,The method contains a magic number: 9979,39
+kuenishi_presto-riak,com.basho.riak.presto,RiakSplitManager,getPartitions,Long Statement,The length of the statement "List<ConnectorPartition> partitions=ImmutableList.<ConnectorPartition>of(new RiakPartition(riakTableHandle.getSchemaName()`riakTableHandle.getTableName()`tupleDomain`indexedColumns));" is 183.,50
+kuenishi_presto-riak,com.basho.riak.presto,RiakSplitManager,getPartitionSplits,Long Statement,The length of the statement "CoverageSplit coverageSplit=new CoverageSplit(riakTableHandle`table`split.getHost()`split.toString()`partition.getTupleDomain());" is 129.,87
+kuenishi_presto-riak,com.basho.riak.presto,RiakHandleResolver,canHandle,Long Statement,The length of the statement "return columnHandle instanceof RiakColumnHandle && ((RiakColumnHandle)columnHandle).getConnectorId().equals(connectorId);" is 121.,62
+kuenishi_presto-riak,com.basho.riak.presto,TestSplitTask,testEncode,Magic Number,The method contains a magic number: 12,25
+kuenishi_presto-riak,com.basho.riak.presto,TestPRTable,testDeSerialization,Long Statement,The length of the statement "String s="{\"comment\":\"comme\"` \"subtables\":[]`\"name\":\"logs\"` \"columns\":[{\"name\":\"a\"` \"type\":\"varchar\"` \"index\":false` \"pkey\":true}]}";" is 157.,36
+kuenishi_presto-riak,com.basho.riak.presto,TestPRTable,example,Long Statement,The length of the statement "List<RiakColumn> cols=Arrays.asList(new RiakColumn("col1"`VarcharType.VARCHAR`"d1vv"`false`true)`new RiakColumn("col2"`VarcharType.VARCHAR`"d2"`true`false)`new RiakColumn("poopie"`BigintType.BIGINT`"d3"`true`false));" is 216.,48
+kuenishi_presto-riak,com.basho.riak.presto,TestPRTable,subTableExample,Long Statement,The length of the statement "List<RiakColumn> cols=Arrays.asList(new RiakColumn("col1"`VarcharType.VARCHAR`"d1vv"`false`true)`new RiakColumn("col2"`VarcharType.VARCHAR`"d2"`true`false)`new RiakColumn("poopie"`BigintType.BIGINT`"d3"`true`false));" is 216.,60
+kuenishi_presto-riak,com.basho.riak.presto,TestRiakColumnHandle,testSerializtion2,Magic Number,The method contains a magic number: 4,20
+kuenishi_presto-riak,com.basho.riak.presto,TestRiakColumnHandle,testSerialization,Magic Number,The method contains a magic number: 54,41
+kuenishi_presto-riak,com.basho.riak.presto.models,RiakColumn,RiakColumn,Long Parameter List,The method has 5 parameters. ,35
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,PRSubTable,Complex Conditional,The conditional expression column.getPkey() && column.getType() == VarcharType.VARCHAR && this.pkey == null is complex.,45
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,PRSubTable,Magic Number,The method contains a magic number: 2,45
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,getColumnsMetadata,Long Statement,The length of the statement "builder.add(new ColumnMetadata(handle.getColumn().getName()`handle.getColumn().getType()`handle.getColumn().getPkey()`handle.getColumn().getComment()`hidden));" is 159.,97
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,getColumnsMetadata,Magic Number,The method contains a magic number: 2,97
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,getColumnHandles,Long Statement,The length of the statement "columnHandles.put(RiakColumnHandle.PKEY_COLUMN_NAME`new RiakColumnHandle(connectorId`new RiakColumn(RiakColumnHandle.PKEY_COLUMN_NAME`VarcharType.VARCHAR`pkey`true`true)`0));" is 174.,114
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,getColumnHandles,Long Statement,The length of the statement "columnHandles.put(RiakColumnHandle.VTAG_COLUMN_NAME`new RiakColumnHandle(connectorId`new RiakColumn(RiakColumnHandle.VTAG_COLUMN_NAME`VarcharType.VARCHAR`"vtag"`false`false)`1));" is 178.,114
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,getColumnHandles,Magic Number,The method contains a magic number: 2,114
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,parentTableName,Magic Number,The method contains a magic number: 2,144
+kuenishi_presto-riak,com.basho.riak.presto.models,PRSubTable,match,Magic Number,The method contains a magic number: 2,161
+kuenishi_presto-riak,com.basho.riak.presto.models,RiakTableHandle,equals,Long Statement,The length of the statement "return Objects.equal(this.connectorId`other.connectorId) && Objects.equal(this.schemaName`other.schemaName) && Objects.equal(this.tableName`other.tableName);" is 157.,67
+kuenishi_presto-riak,com.basho.riak.presto.models,CoverageSplit,CoverageSplit,Long Parameter List,The method has 5 parameters. ,46
+kuenishi_presto-riak,com.basho.riak.presto.models,CoverageSplit,getInfo,Long Statement,The length of the statement "return ImmutableMap.builder().put("tableHandle"`tableHandle).put("table"`table).put("host"`host).put("splitData"`splitData).put("tupleDomain"`tupleDomain).build();" is 163.,93
+kuenishi_presto-riak,com.basho.riak.presto.models,PRTable,PRTable,Complex Conditional,The conditional expression column.getPkey() && column.getType() == VarcharType.VARCHAR && this.pkey == null is complex.,45
+kuenishi_presto-riak,com.basho.riak.presto.models,PRTable,getColumnsMetadata,Long Statement,The length of the statement "builder.add(new ColumnMetadata(handle.getColumn().getName()`handle.getColumn().getType()`handle.getColumn().getPkey()`comment`hidden));" is 135.,125
+kuenishi_presto-riak,com.basho.riak.presto.models,PRTable,getColumnsMetadata,Magic Number,The method contains a magic number: 2,125
+kuenishi_presto-riak,com.basho.riak.presto.models,PRTable,getColumnHandles,Long Statement,The length of the statement "columnHandles.put(RiakColumnHandle.PKEY_COLUMN_NAME`new RiakColumnHandle(connectorId`new RiakColumn(RiakColumnHandle.PKEY_COLUMN_NAME`VarcharType.VARCHAR`pkey`true`true)`0));" is 174.,150
+kuenishi_presto-riak,com.basho.riak.presto.models,PRTable,getColumnHandles,Long Statement,The length of the statement "columnHandles.put(RiakColumnHandle.VTAG_COLUMN_NAME`new RiakColumnHandle(connectorId`new RiakColumn(RiakColumnHandle.VTAG_COLUMN_NAME`VarcharType.VARCHAR`"vtag"`false`false)`1));" is 178.,150
+kuenishi_presto-riak,com.basho.riak.presto.models,PRTable,getColumnHandles,Magic Number,The method contains a magic number: 2,150
+kuenishi_presto-riak,com.basho.riak.presto.models,RiakColumnHandle,equals,Long Statement,The length of the statement "return Objects.equal(this.connectorId`other.connectorId) && this.column.equals(other.column) && this.ordinalPosition == other.ordinalPosition;" is 142.,65
+kuenishi_presto-riak,com.basho.riak.presto.models,RiakColumnHandle,toString,Long Statement,The length of the statement "return MoreObjects.toStringHelper(this).add("connectorId"`connectorId).add("column"`column).add("ordinalPosition"`ordinalPosition).toString();" is 142.,80
+kuenishi_presto-riak,com.basho.riak.presto.models,RiakColumnHandle,matchAndBothHasIndex,Long Statement,The length of the statement "return getColumn().getName().equals(rhs.getColumn().getName()) && getColumn().getType().equals(rhs.getColumn().getType()) && getColumn().getIndex()&& rhs.getColumn().getIndex();" is 177.,89
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Complex Method,Cyclomatic complexity of the method is 15,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 4,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 2,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 3,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 4,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 4,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 4,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 5,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 4,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 2,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,main,Magic Number,The method contains a magic number: 2,79
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,dummy_main,Long Statement,The length of the statement "RiakNode node=new RiakNode.Builder().withRemoteAddress("127.0.0.1").withRemotePort(8087).withMaxConnections(10).withConnectionTimeout(CONNECTION_TIMEOUT_MIL).build();" is 166.,169
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,dummy_main,Long Statement,The length of the statement "StoreOperation op=new StoreOperation.Builder(new Location(NAMESPACE`key)).withContent(obj).withReturnBody(false).build();" is 121.,169
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,dummy_main,Magic Number,The method contains a magic number: 8087,169
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,dummy_main,Magic Number,The method contains a magic number: 10,169
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,dummy_main,Magic Number,The method contains a magic number: 1000,169
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,dummy_main,Magic Number,The method contains a magic number: 1000.0,169
+kuenishi_presto-riak,com.basho.riak.presto.cli,CLI,waitForQueueSizeLessThan,Magic Number,The method contains a magic number: 10L,218

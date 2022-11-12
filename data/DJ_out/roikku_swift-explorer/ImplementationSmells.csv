@@ -1,0 +1,548 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+roikku_swift-explorer,org.swiftexplorer.swift.operations,ProgressInformation,report,Long Statement,The length of the statement "callback.onProgress(totalProgress`totalMessage`(isSingleTask) ? (totalProgress) : (currentProgress)`(isSingleTask) ? (totalMessage) : (currentMessage));" is 152.,37
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManager,uploadObjectAsSegments,Long Parameter List,The method has 6 parameters. ,11
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManager,uploadObjectAsSegments,Long Parameter List,The method has 5 parameters. ,12
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,login,Long Statement,The length of the statement "account=new AccountFactory(accConf).setAuthUrl("").setHttpClient(new HttpClientFactoryImpl().getHttpClient(accConf`proxySettings)).createAccount();" is 147.,143
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,login,Long Statement,The length of the statement "account=new AccountFactory(accConf).setAuthUrl("").setPreferredRegion(preferredRegion).setHttpClient(new HttpClientFactoryImpl().getHttpClient(accConf`proxySettings)).createAccount();" is 183.,143
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,login,Long Parameter List,The method has 6 parameters. ,177
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,login,Long Parameter List,The method has 7 parameters. ,187
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,login,Long Statement,The length of the statement "account=new AccountFactory(accConf).setPreferredRegion(preferredRegion).setUsername(user).setPassword(pass).setTenantName(tenant).setAuthUrl(url).createAccount();" is 162.,187
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,createContainer,Long Statement,The length of the statement "if (spec.getName().endsWith(SwiftUtils.segmentsContainerPostfix)) throw new AssertionError("A container name cannot end with \"" + SwiftUtils.segmentsContainerPostfix + "\"");" is 175.,223
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,deleteStoredObjects,Complex Method,Cyclomatic complexity of the method is 8,347
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,deleteStoredObjects,Long Parameter List,The method has 5 parameters. ,347
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,downloadStoredObject,Complex Method,Cyclomatic complexity of the method is 9,419
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,downloadStoredObject,Long Parameter List,The method has 5 parameters. ,419
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,downloadStoredObject,Complex Method,Cyclomatic complexity of the method is 8,496
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,downloadStoredObject,Long Parameter List,The method has 5 parameters. ,496
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,isRetryable,Long Statement,The length of the statement "return ((e.getHttpStatusCode() == 0 && e.getError() == null) || e.getError() == CommandExceptionError.UNKNOWN || e.getError() == CommandExceptionError.UNAUTHORIZED);" is 165.,552
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,downloadObject,Long Statement,The length of the statement "InputStream in=FileUtils.getInputStreamWithProgressFilter(progInfo`storedObject.getContentLength()`storedObject.downloadObjectAsInputStream());" is 143.,573
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,addedObjectToContainer,Long Statement,The length of the statement "callback.onAppendStoredObjects(container`page`newObjects.subList(page * MAX_PAGE_SIZE`Math.min(newObjects.size()`(page + 1) * MAX_PAGE_SIZE)));" is 143.,786
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,loadContainerDirectory,Complex Method,Cyclomatic complexity of the method is 9,896
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,shouldBeIgnored,Complex Method,Cyclomatic complexity of the method is 11,993
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,shouldBeIgnored,Long Statement,The length of the statement "logger.info("A different version of the file '{}' already exists in the cloud. It {}."`path.toString()`(overwrite) ? ("will be overwritten") : ("has been ignored"));" is 165.,993
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,totalProgress,Long Parameter List,The method has 5 parameters. ,1056
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,totalProgress,Long Statement,The length of the statement "progInfo.setTotalMessage(String.format("%d / %d files processed (current file size: %s)"`currentUplodedFilesCount`totalFiles`FileUtils.humanReadableByteCount(attr.size()`true)));" is 178.,1056
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,totalProgress,Long Parameter List,The method has 5 parameters. ,1071
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,totalProgress,Long Statement,The length of the statement "progInfo.setTotalMessage(String.format("%d / %d objects processed (current object size: %s)"`currentUplodedFilesCount`totalFiles`FileUtils.humanReadableByteCount(so.getContentLength()`true)));" is 192.,1071
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDifferences,Long Parameter List,The method has 6 parameters. ,1085
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDifferences,Long Statement,The length of the statement "if (!remote.getBareName().equals(local.getName())) throw new IllegalArgumentException("The local and the remote items must have the same name");" is 144.,1085
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findFilesDifferences,Complex Conditional,The conditional expression !li.getName().equals(ri.getName()) && ri.exists() && li.exists() is complex.,1111
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findFilesDifferences,Long Parameter List,The method has 6 parameters. ,1111
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findFilesDifferences,Long Statement,The length of the statement "if (SwiftUtils.isDirectory(remote) || Files.isDirectory(Paths.get(local.getPath()))) throw new IllegalArgumentException();" is 122.,1111
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findFilesDifferences,Long Statement,The length of the statement "LocalItem li=new LocalItem(Paths.get(local.getPath())`Paths.get(local.getPath()).getParent()`getActualSegmentSize(remote));" is 123.,1111
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDirectoriesDifferences,Complex Conditional,The conditional expression ri.equals(li) || (!ri.exists() && !li.exists()) is complex.,1145
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDirectoriesDifferences,Complex Method,Cyclomatic complexity of the method is 10,1145
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDirectoriesDifferences,Long Parameter List,The method has 6 parameters. ,1145
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDirectoriesDifferences,Long Statement,The length of the statement "if (!SwiftUtils.isDirectory(remote) || !Files.isDirectory(Paths.get(local.getPath()))) throw new IllegalArgumentException();" is 124.,1145
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDirectoriesDifferences,Long Statement,The length of the statement "Set<StoredObject> allObjectsSet=new HashSet<>(getAllContainedStoredObject(container`new Directory(remote.getName() + SwiftUtils.separator`SwiftUtils.separator.charAt(0))));" is 172.,1145
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,findDirectoriesDifferences,Magic Number,The method contains a magic number: 0.5,1145
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,getObjectRelativelyInDirectory,Long Statement,The length of the statement "if (objectPath.length() > 1 && objectPath.endsWith(separator)) objectPath=objectPath.substring(0`objectPath.length() - 1);" is 122.,1249
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,uploadDirectory,Long Parameter List,The method has 6 parameters. ,1295
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,uploadDirectory,Long Statement,The length of the statement "logger.info("Uploaded directory '{}'` in directory '{}'` in container '{}'. Number of files: {}"`directory.getPath()`parentDir`container.getPath()`String.valueOf(filesQueue.size()));" is 182.,1295
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,uploadFiles,Long Parameter List,The method has 6 parameters. ,1362
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,uploadFiles,Long Parameter List,The method has 5 parameters. ,1418
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,uploadFile,Long Parameter List,The method has 5 parameters. ,1471
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsImpl,createDirectory,Long Statement,The length of the statement "if (!SwiftUtils.directoryContentType.equalsIgnoreCase(obj.getContentType())) callback.onError(new CommandException("A non-directory file with the same name already exists"));" is 174.,1485
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,login,Long Parameter List,The method has 6 parameters. ,181
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,login,Long Parameter List,The method has 7 parameters. ,210
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,downloadStoredObject,Long Parameter List,The method has 5 parameters. ,286
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,downloadStoredObject,Long Parameter List,The method has 5 parameters. ,298
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,uploadDirectory,Long Parameter List,The method has 6 parameters. ,356
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,uploadFiles,Long Parameter List,The method has 6 parameters. ,368
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,uploadFiles,Long Parameter List,The method has 5 parameters. ,382
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperations,findDifferences,Long Parameter List,The method has 6 parameters. ,424
+roikku_swift-explorer,org.swiftexplorer.swift.operations,DifferencesFinder,getObject,Complex Method,Cyclomatic complexity of the method is 9,230
+roikku_swift-explorer,org.swiftexplorer.swift.operations,DifferencesFinder,getFile,Complex Method,Cyclomatic complexity of the method is 8,264
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadObjectAsSegments,Long Parameter List,The method has 6 parameters. ,85
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadObjectAsSegments,Long Statement,The length of the statement "UploadInstructions manifest=new UploadInstructions(new byte[]{}).setObjectManifest(new ObjectManifest(sb.toString())).setContentType(uploadInstructions.getContentType());" is 170.,85
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadObjectAsSegments,Long Parameter List,The method has 5 parameters. ,105
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,getSegmentsListFromManifest,Complex Method,Cyclomatic complexity of the method is 8,194
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadSegmentedObjects,Complex Method,Cyclomatic complexity of the method is 9,293
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadSegmentedObjects,Long Parameter List,The method has 7 parameters. ,293
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadSegmentedObjects,Long Statement,The length of the statement "if (size < uploadInstructions.getSegmentationSize()) throw new AssertionError(String.format("The file size (%d) must be greater than the segmentation size (%d)"`size`uploadInstructions.getSegmentationSize()));" is 209.,293
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadSegmentedObjects,Long Statement,The length of the statement "InputStream segmentStream=FileUtils.getInputStreamWithProgressFilter(progInfo`uploadInstructions.getSegmentationSize()`plan.getNextSegment());" is 142.,293
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadSegmentedObjects,Long Statement,The length of the statement "if (ignore) logger.info("{} already exists and has not changed (it won't be uploaded again)"`String.format("Segment %d / %d"`planSeg`numSegments));" is 147.,293
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadSegmentedObjects,Long Statement,The length of the statement "segmentStream=FileUtils.getInputStreamWithProgressFilter(progInfo`(planSeg + 1 != numSegments) ? (uploadInstructions.getSegmentationSize()) : (size % uploadInstructions.getSegmentationSize())`plan.getNextSegment());" is 215.,293
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,uploadSegmentedObjects,Long Parameter List,The method has 6 parameters. ,352
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,getNumberOfSegments,Long Statement,The length of the statement "return totalSize / uploadInstructions.getSegmentationSize() + (long)((totalSize % uploadInstructions.getSegmentationSize() == 0) ? (0) : (1));" is 142.,384
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,getMd5PlanMap,Long Statement,The length of the statement "SegmentationPlan plan=(file == null) ? (uploadInstructions.getSegmentationPlan()) : (new FastSegmentationPlanFile(file`uploadInstructions.getSegmentationSize()));" is 162.,407
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,getMd5PlanMap,Long Statement,The length of the statement "InputStream segmentStream=(progInfo == null) ? (plan.getNextSegment()) : (FileUtils.getInputStreamWithProgressFilter(progInfo`uploadInstructions.getSegmentationSize()`plan.getNextSegment()));" is 191.,407
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerImpl,getMd5PlanMap,Long Statement,The length of the statement "segmentStream=(progInfo == null) ? (plan.getNextSegment()) : (FileUtils.getInputStreamWithProgressFilter(progInfo`uploadInstructions.getSegmentationSize()`plan.getNextSegment()));" is 179.,407
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsAsyncTest,shouldSignalStartAndDone,Magic Number,The method contains a magic number: 500L,72
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsAsyncTest,shouldSignalCommandException,Magic Number,The method contains a magic number: 1000L,80
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldAddAndListContainer,Long Statement,The length of the statement "@SuppressWarnings({"unchecked"`"rawtypes"}) ArgumentCaptor<List<Container>> argument=ArgumentCaptor.forClass((Class)List.class);" is 128.,107
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotCreateContainerTwice,Magic Number,The method contains a magic number: 2,148
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldCreateStoredObject,Long Statement,The length of the statement "Mockito.verify(callback`Mockito.atLeastOnce()).onAppendStoredObjects(Mockito.any(Container.class)`Mockito.eq(0)`Mockito.anyListOf(StoredObject.class));" is 151.,164
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDeleteStoredObject,Long Statement,The length of the statement "Mockito.verify(callback`Mockito.atLeastOnce()).onStoredObjectDeleted(Mockito.any(Container.class)`Mockito.any(StoredObject.class));" is 131.,188
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldUploadStoredObject,Long Statement,The length of the statement "Mockito.verify(callback`Mockito.atLeastOnce()).onAppendStoredObjects(Mockito.any(Container.class)`Mockito.eq(0)`Mockito.anyListOf(StoredObject.class));" is 151.,198
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldUploadStoredObject,Magic Number,The method contains a magic number: 4096,198
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldUploadStoredObjectCollection,Long Statement,The length of the statement "Mockito.verify(callback`Mockito.atLeastOnce()).onAppendStoredObjects(Mockito.any(Container.class)`Mockito.eq(0)`Mockito.anyListOf(StoredObject.class));" is 151.,223
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldUploadStoredObjectCollection,Magic Number,The method contains a magic number: 8192,223
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldUploadStoredObjectCollection,Magic Number,The method contains a magic number: 4096,223
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldUploadStoredObjectCollection,Magic Number,The method contains a magic number: 4096,223
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotUploadStoredObjectCollection,Magic Number,The method contains a magic number: 8192,255
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotUploadStoredObjectCollection,Magic Number,The method contains a magic number: 8192,255
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotUploadStoredObjectCollection,Magic Number,The method contains a magic number: 4096,255
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotUploadStoredObjectCollection,Magic Number,The method contains a magic number: 4096,255
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopUploadingStoredObjectCollection,Magic Number,The method contains a magic number: 4096,292
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopUploadingStoredObjectCollection,Magic Number,The method contains a magic number: 4096,292
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDownloadStoredObject,Magic Number,The method contains a magic number: 8192,324
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDownloadStoredObjectCollection,Magic Number,The method contains a magic number: 8192,348
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDownloadStoredObjectCollection,Magic Number,The method contains a magic number: 8192,348
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopDownloadingStoredObjectCollection,Magic Number,The method contains a magic number: 8192,380
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopDownloadingStoredObjectCollection,Magic Number,The method contains a magic number: 8192,380
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotDownloadStoredObjectCollection,Magic Number,The method contains a magic number: 8192,415
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotDownloadStoredObjectCollection,Magic Number,The method contains a magic number: 8192,415
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotDownloadStoredObjectCollection,Magic Number,The method contains a magic number: 128,415
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldNotDownloadStoredObjectCollection,Magic Number,The method contains a magic number: 128,415
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldEmptyContainer,Magic Number,The method contains a magic number: 8192,451
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldGetMetadata,Magic Number,The method contains a magic number: 8192,462
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldPurgeContainer,Magic Number,The method contains a magic number: 8192,476
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldCreateSegments,Magic Number,The method contains a magic number: 800,524
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldCreateSegments,Magic Number,The method contains a magic number: 8192,524
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDownloadSegmentedObject,Magic Number,The method contains a magic number: 800,567
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDownloadSegmentedObject,Magic Number,The method contains a magic number: 8192,567
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDeleteSegmentedObject,Magic Number,The method contains a magic number: 800,616
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldDeleteSegmentedObject,Magic Number,The method contains a magic number: 8192,616
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshDirectoriesOrStoredObjectsWithoutParent,Long Statement,The length of the statement "@SuppressWarnings({"unchecked"`"rawtypes"}) ArgumentCaptor<Collection<StoredObject>> argument=ArgumentCaptor.forClass((Class)Collection.class);" is 143.,667
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshDirectoriesOrStoredObjectsWithoutParent,Long Statement,The length of the statement "Mockito.verify(callback`Mockito.atLeastOnce()).onAppendStoredObjects(Mockito.any(Container.class)`Mockito.anyInt()`argument.capture());" is 135.,667
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshDirectoriesOrStoredObjectsWithoutParent,Magic Number,The method contains a magic number: 10,667
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshEmptyDirectoriesOrStoredObjectsWithParent,Long Statement,The length of the statement "Mockito.verify(callback`Mockito.times(1)).onAppendStoredObjects(Mockito.any(Container.class)`Mockito.anyInt()`Mockito.anyCollectionOf(StoredObject.class));" is 155.,701
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshDirectoriesOrStoredObjectsWithParent,Long Statement,The length of the statement "Files.move(Paths.get(subfolder.getPath())`Files.createDirectories(Paths.get(folder.getPath() + File.separator + subDirectoryName))`StandardCopyOption.REPLACE_EXISTING);" is 168.,730
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshDirectoriesOrStoredObjectsWithParent,Long Statement,The length of the statement "@SuppressWarnings({"unchecked"`"rawtypes"}) ArgumentCaptor<Collection<StoredObject>> argument=ArgumentCaptor.forClass((Class)Collection.class);" is 143.,730
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshDirectoriesOrStoredObjectsWithParent,Long Statement,The length of the statement "Mockito.verify(callback`Mockito.atLeastOnce()).onAppendStoredObjects(Mockito.any(Container.class)`Mockito.anyInt()`argument.capture());" is 135.,730
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldRefreshDirectoriesOrStoredObjectsWithParent,Magic Number,The method contains a magic number: 10,730
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,uploadAndOverwrite,Long Statement,The length of the statement "ops.uploadFiles(container`null`new File[]{TestUtils.getTestFile(tmpFolder`objName`4096)}`overwrite`stopRequester`callback);" is 123.,768
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,uploadAndOverwrite,Magic Number,The method contains a magic number: 4096,768
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,uploadAndOverwrite,Magic Number,The method contains a magic number: 4096,768
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopUploadingFiles,Magic Number,The method contains a magic number: 4096,820
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopUploadingDirectory,Magic Number,The method contains a magic number: 10,858
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopDownloadingStoredObject,Magic Number,The method contains a magic number: 100,880
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopDownloadingDirectory,Magic Number,The method contains a magic number: 100,903
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopPurgingContainer,Magic Number,The method contains a magic number: 100,956
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopEmptyingContainer,Magic Number,The method contains a magic number: 100,970
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopFindingDifferences,Long Statement,The length of the statement "@SuppressWarnings("unchecked") ResultCallback<Collection<Pair<? extends ComparisonItem`? extends ComparisonItem>>> resultCallback=(ResultCallback<Collection<Pair<? extends ComparisonItem`? extends ComparisonItem>>>)Mockito.mock(ResultCallback.class);" is 250.,984
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldStopFindingDifferences,Magic Number,The method contains a magic number: 10,984
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldFindFilesDifferences,Magic Number,The method contains a magic number: 100,1024
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldFindFilesDifferences,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2c9a95bb,1024
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldFindDirectoriesDifferences,Magic Number,The method contains a magic number: 10,1119
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldFindDirectoriesDifferences,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@65cec7d9,1119
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldFailToCompareFiles,Long Statement,The length of the statement "ops.findDifferences(container`remote`tmpFolder.newFile("locale")`Mockito.mock(ResultCallback.class)`stopRequester`callback);" is 124.,1211
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldFailToCompareDirectories,Long Statement,The length of the statement "ops.findDifferences(container`remote`tmpFolder.newFile("locale")`Mockito.mock(ResultCallback.class)`stopRequester`callback);" is 124.,1222
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldGetAllContainedStoredObjectInContainer,Magic Number,The method contains a magic number: 4,1234
+roikku_swift-explorer,org.swiftexplorer.swift.operations,SwiftOperationsTest,shouldGetAllContainedStoredObjectInParent,Magic Number,The method contains a magic number: 3,1262
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerTest,shouldListSegments,Magic Number,The method contains a magic number: 2,136
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerTest,shouldFindOutWhetherItIsSegmented,Magic Number,The method contains a magic number: 2,165
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerTest,shouldReuseExistingSegments,Long Statement,The length of the statement "for ( StoredObject so : largeObjectManager.getSegmentsList(container.getObject(objName))) setNewDates.add(so.getLastModifiedAsDate());" is 134.,191
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerTest,shouldNotReuseExistingSegments,Long Statement,The length of the statement "for ( StoredObject so : largeObjectManager.getSegmentsList(container.getObject(objName))) setNewDates.add(so.getLastModifiedAsDate());" is 134.,220
+roikku_swift-explorer,org.swiftexplorer.swift.operations,LargeObjectManagerTest,shouldCleanUpExtraSegments,Magic Number,The method contains a magic number: 2,252
+roikku_swift-explorer,org.swiftexplorer.swift.operations,DifferencesFinderTest,shouldReturnFileObject,Magic Number,The method contains a magic number: 2,114
+roikku_swift-explorer,org.swiftexplorer.swift.operations,DifferencesFinderTest,shouldReturnObjectFile,Magic Number,The method contains a magic number: 2,160
+roikku_swift-explorer,org.swiftexplorer.swift.operations,DifferencesFinderTest,shouldBeDirectoryFile,Long Statement,The length of the statement "DifferencesFinder.LocalItem li=new DifferencesFinder.LocalItem(Paths.get(tmpFolder.newFolder().getPath())`null`Long.MAX_VALUE);" is 127.,206
+roikku_swift-explorer,org.swiftexplorer.swift.operations,DifferencesFinderTest,shouldNotBeDirectoryFile,Long Statement,The length of the statement "DifferencesFinder.LocalItem li=new DifferencesFinder.LocalItem(Paths.get(tmpFolder.newFile().getPath())`null`Long.MAX_VALUE);" is 125.,214
+roikku_swift-explorer,org.swiftexplorer.swift.instructions,FastSegmentationPlanFile,createSegment,Long Statement,The length of the statement "InputStream res=new BoundedInputStream(Channels.newInputStream(this.randomAccessFile.getChannel().position(currentSegment * segmentationSize))`segmentationSize);" is 161.,64
+roikku_swift-explorer,org.swiftexplorer.swift.instructions,FastSegmentationPlanFileTest,shouldFastSegmentationPlanMD5BeCorrect,Magic Number,The method contains a magic number: 64,45
+roikku_swift-explorer,org.swiftexplorer.swift.instructions,FastSegmentationPlanFileTest,shouldFastSegmentationPlanMD5BeCorrect,Magic Number,The method contains a magic number: 1024,45
+roikku_swift-explorer,org.swiftexplorer.swift.instructions,FastSegmentationPlanFileTest,shouldFastSegmentationPlanMD5BeCorrect,Magic Number,The method contains a magic number: 2,45
+roikku_swift-explorer,org.swiftexplorer.swift.instructions,FastSegmentationPlanFileTest,shouldFastSegmentationPlanMD5BeCorrect,Magic Number,The method contains a magic number: 1000,45
+roikku_swift-explorer,org.swiftexplorer.swift.instructions,FastSegmentationPlanFileTest,shouldFastSegmentationPlanMD5BeCorrect,Magic Number,The method contains a magic number: 2,45
+roikku_swift-explorer,org.swiftexplorer.swift.instructions,FastSegmentationPlanFileTest,shouldFastSegmentationPlanMD5BeCorrect,Magic Number,The method contains a magic number: 1000,45
+roikku_swift-explorer,org.swiftexplorer.swift.util,HubicSwift,getSwiftAccess,Long Statement,The length of the statement "HubicOAuth20ServiceImpl service=(HubicOAuth20ServiceImpl)new ServiceBuilder().provider(HubicApi.class).apiKey(apiKey).apiSecret(apiSecret).scope(scope).callback(HubicApi.CALLBACK_URL).build();" is 192.,45
+roikku_swift-explorer,org.swiftexplorer.swift.util,HubicSwift,refreshAccessToken,Long Statement,The length of the statement "HubicOAuth20ServiceImpl service=(HubicOAuth20ServiceImpl)new ServiceBuilder().provider(HubicApi.class).apiKey(apiKey).apiSecret(apiSecret).scope(scope).callback(HubicApi.CALLBACK_URL).build();" is 192.,67
+roikku_swift-explorer,org.swiftexplorer.swift.client.impl,HttpClientFactoryImpl,setProxySettings,Long Statement,The length of the statement "credProvider.setCredentials(new AuthScope(proxySettings.getHost()`proxySettings.getPort())`new UsernamePasswordCredentials(proxySettings.getUsername()`proxySettings.getPassword()));" is 181.,96
+roikku_swift-explorer,org.swiftexplorer.swift.client.impl,HttpClientFactoryImpl,initConnectionManager,Magic Number,The method contains a magic number: 50,121
+roikku_swift-explorer,org.swiftexplorer.swift.client.impl,HttpClientFactoryImpl,initConnectionManager,Magic Number,The method contains a magic number: 25,121
+roikku_swift-explorer,org.swiftexplorer.swift.client.impl,HttpClientFactoryImpl,disableSslValidation,Long Statement,The length of the statement "connectionManager.getSchemeRegistry().register(new Scheme("https"`443`new SSLSocketFactory(createGullibleSslContext()`SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER)));" is 166.,129
+roikku_swift-explorer,org.swiftexplorer.swift.client.impl,HttpClientFactoryImpl,disableSslValidation,Magic Number,The method contains a magic number: 443,129
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 320,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 24,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 256,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 24,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 18,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 18,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 64,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 18,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 4,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 4,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 4,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 8,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 8,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,StatusPanel,Magic Number,The method contains a magic number: 4,74
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,onSelectContainer,Long Statement,The length of the statement "leftLabel.setText((c.isPublic() ? "public` " : "private`") + " " + c.getCount()+ " objects` "+ byteSize(c.getBytesUsed()`0)+ "");" is 129.,120
+roikku_swift-explorer,org.swiftexplorer.gui,StatusPanel,onSelectStoredObjects,Long Statement,The length of the statement "rightLabel.setText(byteSize(obj.getContentLength()`0) + "` " + format(obj.getLastModifiedAsDate())+ "` "+ obj.getContentType());" is 128.,156
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,ProgressPanel,Magic Number,The method contains a magic number: 5,93
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,ProgressPanel,Magic Number,The method contains a magic number: 2,93
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,ProgressPanel,Magic Number,The method contains a magic number: 10,93
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,ProgressPanel,Magic Number,The method contains a magic number: 3,93
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,ProgressPanel,Magic Number,The method contains a magic number: 4,93
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,done,Magic Number,The method contains a magic number: 100,153
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,setProgress,Long Statement,The length of the statement "setProgressValues(progressBarCurrent`progressLabelCurrent`currentProgress`processTextToFit(progressLabelCurrent`currentMsg));" is 125.,159
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,processTextToFit,Magic Number,The method contains a magic number: 2,168
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,processTextToFit,Magic Number,The method contains a magic number: 2,168
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,setProgressValues,Magic Number,The method contains a magic number: 100,197
+roikku_swift-explorer,org.swiftexplorer.gui,ProgressPanel,setProgressValues,Magic Number,The method contains a magic number: 100,197
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Magic Number,The method contains a magic number: 2,289
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Magic Number,The method contains a magic number: 3,289
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Long Statement,The length of the statement "ops.login(AccountConfigFactory.getKeystoneAccountConfig()`found.authUrl`found.tenant`found.username`String.valueOf(found.password)`callback);" is 141.,305
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Complex Method,Cyclomatic complexity of the method is 11,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Long Statement,The length of the statement "if (config != null && config.getSwiftSettings() != null) hideSegmentsContainers=config.getSwiftSettings().hideSegmentsContainers();" is 131.,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Long Statement,The length of the statement "@Override public Component getTreeCellRendererComponent( JTree tree` Object value` boolean selected` boolean expanded` boolean leaf` int row` boolean hasFocus){" is 160.,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Long Statement,The length of the statement "if (((StoredObjectsTreeModel.TreeNode)value).isRoot()) lbl.setIcon(getContainerIcon(((StoredObjectsTreeModel.TreeNode)value).getContainer()));" is 142.,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Long Statement,The length of the statement "storedObjectsList.addMouseListener(new PopupTrigger<MainPanel>(createStoredObjectPopupMenu()`this`"enableDisableStoredObjectMenu"));" is 132.,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Long Statement,The length of the statement "containersList.addMouseListener(new PopupTrigger<MainPanel>(createContainerPopupMenu()`this`"enableDisableContainerMenu"));" is 123.,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Long Statement,The length of the statement "catch ( ClassNotFoundException|NoSuchMethodException|SecurityException|InstantiationException|IllegalAccessException|IllegalArgumentException|InvocationTargetException ex) {" is 173.,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Magic Number,The method contains a magic number: 420,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Magic Number,The method contains a magic number: 320,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Magic Number,The method contains a magic number: 450,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,MainPanel,Magic Number,The method contains a magic number: 272,327
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,getTreeCellRendererComponent,Long Parameter List,The method has 7 parameters. ,397
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,getTreeCellRendererComponent,Long Statement,The length of the statement "if (((StoredObjectsTreeModel.TreeNode)value).isRoot()) lbl.setIcon(getContainerIcon(((StoredObjectsTreeModel.TreeNode)value).getContainer()));" is 142.,397
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,expandNode,Complex Method,Cyclomatic complexity of the method is 9,490
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createToolBar,Long Identifier,The length of the field storedObjectDownloadFilesAction is 31.,551
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createToolBar,Long Identifier,The length of the field storedObjectCreateDirectoryAction is 33.,551
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createToolBar,Long Identifier,The length of the field storedObjectUploadDirectoryAction is 33.,551
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createToolBar,Long Identifier,The length of the field storedObjectDownloadDirectoryAction is 35.,551
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Identifier,The length of the field storedObjectDownloadFilesAction is 31.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Identifier,The length of the field storedObjectUploadDirectoryAction is 33.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Identifier,The length of the field storedObjectCreateDirectoryAction is 33.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Identifier,The length of the field storedObjectDownloadDirectoryAction is 35.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Identifier,The length of the field storedObjectDeleteDirectoryAction is 33.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Identifier,The length of the field storedObjectCompareFilesAction is 30.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Identifier,The length of the field storedObjectCompareDirectoriesAction is 36.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "accountHubicLoginAction=new ReflectionAction<MainPanel>(getLocalizedString("hubiC_Login")`getIcon("server_connect.png")`this`"onHubicLogin");" is 141.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "accountGenericLoginAction=new ReflectionAction<MainPanel>(getLocalizedString("Generic_Login")`getIcon("server_connect.png")`this`"onLogin");" is 140.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "accountLogoutAction=new ReflectionAction<MainPanel>(getLocalizedString("Logout")`getIcon("disconnect.png")`this`"onLogout");" is 124.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "accountSimulatorLoginAction=new ReflectionAction<MainPanel>(getLocalizedString("Simulator_Login")`getIcon("server_connect.png")`this`"onSimulatorLogin");" is 153.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "containerRefreshAction=new ReflectionAction<MainPanel>(getLocalizedString("Refresh")`getIcon("arrow_refresh.png")`this`"onRefreshContainers");" is 142.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "containerCreateAction=new ReflectionAction<MainPanel>(getLocalizedString("Create")`getIcon("folder_add.png")`this`"onCreateContainer");" is 135.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "containerDeleteAction=new ReflectionAction<MainPanel>(getLocalizedString("Delete")`getIcon("folder_delete.png")`this`"onDeleteContainer");" is 138.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "containerPurgeAction=new ReflectionAction<MainPanel>(getLocalizedString("Purge")`getIcon("delete.png")`this`"onPurgeContainer");" is 128.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "containerEmptyAction=new ReflectionAction<MainPanel>(getLocalizedString("Empty")`getIcon("bin_empty.png")`this`"onEmptyContainer");" is 131.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "containerViewMetaData=new ReflectionAction<MainPanel>(getLocalizedString("View_Metadata")`getIcon("page_gear.png")`this`"onViewMetaDataContainer");" is 147.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "containerGetInfoAction=new ReflectionAction<MainPanel>(getLocalizedString("Get_Info")`getIcon("information.png")`this`"onGetInfoContainer");" is 140.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectOpenAction=new ReflectionAction<MainPanel>(getLocalizedString("Open_in_Browser")`getIcon("application_view_icons.png")`this`"onOpenInBrowserStoredObject");" is 167.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectPreviewAction=new ReflectionAction<MainPanel>(getLocalizedString("Preview")`getIcon("images.png")`this`"onPreviewStoredObject");" is 140.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectUploadFilesAction=new ReflectionAction<MainPanel>(getLocalizedString("Upload_Files")`getIcon("file_upload.png")`this`"onCreateStoredObject");" is 153.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectDownloadFilesAction=new ReflectionAction<MainPanel>(getLocalizedString("Download_Files")`getIcon("file_download.png")`this`"onDownloadStoredObject");" is 161.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectDeleteFilesAction=new ReflectionAction<MainPanel>(getLocalizedString("Delete_Files")`getIcon("page_delete.png")`this`"onDeleteStoredObject");" is 153.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectViewMetaData=new ReflectionAction<MainPanel>(getLocalizedString("View_Metadata")`getIcon("page_gear.png")`this`"onViewMetaDataStoredObject");" is 153.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectGetInfoAction=new ReflectionAction<MainPanel>(getLocalizedString("Get_Info")`getIcon("information.png")`this`"onGetInfoStoredObject");" is 146.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectUploadDirectoryAction=new ReflectionAction<MainPanel>(getLocalizedString("Upload_Directory")`getIcon("folder_upload.png")`this`"onUploadDirectory");" is 160.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectCreateDirectoryAction=new ReflectionAction<MainPanel>(getLocalizedString("Create_Directory")`getIcon("folder_add.png")`this`"onCreateDirectory");" is 157.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectDownloadDirectoryAction=new ReflectionAction<MainPanel>(getLocalizedString("Download_Directory")`getIcon("folder_download.png")`this`"onDownloadStoredObjectDirectory");" is 180.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectDeleteDirectoryAction=new ReflectionAction<MainPanel>(getLocalizedString("Delete_Directory")`getIcon("folder_delete.png")`this`"onDeleteStoredObjectDirectory");" is 172.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectCompareFilesAction=new ReflectionAction<MainPanel>(getLocalizedString("Compare_Files")`getIcon("compare_files.png")`this`"onCompareFiles");" is 151.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "storedObjectCompareDirectoriesAction=new ReflectionAction<MainPanel>(getLocalizedString("Compare_Directories")`getIcon("compare_directories.png")`this`"onCompareDirectories");" is 175.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "settingProxyAction=new ReflectionAction<MainPanel>(getLocalizedString("Proxy")`getIcon("server_link.png")`this`"onProxy");" is 122.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "settingPreferencesAction=new ReflectionAction<MainPanel>(getLocalizedString("Preferences")`getIcon("wrench.png")`this`"onPreferences");" is 135.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,initMenuActions,Long Statement,The length of the statement "settingSwiftAction=new ReflectionAction<MainPanel>(getLocalizedString("Swift_Parameters")`getIcon("mixer.png")`this`"onSwiftParameters");" is 137.,581
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createLists,Long Statement,The length of the statement "@Override public Component getListCellRendererComponent( JList<?> list` Object value` int index` boolean isSelected` boolean cellHasFocus){" is 139.,640
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createLists,Long Statement,The length of the statement "@Override public Component getListCellRendererComponent( JList<?> list` Object value` int index` boolean isSelected` boolean cellHasFocus){" is 139.,640
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,getListCellRendererComponent,Long Parameter List,The method has 5 parameters. ,646
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,getListCellRendererComponent,Long Parameter List,The method has 5 parameters. ,674
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,buildTree,Complex Conditional,The conditional expression restore && treeExpansionState != null && !treeExpansionState.isEmpty() is complex.,759
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,buildTree,Long Statement,The length of the statement "if (restore && treeExpansionState != null && !treeExpansionState.isEmpty()) StoredObjectsTreeModel.TreeUtils.setTreeExpansionState(tree`treeExpansionState);" is 156.,759
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableContainerMenu,Long Statement,The length of the statement "containerViewMetaData.setEnabled(containerSelected && selected.isInfoRetrieved() && !selected.getMetadata().isEmpty()&& !isBusy);" is 129.,886
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Identifier,The length of the field storedObjectDownloadFilesAction is 31.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Identifier,The length of the field storedObjectUploadDirectoryAction is 33.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Identifier,The length of the field storedObjectCreateDirectoryAction is 33.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Identifier,The length of the field storedObjectDownloadDirectoryAction is 35.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Identifier,The length of the field storedObjectDeleteDirectoryAction is 33.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Identifier,The length of the field storedObjectCompareFilesAction is 30.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Identifier,The length of the field storedObjectCompareDirectoriesAction is 36.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Statement,The length of the statement "storedObjectViewMetaData.setEnabled(containerSelected && singleObjectSelected && selected.isInfoRetrieved()&& !selected.getMetadata().isEmpty()&& !isBusy);" is 155.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Statement,The length of the statement "storedObjectUploadDirectoryAction.setEnabled(containerSelected && (singleObjectSelected || !objectsSelected) && !isBusy);" is 121.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,enableDisableStoredObjectMenu,Long Statement,The length of the statement "storedObjectCreateDirectoryAction.setEnabled(containerSelected && (singleObjectSelected || !objectsSelected) && !isBusy);" is 121.,902
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onHubicLogin,Long Statement,The length of the statement "JOptionPane.showMessageDialog(null`getLocalizedString("Login_Failed") + "\n"`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 132.,954
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onHubicLogin,Long Statement,The length of the statement "JOptionPane.showMessageDialog(null`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 148.,954
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onHubicLogin,Long Statement,The length of the statement "if (allowCustomeSwiftSettings) ops.login(AccountConfigFactory.getHubicAccountConfig(sa)`config.getSwiftSettings()`config.getHttpProxySettings()`cb);" is 148.,954
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,done,Long Statement,The length of the statement "JOptionPane.showMessageDialog(null`getLocalizedString("Login_Failed") + "\n"`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 132.,968
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,done,Long Statement,The length of the statement "JOptionPane.showMessageDialog(null`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 148.,968
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,done,Long Statement,The length of the statement "if (allowCustomeSwiftSettings) ops.login(AccountConfigFactory.getHubicAccountConfig(sa)`config.getSwiftSettings()`config.getHttpProxySettings()`cb);" is 148.,968
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onError,Long Statement,The length of the statement "JOptionPane.showMessageDialog(null`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 148.,1000
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onLogin,Long Statement,The length of the statement "JOptionPane.showMessageDialog(loginDialog`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 155.,1022
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onLogin,Long Statement,The length of the statement "if (allowCustomeSwiftSettings) ops.login(AccountConfigFactory.getKeystoneAccountConfig()`config.getSwiftSettings()`authUrl`tenant`username`new String(pass)`cb);" is 160.,1022
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onLogin,Magic Number,The method contains a magic number: 480,1022
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onLogin,Magic Number,The method contains a magic number: 280,1022
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,doLogin,Long Statement,The length of the statement "JOptionPane.showMessageDialog(loginDialog`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 155.,1025
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,doLogin,Long Statement,The length of the statement "if (allowCustomeSwiftSettings) ops.login(AccountConfigFactory.getKeystoneAccountConfig()`config.getSwiftSettings()`authUrl`tenant`username`new String(pass)`cb);" is 160.,1025
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onError,Long Statement,The length of the statement "JOptionPane.showMessageDialog(loginDialog`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 155.,1034
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onSimulatorLogin,Long Identifier,The length of the field createDefaultContainerInMockMode is 32.,1070
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onSimulatorLogin,Long Statement,The length of the statement "JOptionPane.showMessageDialog(null`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 148.,1070
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onSimulatorLogin,Long Statement,The length of the statement "if (allowCustomeSwiftSettings) ops.login(AccountConfigFactory.getMockAccountConfig()`config.getSwiftSettings()`"http://localhost:8080/"`"user"`"pass"`"secret"`cb);" is 163.,1070
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onLoginSuccess,Long Identifier,The length of the field createDefaultContainerInMockMode is 32.,1073
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onError,Long Statement,The length of the statement "JOptionPane.showMessageDialog(null`getLocalizedString("Login_Failed") + "\n" + ex.toString()`getLocalizedString("Error")`JOptionPane.ERROR_MESSAGE);" is 148.,1081
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,center,Magic Number,The method contains a magic number: 2,1097
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,center,Magic Number,The method contains a magic number: 2,1097
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onProxy,Magic Number,The method contains a magic number: 600,1231
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onProxy,Magic Number,The method contains a magic number: 210,1231
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,doGetContainerSpec,Long Statement,The length of the statement "if (JOptionPane.showConfirmDialog(this`new Object[]{getLocalizedString("Name")`nameTf`priv}`getLocalizedString("Create_Container")`JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {" is 188.,1346
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,doGetContainerSpec,Long Statement,The length of the statement "String msg=MessageFormat.format(getLocalizedString("please_enter_a_directory_name_that_does_not_end_with__segments")`SwiftUtils.segmentsContainerPostfix);" is 154.,1346
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createStoredObjectPopupMenu,Long Identifier,The length of the field storedObjectDownloadFilesAction is 31.,1373
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createStoredObjectPopupMenu,Long Identifier,The length of the field storedObjectCreateDirectoryAction is 33.,1373
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createStoredObjectPopupMenu,Long Identifier,The length of the field storedObjectUploadDirectoryAction is 33.,1373
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createStoredObjectPopupMenu,Long Identifier,The length of the field storedObjectDownloadDirectoryAction is 35.,1373
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createStoredObjectPopupMenu,Long Identifier,The length of the field storedObjectDeleteDirectoryAction is 33.,1373
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createStoredObjectPopupMenu,Long Identifier,The length of the field storedObjectCompareFilesAction is 30.,1373
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createStoredObjectPopupMenu,Long Identifier,The length of the field storedObjectCompareDirectoriesAction is 36.,1373
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createMenuBar,Long Identifier,The length of the field storedObjectDownloadFilesAction is 31.,1413
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createMenuBar,Long Identifier,The length of the field storedObjectCreateDirectoryAction is 33.,1413
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createMenuBar,Long Identifier,The length of the field storedObjectUploadDirectoryAction is 33.,1413
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createMenuBar,Long Identifier,The length of the field storedObjectDownloadDirectoryAction is 35.,1413
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createMenuBar,Long Identifier,The length of the field storedObjectDeleteDirectoryAction is 33.,1413
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createMenuBar,Long Identifier,The length of the field storedObjectCompareFilesAction is 30.,1413
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,createMenuBar,Long Identifier,The length of the field storedObjectCompareDirectoriesAction is 36.,1413
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onPreviewStoredObject,Magic Number,The method contains a magic number: 16,1534
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onPreviewStoredObject,Magic Number,The method contains a magic number: 1024,1534
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onPreviewStoredObject,Magic Number,The method contains a magic number: 1024,1534
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onDownloadStoredObject,Complex Method,Cyclomatic complexity of the method is 8,1610
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,setDefaultFileChooserValue,Complex Conditional,The conditional expression obj != null && obj.getName() != null && !obj.getName().isEmpty() is complex.,1668
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onCompareFiles,Long Statement,The length of the statement "@SuppressWarnings("unchecked") ResultCallback<Collection<Pair<? extends ComparisonItem`? extends ComparisonItem>>> crcb=GuiTreadingUtils.guiThreadSafe(ResultCallback.class`new ResultCallback<Collection<Pair<? extends ComparisonItem`? extends ComparisonItem>>>(){" is 262.,1720
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,showDifferencesManagementDlg,Long Parameter List,The method has 5 parameters. ,1764
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,showDifferencesManagementDlg,Long Statement,The length of the statement "if (differencesManagementDlg != null && differencesManagementDlg.isShowing()) differencesManagementDlg.setVisible(false);" is 121.,1764
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,showDifferencesManagementDlg,Long Statement,The length of the statement "JOptionPane.showMessageDialog(this`getLocalizedString(keyMsg)`getLocalizedString(keyTitle)`JOptionPane.INFORMATION_MESSAGE);" is 124.,1764
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,showDifferencesManagementDlg,Long Statement,The length of the statement "DifferencesManagementPanel differencesManagementPanel=new DifferencesManagementPanel(container`srcStoredObject`srcFile`discrepancies`ops`this`stringsBundle`differencesManagementDlg`owner.getSize());" is 198.,1764
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onCompareDirectories,Long Statement,The length of the statement "@SuppressWarnings("unchecked") ResultCallback<Collection<Pair<? extends ComparisonItem`? extends ComparisonItem>>> crcb=GuiTreadingUtils.guiThreadSafe(ResultCallback.class`new ResultCallback<Collection<Pair<? extends ComparisonItem`? extends ComparisonItem>>>(){" is 262.,1793
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,doDeleteObjectDirectory,Long Statement,The length of the statement "String msg=MessageFormat.format(getLocalizedString("confirm_one_directory_delete_from_container")`obj.getName()`container.getName());" is 133.,1862
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,doDeleteSingleObject,Long Statement,The length of the statement "String msg=MessageFormat.format(getLocalizedString("confirm_one_file_delete_from_container")`obj.getName()`container.getName());" is 128.,1883
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,doDeleteMultipleObjects,Long Statement,The length of the statement "String msg=MessageFormat.format(getLocalizedString("confirm_many_files_delete_from_container")`String.valueOf(obj.size())`container.getName());" is 143.,1892
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,onCreateDirectory,Long Statement,The length of the statement "if (JOptionPane.showConfirmDialog(this`new Object[]{getLocalizedString("Directory_Name")`directoryName}`getLocalizedString("Create_Directory")`JOptionPane.OK_CANCEL_OPTION) == JOptionPane.OK_OPTION) {" is 200.,2009
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,closeOpsDependantDialogs,Long Statement,The length of the statement "if (differencesManagementDlg != null && differencesManagementDlg.isShowing()) differencesManagementDlg.setVisible(false);" is 121.,2270
+roikku_swift-explorer,org.swiftexplorer.gui,MainPanel,confirm,Long Statement,The length of the statement "return JOptionPane.showConfirmDialog(this`message`getLocalizedString("Confirmation")`JOptionPane.YES_NO_OPTION`JOptionPane.WARNING_MESSAGE) == JOptionPane.YES_OPTION;" is 166.,2461
+roikku_swift-explorer,org.swiftexplorer.gui,AboutDlg,show,Magic Number,The method contains a magic number: 4,47
+roikku_swift-explorer,org.swiftexplorer.gui,AboutDlg,show,Magic Number,The method contains a magic number: 10,47
+roikku_swift-explorer,org.swiftexplorer.gui,AboutDlg,getTitle,Long Statement,The length of the statement "return MessageFormat.format((stringsBundle != null) ? (stringsBundle.getLocalizedString("About_dlg_title")) : ("About")`title.toString());" is 138.,96
+roikku_swift-explorer,org.swiftexplorer.gui,AboutDlg,open,Empty catch clause,The method has an empty catch block.,125
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModel,processList,Complex Method,Cyclomatic complexity of the method is 13,310
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModel,isLeaf,Complex Method,Cyclomatic complexity of the method is 9,425
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModel,getIndexOfChild,Complex Method,Cyclomatic complexity of the method is 9,464
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModelTest,shouldCreateAndAddWellStructuredTreeModel,Magic Number,The method contains a magic number: 10,197
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModelTest,shouldCreateAndAddWellStructuredTreeModel,Magic Number,The method contains a magic number: 3,197
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModelTest,shouldCreateAndAddWellStructuredTreeModel,Magic Number,The method contains a magic number: 2,197
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModelTest,shouldCreateAndOverAddWellStructuredTreeModel,Magic Number,The method contains a magic number: 10,217
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModelTest,shouldCreateAndOverAddWellStructuredTreeModel,Magic Number,The method contains a magic number: 3,217
+roikku_swift-explorer,org.swiftexplorer.gui,StoredObjectsTreeModelTest,shouldCreateAndOverAddWellStructuredTreeModel,Magic Number,The method contains a magic number: 2,217
+roikku_swift-explorer,org.swiftexplorer.gui.util,LabelComponentPanel,LabelComponentPanel,Magic Number,The method contains a magic number: 8,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,LabelComponentPanel,LabelComponentPanel,Magic Number,The method contains a magic number: 2,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,LabelComponentPanel,LabelComponentPanel,Magic Number,The method contains a magic number: 2,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,LabelComponentPanel,LabelComponentPanel,Magic Number,The method contains a magic number: 2,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,LabelComponentPanel,LabelComponentPanel,Magic Number,The method contains a magic number: 2,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,LabelComponentPanel,LabelComponentPanel,Magic Number,The method contains a magic number: 128,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,LabelComponentPanel,LabelComponentPanel,Magic Number,The method contains a magic number: 24,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,FileTypeIconFactory,getFileTypeIcon,Complex Method,Cyclomatic complexity of the method is 9,238
+roikku_swift-explorer,org.swiftexplorer.gui.util,FileTypeIconFactory,getFileTypeIcon,Long Statement,The length of the statement "if (contentType != null && SwiftUtils.directoryContentType.equalsIgnoreCase(contentType)) return getIconFromIconFileName("folder.png");" is 135.,238
+roikku_swift-explorer,org.swiftexplorer.gui.util,AsyncWrapper,async,Long Statement,The length of the statement "return (SwiftOperations)Proxy.newProxyInstance(AsyncWrapper.class.getClassLoader()`new Class[]{SwiftOperations.class}`new InvocationHandler(){" is 142.,34
+roikku_swift-explorer,org.swiftexplorer.gui.util,DoubleClickListener,mouseClicked,Magic Number,The method contains a magic number: 2,37
+roikku_swift-explorer,org.swiftexplorer.gui.util,DoubleClickListenerTest,shouldTrigger,Magic Number,The method contains a magic number: 2,59
+roikku_swift-explorer,org.swiftexplorer.gui.util,DoubleClickListenerTest,shouldNotTriggerOnOtherMouseButton,Magic Number,The method contains a magic number: 2,71
+roikku_swift-explorer,org.swiftexplorer.gui.util,DoubleClickListenerTest,shouldNotTriggerIfActionDisbled,Magic Number,The method contains a magic number: 2,77
+roikku_swift-explorer,org.swiftexplorer.gui.util,GuiThreadingUtilsTest,shouldWrap,Magic Number,The method contains a magic number: 100L,49
+roikku_swift-explorer,org.swiftexplorer.gui.util,GuiThreadingUtilsTest,shouldWrapAndFail,Magic Number,The method contains a magic number: 100L,57
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,LoginPanel,Magic Number,The method contains a magic number: 4,94
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,LoginPanel,Magic Number,The method contains a magic number: 4,94
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,LoginPanel,Magic Number,The method contains a magic number: 4,94
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,LoginPanel,Magic Number,The method contains a magic number: 4,94
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,LoginPanel,Magic Number,The method contains a magic number: 8,94
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,LoginPanel,Magic Number,The method contains a magic number: 4,94
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,initMenuActions,Long Statement,The length of the statement "warningLabel=new JLabel(getLocalizedString("warning_credentials_stored_plain_text")`MainPanel.getIcon("table_error.png")`JLabel.CENTER);" is 136.,138
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,isAuthComplete,Long Statement,The length of the statement "return !authUrl.getText().isEmpty() && !tenant.getText().isEmpty() && !username.getText().isEmpty()&& !(password.getPassword().length == 0);" is 140.,235
+roikku_swift-explorer,org.swiftexplorer.gui.login,LoginPanel,confirm,Long Statement,The length of the statement "return JOptionPane.showConfirmDialog(this`message`getLocalizedString("Confirmation")`JOptionPane.YES_NO_OPTION`JOptionPane.WARNING_MESSAGE) == JOptionPane.YES_OPTION;" is 166.,278
+roikku_swift-explorer,org.swiftexplorer.gui.login,CredentialsStoreTest,shouldGarbleAndDeGarblePassword,Long Statement,The length of the statement "assertEquals("abcdefghijklmnopqrstuvwxyz"`String.valueOf(store.garble(String.valueOf(store.garble("abcdefghijklmnopqrstuvwxyz")))));" is 132.,53
+roikku_swift-explorer,org.swiftexplorer.gui.preview,ImagePanel,ImagePanel,Magic Number,The method contains a magic number: 128,61
+roikku_swift-explorer,org.swiftexplorer.gui.preview,ImagePanel,ImagePanel,Magic Number,The method contains a magic number: 128,61
+roikku_swift-explorer,org.swiftexplorer.gui.preview,PlainTextPanel,PlainTextPanel,Magic Number,The method contains a magic number: 10,47
+roikku_swift-explorer,org.swiftexplorer.gui.preview,PdfPanel,paintComponent,Magic Number,The method contains a magic number: 5,152
+roikku_swift-explorer,org.swiftexplorer.gui.preview,PdfPanel,paintComponent,Magic Number,The method contains a magic number: 10,152
+roikku_swift-explorer,org.swiftexplorer.gui.preview,PdfPanel,paintComponent,Magic Number,The method contains a magic number: 5,152
+roikku_swift-explorer,org.swiftexplorer.gui.preview,PdfPanel,paintComponent,Magic Number,The method contains a magic number: 2,152
+roikku_swift-explorer,org.swiftexplorer.gui.preview,PdfPanel,paintComponent,Magic Number,The method contains a magic number: 2,152
+roikku_swift-explorer,org.swiftexplorer.gui.preview,ImagePanelTest,shouldCreate,Magic Number,The method contains a magic number: 128,45
+roikku_swift-explorer,org.swiftexplorer.gui.preview,ImagePanelTest,shouldCreate,Magic Number,The method contains a magic number: 128,45
+roikku_swift-explorer,org.swiftexplorer.gui.preview,ImagePanelTest,shouldPaintWithImage,Long Statement,The length of the statement "Mockito.verify(graphics).drawImage(Mockito.eq(img)`Mockito.eq(0)`Mockito.eq(0)`Mockito.anyInt()`Mockito.anyInt()`Mockito.eq(panel));" is 132.,59
+roikku_swift-explorer,org.swiftexplorer.gui.log,LogPanel,setListBehavior,Long Statement,The length of the statement "@Override public Component getListCellRendererComponent( JList<?> list` Object value` int index` boolean isSelected` boolean cellHasFocus){" is 139.,114
+roikku_swift-explorer,org.swiftexplorer.gui.log,LogPanel,setListBehavior,Magic Number,The method contains a magic number: 2,114
+roikku_swift-explorer,org.swiftexplorer.gui.log,LogPanel,setListBehavior,Magic Number,The method contains a magic number: 2,114
+roikku_swift-explorer,org.swiftexplorer.gui.log,LogPanel,getListCellRendererComponent,Long Parameter List,The method has 5 parameters. ,123
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 5,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 5,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 5,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 5,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 600,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 150,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 200,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 2,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,initDlg,Magic Number,The method contains a magic number: 150,82
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,setPrefSize,Magic Number,The method contains a magic number: 200,106
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,setPrefSize,Magic Number,The method contains a magic number: 150,106
+roikku_swift-explorer,org.swiftexplorer.gui.log,ErrorDlg,onExit,Long Statement,The length of the statement "if (JOptionPane.showConfirmDialog(this`getLocalizedString("confirm_quit_application")`getLocalizedString("Confirmation")`JOptionPane.YES_NO_OPTION`JOptionPane.WARNING_MESSAGE) == JOptionPane.YES_OPTION) System.exit(ERROR);" is 222.,140
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Long Parameter List,The method has 9 parameters. ,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 4,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 4,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 4,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 4,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 0.8,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 3.0,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 20,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,DifferencesManagementPanel,Magic Number,The method contains a magic number: 50,111
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Complex Conditional,The conditional expression pair.getFirst() == null || !pair.getFirst().exists() && pair.getSecond() != null && pair.getSecond().exists() is complex.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Complex Conditional,The conditional expression pair.getFirst() != null && pair.getFirst().exists() && pair.getSecond() != null && pair.getSecond().exists() is complex.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Complex Conditional,The conditional expression pair.getSecond() == null || !pair.getSecond().exists() && pair.getFirst() != null && pair.getFirst().exists() is complex.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Long Identifier,The length of the field localAndRemoteDifferObjectsList is 31.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Long Statement,The length of the statement "remoteDownloadAction=new ReflectionAction<DifferencesManagementPanel>(getLocalizedString("Download")`this`"onDownloadRemote");" is 126.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Long Statement,The length of the statement "diffOverwriteAction=new ReflectionAction<DifferencesManagementPanel>(getLocalizedString("Overwrite_Remote")`this`"onOverwriteRemote");" is 134.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Long Statement,The length of the statement "localOnlyObjectsList.addMouseListener(new PopupTrigger<DifferencesManagementPanel>(createLocalPopupMenu()`this`"enableDisableLocalMenu"));" is 138.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Long Statement,The length of the statement "remoteOnlyObjectsList.addMouseListener(new PopupTrigger<DifferencesManagementPanel>(createRemotePopupMenu()`this`"enableDisableRemoteMenu"));" is 141.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Long Statement,The length of the statement "localAndRemoteDifferObjectsList.addMouseListener(new PopupTrigger<DifferencesManagementPanel>(createDiffPopupMenu()`this`"enableDisableDiffMenu"));" is 147.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Long Statement,The length of the statement "else if (pair.getSecond() == null || !pair.getSecond().exists() && pair.getFirst() != null && pair.getFirst().exists()) {" is 121.,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Magic Number,The method contains a magic number: 10,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Magic Number,The method contains a magic number: 5,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Magic Number,The method contains a magic number: 5,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Magic Number,The method contains a magic number: 5,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,initPanel,Magic Number,The method contains a magic number: 5,138
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setBoxCol,Magic Number,The method contains a magic number: 5,238
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setBoxCol,Magic Number,The method contains a magic number: 5,238
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setBoxCol,Magic Number,The method contains a magic number: 5,238
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setBoxCol,Magic Number,The method contains a magic number: 5,238
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setListBehavior,Long Statement,The length of the statement "@Override public Component getListCellRendererComponent( JList<?> list` Object value` int index` boolean isSelected` boolean cellHasFocus){" is 139.,265
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setListBehavior,Magic Number,The method contains a magic number: 2,265
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setListBehavior,Magic Number,The method contains a magic number: 2,265
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,getListCellRendererComponent,Long Parameter List,The method has 5 parameters. ,274
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setPrefSize,Magic Number,The method contains a magic number: 100,296
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,setPrefSize,Magic Number,The method contains a magic number: 100,296
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,isDiffItemSelected,Long Identifier,The length of the field localAndRemoteDifferObjectsList is 31.,334
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,isSingleDiffItemSelected,Long Identifier,The length of the field localAndRemoteDifferObjectsList is 31.,351
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,getSelectedDiffItems,Long Identifier,The length of the field localAndRemoteDifferObjectsList is 31.,388
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,onDownloadRemote,Long Statement,The length of the statement "pairParentObjectFiles.add(Pair.newPair(DifferencesFinder.getObject(container`ri`srcStoredObject)`DifferencesFinder.getFile(ri`srcFile)));" is 137.,429
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,onDeleteRemote,Long Statement,The length of the statement "String msg=MessageFormat.format(getLocalizedString("confirm_many_files_delete_from_container")`String.valueOf(storedObjects.size())`container.getName());" is 153.,454
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,onDeleteRemote,Long Statement,The length of the statement "if (JOptionPane.showConfirmDialog(this`msg`getLocalizedString("Confirmation")`JOptionPane.YES_NO_OPTION`JOptionPane.WARNING_MESSAGE) == JOptionPane.YES_OPTION) {" is 161.,454
+roikku_swift-explorer,org.swiftexplorer.gui.diff,DifferencesManagementPanel,uploadSelection,Long Statement,The length of the statement "pairParentObjectFiles.add(Pair.newPair(DifferencesFinder.getObject(container`ci`srcStoredObject)`((DifferencesFinder.LocalItem)ci).getFile().toFile()));" is 152.,481
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 4,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 4,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 4,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 4,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 8,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 4,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 10,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 10,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 10,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 30,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 35,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 5,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,ProxyPanel,Magic Number,The method contains a magic number: 80,107
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,initMenuActions,Long Statement,The length of the statement "warningLabel=new JLabel(getLocalizedString("warning_proxies_stored_plain_text")`MainPanel.getIcon("table_error.png")`JLabel.CENTER);" is 132.,237
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,setMinPrefMaxWidth,Magic Number,The method contains a magic number: 25,249
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,onOk,Long Statement,The length of the statement "proxies.add(new Proxy.Builder("http").setActivated(activatedHttp.isSelected()).setHost(hostHttp.getText().trim()).setPassword(String.valueOf(passwordHttp.getPassword())).setPort(portHttpVal).setUsername(usernameHttp.getText().trim()).build());" is 243.,316
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxyPanel,onOk,Long Statement,The length of the statement "proxies.add(new Proxy.Builder("https").setActivated(activatedHttps.isSelected()).setHost(hostHttps.getText().trim()).setPassword(String.valueOf(passwordHttps.getPassword())).setPort(portHttpsVal).setUsername(usernameHttps.getText().trim()).build());" is 249.,316
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Long Statement,The length of the statement "double scale=(SwiftParameters.MAX_SEGMENTATION_SIZE > Integer.MAX_VALUE) ? (SwiftParameters.MAX_SEGMENTATION_SIZE / (double)Integer.MAX_VALUE) : (1.0);" is 151.,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 4,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 4,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 4,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 4,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 10,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 6,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 10,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 6,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 400,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 100,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 20,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 6,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 20,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 6,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 8,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,SwiftPanel,Magic Number,The method contains a magic number: 15,180
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,initSegmentationSizeSelection,Long Statement,The length of the statement "if (segmentationSizeSlider.getComponent().getFont() != null) segmentationSizeTf.setFont(segmentationSizeSlider.getComponent().getFont());" is 137.,246
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,initSegmentationSizeSelection,Magic Number,The method contains a magic number: 8,246
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,onOk,Long Statement,The length of the statement "SwiftParameters.Builder paramBuilder=new SwiftParameters.Builder(segmentationSize`hideSegmentsContainer.isSelected()`preferredRegion);" is 134.,308
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,roundToNearestUnit,Magic Number,The method contains a magic number: 2,345
+roikku_swift-explorer,org.swiftexplorer.gui.settings,SwiftPanel,showInvalidSegmentationSizeDlg,Long Statement,The length of the statement "String msg=MessageFormat.format(getLocalizedString("Please_enter_an_integer_between_val_min_and_val_max")`SwiftParameters.MIN_SEGMENTATION_SIZE`SwiftParameters.MAX_SEGMENTATION_SIZE);" is 183.,351
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Long Statement,The length of the statement "if (config == null) throw new UnsupportedOperationException("The config parameter must not be null in preference setting dialog.");" is 131.,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Long Statement,The length of the statement "@Override public Component getListCellRendererComponent( JList<?> list` Object value` int index` boolean isSelected` boolean cellHasFocus){" is 139.,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 4,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 4,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 4,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 4,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 10,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 6,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 20,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 6,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,PreferencesPanel,Magic Number,The method contains a magic number: 8,170
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,getListCellRendererComponent,Long Parameter List,The method has 5 parameters. ,189
+roikku_swift-explorer,org.swiftexplorer.gui.settings,PreferencesPanel,onOk,Long Statement,The length of the statement "if (selectedLanguage != null && !selectedLanguage.equals(initialLanguage)) callback.setLanguage(selectedLanguage.getLanguageCode()`selectedLanguage.getRegionCode());" is 165.,262
+roikku_swift-explorer,org.swiftexplorer.gui.settings,ProxiesStore,getProxy,Long Statement,The length of the statement "return new Proxy.Builder(prot).setActivated(proxySettings.isActive()).setHost(proxySettings.getHost()).setPassword(proxySettings.getPassword()).setPort(proxySettings.getPort()).setUsername(proxySettings.getUsername()).build();" is 226.,36
+roikku_swift-explorer,org.swiftexplorer,SwiftExplorer,isMacOsX,Long Identifier,The length of the field activateNativeLookAndFeelForMacOs is 33.,55
+roikku_swift-explorer,org.swiftexplorer,SwiftExplorer,openMainWindow,Magic Number,The method contains a magic number: 0.8,128
+roikku_swift-explorer,org.swiftexplorer,SwiftExplorer,openMainWindow,Magic Number,The method contains a magic number: 2,128
+roikku_swift-explorer,org.swiftexplorer,SwiftExplorer,openMainWindow,Magic Number,The method contains a magic number: 2,128
+roikku_swift-explorer,org.swiftexplorer,TestUtils,getTestFile,Magic Number,The method contains a magic number: 256,27
+roikku_swift-explorer,org.swiftexplorer,TestUtils,getTestDirectoryWithFiles,Magic Number,The method contains a magic number: 1000,44
+roikku_swift-explorer,org.swiftexplorer.auth.server,AuthHttpServer,startAndWaitForData,Magic Number,The method contains a magic number: 10,72
+roikku_swift-explorer,org.swiftexplorer.auth.server,AuthHttpServer,startAndWaitForData,Magic Number,The method contains a magic number: 60,72
+roikku_swift-explorer,org.swiftexplorer.auth.server,AuthHttpServer,stopServer,Magic Number,The method contains a magic number: 60,90
+roikku_swift-explorer,org.swiftexplorer.auth.oauth,HubicOAuth20ServiceImpl,refreshAccessToken,Long Identifier,The length of the identifier bytesEncodedAuthenticationCode is 30.,59
+roikku_swift-explorer,org.swiftexplorer.auth.oauth,HubicOAuth20ServiceImpl,getAccessToken,Long Identifier,The length of the identifier bytesEncodedAuthenticationCode is 30.,97
+roikku_swift-explorer,org.swiftexplorer.auth.oauth,HubicOAuth20ServiceImpl,obtainVerifier,Magic Number,The method contains a magic number: 80,129
+roikku_swift-explorer,org.swiftexplorer.auth.oauth,HubicOAuth20ServiceImpl,getRequestToken,Long Statement,The length of the statement "throw new UnsupportedOperationException("Unsupported operation` please use 'getAuthorizationUrl' and redirect your users there");" is 129.,191
+roikku_swift-explorer,org.swiftexplorer.auth.builder.api,HubicApi,getAuthorizationUrl,Long Statement,The length of the statement "return String.format(SCOPED_AUTHORIZE_URL`config.getApiKey()`OAuthEncoder.encode(config.getCallback())`OAuthEncoder.encode(config.getScope()));" is 143.,55
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 150,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 18,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 5,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 3,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 5,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 3,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 5,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 5,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 3,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 5,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 3,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 5,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 1024,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,initComponents,Magic Number,The method contains a magic number: 600,154
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,createScene,Long Statement,The length of the statement "@Override public void changed( ObservableValue<? extends Number> observableValue` Number oldValue` final Number newValue){" is 122.,197
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,createScene,Long Statement,The length of the statement "JOptionPane.showMessageDialog(panel`(value != null) ? engine.getLocation() + "\n" + value.getMessage() : engine.getLocation() + "\nUnexpected error."`"Loading error..."`JOptionPane.ERROR_MESSAGE);" is 196.,197
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,run,Long Statement,The length of the statement "@Override public void changed( ObservableValue<? extends Number> observableValue` Number oldValue` final Number newValue){" is 122.,200
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,run,Long Statement,The length of the statement "JOptionPane.showMessageDialog(panel`(value != null) ? engine.getLocation() + "\n" + value.getMessage() : engine.getLocation() + "\nUnexpected error."`"Loading error..."`JOptionPane.ERROR_MESSAGE);" is 196.,200
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,changed,Long Statement,The length of the statement "JOptionPane.showMessageDialog(panel`(value != null) ? engine.getLocation() + "\n" + value.getMessage() : engine.getLocation() + "\nUnexpected error."`"Loading error..."`JOptionPane.ERROR_MESSAGE);" is 196.,258
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,SimpleSwingBrowser,run,Long Statement,The length of the statement "JOptionPane.showMessageDialog(panel`(value != null) ? engine.getLocation() + "\n" + value.getMessage() : engine.getLocation() + "\nUnexpected error."`"Loading error..."`JOptionPane.ERROR_MESSAGE);" is 196.,261
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,start,Magic Number,The method contains a magic number: 2,54
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,start,Magic Number,The method contains a magic number: 2,54
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,start,Magic Number,The method contains a magic number: 2,54
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,start,Magic Number,The method contains a magic number: 2,54
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,run,Magic Number,The method contains a magic number: 2,58
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,run,Magic Number,The method contains a magic number: 2,58
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,run,Magic Number,The method contains a magic number: 2,58
+roikku_swift-explorer,org.swiftexplorer.auth.webbrowser,AuthWebView,run,Magic Number,The method contains a magic number: 2,58
+roikku_swift-explorer,org.swiftexplorer.config.swift,SwiftSettingsImpl,setConfig,Long Statement,The length of the statement "segmentationSize=Math.min(this.config.getLong(baseProperty + ".segmentationSize"`defaultSegmentationSize)`UploadInstructions.MAX_SEGMENTATION_SIZE);" is 148.,43
+roikku_swift-explorer,org.swiftexplorer.config.swift,SwiftSettingsImpl,update,Long Statement,The length of the statement "if (this.preferredRegion != null && !this.preferredRegion.isEmpty()) config.setProperty(baseProperty + ".preferredRegion"`preferredRegion);" is 139.,78
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,init,Magic Number,The method contains a magic number: 80,51
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,init,Magic Number,The method contains a magic number: 443,51
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldHaveHttpProxy,Magic Number,The method contains a magic number: 9000,82
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldHaveHttpsProxy,Magic Number,The method contains a magic number: 9001,88
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,verifyProxy,Long Parameter List,The method has 6 parameters. ,94
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateHttpProxy,Long Statement,The length of the statement "Proxy newProxy=new Proxy.Builder("http").setActivated(activated).setHost(host).setPassword(password).setUsername(username).setPort(port).build();" is 145.,104
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateHttpProxy,Magic Number,The method contains a magic number: 9000,104
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateHttpProxy,Magic Number,The method contains a magic number: 8567,104
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateHttpsProxy,Long Statement,The length of the statement "Proxy newProxy=new Proxy.Builder("https").setActivated(activated).setHost(host).setPassword(password).setUsername(username).setPort(port).build();" is 146.,132
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateHttpsProxy,Magic Number,The method contains a magic number: 9001,132
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateHttpsProxy,Magic Number,The method contains a magic number: 8577,132
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldHaveSwiftSetting,Magic Number,The method contains a magic number: 50000000,196
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateSwiftSettingSegmentationSize,Magic Number,The method contains a magic number: 50000000,205
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateSwiftSettingSegmentationSize,Magic Number,The method contains a magic number: 12345678,205
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateSwiftSettingHideContainer,Magic Number,The method contains a magic number: 50000000,230
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateSwiftSettingPreferredRegion,Long Statement,The length of the statement "SwiftParameters newParameters=new SwiftParameters.Builder(swiftSettings.getSegmentationSize()`swiftSettings.hideSegmentsContainers()`newRegion).build();" is 152.,252
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateSwiftSettingPreferredRegion,Magic Number,The method contains a magic number: 50000000,252
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateMaxSwiftSetting,Magic Number,The method contains a magic number: 1000,274
+roikku_swift-explorer,org.swiftexplorer.config,ConfigTest,shouldUpdateMinSwiftSetting,Magic Number,The method contains a magic number: 1000,292
+roikku_swift-explorer,org.swiftexplorer.config.proxy,Proxy,hashCode,Magic Number,The method contains a magic number: 31,56
+roikku_swift-explorer,org.swiftexplorer.config.proxy,Proxy,equals,Complex Method,Cyclomatic complexity of the method is 14,68
+roikku_swift-explorer,org.swiftexplorer.util,FileUtils,readAllAndgetMD5,Magic Number,The method contains a magic number: 2097152,72
+roikku_swift-explorer,org.swiftexplorer.util,FileUtils,getInputStreamWithProgressMonitor,Long Statement,The length of the statement "InputStream in=new BufferedInputStream(new ProgressMonitorInputStream((parentComponent == null) ? (owner) : (parentComponent)`message`input));" is 142.,294
+roikku_swift-explorer,org.swiftexplorer.util,FileUtils,humanReadableByteCount,Magic Number,The method contains a magic number: 1000,329
+roikku_swift-explorer,org.swiftexplorer.util,FileUtils,humanReadableByteCount,Magic Number,The method contains a magic number: 1024,329
+roikku_swift-explorer,org.swiftexplorer.util,Pair,hashCode,Magic Number,The method contains a magic number: 31,37
+roikku_swift-explorer,org.swiftexplorer.util,Pair,equals,Complex Method,Cyclomatic complexity of the method is 10,47
+roikku_swift-explorer,org.swiftexplorer.util,FileUtilsTest,shouldComputeMD5,Magic Number,The method contains a magic number: 64,51
+roikku_swift-explorer,org.swiftexplorer.util,FileUtilsTest,shouldComputeMD5,Magic Number,The method contains a magic number: 1024,51
+roikku_swift-explorer,org.swiftexplorer.util,FileUtilsTest,shouldComputeSumOfSegmentsMd5,Complex Method,Cyclomatic complexity of the method is 8,76
+roikku_swift-explorer,org.swiftexplorer.util,FileUtilsTest,shouldComputeSumOfSegmentsMd5,Magic Number,The method contains a magic number: 1024,76
+roikku_swift-explorer,org.swiftexplorer.util,FileUtilsTest,shouldComputeSumOfSegmentsMd5,Magic Number,The method contains a magic number: 3,76
+roikku_swift-explorer,org.swiftexplorer.util,FileUtilsTest,shouldComputeSumOfSegmentsMd5,Magic Number,The method contains a magic number: 128,76

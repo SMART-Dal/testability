@@ -1,0 +1,305 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+CaptainBern_Reflection,com.captainbern.minecraft.conversion,BukkitConverters,getWatchableObjectConverter,Long Statement,The length of the statement "if (object != null && MinecraftReflection.getWatchableObjectClass().isAssignableFrom(object.getClass())) return new WrappedWatchableObject(object);" is 147.,75
+CaptainBern_Reflection,com.captainbern.minecraft.conversion,BukkitConverters,getWrappedValue,Long Statement,The length of the statement "if (object != null && MinecraftReflection.getWatchableObjectClass().isAssignableFrom(object.getClass())) return new WrappedWatchableObject(object);" is 147.,77
+CaptainBern_Reflection,com.captainbern.minecraft.protocol,PacketTypeLookup,getLookup,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@14b0334a,20
+CaptainBern_Reflection,com.captainbern.minecraft.protocol,PacketType,getLookup,Long Statement,The length of the statement "LOOKUP=new PacketTypeLookup().addPacketType(HandShaking.Client.getInstance()).addPacketType(HandShaking.Server.getInstance()).addPacketType(Play.Client.getInstance()).addPacketType(Play.Server.getInstance()).addPacketType(Status.Client.getInstance()).addPacketType(Status.Server.getInstance()).addPacketType(Login.Client.getInstance()).addPacketType(Login.Server.getInstance());" is 378.,349
+CaptainBern_Reflection,com.captainbern.minecraft.protocol,PacketType,getFieldIterator,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1c6efa49,413
+CaptainBern_Reflection,com.captainbern.minecraft.protocol,PacketRegistry,registerPackets,Long Statement,The length of the statement "MethodAccessor<Map<Integer`Class<?>>> inboundPackets=(MethodAccessor<Map<Integer`Class<?>>>)((SafeMethod)enumProtocol.getSafeMethods(withReturnType(Map.class)`withArgumentCount(0)).get(0)).getAccessor();" is 203.,50
+CaptainBern_Reflection,com.captainbern.minecraft.protocol,PacketRegistry,registerPackets,Long Statement,The length of the statement "MethodAccessor<Map<Integer`Class<?>>> outboundPackets=(MethodAccessor<Map<Integer`Class<?>>>)((SafeMethod)enumProtocol.getSafeMethods(withReturnType(Map.class)`withArgumentCount(0)).get(1)).getAccessor();" is 204.,50
+CaptainBern_Reflection,com.captainbern.minecraft.protocol,FieldIterator,registerFields,Long Statement,The length of the statement "if (value == null) throw new IllegalArgumentException("Field " + entry + " was NULL. Remember to "+ "construct the object after the field has been declared.");" is 159.,20
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftVersion,MinecraftVersion,Magic Number,The method contains a magic number: 3,60
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftVersion,MinecraftVersion,Magic Number,The method contains a magic number: 5,60
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftVersion,MinecraftVersion,Magic Number,The method contains a magic number: 8,60
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftVersion,parseVersion,Magic Number,The method contains a magic number: 3,124
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftVersion,equals,Long Statement,The length of the statement "return getMajor() == otherVersion.getMajor() && getMinor() == otherVersion.getMinor() && getBuild() == otherVersion.getBuild() && getRelease() == otherVersion.getRelease();" is 172.,149
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftVersion,compareTo,Long Statement,The length of the statement "return ComparisonChain.start().compare(getMajor()`o.getMajor()).compare(getMinor()`o.getMinor()).compare(getBuild()`o.getBuild()).result();" is 139.,168
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftFields,getPlayerConnection,Long Statement,The length of the statement "PLAYER_CONNECTION=(FieldAccessor<Object>)new Reflection().reflect(MinecraftReflection.getEntityPlayerClass()).getSafeFieldByType(type).getAccessor();" is 149.,17
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftFields,getNetworkManager,Long Statement,The length of the statement "NETWORK_MANAGER=(FieldAccessor<Object>)new Reflection().reflect(MinecraftReflection.getPlayerConnectionClass()).getSafeFieldByType(type).getAccessor();" is 151.,31
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftMethods,sendPacket,Long Statement,The length of the statement "if (!MinecraftReflection.getPacketClass().isAssignableFrom(handle.getClass())) throw new IllegalArgumentException(handle + " is not a valid packet class!");" is 156.,19
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftReflection,getCraftBukkitClass,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@620b3533,230
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftReflection,getMinecraftClass,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@56834b7d,262
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftReflection,getItemStackClass,Long Statement,The length of the statement "return setMinecraftClass("ItemStack"`new Reflection().reflect(getCraftItemStackClass()).getFieldByName("handle").getType());" is 124.,352
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftReflection,toBukkitEntity,Long Statement,The length of the statement "if (!getEntityClass().isAssignableFrom(nmsEntity.getClass())) throw new IllegalArgumentException("The given object can't be cast to: " + getEntityClass().getCanonicalName());" is 174.,387
+CaptainBern_Reflection,com.captainbern.minecraft.reflection,MinecraftReflection,toBukkitEntity,Long Statement,The length of the statement "MethodAccessor<Entity> toBukkitEntity=new Reflection().reflect(getEntityClass()).getSafeMethod("getBukkitEntity").getAccessor();" is 128.,387
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.utils,Accessor,write,Long Statement,The length of the statement "throw new RuntimeException("Failed to write value: " + value + "to the field at index:"+ index+ " with accessor: "+ this`e);" is 124.,67
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.utils,ClassCache,getClass,Long Statement,The length of the statement "if (result == null) throw new IllegalArgumentException("Class-name: " + name + " returned NULL for provider: "+ this.reflection.getReflectionProvider().toString());" is 164.,29
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.providers.remapper,RemappedReflectionProvider,init,Complex Conditional,The conditional expression Bukkit.getServer() == null || !Bukkit.getServer().getVersion().contains("MCPC-Plus") || !Bukkit.getServer().getVersion().contains("Cauldron") is complex.,33
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.providers.remapper,RemappedReflectionProvider,init,Long Statement,The length of the statement "if (Bukkit.getServer() == null || !Bukkit.getServer().getVersion().contains("MCPC-Plus") || !Bukkit.getServer().getVersion().contains("Cauldron")) {" is 148.,33
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.providers.remapper,RemappedReflectionProvider,init,Long Statement,The length of the statement "this.remapper=new Reflection().reflect(getConfiguration().getClassLoader().getClass()).getSafeFieldByName("remapper").getAccessor().get(getConfiguration().getClassLoader());" is 173.,33
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.providers.remapper,RemappedReflectionProvider,init,Long Statement,The length of the statement "this.mapField=remapperTemplate.getSafeMethod("mapFieldName"`String.class`String.class`String.class`int.class).getAccessor();" is 124.,33
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.providers.remapper,RemappedReflectionProvider,getRemappedMethodName,Empty catch clause,The method has an empty catch block.,98
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.providers.remapper,RemappedReflectionProvider,getFieldProvider,Long Statement,The length of the statement "throw new RuntimeException("Failed to find field: " + fieldName + " (remapped: "+ getRemappedFieldName(clazz`fieldName)+ ") in class: "+ clazz.getCanonicalName());" is 163.,124
+CaptainBern_Reflection,com.captainbern.minecraft.reflection.providers.remapper,RemappedReflectionProvider,getMethodProvider,Long Statement,The length of the statement "throw new RuntimeException("Failed to find method: " + methodName + " (remapped: "+ getRemappedMethodName(clazz`methodName`args)+ ") in class: "+ clazz.getCanonicalName());" is 172.,133
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedPacket,getPacketType,Empty catch clause,The method has an empty catch block.,65
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedPacket,getWatchableObjectLists,Long Statement,The length of the statement "return this.modifier.withType(Collection.class`BukkitConverters.getListConverter(MinecraftReflection.getWatchableObjectClass()`BukkitConverters.getWatchableObjectConverter()));" is 176.,166
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedAttributeModifier,WrappedAttributeModifier,Long Parameter List,The method has 5 parameters. ,57
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedAttributeModifier,initialize,Long Statement,The length of the statement "if (ATTRIBUTE_MODIFIER == null) ATTRIBUTE_MODIFIER=new Accessor<Object>(MinecraftReflection.getAttributeModifierClass());" is 121.,104
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedAttributeModifier,toString,Long Statement,The length of the statement "return "{\"uuid\":\"" + this.uuid.toString() + "\"`"+ "\"name\":\""+ this.name+ "\"`"+ "\"amount\":\""+ this.amount+ "\"`"+ "\"operation\":\""+ this.operation.getId()+ "\"}";" is 174.,116
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedDataWatcher,initializeMethods,Empty catch clause,The method has an empty catch block.,104
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedDataWatcher,initializeMethods,Long Statement,The length of the statement "GET_KEY_VALUE_METHOD=((SafeMethod<?>)dataWatcher.getSafeMethods(withReturnType(MinecraftReflection.getWatchableObjectClass())).get(0)).getAccessor();" is 149.,104
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedDataWatcher,newEntityHandle,Long Statement,The length of the statement "if (CREATE_CONSTRUCTOR == null) CREATE_CONSTRUCTOR=new Reflection().reflect(dataWatcherClass).getSafeConstructor(MinecraftReflection.getEntityClass()).getAccessor();" is 165.,144
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedDataWatcher,getEntity,Long Statement,The length of the statement "if (!MinecraftReflection.isUsingNetty()) throw new IllegalStateException("This method is only supported in 1.7.x and above!");" is 126.,156
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedDataWatcher,setEntity,Long Statement,The length of the statement "if (!MinecraftReflection.isUsingNetty()) throw new IllegalStateException("This method is only supported in 1.7.x and above!");" is 126.,166
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedDataWatcher,setObject,Empty catch clause,The method has an empty catch block.,234
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedAttribute,getPacket,Long Statement,The length of the statement "return new WrappedPacket(PacketType.Play.Server.UPDATE_ATTRIBUTES`this.modifier.withType(MinecraftReflection.getPacketClass()).read(0));" is 136.,49
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedWatchableObject,WrappedWatchableObject,Long Statement,The length of the statement "CREATE_CONSTRUCTOR=new Reflection().reflect(MinecraftReflection.getWatchableObjectClass()).getSafeConstructor(int.class`int.class`Object.class).getAccessor();" is 158.,30
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,WrappedWatchableObject,loadFromObject,Long Statement,The length of the statement "throw new ClassCastException("Cannot cast: " + handleClass.getCanonicalName() + " to: "+ MinecraftReflection.getWatchableObjectClass().getCanonicalName());" is 155.,56
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper,AbstractWrapper,setHandle,Long Statement,The length of the statement "if (!type.isAssignableFrom(handle.getClass())) throw new IllegalArgumentException("Handle needs to be an instance of: " + this.type.getCanonicalName());" is 152.,29
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,NbtFactory,createTag,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@73967ec2,67
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,NbtFactory,fromNbtBase,Long Statement,The length of the statement "WrappedNbtTagCompound compound=(WrappedNbtTagCompound)NbtFactory.<Map<String`NbtTagBase<?>>>createTag(NbtType.TAG_COMPOUND);" is 124.,114
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,NbtFactory,saveItemStack,Long Statement,The length of the statement "List<SafeMethod<Object>> candidates=template.getSafeMethods(withReturnType(nbtTagCompound)`withArguments(new Class[]{nbtTagCompound}));" is 135.,295
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,NbtFactory,loadItemStack,Long Statement,The length of the statement "List<SafeMethod<Object>> candidates=template.getSafeMethods(withReturnType(MinecraftReflection.getItemStackClass())`withArguments(new Class[]{nbtTagCompound}));" is 160.,335
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,NbtFactory,loadItemStack,Long Statement,The length of the statement "List<SafeMethod<ItemStack>> candidates=template.getSafeMethods(withReturnType(ItemStack.class)`withArguments(new Class[]{MinecraftReflection.getItemStackClass()}));" is 164.,335
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,NbtFactory,getItemStackAccessor,Long Statement,The length of the statement "return ITEMSTACK_ACCESSOR.withHandle(nmsStack).withType(MinecraftReflection.getNbtBaseClass()`BukkitConverters.getNbtConverter());" is 130.,395
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,WrappedNbtElement,WrappedNbtElement,Long Statement,The length of the statement "if (!MinecraftReflection.getNbtBaseClass().isAssignableFrom(handle.getClass())) throw new IllegalArgumentException("Cannot create a wrapped nbt element with: " + handle.getClass().getCanonicalName());" is 200.,27
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,WrappedNbtElement,getAccessor,Long Statement,The length of the statement "if (field == null) throw new RuntimeException("Failed to retrieve a valid field accessor for: " + this + "@"+ this.handle);" is 123.,44
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,WrappedNbtTagList,getValue,Complex Method,Cyclomatic complexity of the method is 8,135
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,WrappedNbtTagList,getValue,Long Statement,The length of the statement "throw new IllegalArgumentException("Cannot add an element of type: " + element.getType() + " to "+ "an NBT-list of type: "+ WrappedNbtTagList.this.getListType());" is 162.,135
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt,WrappedNbtTagList,verify,Long Statement,The length of the statement "throw new IllegalArgumentException("Cannot add an element of type: " + element.getType() + " to "+ "an NBT-list of type: "+ WrappedNbtTagList.this.getListType());" is 162.,139
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt.io,NbtSerializer,write,Long Statement,The length of the statement "List<SafeMethod<Void>> candidates=template.getSafeMethods(withArguments(MinecraftReflection.getNbtBaseClass()`DataOutput.class)`withReturnType(void.class));" is 156.,35
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt.io,NbtSerializer,read,Long Statement,The length of the statement "List<SafeMethod<Object>> candidates=tagTemplate.getSafeMethods(withArguments(DataInput.class`int.class`readLimiter)`withReturnType(MinecraftReflection.getNbtBaseClass()));" is 171.,56
+CaptainBern_Reflection,com.captainbern.minecraft.wrapper.nbt.io,NbtSerializer,toTag,Magic Number,The method contains a magic number: 8192,100
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,print,Complex Conditional,The conditional expression current == null || current == Object.class || (top != null && current == top) is complex.,37
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,print,Complex Method,Cyclomatic complexity of the method is 9,37
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,print,Long Parameter List,The method has 9 parameters. ,37
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,print,Magic Number,The method contains a magic number: 4,37
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,print,Magic Number,The method contains a magic number: 4,37
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,printValue,Complex Conditional,The conditional expression current.isPrimitive() || Primitives.isWrapperType(current) || current == String.class is complex.,115
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,printValue,Long Parameter List,The method has 7 parameters. ,115
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,printMap,Long Parameter List,The method has 8 parameters. ,145
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,printArray,Long Parameter List,The method has 7 parameters. ,169
+CaptainBern_Reflection,com.captainbern.minecraft.error,PrettyPrinter,printIterable,Long Parameter List,The method has 7 parameters. ,195
+CaptainBern_Reflection,com.captainbern.minecraft.error,BasicErrorReporter,report,Long Statement,The length of the statement "this.output.print("An exception occurred when executing method \"" + method + "\" in class "+ sender.getClass().getCanonicalName());" is 132.,17
+CaptainBern_Reflection,com.captainbern.reflection,ReflectionUtils,getAllSuperClasses,Complex Conditional,The conditional expression clazz != null && (INCLUDE_OBJECT || !clazz.equals(Object.class)) is complex.,40
+CaptainBern_Reflection,com.captainbern.reflection,AbstractAccess,getAllSuperClasses,Complex Conditional,The conditional expression clazz != null && (INCLUDE_OBJECT || !clazz.equals(Object.class)) is complex.,358
+CaptainBern_Reflection,com.captainbern.reflection.matcher.type,ClassMatcher,matches,Long Statement,The length of the statement "return (getFieldMatchers().size() == 0 || processElements(getFieldMatchers()`template.getFields())) && (getMethodMatchers().size() == 0 || processElements(getMethodMatchers()`template.getMethods())) && (getConstructorMatchers().size() == 0 || processElements(getConstructorMatchers()`template.getConstructors()))&& (getBaseClassMatchers().size() == 0 || processElements(getBaseClassMatchers()`template.getAllSuperClasses()))&& (getInterfaceMatchers().size() == 0 || processElements(getInterfaceMatchers()`Arrays.asList(template.getReflectedClass().getInterfaces())));" is 567.,115
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,build,Long Statement,The length of the statement "Class<?> result=CompilerService.create(classLoader).defineClass(getExternalName(getAccessorNameInternal(this.getTarget()`this.getAccessorType()))`this.getClassWriter().toByteArray());" is 183.,23
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectFieldTable,Long Statement,The length of the statement "FieldVisitor fieldVisitor=classWriter.visitField(ACC_PRIVATE + ACC_FINAL`"fieldTable"`"[Ljava/lang/reflect/Field;"`null`null);" is 126.,60
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Long Statement,The length of the statement "methodVisitor.visitFrame(Opcodes.F_APPEND`3`new Object[]{"[Ljava/lang/reflect/Field;"`Opcodes.INTEGER`Opcodes.INTEGER}`0`null);" is 127.,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 2,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 2,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 2,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 4,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 5,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 5,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 4,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 5,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 6,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 6,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 5,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 2,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 2,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 3,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 4,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectConstructor,Magic Number,The method contains a magic number: 7,65
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByIndex,Long Statement,The length of the statement "MethodVisitor methodVisitor=classWriter.visitMethod(ACC_PUBLIC`"get"`"(Ljava/lang/Object;I)Ljava/lang/Object;"`null`new String[]{getInternalName(ILLEGAL_ACCESS_EXCEPTION.getCanonicalName())});" is 192.,152
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByIndex,Magic Number,The method contains a magic number: 2,152
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByIndex,Magic Number,The method contains a magic number: 6,152
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByIndex,Magic Number,The method contains a magic number: 3,152
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveGetter,Long Statement,The length of the statement "methodVisitor.visitFieldInsn(GETFIELD`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"fieldTable"`"[Ljava/lang/reflect/Field;");" is 146.,208
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveGetter,Long Statement,The length of the statement "methodVisitor.visitMethodInsn(INVOKEVIRTUAL`"java/lang/reflect/Field"`"get"`"(Ljava/lang/Object;)Ljava/lang/Object;"`false);" is 124.,208
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveGetter,Magic Number,The method contains a magic number: 2,208
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveGetter,Magic Number,The method contains a magic number: 3,208
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveGetter,Magic Number,The method contains a magic number: 3,208
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveGetter,Magic Number,The method contains a magic number: 3,208
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByName,Long Statement,The length of the statement "MethodVisitor methodVisitor=classWriter.visitMethod(ACC_PUBLIC`"get"`"(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;"`null`new String[]{"java/lang/IllegalAccessException"});" is 183.,223
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByName,Long Statement,The length of the statement "methodVisitor.visitMethodInsn(INVOKESPECIAL`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"getIndex"`"(Ljava/lang/String;)I"`false);" is 151.,223
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByName,Long Statement,The length of the statement "methodVisitor.visitMethodInsn(INVOKEVIRTUAL`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"get"`"(Ljava/lang/Object;I)Ljava/lang/Object;"`false);" is 164.,223
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByName,Magic Number,The method contains a magic number: 2,223
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByName,Magic Number,The method contains a magic number: 4,223
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetByName,Magic Number,The method contains a magic number: 3,223
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByIndex,Long Statement,The length of the statement "MethodVisitor methodVisitor=classWriter.visitMethod(ACC_PUBLIC`"set"`"(Ljava/lang/Object;ILjava/lang/Object;)V"`null`new String[]{getInternalName(ILLEGAL_ACCESS_EXCEPTION.getCanonicalName())});" is 193.,237
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByIndex,Magic Number,The method contains a magic number: 2,237
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByIndex,Magic Number,The method contains a magic number: 6,237
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByIndex,Magic Number,The method contains a magic number: 3,237
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByIndex,Magic Number,The method contains a magic number: 4,237
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveSetter,Long Statement,The length of the statement "methodVisitor.visitFieldInsn(GETFIELD`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"fieldTable"`"[Ljava/lang/reflect/Field;");" is 146.,301
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveSetter,Long Statement,The length of the statement "methodVisitor.visitMethodInsn(INVOKEVIRTUAL`"java/lang/reflect/Field"`"set"`"(Ljava/lang/Object;Ljava/lang/Object;)V"`false);" is 125.,301
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveSetter,Magic Number,The method contains a magic number: 2,301
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveSetter,Magic Number,The method contains a magic number: 4,301
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveSetter,Magic Number,The method contains a magic number: 4,301
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveSetter,Magic Number,The method contains a magic number: 4,301
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectReflectiveSetter,Magic Number,The method contains a magic number: 3,301
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByName,Long Statement,The length of the statement "MethodVisitor methodVisitor=classWriter.visitMethod(ACC_PUBLIC`"set"`"(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V"`null`new String[]{"java/lang/IllegalAccessException"});" is 184.,317
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByName,Long Statement,The length of the statement "methodVisitor.visitMethodInsn(INVOKESPECIAL`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"getIndex"`"(Ljava/lang/String;)I"`false);" is 151.,317
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByName,Long Statement,The length of the statement "methodVisitor.visitMethodInsn(INVOKEVIRTUAL`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"set"`"(Ljava/lang/Object;ILjava/lang/Object;)V"`false);" is 165.,317
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByName,Magic Number,The method contains a magic number: 2,317
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByName,Magic Number,The method contains a magic number: 3,317
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByName,Magic Number,The method contains a magic number: 4,317
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectSetByName,Magic Number,The method contains a magic number: 4,317
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectException,Long Statement,The length of the statement "methodVisitor.visitMethodInsn(INVOKESPECIAL`getInternalName(throwable.getCanonicalName())`"<init>"`"(Ljava/lang/String;)V");" is 124.,332
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectException,Magic Number,The method contains a magic number: 2,332
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetFieldTable,Long Statement,The length of the statement "MethodVisitor methodVisitor=classWriter.visitMethod(ACC_PUBLIC`"getFieldTable"`"()[Ljava/lang/reflect/Field;"`null`null);" is 121.,346
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetFieldTable,Long Statement,The length of the statement "methodVisitor.visitFieldInsn(GETFIELD`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"fieldTable"`"[Ljava/lang/reflect/Field;");" is 146.,346
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Long Statement,The length of the statement "mv.visitFieldInsn(GETFIELD`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"fieldTable"`"[Ljava/lang/reflect/Field;");" is 135.,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Long Statement,The length of the statement "mv.visitFieldInsn(GETFIELD`getAccessorNameInternal(this.getTarget()`this.getAccessorType())`"fieldTable"`"[Ljava/lang/reflect/Field;");" is 135.,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Magic Number,The method contains a magic number: 2,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Magic Number,The method contains a magic number: 2,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Magic Number,The method contains a magic number: 2,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Magic Number,The method contains a magic number: 2,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Magic Number,The method contains a magic number: 2,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Magic Number,The method contains a magic number: 2,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,FieldAccessorBuilder,injectGetIndex,Magic Number,The method contains a magic number: 3,356
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,AccessorBuilder,createClassWriter,Long Statement,The length of the statement "classWriter.visit(V1_6`ACC_PUBLIC + ACC_SUPER`internalName`null`"java/lang/Object"`new String[]{getInternalName(accessorType.getAccessorType().getName())});" is 156.,79
+CaptainBern_Reflection,com.captainbern.reflection.asm.accessor,AccessorBuilder,injectGetTargetClass,Long Statement,The length of the statement "MethodVisitor methodVisitor=classWriter.visitMethod(ACC_PUBLIC`"getTargetClass"`"()Ljava/lang/Class;"`"()Ljava/lang/Class<*>;"`null);" is 133.,96
+CaptainBern_Reflection,com.captainbern.reflection.asm,Boxer,box,Complex Method,Cyclomatic complexity of the method is 11,87
+CaptainBern_Reflection,com.captainbern.reflection.asm,Boxer,insertValueOf,Long Statement,The length of the statement "this.methodVisitor.visitMethodInsn(INVOKESTATIC`boxedType.getInternalName()`"valueOf"`"(" + DESCRIPTORS.get(boxedType) + ")"+ boxedType.getDescriptor());" is 153.,127
+CaptainBern_Reflection,com.captainbern.reflection.asm,Boxer,unbox,Complex Method,Cyclomatic complexity of the method is 11,131
+CaptainBern_Reflection,com.captainbern.reflection.asm,Boxer,insertInvokeVirtual,Long Statement,The length of the statement "this.methodVisitor.visitMethodInsn(INVOKEVIRTUAL`type.getSort() == Type.ARRAY ? type.getDescriptor() : type.getInternalName()`methodName`"()" + DESCRIPTORS.get(type)`false);" is 173.,194
+CaptainBern_Reflection,com.captainbern.reflection.asm,CompilerService,initialize,Long Statement,The length of the statement "defineMethod=ClassLoader.class.getDeclaredMethod("defineClass"`new Class[]{String.class`byte[].class`int.class`int.class`ProtectionDomain.class});" is 146.,24
+CaptainBern_Reflection,com.captainbern.reflection.asm,CompilerService,defineClass,Long Statement,The length of the statement "return (Class<?>)defineMethod.invoke(this.classLoader`className`data`0`data.length`this.getClass().getProtectionDomain());" is 122.,40
+CaptainBern_Reflection,com.captainbern.reflection.utils,Assert,throwEqualsError,Long Statement,The length of the statement "throw new AssertionError(format("Was given: %s<%s> but expected: %s<%s>!"`expected`String.valueOf(expected)`actual`String.valueOf(actual)));" is 140.,41
+CaptainBern_Reflection,com.captainbern.reflection.utils,Assert,format,Magic Number,The method contains a magic number: 16,96
+CaptainBern_Reflection,com.captainbern.reflection.utils,Assert,format,Magic Number,The method contains a magic number: 2,96
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeMethodImpl,SafeMethodImpl,Empty catch clause,The method has an empty catch block.,22
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeMethodImpl,isOverridable,Long Statement,The length of the statement "return !(Modifier.isFinal(this.method.getModifiers()) || Modifier.isPrivate(this.method.getModifiers()) || Modifier.isStatic(this.method.getModifiers())|| Modifier.isFinal(this.method.getDeclaringClass().getModifiers()));" is 221.,158
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeConstructorImpl,SafeConstructorImpl,Empty catch clause,The method has an empty catch block.,41
+CaptainBern_Reflection,com.captainbern.reflection.impl,ClassTemplateImpl,hashCode,Magic Number,The method contains a magic number: 31,91
+CaptainBern_Reflection,com.captainbern.reflection.impl,ClassTemplateImpl,hashCode,Magic Number,The method contains a magic number: 31,91
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,initializeFields,Complex Conditional,The conditional expression ENUM_CONSTANTS_ACCESSOR != null && ENUM_CONSTANT_DIRECTORY_ACCESSOR != null && CONSTRUCTOR_ACCESSOR_ACCESSOR != null && ACQUIRE_CONSTRUCTOR_ACCESSOR != null is complex.,61
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,initializeFields,Long Identifier,The length of the field ENUM_CONSTANT_DIRECTORY_ACCESSOR is 32.,61
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,initializeFields,Long Statement,The length of the statement "if (ENUM_CONSTANTS_ACCESSOR != null && ENUM_CONSTANT_DIRECTORY_ACCESSOR != null && CONSTRUCTOR_ACCESSOR_ACCESSOR != null && ACQUIRE_CONSTRUCTOR_ACCESSOR != null) return;" is 169.,61
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,initializeFields,Long Statement,The length of the statement "NEW_INSTANCE_ACCESSOR=new Reflection().reflect(sun.reflect.ConstructorAccessor.class).getSafeMethod("newInstance"`Object[].class).getAccessor();" is 144.,61
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,fixFields,Long Identifier,The length of the field ENUM_CONSTANT_DIRECTORY_ACCESSOR is 32.,78
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,getConstructor,Long Statement,The length of the statement "List<SafeConstructor<T>> constructors=new Reflection().reflect(this.enumType).getSafeConstructors(new AbstractMatcher<Constructor>(){" is 133.,119
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,getConstructor,Long Statement,The length of the statement "if (!paramTypes[i].isAssignableFrom(parameters[i] instanceof Class ? (Class<?>)parameters[i] : parameters[i].getClass())) return false;" is 135.,119
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,getConstructor,Magic Number,The method contains a magic number: 2,119
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,getConstructor,Magic Number,The method contains a magic number: 2,119
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,matches,Long Statement,The length of the statement "if (!paramTypes[i].isAssignableFrom(parameters[i] instanceof Class ? (Class<?>)parameters[i] : parameters[i].getClass())) return false;" is 135.,127
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,bake,Magic Number,The method contains a magic number: 2,157
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,bake,Magic Number,The method contains a magic number: 2,157
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,cleanEnumCache,Long Identifier,The length of the field ENUM_CONSTANT_DIRECTORY_ACCESSOR is 32.,170
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,hashCode,Magic Number,The method contains a magic number: 31,177
+CaptainBern_Reflection,com.captainbern.reflection.impl,EnumModifierImpl,hashCode,Magic Number,The method contains a magic number: 31,177
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeFieldImpl,SafeFieldImpl,Empty catch clause,The method has an empty catch block.,40
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeFieldImpl,getAccessor,Complex Method,Cyclomatic complexity of the method is 8,61
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeFieldImpl,getAccessor,Long Statement,The length of the statement "if (instance == null && !Modifier.isStatic(SafeFieldImpl.this.field.getModifiers())) throw new IllegalArgumentException("Non-static fields require a valid instance passed in!");" is 177.,61
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeFieldImpl,getAccessor,Long Statement,The length of the statement "if (!Modifier.isStatic(getModifiers()) && instance == null) throw new IllegalArgumentException("Non-static fields require a valid instance passed-in!");" is 152.,61
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeFieldImpl,get,Long Statement,The length of the statement "if (instance == null && !Modifier.isStatic(SafeFieldImpl.this.field.getModifiers())) throw new IllegalArgumentException("Non-static fields require a valid instance passed in!");" is 177.,65
+CaptainBern_Reflection,com.captainbern.reflection.impl,SafeFieldImpl,set,Long Statement,The length of the statement "if (!Modifier.isStatic(getModifiers()) && instance == null) throw new IllegalArgumentException("Non-static fields require a valid instance passed-in!");" is 152.,89
+CaptainBern_Reflection,com.captainbern.jbel.commons.constant,Constant,readConstant,Complex Method,Cyclomatic complexity of the method is 15,41
+CaptainBern_Reflection,com.captainbern.jbel.commons.constant,Constant,readConstant,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5bacb374,41
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Attribute,readAttribute,Complex Method,Cyclomatic complexity of the method is 23,87
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Attribute,readAttribute,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@288d3d12,87
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,LocalVariableTable,LocalVariableTable,Long Statement,The length of the statement "this(localVariableTable.getNameIndex()`localVariableTable.getLength()`localVariableTable.getVariables()`localVariableTable.getConstantPool());" is 142.,39
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,LocalVariable,LocalVariable,Long Statement,The length of the statement "this(localVariable.getStartPC()`localVariable.getLength()`localVariable.getNameIndex()`localVariable.getSignatureIndex()`localVariable.getIndex());" is 147.,34
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,LocalVariable,LocalVariable,Long Statement,The length of the statement "this(codeStream.readUnsignedShort()`codeStream.readUnsignedShort()`codeStream.readUnsignedShort()`codeStream.readUnsignedShort()`codeStream.readUnsignedShort());" is 161.,38
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,LocalVariable,LocalVariable,Long Parameter List,The method has 5 parameters. ,42
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Annotation,Annotation,Long Parameter List,The method has 6 parameters. ,35
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Annotation,Annotation,Long Parameter List,The method has 6 parameters. ,44
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,InnerClasses,InnerClasses,Long Statement,The length of the statement "this(innerClasses.getNameIndex()`innerClasses.getLength()`innerClasses.getInnerClasses()`innerClasses.getConstantPool());" is 121.,39
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,RuntimeInvisibleAnnotations,RuntimeInvisibleAnnotations,Long Parameter List,The method has 5 parameters. ,35
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Code,Code,Long Parameter List,The method has 8 parameters. ,68
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Code,getInternalLength,Magic Number,The method contains a magic number: 8,77
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Code,getInternalLength,Magic Number,The method contains a magic number: 2,77
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Code,getInternalLength,Magic Number,The method contains a magic number: 8,77
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Code,getInternalLength,Magic Number,The method contains a magic number: 2,77
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Code,calculateLength,Magic Number,The method contains a magic number: 6,81
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,Exception,Exception,Long Statement,The length of the statement "this(codeStream.readUnsignedShort()`codeStream.readUnsignedShort()`codeStream.readUnsignedShort()`codeStream.readUnsignedShort());" is 130.,33
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,ParameterAnnotation,ParameterAnnotation,Long Parameter List,The method has 5 parameters. ,34
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,ParameterAnnotation,ParameterAnnotation,Long Parameter List,The method has 5 parameters. ,43
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,RuntimeVisibleAnnotations,RuntimeVisibleAnnotations,Long Parameter List,The method has 5 parameters. ,35
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,LocalVariableTypeTable,LocalVariableTypeTable,Long Statement,The length of the statement "this(localVariableTypeTable.getNameIndex()`localVariableTypeTable.getLength()`localVariableTypeTable.getVariables()`localVariableTypeTable.getConstantPool());" is 158.,39
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,ConstantValue,ConstantValue,Long Statement,The length of the statement "this(constantValue.getNameIndex()`constantValue.getLength()`constantValue.getConstantValueIndex()`constantValue.getConstantPool());" is 131.,37
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,InnerClass,InnerClass,Long Statement,The length of the statement "this(innerClass.getInnerClassInfoIndex()`innerClass.getOuterClassInfoIndex()`innerClass.getInnerNameIndex()`innerClass.getInnerClassAccessFlags());" is 147.,33
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,InnerClass,InnerClass,Long Statement,The length of the statement "this(codeStream.readUnsignedShort()`codeStream.readUnsignedShort()`codeStream.readUnsignedShort()`codeStream.readUnsignedShort());" is 130.,37
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,EnclosingMethod,EnclosingMethod,Long Statement,The length of the statement "this(enclosingMethod.getNameIndex()`enclosingMethod.getLength()`enclosingMethod.getClassIndex()`enclosingMethod.getMethodIndex()`enclosingMethod.getConstantPool());" is 164.,42
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute,EnclosingMethod,EnclosingMethod,Long Parameter List,The method has 5 parameters. ,50
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.annotation.elementvalue,ElementValue,read,Complex Method,Cyclomatic complexity of the method is 14,75
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.annotation.elementvalue,ElementValue,read,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5c5551d9,75
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.annotation,AnnotationEntry,read,Long Statement,The length of the statement "annotationEntry.addElementValue(new ElementValuePair(codeStream.readUnsignedShort()`ElementValue.read(codeStream`constantPool)`constantPool));" is 142.,41
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.stackmap,TypeInfo,setType,Long Statement,The length of the statement "if (type < ITEM_Top || type > ITEM_Uninitialized) throw new IllegalArgumentException("Illegal StackMapType for type: " + type);" is 127.,52
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.stackmap,StackMapTableEntry,StackMapTableEntry,Complex Method,Cyclomatic complexity of the method is 11,44
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.stackmap,StackMapTableEntry,StackMapTableEntry,Magic Number,The method contains a magic number: 251,44
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.stackmap,StackMapTableEntry,StackMapTableEntry,Long Parameter List,The method has 7 parameters. ,89
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.stackmap,StackMapTableEntry,write,Complex Method,Cyclomatic complexity of the method is 11,155
+CaptainBern_Reflection,com.captainbern.jbel.commons.attribute.stackmap,StackMapEntry,StackMapEntry,Long Parameter List,The method has 6 parameters. ,32
+CaptainBern_Reflection,com.captainbern.jbel.commons.member.field,FieldInfo,FieldInfo,Long Parameter List,The method has 5 parameters. ,42
+CaptainBern_Reflection,com.captainbern.jbel.commons.member,Interface,setName,Long Statement,The length of the statement "this.constantPool.setConstant(((ClassConstant)this.constantPool.getConstant(this.index`CONSTANT_Class)).getNameIndex()`new Utf8Constant(name));" is 143.,31
+CaptainBern_Reflection,com.captainbern.jbel.commons.member,Member,Member,Long Statement,The length of the statement "this(member.getAccessFlags()`member.getNameIndex()`member.getDescriptorIndex()`member.getAttributes()`member.getConstantPool());" is 128.,45
+CaptainBern_Reflection,com.captainbern.jbel.commons.member,Member,Member,Long Parameter List,The method has 5 parameters. ,58
+CaptainBern_Reflection,com.captainbern.jbel.commons.member.method,MethodInfo,MethodInfo,Long Parameter List,The method has 5 parameters. ,42
+CaptainBern_Reflection,com.captainbern.jbel,ConstantPool,getConstant,Long Statement,The length of the statement "throw new IndexOutOfBoundsException("Pool size: \'" + this.constantPool.length + "\'. Referenced index: \'"+ index+ "\'");" is 122.,82
+CaptainBern_Reflection,com.captainbern.jbel,ConstantPool,getConstant,Long Statement,The length of the statement "throw new ClassFormatException("Expected class \'" + CONSTANT_NAMES[tag] + "\' at index \'"+ index+ "\' and got \'"+ constant+ "\'");" is 133.,89
+CaptainBern_Reflection,com.captainbern.jbel,ClassReader,ClassReader,Magic Number,The method contains a magic number: 8192,57
+CaptainBern_Reflection,com.captainbern.jbel,ClassReader,getByteCode,Magic Number,The method contains a magic number: 8192,175
+CaptainBern_Reflection,com.captainbern.jbel,ClassReader,getByteCode,Magic Number,The method contains a magic number: 8192,175
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putByte,Magic Number,The method contains a magic number: 0xFF,66
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put11,Magic Number,The method contains a magic number: 2,79
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put11,Magic Number,The method contains a magic number: 0xFF,79
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put11,Magic Number,The method contains a magic number: 0xFF,79
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putShort,Magic Number,The method contains a magic number: 2,94
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putShort,Magic Number,The method contains a magic number: 8,94
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putShort,Magic Number,The method contains a magic number: 0xFF,94
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putShort,Magic Number,The method contains a magic number: 0xFF,94
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put12,Magic Number,The method contains a magic number: 3,108
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put12,Magic Number,The method contains a magic number: 0xFF,108
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put12,Magic Number,The method contains a magic number: 8,108
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put12,Magic Number,The method contains a magic number: 0xFF,108
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,put12,Magic Number,The method contains a magic number: 0xFF,108
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 4,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 24,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 0xFF,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 16,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 0xFF,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 8,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 0xFF,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putInt,Magic Number,The method contains a magic number: 0xFF,124
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 8,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 56,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 48,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 40,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 32,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 24,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 16,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 8,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putLong,Magic Number,The method contains a magic number: 0xFF,160
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Complex Method,Cyclomatic complexity of the method is 9,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 2,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 8,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 3,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 2,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 8,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 2,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0xE0,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 12,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0xF,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0x80,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 6,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0x3F,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0x80,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0x3F,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0xC0,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 6,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0x1F,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0x80,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,putString,Magic Number,The method contains a magic number: 0x3F,198
+CaptainBern_Reflection,com.captainbern.jbel,ByteVector,ensureCapacity,Magic Number,The method contains a magic number: 2,257
+CaptainBern_Reflection,com.captainbern.jbel,Access,setPublic,Long Statement,The length of the statement "return this.flag=(bool ? (this.flag & ~(ACC_PRIVATE | ACC_PROTECTED)) | ACC_PUBLIC : this.flag & ~(ACC_PUBLIC) | ACC_PRIVATE);" is 126.,82
+CaptainBern_Reflection,com.captainbern.jbel,ClassReaderTest,visit,Long Parameter List,The method has 5 parameters. ,25
+CaptainBern_Reflection,com.captainbern.jbel,ClassReaderTest,print,Complex Method,Cyclomatic complexity of the method is 11,39
+CaptainBern_Reflection,com.captainbern.jbel,ByteVectorTest,testByteVector,Magic Number,The method contains a magic number: 15,7
+CaptainBern_Reflection,com.captainbern.jbel.util,Dissembler,dissemble,Empty catch clause,The method has an empty catch block.,14
+CaptainBern_Reflection,com.captainbern.jbel.util.code,CodeIterator,getByteAt,Magic Number,The method contains a magic number: 0xFF,34
+CaptainBern_Reflection,com.captainbern.jbel.visitor,ClassVisitor,visit,Long Parameter List,The method has 5 parameters. ,33
+CaptainBern_Reflection,com.captainbern.jbel.visitor,ClassVisitor,visitMethod,Long Parameter List,The method has 5 parameters. ,71
+CaptainBern_Reflection,com.captainbern.jbel.visitor,AttributeVisitor,visitRuntimeVisibleParameterAnnotations,Long Identifier,The length of the parameter runtimeVisibleParameterAnnotations is 34.,105
+CaptainBern_Reflection,com.captainbern.jbel.visitor,AttributeVisitor,visitRuntimeInvisibleParameterAnnotations,Long Identifier,The length of the parameter runtimeInvisibleParameterAnnotations is 36.,111
+CaptainBern_Reflection,com.captainbern.jbel.generator,MemberGenerator,MemberGenerator,Long Parameter List,The method has 5 parameters. ,7

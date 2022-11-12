@@ -1,0 +1,620 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+camelinaction_camelinaction,camelinaction,GuidGenerator,generate,Magic Number,The method contains a magic number: 10000000,28
+camelinaction_camelinaction,camelinaction,ErpProducer,ErpProducer,Magic Number,The method contains a magic number: 10,36
+camelinaction_camelinaction,camelinaction,ScalabilityTest,createRouteBuilder,Long Statement,The length of the statement "from("jetty:http://localhost:8090/webshop?matchOnUriPrefix=true").convertBodyTo(String.class).to("log:input").choice().when(header(Exchange.HTTP_PATH).isEqualTo("/action/pricing")).to("erp:pricing").otherwise().to("direct:other").end().to("log:output");" is 253.,67
+camelinaction_camelinaction,camelinaction,ScalabilityTest,configure,Long Statement,The length of the statement "from("jetty:http://localhost:8090/webshop?matchOnUriPrefix=true").convertBodyTo(String.class).to("log:input").choice().when(header(Exchange.HTTP_PATH).isEqualTo("/action/pricing")).to("erp:pricing").otherwise().to("direct:other").end().to("log:output");" is 253.,70
+camelinaction_camelinaction,camelinaction,CreateBigFileMain,main,Magic Number,The method contains a magic number: 100,29
+camelinaction_camelinaction,camelinaction,InventoryService,csvToObject,Magic Number,The method contains a magic number: 4,29
+camelinaction_camelinaction,camelinaction,InventoryService,csvToObject,Magic Number,The method contains a magic number: 2,29
+camelinaction_camelinaction,camelinaction,InventoryService,csvToObject,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 100,46
+camelinaction_camelinaction,camelinaction,BigFileCachedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 2,56
+camelinaction_camelinaction,camelinaction,BigFileCachedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 60,56
+camelinaction_camelinaction,camelinaction,BigFileCachedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 1000,56
+camelinaction_camelinaction,camelinaction,BigFileCachedThreadPoolTest,createRouteBuilder,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().executorService(threadPool).bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 296.,70
+camelinaction_camelinaction,camelinaction,BigFileCachedThreadPoolTest,configure,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().executorService(threadPool).bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 296.,73
+camelinaction_camelinaction,camelinaction,BigFileParallelTest,testBigFile,Magic Number,The method contains a magic number: 2,34
+camelinaction_camelinaction,camelinaction,BigFileParallelTest,testBigFile,Magic Number,The method contains a magic number: 60,34
+camelinaction_camelinaction,camelinaction,BigFileParallelTest,testBigFile,Magic Number,The method contains a magic number: 1000,34
+camelinaction_camelinaction,camelinaction,BigFileParallelTest,createRouteBuilder,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().parallelProcessing().bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 289.,48
+camelinaction_camelinaction,camelinaction,BigFileParallelTest,configure,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().parallelProcessing().bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 289.,51
+camelinaction_camelinaction,camelinaction,BigFileSedaTest,testBigFile,Magic Number,The method contains a magic number: 300,30
+camelinaction_camelinaction,camelinaction,BigFileSedaTest,testBigFile,Magic Number,The method contains a magic number: 1000,30
+camelinaction_camelinaction,camelinaction,BigFileSedaTest,testBigFile,Magic Number,The method contains a magic number: 1000,30
+camelinaction_camelinaction,camelinaction,BigFileSedaTest,createRouteBuilder,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().bean(InventoryService.class`"csvToObject").to("seda:update").end().log("Done processing big file: ${header.CamelFileName}");" is 266.,49
+camelinaction_camelinaction,camelinaction,BigFileSedaTest,configure,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().bean(InventoryService.class`"csvToObject").to("seda:update").end().log("Done processing big file: ${header.CamelFileName}");" is 266.,52
+camelinaction_camelinaction,camelinaction,SpringBigFileSedaTest,testBigFile,Magic Number,The method contains a magic number: 300,29
+camelinaction_camelinaction,camelinaction,SpringBigFileSedaTest,testBigFile,Magic Number,The method contains a magic number: 1000,29
+camelinaction_camelinaction,camelinaction,SpringBigFileSedaTest,testBigFile,Magic Number,The method contains a magic number: 1000,29
+camelinaction_camelinaction,camelinaction,SpringBigFileFixedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 2,33
+camelinaction_camelinaction,camelinaction,SpringBigFileFixedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 60,33
+camelinaction_camelinaction,camelinaction,SpringBigFileFixedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 1000,33
+camelinaction_camelinaction,camelinaction,BigFileFixedThreadPoolTest,setUp,Magic Number,The method contains a magic number: 20,38
+camelinaction_camelinaction,camelinaction,BigFileFixedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 2,54
+camelinaction_camelinaction,camelinaction,BigFileFixedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 60,54
+camelinaction_camelinaction,camelinaction,BigFileFixedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 1000,54
+camelinaction_camelinaction,camelinaction,BigFileFixedThreadPoolTest,createRouteBuilder,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().executorService(threadPool).bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 296.,68
+camelinaction_camelinaction,camelinaction,BigFileFixedThreadPoolTest,configure,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().executorService(threadPool).bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 296.,71
+camelinaction_camelinaction,camelinaction,SpringBigFileParallelTest,testBigFile,Magic Number,The method contains a magic number: 2,33
+camelinaction_camelinaction,camelinaction,SpringBigFileParallelTest,testBigFile,Magic Number,The method contains a magic number: 60,33
+camelinaction_camelinaction,camelinaction,SpringBigFileParallelTest,testBigFile,Magic Number,The method contains a magic number: 1000,33
+camelinaction_camelinaction,camelinaction,SpringBigFileCachedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 2,33
+camelinaction_camelinaction,camelinaction,SpringBigFileCachedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 60,33
+camelinaction_camelinaction,camelinaction,SpringBigFileCachedThreadPoolTest,testBigFile,Magic Number,The method contains a magic number: 1000,33
+camelinaction_camelinaction,camelinaction,BigFileTest,testBigFile,Magic Number,The method contains a magic number: 2,35
+camelinaction_camelinaction,camelinaction,BigFileTest,testBigFile,Magic Number,The method contains a magic number: 60,35
+camelinaction_camelinaction,camelinaction,BigFileTest,testBigFile,Magic Number,The method contains a magic number: 1000,35
+camelinaction_camelinaction,camelinaction,BigFileTest,createRouteBuilder,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 268.,49
+camelinaction_camelinaction,camelinaction,BigFileTest,configure,Long Statement,The length of the statement "from("file:target/inventory?noop=true").log("Starting to process big file: ${header.CamelFileName}").split(body().tokenize("\n")).streaming().bean(InventoryService.class`"csvToObject").to("direct:update").end().log("Done processing big file: ${header.CamelFileName}");" is 268.,52
+camelinaction_camelinaction,camelinaction,ThreadPoolBuilderTest,createRouteBuilder,Magic Number,The method contains a magic number: 5,40
+camelinaction_camelinaction,camelinaction,ThreadPoolBuilderTest,createRouteBuilder,Magic Number,The method contains a magic number: 25,40
+camelinaction_camelinaction,camelinaction,ThreadPoolBuilderTest,createRouteBuilder,Magic Number,The method contains a magic number: 200,40
+camelinaction_camelinaction,camelinaction,ThreadPoolBuilderTest,configure,Magic Number,The method contains a magic number: 5,43
+camelinaction_camelinaction,camelinaction,ThreadPoolBuilderTest,configure,Magic Number,The method contains a magic number: 25,43
+camelinaction_camelinaction,camelinaction,ThreadPoolBuilderTest,configure,Magic Number,The method contains a magic number: 200,43
+camelinaction_camelinaction,camelinaction,MyComponentTest,testMyComponent,Magic Number,The method contains a magic number: 10000,29
+camelinaction_camelinaction,camelinaction,CustomThreadPoolProfileTest,createCustomProfile,Magic Number,The method contains a magic number: 200,32
+camelinaction_camelinaction,camelinaction,CamelFutureDoneTest,testFutureDone,Magic Number,The method contains a magic number: 2000,33
+camelinaction_camelinaction,camelinaction,CamelFutureDoneTest,createRouteBuilder,Long Statement,The length of the statement "from("seda:quote").log("Starting to route ${body}").delay(5000).transform().constant("Camel rocks").log("Route is now done");" is 125.,56
+camelinaction_camelinaction,camelinaction,CamelFutureDoneTest,createRouteBuilder,Magic Number,The method contains a magic number: 5000,56
+camelinaction_camelinaction,camelinaction,CamelFutureDoneTest,configure,Long Statement,The length of the statement "from("seda:quote").log("Starting to route ${body}").delay(5000).transform().constant("Camel rocks").log("Route is now done");" is 125.,59
+camelinaction_camelinaction,camelinaction,CamelFutureDoneTest,configure,Magic Number,The method contains a magic number: 5000,59
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,testCallback,Magic Number,The method contains a magic number: 3000,41
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,testCallback,Magic Number,The method contains a magic number: 3,41
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,testCallback,Magic Number,The method contains a magic number: 2,41
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,createRouteBuilder,Magic Number,The method contains a magic number: 500,93
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,createRouteBuilder,Magic Number,The method contains a magic number: 3000,93
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,createRouteBuilder,Magic Number,The method contains a magic number: 1000,93
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,createRouteBuilder,Magic Number,The method contains a magic number: 250,93
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,createRouteBuilder,Magic Number,The method contains a magic number: 4000,93
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,configure,Magic Number,The method contains a magic number: 500,96
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,configure,Magic Number,The method contains a magic number: 3000,96
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,configure,Magic Number,The method contains a magic number: 1000,96
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,configure,Magic Number,The method contains a magic number: 250,96
+camelinaction_camelinaction,camelinaction,RiderAutoPartsCallbackTest,configure,Magic Number,The method contains a magic number: 4000,96
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,testCamelCallback,Magic Number,The method contains a magic number: 3,41
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,testCamelCallback,Magic Number,The method contains a magic number: 6,41
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,testCamelCallback,Magic Number,The method contains a magic number: 3,41
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,testCamelCallback,Magic Number,The method contains a magic number: 2,41
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,createRouteBuilder,Long Statement,The length of the statement "from("seda:echo?concurrentConsumers=5").log("Starting to route ${body}").delay(3000).transform().simple("${body}${body}").log("Route is now done");" is 147.,77
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,createRouteBuilder,Magic Number,The method contains a magic number: 3000,77
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,configure,Long Statement,The length of the statement "from("seda:echo?concurrentConsumers=5").log("Starting to route ${body}").delay(3000).transform().simple("${body}${body}").log("Route is now done");" is 147.,80
+camelinaction_camelinaction,camelinaction,CamelCallbackTest,configure,Magic Number,The method contains a magic number: 3000,80
+camelinaction_camelinaction,camelinaction,JavaFutureTest,testFutureWithDone,Magic Number,The method contains a magic number: 5000,39
+camelinaction_camelinaction,camelinaction,JavaFutureTest,testFutureWithDone,Magic Number,The method contains a magic number: 2000,39
+camelinaction_camelinaction,camelinaction,JavaFutureTest,call,Magic Number,The method contains a magic number: 5000,45
+camelinaction_camelinaction,camelinaction,JavaFutureTest,testFutureWithoutDone,Magic Number,The method contains a magic number: 5000,78
+camelinaction_camelinaction,camelinaction,JavaFutureTest,call,Magic Number,The method contains a magic number: 5000,84
+camelinaction_camelinaction,camelinaction,CamelFutureGetTest,createRouteBuilder,Long Statement,The length of the statement "from("seda:quote").log("Starting to route ${body}").delay(5000).transform().constant("Camel rocks").log("Route is now done");" is 125.,46
+camelinaction_camelinaction,camelinaction,CamelFutureGetTest,createRouteBuilder,Magic Number,The method contains a magic number: 5000,46
+camelinaction_camelinaction,camelinaction,CamelFutureGetTest,configure,Long Statement,The length of the statement "from("seda:quote").log("Starting to route ${body}").delay(5000).transform().constant("Camel rocks").log("Route is now done");" is 125.,49
+camelinaction_camelinaction,camelinaction,CamelFutureGetTest,configure,Magic Number,The method contains a magic number: 5000,49
+camelinaction_camelinaction,camelinaction,WireTapTest,createRouteBuilder,Magic Number,The method contains a magic number: 5,43
+camelinaction_camelinaction,camelinaction,WireTapTest,configure,Magic Number,The method contains a magic number: 5,46
+camelinaction_camelinaction,camelinaction,SyncMultipleThreadsTest,testAsyncInOut,Magic Number,The method contains a magic number: 1000,32
+camelinaction_camelinaction,camelinaction,SyncMultipleThreadsTest,createRouteBuilder,Magic Number,The method contains a magic number: 5,47
+camelinaction_camelinaction,camelinaction,SyncMultipleThreadsTest,createRouteBuilder,Magic Number,The method contains a magic number: 10,47
+camelinaction_camelinaction,camelinaction,SyncMultipleThreadsTest,configure,Magic Number,The method contains a magic number: 5,50
+camelinaction_camelinaction,camelinaction,SyncMultipleThreadsTest,configure,Magic Number,The method contains a magic number: 10,50
+camelinaction_camelinaction,camelinaction,EarlyReplyTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:incoming").routeId("process").convertBodyTo(String.class).log("Incoming ${body}").delay(3000).log("Processing done for ${body}").to("mock:result");" is 160.,51
+camelinaction_camelinaction,camelinaction,EarlyReplyTest,createRouteBuilder,Magic Number,The method contains a magic number: 3000,51
+camelinaction_camelinaction,camelinaction,EarlyReplyTest,configure,Long Statement,The length of the statement "from("direct:incoming").routeId("process").convertBodyTo(String.class).log("Incoming ${body}").delay(3000).log("Processing done for ${body}").to("mock:result");" is 160.,54
+camelinaction_camelinaction,camelinaction,EarlyReplyTest,configure,Magic Number,The method contains a magic number: 3000,54
+camelinaction_camelinaction,camelinaction,AsyncMultipleThreadsTest,testAsyncInOnly,Magic Number,The method contains a magic number: 1000,32
+camelinaction_camelinaction,camelinaction,AsyncMultipleThreadsTest,createRouteBuilder,Magic Number,The method contains a magic number: 5,45
+camelinaction_camelinaction,camelinaction,AsyncMultipleThreadsTest,createRouteBuilder,Magic Number,The method contains a magic number: 10,45
+camelinaction_camelinaction,camelinaction,AsyncMultipleThreadsTest,configure,Magic Number,The method contains a magic number: 5,48
+camelinaction_camelinaction,camelinaction,AsyncMultipleThreadsTest,configure,Magic Number,The method contains a magic number: 10,48
+camelinaction_camelinaction,camelinaction,AsyncOneThreadTest,testSyncInOnly,Magic Number,The method contains a magic number: 1000,31
+camelinaction_camelinaction,camelinaction,OrderCsvToXmlBean,fromCsvToXml,Magic Number,The method contains a magic number: 2,26
+camelinaction_camelinaction,camelinaction,OrderCsvToXmlBean,fromCsvToXml,Magic Number,The method contains a magic number: 3,26
+camelinaction_camelinaction,camelinaction,OrderCsvToXmlBean,fromCsvToXml,Magic Number,The method contains a magic number: 4,26
+camelinaction_camelinaction,camelinaction,ManageTracerMain,testManageTracer,Magic Number,The method contains a magic number: 100,64
+camelinaction_camelinaction,camelinaction,ManageTracerMain,testManageTracer,Magic Number,The method contains a magic number: 100,64
+camelinaction_camelinaction,camelinaction,ManageTracerMain,testManageTracer,Magic Number,The method contains a magic number: 100,64
+camelinaction_camelinaction,camelinaction,ManageTracerMain,testManageTracer,Magic Number,The method contains a magic number: 10,64
+camelinaction_camelinaction,camelinaction,ManageTracerMain,createRouteBuilder,Magic Number,The method contains a magic number: 2000L,79
+camelinaction_camelinaction,camelinaction,ManageTracerMain,configure,Magic Number,The method contains a magic number: 2000L,81
+camelinaction_camelinaction,camelinaction,TracerSpringTest,testTracer,Long Statement,The length of the statement "assertEquals("<order><id>123/id><customerId>4444/customerId><date>20100110</date>" + "<item><id>222</id><amount>1</amount></itemn></order>"`xml);" is 145.,42
+camelinaction_camelinaction,camelinaction,TracerSpringTest,testTracer,Magic Number,The method contains a magic number: 5000,42
+camelinaction_camelinaction,camelinaction,TracerTest,testTracer,Long Statement,The length of the statement "assertEquals("<order><id>123/id><customerId>4444/customerId><date>20100110</date>" + "<item><id>222</id><amount>1</amount></itemn></order>"`xml);" is 145.,45
+camelinaction_camelinaction,camelinaction,TracerTest,testTracer,Magic Number,The method contains a magic number: 5000,45
+camelinaction_camelinaction,camelinaction,OrderCsvToXmlBean,fromCsvToXml,Magic Number,The method contains a magic number: 2,26
+camelinaction_camelinaction,camelinaction,OrderCsvToXmlBean,fromCsvToXml,Magic Number,The method contains a magic number: 3,26
+camelinaction_camelinaction,camelinaction,OrderCsvToXmlBean,fromCsvToXml,Magic Number,The method contains a magic number: 4,26
+camelinaction_camelinaction,camelinaction,LogComponentTest,testLogComponent,Long Statement,The length of the statement "assertEquals("<order><id>123/id><customerId>4444/customerId><date>20100110</date>" + "<item><id>222</id><amount>1</amount></itemn></order>"`xml);" is 145.,45
+camelinaction_camelinaction,camelinaction,LogComponentTest,testLogComponent,Magic Number,The method contains a magic number: 5000,45
+camelinaction_camelinaction,camelinaction,LogComponentTest,createRouteBuilder,Long Statement,The length of the statement "from("file://target/rider/orders").to("log:incoming?showAll=true").bean(OrderCsvToXmlBean.class).to("log:asXml?showBodyType=false&maxChars=40").to("jms:queue:orders");" is 167.,54
+camelinaction_camelinaction,camelinaction,LogComponentTest,configure,Long Statement,The length of the statement "from("file://target/rider/orders").to("log:incoming?showAll=true").bean(OrderCsvToXmlBean.class).to("log:asXml?showBodyType=false&maxChars=40").to("jms:queue:orders");" is 167.,57
+camelinaction_camelinaction,camelinaction,AuditTest,testAudit,Long Statement,The length of the statement "assertEquals("<order><id>123/id><customerId>4444/customerId><date>20100110</date>" + "<item><id>222</id><amount>1</amount></itemn></order>"`xml);" is 145.,45
+camelinaction_camelinaction,camelinaction,AuditTest,testAudit,Magic Number,The method contains a magic number: 5000,45
+camelinaction_camelinaction,camelinaction,AuditTest,createRouteBuilder,Long Statement,The length of the statement "from("file://target/rider/orders").convertBodyTo(String.class).wireTap("seda:audit").bean(OrderCsvToXmlBean.class).to("jms:queue:orders");" is 138.,54
+camelinaction_camelinaction,camelinaction,AuditTest,configure,Long Statement,The length of the statement "from("file://target/rider/orders").convertBodyTo(String.class).wireTap("seda:audit").bean(OrderCsvToXmlBean.class).to("jms:queue:orders");" is 138.,57
+camelinaction_camelinaction,camelinaction,LogEIPSpringTest,testLogEIP,Long Statement,The length of the statement "assertEquals("<order><id>123/id><customerId>4444/customerId><date>20100110</date>" + "<item><id>222</id><amount>1</amount></itemn></order>"`xml);" is 145.,43
+camelinaction_camelinaction,camelinaction,LogEIPSpringTest,testLogEIP,Magic Number,The method contains a magic number: 5000,43
+camelinaction_camelinaction,camelinaction,LogEIPTest,testLogEIP,Long Statement,The length of the statement "assertEquals("<order><id>123/id><customerId>4444/customerId><date>20100110</date>" + "<item><id>222</id><amount>1</amount></itemn></order>"`xml);" is 145.,47
+camelinaction_camelinaction,camelinaction,LogEIPTest,testLogEIP,Magic Number,The method contains a magic number: 5000,47
+camelinaction_camelinaction,camelinaction,LogEIPTest,createRouteBuilder,Long Statement,The length of the statement "from("file://target/rider/orders").log("We got incoming file ${file:name} containing: ${body}").log(LoggingLevel.DEBUG`"Incoming"`"We got incoming file ${file:name} containing: ${body}").bean(OrderCsvToXmlBean.class).to("jms:queue:orders");" is 240.,56
+camelinaction_camelinaction,camelinaction,LogEIPTest,configure,Long Statement,The length of the statement "from("file://target/rider/orders").log("We got incoming file ${file:name} containing: ${body}").log(LoggingLevel.DEBUG`"Incoming"`"We got incoming file ${file:name} containing: ${body}").bean(OrderCsvToXmlBean.class).to("jms:queue:orders");" is 240.,59
+camelinaction_camelinaction,camelinaction,PingServiceMain,main,Magic Number,The method contains a magic number: 99999999,27
+camelinaction_camelinaction,camelinaction,RiderEventNotifierTest,testFailure,Empty catch clause,The method has an empty catch block.,60
+camelinaction_camelinaction,camelinaction,ERPMain,main,Magic Number,The method contains a magic number: 99999999,29
+camelinaction_camelinaction,camelinaction,ERPRoute,configure,Long Statement,The length of the statement "from("timer:foo?period=5000").setBody().simple("Hello ERP calling at ${date:now:HH:mm:ss}").to("erp:foo").to("log:reply");" is 122.,28
+camelinaction_camelinaction,camelinaction,FileCopierWithCamel,main,Magic Number,The method contains a magic number: 10000,26
+camelinaction_camelinaction,camelinaction,OrderCollectorBean,getOrders,Magic Number,The method contains a magic number: 1000,12
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update");" is 163.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 2,29
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 4,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 2,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update");" is 163.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 2,29
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 4,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 2,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,FlipRoutePolicyJavaDSLTest,testFlipRoutePolicyTest,Magic Number,The method contains a magic number: 5,32
+camelinaction_camelinaction,camelinaction,FlipRoutePolicyJavaDSLTest,testFlipRoutePolicyTest,Magic Number,The method contains a magic number: 5,32
+camelinaction_camelinaction,camelinaction,FlipRoutePolicyJavaDSLTest,createRouteBuilder,Long Statement,The length of the statement "from("timer://foo?delay=500").routeId("foo").routePolicy(policy).setBody().constant("Foo message").to("log:foo").to("mock:foo");" is 128.,43
+camelinaction_camelinaction,camelinaction,FlipRoutePolicyJavaDSLTest,createRouteBuilder,Long Statement,The length of the statement "from("timer://bar?delay=500").routeId("bar").routePolicy(policy).noAutoStartup().setBody().constant("Bar message").to("log:bar").to("mock:bar");" is 144.,43
+camelinaction_camelinaction,camelinaction,FlipRoutePolicyJavaDSLTest,configure,Long Statement,The length of the statement "from("timer://foo?delay=500").routeId("foo").routePolicy(policy).setBody().constant("Foo message").to("log:foo").to("mock:foo");" is 128.,46
+camelinaction_camelinaction,camelinaction,FlipRoutePolicyJavaDSLTest,configure,Long Statement,The length of the statement "from("timer://bar?delay=500").routeId("bar").routePolicy(policy).noAutoStartup().setBody().constant("Bar message").to("log:bar").to("mock:bar");" is 144.,46
+camelinaction_camelinaction,camelinaction,FlipRoutePolicySpringXMLTest,testFlipRoutePolicyTest,Magic Number,The method contains a magic number: 5,37
+camelinaction_camelinaction,camelinaction,FlipRoutePolicySpringXMLTest,testFlipRoutePolicyTest,Magic Number,The method contains a magic number: 5,37
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update");" is 163.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 2,29
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 4,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 2,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update");" is 163.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 2,29
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 4,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 2,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,InventoryRouteDefer,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,30
+camelinaction_camelinaction,camelinaction,InventoryRouteDefer,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update");" is 163.,30
+camelinaction_camelinaction,camelinaction,InventoryRouteDefer,configure,Long Statement,The length of the statement "from("direct:update").routeId("update").startupOrder(1).shutdownRoute(ShutdownRoute.Defer).to("bean:inventoryService?method=updateInventory");" is 142.,30
+camelinaction_camelinaction,camelinaction,InventoryRouteDefer,configure,Magic Number,The method contains a magic number: 3,30
+camelinaction_camelinaction,camelinaction,InventoryRouteDefer,configure,Magic Number,The method contains a magic number: 2,30
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,30
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update");" is 163.,30
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 3,30
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 2,30
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 4,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 2,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,GracefulShutdownBigFileTest,setUp,Magic Number,The method contains a magic number: 60,30
+camelinaction_camelinaction,camelinaction,GracefulShutdownBigFileTest,testShutdownBigFile,Magic Number,The method contains a magic number: 30,38
+camelinaction_camelinaction,camelinaction,GracefulShutdownBigFileTest,testShutdownBigFile,Magic Number,The method contains a magic number: 3000,38
+camelinaction_camelinaction,camelinaction,GracefulShutdownBigFileTest,createFileBody,Magic Number,The method contains a magic number: 58000,49
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update").end();" is 169.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 2,29
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 4,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 2,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,ManualRouteWithOnCompletionTest,testManualRouteWithOnCompletion,Magic Number,The method contains a magic number: 2,52
+camelinaction_camelinaction,camelinaction,ManualRouteWithOnCompletionTest,testManualRouteWithOnCompletion,Magic Number,The method contains a magic number: 5,52
+camelinaction_camelinaction,camelinaction,ManualRouteWithOnCompletionTest,testManualRouteWithOnCompletion,Magic Number,The method contains a magic number: 1000,52
+camelinaction_camelinaction,camelinaction,SpringManualRouteWithOnCompletionTest,testManualRouteWithOnCompletion,Magic Number,The method contains a magic number: 2,48
+camelinaction_camelinaction,camelinaction,SpringManualRouteWithOnCompletionTest,testManualRouteWithOnCompletion,Magic Number,The method contains a magic number: 5,48
+camelinaction_camelinaction,camelinaction,SpringManualRouteWithOnCompletionTest,testManualRouteWithOnCompletion,Magic Number,The method contains a magic number: 5000,48
+camelinaction_camelinaction,camelinaction,ManualRouteWithStopTest,testManualRouteWithStop,Magic Number,The method contains a magic number: 2,52
+camelinaction_camelinaction,camelinaction,ManualRouteWithStopTest,testManualRouteWithStop,Magic Number,The method contains a magic number: 5,52
+camelinaction_camelinaction,camelinaction,ManualRouteWithStopTest,testManualRouteWithStop,Magic Number,The method contains a magic number: 1000,52
+camelinaction_camelinaction,camelinaction,InventoryJavaDSLTest,testSingleFile,Magic Number,The method contains a magic number: 3000,57
+camelinaction_camelinaction,camelinaction,ManualRouteWithOnCompletion,configure,Long Statement,The length of the statement "from("file://target/inventory/manual?maxMessagesPerPoll=1").routeId("manual").noAutoStartup().log("Doing manual update with file ${file:name}").split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update").end();" is 241.,34
+camelinaction_camelinaction,camelinaction,InventorySpringXMLTest,testSingleFile,Magic Number,The method contains a magic number: 3000,57
+camelinaction_camelinaction,camelinaction,ManualRouteWithStop,configure,Long Statement,The length of the statement "from("file://target/inventory/manual?maxMessagesPerPoll=1").routeId("manual").noAutoStartup().log("Doing manual update with file ${file:name}").split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update").end().process(new Processor(){" is 265.,37
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("cxf:bean:inventoryEndpoint").routeId("webservice").startupOrder(3).to("direct:update").transform().method("inventoryService"`"replyOk");" is 142.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Long Statement,The length of the statement "from("file://target/inventory/updates").routeId("file").startupOrder(2).split(body().tokenize("\n")).convertBodyTo(UpdateInventoryInput.class).to("direct:update");" is 163.,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,InventoryRoute,configure,Magic Number,The method contains a magic number: 2,29
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 4,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 2,36
+camelinaction_camelinaction,camelinaction,InventoryConverter,toInput,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,InventoryService,updateInventory,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,InventoryCreateTable,InventoryCreateTable,Empty catch clause,The method has an empty catch block.,29
+camelinaction_camelinaction,camelinaction,InventoryCreateTable,InventoryCreateTable,Long Statement,The length of the statement "jdbc.execute("create table partner_inventory " + "( supplier_id varchar(10)` part_id varchar(10)` name varchar(10)` amount varchar(10) )");" is 139.,29
+camelinaction_camelinaction,camelinaction,InventoryUpdater,toSql,Long Statement,The length of the statement "return String.format("insert into partner_inventory " + "(supplier_id` part_id` name` amount) values " + "('%s'` '%s'` '%s'` '%s')"`args);" is 138.,21
+camelinaction_camelinaction,camelinaction,InventoryUpdaterAnnotatedWithProduce,toSql,Long Statement,The length of the statement "return String.format("insert into partner_inventory (supplier_id` part_id` name` amount) values ('%s'` '%s'` '%s'` '%s')"`args);" is 128.,27
+camelinaction_camelinaction,camelinaction,InventoryUpdaterAnnotatedWithProduceInterface,toSql,Long Statement,The length of the statement "return String.format("insert into partner_inventory (supplier_id` part_id` name` amount) values ('%s'` '%s'` '%s'` '%s')"`args);" is 128.,26
+camelinaction_camelinaction,camelinaction,InventoryServiceTest,testUpdateInventory,Magic Number,The method contains a magic number: 1000,42
+camelinaction_camelinaction,camelinaction,StarterKitClientTest,testStarterShipping,Magic Number,The method contains a magic number: 2,65
+camelinaction_camelinaction,camelinaction,StarterKitMockedTest,shipInventory,Magic Number,The method contains a magic number: 2,61
+camelinaction_camelinaction,camelinaction,StarterKitMockedSedaTest,shipInventory,Magic Number,The method contains a magic number: 2,59
+camelinaction_camelinaction,camelinaction,OrderRouterWithSeda,main,Long Statement,The length of the statement "from("seda:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("seda:xmlOrders").when(header("CamelFileName").endsWith(".csv")).to("seda:csvOrders");" is 173.,42
+camelinaction_camelinaction,camelinaction,OrderRouterWithSeda,main,Magic Number,The method contains a magic number: 10000,42
+camelinaction_camelinaction,camelinaction,OrderRouterWithSeda,configure,Long Statement,The length of the statement "from("seda:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("seda:xmlOrders").when(header("CamelFileName").endsWith(".csv")).to("seda:csvOrders");" is 173.,54
+camelinaction_camelinaction,camelinaction,FileSaverWithFileName,main,Magic Number,The method contains a magic number: 10000,26
+camelinaction_camelinaction,camelinaction,FileSaver,main,Magic Number,The method contains a magic number: 10000,26
+camelinaction_camelinaction,camelinaction,FilePrinter,main,Magic Number,The method contains a magic number: 10000,26
+camelinaction_camelinaction,camelinaction,TimerExample,main,Magic Number,The method contains a magic number: 5000,25
+camelinaction_camelinaction,camelinaction,FtpServerBean,shutdownServer,Empty catch clause,The method has an empty catch block.,45
+camelinaction_camelinaction,camelinaction,OrderRouter,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:topic:xmlOrders").when(header("CamelFileName").endsWith(".csv")).to("jms:topic:csvOrders");" is 182.,36
+camelinaction_camelinaction,camelinaction,QuartzCronExample,main,Magic Number,The method contains a magic number: 10000,25
+camelinaction_camelinaction,camelinaction,QuartzExample,main,Long Statement,The length of the statement "from("quartz://myTimer?trigger.repeatInterval=2000&trigger.repeatCount=-1").setBody().simple("I was fired at ${header.fireTime}").to("stream:out");" is 147.,25
+camelinaction_camelinaction,camelinaction,QuartzExample,main,Magic Number,The method contains a magic number: 10000,25
+camelinaction_camelinaction,camelinaction,QuartzExample,configure,Long Statement,The length of the statement "from("quartz://myTimer?trigger.repeatInterval=2000&trigger.repeatCount=-1").setBody().simple("I was fired at ${header.fireTime}").to("stream:out");" is 147.,31
+camelinaction_camelinaction,camelinaction,UseCaseMain,main,Magic Number,The method contains a magic number: 99999999,27
+camelinaction_camelinaction,camelinaction,HttpServer,main,Magic Number,The method contains a magic number: 999999999,32
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(5).redeliveryDelay(2000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 123.,30
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Magic Number,The method contains a magic number: 5,30
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Magic Number,The method contains a magic number: 2000,30
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Magic Number,The method contains a magic number: 3,30
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,testOnExceptionGab,Magic Number,The method contains a magic number: 5,39
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,testOnExceptionGab,Magic Number,The method contains a magic number: 3,39
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,testOnExceptionGab,Magic Number,The method contains a magic number: 1000,39
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,testOnExceptionGab,Magic Number,The method contains a magic number: 5000,39
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,configure,Magic Number,The method contains a magic number: 5,47
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,configure,Magic Number,The method contains a magic number: 3,47
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,configure,Magic Number,The method contains a magic number: 1000,47
+camelinaction_camelinaction,camelinaction,OnExceptionGapTest,configure,Magic Number,The method contains a magic number: 5000,47
+camelinaction_camelinaction,camelinaction,OnExceptionFallbackTest,testOnExceptionFallbackToErrorHandler,Magic Number,The method contains a magic number: 3,37
+camelinaction_camelinaction,camelinaction,OnExceptionFallbackTest,configure,Magic Number,The method contains a magic number: 3,45
+camelinaction_camelinaction,camelinaction,OnExceptionTest,testOnExceptionDirectMatch,Magic Number,The method contains a magic number: 3,37
+camelinaction_camelinaction,camelinaction,OnExceptionTest,configure,Magic Number,The method contains a magic number: 3,43
+camelinaction_camelinaction,camelinaction,OnExceptionTest,testOnExceptionWrappedMatch,Magic Number,The method contains a magic number: 3,64
+camelinaction_camelinaction,camelinaction,OnExceptionTest,configure,Magic Number,The method contains a magic number: 3,71
+camelinaction_camelinaction,camelinaction,HandleFaultTest,testOrderFail,Long Statement,The length of the statement "dead.message(0).property(Exchange.EXCEPTION_CAUGHT).convertTo(String.class).contains("ActiveMQ in Action is out of stock");" is 123.,50
+camelinaction_camelinaction,camelinaction,RouteScopeTest,testOrderActiveMQ,Magic Number,The method contains a magic number: 10000,63
+camelinaction_camelinaction,camelinaction,RouteScopeTest,testXmlOrderFail,Long Statement,The length of the statement "template.sendBodyAndHeader("file://target/orders"`"<?xml version=\"1.0\"?><order>" + "<amount>1</amount><name>Camel in Action</name></order>"`Exchange.FILE_NAME`"order2.xml");" is 175.,81
+camelinaction_camelinaction,camelinaction,RouteScopeTest,testXmlOrderFail,Magic Number,The method contains a magic number: 5000,81
+camelinaction_camelinaction,camelinaction,RouteScopeTest,createRouteBuilder,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 123.,100
+camelinaction_camelinaction,camelinaction,RouteScopeTest,createRouteBuilder,Long Statement,The length of the statement "from("seda:queue.inbox").errorHandler(deadLetterChannel("log:DLC").maximumRedeliveries(5).retryAttemptedLogLevel(LoggingLevel.INFO).redeliveryDelay(250).backOffMultiplier(2)).beanRef("orderService"`"validate").beanRef("orderService"`"enrich").to("mock:queue.order");" is 266.,100
+camelinaction_camelinaction,camelinaction,RouteScopeTest,createRouteBuilder,Magic Number,The method contains a magic number: 2,100
+camelinaction_camelinaction,camelinaction,RouteScopeTest,createRouteBuilder,Magic Number,The method contains a magic number: 1000,100
+camelinaction_camelinaction,camelinaction,RouteScopeTest,createRouteBuilder,Magic Number,The method contains a magic number: 5,100
+camelinaction_camelinaction,camelinaction,RouteScopeTest,createRouteBuilder,Magic Number,The method contains a magic number: 250,100
+camelinaction_camelinaction,camelinaction,RouteScopeTest,createRouteBuilder,Magic Number,The method contains a magic number: 2,100
+camelinaction_camelinaction,camelinaction,RouteScopeTest,configure,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 123.,103
+camelinaction_camelinaction,camelinaction,RouteScopeTest,configure,Long Statement,The length of the statement "from("seda:queue.inbox").errorHandler(deadLetterChannel("log:DLC").maximumRedeliveries(5).retryAttemptedLogLevel(LoggingLevel.INFO).redeliveryDelay(250).backOffMultiplier(2)).beanRef("orderService"`"validate").beanRef("orderService"`"enrich").to("mock:queue.order");" is 266.,103
+camelinaction_camelinaction,camelinaction,RouteScopeTest,configure,Magic Number,The method contains a magic number: 2,103
+camelinaction_camelinaction,camelinaction,RouteScopeTest,configure,Magic Number,The method contains a magic number: 1000,103
+camelinaction_camelinaction,camelinaction,RouteScopeTest,configure,Magic Number,The method contains a magic number: 5,103
+camelinaction_camelinaction,camelinaction,RouteScopeTest,configure,Magic Number,The method contains a magic number: 250,103
+camelinaction_camelinaction,camelinaction,RouteScopeTest,configure,Magic Number,The method contains a magic number: 2,103
+camelinaction_camelinaction,camelinaction,SpringRouteScopeTest,testOrderActiveMQ,Magic Number,The method contains a magic number: 10000,60
+camelinaction_camelinaction,camelinaction,SpringRouteScopeTest,testXmlOrderFail,Long Statement,The length of the statement "template.sendBodyAndHeader("file://target/orders"`"<?xml version=\"1.0\"?><order>" + "<amount>1</amount><name>Camel in Action</name></order>"`Exchange.FILE_NAME`"order2.xml");" is 175.,78
+camelinaction_camelinaction,camelinaction,SpringRouteScopeTest,testXmlOrderFail,Magic Number,The method contains a magic number: 5000,78
+camelinaction_camelinaction,camelinaction,SpringHandleFaultTest,testOrderFail,Long Statement,The length of the statement "dead.message(0).property(Exchange.EXCEPTION_CAUGHT).convertTo(String.class).contains("ActiveMQ in Action is out of stock");" is 123.,59
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,testOrderFail,Magic Number,The method contains a magic number: 5000,51
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,createRouteBuilder,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().asyncDelayedRedelivery().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 148.,76
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,createRouteBuilder,Long Statement,The length of the statement "from("seda:queue.inbox").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 146.,76
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,createRouteBuilder,Magic Number,The method contains a magic number: 2,76
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,createRouteBuilder,Magic Number,The method contains a magic number: 1000,76
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,configure,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().asyncDelayedRedelivery().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 148.,79
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,configure,Long Statement,The length of the statement "from("seda:queue.inbox").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 146.,79
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,configure,Magic Number,The method contains a magic number: 2,79
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerAsyncTest,configure,Magic Number,The method contains a magic number: 1000,79
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,testOrderFail,Magic Number,The method contains a magic number: 5000,50
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,createRouteBuilder,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 123.,63
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,createRouteBuilder,Long Statement,The length of the statement "from("seda:queue.inbox").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 146.,63
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,createRouteBuilder,Magic Number,The method contains a magic number: 2,63
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,createRouteBuilder,Magic Number,The method contains a magic number: 1000,63
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,configure,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 123.,66
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,configure,Long Statement,The length of the statement "from("seda:queue.inbox").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 146.,66
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,configure,Magic Number,The method contains a magic number: 2,66
+camelinaction_camelinaction,camelinaction,DefaultErrorHandlerTest,configure,Magic Number,The method contains a magic number: 1000,66
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testSyncOrderFailThenOK,Long Statement,The length of the statement "errorHandler(deadLetterChannel("mock:dead").maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN).logStackTrace(false));" is 153.,46
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testSyncOrderFailThenOK,Long Statement,The length of the statement "from("seda:queue.inbox").log("Received input ${body}").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 176.,46
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testSyncOrderFailThenOK,Magic Number,The method contains a magic number: 2,46
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testSyncOrderFailThenOK,Magic Number,The method contains a magic number: 1000,46
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Long Statement,The length of the statement "errorHandler(deadLetterChannel("mock:dead").maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN).logStackTrace(false));" is 153.,49
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Long Statement,The length of the statement "from("seda:queue.inbox").log("Received input ${body}").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 176.,49
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Magic Number,The method contains a magic number: 2,49
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Magic Number,The method contains a magic number: 1000,49
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testAsyncOrderFailThenOK,Long Statement,The length of the statement "errorHandler(deadLetterChannel("mock:dead").asyncDelayedRedelivery().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN).logStackTrace(false));" is 178.,79
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testAsyncOrderFailThenOK,Long Statement,The length of the statement "from("seda:queue.inbox").log("Received input ${body}").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 176.,79
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testAsyncOrderFailThenOK,Magic Number,The method contains a magic number: 2,79
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,testAsyncOrderFailThenOK,Magic Number,The method contains a magic number: 1000,79
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Long Statement,The length of the statement "errorHandler(deadLetterChannel("mock:dead").asyncDelayedRedelivery().maximumRedeliveries(2).redeliveryDelay(1000).retryAttemptedLogLevel(LoggingLevel.WARN).logStackTrace(false));" is 178.,82
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Long Statement,The length of the statement "from("seda:queue.inbox").log("Received input ${body}").beanRef("orderService"`"validate").beanRef("orderService"`"enrich").log("Received order ${body}").to("mock:queue.order");" is 176.,82
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Magic Number,The method contains a magic number: 2,82
+camelinaction_camelinaction,camelinaction,SyncVSAsyncDelayedRedeliveryTest,configure,Magic Number,The method contains a magic number: 1000,82
+camelinaction_camelinaction,camelinaction,FileRollbackOnCompletionTest,testRollback,Magic Number,The method contains a magic number: 1000,48
+camelinaction_camelinaction,camelinaction,FileRollbackOnCompletionTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:confirm").onCompletion().onFailureOnly().bean(FileRollback.class`"onFailure").end().bean(OrderService.class`"createMail").log("Saving mail backup file").to("file:target/mail/backup").log("Trying to send mail to ${header.to}").bean(OrderService.class`"sendMail").log("Mail send to ${header.to}");" is 308.,67
+camelinaction_camelinaction,camelinaction,FileRollbackOnCompletionTest,configure,Long Statement,The length of the statement "from("direct:confirm").onCompletion().onFailureOnly().bean(FileRollback.class`"onFailure").end().bean(OrderService.class`"createMail").log("Saving mail backup file").to("file:target/mail/backup").log("Trying to send mail to ${header.to}").bean(OrderService.class`"sendMail").log("Mail send to ${header.to}");" is 308.,70
+camelinaction_camelinaction,camelinaction,FileRollbackTest,createRouteBuilder,Long Statement,The length of the statement ").bean(OrderService.class`"createMail").log("Saving mail backup file").to("file:target/mail/backup").log("Trying to send mail to ${header.to}").bean(OrderService.class`"sendMail").log("Mail send to ${header.to}");" is 213.,73
+camelinaction_camelinaction,camelinaction,FileRollbackTest,configure,Long Statement,The length of the statement ").bean(OrderService.class`"createMail").log("Saving mail backup file").to("file:target/mail/backup").log("Trying to send mail to ${header.to}").bean(OrderService.class`"sendMail").log("Mail send to ${header.to}");" is 213.,76
+camelinaction_camelinaction,camelinaction,SpringFileRollbackTest,testRollback,Magic Number,The method contains a magic number: 1000,54
+camelinaction_camelinaction,camelinaction,OrderService,sendMail,Empty catch clause,The method has an empty catch block.,30
+camelinaction_camelinaction,camelinaction,OrderService,sendMail,Magic Number,The method contains a magic number: 1000,30
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,setupDatabase,Long Statement,The length of the statement "jdbc.execute("create table partner_metric " + "( partner_id varchar(10)` time_occurred varchar(20)` status_code varchar(3)` perf_time varchar(10) )");" is 150.,39
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testSendPartnerReportIntoDatabase,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"123\"><date>200911150815</date><code>200</code><time>4387</time></partner>";" is 125.,53
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testSendPartnerReportIntoDatabase,Magic Number,The method contains a magic number: 5000,53
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testNoConnectionToDatabase,Long Statement,The length of the statement "interceptSendToEndpoint("jdbc:*").skipSendToOriginalEndpoint().throwException(new ConnectException("Cannot connect to the database"));" is 134.,68
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testNoConnectionToDatabase,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"123\"><date>200911150815</date><code>200</code><time>4387</time></partner>";" is 125.,68
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testNoConnectionToDatabase,Magic Number,The method contains a magic number: 15000,68
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testNoConnectionToDatabase,Magic Number,The method contains a magic number: 1000L,68
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,configure,Long Statement,The length of the statement "interceptSendToEndpoint("jdbc:*").skipSendToOriginalEndpoint().throwException(new ConnectException("Cannot connect to the database"));" is 134.,71
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testFailFirstTime,Long Statement,The length of the statement "interceptSendToEndpoint("jdbc:*").to("log:intercepted?showAll=true").choice().when(header("JMSRedelivered").isEqualTo("false")).throwException(new ConnectException("Cannot connect to the database")).end();" is 205.,101
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testFailFirstTime,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"123\"><date>200911150815</date><code>200</code><time>4387</time></partner>";" is 125.,101
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testFailFirstTime,Magic Number,The method contains a magic number: 5000,101
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,testFailFirstTime,Magic Number,The method contains a magic number: 1000L,101
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTXTest,configure,Long Statement,The length of the statement "interceptSendToEndpoint("jdbc:*").to("log:intercepted?showAll=true").choice().when(header("JMSRedelivered").isEqualTo("false")).throwException(new ConnectException("Cannot connect to the database")).end();" is 205.,104
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTest,setupDatabase,Long Statement,The length of the statement "jdbc.execute("create table partner_metric " + "( partner_id varchar(10)` time_occurred varchar(20)` status_code varchar(3)` perf_time varchar(10) )");" is 150.,38
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTest,testSendPartnerReportIntoDatabase,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"123\"><date>200911150815</date><code>200</code><time>4387</time></partner>";" is 125.,52
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTest,testSendPartnerReportIntoDatabase,Magic Number,The method contains a magic number: 5000,52
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTest,testNoConnectionToDatabase,Long Statement,The length of the statement "interceptSendToEndpoint("jdbc:*").skipSendToOriginalEndpoint().throwException(new ConnectException("Cannot connect to the database"));" is 134.,67
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTest,testNoConnectionToDatabase,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"123\"><date>200911150815</date><code>200</code><time>4387</time></partner>";" is 125.,67
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTest,testNoConnectionToDatabase,Magic Number,The method contains a magic number: 5000,67
+camelinaction_camelinaction,camelinaction,RiderAutoPartsPartnerTest,configure,Long Statement,The length of the statement "interceptSendToEndpoint("jdbc:*").skipSendToOriginalEndpoint().throwException(new ConnectException("Cannot connect to the database"));" is 134.,70
+camelinaction_camelinaction,camelinaction,TXToNonTXTest,testWithCamel,Magic Number,The method contains a magic number: 2000,36
+camelinaction_camelinaction,camelinaction,TXToNonTXTest,testWithCamel,Magic Number,The method contains a magic number: 10000,36
+camelinaction_camelinaction,camelinaction,TXToNonTXTest,testWithOther,Magic Number,The method contains a magic number: 10000,45
+camelinaction_camelinaction,camelinaction,TXToNonTXTest,testWithDonkey,Magic Number,The method contains a magic number: 10000,53
+camelinaction_camelinaction,camelinaction,TXToNonTXTest,testWithDonkey,Magic Number,The method contains a magic number: 10000,53
+camelinaction_camelinaction,camelinaction,TXToNonTXTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:quote").choice().when(body().contains("Camel")).transform(constant("Camel rocks")).when(body().contains("Donkey")).throwException(new IllegalArgumentException("Donkeys not allowed")).otherwise().transform(body().prepend("Hello "));" is 244.,64
+camelinaction_camelinaction,camelinaction,TXToNonTXTest,configure,Long Statement,The length of the statement "from("direct:quote").choice().when(body().contains("Camel")).transform(constant("Camel rocks")).when(body().contains("Donkey")).throwException(new IllegalArgumentException("Donkeys not allowed")).otherwise().transform(body().prepend("Hello "));" is 244.,67
+camelinaction_camelinaction,camelinaction,TXToTXTest,testWithCamel,Magic Number,The method contains a magic number: 10000,35
+camelinaction_camelinaction,camelinaction,TXToTXTest,testWithCamel,Magic Number,The method contains a magic number: 10000,35
+camelinaction_camelinaction,camelinaction,TXToTXTest,testWithDonkey,Magic Number,The method contains a magic number: 10000,46
+camelinaction_camelinaction,camelinaction,TXToTXTest,testWithDonkey,Magic Number,The method contains a magic number: 10000,46
+camelinaction_camelinaction,camelinaction,TXToTXTest,testWithDonkey,Magic Number,The method contains a magic number: 10000,46
+camelinaction_camelinaction,camelinaction,TXToTXTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:quote").transacted().choice().when(body().contains("Camel")).to("activemq:queue:camel").otherwise().throwException(new IllegalArgumentException("Unsupported animal"));" is 180.,60
+camelinaction_camelinaction,camelinaction,TXToTXTest,configure,Long Statement,The length of the statement "from("direct:quote").transacted().choice().when(body().contains("Camel")).to("activemq:queue:camel").otherwise().throwException(new IllegalArgumentException("Unsupported animal"));" is 180.,63
+camelinaction_camelinaction,camelinaction,OrderCreateTable,OrderCreateTable,Empty catch clause,The method has an empty catch block.,29
+camelinaction_camelinaction,camelinaction,OrderCreateTable,OrderCreateTable,Long Statement,The length of the statement "jdbc.execute("create table riders_order " + "( customer_id varchar(10)` ref_no varchar(10)` part_id varchar(10)` amount varchar(10) )");" is 136.,29
+camelinaction_camelinaction,camelinaction,OrderService,processOrder,Magic Number,The method contains a magic number: 1000,31
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderOk,Magic Number,The method contains a magic number: 2000,52
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderFailOnce,Magic Number,The method contains a magic number: 2000,73
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderFailAll,Magic Number,The method contains a magic number: 2000,95
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackBeforeDbTest,setupDatabase,Long Statement,The length of the statement "jdbc.execute("create table partner_metric " + "( partner_id varchar(10)` time_occurred varchar(20)` status_code varchar(3)` perf_time varchar(10) )");" is 150.,37
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackBeforeDbTest,testXaRollbackBeforeDb,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"0\"><date>200911150927</date><code>500</code><time>8732</time></partner>";" is 123.,56
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackBeforeDbTest,testXaRollbackBeforeDb,Magic Number,The method contains a magic number: 15000,56
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackBeforeDbTest,createRouteBuilder,Long Statement,The length of the statement "from("activemq:queue:partners").transacted().log("*** before database ***").bean(PartnerServiceBean.class`"toSql").to("jdbc:myDataSource?resetAutoCommit=false").log("*** after database ***").throwException(new IllegalArgumentException("Forced failure after DB"));" is 263.,77
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackBeforeDbTest,configure,Long Statement,The length of the statement "from("activemq:queue:partners").transacted().log("*** before database ***").bean(PartnerServiceBean.class`"toSql").to("jdbc:myDataSource?resetAutoCommit=false").log("*** after database ***").throwException(new IllegalArgumentException("Forced failure after DB"));" is 263.,80
+camelinaction_camelinaction,camelinaction,AtomikosXACommitTest,setupDatabase,Long Statement,The length of the statement "jdbc.execute("create table partner_metric " + "( partner_id varchar(10)` time_occurred varchar(20)` status_code varchar(3)` perf_time varchar(10) )");" is 150.,37
+camelinaction_camelinaction,camelinaction,AtomikosXACommitTest,testXaCommit,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"123\"><date>200911150815</date><code>200</code><time>4387</time></partner>";" is 125.,56
+camelinaction_camelinaction,camelinaction,AtomikosXACommitTest,testXaCommit,Magic Number,The method contains a magic number: 5000,56
+camelinaction_camelinaction,camelinaction,AtomikosXACommitTest,createRouteBuilder,Long Statement,The length of the statement "from("activemq:queue:partners").transacted().bean(PartnerServiceBean.class`"toSql").to("jdbc:myDataSource?resetAutoCommit=false").to("mock:result");" is 148.,71
+camelinaction_camelinaction,camelinaction,AtomikosXACommitTest,configure,Long Statement,The length of the statement "from("activemq:queue:partners").transacted().bean(PartnerServiceBean.class`"toSql").to("jdbc:myDataSource?resetAutoCommit=false").to("mock:result");" is 148.,74
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackAfterDbTest,setupDatabase,Long Statement,The length of the statement "jdbc.execute("create table partner_metric " + "( partner_id varchar(10)` time_occurred varchar(20)` status_code varchar(3)` perf_time varchar(10) )");" is 150.,37
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackAfterDbTest,testXaRollbackAfterDb,Long Statement,The length of the statement "String xml="<?xml version=\"1.0\"?><partner id=\"123\"><date>200911150815</date><code>200</code><time>4387</time></partner>";" is 125.,56
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackAfterDbTest,testXaRollbackAfterDb,Magic Number,The method contains a magic number: 15000,56
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackAfterDbTest,createRouteBuilder,Long Statement,The length of the statement "from("activemq:queue:partners").transacted().log("*** before database ***").bean(PartnerServiceBean.class`"toSql").to("jdbc:myDataSource?resetAutoCommit=false").log("*** after database ***").throwException(new IllegalArgumentException("Forced failure after DB"));" is 263.,76
+camelinaction_camelinaction,camelinaction,AtomikosXARollbackAfterDbTest,configure,Long Statement,The length of the statement "from("activemq:queue:partners").transacted().log("*** before database ***").bean(PartnerServiceBean.class`"toSql").to("jdbc:myDataSource?resetAutoCommit=false").log("*** after database ***").throwException(new IllegalArgumentException("Forced failure after DB"));" is 263.,79
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientValid,Magic Number,The method contains a magic number: 2010,53
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientValid,Magic Number,The method contains a magic number: 20,53
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientValid,Magic Number,The method contains a magic number: 7,53
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientValid,Magic Number,The method contains a magic number: 47,53
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientValid,Magic Number,The method contains a magic number: 58,53
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientValid,Magic Number,The method contains a magic number: 123,53
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientValid,Magic Number,The method contains a magic number: 5,53
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientInvalid,Magic Number,The method contains a magic number: 2010,85
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientInvalid,Magic Number,The method contains a magic number: 20,85
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientInvalid,Magic Number,The method contains a magic number: 7,85
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientInvalid,Magic Number,The method contains a magic number: 47,85
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientInvalid,Magic Number,The method contains a magic number: 58,85
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientInvalid,Magic Number,The method contains a magic number: 999,85
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientInvalid,Magic Number,The method contains a magic number: 5,85
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientFailure,Magic Number,The method contains a magic number: 2010,112
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientFailure,Magic Number,The method contains a magic number: 20,112
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientFailure,Magic Number,The method contains a magic number: 7,112
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientFailure,Magic Number,The method contains a magic number: 47,112
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientFailure,Magic Number,The method contains a magic number: 58,112
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientFailure,Magic Number,The method contains a magic number: 123,112
+camelinaction_camelinaction,camelinaction,OrderTest,testOrderClientFailure,Magic Number,The method contains a magic number: 5,112
+camelinaction_camelinaction,camelinaction,NotifyTest,testNotifyFrom,Magic Number,The method contains a magic number: 5,35
+camelinaction_camelinaction,camelinaction,NotifyTest,testNotifyWhenAnyDoneMatches,Long Statement,The length of the statement "NotifyBuilder notify=new NotifyBuilder(context).from("seda:order").whenAnyDoneMatches(body().isEqualTo("OK`123`2010-04-20'T'15:48:00`2222`3333")).create();" is 155.,52
+camelinaction_camelinaction,camelinaction,NotifyTest,testNotifyWhenAnyDoneMatches,Magic Number,The method contains a magic number: 5,52
+camelinaction_camelinaction,camelinaction,NotifyTest,testNotifyWhenAnyDoneMatches,Magic Number,The method contains a magic number: 2,52
+camelinaction_camelinaction,camelinaction,NotifyTest,testNotifyOr,Magic Number,The method contains a magic number: 5,72
+camelinaction_camelinaction,camelinaction,NotifyTest,createRouteBuilder,Long Statement,The length of the statement "from("seda:order").choice().when().method(OrderService.class`"validateOrder").bean(OrderService.class`"processOrder").to("seda:confirm").otherwise().to("seda:invalid").end();" is 174.,85
+camelinaction_camelinaction,camelinaction,NotifyTest,createRouteBuilder,Magic Number,The method contains a magic number: 2000,85
+camelinaction_camelinaction,camelinaction,NotifyTest,configure,Long Statement,The length of the statement "from("seda:order").choice().when().method(OrderService.class`"validateOrder").bean(OrderService.class`"processOrder").to("seda:confirm").otherwise().to("seda:invalid").end();" is 174.,88
+camelinaction_camelinaction,camelinaction,NotifyTest,configure,Magic Number,The method contains a magic number: 2000,88
+camelinaction_camelinaction,camelinaction,MirandaTest,createRouteBuilder,Long Statement,The length of the statement "from("jetty://http://localhost:9080/service/order").process(new OrderQueryProcessor()).to("mock:miranda").process(new OrderResponseProcessor());" is 144.,37
+camelinaction_camelinaction,camelinaction,MirandaTest,configure,Long Statement,The length of the statement "from("jetty://http://localhost:9080/service/order").process(new OrderQueryProcessor()).to("mock:miranda").process(new OrderResponseProcessor());" is 144.,40
+camelinaction_camelinaction,camelinaction,FirstTest,testMoveFile,Magic Number,The method contains a magic number: 2000,52
+camelinaction_camelinaction,camelinaction,FirstMockTest,testContains,Magic Number,The method contains a magic number: 2,110
+camelinaction_camelinaction,camelinaction,CamelRiderJavaDSLProdTest,testMoveFile,Magic Number,The method contains a magic number: 2000,69
+camelinaction_camelinaction,camelinaction,CamelRiderTest,createApplicationContext,Long Statement,The length of the statement "return new ClassPathXmlApplicationContext(new String[]{"camelinaction/rider-camel-prod.xml"`"camelinaction/rider-camel-test.xml"});" is 131.,57
+camelinaction_camelinaction,camelinaction,CamelRiderTest,testMoveFile,Magic Number,The method contains a magic number: 2000,62
+camelinaction_camelinaction,camelinaction,SpringFirstTest,testMoveFile,Magic Number,The method contains a magic number: 2000,47
+camelinaction_camelinaction,camelinaction,GapTest,testGapDetected,Magic Number,The method contains a magic number: 3,53
+camelinaction_camelinaction,camelinaction,GapTest,testGapDetected,Magic Number,The method contains a magic number: 2,53
+camelinaction_camelinaction,camelinaction,GapTest,testGapDetected,Magic Number,The method contains a magic number: 4,53
+camelinaction_camelinaction,camelinaction,GapTest,testGapDetectedExpected,Magic Number,The method contains a magic number: 3,94
+camelinaction_camelinaction,camelinaction,GapTest,testGapDetectedExpected,Magic Number,The method contains a magic number: 2,94
+camelinaction_camelinaction,camelinaction,GapTest,testGapDetectedExpected,Magic Number,The method contains a magic number: 4,94
+camelinaction_camelinaction,camelinaction,SpringRiderTest,createApplicationContext,Long Statement,The length of the statement "return new ClassPathXmlApplicationContext(new String[]{"camelinaction/rider-spring-prod.xml"`"camelinaction/rider-spring-test.xml"});" is 133.,58
+camelinaction_camelinaction,camelinaction,SpringRiderTest,testMoveFile,Magic Number,The method contains a magic number: 2000,63
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(5).redeliveryDelay(2000).retryAttemptedLogLevel(LoggingLevel.WARN));" is 123.,45
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Magic Number,The method contains a magic number: 5,45
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Magic Number,The method contains a magic number: 2000,45
+camelinaction_camelinaction,camelinaction,UseCaseRoute,configure,Magic Number,The method contains a magic number: 3,45
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingProcessorTest,createRouteBuilder,Magic Number,The method contains a magic number: 5,36
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingProcessorTest,createRouteBuilder,Magic Number,The method contains a magic number: 1000,36
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingProcessorTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingProcessorTest,configure,Magic Number,The method contains a magic number: 5,39
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingProcessorTest,configure,Magic Number,The method contains a magic number: 1000,39
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingProcessorTest,configure,Magic Number,The method contains a magic number: 3,39
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingMockTest,createRouteBuilder,Magic Number,The method contains a magic number: 5,36
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingMockTest,createRouteBuilder,Magic Number,The method contains a magic number: 1000,36
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingMockTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,36
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingMockTest,configure,Magic Number,The method contains a magic number: 5,39
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingMockTest,configure,Magic Number,The method contains a magic number: 1000,39
+camelinaction_camelinaction,camelinaction,SimulateErrorUsingMockTest,configure,Magic Number,The method contains a magic number: 3,39
+camelinaction_camelinaction,camelinaction,MyRouteBuilder,configure,Long Statement,The length of the statement "from("file:src/data?noop=true").choice().when(xpath("/person/city = 'London'")).to("file:target/messages/uk").otherwise().to("file:target/messages/others");" is 156.,36
+camelinaction_camelinaction,camelinaction,Main,main,Magic Number,The method contains a magic number: 10000,24
+camelinaction_camelinaction,camelinaction,FtpServerBean,shutdownServer,Empty catch clause,The method has an empty catch block.,45
+camelinaction_camelinaction,camelinaction,MyRouteBuilder,configure,Long Statement,The length of the statement "from("ftp://rider@localhost:21000/order?password=secret&delete=true").to("log:camelinaction.order.ftp").to("jms:incomingOrders");" is 129.,30
+camelinaction_camelinaction,camelinaction,OrderRouterTest,testSendToFtpAndWebService,Magic Number,The method contains a magic number: 2000,36
+camelinaction_camelinaction,camelinaction,PurchaseOrderVelocityTest,testVelocity,Magic Number,The method contains a magic number: 4995,29
+camelinaction_camelinaction,camelinaction,PurchaseOrderVelocityTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:mail").setHeader("Subject"`constant("Thanks for ordering")).setHeader("From"`constant("donotreply@riders.com")).to("velocity://camelinaction/mail.vm").to("log:mail").to("mock:mail");" is 195.,47
+camelinaction_camelinaction,camelinaction,PurchaseOrderVelocityTest,configure,Long Statement,The length of the statement "from("direct:mail").setHeader("Subject"`constant("Thanks for ordering")).setHeader("From"`constant("donotreply@riders.com")).to("velocity://camelinaction/mail.vm").to("log:mail").to("mock:mail");" is 195.,50
+camelinaction_camelinaction,camelinaction,PurchaseOrderJaxbTest,testJaxb,Magic Number,The method contains a magic number: 4995,30
+camelinaction_camelinaction,camelinaction,PurchaseOrderCsvTest,testCsv,Magic Number,The method contains a magic number: 2,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderCsvTest,testCsv,Magic Number,The method contains a magic number: 2,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderCsvTest,testCsv,Magic Number,The method contains a magic number: 2,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderCsvSpringTest,testCsv,Magic Number,The method contains a magic number: 2,32
+camelinaction_camelinaction,camelinaction,PurchaseOrderCsvSpringTest,testCsv,Magic Number,The method contains a magic number: 2,32
+camelinaction_camelinaction,camelinaction,PurchaseOrderCsvSpringTest,testCsv,Magic Number,The method contains a magic number: 2,32
+camelinaction_camelinaction,camelinaction,PurchaseOrderConverter,toPurchaseOrder,Magic Number,The method contains a magic number: 30,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderConverter,toPurchaseOrder,Magic Number,The method contains a magic number: 9,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderConverter,toPurchaseOrder,Magic Number,The method contains a magic number: 10,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderConverter,toPurchaseOrder,Magic Number,The method contains a magic number: 19,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderConverter,toPurchaseOrder,Magic Number,The method contains a magic number: 20,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderConverter,toPurchaseOrder,Magic Number,The method contains a magic number: 2,31
+camelinaction_camelinaction,camelinaction,PurchaseOrderConverterTest,testPurchaseOrderConverter,Magic Number,The method contains a magic number: 3,30
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessorTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").process(new OrderToCsvProcessor()).to("file://target/orders/received?fileName=report-${header.Date}.csv");" is 127.,44
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessorTest,configure,Long Statement,The length of the statement "from("direct:start").process(new OrderToCsvProcessor()).to("file://target/orders/received?fileName=report-${header.Date}.csv");" is 127.,47
+camelinaction_camelinaction,camelinaction,OrderToCsvBean,map,Magic Number,The method contains a magic number: 9,27
+camelinaction_camelinaction,camelinaction,OrderToCsvBean,map,Magic Number,The method contains a magic number: 10,27
+camelinaction_camelinaction,camelinaction,OrderToCsvBean,map,Magic Number,The method contains a magic number: 19,27
+camelinaction_camelinaction,camelinaction,OrderToCsvBean,map,Magic Number,The method contains a magic number: 20,27
+camelinaction_camelinaction,camelinaction,OrderToCsvBean,map,Magic Number,The method contains a magic number: 29,27
+camelinaction_camelinaction,camelinaction,OrderToCsvBean,map,Magic Number,The method contains a magic number: 30,27
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessor,process,Magic Number,The method contains a magic number: 9,30
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessor,process,Magic Number,The method contains a magic number: 10,30
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessor,process,Magic Number,The method contains a magic number: 19,30
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessor,process,Magic Number,The method contains a magic number: 20,30
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessor,process,Magic Number,The method contains a magic number: 29,30
+camelinaction_camelinaction,camelinaction,OrderToCsvProcessor,process,Magic Number,The method contains a magic number: 30,30
+camelinaction_camelinaction,camelinaction,TopicLoadBalancerTest,testLoadBalancer,Magic Number,The method contains a magic number: 4,33
+camelinaction_camelinaction,camelinaction,TopicLoadBalancerTest,testLoadBalancer,Magic Number,The method contains a magic number: 4,33
+camelinaction_camelinaction,camelinaction,FailoverLoadBalancerTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:a").log("A received: ${body}").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end().to("mock:a");" is 163.,54
+camelinaction_camelinaction,camelinaction,FailoverLoadBalancerTest,configure,Long Statement,The length of the statement "from("direct:a").log("A received: ${body}").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end().to("mock:a");" is 163.,57
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,testLoadBalancer,Long Statement,The length of the statement "interceptSendToEndpoint("direct:a").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end();" is 142.,45
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,configure,Long Statement,The length of the statement "interceptSendToEndpoint("direct:a").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end();" is 142.,49
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,createRouteBuilder,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(3).redeliveryDelay(2000).retryAttemptedLogLevel(LoggingLevel.WARN).retriesExhaustedLogLevel(LoggingLevel.WARN).logStackTrace(false));" is 188.,76
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,76
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,createRouteBuilder,Magic Number,The method contains a magic number: 2000,76
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,configure,Long Statement,The length of the statement "errorHandler(defaultErrorHandler().maximumRedeliveries(3).redeliveryDelay(2000).retryAttemptedLogLevel(LoggingLevel.WARN).retriesExhaustedLogLevel(LoggingLevel.WARN).logStackTrace(false));" is 188.,79
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,configure,Magic Number,The method contains a magic number: 3,79
+camelinaction_camelinaction,camelinaction,FailoverInheritErrorHandlerLoadBalancerTest,configure,Magic Number,The method contains a magic number: 2000,79
+camelinaction_camelinaction,camelinaction,SpringFailoverInheritErrorHandlerLoadBalancerTest,testLoadBalancer,Long Statement,The length of the statement "interceptSendToEndpoint("direct:a").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end();" is 142.,43
+camelinaction_camelinaction,camelinaction,SpringFailoverInheritErrorHandlerLoadBalancerTest,configure,Long Statement,The length of the statement "interceptSendToEndpoint("direct:a").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end();" is 142.,47
+camelinaction_camelinaction,camelinaction,SpringTopicLoadBalancerTest,testLoadBalancer,Magic Number,The method contains a magic number: 4,34
+camelinaction_camelinaction,camelinaction,SpringTopicLoadBalancerTest,testLoadBalancer,Magic Number,The method contains a magic number: 4,34
+camelinaction_camelinaction,camelinaction,FailoverRoundRobinLoadBalancerTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:a").log("A received: ${body}").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end().to("mock:a");" is 163.,56
+camelinaction_camelinaction,camelinaction,FailoverRoundRobinLoadBalancerTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:b").log("B received: ${body}").choice().when(body().contains("Boom")).throwException(new IllegalArgumentException("Damn")).end().end().to("mock:b");" is 161.,56
+camelinaction_camelinaction,camelinaction,FailoverRoundRobinLoadBalancerTest,configure,Long Statement,The length of the statement "from("direct:a").log("A received: ${body}").choice().when(body().contains("Kaboom")).throwException(new IllegalArgumentException("Damn")).end().end().to("mock:a");" is 163.,59
+camelinaction_camelinaction,camelinaction,FailoverRoundRobinLoadBalancerTest,configure,Long Statement,The length of the statement "from("direct:b").log("B received: ${body}").choice().when(body().contains("Boom")).throwException(new IllegalArgumentException("Damn")).end().end().to("mock:b");" is 161.,59
+camelinaction_camelinaction,camelinaction,SplitterAggregateExceptionABCTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").split(body()`new MyIgnoreFailureAggregationStrategy()).log("Split line ${body}").bean(WordTranslateBean.class).to("mock:split").end().log("Aggregated ${body}").to("mock:result");" is 199.,54
+camelinaction_camelinaction,camelinaction,SplitterAggregateExceptionABCTest,configure,Long Statement,The length of the statement "from("direct:start").split(body()`new MyIgnoreFailureAggregationStrategy()).log("Split line ${body}").bean(WordTranslateBean.class).to("mock:split").end().log("Aggregated ${body}").to("mock:result");" is 199.,57
+camelinaction_camelinaction,camelinaction,SplitterBeanTest,testSplitBean,Magic Number,The method contains a magic number: 3,29
+camelinaction_camelinaction,camelinaction,SplitterAggregateABCTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").split(body()`new MyAggregationStrategy()).log("Split line ${body}").bean(WordTranslateBean.class).to("mock:split").end().log("Aggregated ${body}").to("mock:result");" is 186.,51
+camelinaction_camelinaction,camelinaction,SplitterAggregateABCTest,configure,Long Statement,The length of the statement "from("direct:start").split(body()`new MyAggregationStrategy()).log("Split line ${body}").bean(WordTranslateBean.class).to("mock:split").end().log("Aggregated ${body}").to("mock:result");" is 186.,54
+camelinaction_camelinaction,camelinaction,SplitterStopOnExceptionABCTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").split(body()`new MyAggregationStrategy()).stopOnException().log("Split line ${body}").bean(WordTranslateBean.class).to("mock:split").end().log("Aggregated ${body}").to("mock:result");" is 204.,63
+camelinaction_camelinaction,camelinaction,SplitterStopOnExceptionABCTest,configure,Long Statement,The length of the statement "from("direct:start").split(body()`new MyAggregationStrategy()).stopOnException().log("Split line ${body}").bean(WordTranslateBean.class).to("mock:split").end().log("Aggregated ${body}").to("mock:result");" is 204.,66
+camelinaction_camelinaction,camelinaction,SpringSplitterBeanTest,testSplitBean,Magic Number,The method contains a magic number: 3,38
+camelinaction_camelinaction,camelinaction,CustomerService,createCustomer,Magic Number,The method contains a magic number: 222,41
+camelinaction_camelinaction,camelinaction,CustomerService,createCustomer,Magic Number,The method contains a magic number: 333,41
+camelinaction_camelinaction,camelinaction,CustomerService,createCustomer,Magic Number,The method contains a magic number: 444,41
+camelinaction_camelinaction,camelinaction,CustomerService,createCustomer,Magic Number,The method contains a magic number: 123,41
+camelinaction_camelinaction,camelinaction,SpringAggregateABCHawtDBTest,testABCHawtDB,Magic Number,The method contains a magic number: 20,33
+camelinaction_camelinaction,camelinaction,SpringAggregateABCHawtDBTest,testABCHawtDB,Magic Number,The method contains a magic number: 1000,33
+camelinaction_camelinaction,camelinaction,AggregateABCCloseTest,testABCClose,Magic Number,The method contains a magic number: 2,44
+camelinaction_camelinaction,camelinaction,AggregateABCCloseTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).completionSize(3).closeCorrelationKeyOnCompletion(2000).log("Sending out ${body}").to("mock:result");" is 235.,72
+camelinaction_camelinaction,camelinaction,AggregateABCCloseTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,72
+camelinaction_camelinaction,camelinaction,AggregateABCCloseTest,createRouteBuilder,Magic Number,The method contains a magic number: 2000,72
+camelinaction_camelinaction,camelinaction,AggregateABCCloseTest,configure,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).completionSize(3).closeCorrelationKeyOnCompletion(2000).log("Sending out ${body}").to("mock:result");" is 235.,75
+camelinaction_camelinaction,camelinaction,AggregateABCCloseTest,configure,Magic Number,The method contains a magic number: 3,75
+camelinaction_camelinaction,camelinaction,AggregateABCCloseTest,configure,Magic Number,The method contains a magic number: 2000,75
+camelinaction_camelinaction,camelinaction,AggregateABCInvalidTest,testABCInvalid,Magic Number,The method contains a magic number: 2,42
+camelinaction_camelinaction,camelinaction,AggregateABCInvalidTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).completionSize(3).ignoreInvalidCorrelationKeys().log("Sending out ${body}").to("mock:result");" is 228.,63
+camelinaction_camelinaction,camelinaction,AggregateABCInvalidTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,63
+camelinaction_camelinaction,camelinaction,AggregateABCInvalidTest,configure,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).completionSize(3).ignoreInvalidCorrelationKeys().log("Sending out ${body}").to("mock:result");" is 228.,66
+camelinaction_camelinaction,camelinaction,AggregateABCInvalidTest,configure,Magic Number,The method contains a magic number: 3,66
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,testABCRecover,Magic Number,The method contains a magic number: 5,49
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,testABCRecover,Magic Number,The method contains a magic number: 4,49
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,testABCRecover,Magic Number,The method contains a magic number: 20,49
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).aggregationRepository(hawtDB).completionSize(3).log("Sending out ${body}").to("mock:aggregate").throwException(new IllegalArgumentException("Damn does not work")).to("mock:result");" is 315.,78
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,createRouteBuilder,Magic Number,The method contains a magic number: 4,78
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,createRouteBuilder,Magic Number,The method contains a magic number: 3000,78
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,78
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,configure,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).aggregationRepository(hawtDB).completionSize(3).log("Sending out ${body}").to("mock:aggregate").throwException(new IllegalArgumentException("Damn does not work")).to("mock:result");" is 315.,81
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,configure,Magic Number,The method contains a magic number: 4,81
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,configure,Magic Number,The method contains a magic number: 3000,81
+camelinaction_camelinaction,camelinaction,AggregateABCRecoverTest,configure,Magic Number,The method contains a magic number: 3,81
+camelinaction_camelinaction,camelinaction,AggregateABCTest,testABC,Magic Number,The method contains a magic number: 2,39
+camelinaction_camelinaction,camelinaction,AggregateABCTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).completionSize(3).log("Sending out ${body}").to("mock:result");" is 197.,59
+camelinaction_camelinaction,camelinaction,AggregateABCTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,59
+camelinaction_camelinaction,camelinaction,AggregateABCTest,configure,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyAggregationStrategy()).completionSize(3).log("Sending out ${body}").to("mock:result");" is 197.,62
+camelinaction_camelinaction,camelinaction,AggregateABCTest,configure,Magic Number,The method contains a magic number: 3,62
+camelinaction_camelinaction,camelinaction,AggregateABCGroupTest,testABCGroup,Magic Number,The method contains a magic number: 2,41
+camelinaction_camelinaction,camelinaction,AggregateABCGroupTest,testABCGroup,Magic Number,The method contains a magic number: 3,41
+camelinaction_camelinaction,camelinaction,AggregateABCGroupTest,testABCGroup,Magic Number,The method contains a magic number: 2,41
+camelinaction_camelinaction,camelinaction,AggregateABCGroupTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")).completionSize(3).groupExchanges().log("Sending out ${body}").to("mock:result");" is 186.,78
+camelinaction_camelinaction,camelinaction,AggregateABCGroupTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,78
+camelinaction_camelinaction,camelinaction,AggregateABCGroupTest,configure,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")).completionSize(3).groupExchanges().log("Sending out ${body}").to("mock:result");" is 186.,81
+camelinaction_camelinaction,camelinaction,AggregateABCGroupTest,configure,Magic Number,The method contains a magic number: 3,81
+camelinaction_camelinaction,camelinaction,AggregateXMLTest,testXML,Magic Number,The method contains a magic number: 2,39
+camelinaction_camelinaction,camelinaction,AggregateXMLTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").log("Sending ${body}").aggregate(xpath("/order/@customer")`new MyAggregationStrategy()).completionSize(2).completionTimeout(5000).log("Completed by ${property.CamelAggregatedCompletedBy}").log("Sending out ${body}").to("mock:result");" is 255.,51
+camelinaction_camelinaction,camelinaction,AggregateXMLTest,createRouteBuilder,Magic Number,The method contains a magic number: 2,51
+camelinaction_camelinaction,camelinaction,AggregateXMLTest,createRouteBuilder,Magic Number,The method contains a magic number: 5000,51
+camelinaction_camelinaction,camelinaction,AggregateXMLTest,configure,Long Statement,The length of the statement "from("direct:start").log("Sending ${body}").aggregate(xpath("/order/@customer")`new MyAggregationStrategy()).completionSize(2).completionTimeout(5000).log("Completed by ${property.CamelAggregatedCompletedBy}").log("Sending out ${body}").to("mock:result");" is 255.,54
+camelinaction_camelinaction,camelinaction,AggregateXMLTest,configure,Magic Number,The method contains a magic number: 2,54
+camelinaction_camelinaction,camelinaction,AggregateXMLTest,configure,Magic Number,The method contains a magic number: 5000,54
+camelinaction_camelinaction,camelinaction,SpringAggregateXMLTest,testXML,Magic Number,The method contains a magic number: 2,45
+camelinaction_camelinaction,camelinaction,AggregateABCHawtDBTest,testABCHawtDB,Magic Number,The method contains a magic number: 20,38
+camelinaction_camelinaction,camelinaction,AggregateABCHawtDBTest,testABCHawtDB,Magic Number,The method contains a magic number: 1000,38
+camelinaction_camelinaction,camelinaction,AggregateABCHawtDBTest,createRouteBuilder,Long Statement,The length of the statement "from("file:target/inbox").log("Consuming file ${file:name}").aggregate(constant(true)`new MyAggregationStrategy()).aggregationRepository(hawtDB).completionSize(3).log("Sending out ${body}").to("mock:result");" is 208.,52
+camelinaction_camelinaction,camelinaction,AggregateABCHawtDBTest,createRouteBuilder,Magic Number,The method contains a magic number: 3,52
+camelinaction_camelinaction,camelinaction,AggregateABCHawtDBTest,configure,Long Statement,The length of the statement "from("file:target/inbox").log("Consuming file ${file:name}").aggregate(constant(true)`new MyAggregationStrategy()).aggregationRepository(hawtDB).completionSize(3).log("Sending out ${body}").to("mock:result");" is 208.,55
+camelinaction_camelinaction,camelinaction,AggregateABCHawtDBTest,configure,Magic Number,The method contains a magic number: 3,55
+camelinaction_camelinaction,camelinaction,SpringAggregateABCInvalidTest,testABCInvalid,Magic Number,The method contains a magic number: 2,40
+camelinaction_camelinaction,camelinaction,SpringAggregateABCEagerTest,testABCEager,Magic Number,The method contains a magic number: 2,40
+camelinaction_camelinaction,camelinaction,SpringAggregateABCRecoverTest,testABCRecover,Magic Number,The method contains a magic number: 5,49
+camelinaction_camelinaction,camelinaction,SpringAggregateABCRecoverTest,testABCRecover,Magic Number,The method contains a magic number: 4,49
+camelinaction_camelinaction,camelinaction,SpringAggregateABCRecoverTest,testABCRecover,Magic Number,The method contains a magic number: 20,49
+camelinaction_camelinaction,camelinaction,SpringAggregateABCGroupTest,testABCGroup,Magic Number,The method contains a magic number: 2,41
+camelinaction_camelinaction,camelinaction,SpringAggregateABCGroupTest,testABCGroup,Magic Number,The method contains a magic number: 3,41
+camelinaction_camelinaction,camelinaction,SpringAggregateABCGroupTest,testABCGroup,Magic Number,The method contains a magic number: 2,41
+camelinaction_camelinaction,camelinaction,AggregateABCEagerTest,testABCEND,Magic Number,The method contains a magic number: 2,44
+camelinaction_camelinaction,camelinaction,AggregateABCEagerTest,createRouteBuilder,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyEndAggregationStrategy()).completionPredicate(body().isEqualTo("END")).eagerCheckCompletion().log("Sending out ${body}").to("mock:result");" is 250.,66
+camelinaction_camelinaction,camelinaction,AggregateABCEagerTest,configure,Long Statement,The length of the statement "from("direct:start").log("Sending ${body} with correlation key ${header.myId}").aggregate(header("myId")`new MyEndAggregationStrategy()).completionPredicate(body().isEqualTo("END")).eagerCheckCompletion().log("Sending out ${body}").to("mock:result");" is 250.,69
+camelinaction_camelinaction,camelinaction,SpringAggregateABCTest,testABC,Magic Number,The method contains a magic number: 2,39
+camelinaction_camelinaction,camelinaction,SpringAggregateABCCloseTest,testABCClose,Magic Number,The method contains a magic number: 2,42
+camelinaction_camelinaction,camelinaction,OrderRouterWithStop,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders").stop().end().to("jms:continuedProcessing");" is 251.,46
+camelinaction_camelinaction,camelinaction,OrderRouterWithStop,main,Magic Number,The method contains a magic number: 10000,46
+camelinaction_camelinaction,camelinaction,OrderRouterWithStop,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders").stop().end().to("jms:continuedProcessing");" is 251.,58
+camelinaction_camelinaction,camelinaction,OrderRouterOtherwise,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,43
+camelinaction_camelinaction,camelinaction,OrderRouterOtherwise,main,Magic Number,The method contains a magic number: 10000,43
+camelinaction_camelinaction,camelinaction,OrderRouterOtherwise,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,55
+camelinaction_camelinaction,camelinaction,OrderRouter,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").endsWith(".csv")).to("jms:csvOrders");" is 170.,42
+camelinaction_camelinaction,camelinaction,OrderRouter,main,Magic Number,The method contains a magic number: 10000,42
+camelinaction_camelinaction,camelinaction,OrderRouter,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").endsWith(".csv")).to("jms:csvOrders");" is 170.,54
+camelinaction_camelinaction,camelinaction,OrderRouterWithRecipientListBean,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,47
+camelinaction_camelinaction,camelinaction,OrderRouterWithRecipientListBean,main,Magic Number,The method contains a magic number: 2000,47
+camelinaction_camelinaction,camelinaction,OrderRouterWithRecipientListBean,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,59
+camelinaction_camelinaction,camelinaction,OrderRouterWithRecipientList,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,47
+camelinaction_camelinaction,camelinaction,OrderRouterWithRecipientList,main,Magic Number,The method contains a magic number: 2000,47
+camelinaction_camelinaction,camelinaction,OrderRouterWithRecipientList,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,59
+camelinaction_camelinaction,camelinaction,OrderRouterWithFilter,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,46
+camelinaction_camelinaction,camelinaction,OrderRouterWithFilter,main,Magic Number,The method contains a magic number: 10000,46
+camelinaction_camelinaction,camelinaction,OrderRouterWithFilter,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,58
+camelinaction_camelinaction,camelinaction,FtpToJMSWithProcessorExample,main,Magic Number,The method contains a magic number: 10000,39
+camelinaction_camelinaction,camelinaction,RouteBuilderExample,main,Magic Number,The method contains a magic number: 10000,25
+camelinaction_camelinaction,camelinaction,FtpToJMSExample,main,Magic Number,The method contains a magic number: 10000,37
+camelinaction_camelinaction,camelinaction,OrderRouterWithWireTap,main,Long Statement,The length of the statement "from("jms:incomingOrders").wireTap("jms:orderAudit").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 234.,44
+camelinaction_camelinaction,camelinaction,OrderRouterWithWireTap,main,Magic Number,The method contains a magic number: 2000,44
+camelinaction_camelinaction,camelinaction,OrderRouterWithWireTap,configure,Long Statement,The length of the statement "from("jms:incomingOrders").wireTap("jms:orderAudit").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 234.,56
+camelinaction_camelinaction,camelinaction,OrderRouterWithOutputProcessor,main,Long Statement,The length of the statement ").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 183.,45
+camelinaction_camelinaction,camelinaction,OrderRouterWithOutputProcessor,main,Magic Number,The method contains a magic number: 2000,45
+camelinaction_camelinaction,camelinaction,OrderRouterWithOutputProcessor,configure,Long Statement,The length of the statement ").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 183.,57
+camelinaction_camelinaction,camelinaction,OrderRouterWithMulticast,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,45
+camelinaction_camelinaction,camelinaction,OrderRouterWithMulticast,main,Magic Number,The method contains a magic number: 2000,45
+camelinaction_camelinaction,camelinaction,OrderRouterWithMulticast,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,57
+camelinaction_camelinaction,camelinaction,OrderRouterWithParallelMulticast,main,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,49
+camelinaction_camelinaction,camelinaction,OrderRouterWithParallelMulticast,main,Magic Number,The method contains a magic number: 16,49
+camelinaction_camelinaction,camelinaction,OrderRouterWithParallelMulticast,main,Magic Number,The method contains a magic number: 2000,49
+camelinaction_camelinaction,camelinaction,OrderRouterWithParallelMulticast,configure,Long Statement,The length of the statement "from("jms:incomingOrders").choice().when(header("CamelFileName").endsWith(".xml")).to("jms:xmlOrders").when(header("CamelFileName").regex("^.*(csv|csl)$")).to("jms:csvOrders").otherwise().to("jms:badOrders");" is 208.,61
+camelinaction_camelinaction,camelinaction,OrderRouterWithParallelMulticast,configure,Magic Number,The method contains a magic number: 16,61

@@ -1,0 +1,135 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,ExecutorJob,exec,Long Parameter List,The method has 5 parameters. ,40
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,ReminderJob,exec,Long Parameter List,The method has 5 parameters. ,34
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,QuartzScheduler,schedule,Long Statement,The length of the statement "TriggerBuilder<Trigger> builder=TriggerBuilder.newTrigger().withIdentity(StringHelper.getPrimaryKey()`GROUP).startAt(entity.getStartTime());" is 140.,83
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,QuartzScheduler,build,Complex Method,Cyclomatic complexity of the method is 9,146
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,QuartzScheduler,build,Magic Number,The method contains a magic number: 2,146
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,AbstractJob,execute,Magic Number,The method contains a magic number: 3,49
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,AbstractJob,execute,Magic Number,The method contains a magic number: 2,49
+snakerflow_snakerflow,org.snaker.engine.scheduling.quartz,AbstractJob,exec,Long Parameter List,The method has 5 parameters. ,79
+snakerflow_snakerflow,org.snaker.engine.access.hibernate,HibernateHelper,initialize,Complex Method,Cyclomatic complexity of the method is 8,40
+snakerflow_snakerflow,org.snaker.engine.access.mybatis,MybatisTransaction,commit,Complex Conditional,The conditional expression this.connection != null && !this.autoCommit && !isConnectionTransactional() is complex.,54
+snakerflow_snakerflow,org.snaker.engine.access.mybatis,MybatisTransaction,rollback,Complex Conditional,The conditional expression this.connection != null && !this.autoCommit && !isConnectionTransactional() is complex.,63
+snakerflow_snakerflow,org.snaker.engine.spring,SpringJdbcAccess,saveProcess,Magic Number,The method contains a magic number: 2,49
+snakerflow_snakerflow,org.snaker.engine.spring,SpringJdbcAccess,setValues,Magic Number,The method contains a magic number: 2,54
+snakerflow_snakerflow,org.snaker.engine.spring,SpringJdbcAccess,updateProcess,Magic Number,The method contains a magic number: 2,67
+snakerflow_snakerflow,org.snaker.engine.spring,SpringJdbcAccess,setValues,Magic Number,The method contains a magic number: 2,72
+snakerflow_snakerflow,org.snaker.engine,DBAccess,queryList,Long Parameter List,The method has 5 parameters. ,368
+snakerflow_snakerflow,org.snaker.engine,IOrderService,createOrder,Long Parameter List,The method has 5 parameters. ,37
+snakerflow_snakerflow,org.snaker.engine.handlers.impl,MergeBranchHandler,findActiveNodes,Magic Number,The method contains a magic number: 20,52
+snakerflow_snakerflow,org.snaker.engine.handlers.impl,AbstractMergeHandler,handle,Long Statement,The length of the statement "QueryFilter filter=new QueryFilter().setParentId(order.getId()).setExcludedIds(new String[]{execution.getChildOrderId()});" is 122.,36
+snakerflow_snakerflow,org.snaker.engine.handlers.impl,AbstractMergeHandler,handle,Long Statement,The length of the statement "QueryFilter filter=new QueryFilter().setOrderId(order.getId()).setExcludedIds(new String[]{execution.getTask().getId()}).setNames(activeNodes);" is 143.,36
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcAccess,saveProcess,Magic Number,The method contains a magic number: 2,79
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcAccess,updateProcess,Magic Number,The method contains a magic number: 2,105
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,getResultSetValue,Complex Conditional,The conditional expression double.class.equals(requiredType) || Double.class.equals(requiredType) || Number.class.equals(requiredType) is complex.,157
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,getResultSetValue,Complex Conditional,The conditional expression wasNullCheck && value != null && rs.wasNull() is complex.,157
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,getResultSetValue,Complex Method,Cyclomatic complexity of the method is 18,157
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,getResultSetValue,Complex Conditional,The conditional expression className != null && ("oracle.sql.TIMESTAMP".equals(className) || "oracle.sql.TIMESTAMPTZ".equals(className)) is complex.,236
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,getResultSetValue,Complex Method,Cyclomatic complexity of the method is 9,236
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,getResultSetValue,Long Statement,The length of the statement "else if (className != null && ("oracle.sql.TIMESTAMP".equals(className) || "oracle.sql.TIMESTAMPTZ".equals(className))) {" is 121.,236
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,getDialect,Complex Method,Cyclomatic complexity of the method is 8,323
+snakerflow_snakerflow,org.snaker.engine.access.jdbc,JdbcHelper,isExec,Empty catch clause,The method has an empty catch block.,343
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveProcess,Long Statement,The length of the statement "Object[] args=new Object[]{process.getId()`process.getName()`process.getDisplayName()`process.getType()`process.getInstanceUrl()`process.getState()`process.getVersion()`process.getCreateTime()`process.getCreator()};" is 215.,174
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveProcess,Long Statement,The length of the statement "int[] type=new int[]{Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.INTEGER`Types.VARCHAR`Types.INTEGER`Types.INTEGER`Types.VARCHAR`Types.VARCHAR};" is 148.,174
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,updateProcess,Long Statement,The length of the statement "Object[] args=new Object[]{process.getName()`process.getDisplayName()`process.getState()`process.getInstanceUrl()`process.getCreateTime()`process.getCreator()`process.getId()};" is 176.,188
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveTask,Long Statement,The length of the statement "Object[] args=new Object[]{task.getId()`task.getOrderId()`task.getTaskName()`task.getDisplayName()`task.getTaskType()`task.getPerformType()`task.getOperator()`task.getCreateTime()`task.getFinishTime()`task.getExpireTime()`task.getActionUrl()`task.getParentTaskId()`task.getVariable()`task.getVersion()};" is 303.,222
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveTask,Long Statement,The length of the statement "int[] type=new int[]{Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.INTEGER`Types.INTEGER`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.INTEGER};" is 218.,222
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveOrder,Long Statement,The length of the statement "Object[] args=new Object[]{order.getId()`order.getProcessId()`order.getCreator()`order.getCreateTime()`order.getParentId()`order.getParentNodeName()`order.getExpireTime()`order.getLastUpdateTime()`order.getLastUpdator()`order.getOrderNo()`order.getVariable()`order.getVersion()};" is 279.,236
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveOrder,Long Statement,The length of the statement "int[] type=new int[]{Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.INTEGER};" is 190.,236
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveCCOrder,Long Statement,The length of the statement "saveOrUpdate(buildMap(CCORDER_INSERT`new Object[]{ccorder.getOrderId()`ccorder.getActorId()`ccorder.getCreator()`ccorder.getCreateTime()`ccorder.getStatus()}`type));" is 165.,249
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,updateTask,Long Statement,The length of the statement "Object[] args=new Object[]{task.getFinishTime()`task.getOperator()`task.getVariable()`task.getExpireTime()`task.getActionUrl()`task.getId()`task.getVersion()};" is 159.,268
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,updateOrder,Long Statement,The length of the statement "Object[] args=new Object[]{order.getLastUpdator()`order.getLastUpdateTime()`order.getVariable()`order.getExpireTime()`order.getId()`order.getVersion()};" is 152.,278
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveHistory,Long Statement,The length of the statement "Object[] args=new Object[]{order.getId()`order.getProcessId()`order.getOrderState()`order.getCreator()`order.getCreateTime()`order.getEndTime()`order.getParentId()`order.getExpireTime()`order.getOrderNo()`order.getVariable()};" is 226.,330
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveHistory,Long Statement,The length of the statement "int[] type=new int[]{Types.VARCHAR`Types.VARCHAR`Types.INTEGER`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR};" is 162.,330
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveHistory,Complex Method,Cyclomatic complexity of the method is 8,360
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveHistory,Long Statement,The length of the statement "Object[] args=new Object[]{task.getId()`task.getOrderId()`task.getTaskName()`task.getDisplayName()`task.getTaskType()`task.getPerformType()`task.getTaskState()`task.getOperator()`task.getCreateTime()`task.getFinishTime()`task.getExpireTime()`task.getActionUrl()`task.getParentTaskId()`task.getVariable()};" is 305.,360
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveHistory,Long Statement,The length of the statement "int[] type=new int[]{Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.INTEGER`Types.INTEGER`Types.INTEGER`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR};" is 218.,360
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveHistory,Long Statement,The length of the statement "saveOrUpdate(buildMap(TASK_ACTOR_HISTORY_INSERT`new Object[]{task.getId()`actorId}`new int[]{Types.VARCHAR`Types.VARCHAR}));" is 124.,360
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveSurrogate,Long Statement,The length of the statement "Object[] args=new Object[]{surrogate.getId()`surrogate.getProcessName()`surrogate.getOperator()`surrogate.getSurrogate()`surrogate.getOdate()`surrogate.getSdate()`surrogate.getEdate()`surrogate.getState()};" is 206.,404
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,saveSurrogate,Long Statement,The length of the statement "int[] type=new int[]{Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.VARCHAR`Types.INTEGER};" is 134.,404
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,updateSurrogate,Long Statement,The length of the statement "Object[] args=new Object[]{surrogate.getProcessName()`surrogate.getSurrogate()`surrogate.getOdate()`surrogate.getSdate()`surrogate.getEdate()`surrogate.getState()`surrogate.getId()};" is 182.,417
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getNextActiveTasks,Long Statement,The length of the statement "String sql=QUERY_TASK + " where parent_task_id in ( select ht.id from wf_hist_task ht where ht.order_id=? and ht.task_name=? and ht.parent_task_id=? )";" is 152.,486
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getProcesss,Complex Method,Cyclomatic complexity of the method is 10,537
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getActiveOrders,Complex Method,Cyclomatic complexity of the method is 15,583
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getActiveTasks,Complex Method,Cyclomatic complexity of the method is 12,651
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getHistoryOrders,Complex Method,Cyclomatic complexity of the method is 14,705
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getHistoryTasks,Complex Method,Cyclomatic complexity of the method is 10,767
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getWorkItems,Complex Method,Cyclomatic complexity of the method is 14,812
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getWorkItems,Long Statement,The length of the statement "sql.append(" select distinct o.process_Id` t.order_Id` t.id as id` t.id as task_Id` p.display_Name as process_Name` p.instance_Url` o.parent_Id` o.creator` ");" is 159.,812
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getWorkItems,Long Statement,The length of the statement "sql.append(" o.create_Time as order_Create_Time` o.expire_Time as order_Expire_Time` o.order_No` o.variable as order_Variable` ");" is 130.,812
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getWorkItems,Long Statement,The length of the statement "sql.append(" t.display_Name as task_Name` t.task_Name as task_Key` t.task_Type` t.perform_Type` t.operator` t.action_Url` ");" is 125.,812
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getWorkItems,Long Statement,The length of the statement "sql.append(" t.create_Time as task_Create_Time` t.finish_Time as task_End_Time` t.expire_Time as task_Expire_Time` t.variable as task_Variable ");" is 146.,812
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getCCWorks,Complex Method,Cyclomatic complexity of the method is 10,887
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getCCWorks,Long Statement,The length of the statement "sql.append(" select id`process_Id`order_State`priority`cc.creator`cc.create_Time`end_Time`parent_Id`expire_Time`order_No`variable ");" is 133.,887
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getHistoryWorkItems,Complex Method,Cyclomatic complexity of the method is 14,938
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getHistoryWorkItems,Long Statement,The length of the statement "sql.append(" select distinct o.process_Id` t.order_Id` t.id as id` t.id as task_Id` p.display_Name as process_Name` p.instance_Url` o.parent_Id` o.creator` ");" is 159.,938
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getHistoryWorkItems,Long Statement,The length of the statement "sql.append(" o.create_Time as order_Create_Time` o.expire_Time as order_Expire_Time` o.order_No` o.variable as order_Variable` ");" is 130.,938
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getHistoryWorkItems,Long Statement,The length of the statement "sql.append(" t.display_Name as task_Name` t.task_Name as task_Key` t.task_Type` t.perform_Type`t.operator` t.action_Url` ");" is 124.,938
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,getHistoryWorkItems,Long Statement,The length of the statement "sql.append(" t.create_Time as task_Create_Time` t.finish_Time as task_End_Time` t.expire_Time as task_Expire_Time` t.variable as task_Variable ");" is 146.,938
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,queryList,Long Parameter List,The method has 5 parameters. ,1012
+snakerflow_snakerflow,org.snaker.engine.access,AbstractDBAccess,runScript,Empty catch clause,The method has an empty catch block.,1037
+snakerflow_snakerflow,org.snaker.engine.access,ScriptRunner,runScript,Complex Method,Cyclomatic complexity of the method is 9,83
+snakerflow_snakerflow,org.snaker.engine.access,ScriptRunner,runScript,Empty catch clause,The method has an empty catch block.,83
+snakerflow_snakerflow,org.snaker.engine.access.dialect,SQLServerDialect,getPageSql,Magic Number,The method contains a magic number: 10,29
+snakerflow_snakerflow,org.snaker.engine.access.dialect,SQLServerDialect,getOrderBy,Magic Number,The method contains a magic number: 30,51
+snakerflow_snakerflow,org.snaker.engine.access.dialect,MySqlDialect,getPageSql,Magic Number,The method contains a magic number: 100,25
+snakerflow_snakerflow,org.snaker.engine.access.dialect,PostgresqlDialect,getPageSql,Magic Number,The method contains a magic number: 100,25
+snakerflow_snakerflow,org.snaker.engine.access.dialect,H2Dialect,getPageSql,Magic Number,The method contains a magic number: 100,25
+snakerflow_snakerflow,org.snaker.engine.access.dialect,Db2Dialect,getPageSql,Magic Number,The method contains a magic number: 100,12
+snakerflow_snakerflow,org.snaker.engine.access.dialect,OracleDialect,getPageSql,Magic Number,The method contains a magic number: 100,25
+snakerflow_snakerflow,org.snaker.engine.access.transaction,JtaTransactionInterceptor,getTransaction,Complex Conditional,The conditional expression (status != Status.STATUS_NO_TRANSACTION) && (status != Status.STATUS_COMMITTED) && (status != Status.STATUS_ROLLEDBACK) is complex.,37
+snakerflow_snakerflow,org.snaker.engine.access.transaction,JtaTransactionInterceptor,getTransaction,Complex Conditional,The conditional expression (status == Status.STATUS_ACTIVE) || (status == Status.STATUS_COMMITTED) || (status == Status.STATUS_ROLLEDBACK) is complex.,37
+snakerflow_snakerflow,org.snaker.engine.access.transaction,JtaTransactionInterceptor,getTransaction,Long Statement,The length of the statement "if ((status != Status.STATUS_NO_TRANSACTION) && (status != Status.STATUS_COMMITTED) && (status != Status.STATUS_ROLLEDBACK)) {" is 126.,37
+snakerflow_snakerflow,org.snaker.engine.access.transaction,JtaTransactionInterceptor,rollback,Complex Conditional,The conditional expression (txStatus != Status.STATUS_NO_TRANSACTION) && (txStatus != Status.STATUS_COMMITTED) && (txStatus != Status.STATUS_ROLLEDBACK) is complex.,81
+snakerflow_snakerflow,org.snaker.engine.access.transaction,JtaTransactionInterceptor,rollback,Long Statement,The length of the statement "if ((txStatus != Status.STATUS_NO_TRANSACTION) && (txStatus != Status.STATUS_COMMITTED) && (txStatus != Status.STATUS_ROLLEDBACK)) {" is 132.,81
+snakerflow_snakerflow,org.snaker.engine.scheduling,JobEntity,JobEntity,Long Parameter List,The method has 5 parameters. ,88
+snakerflow_snakerflow,org.snaker.engine.scheduling,IReminder,remind,Long Parameter List,The method has 5 parameters. ,31
+snakerflow_snakerflow,org.snaker.engine.helper,ReflectHelper,getField,Empty catch clause,The method has an empty catch block.,52
+snakerflow_snakerflow,org.snaker.engine.helper,ReflectHelper,invoke,Long Statement,The length of the statement "throw new SnakerException("不能调用 '" + method.getName() + "' with "+ Arrays.toString(args)+ " on "+ target+ ": "+ targetException.getMessage()`targetException);" is 158.,93
+snakerflow_snakerflow,org.snaker.engine.helper,ReflectHelper,invoke,Long Statement,The length of the statement "throw new SnakerException("不能调用 '" + method.getName() + "' with "+ Arrays.toString(args)+ " on "+ target+ ": "+ e.getMessage()`e);" is 130.,93
+snakerflow_snakerflow,org.snaker.engine.helper,ClassHelper,castLong,Complex Method,Cyclomatic complexity of the method is 8,30
+snakerflow_snakerflow,org.snaker.engine.helper,StringHelper,getStringByArray,Magic Number,The method contains a magic number: 10,52
+snakerflow_snakerflow,org.snaker.engine.helper,StringHelper,buildPageOrder,Magic Number,The method contains a magic number: 30,82
+snakerflow_snakerflow,org.snaker.engine.helper,StringHelper,simpleMatch,Complex Method,Cyclomatic complexity of the method is 8,103
+snakerflow_snakerflow,org.snaker.engine.helper,StringHelper,simpleMatch,Long Statement,The length of the statement "return (str.length() >= firstIndex && pattern.substring(0`firstIndex).equals(str.substring(0`firstIndex)) && simpleMatch(pattern.substring(firstIndex)`str.substring(firstIndex)));" is 179.,103
+snakerflow_snakerflow,org.snaker.engine.parser,ModelParser,parse,Complex Method,Cyclomatic complexity of the method is 8,40
+snakerflow_snakerflow,org.snaker.engine.model,NodeModel,canRejected,Complex Conditional,The conditional expression source instanceof ForkModel || source instanceof JoinModel || source instanceof SubProcessModel|| source instanceof StartModel is complex.,112
+snakerflow_snakerflow,org.snaker.engine.model,NodeModel,canRejected,Long Statement,The length of the statement "if (source instanceof ForkModel || source instanceof JoinModel || source instanceof SubProcessModel|| source instanceof StartModel) {" is 133.,112
+snakerflow_snakerflow,org.snaker.engine.model,DecisionModel,exec,Complex Method,Cyclomatic complexity of the method is 10,55
+snakerflow_snakerflow,org.snaker.engine.impl,SchedulerInterceptor,schedule,Long Parameter List,The method has 5 parameters. ,69
+snakerflow_snakerflow,org.snaker.engine.impl,LogInterceptor,intercept,Magic Number,The method contains a magic number: 100,30
+snakerflow_snakerflow,org.snaker.engine.impl,DefaultNoGenerator,generate,Magic Number,The method contains a magic number: 1000,30
+snakerflow_snakerflow,org.snaker.engine.core,TaskService,addTaskActor,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@534d8009,167
+snakerflow_snakerflow,org.snaker.engine.core,TaskService,removeTaskActor,Complex Method,Cyclomatic complexity of the method is 9,208
+snakerflow_snakerflow,org.snaker.engine.core,TaskService,getTaskActors,Complex Method,Cyclomatic complexity of the method is 8,455
+snakerflow_snakerflow,org.snaker.engine.core,TaskService,getTaskActors,Long Statement,The length of the statement "throw new SnakerException("任务参与者对象[" + actors + "]类型不支持."+ "合法参数示例:Long`Integer`new String[]{}`'10000`20000'`List<String>");" is 124.,455
+snakerflow_snakerflow,org.snaker.engine.core,ManagerService,getSurrogate,Magic Number,The method contains a magic number: 50,64
+snakerflow_snakerflow,org.snaker.engine.core,ProcessService,getProcessByVersion,Complex Method,Cyclomatic complexity of the method is 8,132
+snakerflow_snakerflow,org.snaker.engine.core,Execution,Execution,Complex Conditional,The conditional expression execution == null || process == null || parentNodeName == null is complex.,85
+snakerflow_snakerflow,org.snaker.engine.core,OrderService,createOrder,Long Parameter List,The method has 5 parameters. ,46
+snakerflow_snakerflow,org.snaker.engine.core,SnakerEngineImpl,startInstanceByExecution,Long Statement,The length of the statement "Execution current=execute(process`execution.getOperator()`execution.getArgs()`execution.getParentOrder().getId()`execution.getParentNodeName());" is 144.,247
+snakerflow_snakerflow,org.snaker.engine.core,SnakerEngineImpl,execute,Long Parameter List,The method has 5 parameters. ,261
+snakerflow_snakerflow,org.snaker.engine.cfg,Configuration,parser,Complex Method,Cyclomatic complexity of the method is 9,147
+snakerflow_snakerflow,test.reject,TestReject,test,Magic Number,The method contains a magic number: 2,37
+snakerflow_snakerflow,test.task.interceptor,LocalTaskInterceptor,intercept,Magic Number,The method contains a magic number: 100,30
+snakerflow_snakerflow,test.query,TestQueryOrder,test,Long Statement,The length of the statement "System.out.println(engine.query().getActiveOrders(new QueryFilter().setCreateTimeStart("2014-01-01").setProcessId("860e5edae536495a9f51937f435a1c01")));" is 152.,15
+snakerflow_snakerflow,test.query,TestQueryHistOrder,test,Long Statement,The length of the statement "System.out.println(engine.query().getHistoryOrders(new QueryFilter().setCreateTimeStart("2014-01-01").setName("simple").setState(0).setProcessType("预算管理流程1")));" is 160.,15
+snakerflow_snakerflow,test.query,TestNativeQuery,test,Long Statement,The length of the statement "System.out.println(engine.query().nativeQueryList(new Page<Task>()`Task.class`"select * from wf_task where task_type=?"`0));" is 124.,27
+snakerflow_snakerflow,test.query,TestQueryTask,test,Long Statement,The length of the statement "System.out.println(queryService.getWorkItems(new Page<WorkItem>()`new QueryFilter().setOperator("1").setOrderId("36c0228fcfa740d5b62682dc954eaecd")));" is 150.,29
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 2014,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 4,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 6,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 16,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 41,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 2014,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 4,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 15,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 9,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 2014,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 4,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 15,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 8,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 57,39
+snakerflow_snakerflow,test.time.expire,TestExpire,test,Magic Number,The method contains a magic number: 1000,39
+snakerflow_snakerflow,test.concurrency,TestConcurrent,main,Magic Number,The method contains a magic number: 50,30
+snakerflow_snakerflow,test.decision.condition,TestDecision2,test,Magic Number,The method contains a magic number: 250,38

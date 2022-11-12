@@ -1,0 +1,113 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManager,TakariLocalRepositoryManager,Complex Conditional,The conditional expression filename.length() <= 0 || filename.contains("/") || filename.contains("\\") || filename.contains("..") is complex.,68
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManager,getPathForArtifact,Magic Number,The method contains a magic number: 128,229
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManager,getRepositoryKey,Magic Number,The method contains a magic number: 128,265
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManager,getPath,Magic Number,The method contains a magic number: 128,294
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManagerFactory,getPriority,Magic Number,The method contains a magic number: 20,53
+takari_takari-local-repository,io.takari.aether.localrepo,BaseLocalRepositoryManager,getPathForArtifact,Magic Number,The method contains a magic number: 128,60
+takari_takari-local-repository,io.takari.aether.localrepo,BaseLocalRepositoryManager,getRepositoryKey,Magic Number,The method contains a magic number: 128,96
+takari_takari-local-repository,io.takari.aether.localrepo,BaseLocalRepositoryManager,getPath,Magic Number,The method contains a magic number: 128,125
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManager,update,Long Statement,The length of the statement "props.store(stream`"NOTE: This is an Aether internal implementation file" + "` its format can be changed without prior notice.");" is 129.,65
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManager,update,Magic Number,The method contains a magic number: 1024,65
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManager,update,Magic Number,The method contains a magic number: 2,65
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManager,lock,Magic Number,The method contains a magic number: 8,150
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManager,lock,Magic Number,The method contains a magic number: 50,150
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,TakariUpdateCheckManager,Long Identifier,The length of the field allowImmediateRetryOfDownloadFailures is 37.,67
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,checkArtifact,Complex Method,Cyclomatic complexity of the method is 17,81
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,newException,Long Statement,The length of the statement "return new ArtifactNotFoundException(artifact`repository`"Failure to find " + artifact + " in "+ repository.getUrl()+ " was cached in the local repository` "+ "resolution will not be reattempted until the update interval of "+ repository.getId()+ " has elapsed or updates are forced");" is 285.,167
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,newException,Long Statement,The length of the statement "return new ArtifactTransferException(artifact`repository`"Failure to transfer " + artifact + " from "+ repository.getUrl()+ " was cached in the local repository` "+ "resolution will not be reattempted until the update interval of "+ repository.getId()+ " has elapsed or updates are forced. Original error: "+ error);" is 316.,167
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,checkMetadata,Complex Method,Cyclomatic complexity of the method is 17,177
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,newException,Long Statement,The length of the statement "return new MetadataNotFoundException(metadata`repository`"Failure to find " + metadata + " in "+ repository.getUrl()+ " was cached in the local repository` "+ "resolution will not be reattempted until the update interval of "+ repository.getId()+ " has elapsed or updates are forced");" is 285.,263
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,newException,Long Statement,The length of the statement "return new MetadataTransferException(metadata`repository`"Failure to transfer " + metadata + " from "+ repository.getUrl()+ " was cached in the local repository` "+ "resolution will not be reattempted until the update interval of "+ repository.getId()+ " has elapsed or updates are forced. Original error: "+ error);" is 316.,263
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,getDataKey,Magic Number,The method contains a magic number: 1024,295
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,getRepoKey,Magic Number,The method contains a magic number: 128,326
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,normalizeRepoUrl,Complex Conditional,The conditional expression url != null && url.length() > 0 && !url.endsWith("/") is complex.,344
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,setUpdated,Magic Number,The method contains a magic number: 256,364
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManager,write,Long Identifier,The length of the field allowImmediateRetryOfDownloadFailures is 37.,428
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManagerTest,setup,Long Statement,The length of the statement "artifact=new DefaultArtifact("gid"`"aid"`""`"jar"`"1-test"`Collections.<String`String>emptyMap()`TestFileUtils.createTempFile("artifact"));" is 139.,58
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManagerTest,setup,Long Statement,The length of the statement "snapshot=new DefaultArtifact("gid"`"aid"`""`"jar"`"1.0-20120710.231549-9"`Collections.<String`String>emptyMap()`TestFileUtils.createTempFile("artifact"));" is 154.,58
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManagerTest,setup,Long Statement,The length of the statement "metadata=new DefaultMetadata("gid"`"aid"`"1-test"`"maven-metadata.xml"`Nature.RELEASE`TestFileUtils.createTempFile("metadata"));" is 128.,58
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManagerTest,setup,Long Statement,The length of the statement "noVerMetadata=new DefaultMetadata("gid"`"aid"`null`"maven-metadata.xml"`Nature.RELEASE`TestFileUtils.createTempFile("metadata"));" is 129.,58
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManagerTest,testGetPathForRemoteArtifact,Long Statement,The length of the statement "assertEquals("g/i/d/a.i.d/1.0-SNAPSHOT/a.i.d-1.0-SNAPSHOT.jar"`manager.getPathForRemoteArtifact(artifact`remoteRepo`""));" is 121.,123
+takari_takari-local-repository,io.takari.aether.localrepo,TakariLocalRepositoryManagerTest,testGetPathForRemoteArtifact,Long Statement,The length of the statement "assertEquals("g/i/d/a.i.d/1.0-SNAPSHOT/a.i.d-1.0-20110329.221805-4.jar"`manager.getPathForRemoteArtifact(artifact`remoteRepo`""));" is 130.,123
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManagerTest,testRead,Magic Number,The method contains a magic number: 2,31
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManagerTest,testReadNoFileLeak,Magic Number,The method contains a magic number: 1000,49
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManagerTest,testUpdate,Magic Number,The method contains a magic number: 1000,60
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManagerTest,testUpdateNoFileLeak,Magic Number,The method contains a magic number: 1000,81
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManagerTest,testLockingOnCanonicalPath,Magic Number,The method contains a magic number: 4,95
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManagerTest,testLockingOnCanonicalPath,Magic Number,The method contains a magic number: 1000,95
+takari_takari-local-repository,io.takari.aether.localrepo,TrackingFileManagerTest,run,Magic Number,The method contains a magic number: 1000,113
+takari_takari-local-repository,io.takari.aether.localrepo,TestFileUtils,copy,Magic Number,The method contains a magic number: 1024,83
+takari_takari-local-repository,io.takari.aether.localrepo,TestFileUtils,copy,Magic Number,The method contains a magic number: 32,83
+takari_takari-local-repository,io.takari.aether.localrepo,TestFileUtils,close,Empty catch clause,The method has an empty catch block.,113
+takari_takari-local-repository,io.takari.aether.localrepo,TestFileUtils,del,Magic Number,The method contains a magic number: 10,150
+takari_takari-local-repository,io.takari.aether.localrepo,TestFileUtils,assertContent,Magic Number,The method contains a magic number: 10,175
+takari_takari-local-repository,io.takari.aether.localrepo,TestFileUtils,assertContent,Magic Number,The method contains a magic number: 10,175
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManagerTest,setup,Long Statement,The length of the statement "repository=new RemoteRepository.Builder("id"`"default"`TestFileUtils.createTempDir().toURI().toURL().toString()).build();" is 121.,61
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManagerTest,testCheckArtifact,Magic Number,The method contains a magic number: 15,415
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManagerTest,testCheckArtifact,Magic Number,The method contains a magic number: 60,415
+takari_takari-local-repository,io.takari.aether.localrepo,TakariUpdateCheckManagerTest,testCheckArtifact,Magic Number,The method contains a magic number: 1000,415
+takari_takari-local-repository,io.takari.aether.localrepo,BaseLocalRepositoryManagerTest,testGetPathForRemoteArtifact,Long Statement,The length of the statement "assertEquals("g/i/d/a.i.d/1.0-SNAPSHOT/a.i.d-1.0-SNAPSHOT.jar"`manager.getPathForRemoteArtifact(artifact`remoteRepo`""));" is 121.,67
+takari_takari-local-repository,io.takari.aether.localrepo,BaseLocalRepositoryManagerTest,testGetPathForRemoteArtifact,Long Statement,The length of the statement "assertEquals("g/i/d/a.i.d/1.0-SNAPSHOT/a.i.d-1.0-20110329.221805-4.jar"`manager.getPathForRemoteArtifact(artifact`remoteRepo`""));" is 130.,67
+takari_takari-local-repository,io.takari.aether.concurrency,LockingSyncContext,getPath,Magic Number,The method contains a magic number: 128,83
+takari_takari-local-repository,io.takari.aether.concurrency,LockingSyncContext,getPath,Magic Number,The method contains a magic number: 128,101
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLocks,awaitLock1,Empty catch clause,The method has an empty catch block.,74
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLocks,awaitLock1,Magic Number,The method contains a magic number: 10,74
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLocks,awaitLock1,Magic Number,The method contains a magic number: 1000,74
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLocks,awaitLock1,Magic Number,The method contains a magic number: 10,74
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,main,Empty catch clause,The method has an empty catch block.,15
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,main,Magic Number,The method contains a magic number: 5,15
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,main,Magic Number,The method contains a magic number: 1000,15
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,main,Magic Number,The method contains a magic number: 10,15
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,main,Magic Number,The method contains a magic number: 10,15
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,awaitLock,Empty catch clause,The method has an empty catch block.,65
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,awaitLock,Magic Number,The method contains a magic number: 10,65
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,awaitLock,Magic Number,The method contains a magic number: 1000,65
+takari_takari-local-repository,io.takari.filemanager,ExternalProcessFileLock,awaitLock,Magic Number,The method contains a magic number: 10,65
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testExternalLockTryReadLock,Magic Number,The method contains a magic number: 1500,42
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testExternalLockTryWriteLock,Magic Number,The method contains a magic number: 1500,66
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testUpgradeSharedToExclusiveLock,Magic Number,The method contains a magic number: 2,89
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testUpgradeSharedToExclusiveLock,Magic Number,The method contains a magic number: 2,89
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,thread1,Magic Number,The method contains a magic number: 2,94
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,thread2,Magic Number,The method contains a magic number: 2,102
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testSameThreadMultipleLocksReadWrite,Empty catch clause,The method has an empty catch block.,258
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testWaitingForAlreadyLockedFileToBeReleasedMustOnlyBlockCurrentThread,Empty catch clause,The method has an empty catch block.,313
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testWaitingForAlreadyLockedFileToBeReleasedMustOnlyBlockCurrentThread,Magic Number,The method contains a magic number: 1000,313
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testWaitingForAlreadyLockedFileToBeReleasedMustOnlyBlockCurrentThread,Magic Number,The method contains a magic number: 200,313
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testCopiedFilesHaveTheSameLastModifiedTime,Long Statement,The length of the statement "assertEquals("We expect the last modified time of the source and target to be equal."`source.lastModified()`target.lastModified());" is 131.,386
+takari_takari-local-repository,io.takari.filemanager,DefaultFileManagerTest,testCopiedFilesHaveTheSameLastModifiedTime,Magic Number,The method contains a magic number: 86400000,386
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testLockCanonicalFile,Magic Number,The method contains a magic number: 3,44
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testLockCanonicalFile,Magic Number,The method contains a magic number: 3,44
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread1,Magic Number,The method contains a magic number: 3,50
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread2,Magic Number,The method contains a magic number: 3,57
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testWriteBlocksRead,Magic Number,The method contains a magic number: 2,67
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testWriteBlocksRead,Magic Number,The method contains a magic number: 2,67
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread1,Magic Number,The method contains a magic number: 2,73
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread2,Magic Number,The method contains a magic number: 2,80
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testReadDoesNotBlockRead,Magic Number,The method contains a magic number: 2,90
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread1,Magic Number,The method contains a magic number: 2,96
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testReadBlocksWrite,Magic Number,The method contains a magic number: 2,113
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testReadBlocksWrite,Magic Number,The method contains a magic number: 2,113
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread1,Magic Number,The method contains a magic number: 2,119
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread2,Magic Number,The method contains a magic number: 2,126
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testWriteBlocksWrite,Magic Number,The method contains a magic number: 2,136
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testWriteBlocksWrite,Magic Number,The method contains a magic number: 2,136
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread1,Magic Number,The method contains a magic number: 2,142
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread2,Magic Number,The method contains a magic number: 2,149
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,testNoPrematureLocking,Magic Number,The method contains a magic number: 2,159
+takari_takari-local-repository,io.takari.filemanager,MultipleThreadsLockManagerTest,thread1,Magic Number,The method contains a magic number: 2,164
+takari_takari-local-repository,io.takari.filemanager,TestFileUtils,copy,Magic Number,The method contains a magic number: 1024,84
+takari_takari-local-repository,io.takari.filemanager,TestFileUtils,copy,Magic Number,The method contains a magic number: 32,84
+takari_takari-local-repository,io.takari.filemanager,TestFileUtils,close,Empty catch clause,The method has an empty catch block.,114
+takari_takari-local-repository,io.takari.filemanager,TestFileUtils,del,Magic Number,The method contains a magic number: 10,151
+takari_takari-local-repository,io.takari.filemanager,TestFileUtils,assertContent,Magic Number,The method contains a magic number: 10,176
+takari_takari-local-repository,io.takari.filemanager,TestFileUtils,assertContent,Magic Number,The method contains a magic number: 10,176
+takari_takari-local-repository,io.takari.filemanager.internal,DefaultFileManager,open,Empty catch clause,The method has an empty catch block.,85
+takari_takari-local-repository,io.takari.filemanager.internal,DefaultFileManager,open,Magic Number,The method contains a magic number: 3,85
+takari_takari-local-repository,io.takari.filemanager.internal,DefaultFileManager,open,Magic Number,The method contains a magic number: 10,85
+takari_takari-local-repository,io.takari.filemanager.internal,DefaultFileManager,copy,Magic Number,The method contains a magic number: 1024,547
+takari_takari-local-repository,io.takari.filemanager.internal,DefaultFileManager,copy,Magic Number,The method contains a magic number: 32,547
+takari_takari-local-repository,io.takari.filemanager.internal,DefaultFileManager,write,Magic Number,The method contains a magic number: 1024,572
+takari_takari-local-repository,io.takari.aether.localrepo.its,TakariLocalRepositoryTest,validateRetryOnDowloadErrorFlagIsFunctional,Long Statement,The length of the statement "MavenExecution execution=verifier.forProject(basedir).withCliOptions(String.format("-Dmaven.repo.local=%s"`localRepository.getAbsolutePath())).withCliOptions(String.format("-Dmaven.retryOnDownloadError=true"));" is 210.,35
+takari_takari-local-repository,io.takari.aether.localrepo.its,TakariLocalRepositoryTest,validateRetryOnDowloadErrorFlagIsFunctional,Long Statement,The length of the statement "result.assertLogText("Could not resolve dependencies for project io.takari.aether.localrepo.its:update-check:jar:0.1.0");" is 121.,35
+takari_takari-local-repository,io.takari.aether.localrepo.its,TakariLocalRepositoryTest,validateRetryOnDowloadErrorFlagIsFunctional,Long Statement,The length of the statement "File updateCheckFile=new File(localRepository`"io/takari/aether/localrepo/its/non-existent/1.0/non-existent-1.0.jar.lastUpdated");" is 130.,35

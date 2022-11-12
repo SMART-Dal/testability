@@ -1,0 +1,23 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+ptgoetz_storm-hbase,org.apache.storm.hbase.bolt,HBaseBolt,execute,Long Statement,The length of the statement "List<Mutation> mutations=hBaseClient.constructMutationReq(rowKey`cols`writeToWAL ? Durability.SYNC_WAL : Durability.SKIP_WAL);" is 126.,56
+ptgoetz_storm-hbase,org.apache.storm.hbase.common,Utils,toBytes,Complex Method,Cyclomatic complexity of the method is 9,43
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident.state,HBaseMapState,multiPut,Long Statement,The length of the statement "LOG.info("Partiton: {}` Key: {}` Value: {}"`new Object[]{this.partitionNum`keys.get(i)`new String(this.serializer.serialize(values.get(i)))});" is 142.,198
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,PersistentWordCount,main,Long Statement,The length of the statement "SimpleHBaseMapper mapper=new SimpleHBaseMapper().withRowKeyField("word").withColumnFields(new Fields("word")).withCounterFields(new Fields("count")).withColumnFamily("cf");" is 172.,38
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,PersistentWordCount,main,Magic Number,The method contains a magic number: 30000,38
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,PersistentWordCount,main,Magic Number,The method contains a magic number: 2,38
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,LookupWordCount,main,Long Statement,The length of the statement "HBaseLookupBolt hBaseLookupBolt=new HBaseLookupBolt("WordCount"`mapper`rowToTupleMapper).withConfigKey("hbase.conf").withProjectionCriteria(projectionCriteria);" is 160.,38
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,LookupWordCount,main,Magic Number,The method contains a magic number: 30000,38
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,LookupWordCount,main,Magic Number,The method contains a magic number: 2,38
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,TotalWordCounter,execute,Magic Number,The method contains a magic number: 1000,48
+ptgoetz_storm-hbase,org.apache.storm.hbase.topology,TotalWordCounter,execute,Magic Number,The method contains a magic number: 995,48
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,PrintFunction,execute,Magic Number,The method contains a magic number: 1000,34
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,PrintFunction,execute,Magic Number,The method contains a magic number: 995,34
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,buildTopology,Long Statement,The length of the statement "FixedBatchSpout spout=new FixedBatchSpout(fields`4`new Values("storm"`1)`new Values("trident"`1)`new Values("needs"`1)`new Values("javadoc"`1));" is 144.,43
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,buildTopology,Long Statement,The length of the statement "TridentHBaseMapper tridentHBaseMapper=new SimpleTridentHBaseMapper().withColumnFamily("cf").withColumnFields(new Fields("word")).withCounterFields(new Fields("count")).withRowKeyField("word");" is 192.,43
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,buildTopology,Long Statement,The length of the statement "HBaseState.Options options=new HBaseState.Options().withConfigKey(hbaseRoot).withDurability(Durability.SYNC_WAL).withMapper(tridentHBaseMapper).withProjectionCriteria(projectionCriteria).withRowToStormValueMapper(rowToStormValueMapper).withTableName("WordCount");" is 263.,43
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,buildTopology,Magic Number,The method contains a magic number: 4,43
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,main,Magic Number,The method contains a magic number: 5,85
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,main,Magic Number,The method contains a magic number: 60,85
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,main,Magic Number,The method contains a magic number: 1000,85
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,main,Magic Number,The method contains a magic number: 2,85
+ptgoetz_storm-hbase,org.apache.storm.hbase.trident,WordCountTrident,main,Magic Number,The method contains a magic number: 3,85

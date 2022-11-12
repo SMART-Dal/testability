@@ -1,0 +1,551 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,Instance,Long Statement,The length of the statement "this(instance.getInstanceMap() != null ? new HashMap<String`Object>(instance.getInstanceMap()) : null`instance.getInitConfig() != null ? new HashMap<String`Object>(instance.getInitConfig()) : null`instance.getCheckName()`appConfig`instance.serviceNameProvider);" is 261.,103
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,Instance,Complex Method,Cyclomatic complexity of the method is 20,117
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,Instance,Long Method,The method has 102 lines of code.,117
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,Instance,Long Parameter List,The method has 5 parameters. ,117
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,loadDefaultConfig,Long Statement,The length of the statement "List<Map<String`Object>> defaultConf=(List<Map<String`Object>>)YAML.get().load(this.getClass().getResourceAsStream(configResourcePath));" is 136.,263
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,loadMetricConfigFiles,Empty catch clause,The method has an empty catch block.,272
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,loadMetricConfigFiles,Long Statement,The length of the statement "log.warn("Loading files via metricConfigFiles setting is deprecated. Please " + "migrate to using standard agent config files in the conf.d directory.");" is 153.,272
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,loadMetricConfigResources,Empty catch clause,The method has an empty catch block.,311
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMetrics,Long Statement,The length of the statement "Integer period=(this.initialRefreshTime == this.lastRefreshTime) ? this.initialRefreshBeansPeriod : this.refreshBeansPeriod;" is 124.,442
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,isPeriodDue,Magic Number,The method contains a magic number: 1000,488
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Complex Conditional,The conditional expression !metricReachedDisplayed && !action.equals(AppConfig.ACTION_LIST_COLLECTED) && !action.equals(AppConfig.ACTION_LIST_NOT_MATCHING) is complex.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Complex Conditional,The conditional expression action.equals(AppConfig.ACTION_LIST_EVERYTHING) || action.equals(AppConfig.ACTION_LIST_MATCHING) || action.equals(AppConfig.ACTION_LIST_COLLECTED) && !limitReached || action.equals(AppConfig.ACTION_LIST_LIMITED) && limitReached is complex.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Complex Conditional,The conditional expression jmxAttribute.getMatchingConf() == null && (action.equals(AppConfig.ACTION_LIST_EVERYTHING) || action.equals(AppConfig.ACTION_LIST_NOT_MATCHING)) is complex.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Complex Method,Cyclomatic complexity of the method is 17,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Long Statement,The length of the statement "else if (!metricReachedDisplayed && !action.equals(AppConfig.ACTION_LIST_COLLECTED) && !action.equals(AppConfig.ACTION_LIST_NOT_MATCHING)) {" is 140.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Long Statement,The length of the statement "jmxAttribute=new JmxSimpleAttribute(attributeInfo`beanName`className`instanceName`checkName`connection`serviceNameProvider`tags`cassandraAliasing`emptyDefaultHostname);" is 168.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Long Statement,The length of the statement "jmxAttribute=new JmxComplexAttribute(attributeInfo`beanName`className`instanceName`checkName`connection`serviceNameProvider`tags`emptyDefaultHostname);" is 151.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Long Statement,The length of the statement "jmxAttribute=new JmxTabularAttribute(attributeInfo`beanName`className`instanceName`checkName`connection`serviceNameProvider`tags`emptyDefaultHostname);" is 151.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Long Statement,The length of the statement "if (action.equals(AppConfig.ACTION_LIST_EVERYTHING) || action.equals(AppConfig.ACTION_LIST_MATCHING) || action.equals(AppConfig.ACTION_LIST_COLLECTED) && !limitReached || action.equals(AppConfig.ACTION_LIST_LIMITED) && limitReached) {" is 234.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Long Statement,The length of the statement "log.error("Error while trying to match attributeInfo configuration " + "with the Attribute: " + beanName + " : "+ attributeInfo`e);" is 131.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getMatchingAttributes,Long Statement,The length of the statement "if (jmxAttribute.getMatchingConf() == null && (action.equals(AppConfig.ACTION_LIST_EVERYTHING) || action.equals(AppConfig.ACTION_LIST_NOT_MATCHING))) {" is 151.,506
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,refreshBeansList,Long Statement,The length of the statement "boolean limitQueryScopes=!action.equals(AppConfig.ACTION_LIST_EVERYTHING) && !action.equals(AppConfig.ACTION_LIST_NOT_MATCHING);" is 128.,683
+DataDog_jmxfetch,org.datadog.jmxfetch,Instance,getServiceCheckTags,Complex Method,Cyclomatic complexity of the method is 8,712
+DataDog_jmxfetch,org.datadog.jmxfetch,App,run,Complex Conditional,The conditional expression !action.equals(AppConfig.ACTION_COLLECT) && !(appConfig.isConsoleReporter() || appConfig.isJsonReporter()) is complex.,158
+DataDog_jmxfetch,org.datadog.jmxfetch,App,run,Complex Method,Cyclomatic complexity of the method is 9,158
+DataDog_jmxfetch,org.datadog.jmxfetch,App,clearInstances,Long Statement,The length of the statement "recoveryProcessor.setThreadPoolExecutor(buildExecutorService(appConfig.getReconnectionThreadPoolSize()`RECOVERY_POOL_NAME));" is 124.,246
+DataDog_jmxfetch,org.datadog.jmxfetch,App,clearInstances,Long Statement,The length of the statement "List<TaskStatusHandler> statuses=recoveryProcessor.processTasks(cleanupInstanceTasks`appConfig.getReconnectionTimeout()`TimeUnit.SECONDS`new TaskMethod<Void>(){" is 160.,246
+DataDog_jmxfetch,org.datadog.jmxfetch,App,getAutoDiscoveryName,Magic Number,The method contains a magic number: 2,311
+DataDog_jmxfetch,org.datadog.jmxfetch,App,getAutoDiscoveryName,Magic Number,The method contains a magic number: 2,311
+DataDog_jmxfetch,org.datadog.jmxfetch,App,displayRateMetrics,Magic Number,The method contains a magic number: 1000,374
+DataDog_jmxfetch,org.datadog.jmxfetch,App,start,Complex Method,Cyclomatic complexity of the method is 13,384
+DataDog_jmxfetch,org.datadog.jmxfetch,App,start,Magic Number,The method contains a magic number: 2,384
+DataDog_jmxfetch,org.datadog.jmxfetch,App,start,Magic Number,The method contains a magic number: 2,384
+DataDog_jmxfetch,org.datadog.jmxfetch,App,doIteration,Long Statement,The length of the statement "List<TaskStatusHandler> statuses=collectionProcessor.processTasks(getMetricsTasks`appConfig.getCollectionTimeout()`TimeUnit.SECONDS`new TaskMethod<List<Metric>>(){" is 163.,491
+DataDog_jmxfetch,org.datadog.jmxfetch,App,fixBrokenInstances,Empty catch clause,The method has an empty catch block.,563
+DataDog_jmxfetch,org.datadog.jmxfetch,App,fixBrokenInstances,Long Statement,The length of the statement "log.warn("Instance " + instance + " didn't return any metrics. "+ "Maybe the server got disconnected ? Trying to reconnect.");" is 126.,563
+DataDog_jmxfetch,org.datadog.jmxfetch,App,fixBrokenInstances,Long Statement,The length of the statement "recoveryProcessor.setThreadPoolExecutor(buildExecutorService(appConfig.getReconnectionThreadPoolSize()`RECOVERY_POOL_NAME));" is 124.,563
+DataDog_jmxfetch,org.datadog.jmxfetch,App,fixBrokenInstances,Long Statement,The length of the statement "List<TaskStatusHandler> statuses=recoveryProcessor.processTasks(fixInstanceTasks`appConfig.getReconnectionTimeout()`TimeUnit.SECONDS`new TaskMethod<Void>(){" is 156.,563
+DataDog_jmxfetch,org.datadog.jmxfetch,App,addConfig,Magic Number,The method contains a magic number: 2,633
+DataDog_jmxfetch,org.datadog.jmxfetch,App,loadFileConfigs,Empty catch clause,The method has an empty catch block.,693
+DataDog_jmxfetch,org.datadog.jmxfetch,App,loadResourceConfigs,Empty catch clause,The method has an empty catch block.,722
+DataDog_jmxfetch,org.datadog.jmxfetch,App,getJsonConfigs,Magic Number,The method contains a magic number: 204,750
+DataDog_jmxfetch,org.datadog.jmxfetch,App,reportStatus,Long Parameter List,The method has 6 parameters. ,794
+DataDog_jmxfetch,org.datadog.jmxfetch,App,reportStatus,Long Statement,The length of the statement "stats.addInstanceStats(checkName`instance.getName()`metricCount`reporter.getServiceCheckCount(checkName)`message`status);" is 121.,794
+DataDog_jmxfetch,org.datadog.jmxfetch,App,sendServiceCheck,Long Statement,The length of the statement "this.sendCanConnectServiceCheck(reporter`checkName`instance.getServiceCheckPrefix()`status`message`instance.getServiceCheckTags());" is 131.,813
+DataDog_jmxfetch,org.datadog.jmxfetch,App,sendCanConnectServiceCheck,Long Parameter List,The method has 6 parameters. ,835
+DataDog_jmxfetch,org.datadog.jmxfetch,App,init,Complex Method,Cyclomatic complexity of the method is 12,868
+DataDog_jmxfetch,org.datadog.jmxfetch,App,init,Long Statement,The length of the statement "log.info("Skipping instance '{}'. targetDirectInstances={} != jvm_direct={}"`name`appConfig.isTargetDirectInstances()`isDirectInstance(configInstance));" is 152.,868
+DataDog_jmxfetch,org.datadog.jmxfetch,App,init,Long Statement,The length of the statement "recoveryProcessor.setThreadPoolExecutor(buildExecutorService(appConfig.getReconnectionThreadPoolSize()`RECOVERY_POOL_NAME));" is 124.,868
+DataDog_jmxfetch,org.datadog.jmxfetch,App,init,Long Statement,The length of the statement "List<TaskStatusHandler> statuses=recoveryProcessor.processTasks(instanceInitTasks`appConfig.getCollectionTimeout()`TimeUnit.SECONDS`new TaskMethod<Void>(){" is 155.,868
+DataDog_jmxfetch,org.datadog.jmxfetch,App,processFixedStatus,Empty catch clause,The method has an empty catch block.,1088
+DataDog_jmxfetch,org.datadog.jmxfetch,App,processStatus,Empty catch clause,The method has an empty catch block.,1111
+DataDog_jmxfetch,org.datadog.jmxfetch,App,processCollectionStatus,Long Statement,The length of the statement "instanceMessage="Number of returned metrics is too high for instance: " + instance.getName() + ". Please read http://docs.datadoghq.com/integrations/java/ or get in touch with Datadog "+ "Support for more details. Truncating to "+ instance.getMaxNumberOfMetrics()+ " metrics.";" is 277.,1159
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxTabularAttribute,JmxTabularAttribute,Long Parameter List,The method has 9 parameters. ,31
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxTabularAttribute,JmxTabularAttribute,Long Statement,The length of the statement "super(attribute`beanName`className`instanceName`checkName`connection`serviceNameProvider`instanceTags`false`emptyDefaultHostname);" is 130.,31
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxTabularAttribute,match,Complex Conditional,The conditional expression !matchDomain(configuration) || !matchClassName(configuration) || !matchBean(configuration)|| excludeMatchDomain(configuration)|| excludeMatchClassName(configuration)|| excludeMatchBean(configuration) is complex.,238
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxTabularAttribute,match,Long Statement,The length of the statement "if (!matchDomain(configuration) || !matchClassName(configuration) || !matchBean(configuration)|| excludeMatchDomain(configuration)|| excludeMatchClassName(configuration)|| excludeMatchBean(configuration)) {" is 206.,238
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxTabularAttribute,matchSubAttribute,Long Statement,The length of the statement "if ((params.getAttribute() instanceof Map<?`?>) && ((Map<String`Object>)(params.getAttribute())).containsKey(subAttributeName)) {" is 129.,258
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxTabularAttribute,matchSubAttribute,Long Statement,The length of the statement "else if ((params.getAttribute() instanceof List<?> && ((List<String>)(params.getAttribute())).contains(subAttributeName))) {" is 124.,258
+DataDog_jmxfetch,org.datadog.jmxfetch,RemoteConnection,RemoteConnection,Complex Method,Cyclomatic complexity of the method is 8,34
+DataDog_jmxfetch,org.datadog.jmxfetch,RemoteConnection,RemoteConnection,Long Identifier,The length of the field DEFAULT_RMI_CONNECTION_TIMEOUT is 30.,34
+DataDog_jmxfetch,org.datadog.jmxfetch,AttachApiConnection,loadJmxAgent,Long Statement,The length of the statement "String agent=vm.getSystemProperties().getProperty("java.home") + File.separator + "lib"+ File.separator+ "management-agent.jar";" is 128.,60
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSubAttribute,JmxSubAttribute,Long Parameter List,The method has 10 parameters. ,14
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSubAttribute,JmxSubAttribute,Long Statement,The length of the statement "super(attribute`beanName`className`instanceName`checkName`connection`serviceNameProvider`instanceTags`cassandraAliasing`emptyDefaultHostname);" is 142.,14
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxComplexAttribute,JmxComplexAttribute,Long Parameter List,The method has 9 parameters. ,23
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxComplexAttribute,JmxComplexAttribute,Long Statement,The length of the statement "super(attribute`beanName`className`instanceName`checkName`connection`serviceNameProvider`instanceTags`false`emptyDefaultHostname);" is 130.,23
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxComplexAttribute,match,Complex Conditional,The conditional expression !matchDomain(configuration) || !matchClassName(configuration) || !matchBean(configuration)|| excludeMatchDomain(configuration)|| excludeMatchClassName(configuration)|| excludeMatchBean(configuration) is complex.,94
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxComplexAttribute,match,Long Statement,The length of the statement "if (!matchDomain(configuration) || !matchClassName(configuration) || !matchBean(configuration)|| excludeMatchDomain(configuration)|| excludeMatchClassName(configuration)|| excludeMatchBean(configuration)) {" is 206.,94
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxComplexAttribute,matchSubAttribute,Long Statement,The length of the statement "if ((params.getAttribute() instanceof Map<?`?>) && ((Map<String`Object>)(params.getAttribute())).containsKey(subAttributeName)) {" is 129.,114
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxComplexAttribute,matchSubAttribute,Long Statement,The length of the statement "else if ((params.getAttribute() instanceof List<?> && ((List<String>)(params.getAttribute())).contains(subAttributeName))) {" is 124.,114
+DataDog_jmxfetch,org.datadog.jmxfetch,Connection,closeConnector,Empty catch clause,The method has an empty catch block.,79
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSimpleAttribute,JmxSimpleAttribute,Long Parameter List,The method has 10 parameters. ,20
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSimpleAttribute,JmxSimpleAttribute,Long Statement,The length of the statement "super(attribute`beanName`className`instanceName`checkName`connection`serviceNameProvider`instanceTags`cassandraAliasing`emptyDefaultHostname);" is 142.,20
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSimpleAttribute,match,Long Statement,The length of the statement "return matchDomain(configuration) && matchClassName(configuration) && matchBean(configuration)&& matchAttribute(configuration)&& !(excludeMatchDomain(configuration) || excludeMatchClassName(configuration) || excludeMatchBean(configuration)|| excludeMatchAttribute(configuration));" is 280.,60
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSimpleAttribute,excludeMatchAttribute,Long Statement,The length of the statement "else if ((exclude.getAttribute() instanceof Map<?`?>) && ((Map<String`Object>)(exclude.getAttribute())).containsKey(getAttributeName())) {" is 138.,72
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSimpleAttribute,excludeMatchAttribute,Long Statement,The length of the statement "else if ((exclude.getAttribute() instanceof List<?> && ((List<String>)(exclude.getAttribute())).contains(getAttributeName()))) {" is 128.,72
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSimpleAttribute,matchAttribute,Long Statement,The length of the statement "else if ((include.getAttribute() instanceof Map<?`?>) && ((Map<String`Object>)(include.getAttribute())).containsKey(getAttributeName())) {" is 138.,88
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxSimpleAttribute,matchAttribute,Long Statement,The length of the statement "else if ((include.getAttribute() instanceof List<?> && ((List<String>)(include.getAttribute())).contains(getAttributeName()))) {" is 128.,88
+DataDog_jmxfetch,org.datadog.jmxfetch,Configuration,getCommonScopeByDomain,Complex Conditional,The conditional expression parameterValues.size() != 1 || (commonValue != null && !commonValue.equals(parameterValues.get(0))) is complex.,153
+DataDog_jmxfetch,org.datadog.jmxfetch,Configuration,getGreatestCommonScopes,Long Identifier,The length of the identifier parametersIntersectionByDomain is 30.,228
+DataDog_jmxfetch,org.datadog.jmxfetch,Configuration,getGreatestCommonScopes,Long Statement,The length of the statement "Map<String`Map<String`String>> commonBeanScopeByDomain=getCommonScopeByDomain(parametersIntersectionByDomain`includeFiltersByDomain);" is 133.,228
+DataDog_jmxfetch,org.datadog.jmxfetch,HttpClient,request,Magic Number,The method contains a magic number: 200,101
+DataDog_jmxfetch,org.datadog.jmxfetch,HttpClient,request,Magic Number,The method contains a magic number: 300,101
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxAttribute,JmxAttribute,Long Parameter List,The method has 10 parameters. ,66
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxAttribute,toString,Long Statement,The length of the statement "return "Bean name: " + beanStringName + " - Attribute name: "+ attributeName+ " - Attribute type: "+ attribute.getType();" is 121.,246
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxAttribute,includeMatchName,Long Statement,The length of the statement "return (includeName == null || includeName.equals(name)) && (includeNameRegex == null || includeNameRegex.matcher(name).matches());" is 131.,315
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxAttribute,excludeMatchName,Long Statement,The length of the statement "return (excludeName != null && excludeName.equals(name)) || (excludeNameRegex != null && excludeNameRegex.matcher(name).matches());" is 131.,320
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxAttribute,castToDouble,Complex Method,Cyclomatic complexity of the method is 9,338
+DataDog_jmxfetch,org.datadog.jmxfetch,JmxAttribute,getValueConversions,Long Statement,The length of the statement "Map<String`Map<Object`Object>> attribute=((Map<String`Map<String`Map<Object`Object>>>)includedAttribute).get(fullAttributeName);" is 128.,445
+DataDog_jmxfetch,org.datadog.jmxfetch,Status,addInstanceStats,Long Parameter List,The method has 6 parameters. ,69
+DataDog_jmxfetch,org.datadog.jmxfetch,Status,addStats,Long Parameter List,The method has 7 parameters. ,91
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckOK,Magic Number,The method contains a magic number: 3,18
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckWarning,Magic Number,The method contains a magic number: 400,52
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckWarning,Magic Number,The method contains a magic number: 350,52
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckWarning,Magic Number,The method contains a magic number: 2,52
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckWarning,Magic Number,The method contains a magic number: 3,52
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckCRITICAL,Long Statement,The length of the statement "assertEquals("Unable to instantiate or initialize instance process_regex: `.*non_running_process_test.*`. " + "Is the target JMX Server or JVM running? No match found. Available JVMs can be listed with " + "the `list_jvms` command."`scMessage);" is 244.,95
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckCRITICAL,Long Statement,The length of the statement "assertEquals("Unable to instantiate or initialize instance process_regex: `.*non_running_process_test.*`. " + "Is the target JMX Server or JVM running? No match found. Available JVMs can be listed with " + "the `list_jvms` command."`scMessage);" is 244.,95
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckCRITICAL,Magic Number,The method contains a magic number: 2,95
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckCRITICAL,Magic Number,The method contains a magic number: 3,95
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckCRITICAL,Magic Number,The method contains a magic number: 2,95
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckCRITICAL,Magic Number,The method contains a magic number: 3,95
+DataDog_jmxfetch,org.datadog.jmxfetch,TestServiceChecks,testServiceCheckNoPrefix,Magic Number,The method contains a magic number: 2,209
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testBeanRegexTags,Long Statement,The length of the statement "registerMBean(new SimpleTestJavaApp()`"org.datadog.jmxfetch.test:type=SimpleTestJavaApp`scope=Co|olScope`host=localhost`component=");" is 133.,18
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testBeanRegexTags,Long Statement,The length of the statement "List<String> tags=Arrays.asList("type:SimpleTestJavaApp"`"scope:CoolScope"`"instance:jmx_test_instance"`"jmx_domain:org.datadog.jmxfetch.test"`"bean_host:localhost"`"component"`"hosttag:localhost"`"nonExistantTag:$2"`"nonRegexTag:value");" is 238.,18
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testBeanRegexTags,Magic Number,The method contains a magic number: 9,18
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testBeanTags,Long Statement,The length of the statement "registerMBean(new SimpleTestJavaApp()`"org.datadog.jmxfetch.test:type=SimpleTestJavaApp`scope=Co|olScope`host=localhost`component=");" is 133.,45
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testBeanTags,Long Statement,The length of the statement "List<String> tags=Arrays.asList("type:SimpleTestJavaApp"`"scope:CoolScope"`"instance:jmx_test_instance"`"jmx_domain:org.datadog.jmxfetch.test"`"bean_host:localhost"`"component");" is 178.,45
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testBeanTags,Magic Number,The method contains a magic number: 14,45
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testBeanTags,Magic Number,The method contains a magic number: 6,45
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Long Statement,The length of the statement "List<String> tags=Arrays.asList("jmx_domain:org.datadog.jmxfetch.test"`"instance:jmx_test_instance"`"foo:Bar"`"qux:Baz");" is 121.,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Magic Number,The method contains a magic number: 17,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Magic Number,The method contains a magic number: 4,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Magic Number,The method contains a magic number: 4,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Magic Number,The method contains a magic number: 1000,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Magic Number,The method contains a magic number: 4,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Magic Number,The method contains a magic number: 5,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testRegexpAliasing,Magic Number,The method contains a magic number: 4,73
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testNoAliasOnDetailedAttribute,Long Statement,The length of the statement "List<String> tags=Arrays.asList("jmx_domain:org.datadog.jmxfetch.test"`"instance:jmx_test_instance"`"foo:Bar"`"qux:Baz");" is 121.,103
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testNoAliasOnDetailedAttribute,Magic Number,The method contains a magic number: 14,103
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testNoAliasOnDetailedAttribute,Magic Number,The method contains a magic number: 4,103
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraBean,Long Statement,The length of the statement "registerMBean(new SimpleTestJavaApp()`"org.apache.cassandra.metrics:keyspace=MyKeySpace`type=ColumnFamily`scope=MyColumnFamily`name=PendingTasks");" is 147.,133
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraBean,Long Statement,The length of the statement "List<String> tags=Arrays.asList("type:ColumnFamily"`"keyspace:MyKeySpace"`"ColumnFamily:MyColumnFamily"`"jmx_domain:org.apache.cassandra.metrics"`"instance:jmx_first_instance");" is 177.,133
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraBean,Long Statement,The length of the statement "tags=Arrays.asList("type:ColumnFamily"`"scope:MyColumnFamily"`"keyspace:MyKeySpace"`"jmx_domain:org.apache.cassandra.metrics"`"instance:jmx_second_instance"`"name:PendingTasks");" is 178.,133
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraBean,Magic Number,The method contains a magic number: 28,133
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraBean,Magic Number,The method contains a magic number: 5,133
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraBean,Magic Number,The method contains a magic number: 6,133
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraDeprecatedBean,Long Statement,The length of the statement "registerMBean(new SimpleTestJavaApp()`"org.apache.cassandra.db:type=ColumnFamilies`keyspace=MyKeySpace`columnfamily=MyColumnFamily");" is 133.,178
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraDeprecatedBean,Long Statement,The length of the statement "List<String> tags=Arrays.asList("type:ColumnFamilies"`"keyspace:MyKeySpace"`"columnfamily:MyColumnFamily"`"jmx_domain:org.apache.cassandra.db"`"instance:jmx_test_instance");" is 173.,178
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraDeprecatedBean,Magic Number,The method contains a magic number: 14,178
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testCassandraDeprecatedBean,Magic Number,The method contains a magic number: 5,178
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testDomainInclude,Magic Number,The method contains a magic number: 29,204
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testDomainExclude,Magic Number,The method contains a magic number: 14,218
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testDomainRegex,Magic Number,The method contains a magic number: 15,237
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testClassInclude,Magic Number,The method contains a magic number: 29,257
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testClassExclude,Magic Number,The method contains a magic number: 14,271
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testClassRegex,Magic Number,The method contains a magic number: 15,293
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testParameterMatch,Magic Number,The method contains a magic number: 13,316
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testListParamsInclude,Magic Number,The method contains a magic number: 14,332
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testListParamsExclude,Magic Number,The method contains a magic number: 13,348
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testListBeansInclude,Magic Number,The method contains a magic number: 14,365
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testListBeansRegexInclude,Magic Number,The method contains a magic number: 15,381
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testListBeansRegexExclude,Magic Number,The method contains a magic number: 14,400
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testListBeansExclude,Magic Number,The method contains a magic number: 14,419
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 16,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 1000.0,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 5,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 42.0,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 5,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 424242,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 5,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 17,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 1000.0,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 5,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 42.0,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 5,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 424242,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 5,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricTypes,Magic Number,The method contains a magic number: 5,453
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeTags,Magic Number,The method contains a magic number: 15,488
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeTags,Magic Number,The method contains a magic number: 1000.0,488
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeTags,Magic Number,The method contains a magic number: 2,488
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeTags,Magic Number,The method contains a magic number: 424242,488
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeTags,Magic Number,The method contains a magic number: 2,488
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeServiceTagsAndOverride,Long Statement,The length of the statement "List<String> commonTags=Arrays.asList("instance:jmx_test_service_override_instance"`"jmx_domain:org.datadog.jmxfetch.test"`"service:test");" is 139.,512
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeServiceTagsAndOverride,Magic Number,The method contains a magic number: 15,512
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeServiceTagsAndOverride,Magic Number,The method contains a magic number: 1000.0,512
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeServiceTagsAndOverride,Magic Number,The method contains a magic number: 3,512
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeServiceTagsAndOverride,Magic Number,The method contains a magic number: 424242,512
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testExcludeServiceTagsAndOverride,Magic Number,The method contains a magic number: 3,512
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAdditionalTags,Long Statement,The length of the statement "List<String> commonTags=Arrays.asList("instance:jmx_test_instance"`"jmx_domain:org.datadog.jmxfetch.test"`"type:SimpleTestJavaApp"`"name:testName"`"simple:SimpleTestJavaApp"`"raw_value:value"`"unknown_tag:$does-not-exist"`"multiple:SimpleTestJavaApp-testName");" is 261.,537
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAdditionalTags,Magic Number,The method contains a magic number: 15,537
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAdditionalTags,Magic Number,The method contains a magic number: 1000.0,537
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAdditionalTags,Magic Number,The method contains a magic number: 8,537
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAdditionalTags,Magic Number,The method contains a magic number: 424242,537
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAdditionalTags,Magic Number,The method contains a magic number: 8,537
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 29,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 100.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 8,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 1.2345678890123457E20,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 4.2424242E7,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 424242.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 1000.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 32.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 42.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 42.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 4242.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 13.37,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 123.4f,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 567.8f,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 7,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 31,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 100.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 8,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 1.2345678890123457E20,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 4.2424242E7,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 424242.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 1000.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 32.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 42.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 42.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 4242.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 13.37,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 123.4f,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 567.8f,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 7,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5000,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 2,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 31,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 100.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 8,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 1.2345678890123457E20,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 4.2424242E7,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 424242.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 1000.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 32.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 42.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 42.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 4242.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 13.37,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 123.4f,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 567.8f,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 2.0,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 7,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 0.95,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 0.95,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testApp,Magic Number,The method contains a magic number: 5,569
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 28,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 100.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 8,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 1.2345678890123457E20,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 4.2424242E7,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 424242.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 1000.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 32.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 42.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 4242.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 13.37,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 123.4f,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 567.8f,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 7,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 30,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 100.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 8,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 1.2345678890123457E20,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 4.2424242E7,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 424242.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 1000.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 32.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 42.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 4242.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 13.37,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 123.4f,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 567.8f,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 7,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5000,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 29,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 30,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5000,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 2,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 30,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 100.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 8,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 1.2345678890123457E20,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 4.2424242E7,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 424242.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 1000.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 32.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 42.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 4242.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 13.37,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 123.4f,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 567.8f,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 2.0,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 7,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 0.95,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 0.95,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCanonicalRate,Magic Number,The method contains a magic number: 5,684
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCount,Magic Number,The method contains a magic number: 13,805
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCount,Magic Number,The method contains a magic number: 14,805
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCount,Magic Number,The method contains a magic number: 3,805
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCount,Magic Number,The method contains a magic number: 5,805
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCount,Magic Number,The method contains a magic number: 14,805
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCount,Magic Number,The method contains a magic number: 5,805
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCount,Magic Number,The method contains a magic number: 3,805
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 26,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 28,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 3,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 3,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 5000,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 5,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 28,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 0.95,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 3,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 0.95,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testAppCounterRate,Magic Number,The method contains a magic number: 3,837
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Long Statement,The length of the statement "registerMBean(test`"org.apache.cassandra.metrics:keyspace=MyKeySpace`type=ColumnFamily`scope=MyColumnFamily`name=PendingTasks");" is 128.,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Long Statement,The length of the statement "List<String> tags=Arrays.asList("type:SimpleTestJavaApp"`"scope:CoolScope"`"instance:jmx_test_instance"`"jmx_domain:org.datadog.jmxfetch.test"`"bean_host:localhost"`"component");" is 178.,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Long Statement,The length of the statement "tags=Arrays.asList("type:ColumnFamily"`"keyspace:MyKeySpace"`"ColumnFamily:MyColumnFamily"`"jmx_domain:org.apache.cassandra.metrics"`"instance:jmx_first_instance");" is 164.,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Long Statement,The length of the statement "tags=Arrays.asList("type:ColumnFamily"`"scope:MyColumnFamily"`"keyspace:MyKeySpace"`"jmx_domain:org.apache.cassandra.metrics"`"instance:jmx_second_instance"`"name:PendingTasks");" is 178.,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Magic Number,The method contains a magic number: 63,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Magic Number,The method contains a magic number: 6,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Magic Number,The method contains a magic number: 5,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Magic Number,The method contains a magic number: 6,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Magic Number,The method contains a magic number: 4,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscovery,Magic Number,The method contains a magic number: 4,872
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscoveryLong,Long Statement,The length of the statement "registerMBean(test`"org.apache.cassandra.metrics:keyspace=MyKeySpace`type=ColumnFamily`scope=MyColumnFamily`name=PendingTasks");" is 128.,941
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscoveryLong,Magic Number,The method contains a magic number: 35,941
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testServiceDiscoveryLong,Magic Number,The method contains a magic number: 2,941
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricError,Long Statement,The length of the statement "List<String> tags=Arrays.asList("instance:jmx_test_instance"`"jmx_domain:org.datadog.jmxfetch.test"`"type:SimpleTestJavaApp");" is 126.,966
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricError,Magic Number,The method contains a magic number: 14,966
+DataDog_jmxfetch,org.datadog.jmxfetch,TestApp,testMetricError,Magic Number,The method contains a magic number: 100.0,966
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingHelp,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"--help"`LOG_LOCATION`AppConfig.ACTION_COLLECT};" is 158.,37
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingLogLevel,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"-l"`LOG_LOCATION`"-L"`logLevel`AppConfig.ACTION_COLLECT};" is 168.,55
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingLogLevel,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"--log_level"`"invalid_log_level"`AppConfig.ACTION_COLLECT};" is 170.,55
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingLogLocation,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"--log_location"`LOG_LOCATION`AppConfig.ACTION_COLLECT};" is 166.,98
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingConfDirectory,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 136.,116
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 136.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "params=new String[]{"--reporter"`"statsd:localhost:10"`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 132.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "params=new String[]{"--reporter"`"statsd:127.0.0.1:10"`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 132.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "params=new String[]{"--reporter"`"statsd:[::1]:10"`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 128.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "params=new String[]{"--reporter"`"invalid_reporter"`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 129.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "assertEquals("Parameter --reporter should be either 'console'` 'json'` 'statsd:[STATSD_HOST]:[STATSD_PORT]' or 'statsd:unix://[STATSD_UNIX_SOCKET_PATH]'"`pe.getMessage());" is 171.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "params=new String[]{"-r"`"statsd:unix:///path/to/dsd.socket"`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 138.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Long Statement,The length of the statement "params=new String[]{"-r"`"statsd:unix:///path/to/dsd.socket"`"-st"`"-sq"`"8192"`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 157.,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Magic Number,The method contains a magic number: 10,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Magic Number,The method contains a magic number: 4096,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Magic Number,The method contains a magic number: 10,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Magic Number,The method contains a magic number: 10,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingReporter,Magic Number,The method contains a magic number: 8192,132
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingYamlFileList,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 136.,262
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingYamlFileList,Long Statement,The length of the statement "params=new String[]{"--reporter"`REPORTER_CONSOLE`"-c"`StringUtils.join("`"`MULTI_CHECK)`"--conf_directory"`CONF_DIR`AppConfig.ACTION_COLLECT};" is 143.,262
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingCheckPeriod,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"-s"`STATUS_LOCATION`"--check_period"`"20"`AppConfig.ACTION_COLLECT};" is 179.,292
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingCheckPeriod,Long Statement,The length of the statement "params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"-s"`STATUS_LOCATION`"-p"`"not_a_number"`AppConfig.ACTION_COLLECT};" is 168.,292
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingCheckPeriod,Long Statement,The length of the statement "params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"-s"`STATUS_LOCATION`"--check_period"`"0"`AppConfig.ACTION_COLLECT};" is 169.,292
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingCheckPeriod,Magic Number,The method contains a magic number: 20,292
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingStatus,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"--status_location"`STATUS_LOCATION`AppConfig.ACTION_COLLECT};" is 172.,358
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingStatusIPC,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"--ipc_host"`IPC_HOSTNAME`"--ipc_port"`IPC_PORT`AppConfig.ACTION_COLLECT};" is 184.,379
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingExitWatcher,Long Statement,The length of the statement "String[] params=new String[]{"--reporter"`REPORTER_CONSOLE`"--check"`SINGLE_CHECK`"--conf_directory"`CONF_DIR`"--exit_file_location"`EXIT_FILE_LOCATION`AppConfig.ACTION_COLLECT};" is 178.,402
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingAction,Long Statement,The length of the statement "String expectedMessage="Main parameters are required (\"Action to take` should be in [help` version` collect` " + "list_everything` list_collected_attributes` list_matching_attributes` " + "list_with_metrics` list_with_rate_metrics` list_not_matching_attributes` list_limited_attributes` list_jvms]\")";" is 303.,422
+DataDog_jmxfetch,org.datadog.jmxfetch,TestParsingJCommander,testParsingAction,Long Statement,The length of the statement "String expectedMessage="Main parameters are required (\"Action to take` should be in [help` version` collect` " + "list_everything` list_collected_attributes` list_matching_attributes` " + "list_with_metrics` list_with_rate_metrics` list_not_matching_attributes` list_limited_attributes` list_jvms]\")";" is 303.,422
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,initApplication,Magic Number,The method contains a magic number: 4,84
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,initApplication,Magic Number,The method contains a magic number: 5,84
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,initApplication,Magic Number,The method contains a magic number: 6,84
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Complex Method,Cyclomatic complexity of the method is 8,169
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 8 parameters. ,169
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 7 parameters. ,237
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 5 parameters. ,249
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 6 parameters. ,258
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 6 parameters. ,268
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 7 parameters. ,278
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 5 parameters. ,301
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 5 parameters. ,306
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,assertMetric,Long Parameter List,The method has 6 parameters. ,311
+DataDog_jmxfetch,org.datadog.jmxfetch,TestCommon,generateReport,Magic Number,The method contains a magic number: 100.0f,361
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testMinCollectionInterval,Magic Number,The method contains a magic number: 15,22
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testMinCollectionInterval,Magic Number,The method contains a magic number: 5000,22
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testMinCollectionInterval,Magic Number,The method contains a magic number: 15,22
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testEmptyDefaultHostname,Magic Number,The method contains a magic number: 28,58
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testEmptyDefaultHostname,Magic Number,The method contains a magic number: 4,58
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testServiceTagGlobal,Magic Number,The method contains a magic number: 28,86
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testServiceTagGlobal,Magic Number,The method contains a magic number: 4,86
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testServiceTagGlobalList,Magic Number,The method contains a magic number: 28,107
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testServiceTagGlobalList,Magic Number,The method contains a magic number: 4,107
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testServiceTagInstanceOverride,Magic Number,The method contains a magic number: 28,128
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testServiceTagInstanceOverride,Magic Number,The method contains a magic number: 4,128
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testLoadMetricConfigFiles,Magic Number,The method contains a magic number: 2,149
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testLoadMetricConfigResources,Magic Number,The method contains a magic number: 2,160
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testRefreshBeans,Magic Number,The method contains a magic number: 13,172
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testRefreshBeans,Magic Number,The method contains a magic number: 1500,172
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testRefreshBeans,Magic Number,The method contains a magic number: 15,172
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testRefreshBeans,Magic Number,The method contains a magic number: 1500,172
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testRefreshBeans,Magic Number,The method contains a magic number: 15,172
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testRefreshBeans,Magic Number,The method contains a magic number: 1500,172
+DataDog_jmxfetch,org.datadog.jmxfetch,TestInstance,testRefreshBeans,Magic Number,The method contains a magic number: 17,172
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testAutoDiscoveryConfigs,Magic Number,The method contains a magic number: 4,54
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testAutoDiscoveryConfigs,Magic Number,The method contains a magic number: 4,54
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testFiltersByDomain,Long Statement,The length of the statement "Map<String`List<Filter>> filtersByDomain=(Map<String`List<Filter>>)getIncludeFiltersByDomain.invoke(null`configurations);" is 121.,121
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testFiltersByDomain,Magic Number,The method contains a magic number: 5,121
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonBeanKeys,Long Identifier,The length of the identifier parametersIntersectionByDomain is 30.,154
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonBeanKeys,Long Statement,The length of the statement "Map<String`List<Filter>> filtersByDomain=(Map<String`List<Filter>>)getIncludeFiltersByDomain.invoke(null`configurations);" is 121.,154
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonBeanKeys,Long Statement,The length of the statement "Map<String`Set<String>> parametersIntersectionByDomain=(Map<String`Set<String>>)getCommonBeanKeysByDomain.invoke(null`filtersByDomain);" is 135.,154
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonBeanKeys,Magic Number,The method contains a magic number: 2,154
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonBeanKeys,Magic Number,The method contains a magic number: 3,154
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonScope,Long Identifier,The length of the identifier parametersIntersectionByDomain is 30.,198
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonScope,Long Statement,The length of the statement "Map<String`List<Filter>> filtersByDomain=(Map<String`List<Filter>>)getIncludeFiltersByDomain.invoke(null`configurations);" is 121.,198
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonScope,Long Statement,The length of the statement "Map<String`Set<String>> parametersIntersectionByDomain=(Map<String`Set<String>>)getCommonBeanKeysByDomain.invoke(null`filtersByDomain);" is 135.,198
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonScope,Long Statement,The length of the statement "Map<String`Map<String`String>> commonBeanScopeByDomain=(Map<String`Map<String`String>>)getCommonScopeByDomain.invoke(null`parametersIntersectionByDomain`filtersByDomain);" is 170.,198
+DataDog_jmxfetch,org.datadog.jmxfetch,TestConfiguration,testCommonScope,Magic Number,The method contains a magic number: 2,198
+DataDog_jmxfetch,org.datadog.jmxfetch,SimpleTestJavaApp,SimpleTestJavaApp,Magic Number,The method contains a magic number: 10,46
+DataDog_jmxfetch,org.datadog.jmxfetch,SimpleTestJavaApp,buildCompositeType,Long Statement,The length of the statement "return new CompositeType("myCompositeType"`"My composite type"`new String[]{"foo"`"bar"`"toto"}`new String[]{"Description of `foo`"`"Description of `bar`"`"Description of `toto`"}`new OpenType[]{SimpleType.STRING`SimpleType.INTEGER`SimpleType.STRING});" is 252.,148
+DataDog_jmxfetch,org.datadog.jmxfetch.service,ConfigServiceNameProviderTest,testCases,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{Collections.singletonMap("service"`"foo-instance")`Collections.singletonMap("service"`"foo-init")`null`Arrays.asList("foo-instance")}`{Collections.singletonMap("not-service"`"foo-instance")`Collections.singletonMap("service"`"foo-init")`null`Arrays.asList("foo-init")}`{Collections.singletonMap("not-service"`"foo-instance")`Collections.singletonMap("not-service"`"foo-init")`null`new ArrayList<>()}`{Collections.singletonMap("service"`Arrays.asList("foo1-instance"`"foo2-instance"))`Collections.singletonMap("service"`"foo-init")`null`Arrays.asList("foo1-instance"`"foo2-instance")}`{Collections.singletonMap("service"`Arrays.asList("foo1-instance"`"foo2-instance"))`Collections.singletonMap("service"`"foo-init")`new ConfigServiceNameProviderTest.CustomConfigServiceNameProvider()`Arrays.asList("foo1-instance"`"foo2-instance"`"foo-provider")}});" is 885.,25
+DataDog_jmxfetch,org.datadog.jmxfetch.util,CustomLogger,setup,Complex Conditional,The conditional expression end == -1 || end <= start || end > str.length() is complex.,55
+DataDog_jmxfetch,org.datadog.jmxfetch.util,CustomLogger,setup,Complex Method,Cyclomatic complexity of the method is 10,55
+DataDog_jmxfetch,org.datadog.jmxfetch.util,CustomLogger,setup,Long Statement,The length of the statement "return String.format(format`dateFormatter.format(new Date()).toString()`LogLevel.fromJulLevel(lr.getLevel()).toString()`simpleClassName(lr.getSourceClassName())`lr.getMessage()`exception);" is 188.,55
+DataDog_jmxfetch,org.datadog.jmxfetch.util,CustomLogger,simpleClassName,Complex Conditional,The conditional expression end == -1 || end <= start || end > str.length() is complex.,67
+DataDog_jmxfetch,org.datadog.jmxfetch.util,CustomLogger,format,Long Statement,The length of the statement "return String.format(format`dateFormatter.format(new Date()).toString()`LogLevel.fromJulLevel(lr.getLevel()).toString()`simpleClassName(lr.getSourceClassName())`lr.getMessage()`exception);" is 188.,79
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcher,ByteArraySearcher,Magic Number,The method contains a magic number: 64,16
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcher,ByteArraySearcher,Magic Number,The method contains a magic number: 16,16
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcher,ByteArraySearcher,Magic Number,The method contains a magic number: 16,16
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcher,ByteArraySearcher,Magic Number,The method contains a magic number: 0xF,16
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcher,ByteArraySearcher,Magic Number,The method contains a magic number: 4,16
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcher,matches,Magic Number,The method contains a magic number: 4,36
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcher,matches,Magic Number,The method contains a magic number: 0xF,36
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ByteArraySearcherTest,testCases,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{"foobar"`"foo"`true}`{"foofoo"`"foo"`true}`{""`"foo"`false}`{"bar"`"foo"`false}`{"barbarfoo"`"foo"`true}`{"barbarfoobar"`"foo"`true}`{"fofofofofo"`"foo"`false}`{UUID.randomUUID().toString()`"pqrst"`false}});" is 244.,26
+DataDog_jmxfetch,org.datadog.jmxfetch.util,StringUtilsTest,testCases,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{Collections.emptyList()`":"`""}`{Collections.singletonList("foo")`":"`"foo"}`{Arrays.asList("foo"`"bar")`":"`"foo:bar"}`{Arrays.asList("foo"`"bar")`"::"`"foo::bar"}`{Arrays.asList("foo"`"bar"`"qux")`":"`"foo:bar:qux"}`{Arrays.asList("foo"`"bar"`"qux")`"::"`"foo::bar::qux"}});" is 313.,17
+DataDog_jmxfetch,org.datadog.jmxfetch.util,LogLevelTest,testCases,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{"ALL"`LogLevel.ALL`Level.ALL}`{"DEBUG"`LogLevel.DEBUG`Level.FINE}`{"TRACE"`LogLevel.TRACE`Level.FINEST}`{"INFO"`LogLevel.INFO`Level.INFO}`{"WARN"`LogLevel.WARN`Level.WARNING}`{"ERROR"`LogLevel.ERROR`Level.SEVERE}`{"FATAL"`LogLevel.ERROR`Level.SEVERE}`{"OFF"`LogLevel.OFF`Level.OFF}`{"LEVEL"`LogLevel.INFO`Level.INFO}`{"some_unknown_level"`LogLevel.INFO`Level.INFO}});" is 404.,17
+DataDog_jmxfetch,org.datadog.jmxfetch.util,ServiceCheckHelperTest,testFormatServiceCheckPrefix,Long Statement,The length of the statement "String[][] data={{"activemq_58.foo.bar12"`"activemq.foo.bar12"}`{"test_package-X86_64-VER1:0.weird.metric_name"`"testpackage.weird.metric_name"}};" is 146.,9
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,JsonReporter,sendMetricPoint,Magic Number,The method contains a magic number: 1000L,20
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,JsonReporter,sendMetricPoint,Magic Number,The method contains a magic number: 2,20
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,JsonReporter,doSendServiceCheck,Magic Number,The method contains a magic number: 1000,39
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,init,Long Statement,The length of the statement "log.info("Initializing Statsd reporter with parameters host={} port={} telemetry={} " + "queueSize={} entityId={}"`this.statsdHost`this.statsdPort`this.telemetry`this.queueSize`entityId);" is 187.,31
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,init,Long Statement,The length of the statement "NonBlockingStatsDClientBuilder builder=new NonBlockingStatsDClientBuilder().hostname(this.statsdHost).port(this.statsdPort).enableTelemetry(this.telemetry).queueSize(this.queueSize).errorHandler(handler).entityID(entityId);" is 223.,31
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,init,Magic Number,The method contains a magic number: 8192,31
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,sendMetricPoint,Magic Number,The method contains a magic number: 300,59
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,sendMetricPoint,Magic Number,The method contains a magic number: 1000,59
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,doSendServiceCheck,Long Statement,The length of the statement "ServiceCheck sc=ServiceCheck.builder().withName(serviceCheckName).withStatus(this.statusToServiceCheckStatus(status)).withMessage(message).withTags(tags).build();" is 162.,74
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,doSendServiceCheck,Magic Number,The method contains a magic number: 300,74
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,StatsdReporter,doSendServiceCheck,Magic Number,The method contains a magic number: 1000,74
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,ReporterFactory,getReporter,Magic Number,The method contains a magic number: 2,10
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,ReporterFactory,getReporter,Magic Number,The method contains a magic number: 2,10
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,ConsoleReporter,sendMetricPoint,Magic Number,The method contains a magic number: 1000,20
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,ConsoleReporter,doSendServiceCheck,Magic Number,The method contains a magic number: 1000,46
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendMetrics,Complex Method,Cyclomatic complexity of the method is 16,52
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendMetrics,Long Statement,The length of the statement "String sendingMessage="Instance " + instanceName + " is sending "+ metrics.size()+ " metrics to the metrics reporter during collection #"+ loopCounter;" is 151.,52
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendMetrics,Long Statement,The length of the statement "log.debug("Invalid metric type " + metricType + " for metric "+ metricName+ ". The metric will be processed as rate"+ " (this is a DEPRECATED behaviour` use a valid type instead).");" is 182.,52
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendMetrics,Magic Number,The method contains a magic number: 5,52
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendMetrics,Magic Number,The method contains a magic number: 10,52
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendMetrics,Magic Number,The method contains a magic number: 5,52
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendMetrics,Magic Number,The method contains a magic number: 1000,52
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,Reporter,sendServiceCheck,Long Parameter List,The method has 5 parameters. ,168
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,ReporterTest,statusToInteger,Magic Number,The method contains a magic number: 2,10
+DataDog_jmxfetch,org.datadog.jmxfetch.reporter,ReporterTest,statusToInteger,Magic Number,The method contains a magic number: 3,10
+DataDog_jmxfetch,org.datadog.jmxfetch.validator,ReporterValidator,validate,Complex Conditional,The conditional expression !value.matches("^statsd:.+$") && !value.equals("console") && !value.equals("json") is complex.,8
+DataDog_jmxfetch,org.datadog.jmxfetch.validator,ReporterValidator,validate,Long Statement,The length of the statement "throw new ParameterException("Parameter " + name + " should be either 'console'` 'json'`"+ " 'statsd:[STATSD_HOST]:[STATSD_PORT]'"+ " or 'statsd:unix://[STATSD_UNIX_SOCKET_PATH]'");" is 181.,8
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,testTaskProcessor,Long Statement,The length of the statement "List<TaskStatusHandler> statuses=testProcessor.processTasks(instanceTestTasks`10`TimeUnit.SECONDS`new TaskMethod<Boolean>(){" is 124.,77
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,testTaskProcessor,Magic Number,The method contains a magic number: 2,77
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,testTaskProcessor,Magic Number,The method contains a magic number: 10,77
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,testTaskProcessorTimeout,Long Statement,The length of the statement "List<TaskStatusHandler> statuses=testProcessor.processTasks(instanceTestTasks`4`TimeUnit.SECONDS`new TaskMethod<Boolean>(){" is 123.,106
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,testTaskProcessorTimeout,Magic Number,The method contains a magic number: 2,106
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,testTaskProcessorTimeout,Magic Number,The method contains a magic number: 4,106
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,testTaskProcessorTimeout,Magic Number,The method contains a magic number: 2,106
+DataDog_jmxfetch,org.datadog.jmxfetch.tasks,TestTaskProcessor,embeddedTaskProcessor,Long Statement,The length of the statement "List<TaskStatusHandler> statuses=testProcessor.processTasks(instanceTestTasks`0`TimeUnit.SECONDS`new TaskMethod<Boolean>(){" is 123.,149
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,data,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{90`100`1`128`false}`{90`100`1`512`false}`{90`100`1`1024`false}`{90`100`1`128`true}`{90`100`1`512`true}`{90`100`1`1024`true}});" is 163.,43
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,CustomLoggerPerfTest,Long Parameter List,The method has 5 parameters. ,55
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,shouldRun,Empty catch clause,The method has an empty catch block.,70
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,perfTest,Empty catch clause,The method has an empty catch block.,84
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,perfTest,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder().append("For ").append(this.testWorkers).append(" workers with msg size ").append(this.msgSize).append(" and RFC 3339 mode set to ").append(this.rfc3339).append(" logged ").append(count.get()).append(" messsages.");" is 251.,84
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,run,Empty catch clause,The method has an empty catch block.,93
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,getRandomString,Magic Number,The method contains a magic number: 97,127
+DataDog_jmxfetch,com.timgroup.statsd,CustomLoggerPerfTest,getRandomString,Magic Number,The method contains a magic number: 122,127

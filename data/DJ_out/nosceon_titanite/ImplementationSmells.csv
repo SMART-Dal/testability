@@ -1,0 +1,330 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+nosceon_titanite,org.nosceon.titanite,Utils,toString,Magic Number,The method contains a magic number: 0x800,120
+nosceon_titanite,org.nosceon.titanite,Utils,copy,Magic Number,The method contains a magic number: 0x1000,131
+nosceon_titanite,org.nosceon.titanite,Utils,serialize,Long Statement,The length of the statement "return values.entrySet().stream().filter(e -> isNotEmpty(e.getValue())).map(e -> urlencode(e.getKey()`e.getValue())).reduce(""`(s`s2) -> s.length() == 0 ? s2 : s + '&' + s2);" is 174.,172
+nosceon_titanite,org.nosceon.titanite,Utils,encodeHexString,Magic Number,The method contains a magic number: 0xF0,231
+nosceon_titanite,org.nosceon.titanite,Utils,encodeHexString,Magic Number,The method contains a magic number: 4,231
+nosceon_titanite,org.nosceon.titanite,Utils,encodeHexString,Magic Number,The method contains a magic number: 0x0F,231
+nosceon_titanite,org.nosceon.titanite,ExceptionsFilter,translate,Magic Number,The method contains a magic number: 500,59
+nosceon_titanite,org.nosceon.titanite,WebsocketHandler,handshake,Long Statement,The length of the statement "WebSocketServerHandshakerFactory wsFactory=new WebSocketServerHandshakerFactory(getWebSocketLocation(request)`null`false);" is 122.,44
+nosceon_titanite,org.nosceon.titanite,WebsocketHandler,toFullHttpRequest,Long Statement,The length of the statement "DefaultFullHttpRequest fullRequest=new DefaultFullHttpRequest(request.getProtocolVersion()`request.getMethod()`request.getUri());" is 129.,86
+nosceon_titanite,org.nosceon.titanite,Request,Request,Long Parameter List,The method has 8 parameters. ,53
+nosceon_titanite,org.nosceon.titanite,Request,acceptableLanguages,Long Statement,The length of the statement "return ofNullable(headers.getString(HttpHeaders.Names.ACCEPT_LANGUAGE)).map(AcceptableLanguage::valuesOf).orElse(singletonList(AcceptableLanguage.ANY));" is 152.,113
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,hashCode,Magic Number,The method contains a magic number: 31,103
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,hashCode,Magic Number,The method contains a magic number: 31,103
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,hashCode,Magic Number,The method contains a magic number: 32,103
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,valueOf,Complex Method,Cyclomatic complexity of the method is 8,137
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,valueOf,Magic Number,The method contains a magic number: 2,137
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,isValid,Complex Conditional,The conditional expression ('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') is complex.,182
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,isValid,Magic Number,The method contains a magic number: 8,182
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguage,bestCandidate,Long Statement,The length of the statement "return candidates.stream().map(m -> new Candidate(index(sorted`m)`m)).filter(c -> c.index != Integer.MAX_VALUE).sorted().findFirst().map(c -> c.locale).orElse(null);" is 165.,211
+nosceon_titanite,org.nosceon.titanite,HttpServer,HttpServer,Long Statement,The length of the statement "this(newSettings().setIoWorkerCount(config.getIoWorkerCount()).setMaxRequestSize(config.getMaxRequestSize()).setMaxMultipartRequestSize(config.getMaxMultipartRequestSize()).addHttpConnector(config.getPort()).build());" is 217.,39
+nosceon_titanite,org.nosceon.titanite,HttpServer,HttpServer,Magic Number,The method contains a magic number: 3,51
+nosceon_titanite,org.nosceon.titanite,HttpServer,start,Long Statement,The length of the statement "NioEventLoopGroup eventLoopGroup=new NioEventLoopGroup(config.ioWorkerCount()`new NamedThreadFactory("Titanite " + id + " - "));" is 128.,64
+nosceon_titanite,org.nosceon.titanite,MediaType,includes,Complex Method,Cyclomatic complexity of the method is 9,160
+nosceon_titanite,org.nosceon.titanite,MediaType,equals,Long Statement,The length of the statement "return (this.type.equalsIgnoreCase(otherType.type) && this.subtype.equalsIgnoreCase(otherType.subtype) && this.parameters.equals(otherType.parameters));" is 152.,195
+nosceon_titanite,org.nosceon.titanite,MediaType,hashCode,Magic Number,The method contains a magic number: 31,209
+nosceon_titanite,org.nosceon.titanite,MediaType,hashCode,Magic Number,The method contains a magic number: 31,209
+nosceon_titanite,org.nosceon.titanite,MediaType,isQuotedString,Magic Number,The method contains a magic number: 2,263
+nosceon_titanite,org.nosceon.titanite,MediaType,valueOf,Complex Method,Cyclomatic complexity of the method is 8,271
+nosceon_titanite,org.nosceon.titanite,MediaType,bestCandidate,Long Statement,The length of the statement "return candidates.stream().map(m -> new Candidate(index(sorted`m)`m)).filter(c -> c.index != Integer.MAX_VALUE).sorted().findFirst().map(c -> c.mediaType).orElse(null);" is 168.,309
+nosceon_titanite,org.nosceon.titanite,Response,apply,Long Parameter List,The method has 5 parameters. ,229
+nosceon_titanite,org.nosceon.titanite,ParameterizedPattern,parse,Complex Method,Cyclomatic complexity of the method is 11,84
+nosceon_titanite,org.nosceon.titanite,CompositeHandler,compose,Magic Number,The method contains a magic number: 404,83
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilter,include,Long Statement,The length of the statement "this.includes.addAll(ofNullable(patterns).map(( String[] ps) -> Arrays.stream(ps).map(PathMatcher::new).collect(toList())).orElseGet(Collections::emptyList));" is 158.,60
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilter,exclude,Long Statement,The length of the statement "this.excludes.addAll(ofNullable(patterns).map(( String[] ps) -> Arrays.stream(ps).map(PathMatcher::new).collect(toList())).orElseGet(Collections::emptyList));" is 158.,66
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,register,Long Parameter List,The method has 5 parameters. ,78
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,register,Long Statement,The length of the statement "this.routings.addAll(controller.routes().stream().map(r -> new Route(r.method()`r.pattern()`null`new CompositeHandler(filter`r.handler()))).collect(toList()));" is 159.,87
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,start,Long Statement,The length of the statement "actualRoutes.forEach(r -> Titanite.LOG.info(id + " route added: " + Utils.padEnd(r.method().toString()`7`' ')+ r.pattern()));" is 125.,100
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,start,Magic Number,The method contains a magic number: 7,100
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,start,Magic Number,The method contains a magic number: 6,100
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,start,Magic Number,The method contains a magic number: 6,100
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,bootstrap,Long Parameter List,The method has 5 parameters. ,122
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,bootstrap,Long Statement,The length of the statement "return new ServerBootstrap().group(workers).channel(NioServerSocketChannel.class).childHandler(new HttpServerChannelInitializer(sslContext`settings`router)).bind(inetAddress(c)).syncUninterruptibly().channel();" is 210.,122
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,inetAddress,Long Statement,The length of the statement "return Optional.ofNullable(c.address()).map(a -> new InetSocketAddress(c.address()`c.port())).orElseGet(() -> new InetSocketAddress(c.port()));" is 143.,133
+nosceon_titanite,org.nosceon.titanite,AbstractHttpServerBuilder,start,Long Statement,The length of the statement "this.start(workers`newSettings().setIoWorkerCount(config.getIoWorkerCount()).setMaxRequestSize(config.getMaxRequestSize()).setMaxMultipartRequestSize(config.getMaxMultipartRequestSize()).addHttpConnector(config.getPort()).build());" is 231.,137
+nosceon_titanite,org.nosceon.titanite,Router,find,Long Statement,The length of the statement "return Method.OPTIONS.equals(method) ? new RoutingResult(matcher.parameters()`route.bodyParser()`new CompositeHandler(allowedMethodsFilter(candidates)`route.handler())) : new RoutingResult(matcher.parameters()`route.bodyParser()`route.handler());" is 246.,46
+nosceon_titanite,org.nosceon.titanite,Router,find,Long Statement,The length of the statement "return new RoutingResult(emptyMap()`EmptyBodyParser::new`new CompositeHandler(allowedMethodsFilter(candidates)`req -> Response.ok().toFuture()));" is 145.,46
+nosceon_titanite,org.nosceon.titanite,Router,allowedMethods,Long Statement,The length of the statement "return candidates.stream().map(Route::method).distinct().map(Method::name).sorted().reduce(""`(s`s2) -> s.length() == 0 ? s2 : s + "` " + s2);" is 142.,91
+nosceon_titanite,org.nosceon.titanite,HttpServerHandler,channelRead0,Complex Method,Cyclomatic complexity of the method is 14,73
+nosceon_titanite,org.nosceon.titanite,HttpServerHandler,channelRead0,Long Statement,The length of the statement "Map<String`CookieParam> cookies=Optional.ofNullable(request.headers().get(COOKIE)).map(CookieDecoder::decode).map(s -> s.stream().collect(toMap(io.netty.handler.codec.http.Cookie::getName`CookieParam::new))).orElseGet(Collections::emptyMap);" is 241.,73
+nosceon_titanite,org.nosceon.titanite,HttpServerHandler,channelRead0,Long Statement,The length of the statement "Request req=new Request(secure`Method.valueOf(request.getMethod().name())`qsd.path()`new HeaderParams(request)`new CookieParams(cookies)`new PathParams(routing.pathParams())`new QueryParams(qsd.parameters())`bodyParser.body());" is 227.,73
+nosceon_titanite,org.nosceon.titanite,HttpServerHandler,channelRead0,Magic Number,The method contains a magic number: 500,73
+nosceon_titanite,org.nosceon.titanite,HttpServerHandler,newBodyParser,Complex Conditional,The conditional expression method.equals(HttpMethod.POST) || method.equals(HttpMethod.PUT) || method.equals(HttpMethod.PATCH) is complex.,191
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/a"`(r) -> ok().body(r.queryParams().getString("p")).toFuture()).register(GET`"/b"`(r) -> ok().body(String.valueOf(r.queryParams().getShort("p"))).toFuture()).register(GET`"/c"`(r) -> ok().body(String.valueOf(r.queryParams().getInt("p"))).toFuture()).register(GET`"/d"`(r) -> ok().body(String.valueOf(r.queryParams().getLong("p"))).toFuture()).register(GET`"/e"`(r) -> ok().body(String.valueOf(r.queryParams().getFloat("p"))).toFuture()).register(GET`"/f"`(r) -> ok().body(String.valueOf(r.queryParams().getDouble("p"))).toFuture()).register(GET`"/g"`(r) -> ok().body(String.valueOf(r.queryParams().getBoolean("p"))).toFuture()).register(GET`"/ma"`(r) -> ok().body(String.valueOf(r.queryParams().getStrings("p"))).toFuture()).start();" is 762.,30
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Long Statement,The length of the statement "given().queryParam("p"`"apple").queryParam("p"`"orange").expect().statusCode(200).body(equalTo("[apple` orange]")).when().get(uri("/ma"));" is 138.,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,QueryParamsTest,test,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,FileUploadTest,test,Long Statement,The length of the statement "given().formParam("lorem"`"ipsum").multiPart("file"`file).expect().statusCode(200).body(equalTo("ipsum")).when().post(uri("/post"));" is 132.,66
+nosceon_titanite,org.nosceon.titanite,FileUploadTest,test,Magic Number,The method contains a magic number: 200,66
+nosceon_titanite,org.nosceon.titanite,MethodNotAllowedTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/resource"`(r) -> Response.ok().body(r.method().name()).toFuture()).register(DELETE`"/resource"`(r) -> Response.ok().body(r.method().name()).toFuture()).start();" is 189.,29
+nosceon_titanite,org.nosceon.titanite,MethodNotAllowedTest,test,Magic Number,The method contains a magic number: 200,38
+nosceon_titanite,org.nosceon.titanite,MethodNotAllowedTest,test,Magic Number,The method contains a magic number: 405,38
+nosceon_titanite,org.nosceon.titanite,MethodNotAllowedTest,test,Magic Number,The method contains a magic number: 405,38
+nosceon_titanite,org.nosceon.titanite,MethodNotAllowedTest,test,Magic Number,The method contains a magic number: 200,38
+nosceon_titanite,org.nosceon.titanite,MethodNotAllowedTest,test,Magic Number,The method contains a magic number: 405,38
+nosceon_titanite,org.nosceon.titanite,FileResponseBodyTest,test,Long Statement,The length of the statement "given().expect().statusCode(200).body(equalTo("Lorem ipsum dolor sit amet` consectetur adipiscing elit.")).when().get(uri("/file"));" is 132.,56
+nosceon_titanite,org.nosceon.titanite,FileResponseBodyTest,test,Magic Number,The method contains a magic number: 200,56
+nosceon_titanite,org.nosceon.titanite,WebSocketsTest,testText,Long Statement,The length of the statement "Future<org.eclipse.jetty.websocket.WebSocket.Connection> open=client.open(URI.create(ws("/socket"))`new org.eclipse.jetty.websocket.WebSocket.OnTextMessage(){" is 158.,67
+nosceon_titanite,org.nosceon.titanite,WebSocketsTest,testText,Magic Number,The method contains a magic number: 2000,67
+nosceon_titanite,org.nosceon.titanite,WebSocketsTest,testText,Magic Number,The method contains a magic number: 2,67
+nosceon_titanite,org.nosceon.titanite,WebSocketsTest,onMessage,Magic Number,The method contains a magic number: 2,86
+nosceon_titanite,org.nosceon.titanite,WebSocketsTest,testBinary,Long Statement,The length of the statement "Future<org.eclipse.jetty.websocket.WebSocket.Connection> open=client.open(URI.create(ws("/socket"))`new WebSocket.OnBinaryMessage(){" is 132.,109
+nosceon_titanite,org.nosceon.titanite,WebSocketsTest,testBinary,Magic Number,The method contains a magic number: 2000,109
+nosceon_titanite,org.nosceon.titanite,ParameterizedPatternTest,testParameterizedPattern,Magic Number,The method contains a magic number: 2,29
+nosceon_titanite,org.nosceon.titanite,ParameterizedPatternTest,testMoreThanOneSegment,Magic Number,The method contains a magic number: 2,51
+nosceon_titanite,org.nosceon.titanite,CookiesTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/a"`(r) -> ok().body(r.cookies().getString("p"`"default value")).toFuture()).register(GET`"/cookie"`(r) -> ok().cookie("lorem"`"ipsum").cookie(new Cookie("fruit"`"apple").version(2).comment("my comment").path("/cookie")).toFuture()).start();" is 269.,30
+nosceon_titanite,org.nosceon.titanite,CookiesTest,configureAndStartHttpServer,Magic Number,The method contains a magic number: 2,30
+nosceon_titanite,org.nosceon.titanite,CookiesTest,test,Magic Number,The method contains a magic number: 200,39
+nosceon_titanite,org.nosceon.titanite,CookiesTest,test,Magic Number,The method contains a magic number: 200,39
+nosceon_titanite,org.nosceon.titanite,CookiesTest,test,Magic Number,The method contains a magic number: 200,39
+nosceon_titanite,org.nosceon.titanite,HeadersTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/a"`(r) -> ok().body(r.headers().getString("p")).header("m"`r.headers().getString("p")).toFuture()).register(GET`"/b"`(r) -> ok().body(String.valueOf(r.headers().getShort("p"))).toFuture()).register(GET`"/c"`(r) -> ok().body(String.valueOf(r.headers().getInt("p"))).toFuture()).register(GET`"/d"`(r) -> ok().body(String.valueOf(r.headers().getLong("p"))).toFuture()).register(GET`"/e"`(r) -> ok().body(String.valueOf(r.headers().getFloat("p"))).toFuture()).register(GET`"/f"`(r) -> ok().body(String.valueOf(r.headers().getDouble("p"))).toFuture()).register(GET`"/g"`(r) -> ok().body(String.valueOf(r.headers().getBoolean("p"))).toFuture()).register(GET`"/headers"`(r) -> ok().type(MediaType.APPLICATION_XML).language(LOCALE).lastModified(DATE).location(uri("/location")).toFuture()).register(GET`"/ma"`(r) -> ok().body(String.valueOf(r.headers().getStrings("p"))).toFuture()).start();" is 912.,38
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Long Statement,The length of the statement "given().expect().statusCode(200).header(HttpHeaders.CONTENT_TYPE`equalTo("application/xml")).header(HttpHeaders.LAST_MODIFIED`equalTo("Thu` 01 Jan 1970 00:00:05 GMT")).header(HttpHeaders.CONTENT_LANGUAGE`equalTo("it_IT")).header(HttpHeaders.LOCATION`equalTo(uri("/location"))).when().get(uri("/headers"));" is 305.,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Long Statement,The length of the statement "given().header("p"`"apple").header("p"`"orange").expect().statusCode(200).body(equalTo("[apple` orange]")).when().get(uri("/ma"));" is 130.,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,HeadersTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,GlobalFiltersTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(f(SECURITY`CONTENT_TYPE_JSON)).register(GET`"/resource"`(r) -> ok().body("hello").toFuture()).start();" is 126.,57
+nosceon_titanite,org.nosceon.titanite,GlobalFiltersTest,test,Long Statement,The length of the statement "given().header(HttpHeaders.Names.AUTHORIZATION`"admin").expect().header("x-titanite-a"`"lorem").statusCode(415).when().get(uri("/resource"));" is 141.,66
+nosceon_titanite,org.nosceon.titanite,GlobalFiltersTest,test,Long Statement,The length of the statement "given().header(HttpHeaders.Names.AUTHORIZATION`"admin").header(HttpHeaders.Names.ACCEPT`"application/json").expect().header("x-titanite-a"`"lorem").header("x-titanite-b"`"ipsum").statusCode(200).when().get(uri("/resource"));" is 224.,66
+nosceon_titanite,org.nosceon.titanite,GlobalFiltersTest,test,Magic Number,The method contains a magic number: 401,66
+nosceon_titanite,org.nosceon.titanite,GlobalFiltersTest,test,Magic Number,The method contains a magic number: 415,66
+nosceon_titanite,org.nosceon.titanite,GlobalFiltersTest,test,Magic Number,The method contains a magic number: 200,66
+nosceon_titanite,org.nosceon.titanite,FileUploadTooLargeTest,configureAndStartHttpServer,Magic Number,The method contains a magic number: 5,40
+nosceon_titanite,org.nosceon.titanite,FileUploadTooLargeTest,test,Magic Number,The method contains a magic number: 413,51
+nosceon_titanite,org.nosceon.titanite,ContinueExpectedTest,test,Long Statement,The length of the statement "given().header(HTTP.EXPECT_DIRECTIVE`HTTP.EXPECT_CONTINUE).expect().statusCode(200).body(equalTo(TEXT)).when().get(uri("/text"));" is 129.,41
+nosceon_titanite,org.nosceon.titanite,ContinueExpectedTest,test,Magic Number,The method contains a magic number: 200,41
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetShorts,Magic Number,The method contains a magic number: 3,33
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetShorts,Magic Number,The method contains a magic number: 7,33
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetInts,Magic Number,The method contains a magic number: 3,38
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetInts,Magic Number,The method contains a magic number: 7,38
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetLongs,Magic Number,The method contains a magic number: 3l,43
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetLongs,Magic Number,The method contains a magic number: 7l,43
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetFloats,Magic Number,The method contains a magic number: 3f,48
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetFloats,Magic Number,The method contains a magic number: 7f,48
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetDoubles,Magic Number,The method contains a magic number: 3d,53
+nosceon_titanite,org.nosceon.titanite,MultiParamsTest,testGetDoubles,Magic Number,The method contains a magic number: 7d,53
+nosceon_titanite,org.nosceon.titanite,SimpleResponseTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/text"`(r) -> ok().text("Hello World").toFuture()).register(GET`"/html"`(r) -> ok().html("<h1>Hello World</h1>").toFuture()).start();" is 161.,31
+nosceon_titanite,org.nosceon.titanite,SimpleResponseTest,test,Long Statement,The length of the statement "given().expect().header(HttpHeaders.Names.CONTENT_TYPE`"text/plain").statusCode(200).body(equalTo("Hello World")).when().get(uri("/text"));" is 139.,40
+nosceon_titanite,org.nosceon.titanite,SimpleResponseTest,test,Long Statement,The length of the statement "given().expect().header(HttpHeaders.Names.CONTENT_TYPE`"text/html").statusCode(200).body(equalTo("<h1>Hello World</h1>")).when().get(uri("/html"));" is 147.,40
+nosceon_titanite,org.nosceon.titanite,SimpleResponseTest,test,Magic Number,The method contains a magic number: 200,40
+nosceon_titanite,org.nosceon.titanite,SimpleResponseTest,test,Magic Number,The method contains a magic number: 200,40
+nosceon_titanite,org.nosceon.titanite,FiltersTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(GLOBAL_FILTER).register(FILTER`new TextController()).register(POST`"/resource"`FILTER`(r -> ok().text("resource").toFuture())).start();" is 159.,60
+nosceon_titanite,org.nosceon.titanite,FiltersTest,test,Magic Number,The method contains a magic number: 200,70
+nosceon_titanite,org.nosceon.titanite,FiltersTest,test,Magic Number,The method contains a magic number: 200,70
+nosceon_titanite,org.nosceon.titanite,FiltersTest,test,Magic Number,The method contains a magic number: 200,70
+nosceon_titanite,org.nosceon.titanite,FiltersTest,test,Magic Number,The method contains a magic number: 200,70
+nosceon_titanite,org.nosceon.titanite,FiltersTest,test,Magic Number,The method contains a magic number: 200,70
+nosceon_titanite,org.nosceon.titanite,FiltersTest,test,Magic Number,The method contains a magic number: 200,70
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(onException().match(InternalException.class`(r`e) -> ok().text("Internal")).match(InternalSub1Exception.class`() -> ok().text("Internal Sub1"))).register(GET`"/a"`(r) -> {" is 195.,46
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,configureAndStartHttpServer,Magic Number,The method contains a magic number: 503,46
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,test,Magic Number,The method contains a magic number: 500,81
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,test,Magic Number,The method contains a magic number: 500,81
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,test,Magic Number,The method contains a magic number: 503,81
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,test,Magic Number,The method contains a magic number: 200,81
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,test,Magic Number,The method contains a magic number: 200,81
+nosceon_titanite,org.nosceon.titanite,ExceptionsTest,testInternalServerException,Magic Number,The method contains a magic number: 200,91
+nosceon_titanite,org.nosceon.titanite,RequestBodyTooLargeTest,maxRequestSize,Magic Number,The method contains a magic number: 5,41
+nosceon_titanite,org.nosceon.titanite,RequestBodyTooLargeTest,test,Magic Number,The method contains a magic number: 413,46
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetShort,Magic Number,The method contains a magic number: 2,33
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetShort,Magic Number,The method contains a magic number: 2,33
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetInteger,Magic Number,The method contains a magic number: 2,40
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetInteger,Magic Number,The method contains a magic number: 2,40
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetLong,Magic Number,The method contains a magic number: 2,47
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetLong,Magic Number,The method contains a magic number: 2l,47
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetFloat,Magic Number,The method contains a magic number: 2,54
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetFloat,Magic Number,The method contains a magic number: 2f,54
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetDouble,Magic Number,The method contains a magic number: 2,61
+nosceon_titanite,org.nosceon.titanite,SingleParamsTest,testGetDouble,Magic Number,The method contains a magic number: 2d,61
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/a"`(r) -> Optional.ofNullable(r.acceptableType(candidates)).map(m -> ok().body(m.toString()).toFuture()).orElseGet(() -> notAcceptable().toFuture())).start();" is 187.,39
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Long Statement,The length of the statement "given().header(HttpHeaders.ACCEPT`"*/*").expect().statusCode(200).body(equalTo(APPLICATION_JSON.toString())).when().get(uri("/a"));" is 131.,50
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Long Statement,The length of the statement "given().header(HttpHeaders.ACCEPT`"application/xml").expect().statusCode(200).body(equalTo(APPLICATION_XML.toString())).when().get(uri("/a"));" is 142.,50
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Long Statement,The length of the statement "given().header(HttpHeaders.ACCEPT`"application/*;q=0.4` text/*;q=0.5").expect().statusCode(200).body(equalTo(TEXT_PLAIN.toString())).when().get(uri("/a"));" is 155.,50
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Magic Number,The method contains a magic number: 200,50
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Magic Number,The method contains a magic number: 200,50
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Magic Number,The method contains a magic number: 200,50
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Magic Number,The method contains a magic number: 200,50
+nosceon_titanite,org.nosceon.titanite,AcceptableTypesTest,test,Magic Number,The method contains a magic number: 406,50
+nosceon_titanite,org.nosceon.titanite,ServerSentEventsE2ETest,test,Magic Number,The method contains a magic number: 3,52
+nosceon_titanite,org.nosceon.titanite,ServerSentEventsE2ETest,test,Magic Number,The method contains a magic number: 500,52
+nosceon_titanite,org.nosceon.titanite,HttpServerConfigTest,testFallbackToSystemProperties,Magic Number,The method contains a magic number: 3,36
+nosceon_titanite,org.nosceon.titanite,HttpServerConfigTest,testFallbackToSystemProperties,Magic Number,The method contains a magic number: 5,36
+nosceon_titanite,org.nosceon.titanite,HttpServerConfigTest,testFallbackToSystemProperties,Magic Number,The method contains a magic number: 7l,36
+nosceon_titanite,org.nosceon.titanite,FileServiceTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(Method.GET`"/lorem.txt"`req -> serveFile(req`txt).toFuture()).register(Method.GET`"/a/b/c/*mycustompath"`FileService.fileService(docRoot`req -> req.pathParams().getString("mycustompath"))).register(Method.GET`"/*path"`FileService.fileService(docRoot)).start();" is 283.,46
+nosceon_titanite,org.nosceon.titanite,FileServiceTest,test,Magic Number,The method contains a magic number: 200,75
+nosceon_titanite,org.nosceon.titanite,FileServiceTest,test,Magic Number,The method contains a magic number: 200,75
+nosceon_titanite,org.nosceon.titanite,FileServiceTest,test,Magic Number,The method contains a magic number: 200,75
+nosceon_titanite,org.nosceon.titanite,FileServiceTest,test,Magic Number,The method contains a magic number: 403,75
+nosceon_titanite,org.nosceon.titanite,FileServiceTest,test,Magic Number,The method contains a magic number: 404,75
+nosceon_titanite,org.nosceon.titanite,FileServiceTest,test,Magic Number,The method contains a magic number: 200,75
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,ControllersTest,test,Magic Number,The method contains a magic number: 200,69
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(POST`"/a"`req -> ok().body(req.body().asForm().getString("p")).toFuture()).register(POST`"/b"`req -> ok().body(String.valueOf(req.body().asForm().getShort("p"))).toFuture()).register(POST`"/c"`req -> ok().body(String.valueOf(req.body().asForm().getInt("p"))).toFuture()).register(POST`"/d"`req -> ok().body(String.valueOf(req.body().asForm().getLong("p"))).toFuture()).register(POST`"/e"`req -> ok().body(String.valueOf(req.body().asForm().getFloat("p"))).toFuture()).register(POST`"/f"`req -> ok().body(String.valueOf(req.body().asForm().getDouble("p"))).toFuture()).register(POST`"/g"`req -> ok().body(String.valueOf(req.body().asForm().getBoolean("p"))).toFuture()).register(POST`"/ma"`req -> ok().body(String.valueOf(req.body().as(MultiParams.class).getStrings("p"))).toFuture()).register(POST`"/mb"`req -> {" is 835.,37
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Long Statement,The length of the statement "given().formParam("p"`"apple").formParam("p"`"orange").expect().statusCode(200).body(equalTo("[apple` orange]")).when().post(uri("/ma"));" is 137.,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Long Statement,The length of the statement "given().formParam("p"`"apple").formParam("p"`"orange").expect().statusCode(200).body(equalTo("2")).when().post(uri("/mb"));" is 123.,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,FormsParamsTest,test,Magic Number,The method contains a magic number: 500,62
+nosceon_titanite,org.nosceon.titanite,ChunkedOutputResponseTest,test,Long Statement,The length of the statement "given().expect().header(HttpHeaders.Names.TRANSFER_ENCODING`"chunked").statusCode(200).body(equalTo(TEXT + TEXT + TEXT)).when().get(uri("/chunks"));" is 148.,50
+nosceon_titanite,org.nosceon.titanite,ChunkedOutputResponseTest,test,Magic Number,The method contains a magic number: 200,50
+nosceon_titanite,org.nosceon.titanite,AbstractMultiE2ETest,newServer,Magic Number,The method contains a magic number: 2,105
+nosceon_titanite,org.nosceon.titanite,AbstractE2ETest,newServer,Long Statement,The length of the statement "return new HttpServer(newSettings().setIoWorkerCount(2).setMaxRequestSize(maxRequestSize()).addHttpConnector(port).build());" is 124.,68
+nosceon_titanite,org.nosceon.titanite,AbstractE2ETest,newServer,Magic Number,The method contains a magic number: 2,68
+nosceon_titanite,org.nosceon.titanite,AttributesTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(f((req`handler) -> handler.apply(req.withAttribute("number"`"42"))`(req`handler) -> handler.apply(req.withAttribute("lorem"`"ipsum")))).register(GET`"/a"`(r) -> ok().text(r.attributes().get("number") + " " + r.attributes().get("lorem")).toFuture()).start();" is 281.,31
+nosceon_titanite,org.nosceon.titanite,AttributesTest,test,Magic Number,The method contains a magic number: 200,45
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilterTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(filter(filterA).include("/static/*.txt").include("/static/**/*.html").exclude("/static/h?llo.txt").exclude("/static/index.html")).register(Method.GET`"/*path"`handler).start();" is 200.,37
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilterTest,test,Magic Number,The method contains a magic number: 200,52
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilterTest,test,Magic Number,The method contains a magic number: 200,52
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilterTest,test,Magic Number,The method contains a magic number: 200,52
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilterTest,test,Magic Number,The method contains a magic number: 200,52
+nosceon_titanite,org.nosceon.titanite,PatternMatchingFilterTest,test,Magic Number,The method contains a magic number: 200,52
+nosceon_titanite,org.nosceon.titanite,RawBodyTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(POST`"/text"`req -> ok().body(req.body().asText()).toFuture()).register(POST`"/stream"`req -> ok().body(convertStreamToString(req.body().asStream())).toFuture()).register(POST`"/reader"`req -> ok().body(req.body().as(new StringBodyReader())).toFuture()).register(POST`"/unsupported"`req -> {" is 314.,39
+nosceon_titanite,org.nosceon.titanite,RawBodyTest,test,Magic Number,The method contains a magic number: 200,53
+nosceon_titanite,org.nosceon.titanite,RawBodyTest,test,Magic Number,The method contains a magic number: 200,53
+nosceon_titanite,org.nosceon.titanite,RawBodyTest,test,Magic Number,The method contains a magic number: 200,53
+nosceon_titanite,org.nosceon.titanite,RawBodyTest,test,Magic Number,The method contains a magic number: 500,53
+nosceon_titanite,org.nosceon.titanite,MethodsTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/resource"`(r) -> ok().body(r.method().name()).toFuture()).register(POST`"/resource"`(r) -> ok().body(r.method().name()).toFuture()).register(PUT`"/resource"`(r) -> ok().body(r.method().name()).toFuture()).register(DELETE`"/resource"`(r) -> ok().body(r.method().name()).toFuture()).register(PATCH`"/resource"`(r) -> ok().body(r.method().name()).toFuture()).register(new MyController()).start();" is 422.,49
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,MethodsTest,test,Magic Number,The method contains a magic number: 200,62
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(Method.GET`"/lorem.txt"`req -> serveResource(req`"/public/hello.txt").toFuture()).register(Method.GET`"/a/b/c/*mycustompath"`publicResourceService(req -> req.pathParams().getString("mycustompath"))).register(Method.GET`"/*path"`h(publicResourceService()`webJarResourceService())).start();" is 311.,37
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testA,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testA,Magic Number,The method contains a magic number: 403,47
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testA,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testA,Magic Number,The method contains a magic number: 404,47
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testA,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testA,Magic Number,The method contains a magic number: 404,47
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testA,Magic Number,The method contains a magic number: 200,47
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testB,Magic Number,The method contains a magic number: 200,59
+nosceon_titanite,org.nosceon.titanite,ResourceServiceTest,testC,Magic Number,The method contains a magic number: 404,64
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(Method.GET`"/text"`req -> ok().text("hello world").toFuture()).register(Method.GET`"/streamA"`req -> ok().body(new ByteArrayInputStream(TEXT.getBytes())).toFuture()).register(Method.GET`"/streamB"`req -> ok().body(o -> ByteStreams.copy(new ByteArrayInputStream(TEXT.getBytes())`o)).toFuture()).register(Method.GET`"/file"`req -> serveFile(req`txt).toFuture()).register(Method.GET`"/chunks"`(req) -> ok().chunks(o -> {" is 440.,43
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,configureAndStartHttpServer,Long Statement,The length of the statement ").toFuture()).register(Method.HEAD`"/head"`req -> ok().header("Content-Length"`"45").toFuture()).register(Method.POST`"/post"`req -> ok().body("ok").toFuture()).start();" is 169.,43
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Long Statement,The length of the statement "given().expect().statusCode(200).header("Transfer-Encoding"`equalTo("chunked")).body(equalTo("")).when().head(uri("/streamA"));" is 127.,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Long Statement,The length of the statement "given().expect().statusCode(200).header("Transfer-Encoding"`equalTo("chunked")).body(equalTo("")).when().head(uri("/streamB"));" is 127.,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Long Statement,The length of the statement "given().expect().statusCode(200).header("Transfer-Encoding"`equalTo("chunked")).body(equalTo("")).when().head(uri("/chunks"));" is 126.,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Magic Number,The method contains a magic number: 200,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Magic Number,The method contains a magic number: 200,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Magic Number,The method contains a magic number: 200,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Magic Number,The method contains a magic number: 200,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Magic Number,The method contains a magic number: 200,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Magic Number,The method contains a magic number: 200,65
+nosceon_titanite,org.nosceon.titanite,HeadMethodTest,test,Magic Number,The method contains a magic number: 405,65
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguageTest,testWithQualityFactor,Magic Number,The method contains a magic number: 0.7d,48
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguageTest,testBestCandidate,Long Statement,The length of the statement "assertThat(bestCandidate(languages`Arrays.asList(new Locale("en"`"US")`new Locale("en"`"GB")))`equalTo(new Locale("en"`"GB")));" is 127.,116
+nosceon_titanite,org.nosceon.titanite,AcceptableLanguageTest,testBestCandidate,Long Statement,The length of the statement "assertThat(bestCandidate(languages`Arrays.asList(new Locale("en"`"US")`new Locale("en"`"BE")))`equalTo(new Locale("en"`"US")));" is 127.,116
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/a/:p"`(r) -> ok().body(r.pathParams().getString("p")).toFuture()).register(GET`"/b/:p"`(r) -> ok().body(String.valueOf(r.pathParams().getShort("p"))).toFuture()).register(GET`"/c/:p"`(r) -> ok().body(String.valueOf(r.pathParams().getInt("p"))).toFuture()).register(GET`"/d/:p"`(r) -> ok().body(String.valueOf(r.pathParams().getLong("p"))).toFuture()).register(GET`"/e/:p"`(r) -> ok().body(String.valueOf(r.pathParams().getFloat("p"))).toFuture()).register(GET`"/f/:p"`(r) -> ok().body(String.valueOf(r.pathParams().getDouble("p"))).toFuture()).register(GET`"/g/:p"`(r) -> ok().body(String.valueOf(r.pathParams().getBoolean("p"))).toFuture()).start();" is 679.,30
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,test,Magic Number,The method contains a magic number: 200,44
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,test,Magic Number,The method contains a magic number: 200,44
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,test,Magic Number,The method contains a magic number: 200,44
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,test,Magic Number,The method contains a magic number: 200,44
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,test,Magic Number,The method contains a magic number: 200,44
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,test,Magic Number,The method contains a magic number: 200,44
+nosceon_titanite,org.nosceon.titanite,PathParamsTest,test,Magic Number,The method contains a magic number: 200,44
+nosceon_titanite,org.nosceon.titanite,CompositeHandlerTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,CompositeHandlerTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,CompositeHandlerTest,test,Magic Number,The method contains a magic number: 200,63
+nosceon_titanite,org.nosceon.titanite,CompositeHandlerTest,test,Magic Number,The method contains a magic number: 404,63
+nosceon_titanite,org.nosceon.titanite,BodyWriterResponseTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.register(GET`"/stream"`(r) -> ok().body(new ByteArrayInputStream(TEXT.getBytes())).toFuture()).register(GET`"/resource"`(r) -> ok().body(o -> ByteStreams.copy(new ByteArrayInputStream(TEXT.getBytes())`o)).toFuture()).start();" is 239.,40
+nosceon_titanite,org.nosceon.titanite,BodyWriterResponseTest,test,Long Statement,The length of the statement "given().expect().header(HttpHeaders.Names.TRANSFER_ENCODING`"chunked").statusCode(200).body(equalTo(TEXT)).when().get(uri("/stream"));" is 134.,49
+nosceon_titanite,org.nosceon.titanite,BodyWriterResponseTest,test,Long Statement,The length of the statement "given().expect().header(HttpHeaders.Names.TRANSFER_ENCODING`"chunked").statusCode(200).body(equalTo(TEXT)).when().get(uri("/resource"));" is 136.,49
+nosceon_titanite,org.nosceon.titanite,BodyWriterResponseTest,test,Magic Number,The method contains a magic number: 200,49
+nosceon_titanite,org.nosceon.titanite,BodyWriterResponseTest,test,Magic Number,The method contains a magic number: 200,49
+nosceon_titanite,org.nosceon.titanite,AbstractE2ETest,newServer,Magic Number,The method contains a magic number: 2,62
+nosceon_titanite,org.nosceon.titanite,SessionNotAvailableE2ETest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(onException().match(SessionNotAvailableException.class`() -> ok().text("Session not available!!"))).register(GET`"/session"`req -> ok().text(session(req).getString("name")).toFuture()).start();" is 217.,34
+nosceon_titanite,org.nosceon.titanite,SessionNotAvailableE2ETest,test,Long Statement,The length of the statement "given().cookie(DEFAULT_SESSION_COOKIE_NAME`"\"c1daaa1d944a6e97e79d7935bf72f0e265a26a07|lorem=ipsum\"").expect().statusCode(200).body(equalTo("Session not available!!")).when().get(uri("/session"));" is 197.,45
+nosceon_titanite,org.nosceon.titanite,SessionNotAvailableE2ETest,test,Magic Number,The method contains a magic number: 200,45
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testA,Long Statement,The length of the statement "given().expect().statusCode(200).cookie(DEFAULT_SESSION_COOKIE_NAME`"\"ddf5cc7e5f4a7d024bbf6cd3344fd6c306c5a20e|lorem=ipsum&name=titanite\"").when().get(uri("/a"));" is 164.,59
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testA,Magic Number,The method contains a magic number: 200,59
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testB,Long Statement,The length of the statement "given().cookie(DEFAULT_SESSION_COOKIE_NAME`"\"adfb9b2f6426f5b01d0bf50eb2e9c9fa9239d212|count=1\"").expect().statusCode(200).cookie(DEFAULT_SESSION_COOKIE_NAME`"\"815077f6727696ac07ac5f5d3c6985c8485efcbf|count=2\"").when().get(uri("/b"));" is 237.,64
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testB,Magic Number,The method contains a magic number: 200,64
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testC,Long Statement,The length of the statement "given().cookie(DEFAULT_SESSION_COOKIE_NAME`"\"c1daaa1d944a6e97e79d7935bf72f0e265a26a07|lorem=ipsum\"").expect().statusCode(200).cookie(DEFAULT_SESSION_COOKIE_NAME`"\"cb66ceedf8f49912d34468e38c99ee2b06b0337a|count=1&lorem=ipsum\"").when().get(uri("/b"));" is 253.,71
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testC,Magic Number,The method contains a magic number: 200,71
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testClear,Long Statement,The length of the statement "given().cookie(DEFAULT_SESSION_COOKIE_NAME`"\"c1daaa1d944a6e97e79d7935bf72f0e265a26a07|lorem=ipsum\"").expect().statusCode(200).cookie(DEFAULT_SESSION_COOKIE_NAME`"de14c37f1eb6ebc2b79e58b83468368869eb9405|").when().get(uri("/c"));" is 230.,78
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testClear,Magic Number,The method contains a magic number: 200,78
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testUnsigned,Long Statement,The length of the statement "given().cookie(DEFAULT_SESSION_COOKIE_NAME`"\"count=5\"").expect().statusCode(200).cookie(DEFAULT_SESSION_COOKIE_NAME`"\"adfb9b2f6426f5b01d0bf50eb2e9c9fa9239d212|count=1\"").when().get(uri("/b"));" is 196.,85
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testUnsigned,Magic Number,The method contains a magic number: 200,85
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testInvalidSignature,Long Statement,The length of the statement "given().cookie(DEFAULT_SESSION_COOKIE_NAME`"\"invalid_signature|count=5\"").expect().statusCode(200).cookie(DEFAULT_SESSION_COOKIE_NAME`"\"adfb9b2f6426f5b01d0bf50eb2e9c9fa9239d212|count=1\"").when().get(uri("/b"));" is 214.,92
+nosceon_titanite,org.nosceon.titanite,SessionE2ETest,testInvalidSignature,Magic Number,The method contains a magic number: 200,92
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(basicAuth).register(GET`"/a"`req -> ok().text("ok").toFuture()).register(GET`"/b"`isAuthenticated()`req -> ok().text("ok").toFuture()).register(GET`"/c"`hasRole("user")`req -> ok().text("ok").toFuture()).register(GET`"/d"`hasRole("admin")`req -> ok().text("ok").toFuture()).register(GET`"/e"`hasAnyRole("user"`"admin")`req -> ok().text("ok").toFuture()).start();" is 386.,73
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 200,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 200,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 200,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 200,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 403,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 403,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 200,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 200,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 200,89
+nosceon_titanite,org.nosceon.titanite,BasicAuthenticationTest,test,Magic Number,The method contains a magic number: 401,89
+nosceon_titanite,org.nosceon.titanite,AbstractE2ETest,newServer,Magic Number,The method contains a magic number: 2,62
+nosceon_titanite,org.nosceon.titanite,FlashNotAvailableE2ETest,configureAndStartHttpServer,Long Statement,The length of the statement "return server.setFilter(onException().match(FlashNotAvailableException.class`() -> ok().text("Flash not available!!"))).register(GET`"/flash"`req -> ok().text(flash(req).getString("name")).toFuture()).start();" is 209.,34
+nosceon_titanite,org.nosceon.titanite,FlashNotAvailableE2ETest,test,Long Statement,The length of the statement "given().cookie(DEFAULT_FLASH_COOKIE_NAME`"\"name=ipsum\"").expect().statusCode(200).body(equalTo("Flash not available!!")).when().get(uri("/flash"));" is 149.,45
+nosceon_titanite,org.nosceon.titanite,FlashNotAvailableE2ETest,test,Magic Number,The method contains a magic number: 200,45
+nosceon_titanite,org.nosceon.titanite,AbstractE2ETest,newServer,Magic Number,The method contains a magic number: 2,62
+nosceon_titanite,org.nosceon.titanite,FlashE2ETest,testA,Long Statement,The length of the statement "given().expect().statusCode(200).cookie(DEFAULT_FLASH_COOKIE_NAME`"\"lorem=ipsum&name=titanite\"").when().get(uri("/a"));" is 121.,52
+nosceon_titanite,org.nosceon.titanite,FlashE2ETest,testA,Magic Number,The method contains a magic number: 200,52
+nosceon_titanite,org.nosceon.titanite,FlashE2ETest,testB,Long Statement,The length of the statement "given().cookie(DEFAULT_FLASH_COOKIE_NAME`"\"count=1\"").expect().statusCode(200).cookie(DEFAULT_FLASH_COOKIE_NAME`"\"count=2\"").when().get(uri("/b"));" is 151.,57
+nosceon_titanite,org.nosceon.titanite,FlashE2ETest,testB,Magic Number,The method contains a magic number: 200,57
+nosceon_titanite,org.nosceon.titanite,FlashE2ETest,testC,Long Statement,The length of the statement "given().cookie(DEFAULT_FLASH_COOKIE_NAME`"\"lorem=ipsum\"").expect().statusCode(200).cookie(DEFAULT_FLASH_COOKIE_NAME`"\"count=1\"").when().get(uri("/b"));" is 155.,64
+nosceon_titanite,org.nosceon.titanite,FlashE2ETest,testC,Magic Number,The method contains a magic number: 200,64
+nosceon_titanite,org.nosceon.titanite.service,FileService,serveFile,Long Statement,The length of the statement "return ofNullable(file).filter((r) -> r.exists() && r.canRead() && !r.isHidden()&& !r.isDirectory()).map((r) -> createResponse(request`r)).orElseGet(Response::notFound);" is 169.,52
+nosceon_titanite,org.nosceon.titanite.service,FileService,apply,Long Statement,The length of the statement "return file.isDirectory() ? serveFile(request`new File(file`"index.html")).toFuture() : serveFile(request`file).toFuture();" is 123.,73
+nosceon_titanite,org.nosceon.titanite.service,FileService,createResponse,Long Statement,The length of the statement "return ifModifiedSince.filter((d) -> lastModified <= d.getTime()).map((d) -> Response.notModified()).orElseGet(() -> Response.ok().type(getMediaTypeFromFileName(file.getName())).lastModified(new Date(lastModified)).body(file));" is 227.,86
+nosceon_titanite,org.nosceon.titanite.service,ResourceService,serveResource,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4996b2d8,66
+nosceon_titanite,org.nosceon.titanite.service,ResourceService,createResponseFromJarResource,Long Statement,The length of the statement "return ifModifiedSince.filter((d) -> lastModified <= d.getTime()).map((d) -> Response.notModified()).orElseGet(() -> Response.ok().type(getMediaTypeFromFileName(resource.toString())).lastModified(new Date(lastModified)).body(callUnchecked(resource::openStream)));" is 263.,117
+nosceon_titanite,org.nosceon.titanite.exception,AbstractInvalidParameterException,AbstractInvalidParameterException,Long Parameter List,The method has 5 parameters. ,29
+nosceon_titanite,org.nosceon.titanite.body,FormParams,getMultiPart,Long Statement,The length of the statement "return ofNullable(decoder.getBodyHttpData(name)).filter(p -> p instanceof FileUpload).map(p -> new MultiPart((FileUpload)p)).orElse(null);" is 138.,47
+nosceon_titanite,org.nosceon.titanite.body,FormParams,getStrings,Long Statement,The length of the statement "return ofNullable(decoder.getBodyHttpDatas(name)).map(l -> l.stream().map(this::toString).collect(Collectors.toList())).orElseGet(Collections::emptyList);" is 154.,60
+nosceon_titanite,org.nosceon.titanite.view,ViewRenderer,templateOf,Long Statement,The length of the statement "throw new IllegalArgumentException("instance of " + o.getClass() + " does not match ["+ String.class.getName()+ "] or ["+ View.class.getName()+ "]` or is not annotated with ["+ View.Template.class.getName()+ "]");" is 213.,31
+nosceon_titanite,org.nosceon.titanite.scope,SessionFilter,apply,Long Statement,The length of the statement "Session scope=ofNullable(request.cookies().getString(cookieName)).map(this::decode).map(Session::new).orElseGet(Session::new);" is 126.,52
+nosceon_titanite,org.nosceon.titanite.scope,SessionFilter,apply,Long Statement,The length of the statement "return function.apply(request.withAttribute(Session.ATTRIBUTE_ID`scope)).thenApply(resp -> resp.cookie(encode(scope.values())));" is 128.,52
+nosceon_titanite,org.nosceon.titanite.scope,Session,session,Long Statement,The length of the statement "return checkNotNull(session`() -> new SessionNotAvailableException("Session not available` a " + SessionFilter.class.getName() + " should be registered to use a Session"));" is 172.,41
+nosceon_titanite,org.nosceon.titanite.scope,Flash,flash,Long Statement,The length of the statement "return checkNotNull(flash`() -> new FlashNotAvailableException("Flash not available` a " + FlashFilter.class.getName() + " should be registered to use a Flash"));" is 162.,44
+nosceon_titanite,org.nosceon.titanite.scope,FlashFilter,apply,Long Statement,The length of the statement "Flash scope=ofNullable(request.cookies().getString(cookieName)).map(Utils::deserialize).map(Flash::new).orElseGet(Flash::new);" is 126.,45
+nosceon_titanite,org.nosceon.titanite.scope,FlashFilter,apply,Long Statement,The length of the statement "return function.apply(request.withAttribute(Flash.ATTRIBUTE_ID`scope)).thenApply(resp -> resp.cookie(new Cookie(cookieName`serialize(scope.values())).httpOnly(true).path("/")));" is 177.,45
+nosceon_titanite,org.nosceon.titanite.auth.basic,BasicAuthentication,apply,Long Statement,The length of the statement "Request req=request.withAttribute(Auth.UNAUTHORIZED_ATTRIBUTE_ID`unauthorizedHandler()).withAttribute(Auth.ACCESS_DENIED_ATTRIBUTE_ID`accessDeniedHandler());" is 157.,62
+nosceon_titanite,org.nosceon.titanite.auth.basic,BasicAuthentication,apply,Long Statement,The length of the statement "return authenticator.authenticate(username`password).thenCompose(optAuth -> optAuth.map(auth -> handler.apply(req.withAttribute(Auth.ATTRIBUTE_ID`auth))).orElseGet(() -> handler.apply(req)));" is 191.,62
+nosceon_titanite,org.nosceon.titanite.examples,TweetMap,main,Long Statement,The length of the statement "httpServer().register(GET`"/data"`req -> eventSource.newSubscription()).register(GET`"/*path"`publicResourceService()).start();" is 127.,30
+nosceon_titanite,org.nosceon.titanite.examples,Chat,main,Long Statement,The length of the statement "new HttpServer().register(GET`"/chat"`req -> webSocket(chat.newSubscriber(req.queryParams().getString("nick")))).register(GET`"/*path"`h(publicResourceService()`webJarResourceService())).start();" is 195.,31

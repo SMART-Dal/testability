@@ -1,0 +1,742 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+rtreffer_minidns,org.minidns.dnssec,DnssecValidationFailedException,DnssecValidationFailedException,Long Statement,The length of the statement "super("Validation of " + records.size() + " "+ records.get(0).type+ " record"+ (records.size() > 1 ? "s" : "")+ " failed: "+ reason);" is 133.,41
+rtreffer_minidns,org.minidns.dnssec,DnssecUnverifiedReason,equals,Long Statement,The length of the statement "return obj instanceof DnssecUnverifiedReason && ((DnssecUnverifiedReason)obj).getReasonString().equals(getReasonString());" is 122.,38
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifyAnswer,Complex Method,Cyclomatic complexity of the method is 10,155
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifyNsec,Complex Method,Cyclomatic complexity of the method is 11,203
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifyNsec,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@44953dec,203
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifySignatures,Complex Method,Cyclomatic complexity of the method is 13,281
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifySignedRecords,Complex Method,Cyclomatic complexity of the method is 9,363
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifySignedRecords,Long Statement,The length of the statement "throw new DnssecValidationFailedException(q`records.size() + " " + rrsig.typeCovered+ " record(s) are signed using an unknown key.");" is 133.,363
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifySecureEntryPoint,Complex Conditional,The conditional expression delegation == null && dlv != null && !dlv.isChildOf(sepRecord.name) is complex.,404
+rtreffer_minidns,org.minidns.dnssec,DnssecClient,verifySecureEntryPoint,Complex Method,Cyclomatic complexity of the method is 13,404
+rtreffer_minidns,org.minidns.dnssec,Verifier,combine,Complex Method,Cyclomatic complexity of the method is 8,114
+rtreffer_minidns,org.minidns.dnssec,Verifier,combine,Magic Number,The method contains a magic number: 10,114
+rtreffer_minidns,org.minidns.dnssec,Verifier,combine,Magic Number,The method contains a magic number: 0xFF,114
+rtreffer_minidns,org.minidns.dnssec,Verifier,combine,Magic Number,The method contains a magic number: 0xFF,114
+rtreffer_minidns,org.minidns.dnssec,Verifier,compare,Magic Number,The method contains a magic number: 0xFF,145
+rtreffer_minidns,org.minidns.dnssec,Verifier,compare,Magic Number,The method contains a magic number: 0xFF,145
+rtreffer_minidns,org.minidns.dnssec,Verifier,nsecMatches,Complex Conditional,The conditional expression testParts > lowerParts && !test.isChildOf(lowerBound) && test.stripToLabels(lowerParts).compareTo(lowerBound) < 0 is complex.,171
+rtreffer_minidns,org.minidns.dnssec,Verifier,nsecMatches,Complex Conditional,The conditional expression testParts > upperParts && !test.isChildOf(upperBound) && test.stripToLabels(upperParts).compareTo(upperBound) > 0 is complex.,171
+rtreffer_minidns,org.minidns.dnssec,Verifier,nsecMatches,Long Statement,The length of the statement "if (testParts > lowerParts && !test.isChildOf(lowerBound) && test.stripToLabels(lowerParts).compareTo(lowerBound) < 0) return false;" is 132.,171
+rtreffer_minidns,org.minidns.dnssec,Verifier,nsecMatches,Long Statement,The length of the statement "if (testParts > upperParts && !test.isChildOf(upperBound) && test.stripToLabels(upperParts).compareTo(upperBound) > 0) return false;" is 132.,171
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testBasicValid,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 540.,104
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testNoSEPAtKSK,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 540.,132
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSingleZSK,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK))`sign(comKSK`"com"`comPrivateKSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 519.,162
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testMissingDelegation,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 456.,190
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnsignedRoot,Long Statement,The length of the statement "applyZones(client`rootZone(record("com"`ds("com"`digestType`comKSK))`record("com"`ns("ns.com"))`record("ns.com"`a("1.1.1.1")))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 328.,217
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testNoRootSecureEntryPoint,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 540.,240
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testNoRootSecureEntryPoint,Long Statement,The length of the statement "assertTrue(result.getUnverifiedReasons().iterator().next() instanceof DnssecUnverifiedReason.NoRootSecureEntryPointReason);" is 123.,240
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnsignedZone,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`zone("com"`"ns.com"`"1.1.1.1"`record("example.com"`a("1.1.1.2"))));" is 406.,272
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testInvalidDNSKEY,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 519.,297
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testNoDNSKEY,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 455.,325
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testInvalidRRSIG,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`zone("com"`"ns.com"`"1.1.1.1"`record("com"`comKSK)`record("com"`comZSK)`record("example.com"`a("1.1.1.2"))`invalidRrSig));" is 461.,351
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testInvalidRRSIG,Magic Number,The method contains a magic number: 2,351
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Long Statement,The length of the statement "RRSIG unknownRrsig=rrsig(Record.TYPE.A`213`2`3600`signatureExpiration`signatureInception`comZSK.getKeyTag()`"com"`new byte[0]);" is 127.,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`zone("com"`"ns.com"`"1.1.1.1"`record("com"`comKSK)`record("com"`comZSK)`record("example.com"`a("1.1.1.2"))`record("example.com"`unknownRrsig)));" is 483.,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 14,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 24,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 60,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 60,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 1000,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 14,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 24,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 60,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 60,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 1000,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 213,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 2,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownAlgorithm,Magic Number,The method contains a magic number: 3600,388
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testInvalidDelegation,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds(comKSK.getKeyTag()`algorithm`digestType`new byte[0])))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 568.,419
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownDelegationDigestType,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds(comKSK.getKeyTag()`algorithm`(byte)213`new byte[0])))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 567.,448
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testUnknownDelegationDigestType,Magic Number,The method contains a magic number: 213,448
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Long Statement,The length of the statement "RRSIG outOfDateSig=rrsig(Record.TYPE.A`algorithm`2`3600`signatureExpiration`signatureInception`comZSK.getKeyTag()`"com"`new byte[0]);" is 133.,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comPrivateZSK`outOfDateSig`record("example.com"`a("1.1.1.2")))));" is 530.,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 14,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 24,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 60,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 60,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 1000,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 28L,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 24L,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 60L,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 60L,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 1000L,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 2,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureOutOfDate,Magic Number,The method contains a magic number: 3600,477
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Long Statement,The length of the statement "RRSIG outOfDateSig=rrsig(Record.TYPE.A`algorithm`2`3600`signatureExpiration`signatureInception`comZSK.getKeyTag()`"com"`new byte[0]);" is 133.,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Long Statement,The length of the statement "applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comPrivateZSK`outOfDateSig`record("example.com"`a("1.1.1.2")))));" is 530.,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 28L,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 24L,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 60L,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 60L,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 1000L,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 14,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 24,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 60,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 60,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 1000,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 2,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testSignatureInFuture,Magic Number,The method contains a magic number: 3600,509
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Long Statement,The length of the statement "DnsWorld world=applyZones(client`signedRootZone(sign(rootKSK`""`rootPrivateKSK`algorithm`record(""`rootKSK)`record(""`rootZSK))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ds("com"`digestType`comKSK)))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("com"`ns("ns.com")))`sign(rootZSK`""`rootPrivateZSK`algorithm`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`sign(comKSK`"com"`comPrivateKSK`algorithm`record("com"`comKSK)`record("com"`comZSK))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`a("1.1.1.2")))));" is 555.,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Long Statement,The length of the statement "List<Record<? extends Data>> records=DnssecWorld.merge(sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`nsec("www.example.com"`Record.TYPE.A)))`sign(comZSK`"com"`comPrivateZSK`algorithm`record("example.com"`soa("sns.dns.icann.org"`"noc.dns.icann.org"`2015081265`7200`3600`1209600`3600))));" is 303.,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Long Statement,The length of the statement "world.addPreparedResponse(new DnssecWorld.AddressedNsecResponse(InetAddress.getByAddress("ns.com"`new byte[]{1`1`1`1})`nsecMessage.build()));" is 141.,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Magic Number,The method contains a magic number: 2015081265,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Magic Number,The method contains a magic number: 7200,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Magic Number,The method contains a magic number: 3600,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Magic Number,The method contains a magic number: 1209600,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidNSEC,Magic Number,The method contains a magic number: 3600,541
+rtreffer_minidns,org.minidns.dnssec,DnssecClientTest,testValidDLV,Long Statement,The length of the statement "DnsWorld dnsWorld=applyZones(client`signedRootZone(selfSignDnskeyRrSet("")`sign(""`ds("dlv"))`sign(""`record("dlv"`ns("ns.com")))`sign(""`record("com"`ns("ns.com")))`sign(""`record("ns.com"`a("1.1.1.1"))))`signedZone("com"`"ns.com"`"1.1.1.1"`selfSignDnskeyRrSet("com")`sign("com"`record("example.com"`a("1.1.1.2"))))`signedZone("dlv"`"ns.com"`"1.1.1.1"`selfSignDnskeyRrSet("dlv")`sign("dlv"`record("com.dlv"`dlv("com"`digestType`comKSK)))));" is 441.,581
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDnssecDataFor,Magic Number,The method contains a magic number: 2048,87
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDnssecDataFor,Magic Number,The method contains a magic number: 1024,87
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,sign,Long Parameter List,The method has 5 parameters. ,132
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,sign,Long Parameter List,The method has 5 parameters. ,138
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,sign,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@87b6f4d,155
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Long Parameter List,The method has 5 parameters. ,201
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Long Parameter List,The method has 5 parameters. ,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Long Statement,The length of the statement "RRSIG rrsig=rrsig(typeCovered`algorithm`labels`originalTtl`signatureExpiration`signatureInception`key.getKeyTag()`signerName`new byte[0]);" is 138.,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 14,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 24,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 60,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 60,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 1000,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 14,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 24,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 60,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 60,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Magic Number,The method contains a magic number: 1000,206
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,rrsigRecord,Long Statement,The length of the statement "return record(records[0].name`rrsig.originalTtl`rrsig(rrsig.typeCovered`rrsig.algorithm`rrsig.labels`rrsig.originalTtl`rrsig.signatureExpiration`rrsig.signatureInception`rrsig.keyTag`rrsig.signerName`sign(privateKey`rrsig.algorithm`bytes))).as(RRSIG.class);" is 257.,218
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,sign,Complex Method,Cyclomatic complexity of the method is 15,262
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,sign,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1c374775,262
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,sign,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@56e6d8f1,262
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,convertAsn1ToRFC,Magic Number,The method contains a magic number: 64,308
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,convertAsn1ToRFC,Magic Number,The method contains a magic number: 8,308
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,convertAsn1ToRFC,Magic Number,The method contains a magic number: 2,308
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,convertAsn1ToRFC,Magic Number,The method contains a magic number: 20,308
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,convertAsn1ToRFC,Magic Number,The method contains a magic number: 20,308
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,generatePrivateKey,Complex Method,Cyclomatic complexity of the method is 8,348
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,generatePrivateKey,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7b6462f3,348
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,publicKey,Complex Method,Cyclomatic complexity of the method is 8,387
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,publicKey,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@28367bd5,387
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 64,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 8,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 20,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 8,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 64,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 8,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 64,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 8,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getDSAPublicKey,Magic Number,The method contains a magic number: 64,404
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,getRSAPublicKey,Magic Number,The method contains a magic number: 255,428
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Long Parameter List,The method has 6 parameters. ,513
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Long Statement,The length of the statement "addNsec(dnsWorld`DnsName.from(zone)`DnsName.from(zoneSoaNameserver)`DnsName.from(owner)`DnsName.from(nextSecure)`typesCovered);" is 127.,513
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Long Parameter List,The method has 6 parameters. ,519
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Long Statement,The length of the statement "List<Record<? extends Data>> records=DnssecWorld.merge(sign(key`zone`privateKey`signatureAlgorithm`record(owner`nsec(nextSecure`typesCovered)))`sign(key`zone`privateKey`signatureAlgorithm`record(owner`soa(zoneSoaNameserver`DnsName.from("mailbox.of.responsible.person")`2015081265`7200`3600`1209600`3600))));" is 307.,519
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Magic Number,The method contains a magic number: 2015081265,519
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Magic Number,The method contains a magic number: 7200,519
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Magic Number,The method contains a magic number: 3600,519
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Magic Number,The method contains a magic number: 1209600,519
+rtreffer_minidns,org.minidns.dnssec,DnssecWorld,addNsec,Magic Number,The method contains a magic number: 3600,519
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec,Long Statement,The length of the statement "Record<NSEC> nsecRecord=record("example.com"`nsec("www.example.com"`TYPE.A`TYPE.NS`TYPE.SOA`TYPE.TXT`TYPE.AAAA`TYPE.RRSIG`TYPE.NSEC`TYPE.DNSKEY)).as(NSEC.class);" is 161.,53
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Long Statement,The length of the statement "byte[] bytes=new byte[]{0x3f`(byte)0xb1`(byte)0xd0`(byte)0xaa`0x27`(byte)0xe2`0x5f`(byte)0xda`0x40`0x75`(byte)0x92`(byte)0x95`0x5a`0x1c`0x7f`(byte)0x98`(byte)0xdb`0x5b`0x79`(byte)0x91};" is 185.,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Long Statement,The length of the statement "Record<NSEC3> nsec3Record=record("7UO4LIHALHHLNGLJAFT7TBIQ6H1SL1CN.net"`nsec3((byte)1`(byte)1`0`new byte[0]`bytes`TYPE.NS`TYPE.SOA`TYPE.RRSIG`TYPE.DNSKEY`TYPE.NSEC3PARAM)).as(NSEC3.class);" is 188.,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0xb1,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0xd0,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0xaa,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0xe2,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0xda,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0x92,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0x95,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0x98,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0xdb,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testVerifyNsec3,Magic Number,The method contains a magic number: 0x91,62
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testNsec3hash,Long Statement,The length of the statement "assertEquals("6e8777855bcd60d7b45fc51893776dde75bf6cd4"`new BigInteger(1`Verifier.nsec3hash(digestCalculator`new byte[]{42}`new byte[]{88}`5)).toString(16));" is 157.,71
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testNsec3hash,Magic Number,The method contains a magic number: 5,71
+rtreffer_minidns,org.minidns.dnssec,VerifierTest,testNsec3hash,Magic Number,The method contains a magic number: 16,71
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcgostSignatureVerifier,reverse,Magic Number,The method contains a magic number: 2,78
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifier,getPublicKey,Magic Number,The method contains a magic number: 2,31
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,EcdsaSignatureVerifier,Long Statement,The length of the statement "this(new ECParameterSpec(new EllipticCurve(new ECFieldFp(spec[0])`spec[1]`spec[2])`new ECPoint(spec[3]`spec[4])`spec[5]`1)`length`algorithm);" is 141.,36
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,EcdsaSignatureVerifier,Magic Number,The method contains a magic number: 2,36
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,EcdsaSignatureVerifier,Magic Number,The method contains a magic number: 3,36
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,EcdsaSignatureVerifier,Magic Number,The method contains a magic number: 4,36
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,EcdsaSignatureVerifier,Magic Number,The method contains a magic number: 5,36
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 0x30,46
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 4,46
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 0x2,46
+rtreffer_minidns,org.minidns.dnssec.algorithms,EcdsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 0x2,46
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getSignature,Complex Method,Cyclomatic complexity of the method is 9,35
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 0x30,35
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 4,35
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 0x2,35
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getSignature,Magic Number,The method contains a magic number: 0x2,35
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getPublicKey,Magic Number,The method contains a magic number: 64,99
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getPublicKey,Magic Number,The method contains a magic number: 8,99
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getPublicKey,Magic Number,The method contains a magic number: 64,99
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getPublicKey,Magic Number,The method contains a magic number: 8,99
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getPublicKey,Magic Number,The method contains a magic number: 64,99
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSignatureVerifier,getPublicKey,Magic Number,The method contains a magic number: 8,99
+rtreffer_minidns,org.minidns.dnssec.algorithms,DigestTest,testSha256DsDigest,Long Statement,The length of the statement "assertEquals("9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"`digestHexString(dsDigestCalculator`"test"));" is 124.,34
+rtreffer_minidns,org.minidns.dnssec.algorithms,DigestTest,testSha256DsDigest,Long Statement,The length of the statement "assertEquals("532eaabd9574880dbf76b9b8cc00832c20a6ec113d682299550d7a6e0f345e25"`digestHexString(dsDigestCalculator`"Test"));" is 124.,34
+rtreffer_minidns,org.minidns.dnssec.algorithms,DigestTest,digestHexString,Magic Number,The method contains a magic number: 16,50
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSA1024Valid,Magic Number,The method contains a magic number: 1024,26
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSA512Valid,Magic Number,The method contains a magic number: 512,31
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSAIllegalSignature,Long Statement,The length of the statement "assertThrows(DataMalformedException.class`() -> assertSignatureValid(publicKey(ALGORITHM`generatePrivateKey(ALGORITHM`1024))`ALGORITHM`sample`sample));" is 151.,36
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSAIllegalSignature,Magic Number,The method contains a magic number: 1024,36
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSAIllegalPublicKey,Long Statement,The length of the statement "assertThrows(DataMalformedException.class`() -> assertSignatureValid(new byte[]{0x0}`ALGORITHM`sign(generatePrivateKey(ALGORITHM`1024)`ALGORITHM`sample)`sample));" is 162.,44
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSAIllegalPublicKey,Magic Number,The method contains a magic number: 1024,44
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSAWrongSignature,Long Statement,The length of the statement "assertSignatureInvalid(publicKey(ALGORITHM`generatePrivateKey(ALGORITHM`1024))`ALGORITHM`sign(generatePrivateKey(ALGORITHM`1024)`ALGORITHM`sample)`sample);" is 155.,53
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSAWrongSignature,Magic Number,The method contains a magic number: 1024,53
+rtreffer_minidns,org.minidns.dnssec.algorithms,DsaSingatureVerifierTest,testDSAWrongSignature,Magic Number,The method contains a magic number: 1024,53
+rtreffer_minidns,org.minidns.dnssec.algorithms,SignatureVerifierTest,getRandomBytes,Magic Number,The method contains a magic number: 1024,58
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testShortExponentSHA1RSAValid,Magic Number,The method contains a magic number: 1024,27
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testShortExponentSHA1RSAValid,Magic Number,The method contains a magic number: 17,27
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testLongExponentSHA1RSAValid,Long Statement,The length of the statement "verifierTest(generateRSAPrivateKey(3072`BigInteger.valueOf(256).pow(256).add(BigInteger.ONE))`SignatureAlgorithm.RSASHA1);" is 122.,32
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testLongExponentSHA1RSAValid,Magic Number,The method contains a magic number: 3072,32
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testLongExponentSHA1RSAValid,Magic Number,The method contains a magic number: 256,32
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testLongExponentSHA1RSAValid,Magic Number,The method contains a magic number: 256,32
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA1RSAIllegalSignature,Long Statement,The length of the statement "assertThrows(DnssecValidationFailedException.class`() -> assertSignatureValid(publicKey(SignatureAlgorithm.RSASHA1`generatePrivateKey(SignatureAlgorithm.RSASHA1`1024))`SignatureAlgorithm.RSASHA1`sample`sample));" is 211.,37
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA1RSAIllegalSignature,Magic Number,The method contains a magic number: 1024,37
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA1RSAIllegalPublicKey,Long Statement,The length of the statement "assertThrows(DataMalformedException.class`() -> assertSignatureValid(new byte[]{0x0}`SignatureAlgorithm.RSASHA1`sign(generatePrivateKey(SignatureAlgorithm.RSASHA1`1024)`SignatureAlgorithm.RSASHA1`sample)`sample));" is 213.,47
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA1RSAIllegalPublicKey,Magic Number,The method contains a magic number: 1024,47
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA1RSAWrongSignature,Long Statement,The length of the statement "assertSignatureInvalid(publicKey(SignatureAlgorithm.RSASHA1`generatePrivateKey(SignatureAlgorithm.RSASHA1`1024))`SignatureAlgorithm.RSASHA1`sign(generatePrivateKey(SignatureAlgorithm.RSASHA1`1024)`SignatureAlgorithm.RSASHA1`sample)`sample);" is 240.,57
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA1RSAWrongSignature,Magic Number,The method contains a magic number: 1024,57
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA1RSAWrongSignature,Magic Number,The method contains a magic number: 1024,57
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testMD5RSAValid,Magic Number,The method contains a magic number: 1024,68
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA256RSAValid,Magic Number,The method contains a magic number: 1024,74
+rtreffer_minidns,org.minidns.dnssec.algorithms,RsaSignatureVerifierTest,testSHA512RSAValid,Magic Number,The method contains a magic number: 1024,79
+rtreffer_minidns,org.minidns.dane,DaneVerifier,checkCertificateMatches,Complex Method,Cyclomatic complexity of the method is 14,144
+rtreffer_minidns,org.minidns.dane,DaneVerifier,checkCertificateMatches,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@9161538,144
+rtreffer_minidns,org.minidns.dane,DaneVerifier,checkCertificateMatches,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@44b48a85,144
+rtreffer_minidns,org.minidns.dane,DaneVerifier,checkCertificateMatches,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3309ec9b,144
+rtreffer_minidns,org.minidns.dane,DaneVerifier,verifiedConnect,Long Statement,The length of the statement "boolean fullyVerified=verifyCertificateChain(convert(conn.getServerCertificates())`conn.getURL().getHost()`conn.getURL().getPort() < 0 ? conn.getURL().getDefaultPort() : conn.getURL().getPort());" is 195.,232
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,getTargets,Complex Method,Cyclomatic complexity of the method is 8,85
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,getTargets,Magic Number,The method contains a magic number: 2,85
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,queryRecursive,Complex Method,Cyclomatic complexity of the method is 15,117
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,queryRecursive,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3bcd44e0,117
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,queryRecursive,Complex Conditional,The conditional expression question.name.equals(name) && (question.type == TYPE.A || question.type == TYPE.AAAA) is complex.,200
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,queryRecursive,Complex Method,Cyclomatic complexity of the method is 11,200
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,resolveIpRecursive,Complex Method,Cyclomatic complexity of the method is 11,287
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,searchAdditional,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2cb3974,331
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,getRootServer,Complex Method,Cyclomatic complexity of the method is 11,374
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClient,getRootServer,Magic Number,The method contains a magic number: 2,374
+rtreffer_minidns,org.minidns.iterative,ReliableDnsClient,query,Complex Method,Cyclomatic complexity of the method is 10,90
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClientTest,basicIterativeTest,Long Statement,The length of the statement "applyZones(client`rootZone(record("com"`ns("ns.com"))`record("ns.com"`a("1.1.1.1")))`zone("com"`"ns.com"`"1.1.1.1"`record("example.com"`ns("ns.example.com"))`record("ns.example.com"`a("1.1.1.2")))`zone("example.com"`"ns.example.com"`"1.1.1.2"`record("www.example.com"`a("1.1.1.3"))));" is 284.,37
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClientTest,loopIterativeTest,Long Statement,The length of the statement "applyZones(client`rootZone(record("a"`ns("a.ns"))`record("b"`ns("b.ns"))`record("a.ns"`a("1.1.1.1"))`record("b.ns"`a("1.1.1.2")))`zone("a"`"a.ns"`"1.1.1.1"`record("test.a"`ns("a.test.b")))`zone("b"`"b.ns"`"1.1.1.2"`record("test.b"`ns("b.test.a"))));" is 249.,59
+rtreffer_minidns,org.minidns.iterative,IterativeDnsClientTest,notGluedNsTest,Long Statement,The length of the statement "applyZones(client`rootZone(record("com"`ns("ns.com"))`record("net"`ns("ns.net"))`record("ns.com"`a("1.1.1.1"))`record("ns.net"`a("1.1.2.1")))`zone("com"`"ns.com"`"1.1.1.1"`record("example.com"`ns("example.ns.net")))`zone("net"`"ns.net"`"1.1.2.1"`record("example.ns.net"`a("1.1.2.2")))`zone("example.com"`"example.ns.net"`"1.1.2.2"`record("www.example.com"`a("1.1.1.3"))));" is 372.,80
+rtreffer_minidns,org.minidns.jul,MiniDnsJul,format,Magic Number,The method contains a magic number: 256,58
+rtreffer_minidns,org.minidns.integrationtest,IterativeDnssecTest,shouldRequireLessQueries,Long Identifier,The length of the identifier extendedCacheSuccessfulQueries is 30.,30
+rtreffer_minidns,org.minidns.integrationtest,IterativeDnssecTest,shouldRequireLessQueries,Long Statement,The length of the statement "assertTrue(normalCacheSuccessfulQueries > extendedCacheSuccessfulQueries`"Extend cache successful query count " + extendedCacheSuccessfulQueries + " is not less than normal cache successful query count "+ normalCacheSuccessfulQueries);" is 235.,30
+rtreffer_minidns,org.minidns.integrationtest,IntegrationTestHelper,main,Complex Method,Cyclomatic complexity of the method is 10,52
+rtreffer_minidns,org.minidns.integrationtest,IntegrationTestHelper,main,Long Statement,The length of the statement "resultMessage.append("MiniDNS Integration Test Result: [").append(successfulTests.size()).append('/').append(testsRun).append("] ");" is 132.,52
+rtreffer_minidns,org.minidns.integrationtest,IntegrationTestHelper,main,Magic Number,The method contains a magic number: 2,52
+rtreffer_minidns,org.minidns.integrationtest,IntegrationTestHelper,invokeTest,Long Statement,The length of the statement "LOGGER.logp(Level.WARNING`testClassName`testMethodName`"Test failed: expected exception " + expected + " was not thrown!");" is 123.,102
+rtreffer_minidns,org.minidns.integrationtest,IntegrationTestHelper,invokeTest,Long Statement,The length of the statement "LOGGER.logp(Level.WARNING`testClassName`testMethodName`"Test failed: unexpected exception was thrown: "`e.getTargetException());" is 128.,102
+rtreffer_minidns,org.minidns.integrationtest,CoreTest,testExampleCom,Long Statement,The length of the statement "assertEquals(client.query("www.example.com"`Record.TYPE.A).response.answerSection.get(0).payloadData.toString()`exampleIp4);" is 124.,29
+rtreffer_minidns,org.minidns.integrationtest,CoreTest,testExampleCom,Long Statement,The length of the statement "assertEquals(client.query("example.com"`Record.TYPE.AAAA).response.answerSection.get(0).payloadData.toString()`exampleIp6);" is 123.,29
+rtreffer_minidns,org.minidns.integrationtest,CoreTest,testExampleCom,Long Statement,The length of the statement "assertEquals(client.query("www.example.com"`Record.TYPE.AAAA).response.answerSection.get(0).payloadData.toString()`exampleIp6);" is 127.,29
+rtreffer_minidns,org.minidns.integrationtest,CoreTest,testExampleCom,Magic Number,The method contains a magic number: 1024,29
+rtreffer_minidns,org.minidns.integrationtest,CoreTest,testTcpAnswer,Magic Number,The method contains a magic number: 1024,49
+rtreffer_minidns,org.minidns.integrationtest,CoreTest,testTcpAnswer,Magic Number,The method contains a magic number: 512,49
+rtreffer_minidns,org.minidns.integrationtest,DnssecTest,testOarcDaneBadSig,Magic Number,The method contains a magic number: 1024,28
+rtreffer_minidns,org.minidns.integrationtest,DnssecTest,testUniDueSigOk,Magic Number,The method contains a magic number: 1024,35
+rtreffer_minidns,org.minidns.integrationtest,DnssecTest,testUniDueSigFail,Magic Number,The method contains a magic number: 1024,41
+rtreffer_minidns,org.minidns.integrationtest,DnssecTest,testCloudFlare,Magic Number,The method contains a magic number: 1024,47
+rtreffer_minidns,org.minidns.integrationtest,AsyncApiTest,simpleAsyncApiTest,Magic Number,The method contains a magic number: 60,32
+rtreffer_minidns,org.minidns.integrationtest,AsyncApiTest,simpleAsyncApiTest,Magic Number,The method contains a magic number: 60,32
+rtreffer_minidns,org.minidns.integrationtest,AsyncApiTest,simpleAsyncApiTest,Magic Number,The method contains a magic number: 1000,32
+rtreffer_minidns,org.minidns.integrationtest,AsyncApiTest,tcpAsyncApiTest,Magic Number,The method contains a magic number: 60,42
+rtreffer_minidns,org.minidns.integrationtest,AsyncApiTest,tcpAsyncApiTest,Magic Number,The method contains a magic number: 60,42
+rtreffer_minidns,org.minidns.integrationtest,AsyncApiTest,tcpAsyncApiTest,Magic Number,The method contains a magic number: 1000,42
+rtreffer_minidns,org.minidns.integrationtest,AsyncApiTest,tcpAsyncApiTest,Magic Number,The method contains a magic number: 256,42
+rtreffer_minidns,org.minidns.integrationtest,IntegrationTestTools,getClient,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@624b7b0a,29
+rtreffer_minidns,org.minidns.integrationtest,HlaTest,resolverTest,Magic Number,The method contains a magic number: 5,29
+rtreffer_minidns,org.minidns.integrationtest,HlaTest,resolverTest,Magic Number,The method contains a magic number: 45,29
+rtreffer_minidns,org.minidns.integrationtest,HlaTest,resolverTest,Magic Number,The method contains a magic number: 100,29
+rtreffer_minidns,org.minidns.integrationtest,HlaTest,resolverTest,Magic Number,The method contains a magic number: 158,29
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkClientTrusted,Long Statement,The length of the statement "LOGGER.warning("DaneExtendedTrustManager invalidly used for client certificate check and no fallback X509TrustManager specified");" is 130.,73
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkClientTrusted,Long Statement,The length of the statement "LOGGER.info("DaneExtendedTrustManager invalidly used for client certificate check forwarding request to fallback X509TrustManage");" is 131.,73
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkServerTrusted,Long Statement,The length of the statement "LOGGER.warning("Hostname returned by sslSocket.getHandshakeSession().getPeerHost() '" + hostname + "' is an IP address");" is 121.,88
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkClientTrusted,Long Statement,The length of the statement "LOGGER.warning("DaneExtendedTrustManager invalidly used for client certificate check and no fallback X509TrustManager specified");" is 130.,122
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkClientTrusted,Long Statement,The length of the statement "LOGGER.info("DaneExtendedTrustManager invalidly used for client certificate check` forwarding request to fallback X509TrustManage");" is 132.,122
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkClientTrusted,Long Statement,The length of the statement "LOGGER.warning("DaneExtendedTrustManager invalidly used for client certificate check and no fallback X509TrustManager specified");" is 130.,151
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkClientTrusted,Long Statement,The length of the statement "LOGGER.info("DaneExtendedTrustManager invalidly used for client certificate check` forwarding request to fallback X509TrustManage");" is 132.,151
+rtreffer_minidns,org.minidns.dane.java7,DaneExtendedTrustManager,checkServerTrusted,Long Statement,The length of the statement "LOGGER.info("DaneExtendedTrustManager cannot be used without hostname information` forwarding request to fallback X509TrustManage");" is 132.,162
+rtreffer_minidns,org.minidns,AbstractDnsClient,queryAsync,Long Statement,The length of the statement "LOGGER.log(TRACE_LOG_LEVEL`"Asynchronusly asking {0} on {1} for {2} with:\n{3}"`new Object[]{address`port`q`requestMessage});" is 125.,263
+rtreffer_minidns,org.minidns,AbstractDnsClient,query,Long Parameter List,The method has 5 parameters. ,311
+rtreffer_minidns,org.minidns,AbstractDnsClient,query,Magic Number,The method contains a magic number: 53,359
+rtreffer_minidns,org.minidns,AbstractDnsClient,query,Magic Number,The method contains a magic number: 53,363
+rtreffer_minidns,org.minidns,AbstractDnsClient,queryAsync,Magic Number,The method contains a magic number: 53,375
+rtreffer_minidns,org.minidns,AbstractDnsClient,getCachedIPNameserverAddressesFor,Magic Number,The method contains a magic number: 3,445
+rtreffer_minidns,org.minidns,AbstractDnsClient,getCachedIPNameserverAddressesFor,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1eda2eec,445
+rtreffer_minidns,org.minidns,DnsClient,getServerAddresses,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4fe19393,101
+rtreffer_minidns,org.minidns,DnsClient,query,Complex Method,Cyclomatic complexity of the method is 10,134
+rtreffer_minidns,org.minidns,DnsClient,query,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@14ba0382,134
+rtreffer_minidns,org.minidns,DnsClient,findDNS,Long Statement,The length of the statement "LOGGER.warning("The DNS server lookup mechanism '" + mechanism.getName() + "' returned an invalid non-IP address result: '"+ potentialDnsServer+ "'");" is 150.,240
+rtreffer_minidns,org.minidns,DnsClient,findDNS,Long Statement,The length of the statement "LOGGER.fine("The DNS server lookup mechanism '" + mechanism.getName() + "' returned a blacklisted result: '"+ potentialDnsServer+ "'");" is 135.,240
+rtreffer_minidns,org.minidns,DnsClient,findDNS,Long Statement,The length of the statement "LOGGER.warning("The DNS server lookup mechanism '" + mechanism.getName() + "' returned not a single valid IP address after sanitazion");" is 136.,240
+rtreffer_minidns,org.minidns,DnsClient,findDnsAddresses,Complex Method,Cyclomatic complexity of the method is 13,296
+rtreffer_minidns,org.minidns,DnsClient,getReverseIpLookupQuestionFor,Long Statement,The length of the statement "throw new IllegalArgumentException("The provided inetAddress '" + inetAddress + "' is neither of type Inet4Address nor Inet6Address");" is 134.,464
+rtreffer_minidns,org.minidns,DnsWorld,query,Long Statement,The length of the statement "DnsMessage nxDomainResponse=message.getResponseBuilder(RESPONSE_CODE.NX_DOMAIN).setRecursionAvailable(true).setAuthoritativeAnswer(true).build();" is 145.,63
+rtreffer_minidns,org.minidns,DnsWorld,query,Magic Number,The method contains a magic number: 53,63
+rtreffer_minidns,org.minidns,DnsWorld,attachSignatures,Complex Conditional,The conditional expression r.name.equals(record.name) && r.type == TYPE.RRSIG && ((RRSIG)r.payloadData).typeCovered == record.type is complex.,326
+rtreffer_minidns,org.minidns,DnsWorld,attachSignatures,Complex Conditional,The conditional expression r.name.equals(record.name) && r.type == TYPE.RRSIG && ((RRSIG)r.payloadData).typeCovered == record.type is complex.,326
+rtreffer_minidns,org.minidns,DnsWorld,record,Magic Number,The method contains a magic number: 3600,439
+rtreffer_minidns,org.minidns,DnsWorld,record,Magic Number,The method contains a magic number: 3600,443
+rtreffer_minidns,org.minidns,DnsWorld,mx,Magic Number,The method contains a magic number: 10,499
+rtreffer_minidns,org.minidns,DnsWorld,nsec3,Long Parameter List,The method has 6 parameters. ,520
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Parameter List,The method has 9 parameters. ,525
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Statement,The length of the statement "return rrsig(typeCovered`algorithm`(byte)labels`originalTtl`signatureExpiration`signatureInception`keyTag`DnsName.from(signerName)`signature);" is 142.,525
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Parameter List,The method has 9 parameters. ,531
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Statement,The length of the statement "return new RRSIG(typeCovered`algorithm`(byte)labels`originalTtl`signatureExpiration`signatureInception`keyTag`signerName`signature);" is 132.,531
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Parameter List,The method has 9 parameters. ,537
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Statement,The length of the statement "return rrsig(typeCovered`algorithm`(byte)labels`originalTtl`signatureExpiration`signatureInception`keyTag`DnsName.from(signerName)`signature);" is 142.,537
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Parameter List,The method has 9 parameters. ,546
+rtreffer_minidns,org.minidns,DnsWorld,rrsig,Long Statement,The length of the statement "return new RRSIG(typeCovered`algorithm`(byte)labels`originalTtl`signatureExpiration`signatureInception`keyTag`signerName`signature);" is 132.,546
+rtreffer_minidns,org.minidns,DnsWorld,soa,Long Parameter List,The method has 7 parameters. ,555
+rtreffer_minidns,org.minidns,DnsWorld,soa,Long Parameter List,The method has 7 parameters. ,559
+rtreffer_minidns,org.minidns,DnsWorld,srv,Magic Number,The method contains a magic number: 10,571
+rtreffer_minidns,org.minidns,DnsWorld,srv,Magic Number,The method contains a magic number: 10,571
+rtreffer_minidns,org.minidns,LruCacheTest,testOutdatedCacheEntry,Magic Number,The method contains a magic number: 5,30
+rtreffer_minidns,org.minidns,LruCacheTest,testOutdatedCacheEntry,Magic Number,The method contains a magic number: 2,30
+rtreffer_minidns,org.minidns,LruCacheTest,testOverfilledCache,Magic Number,The method contains a magic number: 5,45
+rtreffer_minidns,org.minidns.dnsserverlookup,AndroidUsingExec,parseProps,Complex Conditional,The conditional expression property.endsWith(".dns") || property.endsWith(".dns1") || property.endsWith(".dns2")|| property.endsWith(".dns3")|| property.endsWith(".dns4") is complex.,66
+rtreffer_minidns,org.minidns.dnsserverlookup,AndroidUsingExec,parseProps,Complex Method,Cyclomatic complexity of the method is 10,66
+rtreffer_minidns,org.minidns.dnsserverlookup,AndroidUsingExec,parseProps,Long Statement,The length of the statement "if (property.endsWith(".dns") || property.endsWith(".dns1") || property.endsWith(".dns2")|| property.endsWith(".dns3")|| property.endsWith(".dns4")) {" is 150.,66
+rtreffer_minidns,org.minidns.dnsserverlookup,AndroidUsingExec,parseProps,Magic Number,The method contains a magic number: 6,66
+rtreffer_minidns,org.minidns.dnsserverlookup,AndroidUsingReflection,getDnsServerAddresses,Complex Method,Cyclomatic complexity of the method is 10,48
+rtreffer_minidns,org.minidns.dnsserverlookup,AndroidUsingReflection,getDnsServerAddresses,Magic Number,The method contains a magic number: 5,48
+rtreffer_minidns,org.minidns.cache,ExtendedLruCache,gather,Long Identifier,The length of the identifier additionalRecordQuestionBuilder is 31.,74
+rtreffer_minidns,org.minidns.cache,ExtendedLruCache,putExtraCaches,Long Statement,The length of the statement "DnsMessage answer=reply.asBuilder().setQuestion(question.getQuestion()).setAuthoritativeAnswer(true).addAnswers(entry.getValue()).build();" is 138.,102
+rtreffer_minidns,org.minidns.cache,ExtendedLruCache,putExtraCaches,Long Statement,The length of the statement "CachedDnsQueryResult cachedDnsQueryResult=new SynthesizedCachedDnsQueryResult(question`answer`synthesynthesizationSource);" is 122.,102
+rtreffer_minidns,org.minidns.cache,ExtendedLruCache,shouldGather,Long Identifier,The length of the identifier extraRecordIsChildOfAuthoritativeZone is 37.,118
+rtreffer_minidns,org.minidns.cache,LruCache,LruCache,Magic Number,The method contains a magic number: 3,58
+rtreffer_minidns,org.minidns.cache,LruCache,LruCache,Magic Number,The method contains a magic number: 4,58
+rtreffer_minidns,org.minidns.cache,LruCache,LruCache,Magic Number,The method contains a magic number: 2,58
+rtreffer_minidns,org.minidns.cache,LruCache,LruCache,Magic Number,The method contains a magic number: 11,58
+rtreffer_minidns,org.minidns.cache,LruCache,LruCache,Magic Number,The method contains a magic number: 0.75f,58
+rtreffer_minidns,org.minidns.cache,LruCache,getNormalized,Magic Number,The method contains a magic number: 1000,97
+rtreffer_minidns,org.minidns.cache,LruCache,toString,Long Statement,The length of the statement "return "LRUCache{usage=" + backend.size() + "/"+ capacity+ "` hits="+ hitCount+ "` misses="+ missCount+ "` expires="+ expireCount+ "}";" is 135.,161
+rtreffer_minidns,org.minidns.dnsqueryresult,StandardDnsQueryResult,StandardDnsQueryResult,Long Parameter List,The method has 5 parameters. ,23
+rtreffer_minidns,org.minidns.source,NetworkDataSource,query,Magic Number,The method contains a magic number: 2,39
+rtreffer_minidns,org.minidns.source,NetworkDataSource,query,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2d10b934,39
+rtreffer_minidns,org.minidns.source,NetworkDataSourceTest,udpTruncatedTcpFallbackTest,Magic Number,The method contains a magic number: 42,26
+rtreffer_minidns,org.minidns.source,NetworkDataSourceTest,udpTruncatedTcpFallbackTest,Magic Number,The method contains a magic number: 53,26
+rtreffer_minidns,org.minidns.hla,SrvResolverResult,getSortedSrvResolvedAddresses,Complex Method,Cyclomatic complexity of the method is 13,48
+rtreffer_minidns,org.minidns.hla,SrvResolverResult,getSortedSrvResolvedAddresses,Long Statement,The length of the statement "ResolvedSrvRecord resolvedSrvAddresses=new ResolvedSrvRecord(question.name`srvServiceProto`srvRecord`srvAddresses`aRecordsResult`aaaaRecordsResult);" is 148.,48
+rtreffer_minidns,org.minidns.hla,ResolverResult,throwIfErrorResponse,Long Identifier,The length of the identifier resolutionUnsuccessfulException is 31.,101
+rtreffer_minidns,org.minidns.hla,ResolverResult,getResolutionUnsuccessfulException,Long Identifier,The length of the field resolutionUnsuccessfulException is 31.,108
+rtreffer_minidns,org.minidns.hla,ResolverResult,getDnssecResultNotAuthenticException,Long Identifier,The length of the field dnssecResultNotAuthenticException is 33.,120
+rtreffer_minidns,org.minidns.hla,ResolverResult,toString,Long Statement,The length of the statement "sb.append(getClass().getName()).append('\n').append("Question: ").append(question).append('\n').append("Response Code: ").append(responseCode).append('\n');" is 156.,147
+rtreffer_minidns,org.minidns.hla,ResolverResult,throwIseIfErrorResponse,Long Identifier,The length of the identifier resolutionUnsuccessfulException is 31.,172
+rtreffer_minidns,org.minidns.hla,ResolverResult,throwIseIfErrorResponse,Long Statement,The length of the statement "if (resolutionUnsuccessfulException != null) throw new IllegalStateException("Can not perform operation because the DNS resolution was unsuccessful"`resolutionUnsuccessfulException);" is 182.,172
+rtreffer_minidns,org.minidns.hla,ResolverApi,reverseLookup,Long Statement,The length of the statement "throw new IllegalArgumentException("The given InetAddress '" + inetAddress + "' is neither of type Inet4Address or Inet6Address");" is 130.,153
+rtreffer_minidns,org.minidns.hla,ResolverApi,resolveSrv,Magic Number,The method contains a magic number: 3,173
+rtreffer_minidns,org.minidns.hla,ResolverApi,resolveSrv,Magic Number,The method contains a magic number: 2,173
+rtreffer_minidns,org.minidns.hla,ResolverApi,resolveSrv,Magic Number,The method contains a magic number: 2,173
+rtreffer_minidns,org.minidns.dnsserverlookup.android21,AndroidUsingLinkProperties,getDnsServerAddresses,Magic Number,The method contains a magic number: 21,84
+rtreffer_minidns,org.minidns.dnsserverlookup.android21,AndroidUsingLinkProperties,getDnsServerAddresses,Magic Number,The method contains a magic number: 2,84
+rtreffer_minidns,org.minidns.source.async,AsyncDnsRequest,AsyncDnsRequest,Long Parameter List,The method has 6 parameters. ,74
+rtreffer_minidns,org.minidns.source.async,AsyncDnsRequest,AsyncDnsRequest,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@62f25f34,74
+rtreffer_minidns,org.minidns.source.async,AsyncDnsRequest,addException,Magic Number,The method contains a magic number: 4,132
+rtreffer_minidns,org.minidns.record,DelegatingDnssecRR,parseSharedData,Magic Number,The method contains a magic number: 4,67
+rtreffer_minidns,org.minidns.record,DelegatingDnssecRR,DelegatingDnssecRR,Long Parameter List,The method has 6 parameters. ,90
+rtreffer_minidns,org.minidns.record,DelegatingDnssecRR,toString,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder().append(keyTag).append(' ').append(algorithm).append(' ').append(digestType).append(' ').append(new BigInteger(1`digest).toString(16).toUpperCase());" is 185.,125
+rtreffer_minidns,org.minidns.record,DelegatingDnssecRR,toString,Magic Number,The method contains a magic number: 16,125
+rtreffer_minidns,org.minidns.record,DelegatingDnssecRR,getDigestHex,Magic Number,The method contains a magic number: 16,146
+rtreffer_minidns,org.minidns.record,TLSA,parse,Magic Number,The method contains a magic number: 3,151
+rtreffer_minidns,org.minidns.record,TLSA,toString,Long Statement,The length of the statement "return new StringBuilder().append(certUsageByte).append(' ').append(selectorByte).append(' ').append(matchingTypeByte).append(' ').append(new BigInteger(1`certificateAssociation).toString(16)).toString();" is 204.,186
+rtreffer_minidns,org.minidns.record,TLSA,toString,Magic Number,The method contains a magic number: 16,186
+rtreffer_minidns,org.minidns.record,SOA,parse,Magic Number,The method contains a magic number: 0xFFFFFFFFL,62
+rtreffer_minidns,org.minidns.record,SOA,parse,Magic Number,The method contains a magic number: 0xFFFFFFFFL,62
+rtreffer_minidns,org.minidns.record,SOA,SOA,Long Parameter List,The method has 7 parameters. ,74
+rtreffer_minidns,org.minidns.record,SOA,SOA,Long Parameter List,The method has 7 parameters. ,78
+rtreffer_minidns,org.minidns.record,SOA,toString,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder().append(mname).append(". ").append(rname).append(". ").append(serial).append(' ').append(refresh).append(' ').append(retry).append(' ').append(expire).append(' ').append(minimum);" is 215.,104
+rtreffer_minidns,org.minidns.record,TXT,getExtents,Magic Number,The method contains a magic number: 0x00ff,84
+rtreffer_minidns,org.minidns.record,RRSIG,parse,Long Statement,The length of the statement "return new RRSIG(typeCovered`null`algorithm`labels`originalTtl`signatureExpiration`signatureInception`keyTag`signerName`signature);" is 131.,81
+rtreffer_minidns,org.minidns.record,RRSIG,parse,Magic Number,The method contains a magic number: 0xFFFFFFFFL,81
+rtreffer_minidns,org.minidns.record,RRSIG,parse,Magic Number,The method contains a magic number: 0xFFFFFFFFL,81
+rtreffer_minidns,org.minidns.record,RRSIG,parse,Magic Number,The method contains a magic number: 1000,81
+rtreffer_minidns,org.minidns.record,RRSIG,parse,Magic Number,The method contains a magic number: 0xFFFFFFFFL,81
+rtreffer_minidns,org.minidns.record,RRSIG,parse,Magic Number,The method contains a magic number: 1000,81
+rtreffer_minidns,org.minidns.record,RRSIG,parse,Magic Number,The method contains a magic number: 18,81
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Parameter List,The method has 10 parameters. ,97
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Parameter List,The method has 9 parameters. ,114
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Statement,The length of the statement "this(typeCovered`null`(byte)algorithm`labels`originalTtl`signatureExpiration`signatureInception`keyTag`signerName`signature);" is 125.,114
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Parameter List,The method has 9 parameters. ,119
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Statement,The length of the statement "this(typeCovered`null`(byte)algorithm`labels`originalTtl`signatureExpiration`signatureInception`keyTag`DnsName.from(signerName)`signature);" is 139.,119
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Parameter List,The method has 9 parameters. ,124
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Statement,The length of the statement "this(typeCovered`algorithm.number`labels`originalTtl`signatureExpiration`signatureInception`keyTag`signerName`signature);" is 121.,124
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Parameter List,The method has 9 parameters. ,131
+rtreffer_minidns,org.minidns.record,RRSIG,RRSIG,Long Statement,The length of the statement "this(typeCovered`algorithm.number`labels`originalTtl`signatureExpiration`signatureInception`keyTag`DnsName.from(signerName)`signature);" is 135.,131
+rtreffer_minidns,org.minidns.record,RRSIG,writePartialSignature,Magic Number,The method contains a magic number: 1000,170
+rtreffer_minidns,org.minidns.record,RRSIG,writePartialSignature,Magic Number,The method contains a magic number: 1000,170
+rtreffer_minidns,org.minidns.record,RRSIG,toString,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder().append(typeCovered).append(' ').append(algorithm).append(' ').append(labels).append(' ').append(originalTtl).append(' ').append(dateFormat.format(signatureExpiration)).append(' ').append(dateFormat.format(signatureInception)).append(' ').append(keyTag).append(' ').append(signerName).append(". ").append(getSignatureBase64());" is 363.,181
+rtreffer_minidns,org.minidns.record,NSEC,createTypeBitMap,Magic Number,The method contains a magic number: 8,90
+rtreffer_minidns,org.minidns.record,NSEC,createTypeBitMap,Magic Number,The method contains a magic number: 8,90
+rtreffer_minidns,org.minidns.record,NSEC,createTypeBitMap,Magic Number,The method contains a magic number: 32,90
+rtreffer_minidns,org.minidns.record,NSEC,createTypeBitMap,Magic Number,The method contains a magic number: 3,90
+rtreffer_minidns,org.minidns.record,NSEC,createTypeBitMap,Magic Number,The method contains a magic number: 32,90
+rtreffer_minidns,org.minidns.record,NSEC,createTypeBitMap,Magic Number,The method contains a magic number: 8,90
+rtreffer_minidns,org.minidns.record,NSEC,createTypeBitMap,Magic Number,The method contains a magic number: 128,90
+rtreffer_minidns,org.minidns.record,NSEC,readTypeBitMap,Magic Number,The method contains a magic number: 8,136
+rtreffer_minidns,org.minidns.record,NSEC,readTypeBitMap,Magic Number,The method contains a magic number: 8,136
+rtreffer_minidns,org.minidns.record,NSEC,readTypeBitMap,Magic Number,The method contains a magic number: 8,136
+rtreffer_minidns,org.minidns.record,NSEC,readTypeBitMap,Magic Number,The method contains a magic number: 7,136
+rtreffer_minidns,org.minidns.record,NSEC,readTypeBitMap,Magic Number,The method contains a magic number: 2,136
+rtreffer_minidns,org.minidns.record,NSEC3PARAM,NSEC3PARAM,Long Parameter List,The method has 5 parameters. ,60
+rtreffer_minidns,org.minidns.record,NSEC3PARAM,toString,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder().append(hashAlgorithm).append(' ').append(flags).append(' ').append(iterations).append(' ').append(salt.length == 0 ? "-" : new BigInteger(1`salt).toString(16).toUpperCase());" is 211.,88
+rtreffer_minidns,org.minidns.record,NSEC3PARAM,toString,Magic Number,The method contains a magic number: 16,88
+rtreffer_minidns,org.minidns.record,DNSKEY,parse,Magic Number,The method contains a magic number: 4,84
+rtreffer_minidns,org.minidns.record,DNSKEY,DNSKEY,Long Parameter List,The method has 5 parameters. ,93
+rtreffer_minidns,org.minidns.record,DNSKEY,getKeyTag,Magic Number,The method contains a magic number: 0xFFL,117
+rtreffer_minidns,org.minidns.record,DNSKEY,getKeyTag,Magic Number,The method contains a magic number: 0xFFL,117
+rtreffer_minidns,org.minidns.record,DNSKEY,getKeyTag,Magic Number,The method contains a magic number: 8,117
+rtreffer_minidns,org.minidns.record,DNSKEY,getKeyTag,Magic Number,The method contains a magic number: 16,117
+rtreffer_minidns,org.minidns.record,DNSKEY,getKeyTag,Magic Number,The method contains a magic number: 0xFFFF,117
+rtreffer_minidns,org.minidns.record,DNSKEY,getKeyTag,Magic Number,The method contains a magic number: 0xFFFF,117
+rtreffer_minidns,org.minidns.record,DNSKEY,toString,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder().append(flags).append(' ').append(protocol).append(' ').append(algorithm).append(' ').append(Base64.encodeToString(key));" is 157.,147
+rtreffer_minidns,org.minidns.record,A,A,Magic Number,The method contains a magic number: 4,30
+rtreffer_minidns,org.minidns.record,A,A,Complex Conditional,The conditional expression q1 < 0 || q1 > 255 || q2 < 0 || q2 > 255 || q3 < 0 || q3 > 255 || q4 < 0 || q4 > 255 is complex.,35
+rtreffer_minidns,org.minidns.record,A,A,Magic Number,The method contains a magic number: 255,35
+rtreffer_minidns,org.minidns.record,A,A,Magic Number,The method contains a magic number: 255,35
+rtreffer_minidns,org.minidns.record,A,A,Magic Number,The method contains a magic number: 255,35
+rtreffer_minidns,org.minidns.record,A,A,Magic Number,The method contains a magic number: 255,35
+rtreffer_minidns,org.minidns.record,A,A,Magic Number,The method contains a magic number: 4,42
+rtreffer_minidns,org.minidns.record,A,parse,Magic Number,The method contains a magic number: 4,53
+rtreffer_minidns,org.minidns.record,A,toString,Long Statement,The length of the statement "return Integer.toString(ip[0] & 0xff) + "." + Integer.toString(ip[1] & 0xff)+ "."+ Integer.toString(ip[2] & 0xff)+ "."+ Integer.toString(ip[3] & 0xff);" is 151.,60
+rtreffer_minidns,org.minidns.record,A,toString,Magic Number,The method contains a magic number: 0xff,60
+rtreffer_minidns,org.minidns.record,A,toString,Magic Number,The method contains a magic number: 0xff,60
+rtreffer_minidns,org.minidns.record,A,toString,Magic Number,The method contains a magic number: 2,60
+rtreffer_minidns,org.minidns.record,A,toString,Magic Number,The method contains a magic number: 0xff,60
+rtreffer_minidns,org.minidns.record,A,toString,Magic Number,The method contains a magic number: 3,60
+rtreffer_minidns,org.minidns.record,A,toString,Magic Number,The method contains a magic number: 0xff,60
+rtreffer_minidns,org.minidns.record,AAAA,AAAA,Magic Number,The method contains a magic number: 16,30
+rtreffer_minidns,org.minidns.record,AAAA,AAAA,Magic Number,The method contains a magic number: 16,35
+rtreffer_minidns,org.minidns.record,AAAA,parse,Magic Number,The method contains a magic number: 16,46
+rtreffer_minidns,org.minidns.record,AAAA,toString,Magic Number,The method contains a magic number: 2,53
+rtreffer_minidns,org.minidns.record,AAAA,toString,Magic Number,The method contains a magic number: 0xff,53
+rtreffer_minidns,org.minidns.record,AAAA,toString,Magic Number,The method contains a magic number: 8,53
+rtreffer_minidns,org.minidns.record,AAAA,toString,Magic Number,The method contains a magic number: 0xff,53
+rtreffer_minidns,org.minidns.record,Record,parse,Complex Method,Cyclomatic complexity of the method is 22,321
+rtreffer_minidns,org.minidns.record,Record,parse,Magic Number,The method contains a magic number: 0x7fff,321
+rtreffer_minidns,org.minidns.record,Record,parse,Magic Number,The method contains a magic number: 0x8000,321
+rtreffer_minidns,org.minidns.record,Record,parse,Magic Number,The method contains a magic number: 16,321
+rtreffer_minidns,org.minidns.record,Record,parse,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@21cc25f2,321
+rtreffer_minidns,org.minidns.record,Record,Record,Long Parameter List,The method has 6 parameters. ,410
+rtreffer_minidns,org.minidns.record,Record,Record,Magic Number,The method contains a magic number: 0x8000,410
+rtreffer_minidns,org.minidns.record,Record,Record,Long Parameter List,The method has 6 parameters. ,414
+rtreffer_minidns,org.minidns.record,Record,Record,Long Parameter List,The method has 5 parameters. ,418
+rtreffer_minidns,org.minidns.record,Record,Record,Long Parameter List,The method has 5 parameters. ,422
+rtreffer_minidns,org.minidns.record,Record,Record,Long Parameter List,The method has 7 parameters. ,426
+rtreffer_minidns,org.minidns.record,Record,toByteArray,Magic Number,The method contains a magic number: 10,454
+rtreffer_minidns,org.minidns.record,Record,isAnswer,Long Statement,The length of the statement "return ((q.type == type) || (q.type == TYPE.ANY)) && ((q.clazz == clazz) || (q.clazz == CLASS.ANY)) && q.name.equals(name);" is 123.,481
+rtreffer_minidns,org.minidns.record,Record,getQuestion,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@65ae945a,516
+rtreffer_minidns,org.minidns.record,Record,hashCode,Magic Number,The method contains a magic number: 37,545
+rtreffer_minidns,org.minidns.record,Record,hashCode,Magic Number,The method contains a magic number: 37,545
+rtreffer_minidns,org.minidns.record,Record,hashCode,Magic Number,The method contains a magic number: 37,545
+rtreffer_minidns,org.minidns.record,Record,hashCode,Magic Number,The method contains a magic number: 37,545
+rtreffer_minidns,org.minidns.record,NSEC3,HashAlgorithm,Magic Number,The method contains a magic number: 255,51
+rtreffer_minidns,org.minidns.record,NSEC3,parse,Magic Number,The method contains a magic number: 6,109
+rtreffer_minidns,org.minidns.record,NSEC3,NSEC3,Long Parameter List,The method has 7 parameters. ,125
+rtreffer_minidns,org.minidns.record,NSEC3,NSEC3,Long Parameter List,The method has 6 parameters. ,138
+rtreffer_minidns,org.minidns.record,NSEC3,NSEC3,Long Parameter List,The method has 6 parameters. ,142
+rtreffer_minidns,org.minidns.record,NSEC3,toString,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder().append(hashAlgorithm).append(' ').append(flags).append(' ').append(iterations).append(' ').append(salt.length == 0 ? "-" : new BigInteger(1`salt).toString(16).toUpperCase()).append(' ').append(Base32.encodeToString(nextHashed));" is 265.,163
+rtreffer_minidns,org.minidns.record,NSEC3,toString,Magic Number,The method contains a magic number: 16,163
+rtreffer_minidns,org.minidns.record,OPT,parse,Magic Number,The method contains a magic number: 4,38
+rtreffer_minidns,org.minidns.record,OPT,parse,Magic Number,The method contains a magic number: 2,38
+rtreffer_minidns,org.minidns.record,OPT,parse,Magic Number,The method contains a magic number: 2,38
+rtreffer_minidns,org.minidns.record,RecordsTest,testARecordInvalidIp,Magic Number,The method contains a magic number: 42,51
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Long Statement,The length of the statement "AAAA aaaa=new AAAA(new byte[]{0x20`0x01`0x0d`(byte)0xb8`(byte)0x85`(byte)0xa3`0x08`(byte)0xd3`0x13`0x19`(byte)0x8a`0x2e`0x03`0x70`0x73`0x44});" is 142.,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Long Statement,The length of the statement "assertArrayEquals(new byte[]{0x20`0x01`0x0d`(byte)0xb8`(byte)0x85`(byte)0xa3`0x08`(byte)0xd3`0x13`0x19`(byte)0x8a`0x2e`0x03`0x70`0x73`0x44}`aaaa.getIp());" is 154.,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0xb8,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0x85,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0xa3,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0xd3,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0x8a,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0xb8,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0x85,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0xa3,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0xd3,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecord,Magic Number,The method contains a magic number: 0x8a,58
+rtreffer_minidns,org.minidns.record,RecordsTest,testAAAARecordInvalidIp,Magic Number,The method contains a magic number: 42,69
+rtreffer_minidns,org.minidns.record,RecordsTest,testDlvRecord,Magic Number,The method contains a magic number: 42,86
+rtreffer_minidns,org.minidns.record,RecordsTest,testDlvRecord,Magic Number,The method contains a magic number: 8,86
+rtreffer_minidns,org.minidns.record,RecordsTest,testDlvRecord,Magic Number,The method contains a magic number: 2,86
+rtreffer_minidns,org.minidns.record,RecordsTest,testDlvRecord,Magic Number,The method contains a magic number: 42,86
+rtreffer_minidns,org.minidns.record,RecordsTest,testDnskeyRecord,Magic Number,The method contains a magic number: 3,99
+rtreffer_minidns,org.minidns.record,RecordsTest,testDnskeyRecord,Magic Number,The method contains a magic number: 256,99
+rtreffer_minidns,org.minidns.record,RecordsTest,testDnskeyRecord,Magic Number,The method contains a magic number: 3,99
+rtreffer_minidns,org.minidns.record,RecordsTest,testDsRecord,Magic Number,The method contains a magic number: 42,114
+rtreffer_minidns,org.minidns.record,RecordsTest,testDsRecord,Magic Number,The method contains a magic number: 8,114
+rtreffer_minidns,org.minidns.record,RecordsTest,testDsRecord,Magic Number,The method contains a magic number: 2,114
+rtreffer_minidns,org.minidns.record,RecordsTest,testDsRecord,Magic Number,The method contains a magic number: 42,114
+rtreffer_minidns,org.minidns.record,RecordsTest,testMxRecord,Magic Number,The method contains a magic number: 10,127
+rtreffer_minidns,org.minidns.record,RecordsTest,testMxRecord,Magic Number,The method contains a magic number: 10,127
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Long Statement,The length of the statement "assertEquals("A RSASHA256 2 3600 19700101000001 19700101000000 42 example.com. " + rrsig.getSignatureBase64()`rrsig.toString());" is 128.,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 8,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 2,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 3600,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 1000,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 42,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 2,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 3600,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 1000,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testRrsigRecord,Magic Number,The method contains a magic number: 42,208
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 2015060341,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 7200,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 3600,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 1209600,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 3600,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 2015060341,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 7200,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 3600,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 1209600,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSoaRecord,Magic Number,The method contains a magic number: 3600,227
+rtreffer_minidns,org.minidns.record,RecordsTest,testSrvRecord,Magic Number,The method contains a magic number: 30,243
+rtreffer_minidns,org.minidns.record,RecordsTest,testSrvRecord,Magic Number,The method contains a magic number: 31,243
+rtreffer_minidns,org.minidns.record,RecordsTest,testSrvRecord,Magic Number,The method contains a magic number: 5222,243
+rtreffer_minidns,org.minidns.record,RecordsTest,testSrvRecord,Magic Number,The method contains a magic number: 30,243
+rtreffer_minidns,org.minidns.record,RecordsTest,testSrvRecord,Magic Number,The method contains a magic number: 31,243
+rtreffer_minidns,org.minidns.record,RecordsTest,testSrvRecord,Magic Number,The method contains a magic number: 5222,243
+rtreffer_minidns,org.minidns.record,TLSATest,ensureTlsaLutsAreInitialized,Magic Number,The method contains a magic number: 3,20
+rtreffer_minidns,org.minidns.record,TLSATest,ensureTlsaLutsAreInitialized,Magic Number,The method contains a magic number: 2,20
+rtreffer_minidns,org.minidns.record,TLSATest,ensureTlsaLutsAreInitialized,Magic Number,The method contains a magic number: 3,20
+rtreffer_minidns,org.minidns.record,TLSATest,ensureTlsaLutsAreInitialized,Magic Number,The method contains a magic number: 2,20
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Long Statement,The length of the statement "long j=((long)(padded[i] & 0xff) << 32) + ((long)(padded[i + 1] & 0xff) << 24) + ((padded[i + 2] & 0xff) << 16)+ ((padded[i + 3] & 0xff) << 8)+ (padded[i + 4] & 0xff);" is 167.,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Long Statement,The length of the statement "sb.append(ALPHABET.charAt((int)((j >> 35) & 0x1f))).append(ALPHABET.charAt((int)((j >> 30) & 0x1f))).append(ALPHABET.charAt((int)((j >> 25) & 0x1f))).append(ALPHABET.charAt((int)((j >> 20) & 0x1f))).append(ALPHABET.charAt((int)((j >> 15) & 0x1f))).append(ALPHABET.charAt((int)((j >> 10) & 0x1f))).append(ALPHABET.charAt((int)((j >> 5) & 0x1f))).append(ALPHABET.charAt((int)(j & 0x1f)));" is 386.,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 8,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 5,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 1.6,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 8,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 5,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 32,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 24,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 2,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 16,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 3,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 8,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 4,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 35,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 30,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 25,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 20,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 15,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 10,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 5,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,Base32,encodeToString,Magic Number,The method contains a magic number: 0x1f,26
+rtreffer_minidns,org.minidns.util,SrvUtil,sortSrvRecords,Complex Method,Cyclomatic complexity of the method is 10,26
+rtreffer_minidns,org.minidns.util,Hex,from,Magic Number,The method contains a magic number: 2,15
+rtreffer_minidns,org.minidns.util,InetAddressUtil,reverseIpAddressOf,Magic Number,The method contains a magic number: 32,90
+rtreffer_minidns,org.minidns.util,InetAddressUtil,reverseIpAddressOf,Magic Number,The method contains a magic number: 4,90
+rtreffer_minidns,org.minidns.util,InetAddressUtil,reverseIpAddressOf,Magic Number,The method contains a magic number: 4,110
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Long Statement,The length of the statement "sb.append(ALPHABET.charAt((j >> 18) & 0x3f)).append(ALPHABET.charAt((j >> 12) & 0x3f)).append(ALPHABET.charAt((j >> 6) & 0x3f)).append(ALPHABET.charAt(j & 0x3f));" is 162.,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 3,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 3,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 3,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 3,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 16,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 8,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 2,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 0xff,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 18,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 0x3f,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 12,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 0x3f,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 6,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 0x3f,26
+rtreffer_minidns,org.minidns.util,Base64,encodeToString,Magic Number,The method contains a magic number: 0x3f,26
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 1000,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 400,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 600,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 100,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 300,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 100,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 300,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeOverWeights,Magic Number,The method contains a magic number: 200,31
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeZeroWeights,Magic Number,The method contains a magic number: 1000,55
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeZeroWeights,Magic Number,The method contains a magic number: 5,55
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeZeroWeights,Magic Number,The method contains a magic number: 400,55
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeZeroWeights,Magic Number,The method contains a magic number: 600,55
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeZeroWeights,Magic Number,The method contains a magic number: 400,55
+rtreffer_minidns,org.minidns.util,SrvUtilTest,sortSRVdistributeZeroWeights,Magic Number,The method contains a magic number: 600,55
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 5,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 20,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 42,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 10,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 42,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 5,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 10,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 42,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 10,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 42,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 5,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 20,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 42,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 20,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 42,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 5,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 50,77
+rtreffer_minidns,org.minidns.util,SrvUtilTest,createSRVRecords,Magic Number,The method contains a magic number: 42,77
+rtreffer_minidns,org.minidns.util,InetAddressUtilTest,assertAllInvalidIpv6,Long Statement,The length of the statement "throw new AssertionError(address + " is believed to be valid IPv6 Address by isIpv6Address()` although it should not be one.");" is 127.,94
+rtreffer_minidns,org.minidns.util,InetAddressUtilTest,assertAllInvalidIpv4,Long Statement,The length of the statement "throw new AssertionError(address + " is believed to be valid IPv4 Address by isIpv4Address()` although it should not be one");" is 126.,103
+rtreffer_minidns,org.minidns.edns,EdnsOption,EdnsOption,Abstract Function Call From Constructor,The constructor EdnsOption calls a virtual method getOptionCode.,31
+rtreffer_minidns,org.minidns.edns,EdnsOption,parse,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@732c5aed,68
+rtreffer_minidns,org.minidns.edns,Edns,Edns,Magic Number,The method contains a magic number: 8,101
+rtreffer_minidns,org.minidns.edns,Edns,Edns,Magic Number,The method contains a magic number: 0xff,101
+rtreffer_minidns,org.minidns.edns,Edns,Edns,Magic Number,The method contains a magic number: 16,101
+rtreffer_minidns,org.minidns.edns,Edns,Edns,Magic Number,The method contains a magic number: 0xff,101
+rtreffer_minidns,org.minidns.edns,Edns,Edns,Magic Number,The method contains a magic number: 0xffff,101
+rtreffer_minidns,org.minidns.edns,Edns,asRecord,Magic Number,The method contains a magic number: 8,142
+rtreffer_minidns,org.minidns.edns,Edns,asRecord,Magic Number,The method contains a magic number: 16,142
+rtreffer_minidns,org.minidns.dnsmessage,Question,toByteArray,Magic Number,The method contains a magic number: 512,125
+rtreffer_minidns,org.minidns.dnsmessage,Question,toByteArray,Magic Number,The method contains a magic number: 15,125
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,getResponseCode,Magic Number,The method contains a magic number: 65535,118
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,getOpcode,Magic Number,The method contains a magic number: 15,186
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Complex Method,Cyclomatic complexity of the method is 12,310
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 15,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 11,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 0xf,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 10,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 9,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 8,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 7,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 5,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 4,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,DnsMessage,Magic Number,The method contains a magic number: 0xf,383
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,serialize,Complex Method,Cyclomatic complexity of the method is 14,497
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,serialize,Magic Number,The method contains a magic number: 512,497
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Complex Method,Cyclomatic complexity of the method is 10,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 15,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 11,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 10,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 9,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 8,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 7,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 5,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,calculateHeaderBitmap,Magic Number,The method contains a magic number: 4,557
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,asTerminalOutput,Complex Method,Cyclomatic complexity of the method is 22,672
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,asTerminalOutput,Long Statement,The length of the statement "StringBuilder sb=new StringBuilder(";; ->>HEADER<<-").append(" opcode: ").append(opcode).append("` status: ").append(responseCode).append("` id: ").append(id).append("\n").append(";; flags:");" is 192.,672
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,asTerminalOutput,Long Statement,The length of the statement "sb.append("; QUERY: ").append(questions.size()).append("` ANSWER: ").append(answerSection.size()).append("` AUTHORITY: ").append(authoritySection.size()).append("` ADDITIONAL: ").append(additionalSection.size()).append("\n\n");" is 227.,672
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,getResponseBuilder,Long Statement,The length of the statement "Builder responseBuilder=DnsMessage.builder().setQrFlag(true).setResponseCode(responseCode).setId(id).setQuestion(getQuestion());" is 128.,795
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessage,filterSectionByType,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@384c1063,825
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,getMessageFromResource,Long Statement,The length of the statement "try (InputStream inputStream=getClass().getResourceAsStream(resourceFileName);ByteArrayOutputStream outputStream=new ByteArrayOutputStream()){" is 142.,60
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testALookup,Magic Number,The method contains a magic number: 2,77
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMXLookup,Magic Number,The method contains a magic number: 5,113
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMXLookup,Magic Number,The method contains a magic number: 5,113
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMXLookup,Magic Number,The method contains a magic number: 10,113
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMXLookup,Magic Number,The method contains a magic number: 20,113
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMXLookup,Magic Number,The method contains a magic number: 30,113
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMXLookup,Magic Number,The method contains a magic number: 40,113
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testSRVLookup,Magic Number,The method contains a magic number: 5222,135
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testTXTMultiCharacterStringLookup,Long Statement,The length of the statement "assertEquals("k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAviPGBk4ZB64UfSqWyAicdR7lodhytae+EYRQVtKDhM+1mXjEqRtP/pDT3sBhazkmA48n2k5NJUyMEoO8nc2r6sUA+/Dom5jRBZp6qDKJOwjJ5R/OpHamlRG+YRJQqR"`characterStrings.get(0));" is 220.,170
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testTXTMultiCharacterStringLookup,Long Statement,The length of the statement "assertEquals("tqEgSiJWG7h7efGYWmh4URhFM9k9+rmG/CwCgwx7Et+c8OMlngaLl04/bPmfpjdEyLWyNimk761CX6KymzYiRDNz1MOJOJ7OzFaS4PFbVLn0m5mf0HVNtBpPwWuCNvaFVflUYxEyblbB6h/oWOPGbzoSgtRA47SHV53SwZjIsVpbq4LxUW9IxAEwYzGcSgZ4n5Q8X8TndowsDUzoccPFGhdwIDAQAB"`characterStrings.get(1));" is 263.,170
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testTXTMultiCharacterStringLookup,Long Statement,The length of the statement "assertEquals("k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAviPGBk4ZB64UfSqWyAicdR7lodhytae+EYRQVtKDhM+1mXjEqRtP/pDT3sBhazkmA48n2k5NJUyMEoO8nc2r6sUA+/Dom5jRBZp6qDKJOwjJ5R/OpHamlRG+YRJQqR / tqEgSiJWG7h7efGYWmh4URhFM9k9+rmG/CwCgwx7Et+c8OMlngaLl04/bPmfpjdEyLWyNimk761CX6KymzYiRDNz1MOJOJ7OzFaS4PFbVLn0m5mf0HVNtBpPwWuCNvaFVflUYxEyblbB6h/oWOPGbzoSgtRA47SHV53SwZjIsVpbq4LxUW9IxAEwYzGcSgZ4n5Q8X8TndowsDUzoccPFGhdwIDAQAB"`text);" is 426.,170
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testTXTMultiCharacterStringLookup,Magic Number,The method contains a magic number: 2,170
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testSoaLookup,Magic Number,The method contains a magic number: 2015032404L,195
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testSoaLookup,Magic Number,The method contains a magic number: 10800,195
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testSoaLookup,Magic Number,The method contains a magic number: 3600,195
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testSoaLookup,Magic Number,The method contains a magic number: 1209600,195
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testSoaLookup,Magic Number,The method contains a magic number: 900L,195
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComNsLookup,Magic Number,The method contains a magic number: 13,214
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComNsLookup,Magic Number,The method contains a magic number: 112028,214
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComNsLookup,Magic Number,The method contains a magic number: 4096,214
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 3,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 19593,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 3,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 260,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 19036,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 132,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 48613,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 2,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 132,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 1518,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testRootDnskeyLookup,Magic Number,The method contains a magic number: 512,238
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComDsAndRrsigLookup,Magic Number,The method contains a magic number: 2,283
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComDsAndRrsigLookup,Magic Number,The method contains a magic number: 30909,283
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComDsAndRrsigLookup,Magic Number,The method contains a magic number: 86400,283
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComDsAndRrsigLookup,Magic Number,The method contains a magic number: 48613,283
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComDsAndRrsigLookup,Magic Number,The method contains a magic number: 128,283
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComDsAndRrsigLookup,Magic Number,The method contains a magic number: 512,283
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testExampleNsecLookup,Long Statement,The length of the statement "ArrayList<TYPE> types=new ArrayList<>(Arrays.asList(TYPE.A`TYPE.NS`TYPE.SOA`TYPE.TXT`TYPE.AAAA`TYPE.RRSIG`TYPE.NSEC`TYPE.DNSKEY));" is 130.,326
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testComNsec3Lookup,Magic Number,The method contains a magic number: 8,346
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfQuestionReconstruction,Magic Number,The method contains a magic number: 42,378
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfQuestionReconstruction,Magic Number,The method contains a magic number: 42,378
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfEasyAnswersReconstruction,Magic Number,The method contains a magic number: 43,398
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfEasyAnswersReconstruction,Magic Number,The method contains a magic number: 2,398
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfEasyAnswersReconstruction,Magic Number,The method contains a magic number: 43,398
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfComplexReconstruction,Magic Number,The method contains a magic number: 43,426
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfComplexReconstruction,Magic Number,The method contains a magic number: 43,426
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfTruncatedReconstruction,Magic Number,The method contains a magic number: 44,472
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfTruncatedReconstruction,Magic Number,The method contains a magic number: 44,472
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfOptRecordReconstructione,Long Statement,The length of the statement "assertCsEquals("EDNS: version: 0` flags: do; udp: 512"`new Edns((Record<OPT>)message.additionalSection.get(1)).toString());" is 123.,484
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfOptRecordReconstructione,Magic Number,The method contains a magic number: 512,484
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testMessageSelfOptRecordReconstructione,Magic Number,The method contains a magic number: 2,484
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testFilledMessageToString,Magic Number,The method contains a magic number: 1337,506
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testFilledMessageToString,Magic Number,The method contains a magic number: 512,506
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testEmptyMessageTerminalOutput,Magic Number,The method contains a magic number: 1337,522
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testFilledMessageTerminalOutput,Magic Number,The method contains a magic number: 1337,533
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,testFilledMessageTerminalOutput,Magic Number,The method contains a magic number: 512,533
+rtreffer_minidns,org.minidns.dnsmessage,DnsMessageTest,record,Magic Number,The method contains a magic number: 3600,558
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,getInternationalizedRepresentation,Long Identifier,The length of the field internationalizedRepresentation is 31.,67
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,toSafeRepesentation,Complex Method,Cyclomatic complexity of the method is 11,179
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,toSafeRepesentation,Magic Number,The method contains a magic number: 2,179
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,toSafeRepesentation,Magic Number,The method contains a magic number: 32,179
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,toSafeRepesentation,Magic Number,The method contains a magic number: 127,179
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,toSafeRepesentation,Magic Number,The method contains a magic number: 255,179
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,toSafeRepesentation,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4a6bfb5b,179
+rtreffer_minidns,org.minidns.dnslabel,DnsLabel,isLdhOrMaybeUnderscore,Long Statement,The length of the statement "return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')|| c == '-' || (underscore && c == '_');" is 121.,237
+rtreffer_minidns,org.minidns.dnslabel,ReservedLdhLabel,isReservedLdhLabelInternal,Magic Number,The method contains a magic number: 4,31
+rtreffer_minidns,org.minidns.dnslabel,ReservedLdhLabel,isReservedLdhLabelInternal,Magic Number,The method contains a magic number: 2,31
+rtreffer_minidns,org.minidns.dnslabel,ReservedLdhLabel,isReservedLdhLabelInternal,Magic Number,The method contains a magic number: 3,31
+rtreffer_minidns,org.minidns.dnslabel,XnLabel,isXnLabelInternal,Magic Number,The method contains a magic number: 2,45
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet4Address,Long Parameter List,The method has 5 parameters. ,56
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Long Parameter List,The method has 9 parameters. ,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Long Statement,The length of the statement "inetAddress=(Inet6Address)InetAddress.getByAddress(name`new byte[]{(byte)(addr0 >> 8)`(byte)addr0`(byte)(addr1 >> 8)`(byte)addr1`(byte)(addr2 >> 8)`(byte)addr2`(byte)(addr3 >> 8)`(byte)addr3`(byte)(addr4 >> 8)`(byte)addr4`(byte)(addr5 >> 8)`(byte)addr5`(byte)(addr6 >> 8)`(byte)addr6`(byte)(addr7 >> 8)`(byte)addr7});" is 317.,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnsRootServer,rootServerInet6Address,Magic Number,The method contains a magic number: 8,71
+rtreffer_minidns,org.minidns.constants,DnssecConstants,SignatureAlgorithm,Magic Number,The method contains a magic number: 255,50
+rtreffer_minidns,org.minidns.constants,DnssecConstants,DigestAlgorithm,Magic Number,The method contains a magic number: 255,83
+rtreffer_minidns,org.minidns.dnsname,DnsName,DnsName,Magic Number,The method contains a magic number: 2,117
+rtreffer_minidns,org.minidns.dnsname,DnsName,toBytes,Magic Number,The method contains a magic number: 64,219
+rtreffer_minidns,org.minidns.dnsname,DnsName,getLabels,Magic Number,The method contains a magic number: 2,244
+rtreffer_minidns,org.minidns.dnsname,DnsName,setHostnameAndDomainpartIfRequired,Magic Number,The method contains a magic number: 2,324
+rtreffer_minidns,org.minidns.dnsname,DnsName,size,Magic Number,The method contains a magic number: 2,336
+rtreffer_minidns,org.minidns.dnsname,DnsName,from,Magic Number,The method contains a magic number: 2,413
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0xc0,447
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0xc0,447
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0x3f,447
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 8,447
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0xff,478
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0xc0,478
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0xc0,478
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0x3f,478
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 8,478
+rtreffer_minidns,org.minidns.dnsname,DnsName,parse,Magic Number,The method contains a magic number: 0xff,478
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,sizeTest,Magic Number,The method contains a magic number: 13,28
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,sizeTest,Magic Number,The method contains a magic number: 16,28
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,sizeTest,Magic Number,The method contains a magic number: 24,28
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,toByteArrayTest,Long Statement,The length of the statement "assertArrayEquals(new byte[]{14`'x'`'n'`'-'`'-'`'d'`'m'`'i'`'n'`'-'`'m'`'o'`'a'`'0'`'i'`0}`DnsName.from("dömäin").getBytes());" is 126.,36
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,parseLabelWillNullByteTest,Magic Number,The method contains a magic number: 2,52
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,testStripToParts,Magic Number,The method contains a magic number: 3,81
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,testStripToParts,Magic Number,The method contains a magic number: 2,81
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,testStripToPartsIllegalLong,Magic Number,The method contains a magic number: 3,96
+rtreffer_minidns,org.minidns.dnsname,DnsNameTest,getLabelsTest,Magic Number,The method contains a magic number: 2,149

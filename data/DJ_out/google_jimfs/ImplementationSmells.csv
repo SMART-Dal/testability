@@ -1,0 +1,1191 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+google_jimfs,com.google.common.jimfs,Options,addWrite,Long Statement,The length of the statement "return options.contains(WRITE) ? ImmutableSet.copyOf(options) : ImmutableSet.<OpenOption>builder().add(WRITE).addAll(options).build();" is 134.,126
+google_jimfs,com.google.common.jimfs,JimfsFileStore,JimfsFileStore,Long Parameter List,The method has 6 parameters. ,62
+google_jimfs,com.google.common.jimfs,FileSystemView,link,Long Statement,The length of the statement "throw new FileSystemException(link.toString()`existing.toString()`"can't link: source and target are in different file system instances");" is 138.,387
+google_jimfs,com.google.common.jimfs,FileSystemView,copy,Complex Method,Cyclomatic complexity of the method is 11,497
+google_jimfs,com.google.common.jimfs,FileSystemView,copy,Long Parameter List,The method has 5 parameters. ,497
+google_jimfs,com.google.common.jimfs,AttributeProvider,set,Long Parameter List,The method has 5 parameters. ,93
+google_jimfs,com.google.common.jimfs,AttributeProvider,invalidType,Long Statement,The length of the statement "throw new IllegalArgumentException("invalid type " + value.getClass() + " for attribute '"+ view+ ":"+ attribute+ "': expected "+ expected);" is 140.,161
+google_jimfs,com.google.common.jimfs,JimfsFileSystem,JimfsFileSystem,Long Parameter List,The method has 6 parameters. ,181
+google_jimfs,com.google.common.jimfs,JimfsFileSystem,getDefaultThreadPool,Long Statement,The length of the statement "defaultThreadPool=Executors.newCachedThreadPool(new ThreadFactoryBuilder().setDaemon(true).setNameFormat("JimfsFileSystem-" + uri.getHost() + "-defaultThreadPool-%s").build());" is 176.,290
+google_jimfs,com.google.common.jimfs,AclAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,84
+google_jimfs,com.google.common.jimfs,AclAttributeProvider,toAcl,Long Statement,The length of the statement "throw new IllegalArgumentException("invalid element for attribute 'acl:acl': should be List<AclEntry>` " + "found element of type " + obj.getClass());" is 150.,92
+google_jimfs,com.google.common.jimfs,PollingWatchService,PollingWatchService,Long Parameter List,The method has 5 parameters. ,76
+google_jimfs,com.google.common.jimfs,PollingWatchService,checkWatchable,Long Statement,The length of the statement "throw new IllegalArgumentException("watchable (" + watchable + ") must be a Path "+ "associated with the same file system as this watch service");" is 146.,112
+google_jimfs,com.google.common.jimfs,Name,simple,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@62302ca1,51
+google_jimfs,com.google.common.jimfs,PathService,PathService,Long Statement,The length of the statement "this(config.pathType`config.nameDisplayNormalization`config.nameCanonicalNormalization`config.pathEqualityUsesCanonicalForm);" is 125.,71
+google_jimfs,com.google.common.jimfs,PathService,name,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@25e78462,123
+google_jimfs,com.google.common.jimfs,PathService,hash,Magic Number,The method contains a magic number: 31,200
+google_jimfs,com.google.common.jimfs,PathService,hash,Magic Number,The method contains a magic number: 31,200
+google_jimfs,com.google.common.jimfs,PathService,hash,Magic Number,The method contains a magic number: 31,200
+google_jimfs,com.google.common.jimfs,PathService,hash,Magic Number,The method contains a magic number: 31,200
+google_jimfs,com.google.common.jimfs,PathService,hash,Magic Number,The method contains a magic number: 31,200
+google_jimfs,com.google.common.jimfs,PathService,hash,Magic Number,The method contains a magic number: 31,200
+google_jimfs,com.google.common.jimfs,PathService,compare,Long Statement,The length of the statement "return ComparisonChain.start().compare(a.root()`b.root()`rootOrdering).compare(a.names()`b.names()`namesOrdering).result();" is 123.,227
+google_jimfs,com.google.common.jimfs,PathService,createPathMatcher,Long Statement,The length of the statement "return PathMatchers.getPathMatcher(syntaxAndPattern`type.getSeparator() + type.getOtherSeparators()`equalityUsesCanonicalForm ? canonicalNormalizations : displayNormalizations);" is 177.,251
+google_jimfs,com.google.common.jimfs,Util,smearHash,Magic Number,The method contains a magic number: 15,71
+google_jimfs,com.google.common.jimfs,SystemJimfsFileSystemProvider,newFileSystem,Long Statement,The length of the statement "checkArgument(env.get(FILE_SYSTEM_KEY) instanceof FileSystem`"env map (%s) must contain key '%s' mapped to an instance of %s"`env`FILE_SYSTEM_KEY`FileSystem.class);" is 164.,101
+google_jimfs,com.google.common.jimfs,JimfsPath,getParent,Complex Conditional,The conditional expression names.isEmpty() || (names.size() == 1 && root == null) is complex.,127
+google_jimfs,com.google.common.jimfs,JimfsPath,subpath,Long Statement,The length of the statement "checkArgument(beginIndex >= 0 && endIndex <= names.size() && endIndex > beginIndex`"beginIndex (%s) must be >= 0; endIndex (%s) must be <= name count (%s) and > beginIndex"`beginIndex`endIndex`names.size());" is 207.,151
+google_jimfs,com.google.common.jimfs,JimfsPath,startsWith,Long Statement,The length of the statement "return otherPath != null && getFileSystem().equals(otherPath.getFileSystem()) && Objects.equals(root`otherPath.root) && startsWith(names`otherPath.names);" is 154.,167
+google_jimfs,com.google.common.jimfs,JimfsPath,isNormal,Complex Conditional,The conditional expression getNameCount() == 0 || (getNameCount() == 1 && !isAbsolute()) is complex.,223
+google_jimfs,com.google.common.jimfs,JimfsPath,relativize,Long Statement,The length of the statement "ImmutableList<Name> extraNamesInOther=(otherNames.size() <= sharedSubsequenceLength) ? ImmutableList.<Name>of() : otherNames.subList(sharedSubsequenceLength`otherNames.size());" is 176.,301
+google_jimfs,com.google.common.jimfs,JimfsPath,compareTo,Long Statement,The length of the statement "return ComparisonChain.start().compare(getJimfsFileSystem().getUri()`((JimfsPath)other).getJimfsFileSystem().getUri()).compare(this`otherPath`pathService).result();" is 164.,409
+google_jimfs,com.google.common.jimfs,Jimfs,newFileSystem,Empty catch clause,The method has an empty catch block.,139
+google_jimfs,com.google.common.jimfs,Jimfs,getSystemJimfsProvider,Long Statement,The length of the statement "ServiceLoader<FileSystemProvider> loader=ServiceLoader.load(FileSystemProvider.class`SystemJimfsFileSystemProvider.class.getClassLoader());" is 139.,179
+google_jimfs,com.google.common.jimfs,Jimfs,getSystemJimfsProvider,Long Statement,The length of the statement "LOGGER.log(Level.INFO`"An exception occurred when attempting to find the system-loaded FileSystemProvider " + "for Jimfs. This likely means that your environment does not support loading " + "services via ServiceLoader or is not configured correctly. This does not prevent "+ "using Jimfs` but it will mean that methods that look up via URI such as "+ "Paths.get(URI) cannot work."`e);" is 385.,179
+google_jimfs,com.google.common.jimfs,BasicAttributeProvider,get,Complex Method,Cyclomatic complexity of the method is 10,59
+google_jimfs,com.google.common.jimfs,BasicAttributeProvider,get,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@664e5a6,59
+google_jimfs,com.google.common.jimfs,BasicAttributeProvider,set,Complex Method,Cyclomatic complexity of the method is 10,85
+google_jimfs,com.google.common.jimfs,BasicAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,85
+google_jimfs,com.google.common.jimfs,BasicAttributeProvider,set,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5744044f,85
+google_jimfs,com.google.common.jimfs,GlobToRegex,process,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@17de9f5b,217
+google_jimfs,com.google.common.jimfs,GlobToRegex,process,Complex Method,Cyclomatic complexity of the method is 8,360
+google_jimfs,com.google.common.jimfs,GlobToRegex,process,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@92a6269,360
+google_jimfs,com.google.common.jimfs,Directory,isEmpty,Magic Number,The method contains a magic number: 2,100
+google_jimfs,com.google.common.jimfs,PathMatchers,getPathMatcher,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4e0b7099,40
+google_jimfs,com.google.common.jimfs,HeapDisk,createBlockCache,Magic Number,The method contains a magic number: 8192,84
+google_jimfs,com.google.common.jimfs,OwnerAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,77
+google_jimfs,com.google.common.jimfs,AttributeService,AttributeService,Abstract Function Call From Constructor,The constructor AttributeService calls a virtual method name.,62
+google_jimfs,com.google.common.jimfs,AttributeService,copyAttributes,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7630d0db,171
+google_jimfs,com.google.common.jimfs,AttributeService,setAttributeInternal,Long Parameter List,The method has 5 parameters. ,234
+google_jimfs,com.google.common.jimfs,AttributeService,getViewName,Complex Conditional,The conditional expression separatorIndex == 0 || separatorIndex == attribute.length() - 1 || attribute.indexOf(':'`separatorIndex + 1) != -1 is complex.,366
+google_jimfs,com.google.common.jimfs,AttributeService,getViewName,Long Statement,The length of the statement "if (separatorIndex == 0 || separatorIndex == attribute.length() - 1 || attribute.indexOf(':'`separatorIndex + 1) != -1) {" is 121.,366
+google_jimfs,com.google.common.jimfs,PosixAttributeProvider,defaultValues,Long Statement,The length of the statement "throw new IllegalArgumentException("invalid type " + userProvidedGroup.getClass().getName() + " for attribute 'posix:group': should be one of "+ String.class+ " or "+ GroupPrincipal.class);" is 189.,71
+google_jimfs,com.google.common.jimfs,PosixAttributeProvider,defaultValues,Long Statement,The length of the statement "throw new IllegalArgumentException("invalid type " + userProvidedPermissions.getClass().getName() + " for attribute 'posix:permissions': should be one of "+ String.class+ " or "+ Set.class);" is 190.,71
+google_jimfs,com.google.common.jimfs,PosixAttributeProvider,get,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5c8b2221,117
+google_jimfs,com.google.common.jimfs,PosixAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,130
+google_jimfs,com.google.common.jimfs,PosixAttributeProvider,set,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3641de1a,130
+google_jimfs,com.google.common.jimfs,PosixAttributeProvider,toPermissions,Long Statement,The length of the statement "throw new IllegalArgumentException("invalid element for attribute 'posix:permissions': " + "should be Set<PosixFilePermission>` found element of type " + obj.getClass());" is 170.,150
+google_jimfs,com.google.common.jimfs,PosixAttributeProvider,view,Long Statement,The length of the statement "return new View(lookup`(BasicFileAttributeView)inheritedViews.get("basic")`(FileOwnerAttributeView)inheritedViews.get("owner"));" is 128.,170
+google_jimfs,com.google.common.jimfs,JimfsFileSystemProvider,newFileSystem,Long Statement,The length of the statement "throw new UnsupportedOperationException("This method should not be called directly;" + "use an overload of Jimfs.newFileSystem() to create a FileSystem.");" is 155.,84
+google_jimfs,com.google.common.jimfs,JimfsFileSystemProvider,getFileSystem,Long Statement,The length of the statement "throw new UnsupportedOperationException("This method should not be called directly; " + "use FileSystems.getFileSystem(URI) instead.");" is 135.,109
+google_jimfs,com.google.common.jimfs,JimfsFileSystemProvider,newByteChannel,Long Statement,The length of the statement "return checkedPath.getJimfsFileSystem().getFileStore().supportsFeature(FILE_CHANNEL) ? channel : new DowngradedSeekableByteChannel(channel);" is 140.,159
+google_jimfs,com.google.common.jimfs,JimfsFileSystemProvider,createLink,Long Statement,The length of the statement "checkArgument(linkPath.getFileSystem().equals(existingPath.getFileSystem())`"link and existing paths must belong to the same file system instance");" is 148.,220
+google_jimfs,com.google.common.jimfs,JimfsFileSystemProvider,createSymbolicLink,Long Statement,The length of the statement "checkArgument(linkPath.getFileSystem().equals(targetPath.getFileSystem())`"link and target paths must belong to the same file system instance");" is 144.,231
+google_jimfs,com.google.common.jimfs,RegularFile,create,Magic Number,The method contains a magic number: 32,55
+google_jimfs,com.google.common.jimfs,RegularFile,RegularFile,Long Parameter List,The method has 5 parameters. ,60
+google_jimfs,com.google.common.jimfs,RegularFile,copyWithoutContent,Magic Number,The method contains a magic number: 2,152
+google_jimfs,com.google.common.jimfs,RegularFile,copyWithoutContent,Magic Number,The method contains a magic number: 32,152
+google_jimfs,com.google.common.jimfs,RegularFile,put,Long Parameter List,The method has 5 parameters. ,630
+google_jimfs,com.google.common.jimfs,RegularFile,get,Long Parameter List,The method has 5 parameters. ,643
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannel,lock,Long Parameter List,The method has 5 parameters. ,76
+google_jimfs,com.google.common.jimfs,PathType,toUri,Long Statement,The length of the statement "return new URI(fileSystemUri.getScheme()`fileSystemUri.getUserInfo()`fileSystemUri.getHost()`fileSystemUri.getPort()`path`null`null);" is 133.,184
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,get,Complex Method,Cyclomatic complexity of the method is 9,97
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,get,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1e896dea,97
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,126
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Complex Method,Cyclomatic complexity of the method is 11,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0400,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0200,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0100,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0040,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0020,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0010,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0004,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Magic Number,The method contains a magic number: 0002,131
+google_jimfs,com.google.common.jimfs,UnixAttributeProvider,toMode,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6ecfc0e8,131
+google_jimfs,com.google.common.jimfs,DosAttributeProvider,defaultValues,Long Statement,The length of the statement "return ImmutableMap.of("dos:readonly"`getDefaultValue("dos:readonly"`userProvidedDefaults)`"dos:hidden"`getDefaultValue("dos:hidden"`userProvidedDefaults)`"dos:archive"`getDefaultValue("dos:archive"`userProvidedDefaults)`"dos:system"`getDefaultValue("dos:system"`userProvidedDefaults));" is 286.,60
+google_jimfs,com.google.common.jimfs,DosAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,88
+google_jimfs,com.google.common.jimfs,Configuration,Configuration,Long Statement,The length of the statement "this.attributeProviders=builder.attributeProviders == null ? ImmutableSet.<AttributeProvider>of() : ImmutableSet.copyOf(builder.attributeProviders);" is 148.,246
+google_jimfs,com.google.common.jimfs,Configuration,Configuration,Long Statement,The length of the statement "this.defaultAttributeValues=builder.defaultAttributeValues == null ? ImmutableMap.<String`Object>of() : ImmutableMap.copyOf(builder.defaultAttributeValues);" is 156.,246
+google_jimfs,com.google.common.jimfs,Configuration,toString,Complex Method,Cyclomatic complexity of the method is 9,271
+google_jimfs,com.google.common.jimfs,Configuration,toString,Long Statement,The length of the statement "MoreObjects.ToStringHelper helper=MoreObjects.toStringHelper(this).add("pathType"`pathType).add("roots"`roots).add("supportedFeatures"`supportedFeatures).add("workingDirectory"`workingDirectory);" is 195.,271
+google_jimfs,com.google.common.jimfs,Configuration,toString,Long Statement,The length of the statement "helper.add("pathEqualityUsesCanonicalForm"`pathEqualityUsesCanonicalForm).add("blockSize"`blockSize).add("maxSize"`maxSize);" is 124.,271
+google_jimfs,com.google.common.jimfs,WindowsPathType,parsePath,Complex Method,Cyclomatic complexity of the method is 9,58
+google_jimfs,com.google.common.jimfs,WindowsPathType,parsePath,Long Statement,The length of the statement "throw new InvalidPathException(original`"Jimfs does not currently support the Windows syntax for a relative path " + "on a specific drive (e.g. \"C:foo\\bar\")");" is 162.,58
+google_jimfs,com.google.common.jimfs,WindowsPathType,parsePath,Long Statement,The length of the statement "throw new InvalidPathException(original`"Jimfs does not currently support the Windows syntax for an absolute path " + "on the current drive (e.g. \"\\foo\\bar\")");" is 164.,58
+google_jimfs,com.google.common.jimfs,WindowsPathType,parsePath,Magic Number,The method contains a magic number: 3,58
+google_jimfs,com.google.common.jimfs,WindowsPathType,parseUncRoot,Magic Number,The method contains a magic number: 2,110
+google_jimfs,com.google.common.jimfs,WindowsPathType,parseUncRoot,Magic Number,The method contains a magic number: 3,110
+google_jimfs,com.google.common.jimfs,WindowsPathType,isReserved,Complex Method,Cyclomatic complexity of the method is 8,146
+google_jimfs,com.google.common.jimfs,WindowsPathType,isReserved,Magic Number,The method contains a magic number: 31,146
+google_jimfs,com.google.common.jimfs,WindowsPathType,isReserved,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6b507d3a,146
+google_jimfs,com.google.common.jimfs,UserDefinedAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,81
+google_jimfs,com.google.common.jimfs,Handler,register,Long Identifier,The length of the field JAVA_PROTOCOL_HANDLER_PACKAGES is 30.,54
+google_jimfs,com.google.common.jimfs,JimfsSecureDirectoryStream,newDirectoryStream,Long Statement,The length of the statement "return (SecureDirectoryStream<Path>)view.newDirectoryStream(checkedPath`ALWAYS_TRUE_FILTER`Options.getLinkOptions(options)`path().resolve(checkedPath));" is 152.,126
+google_jimfs,com.google.common.jimfs,FileTreeTest,setUp,Magic Number,The method contains a magic number: 2,114
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_nonExistentRoot,Empty catch clause,The method has an empty catch block.,153
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_nonExistentRoot,Empty catch clause,The method has an empty catch block.,153
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_notExists,Empty catch clause,The method has an empty catch block.,176
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_notExists,Empty catch clause,The method has an empty catch block.,176
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_notExists,Empty catch clause,The method has an empty catch block.,176
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_notExists,Empty catch clause,The method has an empty catch block.,176
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_nonDirectoryIntermediateFile,Empty catch clause,The method has an empty catch block.,211
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_nonDirectoryIntermediateFile,Empty catch clause,The method has an empty catch block.,211
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_symlinkLoop,Empty catch clause,The method has an empty catch block.,255
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_absolute_symlinkLoop,Empty catch clause,The method has an empty catch block.,255
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_relative_notExists,Empty catch clause,The method has an empty catch block.,304
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_relative_notExists,Empty catch clause,The method has an empty catch block.,304
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_relative_nonDirectoryIntermediateFile,Empty catch clause,The method has an empty catch block.,325
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_relative_nonDirectoryIntermediateFile,Empty catch clause,The method has an empty catch block.,325
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_relative_symlinkLoop,Empty catch clause,The method has an empty catch block.,369
+google_jimfs,com.google.common.jimfs,FileTreeTest,testLookup_relative_symlinkLoop,Empty catch clause,The method has an empty catch block.,369
+google_jimfs,com.google.common.jimfs,FileTreeTest,assertParentExists,Empty catch clause,The method has an empty catch block.,429
+google_jimfs,com.google.common.jimfs,UserDefinedAttributeProviderTest,testView,Magic Number,The method contains a magic number: 3,81
+google_jimfs,com.google.common.jimfs,UserDefinedAttributeProviderTest,testView,Magic Number,The method contains a magic number: 5,81
+google_jimfs,com.google.common.jimfs,UserDefinedAttributeProviderTest,testView,Magic Number,The method contains a magic number: 10,81
+google_jimfs,com.google.common.jimfs,UserDefinedAttributeProviderTest,testView,Magic Number,The method contains a magic number: 5,81
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,createFileSystem,Long Statement,The length of the statement "return Jimfs.newFileSystem("win"`Configuration.windows().toBuilder().setRoots("C:\\"`"E:\\").setAttributeViews("basic"`"owner"`"dos"`"acl"`"user").build());" is 156.,47
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths,Long Statement,The length of the statement "assertThatPath("C:\\foo\\bar\\baz").isAbsolute().and().hasRootComponent("C:\\").and().hasNameComponents("foo"`"bar"`"baz");" is 123.,70
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_withSlash,Long Statement,The length of the statement "assertThatPath("C:/foo/bar/baz").isAbsolute().and().hasRootComponent("C:\\").and().hasNameComponents("foo"`"bar"`"baz").and().isEqualTo(path("C:\\foo\\bar\\baz"));" is 163.,102
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_withSlash,Long Statement,The length of the statement "assertThatPath("C:/foo\\bar/baz").isAbsolute().and().hasRootComponent("C:\\").and().hasNameComponents("foo"`"bar"`"baz").and().isEqualTo(path("C:\\foo\\bar\\baz"));" is 164.,102
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_resolve,Long Statement,The length of the statement "assertThatPath(path("C:\\").resolve("foo\\bar")).isAbsolute().and().hasRootComponent("C:\\").and().hasNameComponents("foo"`"bar");" is 130.,128
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_resolve,Long Statement,The length of the statement "assertThatPath(path("foo\\bar").resolve("C:\\one\\two")).isAbsolute().and().hasRootComponent("C:\\").and().hasNameComponents("one"`"two");" is 138.,128
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_normalize,Long Statement,The length of the statement "assertThatPath(path("foo\\.\\bar\\..\\baz\\test\\.\\..\\stuff").normalize()).isRelative().and().hasNameComponents("foo"`"baz"`"stuff");" is 135.,148
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_relativize,Empty catch clause,The method has an empty catch block.,166
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_relativize,Empty catch clause,The method has an empty catch block.,166
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_relativize,Long Statement,The length of the statement "assertThatPath(path("C:\\foo\\bar\\baz").relativize(path("C:\\foo\\baz\\bar"))).isRelative().and().hasNameComponents(".."`".."`"baz"`"bar");" is 140.,166
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_toAbsolutePath,Long Statement,The length of the statement "assertThatPath(path("C:\\foo\\bar").toAbsolutePath()).isAbsolute().and().hasRootComponent("C:\\").and().hasNameComponents("foo"`"bar").and().isEqualTo(path("C:\\foo\\bar"));" is 173.,214
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_toAbsolutePath,Long Statement,The length of the statement "assertThatPath(path("foo\\bar").toAbsolutePath()).isAbsolute().and().hasRootComponent("C:\\").and().hasNameComponents("work"`"foo"`"bar").and().isEqualTo(path("C:\\work\\foo\\bar"));" is 182.,214
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_getFromUri_unc,Long Statement,The length of the statement "assertThatPath(Paths.get(URI.create("jimfs://win//host/share/foo%20bar"))).isEqualTo(fs.getPath("\\\\host\\share\\foo bar"));" is 125.,283
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_getFromUri_unc,Long Statement,The length of the statement "assertThatPath(Paths.get(URI.create("jimfs://win//host/share/foo/./bar"))).isEqualTo(fs.getPath("\\\\host\\share\\foo\\.\\bar"));" is 129.,283
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPaths_getFromUri_unc,Long Statement,The length of the statement "assertThatPath(Paths.get(URI.create("jimfs://win//host/share/foo/bar/"))).isEqualTo(fs.getPath("\\\\host\\share\\foo\\bar"));" is 125.,283
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPathMatchers_glob,Empty catch clause,The method has an empty catch block.,297
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testPathMatchers_glob_alternateSeparators,Empty catch clause,The method has an empty catch block.,324
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCreateFileOrDirectory_forNonExistentRootPath_fails,Empty catch clause,The method has an empty catch block.,351
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCreateFileOrDirectory_forNonExistentRootPath_fails,Empty catch clause,The method has an empty catch block.,351
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCreateFileOrDirectory_forNonExistentRootPath_fails,Empty catch clause,The method has an empty catch block.,351
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCopyFile_toNonExistentRootPath_fails,Empty catch clause,The method has an empty catch block.,372
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCopyFile_toNonExistentRootPath_fails,Empty catch clause,The method has an empty catch block.,372
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testMoveFile_toNonExistentRootPath_fails,Empty catch clause,The method has an empty catch block.,390
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testMoveFile_toNonExistentRootPath_fails,Empty catch clause,The method has an empty catch block.,390
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCreateFileOrDirectory_forExistingRootPath_fails,Empty catch clause,The method has an empty catch block.,420
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCreateFileOrDirectory_forExistingRootPath_fails,Empty catch clause,The method has an empty catch block.,420
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCreateFileOrDirectory_forExistingRootPath_fails,Empty catch clause,The method has an empty catch block.,420
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCopyFile_toExistingRootPath_fails,Empty catch clause,The method has an empty catch block.,441
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testCopyFile_toExistingRootPath_fails,Empty catch clause,The method has an empty catch block.,441
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testMoveFile_toExistingRootPath_fails,Empty catch clause,The method has an empty catch block.,459
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testMoveFile_toExistingRootPath_fails,Empty catch clause,The method has an empty catch block.,459
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testMove_rootDirectory_fails,Empty catch clause,The method has an empty catch block.,477
+google_jimfs,com.google.common.jimfs,JimfsWindowsLikeFileSystemTest,testMove_rootDirectory_fails,Empty catch clause,The method has an empty catch block.,477
+google_jimfs,com.google.common.jimfs,AbstractAttributeProviderTest,assertSetFails,Empty catch clause,The method has an empty catch block.,116
+google_jimfs,com.google.common.jimfs,AbstractAttributeProviderTest,assertSetFailsOnCreate,Empty catch clause,The method has an empty catch block.,125
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_relativePathsWithDriveRoot_unsupported,Empty catch clause,The method has an empty catch block.,61
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_relativePathsWithDriveRoot_unsupported,Empty catch clause,The method has an empty catch block.,61
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_absolutePathOnCurrentDrive_unsupported,Empty catch clause,The method has an empty catch block.,76
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_absolutePathOnCurrentDrive_unsupported,Empty catch clause,The method has an empty catch block.,76
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_illegalNames,Empty catch clause,The method has an empty catch block.,133
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_illegalNames,Empty catch clause,The method has an empty catch block.,133
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_illegalNames,Empty catch clause,The method has an empty catch block.,133
+google_jimfs,com.google.common.jimfs,WindowsPathTypeTest,testWindows_illegalNames,Empty catch clause,The method has an empty catch block.,133
+google_jimfs,com.google.common.jimfs,UnixPathTypeTest,testUnix_illegalCharacters,Magic Number,The method contains a magic number: 8,92
+google_jimfs,com.google.common.jimfs,TestAttributeProvider,set,Long Parameter List,The method has 5 parameters. ,69
+google_jimfs,com.google.common.jimfs,TestAttributeProvider,set,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@32364fe7,69
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testIsNotAvailableFromProvider,Empty catch clause,The method has an empty catch block.,74
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenChannelsClosed,Empty catch clause,The method has an empty catch block.,114
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenChannelsClosed,Empty catch clause,The method has an empty catch block.,114
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenChannelsClosed,Empty catch clause,The method has an empty catch block.,114
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenDirectoryStreamsClosed,Empty catch clause,The method has an empty catch block.,150
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenWatchServicesClosed,Empty catch clause,The method has an empty catch block.,167
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenWatchServicesClosed,Empty catch clause,The method has an empty catch block.,167
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testPathMethodsThrow,Empty catch clause,The method has an empty catch block.,190
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testPathMethodsThrow,Empty catch clause,The method has an empty catch block.,190
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenFileAttributeViewsThrow,Empty catch clause,The method has an empty catch block.,217
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testOpenFileAttributeViewsThrow,Empty catch clause,The method has an empty catch block.,217
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFileSystemMethodsThrow,Empty catch clause,The method has an empty catch block.,239
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFileSystemMethodsThrow,Empty catch clause,The method has an empty catch block.,239
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFileSystemMethodsThrow,Empty catch clause,The method has an empty catch block.,239
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFileSystemMethodsThrow,Empty catch clause,The method has an empty catch block.,239
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFileSystemMethodsThrow,Empty catch clause,The method has an empty catch block.,239
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFileSystemMethodsThrow,Empty catch clause,The method has an empty catch block.,239
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFileSystemMethodsThrow,Empty catch clause,The method has an empty catch block.,239
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Empty catch clause,The method has an empty catch block.,286
+google_jimfs,com.google.common.jimfs,JimfsFileSystemCloseTest,testFilesMethodsThrow,Long Method,The method has 146 lines of code.,286
+google_jimfs,com.google.common.jimfs,FileTest,testAttributes,Magic Number,The method contains a magic number: 10,35
+google_jimfs,com.google.common.jimfs,FileTest,testAttributes,Magic Number,The method contains a magic number: 10,35
+google_jimfs,com.google.common.jimfs,FileTest,testAttributes,Magic Number,The method contains a magic number: 10,35
+google_jimfs,com.google.common.jimfs,FileTest,testRegularFile,Magic Number,The method contains a magic number: 10,74
+google_jimfs,com.google.common.jimfs,FileTest,testLinkAndUnlink,Magic Number,The method contains a magic number: 2,99
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,setUp,Long Statement,The length of the statement "ImmutableSet<AttributeProvider> providers=ImmutableSet.of(StandardAttributeProviders.get("basic")`StandardAttributeProviders.get("owner")`new TestAttributeProvider());" is 167.,46
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testGetAttribute_failsForAttributesNotDefinedByProvider,Empty catch clause,The method has an empty catch block.,102
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testGetAttribute_failsForAttributesNotDefinedByProvider,Empty catch clause,The method has an empty catch block.,102
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute,Magic Number,The method contains a magic number: 10L,119
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute,Magic Number,The method contains a magic number: 10L,119
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute,Magic Number,The method contains a magic number: 100,119
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute,Magic Number,The method contains a magic number: 100,119
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_withAlternateAcceptedType,Magic Number,The method contains a magic number: 10F,138
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_withAlternateAcceptedType,Magic Number,The method contains a magic number: 10L,138
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_withAlternateAcceptedType,Magic Number,The method contains a magic number: 123,138
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_withAlternateAcceptedType,Magic Number,The method contains a magic number: 123L,138
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_onCreate,Magic Number,The method contains a magic number: 123,148
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_onCreate,Magic Number,The method contains a magic number: 123,148
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_failsForAttributesNotDefinedByProvider,Empty catch clause,The method has an empty catch block.,155
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_failsForAttributesNotDefinedByProvider,Empty catch clause,The method has an empty catch block.,155
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_failsForAttributesNotDefinedByProvider,Magic Number,The method contains a magic number: 5,155
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_failsForArgumentThatIsNotOfCorrectType,Empty catch clause,The method has an empty catch block.,176
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_failsForNullArgument,Empty catch clause,The method has an empty catch block.,189
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_failsForAttributeThatIsNotSettable,Empty catch clause,The method has an empty catch block.,202
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_onCreate_failsForAttributeThatIsNotSettableOnCreate,Empty catch clause,The method has an empty catch block.,214
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_onCreate_failsForAttributeThatIsNotSettableOnCreate,Empty catch clause,The method has an empty catch block.,214
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testSetAttribute_onCreate_failsForAttributeThatIsNotSettableOnCreate,Magic Number,The method contains a magic number: 5,214
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testReadAttributes_asMap,Long Statement,The length of the statement "assertThat(map).isEqualTo(ImmutableMap.<String`Object>builder().put("foo"`"hello").put("bar"`0L).put("baz"`1).put("fileKey"`0).put("isDirectory"`true).put("isRegularFile"`false).put("isSymbolicLink"`false).put("isOther"`false).put("size"`0L).put("lastModifiedTime"`time).put("lastAccessTime"`time).put("creationTime"`time).build());" is 332.,269
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testReadAttributes_asMap,Long Statement,The length of the statement "assertThat(map).isEqualTo(ImmutableMap.<String`Object>builder().put("fileKey"`0).put("isDirectory"`true).put("isRegularFile"`false).put("isSymbolicLink"`false).put("isOther"`false).put("size"`0L).put("lastModifiedTime"`time).put("lastAccessTime"`time).put("creationTime"`time).build());" is 286.,269
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testReadAttributes_asObject,Magic Number,The method contains a magic number: 100,331
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testReadAttributes_asObject,Magic Number,The method contains a magic number: 100,331
+google_jimfs,com.google.common.jimfs,AttributeServiceTest,testReadAttributes_failsForUnsupportedAttributesType,Empty catch clause,The method has an empty catch block.,350
+google_jimfs,com.google.common.jimfs,UrlTest,headers,Magic Number,The method contains a magic number: 3,75
+google_jimfs,com.google.common.jimfs,UrlTest,headers,Magic Number,The method contains a magic number: 2,75
+google_jimfs,com.google.common.jimfs,UrlTest,headers,Magic Number,The method contains a magic number: 1000L,75
+google_jimfs,com.google.common.jimfs,DosAttributeProviderTest,testView,Long Statement,The length of the statement "DosFileAttributeView view=provider.view(fileLookup()`ImmutableMap.<String`FileAttributeView>of("basic"`new BasicAttributeProvider().view(fileLookup()`NO_INHERITED_VIEWS)));" is 172.,71
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte,Magic Number,The method contains a magic number: 2,41
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte,Magic Number,The method contains a magic number: 3,41
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte,Magic Number,The method contains a magic number: 2,41
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte,Magic Number,The method contains a magic number: 3,41
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray,Magic Number,The method contains a magic number: 2,50
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray,Magic Number,The method contains a magic number: 3,50
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray,Magic Number,The method contains a magic number: 4,50
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray,Magic Number,The method contains a magic number: 3,57
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray,Magic Number,The method contains a magic number: 2,57
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray,Magic Number,The method contains a magic number: 3,57
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray,Magic Number,The method contains a magic number: 4,57
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Empty catch clause,The method has an empty catch block.,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Empty catch clause,The method has an empty catch block.,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Empty catch clause,The method has an empty catch block.,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Magic Number,The method contains a magic number: 4,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,64
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 9,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 8,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 7,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 2,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 3,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 9,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 8,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 7,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 2,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_appendMode,Magic Number,The method contains a magic number: 3,87
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 9,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 8,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 7,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 9,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 8,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 7,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 2,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 3,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_appendMode,Magic Number,The method contains a magic number: 4,97
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 9,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 8,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 7,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 3,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 9,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 8,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 7,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 2,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 3,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_appendMode,Magic Number,The method contains a magic number: 4,105
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 9,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 8,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 7,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 6,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 5,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 4,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 3,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 2,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 3,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 2,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 3,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 6,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 5,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 4,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_singleByte_overwriting,Magic Number,The method contains a magic number: 3,113
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 9,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 8,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 7,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 6,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 5,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 4,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 3,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 2,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 3,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 4,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 5,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 4,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_wholeArray_overwriting,Magic Number,The method contains a magic number: 3,123
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 9,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 8,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 7,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 6,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 5,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 4,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 3,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 3,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 2,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 3,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 4,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 6,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 5,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 4,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testWrite_partialArray_overwriting,Magic Number,The method contains a magic number: 3,131
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testClosedOutputStream_throwsException,Empty catch clause,The method has an empty catch block.,139
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testClosedOutputStream_throwsException,Empty catch clause,The method has an empty catch block.,139
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testClosedOutputStream_throwsException,Empty catch clause,The method has an empty catch block.,139
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testClosedOutputStream_throwsException,Magic Number,The method contains a magic number: 3,139
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testClosedOutputStream_throwsException,Magic Number,The method contains a magic number: 10,139
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testClosedOutputStream_throwsException,Magic Number,The method contains a magic number: 3,139
+google_jimfs,com.google.common.jimfs,JimfsOutputStreamTest,testClosedOutputStream_doesNotThrowOnFlush,Long Statement,The length of the statement "try (JimfsOutputStream out2=newOutputStream(false);BufferedOutputStream bout=new BufferedOutputStream(out2);OutputStreamWriter writer=new OutputStreamWriter(bout`UTF_8)){" is 170.,165
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,createFile,Magic Number,The method contains a magic number: 2,47
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,createFile,Magic Number,The method contains a magic number: 2,47
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testAddAndGet,Magic Number,The method contains a magic number: 2,59
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testAddAndGet,Magic Number,The method contains a magic number: 2,59
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTruncate,Magic Number,The method contains a magic number: 4,74
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTruncate,Magic Number,The method contains a magic number: 2,74
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTruncate,Magic Number,The method contains a magic number: 2,74
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTruncate,Magic Number,The method contains a magic number: 2,74
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTruncate,Magic Number,The method contains a magic number: 3,74
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 3,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 3,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 5,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 3,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 4,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testCopyTo,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTransferTo,Magic Number,The method contains a magic number: 3,122
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTransferTo,Magic Number,The method contains a magic number: 3,122
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTransferTo,Magic Number,The method contains a magic number: 3,122
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTransferTo,Magic Number,The method contains a magic number: 2,122
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTransferTo,Magic Number,The method contains a magic number: 2,122
+google_jimfs,com.google.common.jimfs,RegularFileBlocksTest,testTransferTo,Magic Number,The method contains a magic number: 2,122
+google_jimfs,com.google.common.jimfs,PosixAttributeProviderTest,testInitialAttributes,Long Statement,The length of the statement "assertContainsAll(file`ImmutableMap.of("group"`createGroupPrincipal("group")`"permissions"`PosixFilePermissions.fromString("rw-r--r--")));" is 138.,56
+google_jimfs,com.google.common.jimfs,PosixAttributeProviderTest,testView,Long Statement,The length of the statement "PosixFileAttributeView view=provider.view(fileLookup()`ImmutableMap.of("basic"`new BasicAttributeProvider().view(fileLookup()`NO_INHERITED_VIEWS)`"owner"`new OwnerAttributeProvider().view(fileLookup()`NO_INHERITED_VIEWS)));" is 223.,81
+google_jimfs,com.google.common.jimfs,JimfsPathTest,testParsing_windowsStylePaths_invalidPaths,Empty catch clause,The method has an empty catch block.,76
+google_jimfs,com.google.common.jimfs,JimfsPathTest,testParsing_windowsStylePaths_invalidPaths,Empty catch clause,The method has an empty catch block.,76
+google_jimfs,com.google.common.jimfs,JimfsPathTest,testParsing_windowsStylePaths_invalidPaths,Empty catch clause,The method has an empty catch block.,76
+google_jimfs,com.google.common.jimfs,JimfsPathTest,testRelativize_oneAbsoluteOneRelative,Empty catch clause,The method has an empty catch block.,273
+google_jimfs,com.google.common.jimfs,JimfsPathTest,testRelativize_oneAbsoluteOneRelative,Empty catch clause,The method has an empty catch block.,273
+google_jimfs,com.google.common.jimfs,WatchServiceConfigurationTest,testPollingConfig,Magic Number,The method contains a magic number: 50,54
+google_jimfs,com.google.common.jimfs,WatchServiceConfigurationTest,testPollingConfig,Magic Number,The method contains a magic number: 50,54
+google_jimfs,com.google.common.jimfs,WatchServiceConfigurationTest,testDefaultConfig,Magic Number,The method contains a magic number: 5,65
+google_jimfs,com.google.common.jimfs,DirectoryTest,testRootDirectory,Magic Number,The method contains a magic number: 3,56
+google_jimfs,com.google.common.jimfs,DirectoryTest,testEmptyDirectory,Magic Number,The method contains a magic number: 2,66
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLink,Magic Number,The method contains a magic number: 2,81
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLink_existingNameFails,Empty catch clause,The method has an empty catch block.,91
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLink_existingNameFails,Magic Number,The method contains a magic number: 2,91
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLink_parentAndSelfNameFails,Empty catch clause,The method has an empty catch block.,100
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLink_parentAndSelfNameFails,Empty catch clause,The method has an empty catch block.,100
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLink_parentAndSelfNameFails,Magic Number,The method contains a magic number: 2,100
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLink_parentAndSelfNameFails,Magic Number,The method contains a magic number: 2,100
+google_jimfs,com.google.common.jimfs,DirectoryTest,testGet_normalizingCaseInsensitive,Magic Number,The method contains a magic number: 2,115
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlink_nonExistentNameFails,Empty catch clause,The method has an empty catch block.,138
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlink_parentAndSelfNameFails,Empty catch clause,The method has an empty catch block.,147
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlink_parentAndSelfNameFails,Empty catch clause,The method has an empty catch block.,147
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlink_normalizingCaseInsensitive,Magic Number,The method contains a magic number: 2,162
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLinkDirectory,Magic Number,The method contains a magic number: 10,173
+google_jimfs,com.google.common.jimfs,DirectoryTest,testLinkDirectory,Magic Number,The method contains a magic number: 2,173
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlinkDirectory,Magic Number,The method contains a magic number: 10,192
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlinkDirectory,Magic Number,The method contains a magic number: 3,192
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlinkDirectory,Magic Number,The method contains a magic number: 2,192
+google_jimfs,com.google.common.jimfs,DirectoryTest,testUnlinkDirectory,Magic Number,The method contains a magic number: 2,192
+google_jimfs,com.google.common.jimfs,DirectoryTest,testSnapshot,Magic Number,The method contains a magic number: 10,213
+google_jimfs,com.google.common.jimfs,DirectoryTest,testSnapshot,Magic Number,The method contains a magic number: 10,213
+google_jimfs,com.google.common.jimfs,DirectoryTest,testSnapshot_sortsUsingStringAndNotCanonicalValueOfNames,Magic Number,The method contains a magic number: 10,231
+google_jimfs,com.google.common.jimfs,DirectoryTest,testSnapshot_sortsUsingStringAndNotCanonicalValueOfNames,Magic Number,The method contains a magic number: 10,231
+google_jimfs,com.google.common.jimfs,DirectoryTest,testInitialState,Long Statement,The length of the statement "assertThat(ImmutableSet.copyOf(dir)).containsExactly(new DirectoryEntry(dir`Name.SELF`dir)`new DirectoryEntry(dir`Name.PARENT`root));" is 133.,249
+google_jimfs,com.google.common.jimfs,DirectoryTest,testInitialState,Magic Number,The method contains a magic number: 2,249
+google_jimfs,com.google.common.jimfs,DirectoryTest,testPutAndGet,Magic Number,The method contains a magic number: 3,258
+google_jimfs,com.google.common.jimfs,DirectoryTest,testPutAndGet,Magic Number,The method contains a magic number: 4,258
+google_jimfs,com.google.common.jimfs,DirectoryTest,testPutEntryForExistingNameIsIllegal,Empty catch clause,The method has an empty catch block.,274
+google_jimfs,com.google.common.jimfs,DirectoryTest,testRemove,Long Statement,The length of the statement "assertThat(ImmutableSet.copyOf(dir)).containsExactly(entry("bar")`new DirectoryEntry(dir`Name.SELF`dir)`new DirectoryEntry(dir`Name.PARENT`root));" is 146.,285
+google_jimfs,com.google.common.jimfs,DirectoryTest,testRemove,Magic Number,The method contains a magic number: 3,285
+google_jimfs,com.google.common.jimfs,DirectoryTest,testRemove,Magic Number,The method contains a magic number: 2,285
+google_jimfs,com.google.common.jimfs,DirectoryTest,testManyPutsAndRemoves,Complex Method,Cyclomatic complexity of the method is 8,309
+google_jimfs,com.google.common.jimfs,DirectoryTest,testManyPutsAndRemoves,Magic Number,The method contains a magic number: 1000,309
+google_jimfs,com.google.common.jimfs,DirectoryTest,testManyPutsAndRemoves,Magic Number,The method contains a magic number: 1000,309
+google_jimfs,com.google.common.jimfs,DirectoryTest,testManyPutsAndRemoves,Magic Number,The method contains a magic number: 10000,309
+google_jimfs,com.google.common.jimfs,DirectoryTest,testManyPutsAndRemoves,Magic Number,The method contains a magic number: 20,309
+google_jimfs,com.google.common.jimfs,DirectoryTest,testManyPutsAndRemoves,Magic Number,The method contains a magic number: 2,309
+google_jimfs,com.google.common.jimfs,TestUtils,permutations,Complex Conditional,The conditional expression fileName != null && !fileName.toString().equals(".") && !fileName.toString().equals("..") is complex.,83
+google_jimfs,com.google.common.jimfs,TestUtils,permutations,Complex Method,Cyclomatic complexity of the method is 8,83
+google_jimfs,com.google.common.jimfs,TestUtils,regularFile,Magic Number,The method contains a magic number: 8096,135
+google_jimfs,com.google.common.jimfs,TestUtils,regularFile,Magic Number,The method contains a magic number: 1000,135
+google_jimfs,com.google.common.jimfs,TestUtils,regularFile,Magic Number,The method contains a magic number: 1000,135
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_star,Long Statement,The length of the statement "assertThat("/foo*/ba*").matches("/food/bar"`"/fool/bat"`"/foo/ba"`"/foot/ba"`"/foo/bar"`"/foods/bartender").doesNotMatch("/food/baz/bar");" is 138.,42
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_star,Long Statement,The length of the statement "assertThat("*.java").matches("Foo.java"`"Bar.java"`"GlobPatternTest.java"`"Foo.java.java"`".java").doesNotMatch("Foo.jav"`"Foo"`"java.Foo"`"Foo.java.");" is 152.,42
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_star,Long Statement,The length of the statement "assertThat("*.............").matches("............a............a..............a.............a............a.........." + ".........................................................a....................");" is 202.,42
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_star,Long Statement,The length of the statement "assertThat("*.............*..").matches("............a............a..............a.............a............a.........." + "..........a...................................................................");" is 205.,42
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_star,Long Statement,The length of the statement "assertThat(".................*........*.*.....*....................*..............*").matches(".................................abc.........................................." + ".............................................................................." + ".............................................................................."+ ".............................................12..............................."+ ".........................................................................hello"+ "..............................................................................");" is 588.,42
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_starStar,Long Statement,The length of the statement "assertThat("/foo/**/bar.txt").matches("/foo/baz/bar.txt"`"/foo/bar/asdf/bar.txt").doesNotMatch("/foo/bar.txt"`"/foo/baz/bar");" is 126.,82
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_curlyBraces,Long Statement,The length of the statement "assertThat("{[Ff]oo*`[Bb]a*`[A-Ca-c]*/[!z]*.txt}").matches("foo"`"Foo"`"fools"`"ba"`"Ba"`"bar"`"Bar"`"Bart"`"c/y.txt"`"Cat/foo.txt").doesNotMatch("Cat"`"Cat/foo"`"blah"`"bAr"`"c/z.txt"`"c/.txt"`"*");" is 199.,116
+google_jimfs,com.google.common.jimfs,AbstractGlobMatcherTest,testMatching_various,Long Statement,The length of the statement "assertThat("**/[A-Z]*.{[Jj][Aa][Vv][Aa]`[Tt][Xx][Tt]}").matches("/foo/bar/Baz.java"`"/A.java"`"bar/Test.JAVA"`"foo/Foo.tXt");" is 125.,139
+google_jimfs,com.google.common.jimfs,RegularFileTest,apply,Long Statement,The length of the statement "return method.getName().startsWith("test") && Modifier.isPublic(method.getModifiers()) && method.getParameterTypes().length == 0;" is 129.,91
+google_jimfs,com.google.common.jimfs,AclAttributeProviderTest,testView,Long Statement,The length of the statement "AclFileAttributeView view=provider.view(fileLookup()`ImmutableMap.<String`FileAttributeView>of("owner"`new OwnerAttributeProvider().view(fileLookup()`NO_INHERITED_VIEWS)));" is 172.,98
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_singleByte,Magic Number,The method contains a magic number: 2,40
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_singleByte,Magic Number,The method contains a magic number: 2,40
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 2,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 3,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 4,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 5,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 6,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 7,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 8,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 8,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 8,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 2,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 3,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 4,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 5,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 6,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 7,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray,Magic Number,The method contains a magic number: 8,47
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 2,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 3,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 4,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 5,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 6,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 7,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 8,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 12,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 8,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 2,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 3,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 4,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 5,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 6,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 7,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arrayLarger,Magic Number,The method contains a magic number: 8,56
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 2,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 3,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 4,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 5,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 6,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 7,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 8,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 6,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 6,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 2,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 3,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 4,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 5,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 6,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 6,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 2,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 7,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_wholeArray_arraySmaller,Magic Number,The method contains a magic number: 8,65
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 2,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 3,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 4,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 5,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 6,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 7,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 8,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 12,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 8,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 8,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 2,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 3,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 4,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 5,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 6,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 7,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray,Magic Number,The method contains a magic number: 8,77
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 2,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 3,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 4,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 5,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 6,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 7,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 8,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 12,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 10,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 8,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 2,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 3,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 4,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 5,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 6,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 7,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceLarger,Magic Number,The method contains a magic number: 8,86
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 3,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 4,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 5,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 6,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 7,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 8,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 12,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 6,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 6,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 3,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 4,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 5,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 6,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 6,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 6,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 2,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 3,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 4,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 5,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 6,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 7,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_sliceSmaller,Magic Number,The method contains a magic number: 8,95
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Empty catch clause,The method has an empty catch block.,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Empty catch clause,The method has an empty catch block.,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Empty catch clause,The method has an empty catch block.,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 2,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 4,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 5,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 4,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testRead_partialArray_invalidInput,Magic Number,The method contains a magic number: 3,106
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 2,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 3,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 4,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 5,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 6,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 7,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 8,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 8,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 7,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 3,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 3,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 4,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 10,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 2,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 2,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 2,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 10,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testAvailable,Magic Number,The method contains a magic number: 2,129
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 2,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 3,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 4,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 5,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 6,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 7,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 8,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 10,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 2,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 2,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 3,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 3,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 3,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 7,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 10,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testSkip,Magic Number,The method contains a magic number: 10,143
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 2,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 3,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 4,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 5,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 5,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 5,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 5,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 10,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testFullyReadInputStream_doesNotChangeStateWhenStoreChanges,Magic Number,The method contains a magic number: 10,158
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testMark_unsupported,Empty catch clause,The method has an empty catch block.,169
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testMark_unsupported,Magic Number,The method contains a magic number: 2,169
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testMark_unsupported,Magic Number,The method contains a magic number: 3,169
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Empty catch clause,The method has an empty catch block.,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Empty catch clause,The method has an empty catch block.,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Empty catch clause,The method has an empty catch block.,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Empty catch clause,The method has an empty catch block.,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Empty catch clause,The method has an empty catch block.,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Magic Number,The method contains a magic number: 2,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Magic Number,The method contains a magic number: 3,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Magic Number,The method contains a magic number: 3,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Magic Number,The method contains a magic number: 10,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Magic Number,The method contains a magic number: 2,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,testClosedInputStream_throwsException,Magic Number,The method contains a magic number: 10,185
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,assertEmpty,Magic Number,The method contains a magic number: 3,234
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,assertEmpty,Magic Number,The method contains a magic number: 10,234
+google_jimfs,com.google.common.jimfs,JimfsInputStreamTest,assertEmpty,Magic Number,The method contains a magic number: 5,234
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,channel,Long Statement,The length of the statement "return new JimfsFileChannel(file`Options.getOptionsForChannel(ImmutableSet.copyOf(options))`new FileSystemState(Runnables.doNothing()));" is 136.,73
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testPosition,Magic Number,The method contains a magic number: 10,80
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testPosition,Magic Number,The method contains a magic number: 100,80
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testPosition,Magic Number,The method contains a magic number: 100,80
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testSize,Magic Number,The method contains a magic number: 10,88
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testSize,Magic Number,The method contains a magic number: 10,88
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testSize,Magic Number,The method contains a magic number: 10,88
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testSize,Magic Number,The method contains a magic number: 90,88
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testSize,Magic Number,The method contains a magic number: 90,88
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testSize,Magic Number,The method contains a magic number: 100,88
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 20,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 10,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 10,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 10,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 20,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 20,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 10,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 10,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 10,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 2,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 30,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 10,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 5,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 30,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testRead,Magic Number,The method contains a magic number: 30,99
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 10,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 10,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 20,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 30,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 20,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 2,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 50,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 10,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 5,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWrite,Magic Number,The method contains a magic number: 50,129
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 10,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 10,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 20,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 30,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 20,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 2,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 50,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 10,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 5,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 60,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 10,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 10,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAppend,Magic Number,The method contains a magic number: 70,154
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferTo,Magic Number,The method contains a magic number: 10,188
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferTo,Magic Number,The method contains a magic number: 10,188
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferTo,Magic Number,The method contains a magic number: 100,188
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferFrom,Magic Number,The method contains a magic number: 10,198
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferFrom,Magic Number,The method contains a magic number: 100,198
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 10,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 10,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 10,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 11,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 10,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 5,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 5,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 20,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 10,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 10,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 2,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncate,Magic Number,The method contains a magic number: 2,208
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Long Statement,The length of the statement "FileChannel channel=new JimfsFileChannel(file`ImmutableSet.<OpenOption>of(READ`WRITE)`new FileSystemState(Runnables.doNothing()));" is 130.,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 2,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testFileTimeUpdates,Magic Number,The method contains a magic number: 10,227
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Empty catch clause,The method has an empty catch block.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Long Method,The method has 116 lines of code.,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 10,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 10,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 10,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 2,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 4,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 10,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 2,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testClose,Magic Number,The method contains a magic number: 10,305
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Empty catch clause,The method has an empty catch block.,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Empty catch clause,The method has an empty catch block.,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Empty catch clause,The method has an empty catch block.,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Empty catch clause,The method has an empty catch block.,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Empty catch clause,The method has an empty catch block.,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Empty catch clause,The method has an empty catch block.,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Empty catch clause,The method has an empty catch block.,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Magic Number,The method contains a magic number: 10,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Magic Number,The method contains a magic number: 2,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Magic Number,The method contains a magic number: 4,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWritesInReadOnlyMode,Magic Number,The method contains a magic number: 10,424
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Empty catch clause,The method has an empty catch block.,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Empty catch clause,The method has an empty catch block.,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Empty catch clause,The method has an empty catch block.,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Empty catch clause,The method has an empty catch block.,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Empty catch clause,The method has an empty catch block.,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Empty catch clause,The method has an empty catch block.,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Magic Number,The method contains a magic number: 10,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Magic Number,The method contains a magic number: 2,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Magic Number,The method contains a magic number: 10,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadsInWriteOnlyMode,Magic Number,The method contains a magic number: 10,471
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testPositionNegative,Empty catch clause,The method has an empty catch block.,512
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTruncateNegative,Empty catch clause,The method has an empty catch block.,523
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWriteNegative,Empty catch clause,The method has an empty catch block.,534
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWriteNegative,Empty catch clause,The method has an empty catch block.,534
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWriteNegative,Empty catch clause,The method has an empty catch block.,534
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testWriteNegative,Magic Number,The method contains a magic number: 10,534
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadNegative,Empty catch clause,The method has an empty catch block.,558
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadNegative,Empty catch clause,The method has an empty catch block.,558
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadNegative,Empty catch clause,The method has an empty catch block.,558
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testReadNegative,Magic Number,The method contains a magic number: 10,558
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferToNegative,Empty catch clause,The method has an empty catch block.,582
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferToNegative,Empty catch clause,The method has an empty catch block.,582
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferToNegative,Magic Number,The method contains a magic number: 10,582
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferToNegative,Magic Number,The method contains a magic number: 10,582
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferFromNegative,Empty catch clause,The method has an empty catch block.,599
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferFromNegative,Empty catch clause,The method has an empty catch block.,599
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferFromNegative,Magic Number,The method contains a magic number: 10,599
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testTransferFromNegative,Magic Number,The method contains a magic number: 10,599
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLockNegative,Empty catch clause,The method has an empty catch block.,616
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLockNegative,Empty catch clause,The method has an empty catch block.,616
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLockNegative,Empty catch clause,The method has an empty catch block.,616
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLockNegative,Empty catch clause,The method has an empty catch block.,616
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLockNegative,Magic Number,The method contains a magic number: 10,616
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLockNegative,Magic Number,The method contains a magic number: 10,616
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testNullPointerExceptions,Magic Number,The method contains a magic number: 100,645
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLock,Magic Number,The method contains a magic number: 10,653
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLock,Magic Number,The method contains a magic number: 10,653
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLock,Magic Number,The method contains a magic number: 10,653
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLock,Magic Number,The method contains a magic number: 10,653
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testLock,Magic Number,The method contains a magic number: 10,653
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAsynchronousClose,Magic Number,The method contains a magic number: 10,671
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testAsynchronousClose,Magic Number,The method contains a magic number: 20,671
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testCloseByInterrupt,Long Statement,The length of the statement "assertWithMessage("interrupted thread exception").that(interruptException.get(200`MILLISECONDS)).isInstanceOf(ClosedByInterruptException.class);" is 144.,705
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testCloseByInterrupt,Magic Number,The method contains a magic number: 10,705
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testCloseByInterrupt,Magic Number,The method contains a magic number: 20,705
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testCloseByInterrupt,Magic Number,The method contains a magic number: 10,705
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testCloseByInterrupt,Magic Number,The method contains a magic number: 20,705
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testCloseByInterrupt,Magic Number,The method contains a magic number: 200,705
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,run,Magic Number,The method contains a magic number: 20,725
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,queueAllBlockingOperations,Magic Number,The method contains a magic number: 10,777
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,queueAllBlockingOperations,Magic Number,The method contains a magic number: 2,777
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,queueAllBlockingOperations,Magic Number,The method contains a magic number: 2,777
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,queueAllBlockingOperations,Magic Number,The method contains a magic number: 10,777
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,queueAllBlockingOperations,Magic Number,The method contains a magic number: 10,777
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,call,Magic Number,The method contains a magic number: 2,823
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,call,Magic Number,The method contains a magic number: 2,867
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,call,Magic Number,The method contains a magic number: 10,878
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,call,Magic Number,The method contains a magic number: 10,889
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testInterruptedThreads,Magic Number,The method contains a magic number: 10,900
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testInterruptedThreads,Magic Number,The method contains a magic number: 10,900
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,testInterruptedThreads,Magic Number,The method contains a magic number: 10,900
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,call,Magic Number,The method contains a magic number: 10,983
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,call,Magic Number,The method contains a magic number: 10,991
+google_jimfs,com.google.common.jimfs,JimfsFileChannelTest,assertClosedByInterrupt,Magic Number,The method contains a magic number: 10,1029
+google_jimfs,com.google.common.jimfs,UnixAttributeProviderTest,testInitialAttributes,Magic Number,The method contains a magic number: 0644,52
+google_jimfs,com.google.common.jimfs,UnixAttributeProviderTest,testInitialAttributes,Magic Number,The method contains a magic number: 2,52
+google_jimfs,com.google.common.jimfs,BasicAttributeProviderTest,testSupportedAttributes,Long Statement,The length of the statement "assertSupportsAll("fileKey"`"size"`"isDirectory"`"isRegularFile"`"isSymbolicLink"`"isOther"`"creationTime"`"lastModifiedTime"`"lastAccessTime");" is 144.,51
+google_jimfs,com.google.common.jimfs,BasicAttributeProviderTest,testInitialAttributes,Long Statement,The length of the statement "assertContainsAll(file`ImmutableMap.<String`Object>builder().put("fileKey"`0).put("size"`0L).put("isDirectory"`true).put("isRegularFile"`false).put("isSymbolicLink"`false).put("isOther"`false).build());" is 202.,65
+google_jimfs,com.google.common.jimfs,BasicAttributeProviderTest,testSet,Magic Number,The method contains a magic number: 3L,84
+google_jimfs,com.google.common.jimfs,PathServiceTest,testPathCreation,Long Statement,The length of the statement "assertAbout(paths()).that(service.createRoot(service.name("/"))).isAbsolute().and().hasRootComponent("/").and().hasNoNameComponents();" is 134.,52
+google_jimfs,com.google.common.jimfs,PathServiceTest,testPathCreation,Long Statement,The length of the statement "assertAbout(paths()).that(service.createFileName(service.name("foo"))).hasRootComponent(null).and().hasNameComponents("foo");" is 125.,52
+google_jimfs,com.google.common.jimfs,PathServiceTest,testPathCreation_emptyPath,Long Statement,The length of the statement "assertAbout(paths()).that(service.createPath(null`ImmutableList.<Name>of())).hasRootComponent(null).and().hasNameComponents("");" is 128.,92
+google_jimfs,com.google.common.jimfs,PathServiceTest,assertCaseInsensitiveMatches,Long Statement,The length of the statement "ImmutableList<PathMatcher> matchers=ImmutableList.of(service.createPathMatcher("glob:foo")`service.createPathMatcher("glob:FOO"));" is 130.,208
+google_jimfs,com.google.common.jimfs,FileSystemStateTest,testCheckOpen,Empty catch clause,The method has an empty catch block.,52
+google_jimfs,com.google.common.jimfs,FileSystemStateTest,testClose_resourcesThatThrowOnClose,Long Statement,The length of the statement "List<TestCloseable> resources=ImmutableList.of(new TestCloseable()`new ThrowsOnClose("a")`new TestCloseable()`new ThrowsOnClose("b")`new ThrowsOnClose("c")`new TestCloseable()`new TestCloseable());" is 197.,112
+google_jimfs,com.google.common.jimfs,FileSystemStateTest,testClose_resourcesThatThrowOnClose,Long Statement,The length of the statement "ImmutableSet<String> messages=ImmutableSet.of(expected.getMessage()`suppressed[0].getMessage()`suppressed[1].getMessage());" is 123.,112
+google_jimfs,com.google.common.jimfs,FileSystemStateTest,testClose_resourcesThatThrowOnClose,Magic Number,The method contains a magic number: 2,112
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,setUp,Long Statement,The length of the statement "watcher=new PollingWatchService(fs.getDefaultView()`fs.getPathService()`new FileSystemState(Runnables.doNothing())`4`MILLISECONDS);" is 131.,58
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,setUp,Magic Number,The method contains a magic number: 4,58
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,testRegister_fileDoesNotExist,Empty catch clause,The method has an empty catch block.,92
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,testRegister_fileIsNotDirectory,Empty catch clause,The method has an empty catch block.,101
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,testWatchForOneEventType,Magic Number,The method contains a magic number: 2000,150
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,testWatchForMultipleEventTypes,Long Statement,The length of the statement "assertWatcherHasEvents(new Event<>(ENTRY_CREATE`1`fs.getPath("baz"))`new Event<>(ENTRY_DELETE`1`fs.getPath("bar"))`new Event<>(ENTRY_MODIFY`1`fs.getPath("foo")));" is 162.,167
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,testWatchForMultipleEventTypes,Long Statement,The length of the statement "assertWatcherHasEvents(ImmutableList.<WatchEvent<?>>of(new Event<>(ENTRY_CREATE`1`fs.getPath("foo")))`ImmutableList.<WatchEvent<?>>of(new Event<>(ENTRY_CREATE`1`fs.getPath("foo"))`new Event<>(ENTRY_MODIFY`1`fs.getPath("foo"))));" is 228.,167
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,testWatchForMultipleEventTypes,Long Statement,The length of the statement "assertWatcherHasEvents(ImmutableList.<WatchEvent<?>>of(new Event<>(ENTRY_DELETE`1`fs.getPath("foo")))`ImmutableList.<WatchEvent<?>>of(new Event<>(ENTRY_MODIFY`1`fs.getPath("foo"))`new Event<>(ENTRY_DELETE`1`fs.getPath("foo"))));" is 228.,167
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,testWatchForMultipleEventTypes,Magic Number,The method contains a magic number: 2000,167
+google_jimfs,com.google.common.jimfs,PollingWatchServiceTest,ensureTimeToPoll,Magic Number,The method contains a magic number: 40,238
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultUnixConfiguration,Magic Number,The method contains a magic number: 8192,57
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultUnixConfiguration,Magic Number,The method contains a magic number: 4L,57
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultUnixConfiguration,Magic Number,The method contains a magic number: 1024,57
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultUnixConfiguration,Magic Number,The method contains a magic number: 1024,57
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultUnixConfiguration,Magic Number,The method contains a magic number: 1024,57
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultUnixConfiguration,Magic Number,The method contains a magic number: 4L,75
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultUnixConfiguration,Magic Number,The method contains a magic number: 1024,75
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultUnixConfiguration,Magic Number,The method contains a magic number: 1024,75
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultUnixConfiguration,Magic Number,The method contains a magic number: 1024,75
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultOsXConfiguration,Magic Number,The method contains a magic number: 8192,91
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultOsXConfiguration,Magic Number,The method contains a magic number: 4L,91
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultOsXConfiguration,Magic Number,The method contains a magic number: 1024,91
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultOsXConfiguration,Magic Number,The method contains a magic number: 1024,91
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultOsXConfiguration,Magic Number,The method contains a magic number: 1024,91
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultOsXConfiguration,Empty catch clause,The method has an empty catch block.,109
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultOsXConfiguration,Magic Number,The method contains a magic number: 4L,109
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultOsXConfiguration,Magic Number,The method contains a magic number: 1024,109
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultOsXConfiguration,Magic Number,The method contains a magic number: 1024,109
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultOsXConfiguration,Magic Number,The method contains a magic number: 1024,109
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 8192,130
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 4L,130
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 1024,130
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 1024,130
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 1024,130
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultWindowsConfiguration,Empty catch clause,The method has an empty catch block.,148
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 4L,148
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 1024,148
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 1024,148
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForDefaultWindowsConfiguration,Magic Number,The method contains a magic number: 1024,148
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Long Statement,The length of the statement "Configuration config=Configuration.builder(PathType.unix()).setRoots("/").setWorkingDirectory("/hello/world").setNameCanonicalNormalization(NFD`CASE_FOLD_UNICODE).setNameDisplayNormalization(NFC).setPathEqualityUsesCanonicalForm(true).setBlockSize(10).setMaxSize(100).setMaxCacheSize(50).setAttributeViews("basic"`"posix").addAttributeProvider(unixProvider).setDefaultAttributeValue("posix:permissions"`PosixFilePermissions.fromString("---------")).build();" is 457.,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Long Statement,The length of the statement "assertThat(config.defaultAttributeValues).containsEntry("posix:permissions"`PosixFilePermissions.fromString("---------"));" is 122.,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Magic Number,The method contains a magic number: 10,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Magic Number,The method contains a magic number: 100,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Magic Number,The method contains a magic number: 50,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Magic Number,The method contains a magic number: 10,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Magic Number,The method contains a magic number: 100,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testBuilder,Magic Number,The method contains a magic number: 50,169
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForCustomConfiguration,Empty catch clause,The method has an empty catch block.,204
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForCustomConfiguration,Long Statement,The length of the statement "Configuration config=Configuration.builder(PathType.unix()).setRoots("/").setWorkingDirectory("/hello/world").setNameCanonicalNormalization(NFD`CASE_FOLD_UNICODE).setNameDisplayNormalization(NFC).setPathEqualityUsesCanonicalForm(true).setBlockSize(10).setMaxSize(100).setMaxCacheSize(50).setAttributeViews("unix").setDefaultAttributeValue("posix:permissions"`PosixFilePermissions.fromString("---------")).build();" is 413.,204
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForCustomConfiguration,Long Statement,The length of the statement "assertThat(Files.getAttribute(fs.getPath("/foo")`"posix:permissions")).isEqualTo(PosixFilePermissions.fromString("---------"));" is 127.,204
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForCustomConfiguration,Magic Number,The method contains a magic number: 10,204
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForCustomConfiguration,Magic Number,The method contains a magic number: 100,204
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForCustomConfiguration,Magic Number,The method contains a magic number: 50,204
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemForCustomConfiguration,Magic Number,The method contains a magic number: 100,204
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testToBuilder,Long Statement,The length of the statement "Configuration config=Configuration.unix().toBuilder().setWorkingDirectory("/hello/world").setAttributeViews("basic"`"posix").build();" is 133.,241
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testToBuilder,Magic Number,The method contains a magic number: 8192,241
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testToBuilder,Magic Number,The method contains a magic number: 4L,241
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testToBuilder,Magic Number,The method contains a magic number: 1024,241
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testToBuilder,Magic Number,The method contains a magic number: 1024,241
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testToBuilder,Magic Number,The method contains a magic number: 1024,241
+google_jimfs,com.google.common.jimfs,ConfigurationTest,assertIllegalRoots,Empty catch clause,The method has an empty catch block.,271
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testSettingWorkingDirectoryWithRelativePath,Empty catch clause,The method has an empty catch block.,279
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testSettingWorkingDirectoryWithRelativePath,Empty catch clause,The method has an empty catch block.,279
+google_jimfs,com.google.common.jimfs,ConfigurationTest,assertIllegalNormalizations,Empty catch clause,The method has an empty catch block.,302
+google_jimfs,com.google.common.jimfs,ConfigurationTest,assertIllegalNormalizations,Empty catch clause,The method has an empty catch block.,302
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testSetDefaultAttributeValue_illegalAttributeFormat,Empty catch clause,The method has an empty catch block.,317
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testCreateFileSystemFromConfigurationWithWorkingDirectoryNotUnderConfiguredRoot,Empty catch clause,The method has an empty catch block.,326
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemWithDefaultWatchService,Magic Number,The method contains a magic number: 5,339
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemWithCustomWatchServicePollingInterval,Long Statement,The length of the statement "FileSystem fs=Jimfs.newFileSystem(Configuration.unix().toBuilder().setWatchServiceConfiguration(polling(10`MILLISECONDS)).build());" is 131.,351
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemWithCustomWatchServicePollingInterval,Magic Number,The method contains a magic number: 10,351
+google_jimfs,com.google.common.jimfs,ConfigurationTest,testFileSystemWithCustomWatchServicePollingInterval,Magic Number,The method contains a magic number: 10,351
+google_jimfs,com.google.common.jimfs,AbstractPathMatcherTest,assertSyntaxError,Empty catch clause,The method has an empty catch block.,56
+google_jimfs,com.google.common.jimfs,AbstractPathMatcherTest,assertSyntaxError,Empty catch clause,The method has an empty catch block.,56
+google_jimfs,com.google.common.jimfs,AbstractPathMatcherTest,fake,Long Statement,The length of the statement "@Override public WatchKey register( WatchService watcher` WatchEvent.Kind<?>[] events` WatchEvent.Modifier... modifiers) throws IOException {" is 141.,117
+google_jimfs,com.google.common.jimfs,PathTester,testParents,Complex Conditional,The conditional expression root != null && names.size() >= 1 || names.size() > 1 is complex.,108
+google_jimfs,com.google.common.jimfs,PathTester,testSubpaths,Long Statement,The length of the statement "List<String> endNames=ImmutableList.copyOf(Splitter.on('/').split(stringWithoutRoot)).subList(0`path.getNameCount() - 1);" is 121.,124
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,channel,Long Statement,The length of the statement "JimfsFileChannel channel=new JimfsFileChannel(file`Options.getOptionsForChannel(ImmutableSet.copyOf(options))`new FileSystemState(Runnables.doNothing()));" is 154.,60
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncChannel,Magic Number,The method contains a magic number: 15,70
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncChannel,Magic Number,The method contains a magic number: 15,70
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncChannel,Magic Number,The method contains a magic number: 5,70
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncChannel,Magic Number,The method contains a magic number: 5,70
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncChannel,Magic Number,The method contains a magic number: 5,70
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncChannel,Magic Number,The method contains a magic number: 5,70
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncChannel,Magic Number,The method contains a magic number: 5,70
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testClosedChannel,Magic Number,The method contains a magic number: 15,98
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testClosedChannel,Magic Number,The method contains a magic number: 10,98
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testClosedChannel,Magic Number,The method contains a magic number: 10,98
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testClosedChannel,Magic Number,The method contains a magic number: 15,98
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testClosedChannel,Magic Number,The method contains a magic number: 10,98
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_write,Magic Number,The method contains a magic number: 15,116
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_write,Magic Number,The method contains a magic number: 4,116
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_write,Magic Number,The method contains a magic number: 10,116
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_write,Magic Number,The method contains a magic number: 10,116
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_write,Magic Number,The method contains a magic number: 10,116
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_read,Magic Number,The method contains a magic number: 15,150
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_read,Magic Number,The method contains a magic number: 2,150
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_read,Magic Number,The method contains a magic number: 10,150
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_read,Magic Number,The method contains a magic number: 10,150
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,testAsyncClose_read,Magic Number,The method contains a magic number: 10,150
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncRead,Magic Number,The method contains a magic number: 10,184
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncRead,Magic Number,The method contains a magic number: 10,184
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncRead,Magic Number,The method contains a magic number: 10,184
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncWrite,Magic Number,The method contains a magic number: 10,196
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncWrite,Magic Number,The method contains a magic number: 10,196
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncWrite,Magic Number,The method contains a magic number: 10,196
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncLock,Magic Number,The method contains a magic number: 10,207
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncLock,Magic Number,The method contains a magic number: 10,207
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,checkAsyncLock,Magic Number,The method contains a magic number: 10,207
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,assertClosed,Magic Number,The method contains a magic number: 10,235
+google_jimfs,com.google.common.jimfs,JimfsAsynchronousFileChannelTest,assertAsynchronousClose,Magic Number,The method contains a magic number: 10,245
+google_jimfs,com.google.common.jimfs,HeapDiskTest,setUp,Magic Number,The method contains a magic number: 2,40
+google_jimfs,com.google.common.jimfs,HeapDiskTest,setUp,Magic Number,The method contains a magic number: 2,40
+google_jimfs,com.google.common.jimfs,HeapDiskTest,setUp,Magic Number,The method contains a magic number: 2,40
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_basic,Magic Number,The method contains a magic number: 8192,46
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_basic,Magic Number,The method contains a magic number: 100,46
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_basic,Magic Number,The method contains a magic number: 100,46
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_basic,Magic Number,The method contains a magic number: 8192,46
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_basic,Magic Number,The method contains a magic number: 819200,46
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_basic,Magic Number,The method contains a magic number: 819200,46
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_fromConfiguration,Magic Number,The method contains a magic number: 4,56
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_fromConfiguration,Magic Number,The method contains a magic number: 99,56
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_fromConfiguration,Magic Number,The method contains a magic number: 25,56
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_fromConfiguration,Magic Number,The method contains a magic number: 4,56
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_fromConfiguration,Magic Number,The method contains a magic number: 96,56
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testInitialSettings_fromConfiguration,Magic Number,The method contains a magic number: 96,56
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 4,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 10,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 4,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 36,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 5,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 6,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 4,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocate,Magic Number,The method contains a magic number: 16,73
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_noCaching,Magic Number,The method contains a magic number: 4,93
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_noCaching,Magic Number,The method contains a magic number: 10,93
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_noCaching,Magic Number,The method contains a magic number: 6,93
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_noCaching,Magic Number,The method contains a magic number: 2,93
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_noCaching,Magic Number,The method contains a magic number: 4,93
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_noCaching,Magic Number,The method contains a magic number: 24,93
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_noCaching,Magic Number,The method contains a magic number: 40,93
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 4,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 10,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 10,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 6,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 2,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 4,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 24,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 2,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 40,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_fullCaching,Magic Number,The method contains a magic number: 6,110
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 4,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 10,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 4,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 6,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 2,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 4,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 24,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 2,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 40,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFree_partialCaching,Magic Number,The method contains a magic number: 4,128
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 4,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 10,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 10,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 10,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 10,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 10,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 6,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 6,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 4,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 6,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_fullAllocationFromCache,Magic Number,The method contains a magic number: 4,146
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 4,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 10,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 4,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 10,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 4,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 4,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 6,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 6,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 2,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 6,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testAllocateFromCache_partialAllocationFromCache,Magic Number,The method contains a magic number: 2,174
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk,Empty catch clause,The method has an empty catch block.,202
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk,Magic Number,The method contains a magic number: 4,202
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk,Magic Number,The method contains a magic number: 10,202
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk,Magic Number,The method contains a magic number: 4,202
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk,Magic Number,The method contains a magic number: 10,202
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk_doesNotAllocatePartiallyWhenTooManyBlocksRequested,Empty catch clause,The method has an empty catch block.,214
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk_doesNotAllocatePartiallyWhenTooManyBlocksRequested,Magic Number,The method contains a magic number: 4,214
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk_doesNotAllocatePartiallyWhenTooManyBlocksRequested,Magic Number,The method contains a magic number: 10,214
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk_doesNotAllocatePartiallyWhenTooManyBlocksRequested,Magic Number,The method contains a magic number: 4,214
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk_doesNotAllocatePartiallyWhenTooManyBlocksRequested,Magic Number,The method contains a magic number: 6,214
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk_doesNotAllocatePartiallyWhenTooManyBlocksRequested,Magic Number,The method contains a magic number: 2,214
+google_jimfs,com.google.common.jimfs,HeapDiskTest,testFullDisk_doesNotAllocatePartiallyWhenTooManyBlocksRequested,Magic Number,The method contains a magic number: 5,214
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testFileStore,Magic Number,The method contains a magic number: 1024,135
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testFileStore,Magic Number,The method contains a magic number: 1024,135
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testFileStore,Magic Number,The method contains a magic number: 1024,135
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testFileStore,Magic Number,The method contains a magic number: 10000,135
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testFileStore,Magic Number,The method contains a magic number: 10000,135
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_resolve,Long Statement,The length of the statement "assertThatPath(path("/").resolve("foo/bar")).isAbsolute().and().hasRootComponent("/").and().hasNameComponents("foo"`"bar");" is 123.,197
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_resolve,Long Statement,The length of the statement "assertThatPath(path("foo/bar").resolve("/one/two")).isAbsolute().and().hasRootComponent("/").and().hasNameComponents("one"`"two");" is 130.,197
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_normalize,Long Statement,The length of the statement "assertThatPath(path("foo/./bar/../baz/test/./../stuff").normalize()).isRelative().and().hasNameComponents("foo"`"baz"`"stuff");" is 127.,217
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_relativize,Empty catch clause,The method has an empty catch block.,235
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_relativize,Empty catch clause,The method has an empty catch block.,235
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_relativize,Long Statement,The length of the statement "assertThatPath(path("/foo/bar/baz").relativize(path("/foo/baz/bar"))).isRelative().and().hasNameComponents(".."`".."`"baz"`"bar");" is 130.,235
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_toAbsolutePath,Long Statement,The length of the statement "assertThatPath(path("/foo/bar").toAbsolutePath()).isAbsolute().and().hasRootComponent("/").and().hasNameComponents("foo"`"bar").and().isEqualTo(path("/foo/bar"));" is 162.,283
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPaths_toAbsolutePath,Long Statement,The length of the statement "assertThatPath(path("foo/bar").toAbsolutePath()).isAbsolute().and().hasRootComponent("/").and().hasNameComponents("work"`"foo"`"bar").and().isEqualTo(path("/work/foo/bar"));" is 173.,283
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPathMatchers_glob,Empty catch clause,The method has an empty catch block.,348
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testPathMatchers_invalid,Empty catch clause,The method has an empty catch block.,373
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCreateFile_withInitialAttributes_illegalInitialAttribute,Empty catch clause,The method has an empty catch block.,685
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCreateFile_withInitialAttributes_illegalInitialAttribute,Empty catch clause,The method has an empty catch block.,685
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOpenChannel_withInitialAttributes_createNewFile,Long Statement,The length of the statement "FileAttribute<Set<PosixFilePermission>> permissions=PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwxrwxrwx"));" is 135.,706
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOpenChannel_withInitialAttributes_fileExists,Long Statement,The length of the statement "FileAttribute<Set<PosixFilePermission>> permissions=PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwxrwxrwx"));" is 135.,719
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCreateDirectory_withInitialAttributes,Long Statement,The length of the statement "FileAttribute<Set<PosixFilePermission>> permissions=PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwxrwxrwx"));" is 135.,734
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCreateSymbolicLink_withInitialAttributes,Long Statement,The length of the statement "FileAttribute<Set<PosixFilePermission>> permissions=PosixFilePermissions.asFileAttribute(PosixFilePermissions.fromString("rwxrwxrwx"));" is 135.,756
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCreateSymbolicLink_withInitialAttributes,Long Statement,The length of the statement "assertThatPath("/normal"`NOFOLLOW_LINKS).isSymbolicLink().and().attribute("posix:permissions").isNot(permissions.value());" is 122.,756
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDirectories_newlyCreatedDirectoryHasTwoLinks,Magic Number,The method contains a magic number: 2,797
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDirectories_creatingDirectoryAddsOneLinkToParent,Magic Number,The method contains a magic number: 3,806
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDirectories_creatingDirectoryAddsOneLinkToParent,Magic Number,The method contains a magic number: 4,806
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDirectories_creatingNonDirectoryDoesNotAddLinkToParent,Magic Number,The method contains a magic number: 2,820
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSize_forFileAfterWrite_isNumberOfBytesWritten,Magic Number,The method contains a magic number: 4,851
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Empty catch clause,The method has an empty catch block.,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 4,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 5,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 2,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 3,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 2,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 3,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 2,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteFile_withStandardOptions,Magic Number,The method contains a magic number: 3,866
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOpenFile_withReadAndTruncateExisting_doesNotTruncateFile,Magic Number,The method contains a magic number: 2,913
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOpenFile_withReadAndTruncateExisting_doesNotTruncateFile,Magic Number,The method contains a magic number: 3,913
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOpenFile_withReadAndTruncateExisting_doesNotTruncateFile,Magic Number,The method contains a magic number: 4,913
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOpenFile_withReadAndTruncateExisting_doesNotTruncateFile,Magic Number,The method contains a magic number: 4,913
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteLines_withStandardOptions,Empty catch clause,The method has an empty catch block.,934
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteLines_withStandardOptions,Empty catch clause,The method has an empty catch block.,934
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWriteLines_withStandardOptions,Magic Number,The method contains a magic number: 2,934
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWrite_fileExistsButIsNotRegularFile,Magic Number,The method contains a magic number: 10,982
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testWrite_fileExistsButIsNotRegularFile,Magic Number,The method contains a magic number: 10,982
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 100,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 100L,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 100L,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 100,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 105L,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 5,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 5,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testDelete_file_whenOpenReferencesRemain,Magic Number,The method contains a magic number: 105,1036
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSymbolicLinks,Empty catch clause,The method has an empty catch block.,1217
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSymbolicLinks,Empty catch clause,The method has an empty catch block.,1217
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSymbolicLinks_symlinkCycle,Magic Number,The method contains a magic number: 10,1264
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 3,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 3,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 3,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 3,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 3,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 2,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink,Magic Number,The method contains a magic number: 3,1298
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testLink_forSymbolicLink_usesSymbolicLinkTarget,Magic Number,The method contains a magic number: 2,1331
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testStreams,Magic Number,The method contains a magic number: 100,1396
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testStreams,Magic Number,The method contains a magic number: 100,1396
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testStreams,Magic Number,The method contains a magic number: 100,1396
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testStreams,Magic Number,The method contains a magic number: 100,1396
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOutputStream_withTruncateExistingAndNotWrite_truncatesFile,Magic Number,The method contains a magic number: 2,1432
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOutputStream_withTruncateExistingAndNotWrite_truncatesFile,Magic Number,The method contains a magic number: 3,1432
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testOutputStream_withTruncateExistingAndNotWrite_truncatesFile,Magic Number,The method contains a magic number: 2,1432
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 11,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 11,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 12,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 12,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 12,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 100,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 100,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 50,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 50,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 150,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 50,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 50,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 50,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 150,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 10,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 10,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 20,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 10,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 20,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 10,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testChannels,Magic Number,The method contains a magic number: 10,1446
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_inputStreamToFile,Magic Number,The method contains a magic number: 512,1513
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_fileToOutputStream,Magic Number,The method contains a magic number: 512,1534
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_fileToPath,Magic Number,The method contains a magic number: 512,1544
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_fileToPath,Magic Number,The method contains a magic number: 2048,1544
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Long Statement,The length of the statement "Files.getFileAttributeView(foo`BasicFileAttributeView.class).setTimes(FileTime.fromMillis(100)`FileTime.fromMillis(1000)`FileTime.fromMillis(10000));" is 149.,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 100,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 1000,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 10000,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 100,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 100,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 1000,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 10000,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 100,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 1000,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_withCopyAttributes,Magic Number,The method contains a magic number: 10000,1567
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_doesNotSupportAtomicMove,Empty catch clause,The method has an empty catch block.,1600
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_symbolicLinkToPath,Magic Number,The method contains a magic number: 128,1728
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_toDifferentFileSystem_copyAttributes,Long Statement,The length of the statement "Files.getFileAttributeView(foo`BasicFileAttributeView.class).setTimes(FileTime.fromMillis(0)`FileTime.fromMillis(1)`FileTime.fromMillis(2));" is 140.,1765
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_toDifferentFileSystem_copyAttributes,Long Statement,The length of the statement "assertThatPath(foo2).exists().and().attribute("lastModifiedTime").is(FileTime.fromMillis(0)).and().attribute("lastAccessTime").is(FileTime.fromMillis(1)).and().attribute("creationTime").is(FileTime.fromMillis(2)).and().attribute("owner:owner").isNot(owner).and().attribute("owner:owner").isNot(fs2.getUserPrincipalLookupService().lookupPrincipalByName("foobar")).and().containsBytes(bytes);" is 390.,1765
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_toDifferentFileSystem_copyAttributes,Magic Number,The method contains a magic number: 2,1765
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testCopy_toDifferentFileSystem_copyAttributes,Magic Number,The method contains a magic number: 2,1765
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testMove,Magic Number,The method contains a magic number: 100,1808
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testMove_movesSymbolicLinkNotTarget,Magic Number,The method contains a magic number: 100,1831
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testMove_withoutReplaceExisting_failsWhenTargetExists,Magic Number,The method contains a magic number: 50,1872
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testMove_toDifferentFileSystem,Long Statement,The length of the statement "Files.getFileAttributeView(foo`BasicFileAttributeView.class).setTimes(FileTime.fromMillis(0)`FileTime.fromMillis(1)`FileTime.fromMillis(2));" is 140.,1903
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testMove_toDifferentFileSystem,Long Statement,The length of the statement "assertThatPath(foo2).exists().and().attribute("lastModifiedTime").is(FileTime.fromMillis(0)).and().attribute("lastAccessTime").is(FileTime.fromMillis(1)).and().attribute("creationTime").is(FileTime.fromMillis(2)).and().containsBytes(bytes);" is 240.,1903
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testMove_toDifferentFileSystem,Magic Number,The method contains a magic number: 2,1903
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testMove_toDifferentFileSystem,Magic Number,The method contains a magic number: 2,1903
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSecureDirectoryStream,Long Statement,The length of the statement "assertThat(ImmutableList.copyOf(secureStream)).isEqualTo(ImmutableList.of(path("/foo/a")`path("/foo/b")`path("/foo/bar")`path("/foo/barLink")));" is 144.,1974
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSecureDirectoryStream,Long Statement,The length of the statement "assertThat(secureStream.getFileAttributeView(path("a")`BasicFileAttributeView.class).readAttributes().isRegularFile()).isTrue();" is 128.,1974
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSecureDirectoryStream,Long Statement,The length of the statement "assertThat(barStream.getFileAttributeView(path("stuff")`BasicFileAttributeView.class).readAttributes().isRegularFile()).isTrue();" is 129.,1974
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSecureDirectoryStream,Long Statement,The length of the statement "assertThat(secureStream.getFileAttributeView(path("bar/stuff")`BasicFileAttributeView.class).readAttributes().isRegularFile()).isTrue();" is 136.,1974
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSecureDirectoryStream,Long Statement,The length of the statement "assertThat(barLinkStream.getFileAttributeView(path("stuff")`BasicFileAttributeView.class).readAttributes().isRegularFile()).isTrue();" is 133.,1974
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSecureDirectoryStream,Long Statement,The length of the statement "assertThat(barLinkStream.getFileAttributeView(path("..")`BasicFileAttributeView.class).readAttributes().isDirectory()).isTrue();" is 128.,1974
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testSecureDirectoryStream,Long Statement,The length of the statement "assertThat(barStream.getFileAttributeView(path("moved")`BasicFileAttributeView.class).readAttributes().isRegularFile()).isTrue();" is 129.,1974
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStream,Empty catch clause,The method has an empty catch block.,2119
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStreamAttributeViewAndIterator,Empty catch clause,The method has an empty catch block.,2177
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStreamAttributeViewAndIterator,Empty catch clause,The method has an empty catch block.,2177
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStreamAttributeViewAndIterator,Empty catch clause,The method has an empty catch block.,2177
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStreamAttributeViewAndIterator,Empty catch clause,The method has an empty catch block.,2177
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStreamAttributeViewAndIterator,Empty catch clause,The method has an empty catch block.,2177
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testClosedSecureDirectoryStreamAttributeViewAndIterator,Empty catch clause,The method has an empty catch block.,2177
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testRegularFileAccessAndModifiedTimeUpdates,Empty catch clause,The method has an empty catch block.,2267
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testRegularFileAccessAndModifiedTimeUpdates,Empty catch clause,The method has an empty catch block.,2267
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testRegularFileAccessAndModifiedTimeUpdates,Magic Number,The method contains a magic number: 100,2267
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testRegularFileAccessAndModifiedTimeUpdates,Magic Number,The method contains a magic number: 100,2267
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testRegularFileAccessAndModifiedTimeUpdates,Magic Number,The method contains a magic number: 100,2267
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testUnsupportedFeatures,Empty catch clause,The method has an empty catch block.,2349
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testUnsupportedFeatures,Empty catch clause,The method has an empty catch block.,2349
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testUnsupportedFeatures,Empty catch clause,The method has an empty catch block.,2349
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testUnsupportedFeatures,Empty catch clause,The method has an empty catch block.,2349
+google_jimfs,com.google.common.jimfs,JimfsUnixLikeFileSystemTest,testUnsupportedFeatures,Empty catch clause,The method has an empty catch block.,2349
+google_jimfs,com.google.common.jimfs,PathNormalizationTest,testNormalizeNfcCaseFoldAscii,Long Identifier,The length of the field NORMALIZED_CASE_INSENSITIVE_ASCII_TEST_DATA is 43.,166
+google_jimfs,com.google.common.jimfs,PathNormalizationTest,testNormalizeNfdCaseFoldAscii,Long Identifier,The length of the field NORMALIZED_CASE_INSENSITIVE_ASCII_TEST_DATA is 43.,179
+google_jimfs,com.google.common.jimfs,AbstractWatchServiceTest,testOverflow,Magic Number,The method contains a magic number: 10,163
+google_jimfs,com.google.common.jimfs,AbstractWatchServiceTest,testOverflow,Magic Number,The method contains a magic number: 10,163
+google_jimfs,com.google.common.jimfs,AbstractWatchServiceTest,testClosedWatcher,Empty catch clause,The method has an empty catch block.,193
+google_jimfs,com.google.common.jimfs,AbstractWatchServiceTest,testClosedWatcher,Empty catch clause,The method has an empty catch block.,193
+google_jimfs,com.google.common.jimfs,AbstractWatchServiceTest,testClosedWatcher,Empty catch clause,The method has an empty catch block.,193
+google_jimfs,com.google.common.jimfs,AbstractWatchServiceTest,testClosedWatcher,Empty catch clause,The method has an empty catch block.,193
+google_jimfs,com.google.common.jimfs,AbstractWatchServiceTest,testClosedWatcher,Magic Number,The method contains a magic number: 10,193
+google_jimfs,com.google.common.jimfs,FileFactoryTest,setUp,Magic Number,The method contains a magic number: 2,36
+google_jimfs,com.google.common.jimfs,FileFactoryTest,setUp,Magic Number,The method contains a magic number: 2,36
+google_jimfs,com.google.common.jimfs,FileFactoryTest,testCreateFiles_basic,Magic Number,The method contains a magic number: 2L,41
+google_jimfs,com.google.common.jimfs,FileFactoryTest,testCreateFiles_withSupplier,Magic Number,The method contains a magic number: 2L,56
+google_jimfs,com.google.common.jimfs,PathSubject,hasChildren,Long Statement,The length of the statement "failWithoutActual(fact("expected to have children"`expectedNames)`fact("but had children"`actualNames)`fact("for path"`actual));" is 128.,264

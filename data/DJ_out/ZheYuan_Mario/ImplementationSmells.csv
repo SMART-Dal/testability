@@ -1,0 +1,185 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+ZheYuan_Mario,com.renren.Wario.mailsender,DefaultMailSender,sendAndCc,Long Parameter List,The method has 5 parameters. ,88
+ZheYuan_Mario,com.renren.Wario.config,ConfigLoader,getZKArrayRunsOnPlugin,Long Statement,The length of the statement "String sql="select zk_id` msg_sender` mail_sender` phone_number` email_address` args` commit from mario_plugin_info where plugin_name = '" + pluginName + "'";" is 158.,182
+ZheYuan_Mario,com.renren.Wario,WarioMain,run,Empty catch clause,The method has an empty catch block.,80
+ZheYuan_Mario,com.renren.Wario,WarioMain,run,Magic Number,The method contains a magic number: 500,80
+ZheYuan_Mario,com.renren.Wario,WarioMain,run,Magic Number,The method contains a magic number: 1000,80
+ZheYuan_Mario,com.renren.Wario,WarioMain,processPlugin,Magic Number,The method contains a magic number: 20,214
+ZheYuan_Mario,com.renren.Wario,WarioMain,processPluginOnObserver,Magic Number,The method contains a magic number: 20,256
+ZheYuan_Mario,com.renren.Wario,WarioMain,processPluginOnObserver,Magic Number,The method contains a magic number: 30,256
+ZheYuan_Mario,com.renren.Wario,WarioMain,processPluginOnObserver,Magic Number,The method contains a magic number: 1000,256
+ZheYuan_Mario,com.renren.Wario,Main,main,Long Statement,The length of the statement "PropertyConfigurator.configure(System.getProperty("user.dir") + File.separator + "conf"+ File.separator+ "log4j.properties");" is 125.,27
+ZheYuan_Mario,com.renren.Wario.plugin,DefaultPlugin,run,Complex Conditional,The conditional expression mode != null && !"".equals(mode) && !mode.equals(newMode) is complex.,32
+ZheYuan_Mario,com.renren.Wario.plugin,DefaultPlugin,run,Complex Method,Cyclomatic complexity of the method is 9,32
+ZheYuan_Mario,com.renren.Wario.plugin,DefaultPlugin,run,Long Statement,The length of the statement "message+="Client " + client.getConnectionString() + " exceed max outstanding. Max outstanding is "+ maxOutStanding+ "` but now is "+ newOutStanding+ " and last time is "+ outStanding+ ".\n";" is 190.,32
+ZheYuan_Mario,com.renren.Wario.plugin,DefaultPlugin,readContext,Magic Number,The method contains a magic number: 2,91
+ZheYuan_Mario,com.renren.Wario.plugin,RulePlugin,run,Long Statement,The length of the statement "String sql="select path` type` min_children_number` max_children_number` phone_number` email_address` user_id from mario_rule_info where zk_id = " + client.getZkId() + " and enable = true";" is 189.,35
+ZheYuan_Mario,com.renren.Wario.plugin,RulePlugin,run,Long Statement,The length of the statement "processChildrenNumber(client.getZkId()`rs.getString("path").trim()`rs.getInt("min_children_number")`rs.getInt("max_children_number"));" is 134.,35
+ZheYuan_Mario,com.renren.Wario.plugin,RulePlugin,processNodeExists,Empty catch clause,The method has an empty catch block.,82
+ZheYuan_Mario,com.renren.Wario.plugin,RulePlugin,processDataChanged,Magic Number,The method contains a magic number: 2,95
+ZheYuan_Mario,com.renren.Wario.plugin,RulePlugin,processDataChanged,Magic Number,The method contains a magic number: 3,95
+ZheYuan_Mario,com.renren.Wario.plugin,RulePlugin,processChildrenNumber,Long Statement,The length of the statement "alert("Children number on node " + path + " at zk "+ zk_id+ " is "+ childrenNumber+ " out of range ["+ minChildrenNumber+ "` "+ maxChildrenNumber+ "].");" is 153.,118
+ZheYuan_Mario,com.renren.Wario.plugin,DBPlugin,run,Long Statement,The length of the statement "String sql="insert into mario_server_state (server_id` min_latency` ave_latency` max_latency` received` sent` outStanding` zxid` mode` node_count` total_watches` client_number` time_stamp) values (" + getServerId(client.state.getHost()`client.state.getPort()) + "` "+ client.state.getMinLatency()+ "` "+ client.state.getAvgLatency()+ "` "+ client.state.getMaxLatency()+ "` "+ client.state.getReceived()+ "` "+ client.state.getSent()+ "` "+ client.state.getOutStanding()+ "` '"+ client.state.getZxid()+ "'` '"+ client.state.getMode()+ "'` "+ client.state.getNodeCount()+ "` "+ client.state.getTotalWatches()+ "` "+ client.state.getClientNumber()+ "` "+ System.currentTimeMillis()+ ")";" is 684.,26
+ZheYuan_Mario,com.renren.Wario.plugin,ReadWriteTestPlugin,run,Complex Method,Cyclomatic complexity of the method is 9,27
+ZheYuan_Mario,com.renren.Wario.plugin,ReadWriteTestPlugin,run,Magic Number,The method contains a magic number: 5000,27
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,ObserverPlugin,Long Statement,The length of the statement "updatePs=helper.getPreparedStatement("update mario_node_state set data = ? " + "` data_length = ? " + "` num_children = ? "+ "` version = ? "+ "` aversion = ? "+ "` cversion = ? "+ "` ctime = ? "+ "` mtime = ? "+ "` czxid = ? "+ "` mzxid = ? "+ "` pzxid = ? "+ "` ephemeral_owner = ? "+ "` state_version = ? "+ "` state_time = now() "+ "where zk_id = ? and path = ? and mzxid = ? ");" is 383.,89
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,ObserverPlugin,Long Statement,The length of the statement "insertPs=helper.getPreparedStatement("insert into mario_node_state (zk_id` " + "path` data` data_length` num_children` version` aversion` " + "cversion` ctime` mtime` czxid` mzxid` pzxid` ephemeral_owner` "+ "state_version` state_time) values(?`?`?`?`?`?`?`?`?`?`?`?`?`?`?`now())");" is 282.,89
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,run,Complex Conditional,The conditional expression inQueue.intValue() == 0 && inTrack.intValue() == 0 && saveQueue.isEmpty() is complex.,115
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,run,Complex Method,Cyclomatic complexity of the method is 8,115
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,run,Magic Number,The method contains a magic number: 10,115
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,run,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6b3ccd93,115
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,run,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7d4e7683,115
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,processResult,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6b3ccd93,136
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,processResult,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7d4e7683,136
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,processResult,Long Parameter List,The method has 5 parameters. ,154
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,processResult,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7d4e7683,154
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 5,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 4,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 8,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 0xff,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 4,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 0xff,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 8,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,getNextStateVersion,Magic Number,The method contains a magic number: 5,225
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,deleteExpiredData,Long Statement,The length of the statement "String sql="delete from mario_node_state where zk_id = " + client.getZkId() + " and state_version < "+ (nextStateVersion - 12 * 24 * 3);" is 136.,263
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,deleteExpiredData,Magic Number,The method contains a magic number: 12,263
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,deleteExpiredData,Magic Number,The method contains a magic number: 24,263
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,deleteExpiredData,Magic Number,The method contains a magic number: 3,263
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 2,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 3,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 4,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 5,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 6,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 7,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 8,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 9,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 10,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 11,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 12,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 13,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 14,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 15,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 16,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 2,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 3,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 4,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 5,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 6,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 7,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 8,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 9,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 10,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 11,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 12,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 13,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 14,285
+ZheYuan_Mario,com.renren.Wario.plugin,ObserverPlugin,writeToDB,Magic Number,The method contains a magic number: 15,285
+ZheYuan_Mario,com.renren.Wario.zookeeper,ZooKeeperClient,ZooKeeperClient,Long Parameter List,The method has 5 parameters. ,60
+ZheYuan_Mario,com.renren.Wario.zookeeper,ZooKeeperState,update,Complex Method,Cyclomatic complexity of the method is 16,51
+ZheYuan_Mario,com.renren.Wario.zookeeper,ZooKeeperState,update,Magic Number,The method contains a magic number: 2,51
+ZheYuan_Mario,com.renren.Wario.zookeeper,ZooKeeperState,update,Magic Number,The method contains a magic number: 2,51
+ZheYuan_Mario,com.renren.Wario.zookeeper,ZooKeeperState,update,Magic Number,The method contains a magic number: 16,51
+ZheYuan_Mario,com.renren.Wario.zookeeper,ZooKeeperState,cmd,Magic Number,The method contains a magic number: 5,190
+ZheYuan_Mario,com.renren.Wario.zookeeper,ZooKeeperState,cmd,Magic Number,The method contains a magic number: 1000,190
+ZheYuan_Mario,com.renren.Wario.config.test,ConfigLoaderTest,init,Long Statement,The length of the statement "PropertyConfigurator.configure(System.getProperty("user.dir") + File.separator + "conf"+ File.separator+ "log4j.properties");" is 125.,85
+ZheYuan_Mario,com.renren.Wario.config.test,ConfigLoaderTest,FileNotFoundTest,Magic Number,The method contains a magic number: 2000,93
+ZheYuan_Mario,com.renren.Wario.config.test,ConfigLoaderTest,BlankConfigTest,Long Statement,The length of the statement "Assert.assertTrue(SearchFile("logs/Wario.log"`"parsing plugin ` check the file format. org.json.JSONException: A JSONObject text must begin with '{'"));" is 152.,107
+ZheYuan_Mario,com.renren.Wario.config.test,ConfigLoaderTest,BlankConfigTest,Magic Number,The method contains a magic number: 2000,107
+ZheYuan_Mario,com.renren.Wario.config.test,ConfigLoaderTest,AcceptFormatTest,Magic Number,The method contains a magic number: 2000,123
+ZheYuan_Mario,com.renren.Wario.config.test,ConfigLoaderTest,AcceptFormatTest,Magic Number,The method contains a magic number: 2000,123
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClientTest,init,Long Statement,The length of the statement "PropertyConfigurator.configure(System.getProperty("user.dir") + File.separator + "conf"+ File.separator+ "log4j.properties");" is 125.,63
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClientTest,generalTest,Magic Number,The method contains a magic number: 5000,72
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClientTest,generalTest,Magic Number,The method contains a magic number: 6000,72
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClientTest,generalTest,Magic Number,The method contains a magic number: 5000,72
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClientTest,generalTest,Magic Number,The method contains a magic number: 2000,72
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClientTest,generalTest,Magic Number,The method contains a magic number: 2000,72
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClusterTest,init,Long Statement,The length of the statement "PropertyConfigurator.configure(System.getProperty("user.dir") + File.separator + "conf"+ File.separator+ "log4j.properties");" is 125.,51
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClusterTest,generalTest,Empty catch clause,The method has an empty catch block.,60
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClusterTest,generalTest,Magic Number,The method contains a magic number: 1000,60
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClusterTest,generalTest,Magic Number,The method contains a magic number: 2,60
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperClusterTest,generalTest,Magic Number,The method contains a magic number: 6000,60
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,init,Long Statement,The length of the statement "PropertyConfigurator.configure(System.getProperty("user.dir") + File.separator + "conf"+ File.separator+ "log4j.properties");" is 125.,39
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Empty catch clause,The method has an empty catch block.,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Empty catch clause,The method has an empty catch block.,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Empty catch clause,The method has an empty catch block.,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Empty catch clause,The method has an empty catch block.,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 6000,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 4,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 5000,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 2000,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 5,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 2,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 4,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 2,48
+ZheYuan_Mario,com.renren.Wario.zookeeper.test,ZooKeeperStateTest,test,Magic Number,The method contains a magic number: 4,48
+ZheYuan_Mario,com.renren.infra.xweb.repository,MenuMybatisDaoTest,testFindAll,Magic Number,The method contains a magic number: 3,23
+ZheYuan_Mario,com.renren.infra.xweb.repository,MenuMybatisDaoTest,testFindByRoleId,Magic Number,The method contains a magic number: 3,31
+ZheYuan_Mario,com.renren.infra.xweb.repository,MenuMybatisDaoTest,testDelete,Magic Number,The method contains a magic number: 2L,48
+ZheYuan_Mario,com.renren.infra.xweb.repository,RoleMybatisDaoTest,testInsertAndDeleteRoleMenu,Magic Number,The method contains a magic number: 2L,23
+ZheYuan_Mario,com.renren.infra.xweb.repository,RoleMybatisDaoTest,testInsertAndDeleteRoleMenu,Magic Number,The method contains a magic number: 2,23
+ZheYuan_Mario,com.renren.infra.xweb.repository,TestMybatisDaoTest,setUpClass,Magic Number,The method contains a magic number: 10,30
+ZheYuan_Mario,com.renren.infra.xweb.repository,TestMybatisDaoTest,testInsert,Magic Number,The method contains a magic number: 2,46
+ZheYuan_Mario,com.renren.infra.xweb.repository,TestMybatisDaoTest,testBuildPage,Long Statement,The length of the statement "List<com.renren.infra.xweb.entity.Test> tests=dao.find(filterParams`new RowBounds((pageNumber - 1) * pageSize`pageSize));" is 121.,108
+ZheYuan_Mario,com.renren.infra.xweb.repository,TestMybatisDaoTest,testBuildPage,Long Statement,The length of the statement "Page<com.renren.infra.xweb.entity.Test> pageTest=new PageImpl<com.renren.infra.xweb.entity.Test>(tests`new PageRequest(pageNumber - 1`pageSize)`totalnum);" is 154.,108
+ZheYuan_Mario,com.renren.infra.xweb.repository,TestMybatisDaoTest,testBuildPage,Magic Number,The method contains a magic number: 2,108
+ZheYuan_Mario,com.renren.infra.xweb.repository,UserMybatisDaoTest,testInsertUserRole,Magic Number,The method contains a magic number: 2L,74
+ZheYuan_Mario,com.renren.infra.xweb.repository,UserMybatisDaoTest,testInsertUserRole,Magic Number,The method contains a magic number: 2,74
+ZheYuan_Mario,com.renren.infra.xweb.repository,UserMybatisDaoTest,testFindTotalNum,Magic Number,The method contains a magic number: 2,117
+ZheYuan_Mario,com.renren.infra.xweb.repository,PageMybatisDaoTest,testPageFindAll,Magic Number,The method contains a magic number: 2,22
+ZheYuan_Mario,com.renren.infra.xweb.service,Mario_server_stateService,getMario_server_state,Long Statement,The length of the statement "List<Mario_server_state> mario_server_states=mario_server_stateDao.find(filterParams`buildRowBounds(pageNumber`pageSize));" is 122.,24
+ZheYuan_Mario,com.renren.infra.xweb.service,ShiroDbRealm,doGetAuthenticationInfo,Long Statement,The length of the statement "return new SimpleAuthenticationInfo(new ShiroUser(user.getId()`user.getLoginName()`user.getName())`user.getPassword()`ByteSource.Util.bytes(salt)`getName());" is 157.,59
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_plugin_infoController,createForm,Long Statement,The length of the statement "Page<Mario_plugin_info> mario_plugin_infos=new PageImpl<Mario_plugin_info>(mario_plugin_infoList`new PageRequest(0`mario_plugin_infoList.size())`mario_plugin_infoList.size());" is 175.,60
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_plugin_infoController,createForm,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,60
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_plugin_infoController,create,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,92
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_plugin_infoController,updateForm,Long Statement,The length of the statement "Page<Mario_plugin_info> mario_plugin_infos=new PageImpl<Mario_plugin_info>(mario_plugin_infoList`new PageRequest(0`mario_plugin_infoList.size())`mario_plugin_infoList.size());" is 175.,118
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_plugin_infoController,updateForm,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,118
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_plugin_infoController,update,Long Statement,The length of the statement "Page<Mario_plugin_info> mario_plugin_infos=new PageImpl<Mario_plugin_info>(mario_plugin_infoList`new PageRequest(0`mario_plugin_infoList.size())`mario_plugin_infoList.size());" is 175.,145
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_plugin_infoController,update,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,145
+ZheYuan_Mario,com.renren.infra.xweb.web,MenuStaticController,treeData,Complex Conditional,The conditional expression extId == null || (extId != null && !extId.equals(e.getId()) && e.getParentIds().indexOf("`" + extId + "`") == -1) is complex.,28
+ZheYuan_Mario,com.renren.infra.xweb.web,TestController,setCellValue,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@16f682e1,195
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_rule_infoController,createForm,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,70
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_rule_infoController,updateForm,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,101
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_server_infoController,createForm,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,59
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_server_infoController,create,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,74
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_server_infoController,updateForm,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,102
+ZheYuan_Mario,com.renren.infra.xweb.web,Mario_server_infoController,update,Long Statement,The length of the statement "Page<Mario_zk_info> mario_zk_infos=new PageImpl<Mario_zk_info>(mario_zk_infoList`new PageRequest(0`mario_zk_infoList.size())`mario_zk_infoList.size());" is 151.,121
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,serverData,Empty catch clause,The method has an empty catch block.,43
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,serverData,Magic Number,The method contains a magic number: 86400000L,43
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,serverData,Magic Number,The method contains a magic number: 12,43
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,serverData,Magic Number,The method contains a magic number: 24,43
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,zkData,Empty catch clause,The method has an empty catch block.,93
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,zkData,Magic Number,The method contains a magic number: 86400000L,93
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,zkData,Magic Number,The method contains a magic number: 12,93
+ZheYuan_Mario,com.renren.infra.xweb.web,GraphController,zkData,Magic Number,The method contains a magic number: 24,93
+ZheYuan_Mario,com.renren.infra.xweb.web,RoleController,create,Long Parameter List,The method has 5 parameters. ,67
+ZheYuan_Mario,com.renren.infra.xweb.web,RoleController,update,Long Parameter List,The method has 5 parameters. ,110
+ZheYuan_Mario,com.renren.infra.xweb.web,UserController,create,Long Parameter List,The method has 5 parameters. ,76
+ZheYuan_Mario,com.renren.infra.xweb.web,UserController,update,Long Parameter List,The method has 5 parameters. ,117
+ZheYuan_Mario,com.renren.infra.xweb.util.generator.runner,CodeGenerator,generateFilesFromSqlTable,Long Statement,The length of the statement "template.process(aValue`context`"UTF-8"`ApplicationProperties.getFileOutputPath() + outputFileType(aValue`sqlTable.getEntityname()));" is 133.,56
+ZheYuan_Mario,com.renren.infra.xweb.util.generator.runner,CodeGenerator,outputFileType,Long Statement,The length of the statement "return StringUtils.capitalize(entityname) + StringUtils.substring(filename`filename.indexOf("/") + 1`filename.indexOf(suffix));" is 127.,113
+ZheYuan_Mario,com.renren.infra.xweb.util.generator.db,SqlColumn,SqlColumn,Long Parameter List,The method has 9 parameters. ,25
+ZheYuan_Mario,com.renren.infra.xweb.util.generator.db,SqlColumn,initAttrType,Complex Method,Cyclomatic complexity of the method is 16,45
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 16,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 2,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 2,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 3,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 3,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 5,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 6,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 2,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 3000,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,buildExcelHead,Magic Number,The method contains a magic number: 3000,127
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,addCell,Complex Method,Cyclomatic complexity of the method is 9,166
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,addCell,Long Parameter List,The method has 5 parameters. ,166
+ZheYuan_Mario,com.renren.infra.xweb.util.excel.view,DefaultExcelView,addCell,Long Statement,The length of the statement "cell.setCellValue((String)Class.forName(this.getClass().getName().replaceAll(this.getClass().getSimpleName()`"fieldtype." + val.getClass().getSimpleName() + "Type")).getMethod("setValue"`Object.class).invoke(null`val));" is 219.,166
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,tearDown,Empty catch clause,The method has an empty catch block.,84
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendSimpleMail,Magic Number,The method contains a magic number: 2000,93
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendMail,Magic Number,The method contains a magic number: 2000,114
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendMailTemplate,Magic Number,The method contains a magic number: 2000,136
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendMailFiles,Magic Number,The method contains a magic number: 2000,162
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendMailFiles,Magic Number,The method contains a magic number: 2,162
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendMailMultiFiles,Magic Number,The method contains a magic number: 2000,190
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendMailMultiFiles,Magic Number,The method contains a magic number: 3,190
+ZheYuan_Mario,com.renren.infra.xweb.util.mail,MailServiceTest,testSendMailMultiFiles,Magic Number,The method contains a magic number: 2,190
+ZheYuan_Mario,com.renren.infra.xweb.util.generator,DBConnectionTest,testDBConnection,Magic Number,The method contains a magic number: 3,25
+ZheYuan_Mario,com.renren.infra.xweb.util.generator,ApplicationPropertiesTest,testPropertiesUtil,Magic Number,The method contains a magic number: 7,24

@@ -1,0 +1,594 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+caoxinyu_RedisClient,com.cxy.redisclient.service,FavoriteService,listById,Long Statement,The length of the statement "if (ConfigFile.read(ConfigFile.FAVORITE + fid) != null) favorite=new Favorite(fid`Integer.parseInt(ConfigFile.read(ConfigFile.FAVORITE_SERVER + fid))`ConfigFile.read(ConfigFile.FAVORITE_NAME + fid)`ConfigFile.read(ConfigFile.FAVORITE + fid));" is 242.,38
+caoxinyu_RedisClient,com.cxy.redisclient.service,SetService,add,Long Parameter List,The method has 5 parameters. ,16
+caoxinyu_RedisClient,com.cxy.redisclient.service,SetService,getPage,Long Parameter List,The method has 5 parameters. ,54
+caoxinyu_RedisClient,com.cxy.redisclient.service,ServerService,update,Long Parameter List,The method has 5 parameters. ,62
+caoxinyu_RedisClient,com.cxy.redisclient.service,ServerService,listById,Long Statement,The length of the statement "if (ConfigFile.read(ConfigFile.NAME + id) != null) server=new Server(id`ConfigFile.read(ConfigFile.NAME + id)`ConfigFile.read(ConfigFile.HOST + id)`ConfigFile.read(ConfigFile.PORT + id)`ConfigFile.read(ConfigFile.PASSWORD + id));" is 229.,67
+caoxinyu_RedisClient,com.cxy.redisclient.service,ListService,add,Long Parameter List,The method has 7 parameters. ,17
+caoxinyu_RedisClient,com.cxy.redisclient.service,ListService,update,Long Parameter List,The method has 5 parameters. ,28
+caoxinyu_RedisClient,com.cxy.redisclient.service,ListService,insert,Long Parameter List,The method has 6 parameters. ,44
+caoxinyu_RedisClient,com.cxy.redisclient.service,ListService,setValue,Long Parameter List,The method has 5 parameters. ,49
+caoxinyu_RedisClient,com.cxy.redisclient.service,ListService,getPage,Long Parameter List,The method has 5 parameters. ,80
+caoxinyu_RedisClient,com.cxy.redisclient.service,ZSetService,add,Long Parameter List,The method has 5 parameters. ,17
+caoxinyu_RedisClient,com.cxy.redisclient.service,ZSetService,getPage,Long Parameter List,The method has 5 parameters. ,36
+caoxinyu_RedisClient,com.cxy.redisclient.service,HashService,add,Long Parameter List,The method has 5 parameters. ,14
+caoxinyu_RedisClient,com.cxy.redisclient.service,HashService,setField,Long Parameter List,The method has 5 parameters. ,40
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,addString,Long Parameter List,The method has 5 parameters. ,39
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,renameKey,Long Parameter List,The method has 5 parameters. ,65
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,listContainers,Long Parameter List,The method has 5 parameters. ,80
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,listContainerKeys,Long Parameter List,The method has 6 parameters. ,94
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,renameContainer,Long Parameter List,The method has 6 parameters. ,112
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,renameKey,Long Parameter List,The method has 7 parameters. ,137
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,pasteContainer,Complex Conditional,The conditional expression sourceId == targetId && sourceDb == targetDb && targetContainer.equals(new ContainerKey(sourceContainer).getUpperContainer()) is complex.,171
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,pasteContainer,Long Parameter List,The method has 8 parameters. ,171
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,pasteContainer,Long Statement,The length of the statement "if (sourceId == targetId && sourceDb == targetDb && targetContainer.equals(new ContainerKey(sourceContainer).getUpperContainer())) {" is 132.,171
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,pasteKey,Complex Conditional,The conditional expression sourceId == targetId && sourceDb == targetDb && sourceKey.equals(targetKey) is complex.,198
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,pasteKey,Long Parameter List,The method has 8 parameters. ,198
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,findNext,Long Parameter List,The method has 8 parameters. ,236
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,find,Complex Method,Cyclomatic complexity of the method is 8,248
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,find,Long Parameter List,The method has 7 parameters. ,248
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,find,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@11516b2a,248
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,findKeys,Long Parameter List,The method has 6 parameters. ,298
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,findKeys,Long Statement,The length of the statement "FindContainerKeys command=new FindContainerKeysFactory(id`db`container`searchNodeType`keyPattern`forward).getListContainerAllKeys();" is 132.,298
+caoxinyu_RedisClient,com.cxy.redisclient.service,NodeService,getTTL,Magic Number,The method contains a magic number: 2,310
+caoxinyu_RedisClient,com.cxy.redisclient.dto,ListInfo,ListInfo,Long Parameter List,The method has 5 parameters. ,11
+caoxinyu_RedisClient,com.cxy.redisclient.domain,ContainerKey,getLastContainer,Magic Number,The method contains a magic number: 2,42
+caoxinyu_RedisClient,com.cxy.redisclient.domain,Server,Server,Long Parameter List,The method has 5 parameters. ,5
+caoxinyu_RedisClient,com.cxy.redisclient.domain,DataNode,compareTo,Complex Method,Cyclomatic complexity of the method is 9,7
+caoxinyu_RedisClient,com.cxy.redisclient.domain,DataNode,compareTo,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@60cca81,7
+caoxinyu_RedisClient,com.cxy.redisclient.domain,DataNode,DataNode,Long Parameter List,The method has 8 parameters. ,70
+caoxinyu_RedisClient,com.cxy.redisclient.domain,Node,Node,Long Parameter List,The method has 5 parameters. ,12
+caoxinyu_RedisClient,com.cxy.redisclient.domain,Node,equals,Long Statement,The length of the statement "return node.getKey().equals(this.getKey()) && node.getType().equals(this.getType()) && this.id == node.getId() && this.db == node.getDb();" is 138.,44
+caoxinyu_RedisClient,com.cxy.redisclient.domain,Value,getValue,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7c3e0bf9,42
+caoxinyu_RedisClient,com.cxy.redisclient.integration.server,QueryDBAmount,command,Magic Number,The method contains a magic number: 15,21
+caoxinyu_RedisClient,com.cxy.redisclient.integration.set,AddSet,command,Long Statement,The length of the statement "if (jedis.exists(key) && getValueType(key) != NodeType.SET) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.SETEXIST) + key);" is 142.,45
+caoxinyu_RedisClient,com.cxy.redisclient.integration.set,ListSetPage,ListSetPage,Long Parameter List,The method has 5 parameters. ,16
+caoxinyu_RedisClient,com.cxy.redisclient.integration.protocol,ReplyParser,getParser,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@42793b96,9
+caoxinyu_RedisClient,com.cxy.redisclient.integration.protocol,ReplyParser,getHeadString,Magic Number,The method contains a magic number: 1024,26
+caoxinyu_RedisClient,com.cxy.redisclient.integration.protocol,ReplyParser,getHeadString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@1284c1d0,26
+caoxinyu_RedisClient,com.cxy.redisclient.integration.protocol,ReplyParser,appendToArray,Magic Number,The method contains a magic number: 2,60
+caoxinyu_RedisClient,com.cxy.redisclient.integration,JedisCommand,runCommand,Long Statement,The length of the statement "if (supportVersion.getVersion() > version.getVersion()) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.VERSIONNOTSUPPORT));" is 141.,43
+caoxinyu_RedisClient,com.cxy.redisclient.integration,JedisCommand,getRedisVersion,Complex Method,Cyclomatic complexity of the method is 10,95
+caoxinyu_RedisClient,com.cxy.redisclient.integration,ListPage,ListPage,Long Parameter List,The method has 5 parameters. ,10
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,FindContainerKeys10,FindContainerKeys10,Long Parameter List,The method has 6 parameters. ,15
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,RenameKey,RenameKey,Long Parameter List,The method has 5 parameters. ,17
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,FindContainerKeys,FindContainerKeys,Long Parameter List,The method has 6 parameters. ,40
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,ListContainers,ListContainers,Long Parameter List,The method has 5 parameters. ,23
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,FindContainerKeysFactory,FindContainerKeysFactory,Long Parameter List,The method has 6 parameters. ,16
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,FindContainerKeys28,FindContainerKeys28,Long Parameter List,The method has 6 parameters. ,21
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,ListContainerKeys,ListContainerKeys,Long Parameter List,The method has 6 parameters. ,27
+caoxinyu_RedisClient,com.cxy.redisclient.integration.key,ListContainerKeys,ListContainerKeys,Long Parameter List,The method has 5 parameters. ,36
+caoxinyu_RedisClient,com.cxy.redisclient.integration.zset,AddZSet,command,Long Statement,The length of the statement "if (jedis.exists(key) && getValueType(key) != NodeType.SORTEDSET) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.ZSETEXIST) + key);" is 149.,22
+caoxinyu_RedisClient,com.cxy.redisclient.integration.zset,ListZSetPage,ListZSetPage,Long Parameter List,The method has 5 parameters. ,13
+caoxinyu_RedisClient,com.cxy.redisclient.integration.list,AddList,AddList,Long Parameter List,The method has 6 parameters. ,18
+caoxinyu_RedisClient,com.cxy.redisclient.integration.list,AddList,command,Long Statement,The length of the statement "if (jedis.exists(key) && getValueType(key) != NodeType.LIST) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.LISTEXIST) + key);" is 144.,28
+caoxinyu_RedisClient,com.cxy.redisclient.integration.list,SetValue,SetValue,Long Parameter List,The method has 5 parameters. ,12
+caoxinyu_RedisClient,com.cxy.redisclient.integration.list,InsertList,InsertList,Long Parameter List,The method has 6 parameters. ,15
+caoxinyu_RedisClient,com.cxy.redisclient.integration.list,ListListPage,ListListPage,Long Parameter List,The method has 5 parameters. ,15
+caoxinyu_RedisClient,com.cxy.redisclient.integration.list,UpdateList,UpdateList,Long Parameter List,The method has 5 parameters. ,11
+caoxinyu_RedisClient,com.cxy.redisclient.integration.hash,AddHash,command,Long Statement,The length of the statement "if (jedis.exists(key) && getValueType(key) != NodeType.HASH) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.HASHEXIST) + key);" is 144.,23
+caoxinyu_RedisClient,com.cxy.redisclient.integration.hash,SetField,SetField,Long Parameter List,The method has 5 parameters. ,12
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,FindBuffer,FindBuffer,Long Parameter List,The method has 7 parameters. ,17
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,OptionsDialog,createContents,Complex Method,Cyclomatic complexity of the method is 9,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,OptionsDialog,mouseUp,Complex Method,Cyclomatic complexity of the method is 9,58
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,OptionsDialog,initPaging,Magic Number,The method contains a magic number: 2,129
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,OptionsDialog,initNamespace,Magic Number,The method contains a magic number: 2,151
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,OptionsDialog,initConnection,Magic Number,The method contains a magic number: 2,173
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Long Statement,The length of the statement "final Image scaled050=new Image(shell.getDisplay()`image.getImageData().scaledTo((int)(width * 0.5)`(int)(height * 0.5)));" is 122.,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Long Statement,The length of the statement "link_1.setText("<a href=\"https://github.com/caoxinyu/redisclient/issues?state=open\">" + RedisClient.i18nFile.getText(I18nFile.CLICK) + "</a>");" is 145.,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Long Statement,The length of the statement "link_2.setText("<a href=\"https://github.com/caoxinyu/RedisClient/stargazers\">" + RedisClient.i18nFile.getText(I18nFile.CLICK) + "</a>");" is 138.,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 3,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 0.5,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 0.5,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 80,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 27,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 20,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 2,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 61,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 17,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,AboutDialog,createContents,Magic Number,The method contains a magic number: 3,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,DataContents,isOpen,Complex Conditional,The conditional expression dataContent.getId() == id && dataContent.getDb() == db && dataContent.getKey().equals(key) is complex.,18
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,DataContents,getTabItem,Complex Conditional,The conditional expression dataContent.getId() == id && dataContent.getDb() == db && dataContent.getKey().equals(key) is complex.,28
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initShell,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell`i18nFile.getText(I18nFile.CLOSEAPP)`key + ": " + i18nFile.getText(I18nFile.CLOSEAPPERROR));" is 134.,287
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,handleEvent,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell`i18nFile.getText(I18nFile.CLOSEAPP)`key + ": " + i18nFile.getText(I18nFile.CLOSEAPPERROR));" is 134.,290
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initSash,Complex Method,Cyclomatic complexity of the method is 9,304
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initSash,Long Method,The method has 147 lines of code.,304
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initSash,Magic Number,The method contains a magic number: 5,304
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initSash,Magic Number,The method contains a magic number: 5,304
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initSash,Magic Number,The method contains a magic number: 156,304
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initSash,Magic Number,The method contains a magic number: 127,304
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTree,Magic Number,The method contains a magic number: 3,611
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,mouseDown,Magic Number,The method contains a magic number: 3,621
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initMenuTableDB,Long Method,The method has 155 lines of code.,712
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Complex Conditional,The conditional expression type == NodeType.CONTAINER || type == NodeType.DATABASE || type == NodeType.SERVER is complex.,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Complex Method,Cyclomatic complexity of the method is 16,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Long Method,The method has 103 lines of code.,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Long Statement,The length of the statement "if (!find) MessageDialog.openInformation(shell`i18nFile.getText(I18nFile.INFORMATION)`i18nFile.getText(I18nFile.NEWKEYFOUND) + text.getText());" is 143.,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Magic Number,The method contains a magic number: 3,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Magic Number,The method contains a magic number: 150,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Magic Number,The method contains a magic number: 150,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initTable,Magic Number,The method contains a magic number: 100,892
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,mouseDoubleClick,Complex Conditional,The conditional expression type == NodeType.CONTAINER || type == NodeType.DATABASE || type == NodeType.SERVER is complex.,903
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,mouseDoubleClick,Complex Method,Cyclomatic complexity of the method is 8,903
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,mouseDoubleClick,Long Statement,The length of the statement "if (!find) MessageDialog.openInformation(shell`i18nFile.getText(I18nFile.INFORMATION)`i18nFile.getText(I18nFile.NEWKEYFOUND) + text.getText());" is 143.,903
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,mouseDown,Complex Method,Cyclomatic complexity of the method is 9,947
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,mouseDown,Magic Number,The method contains a magic number: 3,947
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 2,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 4,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 5,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 6,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 2,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 4,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 5,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuServer,Magic Number,The method contains a magic number: 6,1021
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerProperties,Long Statement,The length of the statement "str=i18nFile.getText(I18nFile.TYPE) + ":\t" + i18nFile.getText(I18nFile.DATABASE)+ "\n"+ i18nFile.getText(I18nFile.LOCATION)+ ":\t"+ getLocation(cinfo)+ "\n"+ i18nFile.getText(I18nFile.KEY)+ ":\t";" is 197.,1039
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerProperties,Long Statement,The length of the statement "str=i18nFile.getText(I18nFile.TYPE) + ":\t" + i18nFile.getText(I18nFile.CONTAINER)+ "\n"+ i18nFile.getText(I18nFile.LOCATION)+ ":\t"+ getLocation(cinfo)+ "\n"+ i18nFile.getText(I18nFile.KEY)+ ":\t";" is 198.,1039
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,tableItemSelected,Complex Method,Cyclomatic complexity of the method is 13,1088
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,tableItemSelected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@72bc49c3,1088
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,tableItemSelected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7ed1f5ae,1088
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,tableItemSelected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@757fc469,1088
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 2,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 3,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 2,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 3,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 5,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 6,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 7,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 9,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,containerItemsSelected,Magic Number,The method contains a magic number: 10,1155
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 2,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 3,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 2,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 3,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 5,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 6,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 7,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 9,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemsSelected,Magic Number,The method contains a magic number: 10,1175
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataProperties,Complex Method,Cyclomatic complexity of the method is 8,1195
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataProperties,Long Statement,The length of the statement "if (!service2.isKeyExist(cinfo.getId()`cinfo.getDb()`key)) throw new KeyNotExistException(cinfo.getId()`cinfo.getDb()`key);" is 123.,1195
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataProperties,Long Statement,The length of the statement "content=new StringDataContent(tbtmNewItem`iconImage`cinfo.getId()`cinfo.getServerName()`cinfo.getDb()`key`I18nFile.STRING);" is 123.,1195
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 2,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 3,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 2,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 3,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 5,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 6,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 7,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 9,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dataItemSelected,Magic Number,The method contains a magic number: 10,1265
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initMenu,Complex Method,Cyclomatic complexity of the method is 18,1448
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,initMenu,Long Method,The method has 450 lines of code.,1448
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,findForward,Long Statement,The length of the statement "Node node=service2.findNext(fBuffer.getFindNode()`fBuffer.getSearchFrom()`fBuffer.getId()`fBuffer.getDb()`fBuffer.getContainer()`fBuffer.getSearchNodeType()`fBuffer.getPattern()`true);" is 184.,2031
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,findForward,Long Statement,The length of the statement "Set<Node> nodes=service2.find(fBuffer.getSearchFrom()`fBuffer.getId()`fBuffer.getDb()`fBuffer.getContainer()`fBuffer.getSearchNodeType()`fBuffer.getPattern()`true);" is 164.,2031
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,findBackward,Long Statement,The length of the statement "Node node=service2.findNext(fBuffer.getFindNode()`fBuffer.getSearchFrom()`fBuffer.getId()`fBuffer.getDb()`fBuffer.getContainer()`fBuffer.getSearchNodeType()`fBuffer.getPattern()`false);" is 185.,2076
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,findBackward,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell`i18nFile.getText(I18nFile.FINDBACKWARD)`i18nFile.getText(I18nFile.FINDAGAIN));" is 121.,2076
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,findBackward,Long Statement,The length of the statement "Set<Node> nodes=service2.find(fBuffer.getSearchFrom()`fBuffer.getId()`fBuffer.getDb()`fBuffer.getContainer()`fBuffer.getSearchNodeType()`fBuffer.getPattern()`false);" is 165.,2076
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,find,Long Statement,The length of the statement "Set<Node> nodes=service2.find(searchFrom`cinfo.getId()`cinfo.getDb()`cinfo.getContainerStr()`info.getSearchNodeType()`info.getPattern()`info.isForward());" is 154.,2123
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,find,Long Statement,The length of the statement "fBuffer=new FindBuffer(node`searchFrom`cinfo.getId()`cinfo.getDb()`cinfo.getContainerStr()`info.getSearchNodeType()`info.getPattern());" is 135.,2123
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,export,Long Statement,The length of the statement "if (exist) ok=MessageDialog.openConfirm(shell`i18nFile.getText(I18nFile.FILEEXIST)`i18nFile.getText(I18nFile.FILEREPLACE));" is 123.,2163
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,removeFavoriteMenuItem,Magic Number,The method contains a magic number: 2,2248
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,removeFavoriteMenuItem,Magic Number,The method contains a magic number: 2,2248
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,addFavoriteMenuItem,Long Statement,The length of the statement "TreeItem selected=gotoDBContainer(sid`Integer.parseInt(containers[1].replaceFirst(DB_PREFIX`""))`container`favorite.isData()`false);" is 132.,2259
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,addFavoriteMenuItem,Magic Number,The method contains a magic number: 2,2259
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,widgetSelected,Long Statement,The length of the statement "TreeItem selected=gotoDBContainer(sid`Integer.parseInt(containers[1].replaceFirst(DB_PREFIX`""))`container`favorite.isData()`false);" is 132.,2268
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,widgetSelected,Magic Number,The method contains a magic number: 2,2268
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,removeServer,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell`i18nFile.getText(I18nFile.REMOVESERVER)`i18nFile.getText(I18nFile.CONFIRMREMOVESERVER));" is 131.,2351
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,removeServer,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell`i18nFile.getText(I18nFile.REMOVESERVER)`i18nFile.getText(I18nFile.CONFIRMREMOVESERVER));" is 131.,2351
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,getTreeItemByTableItem,Complex Conditional,The conditional expression tableItmeType != NodeType.DATABASE && tableItmeType != NodeType.SERVER && tableItmeType != NodeType.CONTAINER is complex.,2379
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,getTreeItemByTableItem,Long Statement,The length of the statement "if (tableItmeType != NodeType.DATABASE && tableItmeType != NodeType.SERVER && tableItmeType != NodeType.CONTAINER) return treeItem;" is 131.,2379
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,renameContainer,Long Statement,The length of the statement "RenameKeysDialog dialog=new RenameKeysDialog(shell`iconImage`cinfo.getServerName()`cinfo.getDb()`cinfo.getContainerStr());" is 122.,2406
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,renameContainer,Long Statement,The length of the statement "Set<String> result=service2.renameContainer(cinfo.getId()`cinfo.getDb()`cinfo.getContainerStr()`rinfo.getNewContainer()`rinfo.isOverwritten()`rinfo.isRenameSub());" is 163.,2406
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,addFavorite,Long Statement,The length of the statement "if (type == NodeType.CONTAINER || type == NodeType.DATABASE) fullContainer=text.getText() + itemsSelected[0].getText() + ":";" is 125.,2458
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,treeItemSelected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@41411157,2488
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerTreeItemSelected,Complex Method,Cyclomatic complexity of the method is 10,2511
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 2,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 3,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 2,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 3,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 5,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 6,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 7,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 7,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 9,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 10,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 2,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 3,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 5,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 6,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 7,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 7,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 9,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 10,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 2,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,dbContainerItemSelected,Magic Number,The method contains a magic number: 2,2589
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,tableItemOrderSelected,Complex Method,Cyclomatic complexity of the method is 14,2635
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,tableItemOrderSelected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@51a3baed,2635
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 2,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 3,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 2,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 3,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 5,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 6,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 7,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 9,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 10,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 2,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,rootItemSelected,Magic Number,The method contains a magic number: 2,2728
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 2,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 3,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 2,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 3,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 5,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 6,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 7,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 9,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 10,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 2,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,serverItemSelected,Magic Number,The method contains a magic number: 2,2792
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,newString,Long Statement,The length of the statement "NewStringDialog dialog=new NewStringDialog(shell`iconImage`cinfo.getId()`cinfo.getServerName()`cinfo.getDb()`cinfo.getContainerStr());" is 134.,2817
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,newList,Long Statement,The length of the statement "NewListDialog dialog=new NewListDialog(shell`iconImage`cinfo.getId()`cinfo.getServerName()`cinfo.getDb()`cinfo.getContainerStr());" is 130.,2844
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,newSet,Long Statement,The length of the statement "NewSetDialog dialog=new NewSetDialog(shell`iconImage`cinfo.getId()`cinfo.getServerName()`cinfo.getDb()`cinfo.getContainerStr());" is 128.,2870
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,newZSet,Long Statement,The length of the statement "NewZSetDialog dialog=new NewZSetDialog(shell`iconImage`cinfo.getId()`cinfo.getServerName()`cinfo.getDb()`cinfo.getContainerStr());" is 130.,2894
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,newHash,Long Statement,The length of the statement "NewHashDialog dialog=new NewHashDialog(shell`iconImage`cinfo.getId()`cinfo.getServerName()`cinfo.getDb()`cinfo.getContainerStr());" is 130.,2920
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,pasteOne,Long Statement,The length of the statement "String newKey=service2.pasteKey(source.getId()`source.getDb()`source.getContainerStr()`target.getId()`target.getDb()`target.getContainerStr() + source.getContainer().getKeyOnly()`pBuffer.isCopy()`true);" is 202.,3087
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,pasteOne,Long Statement,The length of the statement "if (newKey == null) gotoDBContainer(target.getId()`target.getDb()`target.getContainerStr() + source.getContainer().getKeyOnly()`true`true);" is 139.,3087
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,pasteOne,Long Statement,The length of the statement "service2.pasteContainer(source.getId()`source.getDb()`source.getContainerStr()`target.getId()`target.getDb()`target.getContainerStr()`pBuffer.isCopy()`true);" is 157.,3087
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 2,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 7,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 8,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 9,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 9,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 11,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 2,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 7,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 8,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 9,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 9,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,updateMenuDBContainer,Magic Number,The method contains a magic number: 11,3115
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,gotoDBContainer,Complex Conditional,The conditional expression type != NodeType.SERVER && type != NodeType.DATABASE && type != NodeType.CONTAINER && tableItem.getText().equals(containers[containers.length - 1]) is complex.,3141
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,gotoDBContainer,Complex Conditional,The conditional expression type != NodeType.SERVER && type != NodeType.DATABASE && type != NodeType.CONTAINER && tableItem.getText().equals(keyOnly) is complex.,3141
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,gotoDBContainer,Complex Method,Cyclomatic complexity of the method is 18,3141
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,gotoDBContainer,Long Parameter List,The method has 5 parameters. ,3141
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,gotoDBContainer,Long Statement,The length of the statement "if (type != NodeType.SERVER && type != NodeType.DATABASE && type != NodeType.CONTAINER && tableItem.getText().equals(containers[containers.length - 1])) {" is 154.,3141
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,gotoDBContainer,Long Statement,The length of the statement "if (type != NodeType.SERVER && type != NodeType.DATABASE && type != NodeType.CONTAINER && tableItem.getText().equals(keyOnly)) {" is 128.,3141
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,deleteOneKey,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell`i18nFile.getText(I18nFile.DELETEKEY)`i18nFile.getText(I18nFile.CONFIRMDELETEKEY));" is 125.,3308
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,RedisClient,refreshDB,Long Statement,The length of the statement "if (dbItem.getData(ITEM_OPENED) != null && ((Boolean)(dbItem.getData(ITEM_OPENED)) == true)) dbItem.setData(ITEM_OPENED`false);" is 127.,3353
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,WatchDialog,createContents,Long Statement,The length of the statement "textType.setItems(new String[]{RedisClient.i18nFile.getText(I18nFile.PLAINTEXT)`RedisClient.i18nFile.getText(I18nFile.JSON)`RedisClient.i18nFile.getText(I18nFile.XML)});" is 169.,52
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,WatchDialog,createContents,Magic Number,The method contains a magic number: 2,52
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,WatchDialog,createContents,Magic Number,The method contains a magic number: 70,52
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,WatchDialog,createContents,Magic Number,The method contains a magic number: 81,52
+caoxinyu_RedisClient,com.cxy.redisclient.presentation,WatchDialog,tranformText,Magic Number,The method contains a magic number: 2,182
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,AddServerDialog,createContents,Complex Conditional,The conditional expression name.length() == 0 || host.length() == 0 || port.length() == 0 is complex.,40
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,AddServerDialog,createContents,Long Statement,The length of the statement "if (name.length() == 0 || host.length() == 0 || port.length() == 0) MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTSERVER));" is 195.,40
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,AddServerDialog,createContents,Magic Number,The method contains a magic number: 2,40
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,AddServerDialog,mouseUp,Complex Conditional,The conditional expression name.length() == 0 || host.length() == 0 || port.length() == 0 is complex.,91
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,AddServerDialog,mouseUp,Long Statement,The length of the statement "if (name.length() == 0 || host.length() == 0 || port.length() == 0) MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTSERVER));" is 195.,91
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,PropertiesDialog,createContents,Magic Number,The method contains a magic number: 250,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,PropertiesDialog,createContents,Magic Number,The method contains a magic number: 442,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,PropertiesDialog,createContents,Magic Number,The method contains a magic number: 250,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,PropertiesDialog,createContents,Magic Number,The method contains a magic number: 442,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,PropertiesDialog,createContents,Magic Number,The method contains a magic number: 64,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.server,PropertiesDialog,createContents,Magic Number,The method contains a magic number: 64,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,SetDataContent,Long Parameter List,The method has 7 parameters. ,41
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,initData,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.LISTINPUTFORMAT)`""`null);" is 184.,47
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,initData,Long Statement,The length of the statement "if (size == 0) MessageDialog.openInformation(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.ADDSETVALUES));" is 178.,47
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,initData,Magic Number,The method contains a magic number: 4,47
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,initData,Magic Number,The method contains a magic number: 4,47
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,initData,Magic Number,The method contains a magic number: 3,47
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,initData,Magic Number,The method contains a magic number: 4,47
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,initData,Magic Number,The method contains a magic number: 200,47
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,widgetSelected,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.LISTINPUTFORMAT)`""`null);" is 184.,79
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,SetDataContent,widgetSelected,Long Statement,The length of the statement "if (size == 0) MessageDialog.openInformation(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.ADDSETVALUES));" is 178.,79
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetDialog,NewSetDialog,Long Parameter List,The method has 6 parameters. ,21
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetDialog,NewSetDialog,Magic Number,The method contains a magic number: 691,21
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetDialog,NewSetDialog,Magic Number,The method contains a magic number: 540,21
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetDialog,getDataContent,Long Parameter List,The method has 5 parameters. ,27
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetDialog,createContents,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTSET));" is 154.,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetDialog,widgetSelected,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTSET));" is 154.,36
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,NewSetContent,Long Parameter List,The method has 5 parameters. ,28
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,initData,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.LISTINPUTFORMAT)`""`null);" is 168.,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,initData,Magic Number,The method contains a magic number: 4,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,initData,Magic Number,The method contains a magic number: 4,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,initData,Magic Number,The method contains a magic number: 3,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,initData,Magic Number,The method contains a magic number: 2,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,initData,Magic Number,The method contains a magic number: 200,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.set,NewSetContent,widgetSelected,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.LISTINPUTFORMAT)`""`null);" is 168.,63
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,AddFavoriteDialog,createContents,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTFAVORITE));" is 129.,36
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,AddFavoriteDialog,createContents,Magic Number,The method contains a magic number: 2,36
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,AddFavoriteDialog,mouseUp,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTFAVORITE));" is 129.,68
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,OrganizeFavoriteDialog,createContents,Magic Number,The method contains a magic number: 4,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,OrganizeFavoriteDialog,createContents,Magic Number,The method contains a magic number: 3,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,OrganizeFavoriteDialog,createContents,Magic Number,The method contains a magic number: 2,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,OrganizeFavoriteDialog,createContents,Magic Number,The method contains a magic number: 100,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,OrganizeFavoriteDialog,createContents,Magic Number,The method contains a magic number: 187,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,RenameFavoriteDialog,createContents,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTFAVORITE));" is 129.,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,RenameFavoriteDialog,createContents,Magic Number,The method contains a magic number: 2,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.favorite,RenameFavoriteDialog,mouseUp,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTFAVORITE));" is 129.,80
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,createContents,Complex Method,Cyclomatic complexity of the method is 9,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,createContents,Long Statement,The length of the statement "if (types.size() == 0) MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.SELECTTYPE));" is 149.,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,createContents,Magic Number,The method contains a magic number: 6,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,createContents,Magic Number,The method contains a magic number: 5,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,createContents,Magic Number,The method contains a magic number: 3,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,createContents,Magic Number,The method contains a magic number: 3,45
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,widgetSelected,Complex Method,Cyclomatic complexity of the method is 8,128
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,FindKeyDialog,widgetSelected,Long Statement,The length of the statement "if (types.size() == 0) MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.SELECTTYPE));" is 149.,128
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,DeleteContainerDialog,createContents,Magic Number,The method contains a magic number: 2,36
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,DeleteContainerDialog,createContents,Magic Number,The method contains a magic number: 2,36
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,DeleteContainerDialog,createContents,Magic Number,The method contains a magic number: 2,36
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,RenameKeysDialog,Long Parameter List,The method has 5 parameters. ,34
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTNEWKEY));" is 127.,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.KEYENDERROR) + ":");" is 133.,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Magic Number,The method contains a magic number: 290,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Magic Number,The method contains a magic number: 122,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Magic Number,The method contains a magic number: 4,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Magic Number,The method contains a magic number: 3,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Magic Number,The method contains a magic number: 2,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,createContents,Magic Number,The method contains a magic number: 2,46
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,mouseUp,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTNEWKEY));" is 127.,117
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.key,RenameKeysDialog,mouseUp,Long Statement,The length of the statement "MessageDialog.openError(shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.KEYENDERROR) + ":");" is 133.,117
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,ZSetDataContent,Long Parameter List,The method has 7 parameters. ,49
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,initData,Long Method,The method has 127 lines of code.,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,initData,Magic Number,The method contains a magic number: 4,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,initData,Magic Number,The method contains a magic number: 4,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,initData,Magic Number,The method contains a magic number: 3,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,initData,Magic Number,The method contains a magic number: 6,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,initData,Magic Number,The method contains a magic number: 88,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,initData,Magic Number,The method contains a magic number: 164,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,ZSetDataContent,add,Long Statement,The length of the statement "if (item.getText(0).length() == 0 && item.getText(1).length() > 0) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.SCOREERROR) + item.getText(1));" is 163.,318
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,NewZSetContent,Long Parameter List,The method has 5 parameters. ,28
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,initData,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.INPUTZSETFORMAT)`""`null);" is 168.,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,initData,Magic Number,The method contains a magic number: 4,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,initData,Magic Number,The method contains a magic number: 4,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,initData,Magic Number,The method contains a magic number: 3,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,initData,Magic Number,The method contains a magic number: 3,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,initData,Magic Number,The method contains a magic number: 88,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,initData,Magic Number,The method contains a magic number: 164,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetContent,widgetSelected,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.INPUTZSETFORMAT)`""`null);" is 168.,64
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetDialog,NewZSetDialog,Long Parameter List,The method has 6 parameters. ,20
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetDialog,NewZSetDialog,Magic Number,The method contains a magic number: 586,20
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetDialog,NewZSetDialog,Magic Number,The method contains a magic number: 531,20
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetDialog,getDataContent,Long Parameter List,The method has 5 parameters. ,26
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetDialog,createContents,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTZSET));" is 155.,32
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetDialog,widgetSelected,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTZSET));" is 155.,35
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.zset,NewZSetDialog,okSelected,Long Statement,The length of the statement "if (item.getText(0).length() == 0 && item.getText(1).length() > 0) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.SCOREERROR) + item.getText(1));" is 163.,53
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 3,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 73,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 21,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 2,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 73,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 21,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 100,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 100,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 100,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 75,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Publish,init,Magic Number,The method contains a magic number: 25,54
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 3,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 55,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 15,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 88,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 23,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 75,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 25,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 156,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,Subscribe,init,Magic Number,The method contains a magic number: 125,57
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,SubChannel,init,Magic Number,The method contains a magic number: 100,43
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,SubChannel,init,Magic Number,The method contains a magic number: 100,43
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.pubsub,SubChannel,init,Magic Number,The method contains a magic number: 100,43
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListDialog,NewListDialog,Long Parameter List,The method has 6 parameters. ,20
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListDialog,NewListDialog,Magic Number,The method contains a magic number: 966,20
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListDialog,NewListDialog,Magic Number,The method contains a magic number: 638,20
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListDialog,getDataContent,Long Parameter List,The method has 5 parameters. ,25
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListDialog,createContents,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTLIST));" is 155.,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListDialog,widgetSelected,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTLIST));" is 155.,34
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListDialog,okSelected,Long Statement,The length of the statement "setResult(new ListInfo(key`values`((NewListContent)dataContent).isHeadTail()`((NewListContent)dataContent).isExist()`dataContent.getTTL()));" is 140.,53
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,NewListContent,Long Parameter List,The method has 5 parameters. ,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Long Method,The method has 136 lines of code.,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.LISTINPUTFORMAT)`""`null);" is 168.,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 4,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 4,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 2,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 4,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 200,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 2,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 2,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 4,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 2,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,initData,Magic Number,The method contains a magic number: 4,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,widgetSelected,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.LISTINPUTFORMAT)`""`null);" is 168.,69
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,NewListContent,widgetSelected,Magic Number,The method contains a magic number: 2,134
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,ListDataContent,Long Parameter List,The method has 7 parameters. ,50
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Long Method,The method has 144 lines of code.,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Long Statement,The length of the statement "InputDialog dialog=new InputDialog(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.INSERTHEAD)`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`""`null);" is 174.,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Long Statement,The length of the statement "InputDialog dialog=new InputDialog(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.APPENDTAIL)`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`""`null);" is 174.,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Magic Number,The method contains a magic number: 4,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Magic Number,The method contains a magic number: 4,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Magic Number,The method contains a magic number: 2,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Magic Number,The method contains a magic number: 5,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,initData,Magic Number,The method contains a magic number: 200,56
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,widgetSelected,Long Statement,The length of the statement "InputDialog dialog=new InputDialog(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.INSERTHEAD)`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`""`null);" is 174.,90
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.list,ListDataContent,widgetSelected,Long Statement,The length of the statement "InputDialog dialog=new InputDialog(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.APPENDTAIL)`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`""`null);" is 174.,106
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,NewHashDialog,Long Parameter List,The method has 6 parameters. ,21
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,NewHashDialog,Magic Number,The method contains a magic number: 654,21
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,NewHashDialog,Magic Number,The method contains a magic number: 524,21
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,createContents,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTHASH));" is 155.,26
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,widgetSelected,Long Statement,The length of the statement "if (items.length == 0) MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTHASH));" is 155.,29
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,getDataContent,Long Parameter List,The method has 5 parameters. ,49
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,okSelected,Complex Conditional,The conditional expression (item.getText(0).length() == 0 && item.getText(1).length() > 0) || (item.getText(0).length() > 0 && item.getText(1).length() == 0) is complex.,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashDialog,okSelected,Long Statement,The length of the statement "if ((item.getText(0).length() == 0 && item.getText(1).length() > 0) || (item.getText(0).length() > 0 && item.getText(1).length() == 0)) throw new RuntimeException(RedisClient.i18nFile.getText(I18nFile.INPUTWHOLE) + item.getText(0) + " "+ item.getText(1));" is 255.,55
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,HashDataContent,Long Parameter List,The method has 7 parameters. ,52
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Complex Method,Cyclomatic complexity of the method is 25,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Long Method,The method has 169 lines of code.,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.DELETE)`RedisClient.i18nFile.getText(I18nFile.DELETEHASH));" is 163.,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Long Statement,The length of the statement "ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.DELETE)`RedisClient.i18nFile.getText(I18nFile.DELETEHASH));" is 155.,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Long Statement,The length of the statement "ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.DELETE)`RedisClient.i18nFile.getText(I18nFile.DELETEHASH));" is 155.,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Magic Number,The method contains a magic number: 4,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Magic Number,The method contains a magic number: 4,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Magic Number,The method contains a magic number: 3,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Magic Number,The method contains a magic number: 6,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Magic Number,The method contains a magic number: 132,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,initData,Magic Number,The method contains a magic number: 236,72
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,widgetSelected,Complex Method,Cyclomatic complexity of the method is 10,230
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,widgetSelected,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.DELETE)`RedisClient.i18nFile.getText(I18nFile.DELETEHASH));" is 163.,230
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,widgetSelected,Long Statement,The length of the statement "ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.DELETE)`RedisClient.i18nFile.getText(I18nFile.DELETEHASH));" is 155.,230
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,widgetSelected,Long Statement,The length of the statement "ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.DELETE)`RedisClient.i18nFile.getText(I18nFile.DELETEHASH));" is 155.,230
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,addData,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.UPDATE)`RedisClient.i18nFile.getText(I18nFile.UPDATEFIELD));" is 164.,440
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,HashDataContent,addData,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(shell.getParent().getShell()`RedisClient.i18nFile.getText(I18nFile.UPDATE)`RedisClient.i18nFile.getText(I18nFile.UPDATEFIELD));" is 164.,440
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,NewHashContent,Long Parameter List,The method has 5 parameters. ,27
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,initData,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.HASHINPUTFORMAT)`""`null);" is 168.,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,initData,Magic Number,The method contains a magic number: 4,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,initData,Magic Number,The method contains a magic number: 4,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,initData,Magic Number,The method contains a magic number: 3,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,initData,Magic Number,The method contains a magic number: 3,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,initData,Magic Number,The method contains a magic number: 132,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,initData,Magic Number,The method contains a magic number: 236,31
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.hash,NewHashContent,widgetSelected,Long Statement,The length of the statement "InputDialog inputDialog=new InputDialog((Shell)shell`RedisClient.i18nFile.getText(I18nFile.INPUTVALUES)`RedisClient.i18nFile.getText(I18nFile.HASHINPUTFORMAT)`""`null);" is 168.,63
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Command,execute,Long Statement,The length of the statement "printKeyValue(console.getCmdResult()`RedisClient.i18nFile.getText(I18nFile.DURATION) + "(ms): "`String.valueOf(end - start));" is 125.,27
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Command,execute,Long Statement,The length of the statement "if (printResult()) printKeyValue(console.getCmdResult()`RedisClient.i18nFile.getText(I18nFile.RESULT) + ":\r\n"`result.getResult());" is 132.,27
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,HGetallCmd,initData,Magic Number,The method contains a magic number: 3,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,HGetallCmd,initData,Magic Number,The method contains a magic number: 5,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,HGetallCmd,initData,Magic Number,The method contains a magic number: 132,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,HGetallCmd,initData,Magic Number,The method contains a magic number: 236,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,HGetallCmd,initData,Magic Number,The method contains a magic number: 2,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,HGetallCmd,initData,Magic Number,The method contains a magic number: 2,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,HGetallCmd,initData,Magic Number,The method contains a magic number: 2,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,InfoCmd,initData,Magic Number,The method contains a magic number: 250,25
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,InfoCmd,initData,Magic Number,The method contains a magic number: 442,25
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,ZRangeCmd,initData,Magic Number,The method contains a magic number: 3,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,ZRangeCmd,initData,Magic Number,The method contains a magic number: 5,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,ZRangeCmd,initData,Magic Number,The method contains a magic number: 88,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,ZRangeCmd,initData,Magic Number,The method contains a magic number: 164,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,ZRangeCmd,initData,Magic Number,The method contains a magic number: 2,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,ZRangeCmd,initData,Magic Number,The method contains a magic number: 2,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,ZRangeCmd,initData,Magic Number,The method contains a magic number: 2,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,LRangeCmd,initData,Magic Number,The method contains a magic number: 2,22
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,LRangeCmd,initData,Magic Number,The method contains a magic number: 5,22
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,LRangeCmd,initData,Magic Number,The method contains a magic number: 200,22
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,init,Magic Number,The method contains a magic number: 3,78
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,init,Magic Number,The method contains a magic number: 100000,78
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,init,Magic Number,The method contains a magic number: 5,78
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,init,Magic Number,The method contains a magic number: 2,78
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,init,Magic Number,The method contains a magic number: 2,78
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,init,Magic Number,The method contains a magic number: 2,78
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,init,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6510d377,78
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,lineGetStyle,Magic Number,The method contains a magic number: 100000,121
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,lineGetStyle,Magic Number,The method contains a magic number: 5,121
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,mouseDown,Magic Number,The method contains a magic number: 2,137
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,mouseDown,Magic Number,The method contains a magic number: 2,137
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,mouseDown,Magic Number,The method contains a magic number: 2,173
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,Console,keyPressed,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6510d377,229
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.console,QuitCmd,execute,Long Statement,The length of the statement "boolean ok=MessageDialog.openConfirm(console.getTabFolder().getShell()`RedisClient.i18nFile.getText(I18nFile.QUITCONSOLE)`RedisClient.i18nFile.getText(I18nFile.CONSOLECLOSED));" is 176.,16
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataContent,NewDataContent,Long Parameter List,The method has 5 parameters. ,52
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataContent,initDataTabItem,Magic Number,The method contains a magic number: 4,73
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataContent,initDataTabItem,Magic Number,The method contains a magic number: 3,73
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataContent,initTTLTabItem,Magic Number,The method contains a magic number: 2,105
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataContent,initTTLTabItem,Magic Number,The method contains a magic number: 2,105
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,DataContent,initObjectTabItem,Magic Number,The method contains a magic number: 4,43
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,DataContent,initTTLTabItem,Magic Number,The method contains a magic number: 2,85
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,DataContent,DataContent,Long Parameter List,The method has 7 parameters. ,151
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,TTLTabItem,TTLTabItem,Magic Number,The method contains a magic number: 2,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,TTLTabItem,TTLTabItem,Magic Number,The method contains a magic number: 2,24
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataDialog,NewDataDialog,Abstract Function Call From Constructor,The constructor NewDataDialog calls a virtual method getDataContent.,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataDialog,NewDataDialog,Long Parameter List,The method has 10 parameters. ,33
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataDialog,createContents,Magic Number,The method contains a magic number: 600,43
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataDialog,createContents,Magic Number,The method contains a magic number: 500,43
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,NewDataDialog,getDataContent,Long Parameter List,The method has 5 parameters. ,64
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,RedisClientDialog,setMiddle,Long Statement,The length of the statement "shell.setLocation(screenSize.x + screenSize.width / 2 - shellSize.width / 2`screenSize.y + screenSize.height / 2 - shellSize.height / 2);" is 137.,64
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,RedisClientDialog,setMiddle,Magic Number,The method contains a magic number: 2,64
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,RedisClientDialog,setMiddle,Magic Number,The method contains a magic number: 2,64
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,RedisClientDialog,setMiddle,Magic Number,The method contains a magic number: 2,64
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.component,RedisClientDialog,setMiddle,Magic Number,The method contains a magic number: 2,64
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,StringDataContent,StringDataContent,Long Parameter List,The method has 7 parameters. ,32
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,StringDataContent,initData,Magic Number,The method contains a magic number: 3,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,StringDataContent,initData,Magic Number,The method contains a magic number: 4,38
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringContent,NewStringContent,Long Parameter List,The method has 5 parameters. ,15
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringContent,initData,Magic Number,The method contains a magic number: 3,20
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringDialog,NewStringDialog,Long Parameter List,The method has 6 parameters. ,17
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringDialog,NewStringDialog,Magic Number,The method contains a magic number: 622,17
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringDialog,NewStringDialog,Magic Number,The method contains a magic number: 284,17
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringDialog,getDataContent,Long Parameter List,The method has 5 parameters. ,23
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringDialog,createContents,Long Statement,The length of the statement "MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTSTRING));" is 134.,29
+caoxinyu_RedisClient,com.cxy.redisclient.presentation.string,NewStringDialog,widgetSelected,Long Statement,The length of the statement "MessageDialog.openError((Shell)shell`RedisClient.i18nFile.getText(I18nFile.ERROR)`RedisClient.i18nFile.getText(I18nFile.INPUTSTRING));" is 134.,32
+caoxinyu_RedisClient,org.eclipse.wb.swt,SWTResourceManager,decorateImage,Complex Method,Cyclomatic complexity of the method is 9,222
+caoxinyu_RedisClient,org.eclipse.wb.swt,SWTResourceManager,getFont,Long Parameter List,The method has 5 parameters. ,324
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testListKeys,Magic Number,The method contains a magic number: 38,31
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testListContainers,Magic Number,The method contains a magic number: 8,37
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testListContainerKeys,Magic Number,The method contains a magic number: 2,43
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testListContainerKeys,Magic Number,The method contains a magic number: 7,43
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testEqual,Magic Number,The method contains a magic number: 7,58
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testEqual,Magic Number,The method contains a magic number: 7,58
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testPasteKey,Magic Number,The method contains a magic number: 5,85
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testPasteKey,Magic Number,The method contains a magic number: 6,85
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testPasteContainer,Magic Number,The method contains a magic number: 5,90
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testPasteContainer,Magic Number,The method contains a magic number: 6,90
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testPasteContainer,Magic Number,The method contains a magic number: 5,90
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testPasteContainer,Magic Number,The method contains a magic number: 6,90
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testFindKeys,Magic Number,The method contains a magic number: 5,97
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testFindNext,Magic Number,The method contains a magic number: 5,109
+caoxinyu_RedisClient,com.cxy.redisclient,NodeTest,testFindNext,Magic Number,The method contains a magic number: 5,109
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 16,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 16,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 16,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 16,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 3,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 3,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 10,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 10,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 8,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 300,18
+caoxinyu_RedisClient,com.cxy.redisclient,TestCloseTabItem,main,Magic Number,The method contains a magic number: 300,18
+caoxinyu_RedisClient,com.cxy.redisclient,StyledTextStatistics,main,Magic Number,The method contains a magic number: 7,9
+caoxinyu_RedisClient,com.cxy.redisclient,StyledTextStatistics,main,Magic Number,The method contains a magic number: 10,9
+caoxinyu_RedisClient,com.cxy.redisclient,StyledTextStatistics,main,Magic Number,The method contains a magic number: 10,9
+caoxinyu_RedisClient,com.cxy.redisclient,StyledTextStatistics,main,Magic Number,The method contains a magic number: 100,9
+caoxinyu_RedisClient,com.cxy.redisclient,StyledTextStatistics,main,Magic Number,The method contains a magic number: 100,9
+caoxinyu_RedisClient,com.cxy.redisclient,ExportTest,testExport,Magic Number,The method contains a magic number: 5,12
+caoxinyu_RedisClient,com.cxy.redisclient,ExportTest,testExport,Magic Number,The method contains a magic number: 7,12
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 214,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 236,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 6,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 5,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 3,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 3,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 143,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 24,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 143,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 24,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 143,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 24,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 143,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 24,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 143,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 24,17
+caoxinyu_RedisClient,com.cxy.redisclient,GridLayoutDialog,main,Magic Number,The method contains a magic number: 2,17
+caoxinyu_RedisClient,com.cxy.redisclient,TableEditorExample,main,Complex Method,Cyclomatic complexity of the method is 14,18
+caoxinyu_RedisClient,com.cxy.redisclient,TableEditorExample,main,Magic Number,The method contains a magic number: 3,18
+caoxinyu_RedisClient,com.cxy.redisclient,TableEditorExample,main,Magic Number,The method contains a magic number: 100,18
+caoxinyu_RedisClient,com.cxy.redisclient,TableEditorExample,main,Magic Number,The method contains a magic number: 3,18
+caoxinyu_RedisClient,com.cxy.redisclient,TableEditorExample,handleEvent,Complex Method,Cyclomatic complexity of the method is 10,36
+caoxinyu_RedisClient,com.cxy.redisclient,TableWithPageSize,main,Magic Number,The method contains a magic number: 200,19
+caoxinyu_RedisClient,com.cxy.redisclient,TableWithPageSize,main,Magic Number,The method contains a magic number: 200,19
+caoxinyu_RedisClient,com.cxy.redisclient,ServerTest,testListDB,Magic Number,The method contains a magic number: 16,83
+caoxinyu_RedisClient,com.cxy.redisclient,ServerTest,testInfo,Magic Number,The method contains a magic number: 5,88
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 270,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 290,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 25,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 290,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 260,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 300,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 330,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 10,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 10,14
+caoxinyu_RedisClient,com.cxy.redisclient,TreeClass,main,Magic Number,The method contains a magic number: 10,14
+caoxinyu_RedisClient,com.cxy.redisclient,PubSub,testPub,Magic Number,The method contains a magic number: 13,10
+caoxinyu_RedisClient,com.cxy.redisclient,PubSub,testSub,Magic Number,The method contains a magic number: 13,14
+caoxinyu_RedisClient,com.cxy.redisclient,ImportTest,testImportFile,Magic Number,The method contains a magic number: 6,11
+caoxinyu_RedisClient,com.cxy.redisclient,ImportTest,testImportFile,Magic Number,The method contains a magic number: 12,11
+caoxinyu_RedisClient,com.cxy.redisclient,TableMultiCheckSelectionBorder,main,Magic Number,The method contains a magic number: 10,12
+caoxinyu_RedisClient,com.cxy.redisclient,TableMultiCheckSelectionBorder,main,Magic Number,The method contains a magic number: 2,12
+caoxinyu_RedisClient,com.cxy.redisclient,TableMultiCheckSelectionBorder,main,Magic Number,The method contains a magic number: 3,12
+caoxinyu_RedisClient,com.cxy.redisclient,TableMultiCheckSelectionBorder,main,Magic Number,The method contains a magic number: 4,12
+caoxinyu_RedisClient,com.cxy.redisclient,TableMultiCheckSelectionBorder,main,Magic Number,The method contains a magic number: 5,12
+caoxinyu_RedisClient,com.cxy.redisclient,TableMultiCheckSelectionBorder,main,Magic Number,The method contains a magic number: 6,12
+caoxinyu_RedisClient,com.cxy.redisclient,TableMultiCheckSelectionBorder,main,Magic Number,The method contains a magic number: 200,12
+caoxinyu_RedisClient,com.cxy.redisclient,TestClient,testSet,Magic Number,The method contains a magic number: 80,11

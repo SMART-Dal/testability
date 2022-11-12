@@ -1,0 +1,345 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+teamed_requs,org.requs.exec,Main,main,Long Statement,The length of the statement "IOUtils.write(String.format("%s/%s"`Manifests.read("Requs-Version")`Manifests.read("Requs-Revision"))`out`StandardCharsets.UTF_8);" is 130.,56
+teamed_requs,org.requs.exec,MainTest,compilesRequsSources,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(FileUtils.readFileToString(new File(output`"requs.xml")`StandardCharsets.UTF_8))`XhtmlMatchers.hasXPaths("/spec/types/type[name='Employee']"));" is 188.,86
+teamed_requs,org.requs,Compiler,compile,Long Statement,The length of the statement "final Facet[] facets={new XeFacet.Wrap(new Aggregate(new File(this.input)))`new XeFacet.Wrap(new AntlrFacet())`new Transform("cleanup/duplicate-step-numbers.xsl")`new Transform("cleanup/duplicate-step-signatures.xsl")`new Transform("cleanup/duplicate-step-objects.xsl")`new Transform("cleanup/duplicate-step-results.xsl")`new Transform("cleanup/lost-steps.xsl")`new Transform("cleanup/lost-methods.xsl")`new Transform("cleanup/duplicate-signatures.xsl")`new Transform("cleanup/duplicate-method-signatures.xsl")`new Transform("cleanup/duplicate-method-objects.xsl")`new Transform("cleanup/duplicate-method-bindings.xsl")`new Transform("cleanup/incomplete-step-object.xsl")`new Transform("cleanup/incomplete-step-signature.xsl")`new Transform("cleanup/incomplete-step-result.xsl")`new Transform("cleanup/incomplete-binding.xsl")`new Transform("cleanup/bindings-in-exception.xsl")`new Transform("seal-methods.xsl")`new Transform("sanity/signatures-check.xsl")`new Transform("sanity/types-check.xsl")`new Transform("sanity/seals-check.xsl")`new Transform("sanity/exception-rethrow-check.xsl")`new Transform("sanity/misplaced-failure-check.xsl")`new Transform("sanity/broken-order-of-steps.xsl")`new Transform("sanity/missed-step-numbers.xsl")`new Transform("sanity/too-many-steps.xsl")`new Transform("sanity/empty-re-throws.xsl")`new Transform("sanity/orphan-types.xsl")`new Transform("sanity/undeclared-bindings.xsl")`new Transform("sanity/actor-is-singleton.xsl")`new Transform("step-refs.xsl")`new Transform("methods-in-markdown.xsl")`new Transform("pages-in-html.xsl")`new Transform("count-ambiguity.xsl")`new Transform("find-tbds.xsl")`new Transform("uml/sequence-diagrams.xsl")`new Transform("uml/use-case-diagrams.xsl")`new Transform("uml/class-diagrams.xsl")`new XeFacet.Wrap(new Rules())`new XeFacet.Wrap(new XeFacet.Fixed(Compiler.decor()))`new Transform("renumber.xsl")`new XeFacet.Wrap(spec -> new Directives().xpath("/*").attr("msec"`Long.toString(System.currentTimeMillis() - start)))};" is 1996.,131
+teamed_requs,org.requs,Compiler,compile,Long Statement,The length of the statement "FileUtils.write(new File(this.output`"requs.xml")`new StrictXML(spec`Compiler.SCHEMA).toString()`StandardCharsets.UTF_8);" is 121.,131
+teamed_requs,org.requs,Compiler,copy,Long Statement,The length of the statement "FileUtils.write(new File(this.output`file)`xsl.replace("css-included-here"`IOUtils.toString(this.getClass().getResourceAsStream("requs.css")`StandardCharsets.UTF_8))`StandardCharsets.UTF_8);" is 190.,203
+teamed_requs,org.requs,Compiler,decor,Long Statement,The length of the statement "return new Directives().xpath("/spec").attr("time"`DateFormatUtils.ISO_8601_EXTENDED_DATETIME_FORMAT.format(new Date())).add("requs").add("version").set(Manifests.read("Requs-Version")).up().add("revision").set(Manifests.read("Requs-Revision")).up().add("date").set(Manifests.read("Requs-Date")).up().up();" is 306.,226
+teamed_requs,org.requs,CompilerTest,parsesAllSamples,Long Statement,The length of the statement "final String[] files={"samples/empty-input.xml"`"samples/all-possible-constructs.xml"`"samples/all-possible-mistakes.xml"`"samples/clean-spec.xml"`"samples/exceptions.xml"`"samples/order-of-steps.xml"`"samples/wrong-steps-numbering.xml"};" is 238.,63
+teamed_requs,org.requs,CompilerTest,combinesMultipleFiles,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new XMLDocument(new File(output`"requs.xml")))`XhtmlMatchers.hasXPaths("/spec/files/file[@id='0' and @line='1']"`"/spec/files/file[@id='1' and @line='4']"`"/spec/files/file[@id='2' and @line='7']"`"//mentioned/where[.='0:3']"`"//mentioned/where[.='1:3']"`"//mentioned/where[.='2:4']"`"/spec/errors/error[@file='2' and @line='4']"));" is 377.,86
+teamed_requs,org.requs,CompilerTest,parses,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(srs.toString())`Matchers.describedAs(file`XhtmlMatchers.hasXPaths(xpaths.toArray(new String[0]))));" is 144.,120
+teamed_requs,org.requs,CompilerTest,parses,Long Statement,The length of the statement "MatcherAssert.assertThat(new VerboseProcess(new ProcessBuilder().directory(output).command(CompilerTest.BIN`"-o"`"requs.html"`"requs.xml").start()).stdout()`Matchers.describedAs(file`Matchers.is(Matchers.emptyString())));" is 221.,120
+teamed_requs,org.requs,CompilerTest,parses,Long Statement,The length of the statement "MatcherAssert.assertThat(FileUtils.readFileToString(new File(output`"requs.html")`StandardCharsets.UTF_8)`XhtmlMatchers.hasXPath("//xhtml:body"));" is 146.,120
+teamed_requs,org.requs,CompilerTest,assumeXsltproc,Long Statement,The length of the statement "ver=new VerboseProcess(new ProcessBuilder().command(CompilerTest.BIN`"-version").redirectErrorStream(true)).stdoutQuietly();" is 124.,188
+teamed_requs,org.requs.facet,XsltFuncs,seal,Long Statement,The length of the statement "final Collection<String> parts=Collections2.transform(new XMLDocument(xml).xpath("//*/text()")`input -> StringEscapeUtils.escapeJava(input.replaceAll("\\s+"`" ")));" is 164.,89
+teamed_requs,org.requs.facet,TransformTest,checksSeals,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Transform("sanity/seals-check.xsl").touch(new XMLDocument(StringUtils.join("<spec><method seal='a12ef4'>"`"<id>UC5</id><attributes>"`"<attribute seal='b89e4e'>invalid</attribute>"`"<attribute seal='a12ef4'>valid</attribute>"`"</attributes></method><errors/></spec>"))))`XhtmlMatchers.hasXPaths("/spec/errors[count(error)=1]"`"/spec/errors/error[contains(.`'a12ef4')]"));" is 419.,44
+teamed_requs,org.requs.facet,TransformTest,checksTypes,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Transform("sanity/types-check.xsl").touch(new XMLDocument(StringUtils.join("<spec><types><type><name>User</name>"`"<slots><slot><type>Alpha</type></slot></slots>"`"</type></types><methods><method><bindings>"`"<binding><type>Beta</type></binding>"`"</bindings></method></methods><errors/></spec>"))))`XhtmlMatchers.hasXPaths("/spec/errors[count(error)=2]"`"/spec/errors/error[contains(.`'Alpha')]"));" is 448.,67
+teamed_requs,org.requs.facet,TransformTest,checksSignatures,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Transform("sanity/signatures-check.xsl").touch(new XMLDocument(StringUtils.join("<spec><methods><method><signature>abc</signature>"`"</method><method><steps><step><signature>cde"`"</signature></step></steps></method></methods>"`"<errors/></spec>"))))`XhtmlMatchers.hasXPaths("/spec/errors[count(error)=1 ]"`"/spec/errors/error[contains(.`'cde')]"));" is 398.,90
+teamed_requs,org.requs.facet.sa,Rules,touch,Long Statement,The length of the statement "final Rule[] rules={new LineRule.Wrap(new RegexRule("[^ ] +$"`"trailing space(s) at the end of line"))`new LineRule.Wrap(new RegexRule("[^ ] {2`}"`"avoid two or more consecutive spaces"))`new LineRule.Wrap(new RegexRule(".{81`}"`"avoid lines longer than 80 characters"))`new LineRule.Wrap(new RegexRule("\t"`"avoid TAB characters` use four spaces instead"))`new LineRule.Wrap(new RegexRule("\r"`"don't use Windows line-endings"))`new LineRule.Wrap(new RegexRule("`[^$ \n\r]"`"always use space after comma"))`new LineRule.Wrap(new RegexRule(";[^$ ]"`"always use space after semicolon"))`new LineRule.Wrap(new IndentationRule())`new CascadingRule()};" is 648.,52
+teamed_requs,org.requs.facet.sa,Rules,touch,Long Statement,The length of the statement "dirs.add("error").attr("pos"`Integer.toString(violation.position())).attr("line"`Integer.toString(violation.line())).set(violation.details()).up();" is 147.,52
+teamed_requs,org.requs.facet.sa,CascadingRule,enforce,Complex Conditional,The conditional expression indent > 0 && next > indent && next != indent + 2 is complex.,51
+teamed_requs,org.requs.facet.sa,CascadingRule,enforce,Long Statement,The length of the statement "violations.add(new Violation.Simple(String.format("indented for %d spaces` while %d required: [%s]"`next`indent + 2`lines[idx])`idx + 1`next));" is 143.,51
+teamed_requs,org.requs.facet.sa,CascadingRule,enforce,Magic Number,The method contains a magic number: 2,51
+teamed_requs,org.requs.facet.sa,CascadingRule,enforce,Magic Number,The method contains a magic number: 2,51
+teamed_requs,org.requs.facet.sa,IndentationRule,check,Long Statement,The length of the statement "violations.add(new Violation.Simple(String.format("indented for %d spaces` must be either %d or %d: [%s]"`indent`indent >> 1 << 1`indent + 1 >> 1 << 1`line)`0`indent));" is 168.,50
+teamed_requs,org.requs.facet.sa,IndentationRule,check,Magic Number,The method contains a magic number: 2,50
+teamed_requs,org.requs.facet.sa,LineRuleTest,checksInvalidInput,Long Statement,The length of the statement "MatcherAssert.assertThat(new LineRule.Wrap(new RegexRule("[a-z]+"`"")).enforce("\n\n\nhey").iterator().next().line()`Matchers.equalTo(Tv.FOUR));" is 144.,43
+teamed_requs,org.requs.facet.sa,RulesTest,checksInput,Long Statement,The length of the statement "MatcherAssert.assertThat(new XeFacet.Wrap(new Rules()).touch(new XMLDocument(StringUtils.join("<spec><input>"`"User is\ta &quot;human being&quot;. "`"</input></spec>")))`XhtmlMatchers.hasXPaths("/spec/errors"`"/spec/errors[count(error)>2]"));" is 242.,46
+teamed_requs,org.requs.facet.sa,CascadingRuleTest,checksInvalidInput,Long Statement,The length of the statement "MatcherAssert.assertThat(new CascadingRule().enforce("\n\n\n hey\n three!").iterator().next().line()`Matchers.equalTo(Tv.FIVE));" is 128.,51
+teamed_requs,org.requs.facet.syntax,Errors,syntaxError,Long Parameter List,The method has 6 parameters. ,55
+teamed_requs,org.requs.facet.syntax,Errors,syntaxError,Long Statement,The length of the statement "this.dirs.add("error").attr("type"`"syntax").attr("line"`Integer.toString(line)).attr("pos"`Integer.toString(pos)).set(msg).up();" is 129.,55
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,reportsErrorsFound,Long Statement,The length of the statement "MatcherAssert.assertThat(AntlrFacetTest.parse("User is ?. Site is ?. Employee is a User.")`XhtmlMatchers.hasXPaths("/spec/types[count(type) = 2]"`"//type[name='User']"`"//type[name='Employee' and parents/type='User']"`"/spec/errors[count(error)>2]"`"/spec/errors/error[@type='syntax' and @line='1']"));" is 302.,60
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,compilesComplexSpec,Long Statement,The length of the statement "MatcherAssert.assertThat(AntlrFacetTest.parse(IOUtils.toString(this.getClass().getResourceAsStream("example.req")`StandardCharsets.UTF_8))`XhtmlMatchers.hasXPaths("/spec/errors[not(error)]"`"/spec/types[count(type)=2]"`"/spec/types/type[name='User']"`"/spec/types/type[name='Fraction']"`"//type[name='Fraction']/slots/slot[name='numerator']"`"//type[name='Fraction']/slots/slot[name='denominator']"`"//type[name='Fraction']/info[informal='a math calculator']"`"/spec[count(//method)=1]"`"//method[id='UC1']/attributes[attribute='must']"`String.format("//method[id='UC1']/bindings/binding[name='%s']"`Flow.SELF)));" is 613.,76
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,parsesAllPossibleCases,Long Statement,The length of the statement "MatcherAssert.assertThat(AntlrFacetTest.parse(IOUtils.toString(this.getClass().getResourceAsStream("all-cases.req")`StandardCharsets.UTF_8))`XhtmlMatchers.hasXPath("/spec[not(errors/error)]"));" is 193.,103
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,parsesAllPossibleErrors,Long Statement,The length of the statement "final String[] specs={"\"alpha"`"BrokenA is a 'file'."`"User is a"`"User needs: a as"`"UC1 where"`"UC1 where User"`"UC1 where User sends using"`"UC1 where User sends using File and"`"UC4/2 when \"hello\": 1. \"test\"."`"UC4/2 when \"some problem\": "`"UC4/2 when \""`"UC9.9.2/PERF must"`"UC9.9.2/PERF must \"work\"."};" is 318.,116
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,parsesAllPossibleErrors,Long Statement,The length of the statement "MatcherAssert.assertThat(String.format("The spec can't be parsed: \"%s\""`spec)`AntlrFacetTest.parse(spec)`XhtmlMatchers.hasXPath("/spec/errors"));" is 147.,116
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,parsesAllSamples,Long Statement,The length of the statement "final String[] files={"samples/nfr.xml"`"samples/method.xml"`"samples/types.xml"`"samples/pages.xml"`"samples/informals.xml"`"samples/all-possible-mistakes.xml"};" is 162.,142
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,parsesAllSamples,Long Statement,The length of the statement "MatcherAssert.assertThat(AntlrFacetTest.parse(xml.xpath("/sample/spec/text()").get(0))`XhtmlMatchers.hasXPaths(xpaths.toArray(new String[0])));" is 143.,142
+teamed_requs,org.requs.facet.syntax,AntlrFacetTest,parse,Long Statement,The length of the statement "return XhtmlMatchers.xhtml(new XeFacet.Wrap(new AntlrFacet()).touch(new XMLDocument(new Xembler(new Directives().add("spec").add("input").set(input)).xml())));" is 159.,169
+teamed_requs,org.requs.facet.syntax,SpecParser,makeRuleNames,Long Statement,The length of the statement "return new String[]{"clauses"`"clause"`"class_declaration"`"class_construction"`"slots"`"slot"`"method_declaration"`"signature"`"binding"`"subject"`"alternative_flow_declaration"`"steps"`"step"`"using"`"class_name"`"variable"`"attribute_setting"`"nfr_declaration"`"page_declaration"`"acronym_declaration"`"word"};" is 313.,44
+teamed_requs,org.requs.facet.syntax,SpecParser,makeLiteralNames,Long Statement,The length of the statement "return new String[]{null`"'-'"`"'s'"`"'s?'"`"'!'"`"'('"`"')'"`null`null`null`"':'"`"'/'"`"';'"`"'.'"`"'`'"`null`null`null`null`"'actor'"`"'as'"`"'is'"`"'must'"`"'when'"`"'where'"`"'means'"`"'and'"};" is 198.,54
+teamed_requs,org.requs.facet.syntax,SpecParser,makeSymbolicNames,Long Statement,The length of the statement "return new String[]{null`null`null`null`null`null`null`"SEAL"`"UC_ID"`"FLOW_ID"`"COLON"`"SLASH"`"SEMICOLON"`"DOT"`"COMMA"`"USING"`"A"`"THE"`"FAIL"`"ACTOR"`"AS"`"IS"`"MUST"`"WHEN"`"WHERE"`"MEANS"`"AND"`"INCLUDES"`"ACRONYM"`"CAMEL"`"WORD"`"INFORMAL"`"SPACE"};" is 257.,62
+teamed_requs,org.requs.facet.syntax,SpecParser,clauses,Long Statement,The length of the statement "while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << SEAL) | (1L << UC_ID) | (1L << COLON)| (1L << ACRONYM)| (1L << CAMEL)| (1L << INFORMAL))) != 0)) {" is 153.,153
+teamed_requs,org.requs.facet.syntax,SpecParser,clauses,Magic Number,The method contains a magic number: 47,153
+teamed_requs,org.requs.facet.syntax,SpecParser,clauses,Magic Number,The method contains a magic number: 0x3f,153
+teamed_requs,org.requs.facet.syntax,SpecParser,clauses,Magic Number,The method contains a magic number: 42,153
+teamed_requs,org.requs.facet.syntax,SpecParser,clauses,Magic Number,The method contains a magic number: 43,153
+teamed_requs,org.requs.facet.syntax,SpecParser,clauses,Magic Number,The method contains a magic number: 49,153
+teamed_requs,org.requs.facet.syntax,SpecParser,clauses,Magic Number,The method contains a magic number: 50,153
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Complex Method,Cyclomatic complexity of the method is 10,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 2,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 61,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 52,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 2,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 2,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 53,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 3,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 3,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 54,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 4,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 4,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 55,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 5,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 5,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 56,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 6,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 6,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 57,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 7,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 7,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 58,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 8,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 8,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 59,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 9,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 9,231
+teamed_requs,org.requs.facet.syntax,SpecParser,clause,Magic Number,The method contains a magic number: 60,231
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 4,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 63,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 66,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 68,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 67,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 87,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 70,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 74,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 72,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 76,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 78,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 84,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 80,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Magic Number,The method contains a magic number: 86,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_declaration,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5ea46e79,345
+teamed_requs,org.requs.facet.syntax,SpecParser,class_construction,Magic Number,The method contains a magic number: 6,459
+teamed_requs,org.requs.facet.syntax,SpecParser,class_construction,Magic Number,The method contains a magic number: 89,459
+teamed_requs,org.requs.facet.syntax,SpecParser,class_construction,Magic Number,The method contains a magic number: 92,459
+teamed_requs,org.requs.facet.syntax,SpecParser,class_construction,Magic Number,The method contains a magic number: 93,459
+teamed_requs,org.requs.facet.syntax,SpecParser,class_construction,Magic Number,The method contains a magic number: 94,459
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 8,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 96,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 111,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 0x3f,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 106,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 97,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 99,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 98,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 101,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 103,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 102,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 105,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 108,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Magic Number,The method contains a magic number: 113,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slots,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@47a74bd0,526
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Complex Method,Cyclomatic complexity of the method is 11,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 10,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 114,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 127,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 120,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 125,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 121,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 123,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 149,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 129,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 140,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 130,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 136,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 134,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 138,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 146,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 142,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Magic Number,The method contains a magic number: 148,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6dcdf58b,638
+teamed_requs,org.requs.facet.syntax,SpecParser,slot,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7787a602,638
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Complex Method,Cyclomatic complexity of the method is 23,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Long Method,The method has 191 lines of code.,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Long Statement,The length of the statement "Method method=this.onto.method((((Method_declarationContext)_localctx).UC_ID != null ? ((Method_declarationContext)_localctx).UC_ID.getText() : null));" is 151.,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Long Statement,The length of the statement "Type type=this.onto.type((((Method_declarationContext)_localctx).self != null ? _input.getText(((Method_declarationContext)_localctx).self.start`((Method_declarationContext)_localctx).self.stop) : null));" is 204.,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 12,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 151,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 154,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 155,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 160,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 159,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 163,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 173,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 166,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 169,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 168,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 192,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 175,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 176,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 179,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 178,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 190,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 182,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 183,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 186,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 185,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 197,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 194,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 199,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 200,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 204,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 24,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 2,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 201,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 206,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 24,805
+teamed_requs,org.requs.facet.syntax,SpecParser,method_declaration,Magic Number,The method contains a magic number: 207,805
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 14,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 221,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 213,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 210,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 215,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 0x3f,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 2,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Magic Number,The method contains a magic number: 219,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,signature,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@a2dc92d,1023
+teamed_requs,org.requs.facet.syntax,SpecParser,binding,Magic Number,The method contains a magic number: 16,1099
+teamed_requs,org.requs.facet.syntax,SpecParser,binding,Magic Number,The method contains a magic number: 223,1099
+teamed_requs,org.requs.facet.syntax,SpecParser,binding,Magic Number,The method contains a magic number: 224,1099
+teamed_requs,org.requs.facet.syntax,SpecParser,binding,Magic Number,The method contains a magic number: 225,1099
+teamed_requs,org.requs.facet.syntax,SpecParser,binding,Magic Number,The method contains a magic number: 227,1099
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Magic Number,The method contains a magic number: 18,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Magic Number,The method contains a magic number: 242,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Magic Number,The method contains a magic number: 230,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Magic Number,The method contains a magic number: 232,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Magic Number,The method contains a magic number: 2,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Magic Number,The method contains a magic number: 237,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Magic Number,The method contains a magic number: 238,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,subject,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@77a9ea73,1160
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Long Identifier,The length of the field RULE_alternative_flow_declaration is 33.,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Long Statement,The length of the statement "Method method=this.onto.method((((Alternative_flow_declarationContext)_localctx).UC_ID != null ? ((Alternative_flow_declarationContext)_localctx).UC_ID.getText() : null));" is 171.,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Long Statement,The length of the statement "Flow flow=method.step(Integer.parseInt((((Alternative_flow_declarationContext)_localctx).FLOW_ID != null ? ((Alternative_flow_declarationContext)_localctx).FLOW_ID.getText() : null))).exception((((Alternative_flow_declarationContext)_localctx).INFORMAL != null ? ((Alternative_flow_declarationContext)_localctx).INFORMAL.getText() : null));" is 340.,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 20,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 244,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 245,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 246,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 247,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 248,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 249,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,alternative_flow_declaration,Magic Number,The method contains a magic number: 253,1233
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 22,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 265,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 255,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 2,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 257,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 262,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 258,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 259,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Magic Number,The method contains a magic number: 264,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,steps,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@754a38a0,1299
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Complex Method,Cyclomatic complexity of the method is 22,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 24,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 267,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 268,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 318,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 271,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 278,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 30,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 2,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 274,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 280,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 30,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 281,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 288,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 284,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 294,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 32,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 2,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 290,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 296,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 32,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 298,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 297,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 300,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 301,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 302,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 311,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 307,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 308,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 313,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 324,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 320,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Magic Number,The method contains a magic number: 326,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,step,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3f3737bd,1400
+teamed_requs,org.requs.facet.syntax,SpecParser,using,Magic Number,The method contains a magic number: 26,1589
+teamed_requs,org.requs.facet.syntax,SpecParser,using,Magic Number,The method contains a magic number: 327,1589
+teamed_requs,org.requs.facet.syntax,SpecParser,using,Magic Number,The method contains a magic number: 328,1589
+teamed_requs,org.requs.facet.syntax,SpecParser,using,Magic Number,The method contains a magic number: 336,1589
+teamed_requs,org.requs.facet.syntax,SpecParser,using,Magic Number,The method contains a magic number: 331,1589
+teamed_requs,org.requs.facet.syntax,SpecParser,using,Magic Number,The method contains a magic number: 332,1589
+teamed_requs,org.requs.facet.syntax,SpecParser,class_name,Long Statement,The length of the statement "((Class_nameContext)_localctx).ret=(((Class_nameContext)_localctx).CAMEL != null ? ((Class_nameContext)_localctx).CAMEL.getText() : null);" is 138.,1647
+teamed_requs,org.requs.facet.syntax,SpecParser,class_name,Magic Number,The method contains a magic number: 28,1647
+teamed_requs,org.requs.facet.syntax,SpecParser,class_name,Magic Number,The method contains a magic number: 338,1647
+teamed_requs,org.requs.facet.syntax,SpecParser,variable,Long Statement,The length of the statement "((VariableContext)_localctx).ret=(((VariableContext)_localctx).word != null ? _input.getText(((VariableContext)_localctx).word.start`((VariableContext)_localctx).word.stop) : null);" is 181.,1689
+teamed_requs,org.requs.facet.syntax,SpecParser,variable,Magic Number,The method contains a magic number: 30,1689
+teamed_requs,org.requs.facet.syntax,SpecParser,variable,Magic Number,The method contains a magic number: 341,1689
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Long Statement,The length of the statement "Method method=this.onto.method((((Attribute_settingContext)_localctx).UC_ID != null ? ((Attribute_settingContext)_localctx).UC_ID.getText() : null));" is 149.,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Long Statement,The length of the statement "method.attribute((((Attribute_settingContext)_localctx).word != null ? _input.getText(((Attribute_settingContext)_localctx).word.start`((Attribute_settingContext)_localctx).word.stop) : null)`seal);" is 198.,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 32,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 345,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 344,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 347,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 348,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 349,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 351,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 350,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,attribute_setting,Magic Number,The method contains a magic number: 353,1737
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Long Statement,The length of the statement "Method method=this.onto.method((((Nfr_declarationContext)_localctx).UC_ID != null ? ((Nfr_declarationContext)_localctx).UC_ID.getText() : null));" is 145.,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Long Statement,The length of the statement "method.nfr((((Nfr_declarationContext)_localctx).ACRONYM != null ? ((Nfr_declarationContext)_localctx).ACRONYM.getText() : null)).explain((((Nfr_declarationContext)_localctx).INFORMAL != null ? ((Nfr_declarationContext)_localctx).INFORMAL.getText() : null));" is 257.,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Magic Number,The method contains a magic number: 34,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Magic Number,The method contains a magic number: 356,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Magic Number,The method contains a magic number: 357,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Magic Number,The method contains a magic number: 358,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Magic Number,The method contains a magic number: 359,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,nfr_declaration,Magic Number,The method contains a magic number: 360,1819
+teamed_requs,org.requs.facet.syntax,SpecParser,page_declaration,Long Statement,The length of the statement "Page page=this.onto.page((((Page_declarationContext)_localctx).CAMEL != null ? ((Page_declarationContext)_localctx).CAMEL.getText() : null));" is 141.,1873
+teamed_requs,org.requs.facet.syntax,SpecParser,page_declaration,Long Statement,The length of the statement "page.explain((((Page_declarationContext)_localctx).INFORMAL != null ? ((Page_declarationContext)_localctx).INFORMAL.getText() : null));" is 135.,1873
+teamed_requs,org.requs.facet.syntax,SpecParser,page_declaration,Magic Number,The method contains a magic number: 36,1873
+teamed_requs,org.requs.facet.syntax,SpecParser,page_declaration,Magic Number,The method contains a magic number: 363,1873
+teamed_requs,org.requs.facet.syntax,SpecParser,page_declaration,Magic Number,The method contains a magic number: 364,1873
+teamed_requs,org.requs.facet.syntax,SpecParser,page_declaration,Magic Number,The method contains a magic number: 365,1873
+teamed_requs,org.requs.facet.syntax,SpecParser,acronym_declaration,Long Statement,The length of the statement "Acronym acronym=this.onto.acronym((((Acronym_declarationContext)_localctx).ACRONYM != null ? ((Acronym_declarationContext)_localctx).ACRONYM.getText() : null));" is 160.,1923
+teamed_requs,org.requs.facet.syntax,SpecParser,acronym_declaration,Long Statement,The length of the statement "acronym.explain((((Acronym_declarationContext)_localctx).INFORMAL != null ? ((Acronym_declarationContext)_localctx).INFORMAL.getText() : null));" is 144.,1923
+teamed_requs,org.requs.facet.syntax,SpecParser,acronym_declaration,Magic Number,The method contains a magic number: 38,1923
+teamed_requs,org.requs.facet.syntax,SpecParser,acronym_declaration,Magic Number,The method contains a magic number: 368,1923
+teamed_requs,org.requs.facet.syntax,SpecParser,acronym_declaration,Magic Number,The method contains a magic number: 369,1923
+teamed_requs,org.requs.facet.syntax,SpecParser,acronym_declaration,Magic Number,The method contains a magic number: 370,1923
+teamed_requs,org.requs.facet.syntax,SpecParser,word,Magic Number,The method contains a magic number: 40,1971
+teamed_requs,org.requs.facet.syntax,SpecParser,word,Magic Number,The method contains a magic number: 373,1971
+teamed_requs,org.requs.facet.syntax,SpecParser,word,Magic Number,The method contains a magic number: 0x3f,1971
+teamed_requs,org.requs.facet.syntax,SpecLexer,makeRuleNames,Long Statement,The length of the statement "return new String[]{"T__0"`"T__1"`"T__2"`"T__3"`"T__4"`"T__5"`"SEAL"`"UC_ID"`"FLOW_ID"`"COLON"`"SLASH"`"SEMICOLON"`"DOT"`"COMMA"`"USING"`"A"`"THE"`"FAIL"`"ACTOR"`"AS"`"IS"`"MUST"`"WHEN"`"WHERE"`"MEANS"`"AND"`"INCLUDES"`"ACRONYM"`"CAMEL"`"WORD"`"INFORMAL"`"SPACE"};" is 264.,45
+teamed_requs,org.requs.facet.syntax,SpecLexer,makeLiteralNames,Long Statement,The length of the statement "return new String[]{null`"'-'"`"'s'"`"'s?'"`"'!'"`"'('"`"')'"`null`null`null`"':'"`"'/'"`"';'"`"'.'"`"'`'"`null`null`null`null`"'actor'"`"'as'"`"'is'"`"'must'"`"'when'"`"'where'"`"'means'"`"'and'"};" is 198.,55
+teamed_requs,org.requs.facet.syntax,SpecLexer,makeSymbolicNames,Long Statement,The length of the statement "return new String[]{null`null`null`null`null`null`null`"SEAL"`"UC_ID"`"FLOW_ID"`"COLON"`"SLASH"`"SEMICOLON"`"DOT"`"COMMA"`"USING"`"A"`"THE"`"FAIL"`"ACTOR"`"AS"`"IS"`"MUST"`"WHEN"`"WHERE"`"MEANS"`"AND"`"INCLUDES"`"ACRONYM"`"CAMEL"`"WORD"`"INFORMAL"`"SPACE"};" is 257.,63
+teamed_requs,org.requs.facet.syntax,SpecLexer,action,Magic Number,The method contains a magic number: 30,129
+teamed_requs,org.requs.facet.syntax,SpecLexer,action,Magic Number,The method contains a magic number: 31,129
+teamed_requs,org.requs.facet.syntax.ontology,XeFlow,step,Long Statement,The length of the statement "this.dirs.xpath(this.start).strict(1).addIf("steps").xpath(this.start).xpath(String.format("steps[not(step/number=%d)]"`number)).add("step").add("number").set(Integer.toString(number));" is 185.,73
+teamed_requs,org.requs.facet.syntax.ontology,XeFlow,binding,Long Statement,The length of the statement "this.dirs.xpath(this.start).strict(1).addIf("bindings").up().xpath(String.format("bindings[not(binding[name='%s' and type=%s])]"`name`XeOntology.escapeXPath(type))).add("binding").add("name").set(name).up().add("type").set(type);" is 229.,85
+teamed_requs,org.requs.facet.syntax.ontology,XeStep,exception,Long Statement,The length of the statement "this.dirs.xpath(this.start).strict(1).addIf("exceptions").xpath(this.start).xpath(String.format("exceptions[not(exception/when=%s)]"`XeOntology.escapeXPath(text))).add("exception").add("when").set(text);" is 203.,79
+teamed_requs,org.requs.facet.syntax.ontology,XeOntology,type,Long Statement,The length of the statement "this.root("types").xpath(String.format("/spec/types[not(type/name=%s)]"`XeOntology.escapeXPath(name))).add("type").add("name").set(name);" is 137.,58
+teamed_requs,org.requs.facet.syntax.ontology,XeOntology,method,Long Statement,The length of the statement "this.root("methods").xpath(String.format("/spec/methods[not(method/id=%s)]"`XeOntology.escapeXPath(name))).add("method").add("id").set(name);" is 141.,77
+teamed_requs,org.requs.facet.syntax.ontology,XeOntology,page,Long Statement,The length of the statement "this.root("pages").xpath(String.format("/spec/pages[not(page/title=%s)]"`XeOntology.escapeXPath(name))).add("page").add("title").set(name);" is 139.,96
+teamed_requs,org.requs.facet.syntax.ontology,XeOntology,acronym,Long Statement,The length of the statement "this.root("acronyms").xpath(String.format("/spec/acronyms[not(acronym/name=%s)]"`XeOntology.escapeXPath(name))).add("acronym").add("name").set(name);" is 149.,115
+teamed_requs,org.requs.facet.syntax.ontology,XeOntology,escapeXPath,Magic Number,The method contains a magic number: 2,139
+teamed_requs,org.requs.facet.syntax.ontology,XeMethod,attribute,Long Statement,The length of the statement "this.dirs.xpath(this.start).strict(1).addIf("attributes").xpath(String.format("%s/attributes[not(attribute=%s)]"`this.start`XeOntology.escapeXPath(name))).add("attribute").set(name).xpath(String.format("%s/attributes/attribute[.=%s]"`this.start`XeOntology.escapeXPath(name))).strict(1).attr("seal"`seal);" is 304.,85
+teamed_requs,org.requs.facet.syntax.ontology,XeMethod,nfr,Long Statement,The length of the statement "this.dirs.xpath(this.start).strict(1).addIf("nfrs").strict(1).xpath(String.format("%s/nfrs[not(nfr/id=%s)]"`this.start`XeOntology.escapeXPath(name))).add("nfr").add("id").set(name);" is 181.,107
+teamed_requs,org.requs.facet.syntax.ontology,XeSlotTest,manipulatesWithProperty,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/p/info"`"/p/info[informal='first text']"`"/p/info[informal='second text']"`"/p[type='Employee']"`"/p/mentioned[where='2']"`"/p/mentioned[where='1']"));" is 247.,44
+teamed_requs,org.requs.facet.syntax.ontology,XeSlotTest,manipulatesWithProperty,Magic Number,The method contains a magic number: 2,44
+teamed_requs,org.requs.facet.syntax.ontology,XeFlowTest,manipulatesWithBindings,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/f/bindings/binding[name='emp' and type='Employee']"`"/f/bindings/binding[name='one' and type='One']"));" is 199.,45
+teamed_requs,org.requs.facet.syntax.ontology,XeFlowTest,avoidsDuplicateBindings,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/f1/bindings[count(binding)=1]"`"/f1/bindings/binding[name='a' and type='alpha']"));" is 179.,60
+teamed_requs,org.requs.facet.syntax.ontology,XeMethodTest,manipulatesWithMethod,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/m[signature='\"informal one\"']"`"/m[result='emp1']"`"/m[object='myself']"`"/m/bindings/binding[name='emp' and type='Employee']"`"/m/bindings/binding[name='one' and type='One']"`"/m/mentioned[where='2']"`"/m/mentioned[where='1']"));" is 328.,44
+teamed_requs,org.requs.facet.syntax.ontology,XeMethodTest,manipulatesWithMethod,Magic Number,The method contains a magic number: 2,44
+teamed_requs,org.requs.facet.syntax.ontology,XeMethodTest,avoidsDuplicateSteps,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPath("/mtd/steps[count(step)=1]"));" is 123.,69
+teamed_requs,org.requs.facet.syntax.ontology,XeMethodTest,setsAttributes,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/x/attributes[count(attribute)=2]"`"/x/attributes[attribute='attr-1' and attribute='another']"`"/x/attributes/attribute[.='attr-1' and @seal='ffa7ed']"));" is 249.,81
+teamed_requs,org.requs.facet.syntax.ontology,XeMethodTest,createsNfr,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/xx/nfrs[count(nfr)=2]"`"/xx/nfrs/nfr[id='PERF']"`"/xx/nfrs/nfr[id='UX']"));" is 171.,99
+teamed_requs,org.requs.facet.syntax.ontology,XeSignatureTest,signsMethod,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/s[signature='\"informal one\"']"));" is 131.,44
+teamed_requs,org.requs.facet.syntax.ontology,XeTypeTest,manipulatesWithType,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/t/info"`"/t/info[informal='first text']"`"/t/info[informal='second text']"`"/t/parents[type='Root']"`"/t/mentioned[where='2']"`"/t/mentioned[where='1']"`"/t/slots/slot[type='Emp']"));" is 279.,44
+teamed_requs,org.requs.facet.syntax.ontology,XeTypeTest,manipulatesWithType,Magic Number,The method contains a magic number: 2,44
+teamed_requs,org.requs.facet.syntax.ontology,XeOntologyTest,manipulatesWithTypesAndUseCases,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(onto).xml())`XhtmlMatchers.hasXPaths("/spec"`"/spec/types/type[name='First']"`"/spec/types/type[name='Second']"));" is 171.,43
+teamed_requs,org.requs.facet.syntax.ontology,XeOntologyTest,avoidsDuplication,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(onto).xml())`XhtmlMatchers.hasXPath("/spec/types[count(type)=1]"));" is 124.,61
+teamed_requs,org.requs.facet.syntax.ontology,XeOntologyTest,avoidsDuplicationOfMethods,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(onto).xml())`XhtmlMatchers.hasXPath("/spec/methods[count(method)=1]"));" is 128.,73
+teamed_requs,org.requs.facet.syntax.ontology,XeStepTest,manipulatesWithSteps,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(new Xembler(dirs).xml())`XhtmlMatchers.hasXPaths("/s[result='data']"`"/s[object='boom']"`"/s/args[count(arg)=2]"`"/s/args[arg='file']"`"/s/args[arg='document']"`"/s[signature='\"do something\"']"`"/s/exceptions/exception[when='division by zero']"`"/s/exceptions/exception/steps/step[signature='hey!']"));" is 349.,44
+teamed_requs,org.requs.facet.syntax.ontology,XeStepTest,manipulatesWithSteps,Magic Number,The method contains a magic number: 2,44
+teamed_requs,org.requs.facet.uml,PlantTest,buildsSvg,Long Statement,The length of the statement "MatcherAssert.assertThat(XhtmlMatchers.xhtml(Plant.svg("@startuml\nBob -> Alice : hello\n@enduml\n"))`XhtmlMatchers.hasXPath("//svg:g"));" is 137.,45
+teamed_requs,org.requs.maven,CompileMojo,execute,Long Statement,The length of the statement "Logger.error(this`"%s[%s:%s] %s"`srs.xpath(String.format("/spec/files/file[@id='%d']/text()"`Integer.parseInt(error.xpath("@file").get(0)))).get(0).substring(prefix)`error.xpath("@line").get(0)`error.xpath("@pos").get(0)`error.xpath("text()").get(0));" is 251.,87
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Complex Method,Cyclomatic complexity of the method is 11,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 2,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 3,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 4,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 5,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 2,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 3,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 4,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Magic Number,The method contains a magic number: 5,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@337348de,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,startSection,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7c315b7c,92
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,endSection,Magic Number,The method contains a magic number: 2,174
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,endSection,Magic Number,The method contains a magic number: 3,174
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,endSection,Magic Number,The method contains a magic number: 4,174
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,endSection,Magic Number,The method contains a magic number: 5,174
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,endSection,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4e9eb9b6,174
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,applyPattern,Complex Conditional,The conditional expression lastComma != -1 && lastSemi != -1 && lastComma < lastSemi is complex.,593
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,applyPattern,Complex Conditional,The conditional expression ch == '\'' && !inQuote && braceStack == 0 is complex.,593
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,applyPattern,Complex Method,Cyclomatic complexity of the method is 19,593
+teamed_requs,org.apache.maven.reporting,AbstractMavenReportRenderer,applyPattern,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@27294098,593
+teamed_requs,org.apache.maven.reporting,AbstractMavenReport,generate,Long Statement,The length of the statement "getLog().info("This report cannot be generated as part of the current build. " + "The report name should be referenced in this line of output.");" is 145.,229

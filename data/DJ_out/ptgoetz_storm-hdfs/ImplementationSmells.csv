@@ -1,0 +1,47 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileBolt,createOutputFile,Long Statement,The length of the statement "Path p=new Path(this.fsUrl + this.fileNameFormat.getPath()`this.fileNameFormat.getName(this.rotation`System.currentTimeMillis()));" is 130.,132
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileBolt,createOutputFile,Long Statement,The length of the statement "this.writer=SequenceFile.createWriter(this.hdfsConfig`SequenceFile.Writer.file(p)`SequenceFile.Writer.keyClass(this.format.keyClass())`SequenceFile.Writer.valueClass(this.format.valueClass())`SequenceFile.Writer.compression(this.compressionType`this.codecFactory.getCodecByName(this.compressionCodec)));" is 303.,132
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,main,Long Statement,The length of the statement "HdfsBolt bolt=new HdfsBolt().withConfigKey("hdfs.config").withFsUrl(args[0]).withFileNameFormat(fileNameFormat).withRecordFormat(format).withRotationPolicy(rotationPolicy).withSyncPolicy(syncPolicy).addRotationAction(new MoveFileAction().toDestination("/dest2/"));" is 264.,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,main,Magic Number,The method contains a magic number: 1000,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,main,Magic Number,The method contains a magic number: 4,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,main,Magic Number,The method contains a magic number: 2,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,main,Magic Number,The method contains a magic number: 120,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,main,Magic Number,The method contains a magic number: 3,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,waitForSeconds,Empty catch clause,The method has an empty catch block.,117
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,HdfsFileTopology,waitForSeconds,Magic Number,The method contains a magic number: 1000,117
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,main,Long Statement,The length of the statement "SequenceFileBolt bolt=new SequenceFileBolt().withFsUrl(args[0]).withFileNameFormat(fileNameFormat).withSequenceFormat(format).withRotationPolicy(rotationPolicy).withSyncPolicy(syncPolicy).withCompressionType(SequenceFile.CompressionType.RECORD).withCompressionCodec("deflate").addRotationAction(new MoveFileAction().toDestination("/dest/"));" is 341.,53
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,main,Magic Number,The method contains a magic number: 1000,53
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,main,Magic Number,The method contains a magic number: 5.0f,53
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,main,Magic Number,The method contains a magic number: 4,53
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,main,Magic Number,The method contains a magic number: 120,53
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,main,Magic Number,The method contains a magic number: 2,53
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,waitForSeconds,Empty catch clause,The method has an empty catch block.,106
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.bolt,SequenceFileTopology,waitForSeconds,Magic Number,The method contains a magic number: 1000,106
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Long Statement,The length of the statement "FixedBatchSpout spout=new FixedBatchSpout(new Fields("sentence"`"key")`1000`new Values("the cow jumped over the moon"`1l)`new Values("the man went to the store and bought some candy"`2l)`new Values("four score and seven years ago"`3l)`new Values("how many apples can you eat"`4l)`new Values("to be or not to be the person"`5l));" is 328.,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Long Statement,The length of the statement "FileNameFormat fileNameFormat=new DefaultFileNameFormat().withPath("/trident").withPrefix("trident").withExtension(".seq");" is 123.,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Long Statement,The length of the statement "HdfsState.Options seqOpts=new HdfsState.SequenceFileOptions().withFileNameFormat(fileNameFormat).withSequenceFormat(new DefaultSequenceFormat("key"`"sentence")).withRotationPolicy(rotationPolicy).withFsUrl(hdfsUrl).addRotationAction(new MoveFileAction().toDestination("/dest2/"));" is 280.,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Magic Number,The method contains a magic number: 1000,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Magic Number,The method contains a magic number: 2l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Magic Number,The method contains a magic number: 3l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Magic Number,The method contains a magic number: 4l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Magic Number,The method contains a magic number: 5l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,buildTopology,Magic Number,The method contains a magic number: 5.0f,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,main,Magic Number,The method contains a magic number: 5,56
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,main,Magic Number,The method contains a magic number: 120,56
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,main,Magic Number,The method contains a magic number: 1000,56
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,main,Magic Number,The method contains a magic number: 2,56
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentSequenceTopology,main,Magic Number,The method contains a magic number: 3,56
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Long Statement,The length of the statement "FixedBatchSpout spout=new FixedBatchSpout(new Fields("sentence"`"key")`1000`new Values("the cow jumped over the moon"`1l)`new Values("the man went to the store and bought some candy"`2l)`new Values("four score and seven years ago"`3l)`new Values("how many apples can you eat"`4l)`new Values("to be or not to be the person"`5l));" is 328.,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Long Statement,The length of the statement "FileNameFormat fileNameFormat=new DefaultFileNameFormat().withPath("/trident").withPrefix("trident").withExtension(".txt");" is 123.,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Long Statement,The length of the statement "HdfsState.Options options=new HdfsState.HdfsFileOptions().withFileNameFormat(fileNameFormat).withRecordFormat(recordFormat).withRotationPolicy(rotationPolicy).withFsUrl(hdfsUrl);" is 178.,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Magic Number,The method contains a magic number: 1000,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Magic Number,The method contains a magic number: 2l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Magic Number,The method contains a magic number: 3l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Magic Number,The method contains a magic number: 4l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Magic Number,The method contains a magic number: 5l,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,buildTopology,Magic Number,The method contains a magic number: 5.0f,23
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,main,Magic Number,The method contains a magic number: 5,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,main,Magic Number,The method contains a magic number: 120,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,main,Magic Number,The method contains a magic number: 1000,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,main,Magic Number,The method contains a magic number: 2,58
+ptgoetz_storm-hdfs,org.apache.storm.hdfs.trident,TridentFileTopology,main,Magic Number,The method contains a magic number: 3,58

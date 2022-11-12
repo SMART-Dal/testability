@@ -1,0 +1,217 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormat,setupInput,Long Statement,The length of the statement "final Writer writer=SequenceFile.createWriter(FileContext.getFileContext(job.getConfiguration())`job.getConfiguration()`inputPath`NullWritable.class`clazz`CompressionType.NONE`CODEC`new Metadata()`EnumSet.of(CreateFlag.CREATE)`DUMMY_VAR_ARGS);" is 243.,123
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormat,doSetupInput,Long Parameter List,The method has 6 parameters. ,148
+Conductor_kangaroo,com.conductor.hadoop,DelegatingRecordReader,DelegatingRecordReader,Long Statement,The length of the statement "InputFormat<K`V> inputFormat=(InputFormat<K`V>)ReflectionUtils.newInstance(taggedInputSplit.getInputFormatClass()`context.getConfiguration());" is 142.,30
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testSetupInput,Magic Number,The method contains a magic number: 2,29
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testSetupInput,Magic Number,The method contains a magic number: 2,29
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testSetupInput,Magic Number,The method contains a magic number: 2,29
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Long Statement,The length of the statement "when(reader.next(any(NullWritable.class)`any(Text.class))).thenReturn(true).thenReturn(true).thenReturn(true).thenReturn(false);" is 128.,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 100,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 10,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 2,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 30l,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 60l,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 2,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 30,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 30,64
+Conductor_kangaroo,com.conductor.hadoop,WritableValueInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 70,64
+Conductor_kangaroo,com.conductor.hadoop.compress,SnappyFramedCodec,createOutputStream,Long Statement,The length of the statement "return new OStreamDelegatingCompressorStream(new SnappyFramedOutputStream(out`conf.getInt(COMPRESSION_BLOCK_SIZE_CONF`SnappyFramedOutputStream.DEFAULT_BLOCK_SIZE)`SnappyFramedOutputStream.DEFAULT_MIN_COMPRESSION_RATIO));" is 220.,53
+Conductor_kangaroo,com.conductor.s3,S3HadoopUtils,getKeyFromPath,Complex Conditional,The conditional expression Strings.isNullOrEmpty(path) || !path.startsWith("s3:") && !path.startsWith("s3n:") is complex.,70
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtils,apply,Long Statement,The length of the statement "return new org.apache.hadoop.mapreduce.lib.input.FileSplit(split.getPath()`split.getStart()`split.getLength()`S3_SPLIT_HOST);" is 125.,63
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtils,getFileStatuses,Long Statement,The length of the statement "final ListObjectsRequest req=new ListObjectsRequest().withMaxKeys(Integer.MAX_VALUE).withBucketName(bucket).withPrefix(prefix);" is 127.,71
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtils,getFileStatuses,Long Statement,The length of the statement "for (ObjectListing listing=s3Client.listObjects(req); listing.getObjectSummaries().size() > 0; listing=s3Client.listNextBatchOfObjects(listing)) {" is 146.,71
+Conductor_kangaroo,com.conductor.s3,S3OptimizedFileInputFormat,listStatus,Long Statement,The length of the statement "final long blockSize=job.getConfiguration().getLong(S3NativeFileSystemConfigKeys.S3_NATIVE_BLOCK_SIZE_KEY`S3NativeFileSystemConfigKeys.S3_NATIVE_BLOCK_SIZE_DEFAULT);" is 165.,46
+Conductor_kangaroo,com.conductor.s3,S3OptimizedFileInputFormatMRV1,listStatus,Long Statement,The length of the statement "final long blockSize=job.getLong(S3NativeFileSystemConfigKeys.S3_NATIVE_BLOCK_SIZE_KEY`S3NativeFileSystemConfigKeys.S3_NATIVE_BLOCK_SIZE_DEFAULT);" is 146.,45
+Conductor_kangaroo,com.conductor.s3,S3OptimizedFileInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 100,45
+Conductor_kangaroo,com.conductor.s3,S3OptimizedFileInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 100,45
+Conductor_kangaroo,com.conductor.s3,S3HadoopUtilsTest,testGetPathPrefixFromPath,Long Statement,The length of the statement "assertEquals("a/very/long/path/to/something"`S3HadoopUtils.getKeyFromPath("s3n://bucket-name/a/very/long/path/to/something"));" is 126.,19
+Conductor_kangaroo,com.conductor.s3,S3HadoopUtilsTest,testGetPathPrefixFromPath,Long Statement,The length of the statement "assertEquals("a/very/long/path/to/something"`S3HadoopUtils.getKeyFromPath("s3://bucket-name/a/very/long/path/to/something"));" is 125.,19
+Conductor_kangaroo,com.conductor.s3,S3HadoopUtilsTest,testGetPathPrefixFromPath,Long Statement,The length of the statement "assertEquals("a/very/long/path/to/something/"`S3HadoopUtils.getKeyFromPath("s3://bucket-name/a/very/long/path/to/something/"));" is 127.,19
+Conductor_kangaroo,com.conductor.s3,S3OptimizedFileInputFormatMRV1Test,testGetSplits,Magic Number,The method contains a magic number: 100,34
+Conductor_kangaroo,com.conductor.s3,S3OptimizedFileInputFormatMRV1Test,testGetSplits,Magic Number,The method contains a magic number: 100,34
+Conductor_kangaroo,com.conductor.s3,S3OptimizedFileInputFormatMRV1Test,testGetSplits,Magic Number,The method contains a magic number: 10,34
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Long Statement,The length of the statement "final List<FileStatus> result=S3InputFormatUtils.getFileStatuses(client`100`new Path("s3n://my-bucket/first/path")`new Path("s3n://my-bucket/second/path"));" is 156.,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 999,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 99,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 888,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 88,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 777,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 77,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 666,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 66,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 555,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 55,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 444,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 44,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 100,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 2,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 3,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 100l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 999l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 99l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 100l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 888l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 88l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 2,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 100l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 777l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testGetFileStatuses,Magic Number,The method contains a magic number: 77l,27
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Long Statement,The length of the statement "final List<InputSplit> inputSplits=S3InputFormatUtils.convertToInputSplitsMRV1(Lists.newArrayList(fs1`fs2`fs3`fs4)`5`800);" is 122.,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 999l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 1000l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 99l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 880l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 1000l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 88l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 777l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 1000l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 77l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 4l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 1000l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 77l,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 5,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 800,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 5,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 800,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 800,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 199,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 2,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 880,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 3,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 777,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 4,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testConvertToInputSplits,Magic Number,The method contains a magic number: 4,129
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testSplitConverter,Long Statement,The length of the statement "final org.apache.hadoop.mapreduce.lib.input.FileSplit v2Split=(org.apache.hadoop.mapreduce.lib.input.FileSplit)S3InputFormatUtils.SPLIT_CONVERTER.apply(v1Split);" is 161.,167
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testSplitConverter,Magic Number,The method contains a magic number: 800,167
+Conductor_kangaroo,com.conductor.s3,S3InputFormatUtilsTest,testSplitConverter,Magic Number,The method contains a magic number: 800,167
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormat,getInputSplits,Long Statement,The length of the statement "final List<Long> offsets=getOffsets(consumers.get(broker)`topic`partition.getPartId()`zk.getLastCommit(group`partition)`getIncludeOffsetsAfterTimestamp(conf)`getMaxSplitsPerPartition(conf));" is 190.,152
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormat,getOffsets,Long Parameter List,The method has 6 parameters. ,205
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormat,getZkConnectionTimeoutMs,Long Identifier,The length of the field DEFAULT_ZK_CONNECTION_TIMEOUT_MS is 32.,312
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormat,getIncludeOffsetsAfterTimestamp,Long Identifier,The length of the field DEFAULT_INCLUDE_OFFSETS_AFTER_TIMESTAMP is 39.,410
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormat,getMaxSplitsPerPartition,Long Identifier,The length of the field DEFAULT_MAX_SPLITS_PER_PARTITION is 32.,437
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplit,toString,Long Statement,The length of the statement "return String.format("%s:%d:%s_%d[%d` %d]"`partition.getBroker().getHost()`partition.getBroker().getPort()`partition.getTopic()`partition.getPartId()`startOffset`endOffset);" is 173.,113
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplit,hashCode,Magic Number,The method contains a magic number: 31,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplit,hashCode,Magic Number,The method contains a magic number: 32,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplit,hashCode,Magic Number,The method contains a magic number: 31,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplit,hashCode,Magic Number,The method contains a magic number: 32,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplit,hashCode,Magic Number,The method contains a magic number: 31,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReader,continueItr,Long Statement,The length of the statement "final FetchRequest request=new FetchRequest(split.getPartition().getTopic()`split.getPartition().getPartId()`currentOffset`theFetchSize);" is 137.,156
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReader,getConsumer,Long Statement,The length of the statement "return new SimpleConsumer(split.getPartition().getBroker().getHost()`split.getPartition().getBroker().getPort()`getKafkaSocketTimeoutMs(conf)`getKafkaBufferSizeBytes(conf));" is 173.,212
+Conductor_kangaroo,com.conductor.kafka.hadoop,MultipleKafkaInputFormat,warnOnDuplicateTopicConsumers,Long Statement,The length of the statement "LOG.warn(format("Found duplicate consumer group '%s' consuming the same topic '%s'! " + "This may cause non-deterministic behavior if you commit your offsets for this consumer group!"`topicConf.getConsumerGroup()`topicConf.getTopic()));" is 236.,89
+Conductor_kangaroo,com.conductor.kafka.hadoop,MultipleKafkaInputFormat,createRecordReader,Long Statement,The length of the statement "final TaskAttemptContext taskAttemptContextClone=new TaskAttemptContextImpl(taggedInputSplit.getConf()`context.getTaskAttemptID());" is 131.,103
+Conductor_kangaroo,com.conductor.kafka.hadoop,MultipleKafkaInputFormat,getTopics,Magic Number,The method contains a magic number: 2,116
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilder,configureJob,Complex Method,Cyclomatic complexity of the method is 12,108
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilder,setSequenceFileOutputFormat,Long Statement,The length of the statement "return configureOutput(outputPath`SequenceFileOutputFormat.class`BytesWritable.class`BytesWritable.class`SupportedOutputFormat.SEQUENCE_FILE);" is 142.,401
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilder,configureOutput,Long Parameter List,The method has 5 parameters. ,429
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilder,validateSettings,Complex Conditional,The conditional expression getOutputFormatPath() != null && (getOutputFormatPath().startsWith("s3://") || getOutputFormatPath().startsWith("s3n://")) && !usingS3() is complex.,474
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilder,validateSettings,Long Statement,The length of the statement "if (getOutputFormatPath() != null && (getOutputFormatPath().startsWith("s3://") || getOutputFormatPath().startsWith("s3n://")) && !usingS3()) {" is 143.,474
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,setUp,Magic Number,The method contains a magic number: 1000,62
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,setUp,Magic Number,The method contains a magic number: 4096,62
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,setUp,Magic Number,The method contains a magic number: 2048,62
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,setUp,Magic Number,The method contains a magic number: 9092,62
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,setUp,Magic Number,The method contains a magic number: 100,62
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testInitialize,Magic Number,The method contains a magic number: 9092,82
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testInitialize,Magic Number,The method contains a magic number: 1000,82
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testInitialize,Magic Number,The method contains a magic number: 4096,82
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testInitialize,Magic Number,The method contains a magic number: 2048,82
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testInitialize,Magic Number,The method contains a magic number: 100,82
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testNextKeyValue,Magic Number,The method contains a magic number: 100l,100
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testNextKeyValue,Magic Number,The method contains a magic number: 100l,100
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testNextKeyValue,Magic Number,The method contains a magic number: 100l,100
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testContinueItr,Magic Number,The method contains a magic number: 100,133
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testContinueItr,Magic Number,The method contains a magic number: 100l,133
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testContinueItr,Magic Number,The method contains a magic number: 100,133
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,answer,Magic Number,The method contains a magic number: 100,138
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testContinueItrMultipleIterations,Magic Number,The method contains a magic number: 4097,164
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testContinueItrMultipleIterations,Magic Number,The method contains a magic number: 2048l,164
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testGetProgress,Magic Number,The method contains a magic number: 10l,204
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testGetProgress,Magic Number,The method contains a magic number: .1f,204
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testGetProgress,Magic Number,The method contains a magic number: 99l,204
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaRecordReaderTest,testGetProgress,Magic Number,The method contains a magic number: 100l,204
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 100,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 100,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 101,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 101,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 111l,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 111l,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 2,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 2,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 88,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 88,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 77,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 77,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 655,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testSetGet,Magic Number,The method contains a magic number: 655,43
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 9092,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 20l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 10l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 30l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 20l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 10,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 10l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 3,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 9092,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 10l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 20l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 20l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 30l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 2,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetInputSplits,Magic Number,The method contains a magic number: 20l,83
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 52,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 6,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 6,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 5,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 999,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 5,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 5,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 4,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 3,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 5,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 3,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,testGetOffsets,Magic Number,The method contains a magic number: 5,140
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputFormatTest,compareArrayContents,Long Statement,The length of the statement "Assert.assertEquals(format("Expected %d but got %d at index %d"`expected[i]`actual.get(i)`i)`expected[i]`(long)actual.get(i));" is 126.,194
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilderTest,testConfigureWholeJob,Magic Number,The method contains a magic number: 100,94
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilderTest,testConfigureWholeJob,Magic Number,The method contains a magic number: 1024,94
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilderTest,testConfigureWholeJob,Magic Number,The method contains a magic number: 100,94
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaJobBuilderTest,testConfigureWholeJob,Magic Number,The method contains a magic number: 1024,94
+Conductor_kangaroo,com.conductor.kafka.hadoop,MultipleKafkaInputFormatTest,setUp,Magic Number,The method contains a magic number: 2,49
+Conductor_kangaroo,com.conductor.kafka.hadoop,MultipleKafkaInputFormatTest,testTopicConfiguration,Magic Number,The method contains a magic number: 2,58
+Conductor_kangaroo,com.conductor.kafka.hadoop,MultipleKafkaInputFormatTest,testGetSplits,Magic Number,The method contains a magic number: 4,72
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplitTest,testSerialization,Magic Number,The method contains a magic number: 9092,31
+Conductor_kangaroo,com.conductor.kafka.hadoop,KafkaInputSplitTest,testSerialization,Magic Number,The method contains a magic number: 10l,31
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtils,ZkUtils,Long Statement,The length of the statement "this(KafkaInputFormat.getZkConnect(config)`KafkaInputFormat.getZkRoot(config)`KafkaInputFormat.getZkSessionTimeoutMs(config)`KafkaInputFormat.getZkConnectionTimeoutMs(config));" is 176.,83
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtils,getBroker,Magic Number,The method contains a magic number: 2,110
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetBrokerId,Magic Number,The method contains a magic number: 9092,60
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetBrokerId,Magic Number,The method contains a magic number: 2,60
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetBrokerId,Magic Number,The method contains a magic number: 2,60
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetBrokers,Magic Number,The method contains a magic number: 9092,76
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetBrokers,Magic Number,The method contains a magic number: 9092,76
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetBrokers,Magic Number,The method contains a magic number: 2,76
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetBrokers,Magic Number,The method contains a magic number: 2,76
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitions,Magic Number,The method contains a magic number: 9092,91
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitions,Magic Number,The method contains a magic number: 9092,91
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitions,Magic Number,The method contains a magic number: 2,91
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitions,Magic Number,The method contains a magic number: 2,91
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitions,Magic Number,The method contains a magic number: 10,91
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitions,Magic Number,The method contains a magic number: 5,91
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitionExists,Magic Number,The method contains a magic number: 9092,116
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitionExists,Magic Number,The method contains a magic number: 9,116
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitionExists,Magic Number,The method contains a magic number: 10,116
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testPartitionExists,Magic Number,The method contains a magic number: 5,116
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testGetLastCommit,Magic Number,The method contains a magic number: 1234567,129
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testSetLastCommit,Magic Number,The method contains a magic number: 10l,141
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testSetLastCommit,Magic Number,The method contains a magic number: 10l,141
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testSetLastCommit,Magic Number,The method contains a magic number: 10l,141
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testSetLastCommit,Magic Number,The method contains a magic number: 10l,141
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testSetLastCommit,Magic Number,The method contains a magic number: 10l,141
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testCommit,Magic Number,The method contains a magic number: 9092,162
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testCommit,Magic Number,The method contains a magic number: 2,162
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testCommit,Magic Number,The method contains a magic number: 1234567l,162
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testCommit,Magic Number,The method contains a magic number: 12345678l,162
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testCommit,Magic Number,The method contains a magic number: 2,162
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,testCommit,Magic Number,The method contains a magic number: 2,162
+Conductor_kangaroo,com.conductor.kafka.zk,ZkUtilsTest,getGetPaths,Magic Number,The method contains a magic number: 9092,198
+Conductor_kangaroo,com.conductor.kafka,Broker,hashCode,Magic Number,The method contains a magic number: 31,114
+Conductor_kangaroo,com.conductor.kafka,Broker,hashCode,Magic Number,The method contains a magic number: 31,114
+Conductor_kangaroo,com.conductor.kafka,Partition,hashCode,Magic Number,The method contains a magic number: 31,124
+Conductor_kangaroo,com.conductor.kafka,Partition,hashCode,Magic Number,The method contains a magic number: 31,124

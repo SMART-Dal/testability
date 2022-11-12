@@ -1,0 +1,137 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,AddonResourcePack,getResourceStream,Long Statement,The length of the statement "return addon.getClass().getResourceAsStream(String.format("/assets/%s/%s"`addon.getDescription().getIdentifier()`resourceLocation.getResourcePath()));" is 150.,52
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Long Statement,The length of the statement "throw new IllegalStateException(addon.getDescription().getName() + " attempted to cache a file after INITIALIZATION phase! This is NOT ALLOWED.");" is 146.,57
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Long Statement,The length of the statement "throw new FileNotFoundException(addon.getDescription().getName() + " is trying to send a path [" + path+ "] that does not exist!");" is 131.,57
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Long Statement,The length of the statement "throw new FileNotFoundException(addon.getDescription().getName() + " is trying to send a directory to the client` not a file!");" is 128.,57
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Long Statement,The length of the statement "throw new IllegalStateException(addon.getDescription().getName() + " is attempting to cache an executable file to send from your server! This is NOT ALLOWED.");" is 160.,57
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Long Statement,The length of the statement "throw new IllegalStateException(addon.getDescription().getName() + " attempted to cache an url after INITIALIZATION phase! This is NOT ALLOWED.");" is 146.,82
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Long Statement,The length of the statement "throw new UnreachableURLException(addon.getDescription().getName() + " sent a url which is forbidden for the server to access it. This is NOT ALLOWED.");" is 153.,82
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Magic Number,The method contains a magic number: 403,82
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.resource,CommonFileSystem,cache,Magic Number,The method contains a magic number: 404,82
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,InternalAddon,InternalAddon,Long Statement,The length of the statement "final AddonDescription description=new AddonDescription("internal"`Game.MOD_ID`"1.0-SNAPSHOT"`AddonMode.BOTH`"org.obsidianbox.obsidian.addon.InternalAddon");" is 157.,71
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,InternalAddon,testAlphaContent,Long Statement,The length of the statement "new SimplePressurePlate(this`"simple_plate"`"Simple Plate"`customPressurePlate`true`BlockPressurePlate.Sensitivity.everything);" is 127.,124
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,InternalAddon,testAlphaContent,Magic Number,The method contains a magic number: 100,124
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,InternalAddon,testAlphaContent,Magic Number,The method contains a magic number: 15,124
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,InternalAddon,setupBlockRenderer,Long Statement,The length of the statement "final SimpleBlockOBJRenderer renderer=new SimpleBlockOBJRenderer(this`RenderingRegistry.getNextAvailableRenderId()`block);" is 122.,189
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,loadAddon,Long Statement,The length of the statement "throw new InvalidAddonException("Attempted to load path [" + path + "] but this can only be done on the "+ game.getSide().name().toLowerCase()+ ".");" is 149.,90
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,loadAddon,Long Statement,The length of the statement "final AddonClassLoader loader=new AddonClassLoader((URLClassLoader)MinecraftForge.class.getClassLoader()`path.toUri().toURL());" is 127.,90
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,initialize,Long Statement,The length of the statement "throw new IllegalStateException("Cannot initialize addon [" + addon.getDescription().getName() + "]` it has already been initialized and enabled!");" is 148.,167
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,initialize,Long Statement,The length of the statement "game.getLogger().info("Initializing [" + addon.getDescription().getName() + " "+ addon.getDescription().getVersion()+ "]...");" is 126.,167
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,enable,Long Statement,The length of the statement "throw new IllegalStateException("Cannot enable addon [" + addon.getDescription().getName() + "]` it has not been initialized!");" is 128.,186
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,enable,Long Statement,The length of the statement "throw new IllegalStateException("Cannot enable addon [" + addon.getDescription().getName() + "]` it has already been enabled!");" is 128.,186
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,enable,Long Statement,The length of the statement "game.getLogger().info("Enabling [" + addon.getDescription().getName() + " "+ addon.getDescription().getVersion()+ "]...");" is 122.,186
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,disable,Long Statement,The length of the statement "throw new IllegalStateException("Cannot disable addon [" + addon.getDescription().getName() + "]` it has never been enabled!");" is 127.,208
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,disable,Long Statement,The length of the statement "game.getLogger().info("Disabling [" + addon.getDescription().getName() + " "+ addon.getDescription().getVersion()+ "]...");" is 123.,208
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,create,Long Statement,The length of the statement "throw new InvalidAddonException("Attempt to create addon description for file " + path.getFileName() + " but it does not exist!");" is 130.,227
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon,CommonAddonManager,create,Long Statement,The length of the statement "throw new InvalidDescriptionException("Attempt to create an addon description failed because " + ADDON_JSON + " was not found in "+ jar.getName());" is 147.,227
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.addon.client,ClientAddonManager,injectAddonPack,Long Statement,The length of the statement "final List<IResourcePack> defaultPacks=ReflectionEntry.Fields.MINECRAFT_DEFAULT_RESOURCE_PACKS.get(Minecraft.getMinecraft());" is 125.,58
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Long Statement,The length of the statement "final ScaledResolution scaledResolution=new ScaledResolution(RenderUtil.MINECRAFT`RenderUtil.MINECRAFT.displayWidth`RenderUtil.MINECRAFT.displayHeight);" is 152.,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 47,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 45,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 0.50f,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 0.50f,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 47,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 45,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 47,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 45,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 100,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 95,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 14,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 8,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 0.50f,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 0.50f,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 14,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 8,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 14,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 3,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,GameListener,onClientRenderWorldTick,Magic Number,The method contains a magic number: 16,60
+ObsidianBox_Obsidian,org.obsidianbox.obsidian,ObsidianMod,onInitialize,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5ab29866,71
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.renderer,GuiRenderer,initialize,Magic Number,The method contains a magic number: 0.1f,79
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.renderer,GuiRenderer,initialize,Magic Number,The method contains a magic number: 1000,79
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.renderer,GuiRenderer,createTexture,Long Parameter List,The method has 7 parameters. ,127
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.renderer,GuiRenderer,createTexture,Long Statement,The length of the statement "final InputStream textureStream=Minecraft.getMinecraft().getResourceManager().getResource(new ResourceLocation(Game.MOD_ID.toLowerCase()`"textures/gui/" + addon.getDescription().getIdentifier() + "/"+ name+ ".png")).getInputStream();" is 233.,127
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.renderer,GuiRenderer,createTexturedPlane,Long Parameter List,The method has 7 parameters. ,161
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianBackground,getResourceByTimeOfDay,Long Statement,The length of the statement "return new ResourceLocation(Game.MOD_ID.toLowerCase()`"textures/gui/background/" + symbolicName + "/background_"+ (RANDOM.nextInt(5 - 1) + 1)+ ".jpg");" is 151.,40
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianBackground,getResourceByTimeOfDay,Magic Number,The method contains a magic number: 12,40
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianBackground,getResourceByTimeOfDay,Magic Number,The method contains a magic number: 20,40
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianBackground,getResourceByTimeOfDay,Magic Number,The method contains a magic number: 5,40
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Long Statement,The length of the statement "final ObsidianSimpleButton singlePlayerButton=new ObsidianSimpleButton(1`getSidebarCenterX(singleplayerText)`75`singleplayerText`normalFontColor`hoverFontColor`disabledFontColor);" is 179.,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Long Statement,The length of the statement "final ObsidianSimpleButton multiplayerButton=new ObsidianSimpleButton(2`getSidebarCenterX(multiplayerText)`92`multiplayerText`normalFontColor`hoverFontColor`disabledFontColor);" is 176.,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Long Statement,The length of the statement "final ObsidianSimpleButton optionsButton=new ObsidianSimpleButton(3`getSidebarCenterX(optionsText)`110`optionsText`normalFontColor`hoverFontColor`disabledFontColor);" is 165.,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Long Statement,The length of the statement "final ObsidianSimpleButton modsButton=new ObsidianSimpleButton(4`getSidebarCenterX(modsText)`128`modsText`normalFontColor`hoverFontColor`disabledFontColor);" is 156.,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Long Statement,The length of the statement "final ObsidianSimpleButton addonsButton=new ObsidianSimpleButton(5`getSidebarCenterX(addonsText)`145`addonsText`normalFontColor`hoverFontColor`disabledFontColor);" is 162.,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Long Statement,The length of the statement "final ObsidianSimpleButton quitButton=new ObsidianSimpleButton(6`getSidebarCenterX(quitText)`height - 15`quitText`normalFontColor`Integer.parseInt("FF0000"`16)`disabledFontColor);" is 179.,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 16,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 16,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 16,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 75,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 2,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 92,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 3,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 110,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 4,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 128,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 5,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 145,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 6,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 15,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,addButtons,Magic Number,The method contains a magic number: 16,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,actionPerformed,Magic Number,The method contains a magic number: 2,78
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,actionPerformed,Magic Number,The method contains a magic number: 3,78
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,actionPerformed,Magic Number,The method contains a magic number: 4,78
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,actionPerformed,Magic Number,The method contains a magic number: 5,78
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,actionPerformed,Magic Number,The method contains a magic number: 6,78
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Long Statement,The length of the statement "drawString(RenderUtil.MINECRAFT.fontRenderer`"Copyright Mojang AB. Do not distribute!"`2`height - 8`Integer.parseInt("FFFF00"`16));" is 131.,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 85,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 85,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 85,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 84,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 81,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 0.50f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 0.50f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 81,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 81,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 155,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 151,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 2f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 8f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 0.85f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 0.85f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 2f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 8f,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 2,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 8,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,drawScreen,Magic Number,The method contains a magic number: 16,100
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,getSidebarCenterX,Long Statement,The length of the statement "return ((width - (85 / 2)) - RenderUtil.MINECRAFT.fontRenderer.getStringWidth(text)) + (RenderUtil.MINECRAFT.fontRenderer.getStringWidth(text) / 2);" is 148.,138
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,getSidebarCenterX,Magic Number,The method contains a magic number: 85,138
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,getSidebarCenterX,Magic Number,The method contains a magic number: 2,138
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianMainMenu,getSidebarCenterX,Magic Number,The method contains a magic number: 2,138
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianSimpleButton,ObsidianSimpleButton,Long Parameter List,The method has 7 parameters. ,37
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianSimpleButton,ObsidianSimpleButton,Long Parameter List,The method has 9 parameters. ,48
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianSimpleButton,ObsidianSimpleButton,Long Parameter List,The method has 6 parameters. ,55
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianSimpleButton,drawButton,Magic Number,The method contains a magic number: 2,59
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianSimpleButton,drawButton,Magic Number,The method contains a magic number: 8,59
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianSimpleButton,drawButton,Magic Number,The method contains a magic number: 2,59
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.gui.builtin,ObsidianSimpleButton,mousePressed,Long Statement,The length of the statement "return enabled && func_146115_a() && x >= xPosition && y >= yPosition && x < xPosition + buttonWidth && y < yPosition + buttonHeight;" is 133.,79
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.util.map,SerializableHashMap,SerializableHashMap,Magic Number,The method contains a magic number: 8,61
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.util.map,SerializableHashMap,SerializableHashMap,Magic Number,The method contains a magic number: .9f,61
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.util.map,SerializableHashMap,SerializableHashMap,Magic Number,The method contains a magic number: 5,61
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.util.map,SerializableHashMap,get,Empty catch clause,The method has an empty catch block.,121
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.util.map,SerializableHashMap,toString,Magic Number,The method contains a magic number: 3,265
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.lang,CommonLanguageManager,put,Long Statement,The length of the statement "throw new IllegalArgumentException(addon.getDescription().getName() + " attempted to put a value for " + key+ " that was null or empty!");" is 138.,46
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.lang,CommonLanguageManager,register,Long Statement,The length of the statement "cpw.mods.fml.common.registry.LanguageRegistry.instance().injectLanguage(languageEntry.getKey().value()`(HashMap<String`String>)injectMap);" is 138.,81
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message.builtin,AddonListMessage,handle,Long Statement,The length of the statement "game.getLogger().info(player.getDisplayName() + " has addon [" + addonIdentifier+ "] installed but the server does not. Checking if the admin has "+ "allowed this in the greylist...");" is 184.,74
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message.builtin,AddonListMessage,handle,Long Statement,The length of the statement "((EntityPlayerMP)player).playerNetServerHandler.kickPlayerFromServer("You have addon " + addonIdentifier + " installed and this server does not allow it!");" is 156.,74
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message.builtin,AddonListMessage,handle,Long Statement,The length of the statement "game.getLogger().info("Admin has allowed addon [" + addonIdentifier + "] for "+ player.getDisplayName()+ ". Continuing on...");" is 127.,74
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message.builtin,AddonListMessage,handle,Long Statement,The length of the statement "game.getLogger().info(player.getDisplayName() + " has addon [" + addonIdentifier+ "] installed and so does the server but the MD5' mismatch.\n"+ "Server: "+ serverMD5+ "\n"+ "Client: "+ clientMD5+ "\n"+ "Sending the server's addon to the client...");" is 250.,74
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message.builtin,AddonListMessage,handle,Long Statement,The length of the statement "game.getPipeline().sendTo(new AddFileMessage(addonIdentifier`addonIdentifier + ".jar"`((CommonFileSystem)game.getFileSystem()).getAddonDataFile(addon).toPath())`player);" is 169.,74
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,decodeInto,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@20843604,79
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,register,Long Statement,The length of the statement "throw new IllegalStateException(addon.getDescription().getName() + " attempted to register a message after INITIALIZE phase! This is NOT ALLOWED.");" is 148.,134
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,register,Long Statement,The length of the statement "game.getLogger().info("Encountered fatal exception when " + addon.getDescription().getName() + " attempted to register ["+ message.getSimpleName()+ "]"`e);" is 155.,134
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,register,Long Statement,The length of the statement "game.getLogger().info(addon.getDescription().getName() + " has registered message [" + message.getSimpleName()+ "] with handler ["+ handler.getSimpleName()+ "] in the pipeline");" is 178.,134
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,register,Long Statement,The length of the statement "game.getLogger().info(addon.getDescription().getName() + " has registered message [" + message.getSimpleName()+ "] with no handler in the pipeline");" is 149.,134
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,sendToAllAround,Long Statement,The length of the statement "this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.ALLAROUNDPOINT);" is 128.,178
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,sendToDimension,Long Statement,The length of the statement "this.channels.get(Side.SERVER).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.DIMENSION);" is 123.,185
+ObsidianBox_Obsidian,org.obsidianbox.obsidian.message,CommonMessagePipeline,sendToServer,Long Statement,The length of the statement "this.channels.get(Side.CLIENT).attr(FMLOutboundHandler.FML_MESSAGETARGET).set(FMLOutboundHandler.OutboundTarget.TOSERVER);" is 122.,192
+ObsidianBox_Obsidian,org.obsidianbox.magma,AddonManagerTest,test,Long Statement,The length of the statement "assertNotEquals(game.getAddonManager().getAddon("test")`((CommonAddonManager)game.getAddonManager()).getInternalAddon());" is 121.,36
+ObsidianBox_Obsidian,org.obsidianbox.magma,AddonManagerTest,test,Long Statement,The length of the statement "assertEquals(((CommonAddonManager)game.getAddonManager()).getInternalAddon()`((CommonAddonManager)game.getAddonManager()).getInternalAddon());" is 142.,36

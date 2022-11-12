@@ -1,0 +1,95 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+conveyal_gtfs-data-manager,jobs,MakePublicJob,run,Complex Method,Cyclomatic complexity of the method is 10,46
+conveyal_gtfs-data-manager,jobs,MakePublicJob,run,Long Statement,The length of the statement "File publicDirectory=new File(Play.application().configuration().getString("application.data.public")`StringUtils.getCleanName(feedCollection.name));" is 149.,46
+conveyal_gtfs-data-manager,jobs,DeployJob,DeployJob,Long Parameter List,The method has 5 parameters. ,53
+conveyal_gtfs-data-manager,jobs,DeployJob,run,Empty catch clause,The method has an empty catch block.,73
+conveyal_gtfs-data-manager,jobs,DeployJob,run,Long Method,The method has 216 lines of code.,73
+conveyal_gtfs-data-manager,jobs,DeployJob,run,Magic Number,The method contains a magic number: 60,73
+conveyal_gtfs-data-manager,jobs,DeployJob,run,Magic Number,The method contains a magic number: 60,73
+conveyal_gtfs-data-manager,jobs,DeployJob,run,Magic Number,The method contains a magic number: 1000,73
+conveyal_gtfs-data-manager,utils,DataStore,DataStore,Long Statement,The length of the statement "Iterator<Fun.Tuple2<String`T>> iter=Pump.sort(inputData.iterator()`true`100000`Collections.reverseOrder(comparator)`db.getDefaultSerializer());" is 143.,58
+conveyal_gtfs-data-manager,utils,DataStore,DataStore,Magic Number,The method contains a magic number: 100000,58
+conveyal_gtfs-data-manager,utils,DataStore,DataStore,Magic Number,The method contains a magic number: 100000,58
+conveyal_gtfs-data-manager,controllers,Application,edit,Complex Conditional,The conditional expression currentUser == null || !(currentUser.hasWriteAccess(fs.id) || currentUser.id.equals(fs.userId) || Boolean.TRUE.equals(currentUser.admin)) is complex.,73
+conveyal_gtfs-data-manager,controllers,Application,edit,Long Statement,The length of the statement "if (currentUser == null || !(currentUser.hasWriteAccess(fs.id) || currentUser.id.equals(fs.userId) || Boolean.TRUE.equals(currentUser.admin))) {" is 144.,73
+conveyal_gtfs-data-manager,controllers,Application,edit,Magic Number,The method contains a magic number: 200,73
+conveyal_gtfs-data-manager,controllers,Application,apply,Magic Number,The method contains a magic number: 200,122
+conveyal_gtfs-data-manager,controllers,Application,fetchGtfs,Long Statement,The length of the statement "Akka.system().scheduler().scheduleOnce(Duration.create(50`TimeUnit.MILLISECONDS)`new FetchGtfsJob()`Akka.system().dispatcher());" is 128.,173
+conveyal_gtfs-data-manager,controllers,Application,fetchGtfs,Magic Number,The method contains a magic number: 50,173
+conveyal_gtfs-data-manager,controllers,Application,validateGtfs,Long Statement,The length of the statement "Akka.system().scheduler().scheduleOnce(Duration.create(50`TimeUnit.MILLISECONDS)`new RevalidateAllFeedVersionsJob()`Akka.system().dispatcher());" is 144.,186
+conveyal_gtfs-data-manager,controllers,Application,validateGtfs,Magic Number,The method contains a magic number: 50,186
+conveyal_gtfs-data-manager,controllers,Application,deployPublic,Long Statement,The length of the statement "if (feedCollectionId == null || feedCollectionId.length != 1) return badRequest("Please specify exactly one feed collection");" is 126.,197
+conveyal_gtfs-data-manager,controllers,Dump,load,Complex Method,Cyclomatic complexity of the method is 8,53
+conveyal_gtfs-data-manager,controllers,Dump,load,Magic Number,The method contains a magic number: 500,53
+conveyal_gtfs-data-manager,controllers,Dump,load,Magic Number,The method contains a magic number: 1024,53
+conveyal_gtfs-data-manager,controllers,Dump,load,Magic Number,The method contains a magic number: 1024,53
+conveyal_gtfs-data-manager,controllers,Admin,getUsername,Complex Conditional,The conditional expression u != null && Boolean.TRUE.equals(u.active) && Boolean.TRUE.equals(u.admin) is complex.,12
+conveyal_gtfs-data-manager,controllers.api,NoteController,getAll,Complex Conditional,The conditional expression currentUser.admin || currentUser.equals(s.getUser()) || currentUser.hasReadAccess(s.id) is complex.,26
+conveyal_gtfs-data-manager,controllers.api,NoteController,getAll,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@77ec911,26
+conveyal_gtfs-data-manager,controllers.api,NoteController,create,Complex Conditional,The conditional expression currentUser.admin || currentUser.equals(s.getUser()) || currentUser.hasWriteAccess(s.id) is complex.,75
+conveyal_gtfs-data-manager,controllers.api,NoteController,create,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@55d3c0dd,75
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,update,Complex Method,Cyclomatic complexity of the method is 31,50
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,update,Long Method,The method has 109 lines of code.,50
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,getEditorAgencies,Magic Number,The method contains a magic number: 200,225
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,getEditorAgencies,Magic Number,The method contains a magic number: 200,225
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,apply,Magic Number,The method contains a magic number: 200,241
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,apply,Magic Number,The method contains a magic number: 200,258
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,getEditorSnapshots,Long Statement,The length of the statement "String snapUrl=baseUrl + "api/snapshot?agencyId=" + UrlEscapers.urlFormParameterEscaper().escape(agencyId)+ "&oauth_token="+ token;" is 131.,267
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,getEditorSnapshots,Magic Number,The method contains a magic number: 200,267
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,getEditorSnapshots,Magic Number,The method contains a magic number: 200,267
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,apply,Magic Number,The method contains a magic number: 200,283
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,apply,Long Statement,The length of the statement "String snapUrl=baseUrl + "api/snapshot?agencyId=" + UrlEscapers.urlFormParameterEscaper().escape(agencyId)+ "&oauth_token="+ token;" is 131.,293
+conveyal_gtfs-data-manager,controllers.api,FeedCollectionController,apply,Magic Number,The method contains a magic number: 200,300
+conveyal_gtfs-data-manager,controllers.api,DeploymentController,createFromFeedSource,Complex Conditional,The conditional expression !currentUser.admin && !currentUser.equals(s.getUser()) && !currentUser.hasWriteAccess(s.id) is complex.,105
+conveyal_gtfs-data-manager,controllers.api,DeploymentController,update,Magic Number,The method contains a magic number: 1024,132
+conveyal_gtfs-data-manager,controllers.api,DeploymentController,update,Magic Number,The method contains a magic number: 1024,132
+conveyal_gtfs-data-manager,controllers.api,DeploymentController,deploy,Long Statement,The length of the statement "DeployJob job=new DeployJob(d`targetUrls`DeploymentManager.getPublicUrl(target)`DeploymentManager.getS3Bucket(target)`DeploymentManager.getS3Credentials(target));" is 162.,180
+conveyal_gtfs-data-manager,controllers.api,DeploymentController,deploy,Magic Number,The method contains a magic number: 503,180
+conveyal_gtfs-data-manager,controllers.api,DeploymentController,deploy,Magic Number,The method contains a magic number: 50,180
+conveyal_gtfs-data-manager,controllers.api,FeedVersionController,get,Complex Conditional,The conditional expression currentUser.admin || currentUser.equals(s.getUser()) || currentUser.hasReadAccess(s.id) is complex.,31
+conveyal_gtfs-data-manager,controllers.api,FeedVersionController,getGtfs,Complex Conditional,The conditional expression currentUser.admin || currentUser.equals(s.getUser()) || currentUser.hasReadAccess(s.id) is complex.,58
+conveyal_gtfs-data-manager,controllers.api,FeedVersionController,getAll,Complex Conditional,The conditional expression currentUser.admin || currentUser.equals(s.getUser()) || currentUser.hasReadAccess(s.id) is complex.,80
+conveyal_gtfs-data-manager,controllers.api,FeedVersionController,create,Complex Conditional,The conditional expression !currentUser.admin && !currentUser.equals(s.getUser()) && !currentUser.hasWriteAccess(s.id) is complex.,105
+conveyal_gtfs-data-manager,controllers.api,FeedVersionController,create,Empty catch clause,The method has an empty catch block.,105
+conveyal_gtfs-data-manager,controllers.api,FeedVersionController,create,Long Statement,The length of the statement "if (FeedRetrievalMethod.FETCHED_AUTOMATICALLY.equals(s.retrievalMethod)) return badRequest("Feed is autofetched! Cannot upload.");" is 130.,105
+conveyal_gtfs-data-manager,controllers.api,FeedSourceController,get,Complex Conditional,The conditional expression currentUser.admin || currentUser.id.equals(fs.userId) || currentUser.hasReadAccess(fs.id) is complex.,29
+conveyal_gtfs-data-manager,controllers.api,FeedSourceController,get,Long Statement,The length of the statement "if (currentUser.admin || currentUser.id.equals(fs.userId) || currentUser.hasReadAccess(fs.id)) return ok(json.write(fs));" is 121.,29
+conveyal_gtfs-data-manager,controllers.api,FeedSourceController,getAll,Complex Method,Cyclomatic complexity of the method is 9,41
+conveyal_gtfs-data-manager,controllers.api,FeedSourceController,fetch,Complex Conditional,The conditional expression !currentUser.admin && !currentUser.equals(s.getUser()) && !currentUser.hasWriteAccess(s.id) is complex.,191
+conveyal_gtfs-data-manager,controllers.api,FeedSourceController,uploadAgencyLogo,Long Statement,The length of the statement "String agencyDir=Play.application().configuration().getString("application.data.branding_internal") + File.separator + agencyId;" is 128.,212
+conveyal_gtfs-data-manager,controllers.api,CsvExportController,asCsv,Long Statement,The length of the statement "writer.writeRecord(new String[]{"id"`Messages.get("app.feed_source.name")`Messages.get("app.feed_source.public")`Messages.get("app.feed_source.deployable")`Messages.get("app.feed_source.retrieval_method")`Messages.get("app.feed_source.last_updated")`Messages.get("app.feed_version.loaded_successfully")`Messages.get("app.feed_version.load_status")`Messages.get("app.feed_version.error_count")`Messages.get("app.feed_version.route_count")`Messages.get("app.feed_version.trip_count")`Messages.get("app.feed_version.stop_times_count")`Messages.get("app.feed_version.start_date")`Messages.get("app.feed_version.end_date")});" is 620.,21
+conveyal_gtfs-data-manager,controllers.api,InvalidValueMixIn,InvalidValueMixIn,Long Parameter List,The method has 7 parameters. ,11
+conveyal_gtfs-data-manager,controllers.api,Rectangle2DDeserializer,deserialize,Complex Conditional,The conditional expression bbox.north == null || bbox.south == null || bbox.east == null || bbox.west == null is complex.,14
+conveyal_gtfs-data-manager,controllers.api,Rectangle2DDeserializer,deserialize,Long Statement,The length of the statement "if (bbox.north == null || bbox.south == null || bbox.east == null || bbox.west == null) throw new JsonParseException("Unable to deserialize bounding box; need north` south` east` and west."`jp.getCurrentLocation());" is 215.,14
+conveyal_gtfs-data-manager,controllers.api,UserController,update,Long Statement,The length of the statement "if (!params.has("currentUserPassword") || !currentUser.checkPassword(params.get("currentUserPassword").asText())) return unauthorized();" is 136.,97
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Complex Method,Cyclomatic complexity of the method is 12,146
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Long Method,The method has 101 lines of code.,146
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Long Statement,The length of the statement "String tokenUrl=baseUrl + "get_token?client_id=" + Play.application().configuration().getString("application.oauth.client_id");" is 127.,146
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Long Statement,The length of the statement "if (latest != null && this.lastFetched != null) conn.setIfModifiedSince(Math.min(latest.updated.getTime()`this.lastFetched.getTime()));" is 135.,146
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Long Statement,The length of the statement "Logger.warn("Feed {} was fetched but has not changed; server operators should add If-Modified-Since support to avoid wasting bandwidth"`this);" is 142.,146
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Magic Number,The method contains a magic number: 30,146
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Magic Number,The method contains a magic number: 1000L,146
+conveyal_gtfs-data-manager,models,FeedSource,fetch,Magic Number,The method contains a magic number: 200,146
+conveyal_gtfs-data-manager,models,FeedValidationResultSummary,FeedValidationResultSummary,Long Statement,The length of the statement "this.errorCount=result.routes.invalidValues.size() + result.stops.invalidValues.size() + result.trips.invalidValues.size()+ result.shapes.invalidValues.size();" is 159.,45
+conveyal_gtfs-data-manager,models,User,setPassword,Complex Conditional,The conditional expression this.key != null || password == null || "".equals(password) is complex.,72
+conveyal_gtfs-data-manager,models,Deployment,getFullFeedVersions,Long Statement,The length of the statement "else Logger.error("Reference integrity error for deployment {} ({})` feed version {} does not exist"`this.name`this.id`id);" is 123.,65
+conveyal_gtfs-data-manager,models,Deployment,getFeedVersions,Long Statement,The length of the statement "else Logger.error("Reference integrity error for deployment {} ({})` feed version {} does not exist"`this.name`this.id`id);" is 123.,81
+conveyal_gtfs-data-manager,models,Deployment,dump,Complex Method,Cyclomatic complexity of the method is 15,234
+conveyal_gtfs-data-manager,models,Deployment,dump,Long Method,The method has 113 lines of code.,234
+conveyal_gtfs-data-manager,models,Deployment,dump,Long Statement,The length of the statement "URL vexUrl=new URL(String.format("%s/?n=%.6f&e=%.6f&s=%.6f&w=%.6f"`Play.application().configuration().getString("application.deployment.osm_vex")`bounds.getMaxY()`bounds.getMaxX()`bounds.getMinY()`bounds.getMinX()));" is 216.,234
+conveyal_gtfs-data-manager,models,Deployment,dump,Magic Number,The method contains a magic number: 100,234
+conveyal_gtfs-data-manager,models,Deployment,dump,Magic Number,The method contains a magic number: 1024,234
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Long Statement,The length of the statement "Rectangle2D bounds=new Rectangle2D.Double(feedColl.osmWest`feedColl.osmSouth`feedColl.osmEast - feedColl.osmWest`feedColl.osmNorth - feedColl.osmSouth);" is 152.,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Long Statement,The length of the statement "bounds.add(new Point2D.Double(bounds.getMinX() - bufferKm * degreesPerKmLon`bounds.getMinY() - bufferKm * degreesPerKmLat));" is 124.,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Long Statement,The length of the statement "bounds.add(new Point2D.Double(bounds.getMaxX() + bufferKm * degreesPerKmLon`bounds.getMaxY() + bufferKm * degreesPerKmLat));" is 124.,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Magic Number,The method contains a magic number: 360D,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Magic Number,The method contains a magic number: 40008,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Magic Number,The method contains a magic number: 360,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Magic Number,The method contains a magic number: 2,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Magic Number,The method contains a magic number: 6371,396
+conveyal_gtfs-data-manager,models,Deployment,getBounds,Magic Number,The method contains a magic number: 10,396
+conveyal_gtfs-data-manager,models,Deployment,getDeploymentForServerAndRouterId,Complex Conditional,The conditional expression (routerId != null && routerId.equals(d.routerId)) || d.routerId == routerId is complex.,474
+conveyal_gtfs-data-manager,models,FeedVersion,hasCriticalErrorsExceptingDate,Complex Conditional,The conditional expression validationResult.stopTimesCount == 0 || validationResult.tripCount == 0 || validationResult.agencyCount == 0 is complex.,191
+conveyal_gtfs-data-manager,models,FeedVersion,hasCriticalErrorsExceptingDate,Long Statement,The length of the statement "if (validationResult.stopTimesCount == 0 || validationResult.tripCount == 0 || validationResult.agencyCount == 0) return true;" is 126.,191
+conveyal_gtfs-data-manager,(default package),IntegrationTest,test,Magic Number,The method contains a magic number: 3333,14
+conveyal_gtfs-data-manager,(default package),ApplicationTest,simpleCheck,Magic Number,The method contains a magic number: 2,31

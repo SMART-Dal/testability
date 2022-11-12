@@ -1,0 +1,185 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+google_firing-range,com.google.testing.security.firingrange.utils,Requests,getBaseUrl,Complex Conditional,The conditional expression request.getServerPort() == -1 || (request.getServerPort() == 80 && request.getScheme().equals("http")) || (request.getServerPort() == 443 && request.getScheme().equals("https")) is complex.,25
+google_firing-range,com.google.testing.security.firingrange.utils,Requests,getBaseUrl,Long Statement,The length of the statement "if (request.getServerPort() == -1 || (request.getServerPort() == 80 && request.getScheme().equals("http")) || (request.getServerPort() == 443 && request.getScheme().equals("https"))) {" is 184.,25
+google_firing-range,com.google.testing.security.firingrange.utils,Requests,getBaseUrl,Magic Number,The method contains a magic number: 80,25
+google_firing-range,com.google.testing.security.firingrange.utils,Requests,getBaseUrl,Magic Number,The method contains a magic number: 443,25
+google_firing-range,com.google.testing.security.firingrange.utils,Responses,sendNormalPage,Magic Number,The method contains a magic number: 200,33
+google_firing-range,com.google.testing.security.firingrange.utils,Responses,sendXssed,Magic Number,The method contains a magic number: 200,60
+google_firing-range,com.google.testing.security.firingrange.utils,Responses,sendError,Magic Number,The method contains a magic number: 300,82
+google_firing-range,com.google.testing.security.firingrange.utils,Responses,sendJavaScript,Magic Number,The method contains a magic number: 200,93
+google_firing-range,com.google.testing.security.firingrange.utils,Responses,sendRedirect,Magic Number,The method contains a magic number: 302,106
+google_firing-range,com.google.testing.security.firingrange.utils,Escaper,escape,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3ef8b4,33
+google_firing-range,com.google.testing.security.firingrange.utils,Escaper,escapeHtml,Long Statement,The length of the statement "return rawString.replace("'"`"&#39;").replace("\""`"&quot;").replace("&"`"&amp;").replace("<"`"&lt;").replace(">"`"&gt;");" is 122.,67
+google_firing-range,com.google.testing.security.firingrange.utils,ResponsesTest,sendsRedirectIsARedirect,Magic Number,The method contains a magic number: 302,45
+google_firing-range,com.google.testing.security.firingrange.utils,RequestsTest,getBaseUrl_givenHttpSchemeAndPort80_returnsBasicUrlWithoutPort,Magic Number,The method contains a magic number: 80,39
+google_firing-range,com.google.testing.security.firingrange.utils,RequestsTest,getBaseUrl_givenHttpsSchemeAndPort443_returnsBasicUrlWithoutPort,Magic Number,The method contains a magic number: 443,57
+google_firing-range,com.google.testing.security.firingrange.utils,RequestsTest,getBaseUrl_givenHttpsSchemeAndNonStandardPort_returnsBasicUrlWithPort,Magic Number,The method contains a magic number: 8000,66
+google_firing-range,com.google.testing.security.firingrange.tests.escape,JsEscapeTest,doesNotOverEscapeSingleQuotes,Magic Number,The method contains a magic number: 200,46
+google_firing-range,com.google.testing.security.firingrange.tests.escape,ServersideEscape,service,Magic Number,The method contains a magic number: 400,52
+google_firing-range,com.google.testing.security.firingrange.tests.escape,ServersideEscape,service,Magic Number,The method contains a magic number: 400,52
+google_firing-range,com.google.testing.security.firingrange.tests.escape,ServersideEscape,service,Magic Number,The method contains a magic number: 400,52
+google_firing-range,com.google.testing.security.firingrange.tests.escape,JsEscape,service,Magic Number,The method contains a magic number: 400,43
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,UrlTest,errorsOnBadUrl,Magic Number,The method contains a magic number: 400,46
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,UrlTest,acceptsUrl,Magic Number,The method contains a magic number: 200,53
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,ParameterTest,returnsOkByDefault,Magic Number,The method contains a magic number: 200,46
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,ParameterTest,returnsCustomStatus,Magic Number,The method contains a magic number: 403,53
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,EscapedParameterTest,returnsOkByDefault,Magic Number,The method contains a magic number: 200,49
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,EscapedParameterTest,escapesSingleQuotes,Magic Number,The method contains a magic number: 200,56
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,EscapedParameterTest,escapesUnquotedAttribute,Magic Number,The method contains a magic number: 200,66
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,ContentSniffingTest,errorsOnBadContentType,Empty catch clause,The method has an empty catch block.,46
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,ContentSniffingTest,acceptsPlainText,Magic Number,The method contains a magic number: 200,58
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,ContentSniffingTest,acceptsJson,Magic Number,The method contains a magic number: 200,66
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Parameter,service,Empty catch clause,The method has an empty catch block.,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Parameter,service,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Parameter,service,Magic Number,The method contains a magic number: 2,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Parameter,service,Magic Number,The method contains a magic number: 2,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Charsets,service,Magic Number,The method contains a magic number: 2,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Charsets,service,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Charsets,service,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Charsets,service,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Charsets,service,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@17b59bc,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,EscapedParameter,service,Magic Number,The method contains a magic number: 2,37
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Url,service,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Substrings,service,Magic Number,The method contains a magic number: 2,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Substrings,service,Magic Number,The method contains a magic number: 3,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Substrings,service,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Substrings,service,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Substrings,service,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,Substrings,service,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7dcc6b08,35
+google_firing-range,com.google.testing.security.firingrange.tests.reflected,ContentSniffing,doGet,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@17d6e44,38
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInQueryInCallback,Long Statement,The length of the statement "when(request.getParameter(UniversalReverseClickjackingSinglePage.VULNERABLE_PARAMETER)).thenReturn(VULNERABLE_PARAMETER);" is 121.,37
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInQueryInCallback,Magic Number,The method contains a magic number: 200,37
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInQueryOtherParameter,Long Statement,The length of the statement "when(request.getParameter(UniversalReverseClickjackingSinglePage.VULNERABLE_PARAMETER)).thenReturn(VULNERABLE_PARAMETER);" is 121.,48
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInQueryOtherParameter,Magic Number,The method contains a magic number: 200,48
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInFragmentInCallback,Long Statement,The length of the statement "when(request.getParameter(UniversalReverseClickjackingSinglePage.VULNERABLE_PARAMETER)).thenReturn(VULNERABLE_PARAMETER);" is 121.,59
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInFragmentInCallback,Magic Number,The method contains a magic number: 200,59
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInFragmentOtherParameter,Long Statement,The length of the statement "when(request.getParameter(UniversalReverseClickjackingSinglePage.VULNERABLE_PARAMETER)).thenReturn(VULNERABLE_PARAMETER);" is 121.,70
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsPageParameterInFragmentOtherParameter,Magic Number,The method contains a magic number: 200,70
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsErrorOnInvalidParameterLocation,Long Statement,The length of the statement "when(request.getParameter(UniversalReverseClickjackingSinglePage.VULNERABLE_PARAMETER)).thenReturn(VULNERABLE_PARAMETER);" is 121.,81
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsErrorOnInvalidParameterLocation,Magic Number,The method contains a magic number: 400,81
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsErrorOnNoParameterLocation,Long Statement,The length of the statement "when(request.getParameter(UniversalReverseClickjackingSinglePage.VULNERABLE_PARAMETER)).thenReturn(VULNERABLE_PARAMETER);" is 121.,92
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePageTest,returnsErrorOnNoParameterLocation,Magic Number,The method contains a magic number: 400,92
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpointTest,returnsCallback,Magic Number,The method contains a magic number: 200,39
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpointTest,refusesXssInjection,Magic Number,The method contains a magic number: 400,49
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpointTest,refusesEmptyCallback,Magic Number,The method contains a magic number: 400,59
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpointTest,checksCallbackLength,Magic Number,The method contains a magic number: 200,69
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpointTest,checksCallbackLength,Magic Number,The method contains a magic number: 400,69
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpointTest,checksCallbackRegex,Magic Number,The method contains a magic number: 400,89
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInQueryInCallbackXFO,Magic Number,The method contains a magic number: 200,39
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInQueryOtherParameterXFO,Magic Number,The method contains a magic number: 200,52
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInQueryInCallbackNoXFO,Magic Number,The method contains a magic number: 200,65
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInQueryOtherParameterNoXFO,Magic Number,The method contains a magic number: 200,78
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInFragmentInCallbackXFO,Magic Number,The method contains a magic number: 200,91
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInFragmentOtherParameterXFO,Magic Number,The method contains a magic number: 200,104
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInFragmentInCallbackNoXFO,Magic Number,The method contains a magic number: 200,117
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsPageParameterInFragmentOtherParameterNoXFO,Magic Number,The method contains a magic number: 200,130
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnInvalidParameterLocation,Magic Number,The method contains a magic number: 400,144
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnNoParameterLocation,Magic Number,The method contains a magic number: 400,155
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnParameterInQueryInCallbackInvalidXFO,Magic Number,The method contains a magic number: 400,166
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnParameterInQueryOtherParamterInvalidXFO,Magic Number,The method contains a magic number: 400,177
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnParameterInQueryNoXFO,Magic Number,The method contains a magic number: 400,188
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnParameterInFragmentInCallbackInvalidXFO,Magic Number,The method contains a magic number: 400,199
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnParameterInFragmentOtherParameterInvalidXFO,Magic Number,The method contains a magic number: 400,208
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPageTest,returnsErrorOnParameterInFragmentNoXFO,Magic Number,The method contains a magic number: 400,217
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Complex Method,Cyclomatic complexity of the method is 8,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Long Statement,The length of the statement "Responses.sendError(response`"Please specify the location of the vulnerable parameter and its sink. " + "For example: /singlepage/ParameterInQuery/InCallback/?" + VULNERABLE_PARAMETER + "=x"`400);" is 196.,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Long Statement,The length of the statement "Responses.sendError(response`"Invalid location of the vulnerable parameter or invalid sink. " + "For example: /singlepage/ParameterInQuery/InCallback/?" + VULNERABLE_PARAMETER + "=x"`400);" is 188.,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Magic Number,The method contains a magic number: 2,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Magic Number,The method contains a magic number: 400,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Magic Number,The method contains a magic number: 2,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Magic Number,The method contains a magic number: 400,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingSinglePage,doGet,Magic Number,The method contains a magic number: 400,57
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpoint,doGet,Long Statement,The length of the statement "Responses.sendError(response`"Invalid callback value: can only contain alphanumeric characters` dots and underscores."`400);" is 124.,35
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingJsonpEndpoint,doGet,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Complex Method,Cyclomatic complexity of the method is 8,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Long Statement,The length of the statement "Responses.sendError(response`"Please specify the location of the vulnerable parameter` its sink and the preference " + "for the X-Frame-Option header. For example: " + "/multipage/ParameterInQuery/InCallback/WithoutXFO/"+ "?" + VULNERABLE_PARAMETER + "=x"`400);" is 261.,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Long Statement,The length of the statement "Responses.sendError(response`"Invalid location of the vulnerable parameter` invalid sink or preference for the " + "X-Frame-Option header. For example: /multipage/ParameterInQuery/InCallback/WithoutXFO/" + "?" + VULNERABLE_PARAMETER + "=x"`400);" is 245.,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Magic Number,The method contains a magic number: 3,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Magic Number,The method contains a magic number: 400,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Magic Number,The method contains a magic number: 2,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Magic Number,The method contains a magic number: 3,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Magic Number,The method contains a magic number: 400,75
+google_firing-range,com.google.testing.security.firingrange.tests.reverseclickjacking,UniversalReverseClickjackingMultiPage,doGet,Magic Number,The method contains a magic number: 400,75
+google_firing-range,com.google.testing.security.firingrange.tests.address,AddressTest,errorsOnMissingUrl,Magic Number,The method contains a magic number: 400,39
+google_firing-range,com.google.testing.security.firingrange.tests.address,AddressTest,compilesGoodTemplate,Magic Number,The method contains a magic number: 200,47
+google_firing-range,com.google.testing.security.firingrange.tests.address,Address,doGet,Long Statement,The length of the statement "String errorMsg=String.format("Missing sink` not enough sinks or too many sinks :(." + "Got %d` expected 1"`CharMatcher.is('/').countIn(pathInfo));" is 147.,34
+google_firing-range,com.google.testing.security.firingrange.tests.address,Address,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.address,Address,doGet,Magic Number,The method contains a magic number: 2,34
+google_firing-range,com.google.testing.security.firingrange.tests.address,Address,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.address,Address,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,ParameterTest,errorsOnBadUrl,Magic Number,The method contains a magic number: 400,41
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,ParameterTest,sendsRedirectOnParameter,Magic Number,The method contains a magic number: 302,49
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,ParameterTest,sendsRedirectOnUrl,Magic Number,The method contains a magic number: 302,58
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,ParameterTest,refusesJavascriptIfSoInstructed,Magic Number,The method contains a magic number: 400,70
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,MetaTest,errorsOnEmptyUrl,Magic Number,The method contains a magic number: 400,27
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,MetaTest,errorsOnBadUrl,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,MetaTest,sendsRedirectOnParameter,Magic Number,The method contains a magic number: 200,43
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,Parameter,doGet,Magic Number,The method contains a magic number: 4,39
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,Parameter,doGet,Magic Number,The method contains a magic number: 400,39
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,Parameter,handleNoStartWithJs,Magic Number,The method contains a magic number: 400,69
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,Meta,doGet,Magic Number,The method contains a magic number: 400,36
+google_firing-range,com.google.testing.security.firingrange.tests.redirect,Meta,doGet,Magic Number,The method contains a magic number: 400,36
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,LocationTest,errorsOnMissingUrl,Magic Number,The method contains a magic number: 400,39
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,LocationTest,compilesGoodTemplate,Magic Number,The method contains a magic number: 200,47
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,Location,doGet,Long Statement,The length of the statement "String errorMsg=String.format("Missing sink` not enough sinks or too many sinks :(." + "Got %d` expected 1"`CharMatcher.is('/').countIn(pathInfo));" is 147.,34
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,Location,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,Location,doGet,Magic Number,The method contains a magic number: 2,34
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,Location,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,Location,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,Redirect,doGet,Magic Number,The method contains a magic number: 400,33
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,JsonpEndpoint,doGet,Long Statement,The length of the statement "Responses.sendError(response`"Invalid callback value: can only contain alphanumeric characters` dots and underscores."`400);" is 124.,34
+google_firing-range,com.google.testing.security.firingrange.tests.urldom,JsonpEndpoint,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.invalidframingconfig,XFODenyNoFrameAncestorsNoneTest,doGet_always_setsXFODenyNoCSP,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.invalidframingconfig,FrameAncestorsNoneNoXFODenyTest,doGet_always_setsCSPOptionButNoXFODeny,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.invalidframingconfig,XFOAllowFromNoCoverDomainTest,doGet_always_hasAllowFromNotCoveringCSPDomain,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.invalidframingconfig,FrameAncestorsSelfNoXFOSameOriginTest,doGet_always_setsCSPOptionNoXFOSameOrigin,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.invalidframingconfig,XFOSameOriginNoFrameAncestorsSelfTest,doGet_always_setsXFOSameOriginNoFrameAncestorsSelf,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.invalidframingconfig,FrameAncestorsNoXFOAllowFromTest,doGet_always_setsCSPOptionOnly,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.invalidframingconfig,XFOAllowFromNoFrameAncestorsTest,doGet_always_setsAllowFromOnly,Magic Number,The method contains a magic number: 200,35
+google_firing-range,com.google.testing.security.firingrange.tests.leakedcookie,LeakedHttpOnlyCookie,doGet,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@70d49a95,41
+google_firing-range,com.google.testing.security.firingrange.tests.leakedcookie,LeakedHttpOnlyCookie,createRandomString,Magic Number,The method contains a magic number: 8,81
+google_firing-range,com.google.testing.security.firingrange.tests.remoteinclude,ParameterTest,failsOnInvalidType,Magic Number,The method contains a magic number: 400,31
+google_firing-range,com.google.testing.security.firingrange.tests.remoteinclude,ParameterTest,acceptsScriptUrl,Magic Number,The method contains a magic number: 200,39
+google_firing-range,com.google.testing.security.firingrange.tests.remoteinclude,ParameterTest,acceptsObjectType,Magic Number,The method contains a magic number: 200,47
+google_firing-range,com.google.testing.security.firingrange.tests.remoteinclude,Parameter,doGet,Magic Number,The method contains a magic number: 2,34
+google_firing-range,com.google.testing.security.firingrange.tests.remoteinclude,Parameter,doGet,Magic Number,The method contains a magic number: 400,34
+google_firing-range,com.google.testing.security.firingrange.tests.dom,EventTriggering,doGet,Long Statement,The length of the statement "String errorMsg=String.format("Missing sink` not enough sinks or too many sinks :(." + "Got %d` expected 2"`CharMatcher.is('/').countIn(pathInfo));" is 147.,44
+google_firing-range,com.google.testing.security.firingrange.tests.dom,EventTriggering,doGet,Magic Number,The method contains a magic number: 2,44
+google_firing-range,com.google.testing.security.firingrange.tests.dom,EventTriggering,doGet,Magic Number,The method contains a magic number: 400,44
+google_firing-range,com.google.testing.security.firingrange.tests.dom,EventTriggering,doGet,Magic Number,The method contains a magic number: 2,44
+google_firing-range,com.google.testing.security.firingrange.tests.dom,EventTriggering,doGet,Magic Number,The method contains a magic number: 400,44
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Long Statement,The length of the statement "Responses.sendXssed(response`generateExternalTemplate(pathInfo.split("/")[1]`pathInfo.split("/")[2]`pathInfo.split("/")[3]));" is 125.,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Long Statement,The length of the statement "String errorMsg=String.format("Missing sink` not enough sinks or too many sinks :(." + "Got %d` expected 2 or 3"`CharMatcher.is('/').countIn(pathInfo));" is 152.,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 2,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 2,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 400,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 3,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 2,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 3,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 400,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,doGet,Magic Number,The method contains a magic number: 400,47
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,generateExternalTemplate,Complex Conditional,The conditional expression !WORD_CHARS_ONLY.matcher(source).matches() || !WORD_CHARS_ONLY.matcher(accessType).matches() || !WORD_CHARS_ONLY.matcher(sink).matches() is complex.,94
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDom,generateExternalTemplate,Long Statement,The length of the statement "if (!WORD_CHARS_ONLY.matcher(source).matches() || !WORD_CHARS_ONLY.matcher(accessType).matches() || !WORD_CHARS_ONLY.matcher(sink).matches()) {" is 143.,94
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDomScripts,doGet,Long Statement,The length of the statement "Responses.sendJavaScript(response`generateTemplate(pathInfo.split("/")[0]`pathInfo.split("/")[1]`pathInfo.split("/")[2]));" is 122.,43
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDomScripts,doGet,Long Statement,The length of the statement "String errorMsg=String.format("Missing sink` not enough sinks or too many sinks :(." + "Got %d` expected 2"`CharMatcher.is('/').countIn(pathInfo));" is 147.,43
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDomScripts,doGet,Magic Number,The method contains a magic number: 2,43
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDomScripts,doGet,Magic Number,The method contains a magic number: 2,43
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDomScripts,doGet,Magic Number,The method contains a magic number: 400,43
+google_firing-range,com.google.testing.security.firingrange.tests.dom,ToxicDomScripts,doGet,Magic Number,The method contains a magic number: 400,43
+google_firing-range,com.google.testing.security.firingrange.tests.tags,Multiline,doGet,Magic Number,The method contains a magic number: 400,35
+google_firing-range,com.google.testing.security.firingrange.tests.tags,Expression,doGet,Complex Conditional,The conditional expression attribute.getKey().toLowerCase().startsWith("on") || attribute.getKey().toLowerCase().equals("href") || attribute.getKey().toLowerCase().equals("src") is complex.,38
+google_firing-range,com.google.testing.security.firingrange.tests.tags,Expression,doGet,Complex Method,Cyclomatic complexity of the method is 8,38
+google_firing-range,com.google.testing.security.firingrange.tests.tags,Expression,doGet,Long Statement,The length of the statement "if (attribute.getKey().toLowerCase().startsWith("on") || attribute.getKey().toLowerCase().equals("href") || attribute.getKey().toLowerCase().equals("src")) {" is 157.,38
+google_firing-range,com.google.testing.security.firingrange.tests.tags,Expression,doGet,Magic Number,The method contains a magic number: 400,38
+google_firing-range,com.google.testing.security.firingrange.tests.tags,Expression,doGet,Magic Number,The method contains a magic number: 400,38
+google_firing-range,com.google.testing.security.firingrange.tests.tags,TagServlet,doGet,Magic Number,The method contains a magic number: 400,37
+google_firing-range,com.google.testing.security.firingrange.tests.tags,TagServlet,doGet,Magic Number,The method contains a magic number: 400,37
+google_firing-range,com.google.testing.security.firingrange.tests.tags,TagServlet,doGet,Magic Number,The method contains a magic number: 2,37
+google_firing-range,com.google.testing.security.firingrange.tests.tags,TagServlet,handleRequest,Magic Number,The method contains a magic number: 400,71
+google_firing-range,com.google.testing.security.firingrange.tests.flashinjection,FlashInjection,doGet,Magic Number,The method contains a magic number: 500,34
+google_firing-range,com.google.testing.security.firingrange.tests.flashinjection,FlashInjection,doGet,Magic Number,The method contains a magic number: 200,34
+google_firing-range,com.google.testing.security.firingrange.tests.angular,Angular,respond,Magic Number,The method contains a magic number: 400,45
+google_firing-range,com.google.testing.security.firingrange.tests.angular,Angular,respond,Magic Number,The method contains a magic number: 400,45
+google_firing-range,com.google.testing.security.firingrange.tests.angular,Angular,respond,Magic Number,The method contains a magic number: 400,45
+google_firing-range,com.google.testing.security.firingrange.tests.angular,Angular,respond,Magic Number,The method contains a magic number: 400,45
+google_firing-range,com.google.testing.security.firingrange.tests.angular,Angular,processPayload,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2bb98b8a,104

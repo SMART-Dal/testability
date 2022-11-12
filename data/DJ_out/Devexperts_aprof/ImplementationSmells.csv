@@ -1,0 +1,225 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Devexperts_aprof,com.devexperts.aprof.transformer,Context,Context,Long Parameter List,The method has 7 parameters. ,54
+Devexperts_aprof,com.devexperts.aprof.transformer,Context,isMethodInvocationTracked,Long Parameter List,The method has 6 parameters. ,108
+Devexperts_aprof,com.devexperts.aprof.transformer,Context,toString,Long Statement,The length of the statement "return "Context{" + "locationClass='" + locationClass + '\''+ "` locationMethod='"+ locationMethod+ '\''+ "` locationDesc='"+ locationDesc+ '\''+ "` accessMethod="+ accessMethod+ "` methodTracked="+ methodBodyTracked+ "` objectInit="+ objectInit+ "` intrinsicArraysCopyOf="+ intrinsicArraysCopyOf+ "` aprofOpsImpl='"+ aprofOpsImpl+ '\''+ "` location='"+ location+ '\''+ "` transformationNeeded="+ transformationNeeded+ "` locationStackNeeded="+ locationStackNeeded+ "` locationStack="+ locationStack+ '}';" is 505.,176
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitTrackedMethodInsn,Long Parameter List,The method has 5 parameters. ,63
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitInsn,Complex Method,Cyclomatic complexity of the method is 9,89
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitTypeInsn,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@40ed9345,114
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitIntInsn,Complex Method,Cyclomatic complexity of the method is 10,136
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitIntInsn,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6599066,136
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitMethodInsn,Complex Conditional,The conditional expression opcode == Opcodes.INVOKESTATIC && owner.equals("java/lang/reflect/Array") && name.equals("newInstance") && (desc.equals(TransformerUtil.CLASS_INT_RETURNS_OBJECT) || desc.equals(TransformerUtil.CLASS_INT_ARR_RETURNS_OBJECT)) is complex.,183
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitMethodInsn,Complex Method,Cyclomatic complexity of the method is 10,183
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitMethodInsn,Long Parameter List,The method has 5 parameters. ,183
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitMethodInsn,Long Statement,The length of the statement "boolean isClone=opcode != Opcodes.INVOKESTATIC && name.equals(TransformerUtil.CLONE) && desc.equals(TransformerUtil.NOARG_RETURNS_OBJECT);" is 138.,183
+Devexperts_aprof,com.devexperts.aprof.transformer,AbstractMethodVisitor,visitMethodInsn,Long Statement,The length of the statement "if (opcode == Opcodes.INVOKESTATIC && owner.equals("java/lang/reflect/Array") && name.equals("newInstance") && (desc.equals(TransformerUtil.CLASS_INT_RETURNS_OBJECT) || desc.equals(TransformerUtil.CLASS_INT_ARR_RETURNS_OBJECT))) {" is 230.,183
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodAnalyzer,visitTrackedMethodInsn,Long Parameter List,The method has 5 parameters. ,67
+Devexperts_aprof,com.devexperts.aprof.transformer,TransformerUtil,isIntrinsicArraysCopyOf,Long Statement,The length of the statement "return owner.equals("java/util/Arrays") && ((mname.equals("copyOf") && desc.equals("([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;")) || (mname.equals("copyOfRange") && desc.equals("([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;")));" is 258.,59
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfo,getRequiredInterfaceInfos,Long Statement,The length of the statement "for (int i=0; i < ii.length; i++) if (ii[i] == null) ii[i]=ciCache.getOrBuildRequiredClassInfo(internalInterfaceNames[i]`loader);" is 129.,148
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfo,isSubclassOf,Long Statement,The length of the statement "if (c.getRequiredSuperclassInfo(ciCache`loader) != null && c.getRequiredSuperclassInfo(ciCache`loader).getInternalName().equals(that.getInternalName())) {" is 154.,169
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfoCache,getOrBuildRequiredClassInfo,Long Statement,The length of the statement "if (classInfo == null) throw new RuntimeException("Cannot load class information for " + internalClassName.replace('/'`'.'));" is 125.,72
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfoCache,initTrackedClasses,Complex Method,Cyclomatic complexity of the method is 13,119
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfoCache,pullUpTrackedMethodInvocations,Long Statement,The length of the statement "for ( ClassInfo intf : classInfo.getInterfaceInfos(this`loader)) processOverridenTrackedMethodInvocation(intf`methods`loader);" is 126.,204
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfoVisitor,visit,Long Parameter List,The method has 6 parameters. ,41
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfoVisitor,visitMethod,Complex Conditional,The conditional expression virtualMethods != null && (access & Opcodes.ACC_STATIC) == 0 && (access & Opcodes.ACC_PRIVATE) == 0 && (access & Opcodes.ACC_FINAL) == 0 && !name.equals(TransformerUtil.INIT) is complex.,49
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfoVisitor,visitMethod,Long Parameter List,The method has 5 parameters. ,49
+Devexperts_aprof,com.devexperts.aprof.transformer,ClassInfoVisitor,visitMethod,Long Statement,The length of the statement "if (virtualMethods != null && (access & Opcodes.ACC_STATIC) == 0 && (access & Opcodes.ACC_PRIVATE) == 0 && (access & Opcodes.ACC_FINAL) == 0 && !name.equals(TransformerUtil.INIT)) {" is 181.,49
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitStartInvokedMethod,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL`TransformerUtil.LOCATION_STACK`"addInvokedMethod"`TransformerUtil.INT_VOID`false);" is 123.,94
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitReturnFromInvokedMethod,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL`TransformerUtil.LOCATION_STACK`"removeInvokedMethod"`TransformerUtil.NOARG_VOID`false);" is 128.,107
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitMarkInvocationPoint,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL`TransformerUtil.LOCATION_STACK`"addInvocationPoint"`TransformerUtil.INT_VOID`false);" is 125.,129
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitUnmarkInvocationPoint,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL`TransformerUtil.LOCATION_STACK`"removeInvocationPoint"`TransformerUtil.NOARG_VOID`false);" is 130.,135
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitTrackedMethodInsn,Long Parameter List,The method has 5 parameters. ,140
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocate,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`"allocateSize"`TransformerUtil.STACK_INT_CLASS_VOID`false);" is 135.,177
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocate,Long Statement,The length of the statement "else mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`"allocate"`TransformerUtil.STACK_INT_VOID`false);" is 130.,177
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocateArray,Long Statement,The length of the statement "String name=elementType.getSort() == Type.OBJECT || elementType.getSort() == Type.ARRAY ? "object" : elementType.getClassName();" is 128.,205
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocateArray,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`name + "AllocateArraySize"`TransformerUtil.INT_STACK_INT_VOID`false);" is 145.,205
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocateArray,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`"allocate"`TransformerUtil.STACK_INT_VOID`false);" is 125.,205
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocateArrayMulti,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`"allocateArraySizeMulti"`TransformerUtil.OBJECT_ARR_STACK_INT_VOID`false);" is 150.,244
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocateArrayMulti,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`"allocate"`TransformerUtil.STACK_INT_VOID`false);" is 125.,244
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocateReflect,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`context.getConfig().isSize() ? "allocateReflectSize" : "allocateReflect"`TransformerUtil.OBJECT_STACK_INT_VOID`false);" is 194.,260
+Devexperts_aprof,com.devexperts.aprof.transformer,MethodTransformer,visitAllocateReflectVClone,Long Statement,The length of the statement "mv.visitMethodInsn(Opcodes.INVOKESTATIC`context.getAprofOpsImplementation()`context.getConfig().isSize() ? "allocateReflectVCloneSize" : "allocateReflectVClone"`TransformerUtil.OBJECT_STACK_INT_VOID`false);" is 206.,276
+Devexperts_aprof,com.devexperts.aprof.transformer,AProfTransformer,transform,Long Parameter List,The method has 5 parameters. ,60
+Devexperts_aprof,com.devexperts.aprof.transformer,AProfTransformer,transformImpl,Complex Method,Cyclomatic complexity of the method is 10,76
+Devexperts_aprof,com.devexperts.aprof.transformer,AProfTransformer,transformImpl,Long Parameter List,The method has 5 parameters. ,76
+Devexperts_aprof,com.devexperts.aprof.transformer,AProfTransformer,transformImpl,Long Statement,The length of the statement "ClassInfoVisitor classInfoVisitor=classInfo == null && !anonymous ? new ClassInfoVisitor(classInfoMap.isInitTrackedClasses()) : null;" is 133.,76
+Devexperts_aprof,com.devexperts.aprof.transformer,AProfTransformer,transformImpl,Long Statement,The length of the statement "int transformFlags=(config.isSkipDebug() ? ClassReader.SKIP_DEBUG : 0) + (config.isNoFrames() || computeFrames ? ClassReader.SKIP_FRAMES : 0);" is 142.,76
+Devexperts_aprof,com.devexperts.aprof.transformer,AProfTransformer,log,Long Parameter List,The method has 5 parameters. ,165
+Devexperts_aprof,com.devexperts.aprof.transformer,AProfTransformer,dumpClass,Long Parameter List,The method has 5 parameters. ,187
+Devexperts_aprof,com.devexperts.aprof,DetailsConfiguration,loadFromStream,Long Statement,The length of the statement "if (classMethods == null) throw new IOException(String.format("Line %d: Indented line with method name shall follow a line with class name"`lineNo));" is 149.,75
+Devexperts_aprof,com.devexperts.aprof,IndexMap,putNewChildUnsync,Magic Number,The method contains a magic number: 4,155
+Devexperts_aprof,com.devexperts.aprof,IndexMap,putNewChildUnsync,Magic Number,The method contains a magic number: 2,155
+Devexperts_aprof,com.devexperts.aprof,IndexMap,rehashChildren,Magic Number,The method contains a magic number: 2,166
+Devexperts_aprof,com.devexperts.aprof,IndexMap,incrementHistogramCount,Long Statement,The length of the statement "while (!UnsafeHolder.UNSAFE.compareAndSwapInt(histogramCounts`INT_ARRAY_BASE_OFFSET + i * INT_ARRAY_INDEX_SCALE`val`val + 1));" is 126.,238
+Devexperts_aprof,com.devexperts.aprof,IndexMap,isOverflowThreshold,Complex Method,Cyclomatic complexity of the method is 8,267
+Devexperts_aprof,com.devexperts.aprof,HistogramConfiguration,loadFromFile,Complex Method,Cyclomatic complexity of the method is 11,55
+Devexperts_aprof,com.devexperts.aprof,AProfSizeUtil,align,Magic Number,The method contains a magic number: 7,59
+Devexperts_aprof,com.devexperts.aprof,AProfSizeUtil,align,Magic Number,The method contains a magic number: 7L,59
+Devexperts_aprof,com.devexperts.aprof,AProfSizeUtil,getArraySizeMultiRec,Complex Method,Cyclomatic complexity of the method is 10,113
+Devexperts_aprof,com.devexperts.aprof,AProfAgent,go,Long Statement,The length of the statement "logClearSbAlways(sb.append("Loaded in ").append(finish - start).append(" ms with ").append(transformTime).append(" ms in transformer (").append(finish - start - transformTime).append(" ms other)"));" is 198.,101
+Devexperts_aprof,com.devexperts.aprof,AProfAgent,redefine,Complex Method,Cyclomatic complexity of the method is 11,157
+Devexperts_aprof,com.devexperts.aprof,AProfTools,help,Magic Number,The method contains a magic number: 11,65
+Devexperts_aprof,com.devexperts.aprof,AProfTools,help,Magic Number,The method contains a magic number: 16,65
+Devexperts_aprof,com.devexperts.aprof,AProfTools,runDumpCommand,Magic Number,The method contains a magic number: 2,105
+Devexperts_aprof,com.devexperts.aprof,AProfTools,runExportCommand,Magic Number,The method contains a magic number: 2,128
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,isInternalLocation,Long Statement,The length of the statement "return locationClass.startsWith("java.lang.ThreadLocal") || locationClass.equals(AProfOps.class.getName()) || locationClass.equals(AProfOpsInternal.class.getName())|| locationClass.equals(AProfRegistry.class.getName())|| locationClass.equals(IndexMap.class.getName())|| locationClass.equals(LocationStack.class.getName())|| locationClass.equals(LocationStackThreadLocal.class.getName())|| locationClass.equals(FastArrayList.class.getName())|| locationClass.equals(StringIndexer.class.getName());" is 495.,110
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,resolveClassName,Complex Method,Cyclomatic complexity of the method is 21,174
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,resolveClassName,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@37e4b21b,174
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,getDetailedIndex,Complex Conditional,The conditional expression TRACK_TRANSFORM_DETAILS && stack.transform_loc != UNKNOWN_LOC && stack.transform_loc != loc2 is complex.,351
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,getDetailedIndex,Long Statement,The length of the statement "if (TRACK_TRANSFORM_DETAILS && stack.transform_loc != UNKNOWN_LOC && stack.transform_loc != loc2) map=map.registerChild(stack.transform_loc);" is 141.,351
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,takeSnapshotInternalSync,Complex Method,Cyclomatic complexity of the method is 8,376
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,takeSnapshotInternalSync,Long Statement,The length of the statement "SnapshotDeep cs=ss.getOrCreateChildAt(idx=ss.findChildInSortedFrom(idx`name)`name`datatypeInfo.isArray()`histogramLength);" is 122.,376
+Devexperts_aprof,com.devexperts.aprof,AProfRegistry,takeSnapshotInternalSync,Magic Number,The method contains a magic number: 1.5,376
+Devexperts_aprof,com.devexperts.aprof,Configuration,applyString,Complex Method,Cyclomatic complexity of the method is 9,288
+Devexperts_aprof,com.devexperts.aprof,Configuration,showNotes,Complex Conditional,The conditional expression all || histogram.length > 0 && !size is complex.,330
+Devexperts_aprof,com.devexperts.aprof,Configuration,showNotes,Complex Conditional,The conditional expression all || verbose_redefinition && !verbose is complex.,330
+Devexperts_aprof,com.devexperts.aprof,Configuration,showNotes,Complex Conditional,The conditional expression all || (verbose_eliminate_allocation || check_eliminate_allocation) && !isCompileLogEnabled() is complex.,330
+Devexperts_aprof,com.devexperts.aprof,Configuration,showNotes,Long Identifier,The length of the field XX_UNLOCK_DIAGNOSTIC_VM_OPTIONS is 31.,330
+Devexperts_aprof,com.devexperts.aprof,Configuration,showNotes,Long Statement,The length of the statement "out.println("Note: 'check.eliminate.allocation' and 'verbose.eliminate.allocation' requires running JVM with " + "'" + XX_UNLOCK_DIAGNOSTIC_VM_OPTIONS + "' and '"+ XX_LOG_COMPILATION+ "' options.");" is 198.,330
+Devexperts_aprof,com.devexperts.aprof,Configuration,isCompileLogEnabled,Long Identifier,The length of the field XX_UNLOCK_DIAGNOSTIC_VM_OPTIONS is 31.,348
+Devexperts_aprof,com.devexperts.aprof,Configuration,parseValue,Complex Method,Cyclomatic complexity of the method is 9,410
+Devexperts_aprof,com.devexperts.aprof,AProfTarget,createStrings,Long Statement,The length of the statement "return new String[]{new String()`new String("original")`new String(CHARS)`new String(CHARS`0`CHARS.length)`new String(CODE_POINTS`0`CODE_POINTS.length)`new String(BYTES`0`0`BYTES.length)`new String(BYTES`0)`new String(BYTES`0`BYTES.length`"UTF-8")`new String(BYTES`"UTF-8")`new String(BYTES`0`BYTES.length)`new String(BYTES)`new String(new StringBuffer().append(1))`new String(new StringBuilder().append(1))`new String(new StringBuffer(10).append(1))`new String(new StringBuilder(10).append(1))`new StringBuffer().append(1).toString()`new StringBuilder().append(1).toString()`new StringBuffer("str").toString()`new StringBuilder("str").toString()`new StringBuffer(CharBuffer.wrap(CHARS)).toString()`new StringBuilder(CharBuffer.wrap(CHARS)).toString()`String.valueOf(new StringBuffer("str"))`String.valueOf(new StringBuilder("str"))`Integer.toString(1)`String.valueOf(1)};" is 872.,56
+Devexperts_aprof,com.devexperts.aprof,AProfTarget,createStrings,Magic Number,The method contains a magic number: 10,56
+Devexperts_aprof,com.devexperts.aprof,AProfTarget,createStrings,Magic Number,The method contains a magic number: 10,56
+Devexperts_aprof,com.devexperts.aprof,AProfTarget,allocatePoint,Magic Number,The method contains a magic number: 100,94
+Devexperts_aprof,com.devexperts.aprof,AProfTarget,allocatePoint,Magic Number,The method contains a magic number: 200,94
+Devexperts_aprof,com.devexperts.aprof,AProfTarget,allocatePointArray,Magic Number,The method contains a magic number: 10,115
+Devexperts_aprof,com.devexperts.aprof,AProfTarget,allocateShortArray,Magic Number,The method contains a magic number: 10,123
+Devexperts_aprof,com.devexperts.aprof,FastObjIntMapTest,testBasic,Magic Number,The method contains a magic number: 1000,32
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,go,Magic Number,The method contains a magic number: 3,44
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,runByteTest,Magic Number,The method contains a magic number: 18,56
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,runByteTest,Magic Number,The method contains a magic number: 2,56
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,runCharTest,Magic Number,The method contains a magic number: 17,62
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,runCharTest,Magic Number,The method contains a magic number: 2,62
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Complex Method,Cyclomatic complexity of the method is 9,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 2,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 25,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 4,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 26,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 8,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 27,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 16,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 28,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 64,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 29,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 32768,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 30,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 65536,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 28,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 131072,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 27,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,getBytes,Magic Number,The method contains a magic number: 26,68
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,printByteResult,Long Statement,The length of the statement "System.out.println("Size = " + size + ": "+ "Allocated "+ nf.format(count)+ " objs with "+ nf.format(bytes)+ " bytes in "+ time+ " ms "+ "("+ nf.format(1000L * bytes / time)+ " bps` "+ nf.format(1000L * count / time)+ " ops)");" is 227.,106
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,printByteResult,Magic Number,The method contains a magic number: 1000L,106
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,printByteResult,Magic Number,The method contains a magic number: 1000L,106
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,runCharTest,Magic Number,The method contains a magic number: 3,113
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,printCharResult,Long Statement,The length of the statement "System.out.println("Size = " + size + ": "+ "Allocated "+ nf.format(count)+ " objs with "+ nf.format(chars)+ " chars in "+ time+ " ms "+ "("+ nf.format(1000L * chars / time)+ " cps` "+ nf.format(1000L * count / time)+ " ops)");" is 227.,130
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,printCharResult,Magic Number,The method contains a magic number: 1000L,130
+Devexperts_aprof,com.devexperts.aprof,AllocSpeedTest,printCharResult,Magic Number,The method contains a magic number: 1000L,130
+Devexperts_aprof,com.devexperts.aprof,QSortTest,testQSort,Magic Number,The method contains a magic number: 1000,34
+Devexperts_aprof,com.devexperts.aprof,QSortTest,testQSort,Magic Number,The method contains a magic number: 100,34
+Devexperts_aprof,com.devexperts.aprof,MicroPerfTest,main,Magic Number,The method contains a magic number: 3,35
+Devexperts_aprof,com.devexperts.aprof,IterationSpeedTest,main,Complex Method,Cyclomatic complexity of the method is 11,35
+Devexperts_aprof,com.devexperts.aprof,IterationSpeedTest,main,Magic Number,The method contains a magic number: 1000000,35
+Devexperts_aprof,com.devexperts.aprof,IterationSpeedTest,main,Magic Number,The method contains a magic number: 1000000,35
+Devexperts_aprof,com.devexperts.aprof,IterationSpeedTest,main,Magic Number,The method contains a magic number: 100000000,35
+Devexperts_aprof,com.devexperts.aprof,AProfPerfTest,go,Magic Number,The method contains a magic number: 3,43
+Devexperts_aprof,com.devexperts.aprof,AProfPerfTest,makeRun,Long Statement,The length of the statement "ProcessBuilder pb=new ProcessBuilder(javacPath`"-J-javaagent:" + aprofJar + "="+ sa`"-sourcepath"`sourceDir`"-d"`outDir`"-nowarn"`sources);" is 139.,67
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 0x7f,47
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 12,47
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 0xf,47
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 8,47
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 0xf,47
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 4,47
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 0xf,47
+Devexperts_aprof,com.devexperts.aprof.util,FastOutputStreamWriter,write,Magic Number,The method contains a magic number: 0xf,47
+Devexperts_aprof,com.devexperts.aprof.util,FastArrayList,FastArrayList,Magic Number,The method contains a magic number: 1024,34
+Devexperts_aprof,com.devexperts.aprof.util,FastArrayList,putUnsync,Magic Number,The method contains a magic number: 2,57
+Devexperts_aprof,com.devexperts.aprof.util,InnerJarClassLoader,cacheJar,Complex Method,Cyclomatic complexity of the method is 9,96
+Devexperts_aprof,com.devexperts.aprof.util,InnerJarClassLoader,cacheClass,Long Parameter List,The method has 5 parameters. ,141
+Devexperts_aprof,com.devexperts.aprof.util,InnerJarClassLoader,cacheResource,Long Parameter List,The method has 5 parameters. ,147
+Devexperts_aprof,com.devexperts.aprof.util,QuickSort,qsort,Complex Method,Cyclomatic complexity of the method is 10,37
+Devexperts_aprof,com.devexperts.aprof.util,QuickSort,qsort,Magic Number,The method contains a magic number: 4,37
+Devexperts_aprof,com.devexperts.aprof.util,FastByteBuffer,ensureCapacity,Magic Number,The method contains a magic number: 2,44
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printNum,Magic Number,The method contains a magic number: 1000000000000000000L,46
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printNum,Magic Number,The method contains a magic number: 1000,46
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,print3,Magic Number,The method contains a magic number: 100,65
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,print3,Magic Number,The method contains a magic number: 100,65
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,print2,Magic Number,The method contains a magic number: 10,71
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,print2,Magic Number,The method contains a magic number: 10,71
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,print2,Magic Number,The method contains a magic number: 10,71
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,print2,Magic Number,The method contains a magic number: 10,71
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printNumPercent,Magic Number,The method contains a magic number: 10000,83
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printNumPercent,Magic Number,The method contains a magic number: 100,83
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printNumPercent,Magic Number,The method contains a magic number: 100,83
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printTimePeriod,Magic Number,The method contains a magic number: 60,95
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printTimePeriod,Magic Number,The method contains a magic number: 60000,95
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printTimePeriod,Magic Number,The method contains a magic number: 60000,95
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printTimePeriod,Magic Number,The method contains a magic number: 60,95
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printTimePeriod,Magic Number,The method contains a magic number: 1000,95
+Devexperts_aprof,com.devexperts.aprof.util,FastFmtUtil,printTimePeriod,Magic Number,The method contains a magic number: 60,95
+Devexperts_aprof,com.devexperts.aprof.util,StringIndexer,registerImpl,Magic Number,The method contains a magic number: 2,60
+Devexperts_aprof,com.devexperts.aprof.util,StringIndexer,rehash,Long Statement,The length of the statement "for (int i=0; i < oldCore.length; i++) if (oldCore.strings[i] != null) newCore.register(oldCore.strings[i]`oldCore.ids[i]);" is 123.,71
+Devexperts_aprof,com.devexperts.aprof.util,StringIndexer,rehash,Magic Number,The method contains a magic number: 2,71
+Devexperts_aprof,com.devexperts.aprof.util,FastObjIntMap,rehash,Long Statement,The length of the statement "for (int i=0; i < oldCore.length; i++) if (oldCore.keys[i] != null) putInternal(newCore`oldCore.keys[i]`oldCore.values[i]);" is 123.,96
+Devexperts_aprof,com.devexperts.aprof.dump,SnapshotShallow,exceeds,Magic Number,The method contains a magic number: 100,193
+Devexperts_aprof,com.devexperts.aprof.dump,ConnectionListenerThread,run,Magic Number,The method contains a magic number: 60000,43
+Devexperts_aprof,com.devexperts.aprof.dump,SnapshotDeep,addDeep,Long Statement,The length of the statement "SnapshotDeep item=getOrCreateChildAt(idx=findChildInSortedFrom(idx`name)`name`other.isArray()`other.getHistoCountsLength());" is 124.,108
+Devexperts_aprof,com.devexperts.aprof.dump,SnapshotDeep,subDeep,Long Statement,The length of the statement "SnapshotDeep item=getOrCreateChildAt(idx=findChildInSortedFrom(idx`name)`name`other.isArray()`other.getHistoCountsLength());" is 124.,135
+Devexperts_aprof,com.devexperts.aprof.dump,SnapshotDeep,ensureChildrenCapacity,Magic Number,The method contains a magic number: 4,184
+Devexperts_aprof,com.devexperts.aprof.dump,SnapshotDeep,findChildInSorted,Magic Number,The method contains a magic number: 2,203
+Devexperts_aprof,com.devexperts.aprof.dump,DumpFormatter,dumpSnapshotByDataTypes,Complex Method,Cyclomatic complexity of the method is 9,179
+Devexperts_aprof,com.devexperts.aprof.dump,DumpFormatter,printlnDetailsShallow,Complex Method,Cyclomatic complexity of the method is 8,217
+Devexperts_aprof,com.devexperts.aprof.dump,DumpFormatter,printlnDetailsShallow,Long Parameter List,The method has 5 parameters. ,217
+Devexperts_aprof,com.devexperts.aprof.dump,DumpFormatter,printLocationsDeep,Complex Conditional,The conditional expression shown == 0 || printAll || item.exceedsThreshold(total`config.getThreshold()) is complex.,270
+Devexperts_aprof,com.devexperts.aprof.dump,DumpFormatter,printLocationsDeep,Complex Method,Cyclomatic complexity of the method is 11,270
+Devexperts_aprof,com.devexperts.aprof.dump,DumpFormatter,printLocationsDeep,Magic Number,The method contains a magic number: 2,270
+Devexperts_aprof,com.devexperts.aprof.dump,DumpShutdownThread,run,Long Statement,The length of the statement "Log.out.println("Stopped after " + treal + " ms with "+ ttrans+ " ms in transformer "+ "("+ (treal - ttrans)+ " ms other)");" is 124.,45
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogWatcher,run,Magic Number,The method contains a magic number: 2,52
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,parse,Magic Number,The method contains a magic number: 8192,118
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,parseChar,Complex Conditional,The conditional expression strIndex == 0 && c == '/' && !tagClosed is complex.,132
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,parseChar,Complex Conditional,The conditional expression strIndex == tagString.length() && (c == ' ' || c == '>' || c == '/') is complex.,132
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,parseChar,Complex Method,Cyclomatic complexity of the method is 28,132
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,parseChar,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@6700af3,132
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,updateMask,Complex Conditional,The conditional expression ((1 << i) & strMask) != 0 && (strIndex >= strings[i].length() || strings[i].charAt(strIndex) != c) is complex.,227
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,updateMask,Long Statement,The length of the statement "for (int i=0; i < strings.length; i++) if (((1 << i) & strMask) != 0 && (strIndex >= strings[i].length() || strings[i].charAt(strIndex) != c)) strMask&=~(1 << i);" is 162.,227
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,getIntAttr,Magic Number,The method contains a magic number: 10,245
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,takeArgumentsAttr,Magic Number,The method contains a magic number: 10,257
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,processParsedTag,Complex Method,Cyclomatic complexity of the method is 15,281
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,processParsedTag,Magic Number,The method contains a magic number: 2,281
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,processParsedTag,Magic Number,The method contains a magic number: 3,281
+Devexperts_aprof,com.devexperts.aprof.hotspot,CompileLogParser,processParsedTag,Magic Number,The method contains a magic number: 4,281
+Devexperts_aprof,com.devexperts.aprof.hotspot,Method,addArgument,Magic Number,The method contains a magic number: 2,37
+Devexperts_aprof,com.devexperts.aprof.hotspot,IdNamedIndex,add,Magic Number,The method contains a magic number: 2,47
+Devexperts_aprof,com.devexperts.aprof.hotspot,IdNamedIndex,add,Magic Number,The method contains a magic number: 2,47
+Devexperts_aprof,com.devexperts.sample,FibonacciNumbers,fib,Magic Number,The method contains a magic number: 2,29
+Devexperts_aprof,com.devexperts.sample,FibonacciNumbers,fib,Magic Number,The method contains a magic number: 2,29
+Devexperts_aprof,com.devexperts.aprof.selftest,TrackingIntfTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("float[]: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\t{impl}.allocateResult: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\t\t{impl}.trackedMethod: {size} bytes in {count} objects (avg size {objSize} bytes)\n"+ "\t\t\t{class}.invokeTrackedViaIntf: {size} bytes in {count} objects (avg size {objSize} bytes)\n"`"class=" + getClass().getName()`"impl=" + TrackingIntfTrackedImpl.class.getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 548.,44
+Devexperts_aprof,com.devexperts.aprof.selftest,TestSuite,main,Complex Method,Cyclomatic complexity of the method is 10,66
+Devexperts_aprof,com.devexperts.aprof.selftest,TestSuite,main,Magic Number,The method contains a magic number: 2,66
+Devexperts_aprof,com.devexperts.aprof.selftest,TestSuite,testSingleCase,Complex Method,Cyclomatic complexity of the method is 8,125
+Devexperts_aprof,com.devexperts.aprof.selftest,TestSuite,compareStatistics,Long Statement,The length of the statement "if (!ansToken.equals(outToken)) return String.format("Line %d does not match. Expected vs collected:%n%s%n%s"`lineNo`ansToken`outToken);" is 136.,218
+Devexperts_aprof,com.devexperts.aprof.selftest,DoubleTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("java.lang.Double: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\tjava.lang.Double.valueOf: {size} bytes in {count} objects\n" + "\t\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 350.,47
+Devexperts_aprof,com.devexperts.aprof.selftest,DoubleTest,doTest,Magic Number,The method contains a magic number: 2,59
+Devexperts_aprof,com.devexperts.aprof.selftest,DoubleTest,doTest,Magic Number,The method contains a magic number: 10000,59
+Devexperts_aprof,com.devexperts.aprof.selftest,DoubleTest,doTest,Magic Number,The method contains a magic number: 10000,59
+Devexperts_aprof,com.devexperts.aprof.selftest,ReflectionTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\tsun.reflect.GeneratedConstructorAccessor.newInstance: {size} bytes in {count} objects\n" + "\t\tjava.lang.reflect.Constructor.newInstance: {size} bytes in {count} objects\n"+ "\t\t\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 462.,48
+Devexperts_aprof,com.devexperts.aprof.selftest,IntegerTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("java.lang.Integer: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\tjava.lang.Integer.valueOf: {size} bytes in {count} objects\n" + "\t\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 352.,47
+Devexperts_aprof,com.devexperts.aprof.selftest,IntegerTest,doTest,Magic Number,The method contains a magic number: 2,59
+Devexperts_aprof,com.devexperts.aprof.selftest,IntegerTest,doTest,Magic Number,The method contains a magic number: 10000,59
+Devexperts_aprof,com.devexperts.aprof.selftest,IntegerTest,doTest,Magic Number,The method contains a magic number: 10000,59
+Devexperts_aprof,com.devexperts.aprof.selftest,TrackingDeepTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity: {size2} bytes in {count2} objects (avg size {objSize} bytes)\n" + "\t{class}.newEntity: {size2} bytes in {count2} objects\n" + "\t\t<unknown>: {size} bytes in {count} objects\n"+ "\t\t{class}.trackedMethod: {size} bytes in {count} objects\n"+ "\t\t\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"size2=" + TestUtil.fmt(2 * objSize * COUNT)`"count2=" + TestUtil.fmt(2 * COUNT)`"objSize=" + objSize);" is 544.,44
+Devexperts_aprof,com.devexperts.aprof.selftest,TrackingDeepTest,getExpectedStatistics,Magic Number,The method contains a magic number: 2,44
+Devexperts_aprof,com.devexperts.aprof.selftest,TrackingDeepTest,getExpectedStatistics,Magic Number,The method contains a magic number: 2,44
+Devexperts_aprof,com.devexperts.aprof.selftest,ObjectArrayCopyTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity[]: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\tjava.util.Arrays.copyOf: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\t\t{class}.doTest: {size} bytes in {count} objects (avg size {objSize} bytes)\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 403.,48
+Devexperts_aprof,com.devexperts.aprof.selftest,NewTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 280.,46
+Devexperts_aprof,com.devexperts.aprof.selftest,ArraySizeTest,getExpectedStatistics,Long Statement,The length of the statement "expected.append(name + "[]: {" + name+ "Size} bytes in {count} objects (avg size {"+ name+ "AvgSize} bytes)\n"+ "\tcom.devexperts.aprof.selftest.ArraySizeTest.doTest: {"+ name+ "Size} bytes in {count} objects (avg size {"+ name+ "AvgSize} bytes)\n"+ "\n");" is 256.,56
+Devexperts_aprof,com.devexperts.aprof.selftest,EnhancedForLoopTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt(ITR_CLASS.getName() + ": {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\tjava.util.ArrayList.iterator: {size} bytes in {count} objects\n"+ "\t\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 359.,77
+Devexperts_aprof,com.devexperts.aprof.selftest,TrackingTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity: {size2} bytes in {count2} objects (avg size {objSize} bytes)\n" + "\t{class}.notTrackedMethod: {size} bytes in {count} objects\n" + "\t{class}.trackedMethod: {size} bytes in {count} objects\n"+ "\t\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"size2=" + TestUtil.fmt(2 * objSize * COUNT)`"count2=" + TestUtil.fmt(2 * COUNT)`"objSize=" + objSize);" is 493.,44
+Devexperts_aprof,com.devexperts.aprof.selftest,TrackingTest,getExpectedStatistics,Magic Number,The method contains a magic number: 2,44
+Devexperts_aprof,com.devexperts.aprof.selftest,TrackingTest,getExpectedStatistics,Magic Number,The method contains a magic number: 2,44
+Devexperts_aprof,com.devexperts.aprof.selftest,TestUtil,fmt,Complex Method,Cyclomatic complexity of the method is 8,40
+Devexperts_aprof,com.devexperts.aprof.selftest,CloneTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity: {size1} bytes in {count1} objects (avg size {objSize} bytes)\n" + "\t{class}$Entity.dup;via-clone: {size} bytes in {count} objects\n" + "\t{class}.doTest: {objSize} bytes in 1 objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"size1=" + TestUtil.fmt(objSize * (COUNT + 1))`"count1=" + TestUtil.fmt(COUNT + 1)`"objSize=" + objSize);" is 432.,46
+Devexperts_aprof,com.devexperts.aprof.selftest,ArrayNewInstanceTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity[]: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\t{class}.doTest: {size} bytes in {count} objects (avg size {objSize} bytes)\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 309.,47
+Devexperts_aprof,com.devexperts.aprof.selftest,TryTest,getExpectedStatistics,Long Statement,The length of the statement "return fmt("java.lang.Double: {doubleSize} bytes in {count} objects (avg size {doubleObjSize} bytes)\n" + "\tjava.lang.Double.valueOf: {doubleSize} bytes in {count} objects\n" + "\t\t{class}.doTest: {doubleSize} bytes in {count} objects\n"+ "\n"+ "java.lang.Float: {floatSize} bytes in {count} objects (avg size {floatObjSize} bytes)\n"+ "\t{class}.doTest: {floatSize} bytes in {count} objects\n"`"class=" + getClass().getName()`"doubleSize=" + fmt(doubleObjSize * COUNT)`"floatSize=" + fmt(floatObjSize * COUNT)`"count=" + fmt(COUNT)`"doubleObjSize=" + doubleObjSize`"floatObjSize=" + floatObjSize);" is 600.,49
+Devexperts_aprof,com.devexperts.aprof.selftest,TryTest,doTest,Magic Number,The method contains a magic number: 10.6,67
+Devexperts_aprof,com.devexperts.aprof.selftest,StringTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("char[]: {charsSize} bytes in {count} objects (avg size {charsObjSize} bytes)\n" + "\tjava.util.Arrays.copyOf: {charsSize} bytes in {count} objects (avg size {charsObjSize} bytes)\n" + "\t\tjava.lang.String.<init>(char[]): {charsSize} bytes in {count} objects (avg size {charsObjSize} bytes)\n"+ "\t\t\t{class}.doTest: {charsSize} bytes in {count} objects (avg size {charsObjSize} bytes)\n"+ "\n"+ "java.lang.String: {stringSize} bytes in {count} objects (avg size {stringObjSize} bytes)\n"+ "\t{class}.doTest: {stringSize} bytes in {count} objects\n"`"class=" + getClass().getName()`"charsSize=" + TestUtil.fmt(charsObjSize * COUNT)`"stringSize=" + TestUtil.fmt(stringObjSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"charsObjSize=" + charsObjSize`"stringObjSize=" + stringObjSize);" is 802.,46
+Devexperts_aprof,com.devexperts.aprof.selftest,DeserializationTest,getExpectedStatistics,Long Statement,The length of the statement "return TestUtil.fmt("{class}$Entity: {size} bytes in {count} objects (avg size {objSize} bytes)\n" + "\tsun.reflect.GeneratedSerializationConstructorAccessor.newInstance: {size} bytes in {count} objects\n" + "\t\tjava.io.ObjectInputStream.readObject: {size} bytes in {count} objects\n"+ "\t\t\t{class}.doTest: {size} bytes in {count} objects\n"`"class=" + getClass().getName()`"size=" + TestUtil.fmt(objSize * COUNT)`"count=" + TestUtil.fmt(COUNT)`"objSize=" + objSize);" is 470.,67

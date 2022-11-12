@@ -1,0 +1,228 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+NirmataOSS_workflow,com.nirmata.workflow,TestAutoCleanerHolder,testNull,Magic Number,The method contains a magic number: 10,40
+NirmataOSS_workflow,com.nirmata.workflow,TestAutoCleanerHolder,testPeriod,Long Statement,The length of the statement "List<RunInfo> runs=Lists.newArrayList(new RunInfo(runningId`LocalDateTime.now(Clock.systemUTC()))`new RunInfo(completedButRecentId`LocalDateTime.now(Clock.systemUTC())`LocalDateTime.now(Clock.systemUTC()))`new RunInfo(completedId`LocalDateTime.now(Clock.systemUTC())`LocalDateTime.now(Clock.systemUTC()).minusSeconds(3)));" is 322.,54
+NirmataOSS_workflow,com.nirmata.workflow,TestAutoCleanerHolder,testPeriod,Magic Number,The method contains a magic number: 2,54
+NirmataOSS_workflow,com.nirmata.workflow,TestAutoCleanerHolder,testPeriod,Magic Number,The method contains a magic number: 2,54
+NirmataOSS_workflow,com.nirmata.workflow,TestAutoCleanerHolder,testPeriod,Magic Number,The method contains a magic number: 3,54
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testClean,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`new TaskType("test"`"1"`true)).withCurator(curator`"test"`"1").build();" is 171.,49
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testClean,Magic Number,The method contains a magic number: 6,49
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testClean,Magic Number,The method contains a magic number: 10,49
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Long Statement,The length of the statement "Map<TaskId`TaskInfo> taskInfos=workflowManager.getAdmin().getTaskInfo(runId).stream().collect(Collectors.toMap(TaskInfo::getTaskId`Function.identity()));" is 153.,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Long Statement,The length of the statement "Assert.assertEquals(taskInfos.get(task1.getTaskId()).getResult().getResultData().get("taskId")`task1.getTaskId().getId());" is 122.,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Long Statement,The length of the statement "taskInfos=workflowManager.getAdmin().getTaskInfo(runId).stream().collect(Collectors.toMap(TaskInfo::getTaskId`Function.identity()));" is 132.,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Long Statement,The length of the statement "Assert.assertEquals(taskInfos.get(task1.getTaskId()).getResult().getResultData().get("taskId")`task1.getTaskId().getId());" is 122.,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Long Statement,The length of the statement "Assert.assertEquals(taskInfos.get(task2.getTaskId()).getResult().getResultData().get("taskId")`task2.getTaskId().getId());" is 122.,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Magic Number,The method contains a magic number: 5,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Magic Number,The method contains a magic number: 2,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Magic Number,The method contains a magic number: 10,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Magic Number,The method contains a magic number: 4,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Magic Number,The method contains a magic number: 3,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Magic Number,The method contains a magic number: 3,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testTaskInfoAndDetails,Magic Number,The method contains a magic number: 4,94
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testRunInfo,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,193
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testRunInfo,Long Statement,The length of the statement "Map<RunId`RunInfo> runs=workflowManager.getAdmin().getRunInfo().stream().collect(Collectors.toMap(RunInfo::getRunId`Function.identity()));" is 138.,193
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testRunInfo,Magic Number,The method contains a magic number: 2,193
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testRunInfo,Magic Number,The method contains a magic number: 10,193
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testRunInfo,Magic Number,The method contains a magic number: 2,193
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testRunInfo,Magic Number,The method contains a magic number: 2,193
+NirmataOSS_workflow,com.nirmata.workflow,TestAdmin,testRunInfo,Magic Number,The method contains a magic number: 2,193
+NirmataOSS_workflow,com.nirmata.workflow,BaseForTests,setup,Long Statement,The length of the statement "curator=CuratorFrameworkFactory.builder().connectString(server.getConnectString()).retryPolicy(new RetryOneTime(1)).build();" is 124.,33
+NirmataOSS_workflow,com.nirmata.workflow,TestParentNodeDeletion,deletePath,Empty catch clause,The method has an empty catch block.,97
+NirmataOSS_workflow,com.nirmata.workflow,TestParentNodeDeletion,newCurator,Long Statement,The length of the statement "final CuratorFramework curator=CuratorFrameworkFactory.newClient(server.getConnectString()`timing.session()`timing.connection()`new ExponentialBackoffRetry(1000`10));" is 166.,109
+NirmataOSS_workflow,com.nirmata.workflow,TestParentNodeDeletion,newCurator,Magic Number,The method contains a magic number: 1000,109
+NirmataOSS_workflow,com.nirmata.workflow,TestParentNodeDeletion,newCurator,Magic Number,The method contains a magic number: 10,109
+NirmataOSS_workflow,com.nirmata.workflow,TestParentNodeDeletion,buildWorkflow,Long Statement,The length of the statement "final WorkflowManagerBuilder workflowManagerBuilder=WorkflowManagerBuilder.builder().withCurator(curator`namespace`VERSION).withAutoCleaner(cleaner`runPeriod);" is 159.,116
+NirmataOSS_workflow,com.nirmata.workflow,TestParentNodeDeletion,buildWorkflow,Magic Number,The method contains a magic number: 5,116
+NirmataOSS_workflow,com.nirmata.workflow,TestParentNodeDeletion,buildWorkflow,Magic Number,The method contains a magic number: 5,116
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testFailedStop,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,59
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testFailedStop,Long Statement,The length of the statement "List<Set<TaskId>> expectedSets=Arrays.<Set<TaskId>>asList(Sets.newHashSet(new TaskId("task1"))`Sets.newHashSet(new TaskId("task2")));" is 133.,59
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testFailedStop,Magic Number,The method contains a magic number: 2,59
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testFailedStop,Magic Number,The method contains a magic number: 10,59
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testAutoCleanRun,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").withAutoCleaner(new StandardAutoCleaner(Duration.ofMillis(1))`Duration.ofMillis(1)).build();" is 234.,109
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testAutoCleanRun,Magic Number,The method contains a magic number: 10,109
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testCanceling,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,138
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testCanceling,Magic Number,The method contains a magic number: 10,138
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testCanceling,Magic Number,The method contains a magic number: 5,138
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSingleClientSimple,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`new TaskType("test"`"1"`true)).withCurator(curator`"test"`"1").build();" is 171.,182
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSingleClientSimple,Long Statement,The length of the statement "WorkflowManagerStateSampler sampler=new WorkflowManagerStateSampler(workflowManager.getAdmin()`10`Duration.ofMillis(100));" is 122.,182
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSingleClientSimple,Long Statement,The length of the statement "List<Set<TaskId>> expectedSets=Arrays.<Set<TaskId>>asList(Sets.newHashSet(new TaskId("task1")`new TaskId("task2"))`Sets.newHashSet(new TaskId("task3")`new TaskId("task4")`new TaskId("task5"))`Sets.newHashSet(new TaskId("task6")));" is 230.,182
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSingleClientSimple,Magic Number,The method contains a magic number: 6,182
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSingleClientSimple,Magic Number,The method contains a magic number: 10,182
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSingleClientSimple,Magic Number,The method contains a magic number: 10,182
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSingleClientSimple,Magic Number,The method contains a magic number: 100,182
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiClientSimple,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,224
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiClientSimple,Long Statement,The length of the statement "List<Set<TaskId>> expectedSets=Arrays.<Set<TaskId>>asList(Sets.newHashSet(new TaskId("task1")`new TaskId("task2"))`Sets.newHashSet(new TaskId("task3")`new TaskId("task4")`new TaskId("task5"))`Sets.newHashSet(new TaskId("task6")));" is 230.,224
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiClientSimple,Magic Number,The method contains a magic number: 4,224
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiClientSimple,Magic Number,The method contains a magic number: 6,224
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiClientSimple,Magic Number,The method contains a magic number: 10,224
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testNoData,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(new TestTaskExecutor(1)`10`new TaskType("test"`"1"`true)).withCurator(curator`"test"`"1").build();" is 182.,268
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testNoData,Magic Number,The method contains a magic number: 10,268
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testTaskData,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,280
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testTaskData,Magic Number,The method contains a magic number: 10,280
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testTaskProgress,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,319
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testTaskProgress,Magic Number,The method contains a magic number: 50,319
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testTaskProgress,Magic Number,The method contains a magic number: 10,319
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testTaskProgress,Magic Number,The method contains a magic number: 50,319
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSubTask,Long Statement,The length of the statement "RunId subTaskRunId=task.getTaskId().equals(groupAParent.getTaskId()) ? workflowManager.submitSubTask(task.getRunId()`groupBTask) : null;" is 136.,362
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSubTask,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,362
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testSubTask,Magic Number,The method contains a magic number: 10,362
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypesExecution,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType1).addingTaskExecutor(taskExecutor`10`taskType2).addingTaskExecutor(taskExecutor`10`taskType3).withCurator(curator`"test"`"1").build();" is 243.,416
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypesExecution,Long Statement,The length of the statement "List<Set<TaskId>> expectedSets=Arrays.<Set<TaskId>>asList(Sets.newHashSet(new TaskId("task1")`new TaskId("task2"))`Sets.newHashSet(new TaskId("task3")`new TaskId("task4")`new TaskId("task5"))`Sets.newHashSet(new TaskId("task6")));" is 230.,416
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypesExecution,Magic Number,The method contains a magic number: 6,416
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypesExecution,Magic Number,The method contains a magic number: 10,416
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypesExecution,Magic Number,The method contains a magic number: 10,416
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypesExecution,Magic Number,The method contains a magic number: 10,416
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypes,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor1`10`taskType1).addingTaskExecutor(taskExecutor2`10`taskType2).addingTaskExecutor(taskExecutor3`10`taskType3).withCurator(curator`"test"`"1").build();" is 246.,458
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypes,Long Statement,The length of the statement "Set<TaskId> set1=Sets.newHashSet(queue1.poll(timing.milliseconds()`TimeUnit.MILLISECONDS)`queue1.poll(timing.milliseconds()`TimeUnit.MILLISECONDS));" is 148.,458
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypes,Long Statement,The length of the statement "Set<TaskId> set2=Sets.newHashSet(queue2.poll(timing.milliseconds()`TimeUnit.MILLISECONDS)`queue2.poll(timing.milliseconds()`TimeUnit.MILLISECONDS));" is 148.,458
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypes,Long Statement,The length of the statement "Set<TaskId> set3=Sets.newHashSet(queue3.poll(timing.milliseconds()`TimeUnit.MILLISECONDS)`queue3.poll(timing.milliseconds()`TimeUnit.MILLISECONDS));" is 148.,458
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypes,Magic Number,The method contains a magic number: 10,458
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypes,Magic Number,The method contains a magic number: 10,458
+NirmataOSS_workflow,com.nirmata.workflow,TestNormal,testMultiTypes,Magic Number,The method contains a magic number: 10,458
+NirmataOSS_workflow,com.nirmata.workflow,TestTaskExecutor,doRun,Magic Number,The method contains a magic number: 1000,82
+NirmataOSS_workflow,com.nirmata.workflow,TestWorkflowListenerManager,testBasic,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build();" is 150.,34
+NirmataOSS_workflow,com.nirmata.workflow,TestWorkflowListenerManager,testBasic,Long Statement,The length of the statement "Assert.assertTrue((event1.equals(runStarted) && event2.equals(taskStarted)) || (event2.equals(runStarted) && event1.equals(taskStarted)));" is 138.,34
+NirmataOSS_workflow,com.nirmata.workflow,TestWorkflowListenerManager,testBasic,Long Statement,The length of the statement "Assert.assertEquals(eventQueue.poll(timing.milliseconds()`TimeUnit.MILLISECONDS)`new WorkflowEvent(WorkflowEvent.EventType.TASK_COMPLETED`runId`task.getTaskId()));" is 163.,34
+NirmataOSS_workflow,com.nirmata.workflow,TestWorkflowListenerManager,testBasic,Long Statement,The length of the statement "Assert.assertEquals(eventQueue.poll(timing.milliseconds()`TimeUnit.MILLISECONDS)`new WorkflowEvent(WorkflowEvent.EventType.RUN_UPDATED`runId));" is 143.,34
+NirmataOSS_workflow,com.nirmata.workflow,TestWorkflowListenerManager,testBasic,Magic Number,The method contains a magic number: 6,34
+NirmataOSS_workflow,com.nirmata.workflow,TestWorkflowListenerManager,testBasic,Magic Number,The method contains a magic number: 10,34
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,SimpleQueue,Long Parameter List,The method has 7 parameters. ,157
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,put,Long Statement,The length of the statement "client.create().creatingParentContainersIfNeeded().withMode(CreateMode.PERSISTENT_SEQUENTIAL).inBackground(debugBackgroundCallback).forPath(path`data);" is 151.,173
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,runLoop,Long Statement,The length of the statement "while (started.get() && !Thread.currentThread().isInterrupted() && (client.getState() != CuratorFrameworkState.STOPPED)) {" is 122.,220
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,processNode,Empty catch clause,The method has an empty catch block.,286
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,processNode,Empty catch clause,The method has an empty catch block.,286
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,priorityToString,Magic Number,The method contains a magic number: 0xFFFFFFFFL,339
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,getEpoch,Empty catch clause,The method has an empty catch block.,352
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,SimpleQueue,getEpoch,Magic Number,The method contains a magic number: 16,352
+NirmataOSS_workflow,com.nirmata.workflow.queue.zookeeper,ZooKeeperSimpleQueue,put,Empty catch clause,The method has an empty catch block.,56
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTask,RunnableTask,Long Parameter List,The method has 5 parameters. ,48
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTask,equals,Complex Method,Cyclomatic complexity of the method is 8,85
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTask,hashCode,Magic Number,The method contains a magic number: 31,124
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTask,hashCode,Magic Number,The method contains a magic number: 31,124
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTask,hashCode,Magic Number,The method contains a magic number: 31,124
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTask,hashCode,Magic Number,The method contains a magic number: 31,124
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTask,toString,Long Statement,The length of the statement "return "RunnableTask{" + "tasks=" + tasks + "` taskDags="+ taskDags+ "` startTime="+ startTimeUtc+ "` completionTime="+ completionTimeUtc+ "` parentRunId="+ parentRunId+ '}';" is 174.,135
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,RunnableTaskDag,hashCode,Magic Number,The method contains a magic number: 31,73
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,StartedTask,hashCode,Magic Number,The method contains a magic number: 31,77
+NirmataOSS_workflow,com.nirmata.workflow.details.internalmodels,StartedTask,toString,Long Statement,The length of the statement "return "StartedTaskModel{" + "instanceName='" + instanceName + '\''+ "` startDateUtc="+ startDateUtc+ "` progress="+ progress+ '}';" is 131.,85
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowListenerManagerImpl,WorkflowListenerManagerImpl,Long Statement,The length of the statement "completedTasksCache=new PathChildrenCache(workflowManager.getCurator()`ZooKeeperConstants.getCompletedTaskParentPath()`false);" is 126.,38
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowListenerManagerImpl,WorkflowListenerManagerImpl,Long Statement,The length of the statement "startedTasksCache=new PathChildrenCache(workflowManager.getCurator()`ZooKeeperConstants.getStartedTasksParentPath()`false);" is 123.,38
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,Scheduler,Long Statement,The length of the statement "completedTasksCache=new PathChildrenCache(workflowManager.getCurator()`ZooKeeperConstants.getCompletedTaskParentPath()`true);" is 125.,83
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,Scheduler,Long Statement,The length of the statement "startedTasksCache=new PathChildrenCache(workflowManager.getCurator()`ZooKeeperConstants.getStartedTasksParentPath()`false);" is 123.,83
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,run,Complex Method,Cyclomatic complexity of the method is 10,99
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,run,Magic Number,The method contains a magic number: 2,99
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,hasCanceledTasks,Long Statement,The length of the statement "TaskExecutionResult taskExecutionResult=workflowManager.getSerializer().deserialize(currentData.getData()`TaskExecutionResult.class);" is 133.,179
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,completeRunnableTask,Long Parameter List,The method has 5 parameters. ,193
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,completeRunnableTask,Long Statement,The length of the statement "RunnableTask completedRunnableTask=new RunnableTask(runnableTask.getTasks()`runnableTask.getTaskDags()`runnableTask.getStartTimeUtc()`LocalDateTime.now(Clock.systemUTC())`parentRunId);" is 184.,193
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,updateTasks,Complex Method,Cyclomatic complexity of the method is 10,212
+NirmataOSS_workflow,com.nirmata.workflow.details,Scheduler,updateTasks,Long Statement,The length of the statement "boolean allDependenciesAreComplete=entry.getDependencies().stream().allMatch(id -> taskIsComplete(completedTasksCache`runId`runnableTask.getTasks().get(id)));" is 158.,212
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,WorkflowManagerImpl,Long Parameter List,The method has 7 parameters. ,85
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,submitSubTask,Long Statement,The length of the statement "Map<TaskId`ExecutableTask> tasks=builder.getTasks().values().stream().collect(Collectors.toMap(Task::getTaskId`t -> new ExecutableTask(runId`t.getTaskId()`t.isExecutable() ? t.getTaskType() : nullTaskType`t.getMetaData()`t.isExecutable())));" is 241.,179
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,updateTaskProgress,Empty catch clause,The method has an empty catch block.,207
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,updateTaskProgress,Magic Number,The method contains a magic number: 100,207
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getTaskExecutionResult,Empty catch clause,The method has an empty catch block.,255
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getWorkflowManagerState,Long Statement,The length of the statement "return new WorkflowManagerState(curator.getZookeeperClient().isConnected()`schedulerSelector.getState()`consumers.stream().map(QueueConsumer::getState).collect(Collectors.toList()));" is 182.,304
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,clean,Empty catch clause,The method has an empty catch block.,314
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,clean,Empty catch clause,The method has an empty catch block.,314
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getRunIds,Empty catch clause,The method has an empty catch block.,391
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getRunInfo,Empty catch clause,The method has an empty catch block.,412
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getTaskInfo,Empty catch clause,The method has an empty catch block.,447
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getTaskInfo,Empty catch clause,The method has an empty catch block.,447
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getTaskInfo,Long Statement,The length of the statement "Set<TaskId> notStartedTasks=runnableTask.getTasks().values().stream().filter(ExecutableTask::isExecutable).map(ExecutableTask::getTaskId).collect(Collectors.toSet());" is 166.,447
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getTaskInfo,Long Statement,The length of the statement "taskInfos.add(new TaskInfo(taskId`startedTask.getInstanceName()`startedTask.getStartDateUtc()`startedTask.getProgress()`taskExecutionResult));" is 142.,447
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,getTaskInfo,Long Statement,The length of the statement "startedTasks.forEach((key`startedTask) -> taskInfos.add(new TaskInfo(key`startedTask.getInstanceName()`startedTask.getStartDateUtc()`startedTask.getProgress())));" is 162.,447
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,executeTask,Long Statement,The length of the statement "log.warn("Attempt to execute an already complete task - skipping - most likely due to a system restart: " + executableTask);" is 124.,531
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,executeTask,Long Statement,The length of the statement "throw new RuntimeException(String.format("null returned from task executor for run: %s` task %s"`executableTask.getRunId()`executableTask.getTaskId()));" is 152.,531
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,executeTask,Long Statement,The length of the statement "log.warn("Task executed twice - most likely due to a system restart. Task is idempotent so there should be no issues: " + executableTask);" is 138.,531
+NirmataOSS_workflow,com.nirmata.workflow.details,WorkflowManagerImpl,makeTaskConsumers,Long Statement,The length of the statement "QueueConsumer consumer=queueFactory.createQueueConsumer(this`t -> executeTask(spec.getTaskExecutor()`t)`spec.getTaskType());" is 124.,594
+NirmataOSS_workflow,com.nirmata.workflow.details,RunnableTaskDagBuilder,build,Long Statement,The length of the statement "Set<TaskId> processed=taskIdEdges.stream().map(graph::getEdgeSource).filter(edge -> !edge.equals(taskId) && !edge.getId().equals("")).collect(Collectors.toSet());" is 162.,58
+NirmataOSS_workflow,com.nirmata.workflow.details,RunnableTaskDagBuilder,worker,Long Parameter List,The method has 5 parameters. ,83
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDisruptedScheduler,setup,Magic Number,The method contains a magic number: 3,58
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDisruptedScheduler,setup,Magic Number,The method contains a magic number: 6,58
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDisruptedScheduler,testDisruptedScheduler,Long Statement,The length of the statement "clientOptional=clients.stream().filter(client -> ((WorkflowManagerImpl)client.workflowManager).getSchedulerSelector().getLeaderSelector().hasLeadership()).findFirst();" is 167.,113
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDisruptedScheduler,testDisruptedScheduler,Magic Number,The method contains a magic number: 3,113
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDisruptedScheduler,testDisruptedScheduler,Magic Number,The method contains a magic number: 3,113
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDisruptedScheduler,testDisruptedScheduler,Magic Number,The method contains a magic number: 100,113
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDisruptedScheduler,testDisruptedScheduler,Magic Number,The method contains a magic number: 6,113
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,testMultiConcurrent,Magic Number,The method contains a magic number: 3,44
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,multiConcurrentRetry,Long Statement,The length of the statement "return WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`type).withCurator(curator`"test-" + i`"1").build();" is 126.,62
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,multiConcurrentRetry,Magic Number,The method contains a magic number: 3,62
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,multiConcurrentRetry,Magic Number,The method contains a magic number: 10,62
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,multiConcurrentRetry,Magic Number,The method contains a magic number: 578,62
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,multiConcurrentRetry,Magic Number,The method contains a magic number: 10,62
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,testIdempotency,Long Statement,The length of the statement "WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`idempotentType).addingTaskExecutor(taskExecutor`10`nonIdempotentType).withCurator(curator`"test"`"1").build();" is 210.,115
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,testIdempotency,Magic Number,The method contains a magic number: 10,115
+NirmataOSS_workflow,com.nirmata.workflow.details,TestEdges,testIdempotency,Magic Number,The method contains a magic number: 10,115
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testDelay,Long Statement,The length of the statement "try (WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`10`taskType).withCurator(curator`"test"`"1").build()){" is 156.,39
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testDelay,Magic Number,The method contains a magic number: 5,39
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testDelay,Magic Number,The method contains a magic number: 10,39
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testDelay,Magic Number,The method contains a magic number: 1000,39
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testDelay,Magic Number,The method contains a magic number: 2,39
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testPriority,Long Statement,The length of the statement "try (WorkflowManager workflowManager=WorkflowManagerBuilder.builder().addingTaskExecutor(taskExecutor`1`taskType).withCurator(curator`"test"`"1").build()){" is 155.,75
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testPriority,Magic Number,The method contains a magic number: 100,75
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testPriority,Magic Number,The method contains a magic number: 50,75
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testPriority,Magic Number,The method contains a magic number: 300,75
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testPriority,Magic Number,The method contains a magic number: 200,75
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testPriority,Magic Number,The method contains a magic number: 5,75
+NirmataOSS_workflow,com.nirmata.workflow.details,TestDelayPriorityTasks,testPriority,Magic Number,The method contains a magic number: 5,75
+NirmataOSS_workflow,com.nirmata.workflow.admin,WorkflowManagerState,hashCode,Magic Number,The method contains a magic number: 31,116
+NirmataOSS_workflow,com.nirmata.workflow.admin,WorkflowManagerState,hashCode,Magic Number,The method contains a magic number: 31,116
+NirmataOSS_workflow,com.nirmata.workflow.admin,WorkflowManagerState,toString,Long Statement,The length of the statement "return "WorkflowManagerState{" + "isConnectedToZooKeeper=" + isConnectedToZooKeeper + "` schedulerState="+ schedulerState+ "` consumersState="+ consumersState+ '}';" is 164.,125
+NirmataOSS_workflow,com.nirmata.workflow.admin,TaskInfo,TaskInfo,Long Parameter List,The method has 5 parameters. ,46
+NirmataOSS_workflow,com.nirmata.workflow.admin,TaskInfo,hashCode,Magic Number,The method contains a magic number: 31,125
+NirmataOSS_workflow,com.nirmata.workflow.admin,TaskInfo,hashCode,Magic Number,The method contains a magic number: 31,125
+NirmataOSS_workflow,com.nirmata.workflow.admin,TaskInfo,hashCode,Magic Number,The method contains a magic number: 31,125
+NirmataOSS_workflow,com.nirmata.workflow.admin,TaskInfo,toString,Long Statement,The length of the statement "return "TaskInfo{" + "taskId=" + taskId + "` instanceName='"+ instanceName+ '\''+ "` startDateUtc="+ startDateUtc+ "` progress="+ progress+ "` result="+ result+ '}';" is 165.,135
+NirmataOSS_workflow,com.nirmata.workflow.admin,TaskDetails,hashCode,Magic Number,The method contains a magic number: 31,106
+NirmataOSS_workflow,com.nirmata.workflow.admin,TaskDetails,hashCode,Magic Number,The method contains a magic number: 31,106
+NirmataOSS_workflow,com.nirmata.workflow.admin,RunInfo,hashCode,Magic Number,The method contains a magic number: 31,96
+NirmataOSS_workflow,com.nirmata.workflow.admin,RunInfo,hashCode,Magic Number,The method contains a magic number: 31,96
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskType,hashCode,Magic Number,The method contains a magic number: 31,114
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskType,hashCode,Magic Number,The method contains a magic number: 31,114
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskType,hashCode,Magic Number,The method contains a magic number: 31,114
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskType,toString,Long Statement,The length of the statement "return "TaskType{" + "type='" + type + '\''+ "` version='"+ version+ '\''+ "` isIdempotent="+ isIdempotent+ "` mode="+ mode+ '}';" is 129.,124
+NirmataOSS_workflow,com.nirmata.workflow.models,Task,hashCode,Magic Number,The method contains a magic number: 31,161
+NirmataOSS_workflow,com.nirmata.workflow.models,Task,hashCode,Magic Number,The method contains a magic number: 31,161
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskExecutionResult,TaskExecutionResult,Long Parameter List,The method has 5 parameters. ,72
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskExecutionResult,equals,Complex Method,Cyclomatic complexity of the method is 8,117
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskExecutionResult,hashCode,Magic Number,The method contains a magic number: 31,156
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskExecutionResult,hashCode,Magic Number,The method contains a magic number: 31,156
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskExecutionResult,hashCode,Magic Number,The method contains a magic number: 31,156
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskExecutionResult,hashCode,Magic Number,The method contains a magic number: 31,156
+NirmataOSS_workflow,com.nirmata.workflow.models,TaskExecutionResult,toString,Long Statement,The length of the statement "return "TaskExecutionResult{" + "status=" + status + "` message='"+ message+ '\''+ "` resultData="+ resultData+ "` completionTimeUtc="+ completionTimeUtc+ "` subTaskRunId="+ subTaskRunId+ '}';" is 192.,167
+NirmataOSS_workflow,com.nirmata.workflow.models,ExecutableTask,ExecutableTask,Long Parameter List,The method has 5 parameters. ,35
+NirmataOSS_workflow,com.nirmata.workflow.models,ExecutableTask,equals,Complex Method,Cyclomatic complexity of the method is 8,77
+NirmataOSS_workflow,com.nirmata.workflow.models,ExecutableTask,hashCode,Magic Number,The method contains a magic number: 31,116
+NirmataOSS_workflow,com.nirmata.workflow.models,ExecutableTask,hashCode,Magic Number,The method contains a magic number: 31,116
+NirmataOSS_workflow,com.nirmata.workflow.models,ExecutableTask,hashCode,Magic Number,The method contains a magic number: 31,116
+NirmataOSS_workflow,com.nirmata.workflow.models,ExecutableTask,hashCode,Magic Number,The method contains a magic number: 31,116
+NirmataOSS_workflow,com.nirmata.workflow.models,ExecutableTask,toString,Long Statement,The length of the statement "return "ExecutableTask{" + "runId=" + runId + "` taskId="+ taskId+ "` taskType="+ taskType+ "` metaData="+ metaData+ "` isExecutable="+ isExecutable+ '}';" is 154.,127
+NirmataOSS_workflow,com.nirmata.workflow.events,WorkflowEvent,hashCode,Magic Number,The method contains a magic number: 31,115
+NirmataOSS_workflow,com.nirmata.workflow.events,WorkflowEvent,hashCode,Magic Number,The method contains a magic number: 31,115
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,newTask,Long Statement,The length of the statement "List<String> childrenTaskIds=thisTask.getChildrenTasks().stream().map(t -> t.getTaskId().getId()).collect(Collectors.toList());" is 127.,103
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,buildTask,Long Statement,The length of the statement "List<Task> childrenTasks=task.childrenTaskIds.stream().map(id -> buildTask(workMap`buildMap`id)).collect(Collectors.toList());" is 126.,134
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,getTaskType,Long Statement,The length of the statement "return new TaskType(node.get("type").asText()`node.get("version").asText()`node.get("isIdempotent").asBoolean()`taskMode);" is 122.,213
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,getExecutableTask,Long Statement,The length of the statement "return new ExecutableTask(new RunId(node.get("runId").asText())`new TaskId(node.get("taskId").asText())`getTaskType(node.get("taskType"))`getMap(node.get("metaData"))`node.get("isExecutable").asBoolean());" is 205.,236
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,newRunnableTask,Long Statement,The length of the statement "node.put("completionTimeUtc"`runnableTask.getCompletionTimeUtc().isPresent() ? runnableTask.getCompletionTimeUtc().get().format(DateTimeFormatter.ISO_DATE_TIME) : null);" is 169.,248
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,getRunnableTask,Long Statement,The length of the statement "LocalDateTime completionTime=node.get("completionTimeUtc").isNull() ? null : LocalDateTime.parse(node.get("completionTimeUtc").asText()`DateTimeFormatter.ISO_DATE_TIME);" is 169.,265
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,newTaskExecutionResult,Long Statement,The length of the statement "node.put("subTaskRunId"`taskExecutionResult.getSubTaskRunId().isPresent() ? taskExecutionResult.getSubTaskRunId().get().getId() : null);" is 136.,284
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,getTaskExecutionResult,Long Statement,The length of the statement "return new TaskExecutionResult(TaskExecutionStatus.valueOf(node.get("status").asText().toUpperCase())`node.get("message").asText()`getMap(node.get("resultData"))`((subTaskRunIdNode != null) && !subTaskRunIdNode.isNull()) ? new RunId(subTaskRunIdNode.asText()) : null`LocalDateTime.parse(node.get("completionTimeUtc").asText()`DateTimeFormatter.ISO_DATE_TIME));" is 360.,295
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializer,getStartedTask,Long Statement,The length of the statement "return new StartedTask(node.get("instanceName").asText()`LocalDateTime.parse(node.get("startDateUtc").asText()`DateTimeFormatter.ISO_DATE_TIME)`node.has("progress") ? node.get("progress").asInt() : 0);" is 201.,317
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializerMapper,JsonSerializerMapper,Complex Conditional,The conditional expression method.getName().startsWith(NEW_PREFIX) && (method.getReturnType() == JsonNode.class) && (method.getParameterCount() == 1) is complex.,47
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializerMapper,JsonSerializerMapper,Long Statement,The length of the statement "if (method.getName().startsWith(NEW_PREFIX) && (method.getReturnType() == JsonNode.class) && (method.getParameterCount() == 1)) {" is 129.,47
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializerMapper,getGetter,Empty catch clause,The method has an empty catch block.,102
+NirmataOSS_workflow,com.nirmata.workflow.serialization,JsonSerializerMapper,getClazz,Empty catch clause,The method has an empty catch block.,115
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,testExecutableTask,Long Statement,The length of the statement "ExecutableTask executableTask=new ExecutableTask(new RunId()`new TaskId()`randomTaskType()`randomMap()`random.nextBoolean());" is 125.,64
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,testRunnableTask,Long Statement,The length of the statement "Map<TaskId`ExecutableTask> tasks=Stream.generate(() -> "").limit(random.nextInt(3) + 1).collect(Collectors.toMap(s -> new TaskId()`s -> new ExecutableTask(new RunId()`new TaskId()`randomTaskType()`randomMap()`random.nextBoolean())));" is 233.,76
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,testRunnableTask,Long Statement,The length of the statement "List<RunnableTaskDag> taskDags=Stream.generate(() -> new RunnableTaskDag(new TaskId()`randomTasks())).limit(random.nextInt(3) + 1).collect(Collectors.toList());" is 160.,76
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,testRunnableTask,Magic Number,The method contains a magic number: 3,76
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,testRunnableTask,Magic Number,The method contains a magic number: 3,76
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,testTaskExecutionResult,Long Statement,The length of the statement "TaskExecutionResult taskExecutionResult=new TaskExecutionResult(TaskExecutionStatus.SUCCESS`Integer.toString(random.nextInt())`randomMap());" is 140.,98
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,randomTask,Magic Number,The method contains a magic number: 2,188
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,randomTask,Magic Number,The method contains a magic number: 5,188
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,randomMap,Long Statement,The length of the statement "return Stream.generate(random::nextInt).limit(random.nextInt(3) + 1).collect(Collectors.toMap(n -> Integer.toString(n * 4)`n -> Integer.toString(n * 2)));" is 154.,202
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,randomMap,Magic Number,The method contains a magic number: 3,202
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,randomMap,Magic Number,The method contains a magic number: 4,202
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,randomMap,Magic Number,The method contains a magic number: 2,202
+NirmataOSS_workflow,com.nirmata.workflow.serialization,TestSerializer,randomTasks,Magic Number,The method contains a magic number: 10,209

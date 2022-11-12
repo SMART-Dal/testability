@@ -1,0 +1,678 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+jackpf_ApkDownloader,com.jackpf.apkdownloader,PreferencesActivity,onPreferenceClick,Long Statement,The length of the statement "editor.putString(getString(R.string.pref_device_and_sdk_version_key)`getString(R.string.pref_device_and_sdk_version_default));" is 126.,46
+jackpf_ApkDownloader,com.jackpf.apkdownloader,Downloader,download,Long Statement,The length of the statement "Request request=new DownloadManager.Request(Uri.parse(app.getDownloadPath())).setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE).setAllowedOverRoaming(true).setTitle(app.getAppId()).setDescription(context.getString(R.string.app_downloading)).setDestinationInExternalPublicDir(DOWNLOAD_DIR`app.getAppId() + ".apk").addRequestHeader("Cookie"`"MarketDA=" + app.getMarketDA());" is 424.,49
+jackpf_ApkDownloader,com.jackpf.apkdownloader,Downloader,download,Long Statement,The length of the statement "request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE | DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);" is 140.,49
+jackpf_ApkDownloader,com.jackpf.apkdownloader,Downloader,download,Long Statement,The length of the statement "boolean install=prefs.getBoolean(context.getString(R.string.pref_autoinstall_key)`Boolean.valueOf(context.getString(R.string.pref_autoinstall_default)));" is 153.,49
+jackpf_ApkDownloader,com.jackpf.apkdownloader,Downloader,download,Magic Number,The method contains a magic number: 11,49
+jackpf_ApkDownloader,com.jackpf.apkdownloader,Downloader,onReceive,Long Statement,The length of the statement "boolean install=prefs.getBoolean(context.getString(R.string.pref_autoinstall_key)`Boolean.valueOf(context.getString(R.string.pref_autoinstall_default)));" is 153.,75
+jackpf_ApkDownloader,com.jackpf.apkdownloader,SelfUpdater,checkForUpdate,Magic Number,The method contains a magic number: 1000,36
+jackpf_ApkDownloader,com.jackpf.apkdownloader,SelfUpdater,check,Long Statement,The length of the statement "Notification notification=new NotificationCompat.Builder(context).setContentTitle(context.getString(R.string.update_title)).setContentText(context.getString(R.string.update_text`currentVersionName`versionName)).setSmallIcon(R.drawable.ic_launcher).setAutoCancel(true).setContentIntent(PendingIntent.getActivity(context`0`intent`0)).build();" is 340.,62
+jackpf_ApkDownloader,com.jackpf.apkdownloader,MainActivity,onOptionsItemSelected,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3b7bd483,77
+jackpf_ApkDownloader,com.jackpf.apkdownloader.UI,MainActivityUI,error,Long Statement,The length of the statement "Toast.makeText(context.getApplicationContext()`context.getString(R.string.error_unrecognized_login`e.getMessage())`Toast.LENGTH_LONG).show();" is 141.,101
+jackpf_ApkDownloader,com.jackpf.apkdownloader.UI,MainActivityUI,error,Long Statement,The length of the statement "Toast.makeText(context.getApplicationContext()`context.getString(R.string.error_api_exception`e.getMessage())`Toast.LENGTH_LONG).show();" is 136.,101
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,PlayApi,Long Statement,The length of the statement "SDK_VERSION=Integer.parseInt(prefs.getString(context.getString(R.string.pref_sdk_version_key)`context.getString(R.string.pref_sdk_version_default)));" is 149.,57
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,PlayApi,Long Statement,The length of the statement "DEVICE_AND_SDK_VERSION=prefs.getString(context.getString(R.string.pref_device_and_sdk_version_key)`context.getString(R.string.pref_device_and_sdk_version_default));" is 164.,57
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,PlayApi,Long Statement,The length of the statement "OPERATOR=prefs.getString(context.getString(R.string.pref_operator_key)`context.getString(R.string.pref_operator_default));" is 122.,57
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,PlayApi,Long Statement,The length of the statement "OPERATOR_NUMERIC=prefs.getString(context.getString(R.string.pref_operator_numeric_key)`context.getString(R.string.pref_operator_numeric_default));" is 146.,57
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,getApp,Long Statement,The length of the statement "post.setEntity(new StringEntity(String.format("version=%d&request=%s"`REQUEST_VERSION`Base64.encodeToString(protoBuf`Base64.DEFAULT))));" is 136.,77
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,getApp,Long Statement,The length of the statement "throw new PlayApiException(String.format("Server responded with status code %d"`response.getStatusLine().getStatusCode()));" is 123.,77
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,getApp,Magic Number,The method contains a magic number: 200,77
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Long Statement,The length of the statement "byte[] authTokenBytes=authenticator.getToken().getBytes()` authExtraBytes={16`1}` authBytes=new byte[authTokenBytes.length + authExtraBytes.length];" is 148.,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Long Statement,The length of the statement "Play.RequestContext proto=Play.RequestContext.newBuilder().addApp(Play.RequestContext.newBuilder().addAppBuilder().setAuthSubToken(ByteString.copyFrom(authBytes)).setVersion(SDK_VERSION).setAndroidId(authenticator.getGsfId()).setDeviceAndSdkVersion(DEVICE_AND_SDK_VERSION).setUserLanguage(LOCALE).setUserCountry(COUNTRY).setOperatorAlpha(OPERATOR).setSimOperatorAlpha(OPERATOR).setOperatorNumeric(OPERATOR_NUMERIC).setSimOperatorNumeric(OPERATOR_NUMERIC)).build();" is 464.,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Magic Number,The method contains a magic number: 4,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Magic Number,The method contains a magic number: 2,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Magic Number,The method contains a magic number: 19,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Magic Number,The method contains a magic number: 82,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Magic Number,The method contains a magic number: 2,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Magic Number,The method contains a magic number: 10,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,buildProtoBuf,Magic Number,The method contains a magic number: 20,126
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,extractMarketDA,Magic Number,The method contains a magic number: 0x014,204
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,extractMarketDA,Magic Number,The method contains a magic number: 0x014,204
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,PlayApi,extractMarketDA,Magic Number,The method contains a magic number: 0x0c,204
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Serializer,serialize,Magic Number,The method contains a magic number: 5,35
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Serializer,serialize,Magic Number,The method contains a magic number: 128,35
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Serializer,serialize,Magic Number,The method contains a magic number: 7,35
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Serializer,serialize,Magic Number,The method contains a magic number: 128,35
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Authenticator,Authenticator,Long Statement,The length of the statement "password=prefs.getString(context.getString(R.string.pref_password_key)`context.getString(R.string.pref_password_default));" is 122.,68
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Authenticator,getToken,Long Statement,The length of the statement "throw new AuthenticationException(String.format("Login responded with status code %d"`response.getStatusLine().getStatusCode()));" is 129.,83
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Authenticator,getToken,Magic Number,The method contains a magic number: 200,83
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Authenticator,getGsfId,Complex Conditional,The conditional expression c == null || !c.moveToFirst() || c.getColumnCount() < 2 is complex.,156
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Authenticator,getGsfId,Long Statement,The length of the statement "Cursor c=context.getContentResolver().query(Uri.parse("content://com.google.android.gsf.gservices")`null`null`new String[]{"android_id"}`null);" is 143.,156
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Service,Authenticator,getGsfId,Magic Number,The method contains a magic number: 2,156
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Request,DownloadRequest,call,Magic Number,The method contains a magic number: 2,12
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Entity,ApkFile,ApkFile,Magic Number,The method contains a magic number: 8,26
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_RequestContext_descriptor is 41.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_RequestContext_fieldAccessorTable is 49.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_App_descriptor is 30.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_App_fieldAccessorTable is 38.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_descriptor is 43.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_fieldAccessorTable is 51.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_InstallAsset_descriptor is 56.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_InstallAsset_fieldAccessorTable is 64.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Statement,The length of the statement "internal_static_RequestContext_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_RequestContext_descriptor`new java.lang.String[]{"App"});" is 183.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Statement,The length of the statement "internal_static_App_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_App_descriptor`new java.lang.String[]{"AuthSubToken"`"IsSecure"`"Version"`"AndroidId"`"DeviceAndSdkVersion"`"UserLanguage"`"UserCountry"`"OperatorAlpha"`"SimOperatorAlpha"`"OperatorNumeric"`"SimOperatorNumeric"});" is 328.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Statement,The length of the statement "internal_static_GetAssetResponse_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_GetAssetResponse_descriptor`new java.lang.String[]{"InstallAsset"});" is 196.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Statement,The length of the statement "internal_static_GetAssetResponse_InstallAsset_descriptor=internal_static_GetAssetResponse_descriptor.getNestedTypes().get(0);" is 125.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Long Statement,The length of the statement "internal_static_GetAssetResponse_InstallAsset_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_GetAssetResponse_InstallAsset_descriptor`new java.lang.String[]{"AssetId"`"AssetName"`"AssetType"`"AssetPackage"`"BlobUrl"`"AssetSignature"`"AssetSize"`"RefundTimeout"`"ForwardLocked"`"Secured"`"VersionCode"`"DownloadAuthCookieName"`"DownloadAuthCookieValue"});" is 402.,5666
+jackpf_ApkDownloader,com.jackpf.apkdownloader.Proto,Play,assignDescriptors,Magic Number,The method contains a magic number: 2,5666
+jackpf_ApkDownloader,com.actionbarsherlock,ActionBarSherlock,registerImplementation,Long Statement,The length of the statement "throw new IllegalArgumentException("Class " + implementationClass.getSimpleName() + " is not annotated with @Implementation");" is 126.,115
+jackpf_ApkDownloader,com.actionbarsherlock,ActionBarSherlock,wrap,Complex Conditional,The conditional expression (isTvDpi && keyDpi != DisplayMetrics.DENSITY_TV) || (!isTvDpi && keyDpi == DisplayMetrics.DENSITY_TV) is complex.,159
+jackpf_ApkDownloader,com.actionbarsherlock,ActionBarSherlock,wrap,Complex Method,Cyclomatic complexity of the method is 17,159
+jackpf_ApkDownloader,com.actionbarsherlock,ActionBarSherlock,wrap,Long Statement,The length of the statement "HashMap<Implementation`Class<? extends ActionBarSherlock>> impls=new HashMap<Implementation`Class<? extends ActionBarSherlock>>(IMPLEMENTATIONS);" is 145.,159
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getBoolean,Complex Method,Cyclomatic complexity of the method is 10,21
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getBoolean,Magic Number,The method contains a magic number: 480,21
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getBoolean,Magic Number,The method contains a magic number: 480,21
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getBoolean,Magic Number,The method contains a magic number: 600,21
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getBoolean,Magic Number,The method contains a magic number: 480,21
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getInteger,Magic Number,The method contains a magic number: 600,70
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getInteger,Magic Number,The method contains a magic number: 5,70
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getInteger,Magic Number,The method contains a magic number: 500,70
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getInteger,Magic Number,The method contains a magic number: 4,70
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getInteger,Magic Number,The method contains a magic number: 360,70
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getInteger,Magic Number,The method contains a magic number: 3,70
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,getResources_getInteger,Magic Number,The method contains a magic number: 2,70
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompat,loadLogoFromManifest,Complex Method,Cyclomatic complexity of the method is 19,104
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,initActionBar,Complex Conditional,The conditional expression (aActionBar != null) || !hasFeature(Window.FEATURE_ACTION_BAR) || hasFeature(Window.FEATURE_NO_TITLE)|| mActivity.isChild() is complex.,125
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,initActionBar,Long Statement,The length of the statement "if ((aActionBar != null) || !hasFeature(Window.FEATURE_ACTION_BAR) || hasFeature(Window.FEATURE_NO_TITLE)|| mActivity.isChild()) {" is 130.,125
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,startActionMode,Complex Method,Cyclomatic complexity of the method is 10,158
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,dispatchPrepareOptionsMenu,Complex Method,Cyclomatic complexity of the method is 8,316
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,dispatchTitleChanged,Complex Conditional,The conditional expression (!mIsDelegate || mIsTitleReady) && (wActionBar != null) is complex.,378
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,dispatchKeyEvent,Complex Method,Cyclomatic complexity of the method is 10,387
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,preparePanel,Complex Method,Cyclomatic complexity of the method is 11,443
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,setProgressBarIndeterminateVisibility,Long Statement,The length of the statement "setFeatureInt(Window.FEATURE_INDETERMINATE_PROGRESS`visible ? Window.PROGRESS_VISIBILITY_ON : Window.PROGRESS_VISIBILITY_OFF);" is 126.,616
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,setProgressBarIndeterminate,Long Statement,The length of the statement "setFeatureInt(Window.FEATURE_PROGRESS`indeterminate ? Window.PROGRESS_INDETERMINATE_ON : Window.PROGRESS_INDETERMINATE_OFF);" is 124.,624
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,updateProgressBars,Complex Method,Cyclomatic complexity of the method is 12,673
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,updateProgressBars,Magic Number,The method contains a magic number: 10000,673
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,showProgressBars,Long Statement,The length of the statement "if ((features & (1 << Window.FEATURE_INDETERMINATE_PROGRESS)) != 0 && spinnyProgressBar.getVisibility() == View.INVISIBLE) {" is 124.,717
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,showProgressBars,Magic Number,The method contains a magic number: 10000,717
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,hideProgressBars,Long Statement,The length of the statement "if ((features & (1 << Window.FEATURE_INDETERMINATE_PROGRESS)) != 0 && spinnyProgressBar.getVisibility() == View.VISIBLE) {" is 122.,730
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,hideProgressBars,Magic Number,The method contains a magic number: 1000,730
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,requestFeature,Complex Method,Cyclomatic complexity of the method is 9,794
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,requestFeature,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@47b6f1a0,794
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,installDecor,Complex Conditional,The conditional expression !mIsDestroyed && !mActivity.isFinishing() && mMenu == null is complex.,881
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,installDecor,Complex Method,Cyclomatic complexity of the method is 17,881
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,installDecor,Long Statement,The length of the statement "splitActionBar=mActivity.getTheme().obtainStyledAttributes(R.styleable.SherlockTheme).getBoolean(R.styleable.SherlockTheme_windowSplitActionBar`false);" is 151.,881
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,run,Complex Conditional,The conditional expression !mIsDestroyed && !mActivity.isFinishing() && mMenu == null is complex.,956
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,generateLayout,Complex Method,Cyclomatic complexity of the method is 14,968
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,generateLayout,Long Statement,The length of the statement "throw new IllegalStateException("You must use Theme.Sherlock` Theme.Sherlock.Light` Theme.Sherlock.Light.DarkActionBar` or a derivative.");" is 139.,968
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,generateLayout,Long Statement,The length of the statement "if (ActionBarSherlock.DEBUG) Log.d(TAG`"[generateLayout] using screen XML " + mActivity.getResources().getString(layoutResource));" is 130.,968
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ActionBarSherlockCompat,loadUiOptionsFromManifest,Complex Method,Cyclomatic complexity of the method is 19,1050
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompatTest,testCleanActivityName,Long Statement,The length of the statement "assertThat(cleanActivityName("com.jakewharton.test"`"com.other.package.SomeClass")).isEqualTo("com.other.package.SomeClass");" is 125.,12
+jackpf_ApkDownloader,com.actionbarsherlock.internal,ResourcesCompatTest,testCleanActivityName,Long Statement,The length of the statement "assertThat(cleanActivityName("com.jakewharton.test"`"com.jakewharton.test.SomeClass")).isEqualTo("com.jakewharton.test.SomeClass");" is 131.,12
+jackpf_ApkDownloader,com.actionbarsherlock.internal.app,ActionBarImpl,init,Complex Conditional,The conditional expression mActionView == null || mContextView == null || mContainerView == null is complex.,152
+jackpf_ApkDownloader,com.actionbarsherlock.internal.app,ActionBarImpl,init,Long Statement,The length of the statement "throw new IllegalStateException(getClass().getSimpleName() + " can only be used " + "with a compatible window decor layout");" is 125.,152
+jackpf_ApkDownloader,com.actionbarsherlock.internal.app,ActionBarImpl,setSelectedNavigationItem,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@49314119,319
+jackpf_ApkDownloader,com.actionbarsherlock.internal.app,ActionBarImpl,selectTab,Complex Method,Cyclomatic complexity of the method is 8,506
+jackpf_ApkDownloader,com.actionbarsherlock.internal.app,ActionBarImpl,animateToMode,Complex Conditional,The conditional expression mTabScrollView != null && !mActionView.hasEmbeddedTabs() && mActionView.isCollapsed() is complex.,626
+jackpf_ApkDownloader,com.actionbarsherlock.internal.app,ActionBarImpl,getSelectedNavigationIndex,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7256a156,952
+jackpf_ApkDownloader,com.actionbarsherlock.internal.app,ActionBarImpl,getNavigationItemCount,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@45363a48,964
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuPresenter,initForMenu,Magic Number,The method contains a magic number: 2,81
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuPresenter,updateMenuView,Complex Method,Cyclomatic complexity of the method is 11,204
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuPresenter,showOverflowMenu,Complex Conditional,The conditional expression mReserveOverflow && !isOverflowMenuShowing() && mMenu != null && mMenuView != null && mPostedOpenRunnable == null && !mMenu.getNonActionItems().isEmpty() is complex.,293
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuPresenter,showOverflowMenu,Long Statement,The length of the statement "if (mReserveOverflow && !isOverflowMenuShowing() && mMenu != null && mMenuView != null && mPostedOpenRunnable == null && !mMenu.getNonActionItems().isEmpty()) {" is 160.,293
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuPresenter,flagActionItems,Complex Conditional,The conditional expression mReserveOverflow && (hasOverflow || requiredItems + requestedItems > maxActions) is complex.,371
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuPresenter,flagActionItems,Complex Method,Cyclomatic complexity of the method is 26,371
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuPresenter,flagActionItems,Long Method,The method has 113 lines of code.,371
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,BaseMenuPresenter,updateMenuView,Complex Method,Cyclomatic complexity of the method is 10,80
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,BaseMenuPresenter,updateMenuView,Long Statement,The length of the statement "final MenuItemImpl oldItem=convertView instanceof MenuView.ItemView ? ((MenuView.ItemView)convertView).getItemData() : null;" is 124.,80
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuPopupHelper,MenuPopupHelper,Long Statement,The length of the statement "mPopupMaxWidth=Math.max(res.getDisplayMetrics().widthPixels / 2`res.getDimensionPixelSize(R.dimen.abs__config_prefDialogWidth));" is 128.,77
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuPopupHelper,MenuPopupHelper,Magic Number,The method contains a magic number: 2,77
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuItemImpl,MenuItemImpl,Long Parameter List,The method has 7 parameters. ,101
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuItemImpl,getShortcutLabel,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3b5f895c,268
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuItemImpl,setShowAsAction,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@78a53ea7,535
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuItemImpl,setActionView,Complex Conditional,The conditional expression view != null && view.getId() == View.NO_ID && mId > 0 is complex.,552
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,restoreActionViewStates,Complex Method,Cyclomatic complexity of the method is 8,349
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,addIntentOptions,Long Parameter List,The method has 8 parameters. ,448
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,clearAll,Long Identifier,The length of the field mPreventDispatchingItemsChanged is 31.,519
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,clearAll,Long Identifier,The length of the field mItemsChangedWhileDispatchPrevented is 35.,519
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,setShortcutsVisibleInner,Long Statement,The length of the statement "mShortcutsVisible=shortcutsVisible && mResources.getConfiguration().keyboard != Configuration.KEYBOARD_NOKEYS && mResources.getBoolean(R.bool.abs__config_showMenuShortcutsWhenKeyboardPresent);" is 192.,721
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,findItemsWithShortcutForKey,Complex Conditional,The conditional expression ((metaState & (KeyEvent.META_SHIFT_ON | KeyEvent.META_SYM_ON)) == 0) && (shortcutChar != 0) && (shortcutChar == possibleChars.meta[0] || shortcutChar == possibleChars.meta[2] || (qwerty && shortcutChar == '\b' && keyCode == KeyEvent.KEYCODE_DEL))&& item.isEnabled() is complex.,789
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,findItemsWithShortcutForKey,Long Statement,The length of the statement "if (((metaState & (KeyEvent.META_SHIFT_ON | KeyEvent.META_SYM_ON)) == 0) && (shortcutChar != 0) && (shortcutChar == possibleChars.meta[0] || shortcutChar == possibleChars.meta[2] || (qwerty && shortcutChar == '\b' && keyCode == KeyEvent.KEYCODE_DEL))&& item.isEnabled()) {" is 272.,789
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,findItemsWithShortcutForKey,Magic Number,The method contains a magic number: 2,789
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,findItemWithShortcutForKey,Complex Conditional,The conditional expression (shortcutChar == possibleChars.meta[0] && (metaState & KeyEvent.META_ALT_ON) == 0) || (shortcutChar == possibleChars.meta[2] && (metaState & KeyEvent.META_ALT_ON) != 0) || (qwerty && shortcutChar == '\b' && keyCode == KeyEvent.KEYCODE_DEL) is complex.,832
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,findItemWithShortcutForKey,Long Statement,The length of the statement "if ((shortcutChar == possibleChars.meta[0] && (metaState & KeyEvent.META_ALT_ON) == 0) || (shortcutChar == possibleChars.meta[2] && (metaState & KeyEvent.META_ALT_ON) != 0) || (qwerty && shortcutChar == '\b' && keyCode == KeyEvent.KEYCODE_DEL)) {" is 246.,832
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,findItemWithShortcutForKey,Magic Number,The method contains a magic number: 2,832
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,performItemAction,Complex Method,Cyclomatic complexity of the method is 8,878
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,onItemsChanged,Long Identifier,The length of the field mPreventDispatchingItemsChanged is 31.,938
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,onItemsChanged,Long Identifier,The length of the field mItemsChangedWhileDispatchPrevented is 35.,938
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,stopDispatchingItemsChanged,Long Identifier,The length of the field mPreventDispatchingItemsChanged is 31.,958
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,stopDispatchingItemsChanged,Long Identifier,The length of the field mItemsChangedWhileDispatchPrevented is 35.,958
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,startDispatchingItemsChanged,Long Identifier,The length of the field mPreventDispatchingItemsChanged is 31.,970
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,startDispatchingItemsChanged,Long Identifier,The length of the field mItemsChangedWhileDispatchPrevented is 35.,970
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,setHeaderInternal,Long Parameter List,The method has 5 parameters. ,1099
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,bindNativeOverflow,Complex Method,Cyclomatic complexity of the method is 8,1277
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,bindNativeOverflow,Long Statement,The length of the statement "android.view.SubMenu nativeSub=menu.addSubMenu(nonActionItem.getGroupId()`nonActionItem.getItemId()`nonActionItem.getOrder()`nonActionItem.getTitle());" is 151.,1277
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,bindNativeOverflow,Long Statement,The length of the statement "android.view.MenuItem nativeSubItem=nativeSub.add(subItem.getGroupId()`subItem.getItemId()`subItem.getOrder()`subItem.getTitle());" is 130.,1277
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuBuilder,bindNativeOverflow,Long Statement,The length of the statement "nativeItem=menu.add(nonActionItem.getGroupId()`nonActionItem.getItemId()`nonActionItem.getOrder()`nonActionItem.getTitle());" is 124.,1277
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuWrapper,addIntentOptions,Long Parameter List,The method has 8 parameters. ,80
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,MenuWrapper,invalidate,Long Statement,The length of the statement "final WeakHashMap<android.view.MenuItem`MenuItem> menuMapCopy=new WeakHashMap<android.view.MenuItem`MenuItem>(mNativeMap.size());" is 129.,118
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuItemView,updateTextButtonVisibility,Long Statement,The length of the statement "visible&=mImageButton.getDrawable() == null || (mItemData.showsTextAsAction() && (mAllowTextWithIcon || mExpandedFormat));" is 122.,175
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuItemView,onLongClick,Magic Number,The method contains a magic number: 2,249
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuItemView,onLongClick,Magic Number,The method contains a magic number: 2,249
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuItemView,onLongClick,Magic Number,The method contains a magic number: 2,249
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuItemView,onMeasure,Complex Conditional,The conditional expression widthMode != MeasureSpec.EXACTLY && mMinWidth > 0 && oldMeasuredWidth < targetWidth is complex.,280
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ListMenuItemView,setCheckable,Complex Conditional,The conditional expression !checkable && mRadioButton == null && mCheckBox == null is complex.,128
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ListMenuItemView,setCheckable,Complex Method,Cyclomatic complexity of the method is 8,128
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ListMenuItemView,setIcon,Complex Conditional,The conditional expression mIconView == null && icon == null && !mPreserveIconSpacing is complex.,203
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasure,Complex Conditional,The conditional expression mFormatItems && mMenu != null && widthSize != mFormatItemsWidth is complex.,98
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Complex Conditional,The conditional expression centerSingleExpandedItem && lp.preventEdgeOffset && cellsRemaining == 1 is complex.,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Complex Conditional,The conditional expression cellsRemaining > 0 && smallestItemsAt != 0 && (cellsRemaining < visibleItemCount - 1 || singleItem || maxCellsUsed > 1) is complex.,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Complex Method,Cyclomatic complexity of the method is 35,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Long Method,The method has 144 lines of code.,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Long Statement,The length of the statement "if (cellsRemaining > 0 && smallestItemsAt != 0 && (cellsRemaining < visibleItemCount - 1 || singleItem || maxCellsUsed > 1)) {" is 126.,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Magic Number,The method contains a magic number: 2,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Magic Number,The method contains a magic number: 0.5f,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Magic Number,The method contains a magic number: 0.5f,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Magic Number,The method contains a magic number: 2,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Magic Number,The method contains a magic number: 2,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Magic Number,The method contains a magic number: 2,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onMeasureExactFormat,Magic Number,The method contains a magic number: 2,123
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,measureChildForCells,Long Parameter List,The method has 5 parameters. ,334
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Complex Method,Cyclomatic complexity of the method is 9,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Long Parameter List,The method has 5 parameters. ,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Magic Number,The method contains a magic number: 2,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Magic Number,The method contains a magic number: 2,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Magic Number,The method contains a magic number: 2,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Magic Number,The method contains a magic number: 2,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Magic Number,The method contains a magic number: 2,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuView,onLayout,Magic Number,The method contains a magic number: 2,379
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenu,addIntentOptions,Long Parameter List,The method has 8 parameters. ,71
+jackpf_ApkDownloader,com.actionbarsherlock.internal.view.menu,ActionMenuItem,ActionMenuItem,Long Parameter List,The method has 6 parameters. ,60
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,PropertyValuesHolder,setKeyframes,Magic Number,The method contains a magic number: 2,331
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,PropertyValuesHolder,getPropertyFunction,Empty catch clause,The method has an empty catch block.,364
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,PropertyValuesHolder,getPropertyFunction,Long Statement,The length of the statement "Log.e("PropertyValuesHolder"`targetClass.getSimpleName() + " - " + "Couldn't find no-arg method for property "+ mPropertyName+ ": "+ e);" is 136.,364
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,PropertyValuesHolder,getPropertyFunction,Long Statement,The length of the statement "Log.e("PropertyValuesHolder"`"Couldn't find " + prefix + "ter property "+ mPropertyName+ " for "+ targetClass.getSimpleName()+ " with value type "+ mValueType);" is 160.,364
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,IntKeyframeSet,getIntValue,Complex Method,Cyclomatic complexity of the method is 12,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,IntKeyframeSet,getIntValue,Long Statement,The length of the statement "return mEvaluator == null ? prevValue + (int)(intervalFraction * (nextValue - prevValue)) : ((Number)mEvaluator.evaluate(intervalFraction`prevValue`nextValue)).intValue();" is 171.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,IntKeyframeSet,getIntValue,Long Statement,The length of the statement "return mEvaluator == null ? prevValue + (int)(intervalFraction * (nextValue - prevValue)) : ((Number)mEvaluator.evaluate(intervalFraction`prevValue`nextValue)).intValue();" is 171.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,IntKeyframeSet,getIntValue,Long Statement,The length of the statement "float intervalFraction=(fraction - prevKeyframe.getFraction()) / (nextKeyframe.getFraction() - prevKeyframe.getFraction());" is 123.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,IntKeyframeSet,getIntValue,Long Statement,The length of the statement "return mEvaluator == null ? prevValue + (int)(intervalFraction * (nextValue - prevValue)) : ((Number)mEvaluator.evaluate(intervalFraction`prevValue`nextValue)).intValue();" is 171.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,IntKeyframeSet,getIntValue,Magic Number,The method contains a magic number: 2,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,IntKeyframeSet,getIntValue,Magic Number,The method contains a magic number: 2,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,ofInt,Magic Number,The method contains a magic number: 2,53
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,ofFloat,Magic Number,The method contains a magic number: 2,68
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,ofKeyframe,Complex Conditional,The conditional expression hasFloat && !hasInt && !hasOther is complex.,83
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,ofKeyframe,Complex Conditional,The conditional expression hasInt && !hasFloat && !hasOther is complex.,83
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,ofKeyframe,Complex Method,Cyclomatic complexity of the method is 8,83
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,ofObject,Magic Number,The method contains a magic number: 2,115
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,getValue,Complex Method,Cyclomatic complexity of the method is 10,154
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,getValue,Magic Number,The method contains a magic number: 2,154
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,KeyframeSet,getValue,Magic Number,The method contains a magic number: 2,154
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,FloatKeyframeSet,getFloatValue,Complex Method,Cyclomatic complexity of the method is 12,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,FloatKeyframeSet,getFloatValue,Long Statement,The length of the statement "return mEvaluator == null ? prevValue + intervalFraction * (nextValue - prevValue) : ((Number)mEvaluator.evaluate(intervalFraction`prevValue`nextValue)).floatValue();" is 166.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,FloatKeyframeSet,getFloatValue,Long Statement,The length of the statement "return mEvaluator == null ? prevValue + intervalFraction * (nextValue - prevValue) : ((Number)mEvaluator.evaluate(intervalFraction`prevValue`nextValue)).floatValue();" is 166.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,FloatKeyframeSet,getFloatValue,Long Statement,The length of the statement "float intervalFraction=(fraction - prevKeyframe.getFraction()) / (nextKeyframe.getFraction() - prevKeyframe.getFraction());" is 123.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,FloatKeyframeSet,getFloatValue,Long Statement,The length of the statement "return mEvaluator == null ? prevValue + intervalFraction * (nextValue - prevValue) : ((Number)mEvaluator.evaluate(intervalFraction`prevValue`nextValue)).floatValue();" is 166.,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,FloatKeyframeSet,getFloatValue,Magic Number,The method contains a magic number: 2,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,FloatKeyframeSet,getFloatValue,Magic Number,The method contains a magic number: 2,62
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,AnimatorSet,cancel,Complex Method,Cyclomatic complexity of the method is 9,276
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,AnimatorSet,end,Complex Method,Cyclomatic complexity of the method is 10,311
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,AnimatorSet,start,Complex Method,Cyclomatic complexity of the method is 18,441
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,AnimatorSet,clone,Complex Method,Cyclomatic complexity of the method is 11,548
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,AnimatorSet,sortNodes,Complex Method,Cyclomatic complexity of the method is 15,772
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,ObjectAnimator,start,Long Statement,The length of the statement "Log.d("ObjectAnimator"`" Values[" + i + "]: "+ pvh.getPropertyName()+ "` "+ keyframes.get(0).getValue()+ "` "+ keyframes.get(pvh.mKeyframeSet.mNumKeyframes - 1).getValue());" is 173.,352
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,ObjectAnimator,setTarget,Complex Conditional,The conditional expression oldTarget != null && target != null && oldTarget.getClass() == target.getClass() is complex.,417
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,ValueAnimator,setEvaluator,Complex Conditional,The conditional expression value != null && mValues != null && mValues.length > 0 is complex.,883
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,ValueAnimator,cancel,Complex Conditional,The conditional expression mPlayingState != STOPPED || sPendingAnimations.get().contains(this) || sDelayedAnims.get().contains(this) is complex.,956
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.animation,ValueAnimator,animationFrame,Complex Method,Cyclomatic complexity of the method is 11,1089
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.view.animation,AnimatorProxy,invalidateAfterUpdate,Long Statement,The length of the statement "parent.invalidate((int)FloatMath.floor(after.left)`(int)FloatMath.floor(after.top)`(int)FloatMath.ceil(after.right)`(int)FloatMath.ceil(after.bottom));" is 151.,133
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.view.animation,AnimatorProxy,transformMatrix,Magic Number,The method contains a magic number: 2f,184
+jackpf_ApkDownloader,com.actionbarsherlock.internal.nineoldandroids.view.animation,AnimatorProxy,transformMatrix,Magic Number,The method contains a magic number: 2f,184
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsView,getMeasuredStateInt,Long Statement,The length of the statement "return (child.getMeasuredWidth() & View.MEASURED_STATE_MASK) | ((child.getMeasuredHeight() >> View.MEASURED_HEIGHT_STATE_SHIFT) & (View.MEASURED_STATE_MASK >> View.MEASURED_HEIGHT_STATE_SHIFT));" is 194.,9
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAbsSpinner,onMeasure,Complex Conditional,The conditional expression selectedPosition >= 0 && mAdapter != null && selectedPosition < mAdapter.getCount() is complex.,158
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAbsSpinner,onMeasure,Complex Method,Cyclomatic complexity of the method is 10,158
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsColorDrawable,draw,Magic Number,The method contains a magic number: 24,29
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsColorDrawable,setAlpha,Magic Number,The method contains a magic number: 24,36
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsColorDrawable,setAlpha,Magic Number,The method contains a magic number: 0x00FFFFFF,36
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsColorDrawable,setAlpha,Magic Number,The method contains a magic number: 24,36
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsColorDrawable,getOpacity,Magic Number,The method contains a magic number: 24,48
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,CapitalizingButton,CapitalizingButton,Long Identifier,The length of the field R_styleable_Button_textAppearance is 33.,26
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,CapitalizingButton,CapitalizingButton,Long Identifier,The length of the field R_styleable_TextAppearance_textAllCaps is 38.,26
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,CapitalizingButton,setTextCompat,Complex Conditional,The conditional expression SANS_ICE_CREAM && mAllCaps && text != null is complex.,41
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,IcsProgressBar,Long Identifier,The length of the field ProgressBar_indeterminateDuration is 33.,276
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,IcsProgressBar,Long Identifier,The length of the field ProgressBar_indeterminateBehavior is 33.,276
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,IcsProgressBar,Long Identifier,The length of the field ProgressBar_indeterminateDrawable is 33.,276
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,IcsProgressBar,Long Identifier,The length of the field ProgressBar_animationResolution is 31.,276
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,tileify,Long Statement,The length of the statement "outDrawables[i]=tileify(background.getDrawable(i)`(id == android.R.id.progress || id == android.R.id.secondaryProgress));" is 121.,343
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,tileifyIndeterminate,Magic Number,The method contains a magic number: 10000,401
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,tileifyIndeterminate,Magic Number,The method contains a magic number: 10000,401
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,initProgressBar,Magic Number,The method contains a magic number: 100,424
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,initProgressBar,Magic Number,The method contains a magic number: 4000,424
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,initProgressBar,Magic Number,The method contains a magic number: 24,424
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,initProgressBar,Magic Number,The method contains a magic number: 48,424
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,initProgressBar,Magic Number,The method contains a magic number: 24,424
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,initProgressBar,Magic Number,The method contains a magic number: 48,424
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,setIndeterminate,Complex Conditional,The conditional expression (!mOnlyIndeterminate || !mIndeterminate) && indeterminate != mIndeterminate is complex.,460
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,updateDrawableBounds,Magic Number,The method contains a magic number: 2,963
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,updateDrawableBounds,Magic Number,The method contains a magic number: 2,963
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsProgressBar,scheduleAccessibilityEventSender,Long Identifier,The length of the field TIMEOUT_SEND_ACCESSIBILITY_EVENT is 32.,1169
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,PopupWindowCompat,update,Long Parameter List,The method has 5 parameters. ,155
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,onMeasure,Complex Conditional,The conditional expression childCount > 1 && (widthMode == MeasureSpec.EXACTLY || widthMode == MeasureSpec.AT_MOST) is complex.,84
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,onMeasure,Magic Number,The method contains a magic number: 2,84
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,onMeasure,Magic Number,The method contains a magic number: 0.4f,84
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,onMeasure,Magic Number,The method contains a magic number: 2,84
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,performCollapse,Long Statement,The length of the statement "addView(mTabSpinner`new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT`ViewGroup.LayoutParams.MATCH_PARENT));" is 121.,141
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,createTabLayout,Long Statement,The length of the statement "final TabsLinearLayout tabLayout=(TabsLinearLayout)LayoutInflater.from(getContext()).inflate(R.layout.abs__action_bar_tab_bar_view`null);" is 137.,188
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,createTabLayout,Long Statement,The length of the statement "tabLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT`LinearLayout.LayoutParams.MATCH_PARENT));" is 136.,188
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,createSpinner,Long Statement,The length of the statement "spinner.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT`LinearLayout.LayoutParams.MATCH_PARENT));" is 134.,197
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,animateToTab,Magic Number,The method contains a magic number: 2,242
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ScrollingTabContainerView,run,Magic Number,The method contains a magic number: 2,248
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,ActionBarView,Complex Method,Cyclomatic complexity of the method is 11,167
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,initProgress,Magic Number,The method contains a magic number: 10000,315
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,setMenu,Complex Method,Cyclomatic complexity of the method is 10,378
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,setMenu,Long Statement,The length of the statement "mActionMenuPresenter.setExpandedActionViewsExclusive(getResources_getBoolean(getContext()`R.bool.abs__action_bar_expanded_action_views_exclusive));" is 147.,378
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,setTitleImpl,Long Statement,The length of the statement "final boolean visible=mExpandedActionView == null && (mDisplayOptions & ActionBar.DISPLAY_SHOW_TITLE) != 0 && (!TextUtils.isEmpty(mTitle) || !TextUtils.isEmpty(mSubtitle));" is 172.,504
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,setSubtitle,Long Statement,The length of the statement "final boolean visible=mExpandedActionView == null && (mDisplayOptions & ActionBar.DISPLAY_SHOW_TITLE) != 0 && (!TextUtils.isEmpty(mTitle) || !TextUtils.isEmpty(mSubtitle));" is 172.,522
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,setDisplayOptions,Complex Method,Cyclomatic complexity of the method is 12,549
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,setIcon,Complex Conditional,The conditional expression icon != null && ((mDisplayOptions & ActionBar.DISPLAY_USE_LOGO) == 0 || mLogo == null) is complex.,616
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,setNavigationMode,Complex Method,Cyclomatic complexity of the method is 11,639
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,initTitle,Complex Conditional,The conditional expression mExpandedActionView != null || (TextUtils.isEmpty(mTitle) && TextUtils.isEmpty(mSubtitle)) is complex.,738
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Complex Conditional,The conditional expression child.getVisibility() != GONE && !(child == mMenuView && mMenuView.getChildCount() == 0) is complex.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Complex Method,Cyclomatic complexity of the method is 28,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Method,The method has 143 lines of code.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "throw new IllegalStateException(getClass().getSimpleName() + " can only be used " + "with android:layout_width=\"match_parent\" (or fill_parent)");" is 147.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "throw new IllegalStateException(getClass().getSimpleName() + " can only be used " + "with android:layout_height=\"wrap_content\"");" is 131.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "final boolean showTitle=mTitleLayout != null && mTitleLayout.getVisibility() != GONE && (mDisplayOptions & ActionBar.DISPLAY_SHOW_TITLE) != 0;" is 142.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "mListNavLayout.measure(MeasureSpec.makeMeasureSpec(availableWidth`MeasureSpec.AT_MOST)`MeasureSpec.makeMeasureSpec(height`MeasureSpec.EXACTLY));" is 144.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "mTabScrollView.measure(MeasureSpec.makeMeasureSpec(availableWidth`MeasureSpec.AT_MOST)`MeasureSpec.makeMeasureSpec(height`MeasureSpec.EXACTLY));" is 144.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "customView.measure(MeasureSpec.makeMeasureSpec(customNavWidth`customNavWidthMode)`MeasureSpec.makeMeasureSpec(customNavHeight`customNavHeightMode));" is 148.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "availableWidth=measureChildView(mTitleLayout`availableWidth`MeasureSpec.makeMeasureSpec(mContentHeight`MeasureSpec.EXACTLY)`0);" is 127.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Long Statement,The length of the statement "mProgressView.measure(MeasureSpec.makeMeasureSpec(contentWidth - mProgressBarPadding * 2`MeasureSpec.EXACTLY)`MeasureSpec.makeMeasureSpec(getMeasuredHeight()`MeasureSpec.AT_MOST));" is 180.,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Magic Number,The method contains a magic number: 2,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Magic Number,The method contains a magic number: 2,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Magic Number,The method contains a magic number: 2,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Magic Number,The method contains a magic number: 2,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onMeasure,Magic Number,The method contains a magic number: 2,790
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Complex Method,Cyclomatic complexity of the method is 30,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Long Method,The method has 116 lines of code.,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Long Parameter List,The method has 5 parameters. ,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Long Statement,The length of the statement "final boolean showTitle=mTitleLayout != null && mTitleLayout.getVisibility() != GONE && (mDisplayOptions & ActionBar.DISPLAY_SHOW_TITLE) != 0;" is 142.,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Long Statement,The length of the statement "mProgressView.layout(mProgressBarPadding`-halfProgressHeight`mProgressBarPadding + mProgressView.getMeasuredWidth()`halfProgressHeight);" is 136.,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Magic Number,The method contains a magic number: 2,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Magic Number,The method contains a magic number: 2,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Magic Number,The method contains a magic number: 2,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onLayout,Magic Number,The method contains a magic number: 2,987
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarView,onRestoreInstanceState,Complex Conditional,The conditional expression state.expandedMenuItemId != 0 && mExpandedMenuPresenter != null && mOptionsMenu != null is complex.,1153
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContainer,onMeasure,Long Statement,The length of the statement "final int actionBarViewHeight=mActionBarView.isCollapsed() ? 0 : mActionBarView.getMeasuredHeight() + lp.topMargin + lp.bottomMargin;" is 133.,179
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContainer,onLayout,Complex Method,Cyclomatic complexity of the method is 11,200
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContainer,onLayout,Long Parameter List,The method has 5 parameters. ,200
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContainer,onLayout,Long Statement,The length of the statement "mBackground.setBounds(mActionBarView.getLeft()`mActionBarView.getTop()`mActionBarView.getRight()`mActionBarView.getBottom());" is 125.,200
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContainer,onLayout,Long Statement,The length of the statement "mStackedBackground.setBounds(mTabContainer.getLeft()`mTabContainer.getTop()`mTabContainer.getRight()`mTabContainer.getBottom());" is 128.,200
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,onMeasure,Complex Method,Cyclomatic complexity of the method is 10,322
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,onMeasure,Long Statement,The length of the statement "throw new IllegalStateException(getClass().getSimpleName() + " can only be used " + "with android:layout_width=\"match_parent\" (or fill_parent)");" is 147.,322
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,onMeasure,Long Statement,The length of the statement "throw new IllegalStateException(getClass().getSimpleName() + " can only be used " + "with android:layout_height=\"wrap_content\"");" is 131.,322
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,onMeasure,Long Statement,The length of the statement "mCustomView.measure(MeasureSpec.makeMeasureSpec(customWidth`customWidthMode)`MeasureSpec.makeMeasureSpec(customHeight`customHeightMode));" is 137.,322
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,makeInAnimation,Magic Number,The method contains a magic number: 200,391
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,makeInAnimation,Magic Number,The method contains a magic number: 100,391
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,makeInAnimation,Magic Number,The method contains a magic number: 70,391
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,makeOutAnimation,Long Statement,The length of the statement "ObjectAnimator buttonAnimator=ObjectAnimator.ofFloat(mClose`"translationX"`-mClose.getWidth() - ((MarginLayoutParams)mClose.getLayoutParams()).leftMargin);" is 155.,419
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,makeOutAnimation,Magic Number,The method contains a magic number: 200,419
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,makeOutAnimation,Magic Number,The method contains a magic number: 100,419
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,makeOutAnimation,Magic Number,The method contains a magic number: 70,419
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,ActionBarContextView,onLayout,Long Parameter List,The method has 5 parameters. ,446
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,IcsSpinner,Long Statement,The length of the statement "mDropDownWidth=a.getLayoutDimension(R.styleable.SherlockSpinner_android_dropDownWidth`ViewGroup.LayoutParams.WRAP_CONTENT);" is 123.,85
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,onMeasure,Long Statement,The length of the statement "setMeasuredDimension(Math.min(Math.max(measuredWidth`measureContentWidth(getAdapter()`getBackground()))`MeasureSpec.getSize(widthMeasureSpec))`getMeasuredHeight());" is 164.,221
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,onLayout,Long Parameter List,The method has 5 parameters. ,233
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,layout,Magic Number,The method contains a magic number: 2,247
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,layout,Magic Number,The method contains a magic number: 2,247
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,setUpChild,Long Statement,The length of the statement "int childHeightSpec=ViewGroup.getChildMeasureSpec(mHeightMeasureSpec`mSpinnerPadding.top + mSpinnerPadding.bottom`lp.height);" is 125.,336
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,setUpChild,Long Statement,The length of the statement "int childWidthSpec=ViewGroup.getChildMeasureSpec(mWidthMeasureSpec`mSpinnerPadding.left + mSpinnerPadding.right`lp.width);" is 122.,336
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,setUpChild,Long Statement,The length of the statement "int childTop=mSpinnerPadding.top + ((getMeasuredHeight() - mSpinnerPadding.bottom - mSpinnerPadding.top- child.getMeasuredHeight()) / 2);" is 137.,336
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,setUpChild,Magic Number,The method contains a magic number: 2,336
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsSpinner,measureContentWidth,Long Statement,The length of the statement "itemView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT`ViewGroup.LayoutParams.WRAP_CONTENT));" is 126.,426
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsLinearLayout,measureChildWithMargins,Long Parameter List,The method has 5 parameters. ,150
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsLinearLayout,drawHorizontalDivider,Long Statement,The length of the statement "mDivider.setBounds(getPaddingLeft() + mDividerPadding`top`getWidth() - getPaddingRight() - mDividerPadding`top + mDividerHeight);" is 129.,244
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsLinearLayout,drawVerticalDivider,Long Statement,The length of the statement "mDivider.setBounds(left`getPaddingTop() + mDividerPadding`left + mDividerWidth`getHeight() - getPaddingBottom() - mDividerPadding);" is 131.,250
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,onLayout,Long Parameter List,The method has 5 parameters. ,504
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,getSelectedItem,Complex Conditional,The conditional expression adapter != null && adapter.getCount() > 0 && selection >= 0 is complex.,534
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,setFocusable,Long Identifier,The length of the field mDesiredFocusableInTouchModeState is 33.,651
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,setFocusableInTouchMode,Long Identifier,The length of the field mDesiredFocusableInTouchModeState is 33.,664
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,checkFocus,Long Identifier,The length of the field mDesiredFocusableInTouchModeState is 33.,677
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,setOnClickListener,Long Statement,The length of the statement "throw new RuntimeException("Don't call setOnClickListener for an AdapterView. " + "You probably want setOnItemClickListener instead");" is 134.,738
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,selectionChanged,Complex Conditional,The conditional expression mSelectedPosition != ListView.INVALID_POSITION && isShown() && !isInTouchMode() is complex.,832
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,dispatchPopulateAccessibilityEvent,Complex Conditional,The conditional expression selectedView != null && selectedView.getVisibility() == VISIBLE && selectedView.dispatchPopulateAccessibilityEvent(event) is complex.,868
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,dispatchPopulateAccessibilityEvent,Long Statement,The length of the statement "if (selectedView != null && selectedView.getVisibility() == VISIBLE && selectedView.dispatchPopulateAccessibilityEvent(event)) {" is 128.,868
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,handleDataChanged,Complex Method,Cyclomatic complexity of the method is 11,931
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,findSyncPosition,Complex Conditional,The conditional expression hitFirst || (next && !hitLast) is complex.,1002
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,findSyncPosition,Complex Conditional,The conditional expression hitLast || (!next && !hitFirst) is complex.,1002
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,findSyncPosition,Complex Method,Cyclomatic complexity of the method is 9,1002
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsAdapterView,setNextSelectedPositionInt,Complex Conditional,The conditional expression mNeedSync && mSyncMode == SYNC_SELECTED_POSITION && position >= 0 is complex.,1110
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,CapitalizingTextView,CapitalizingTextView,Long Identifier,The length of the field R_styleable_TextView_textAllCaps is 32.,26
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,CapitalizingTextView,setTextCompat,Complex Conditional,The conditional expression SANS_ICE_CREAM && mAllCaps && text != null is complex.,34
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,TabsLinearLayout,TabsLinearLayout,Long Identifier,The length of the field LinearLayout_measureWithLargestChild is 36.,17
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,TabsLinearLayout,onMeasure,Magic Number,The method contains a magic number: 2,56
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,TabsLinearLayout,useLargestChildHorizontal,Long Statement,The length of the statement "child.measure(MeasureSpec.makeMeasureSpec(largestChildWidth`MeasureSpec.EXACTLY)`MeasureSpec.makeMeasureSpec(child.getMeasuredHeight()`MeasureSpec.EXACTLY));" is 157.,72
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,AbsActionBarView,positionChild,Magic Number,The method contains a magic number: 2,235
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,AbsActionBarView,positionChildInverse,Magic Number,The method contains a magic number: 2,245
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsToast,makeText,Magic Number,The method contains a magic number: 0xffffffff,19
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,show,Complex Method,Cyclomatic complexity of the method is 13,154
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,show,Long Statement,The length of the statement "mPopup.setWindowLayoutMode(mDropDownWidth == ViewGroup.LayoutParams.MATCH_PARENT ? ViewGroup.LayoutParams.MATCH_PARENT : 0`0);" is 126.,154
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,show,Long Statement,The length of the statement "mPopup.setWindowLayoutMode(mDropDownWidth == ViewGroup.LayoutParams.MATCH_PARENT ? ViewGroup.LayoutParams.MATCH_PARENT : 0`ViewGroup.LayoutParams.MATCH_PARENT);" is 160.,154
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,buildDropDown,Complex Method,Cyclomatic complexity of the method is 14,300
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,buildDropDown,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2962afdf,300
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,getMaxAvailableHeight,Magic Number,The method contains a magic number: 2,424
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,measureHeightOfChildren,Long Parameter List,The method has 5 parameters. ,449
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,measureHeightOfChildren,Long Statement,The length of the statement "final int dividerHeight=((mDropDownList.getDividerHeight() > 0) && mDropDownList.getDivider() != null) ? mDropDownList.getDividerHeight() : 0;" is 142.,449
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,measureHeightOfChildren,Long Statement,The length of the statement "return (disallowPartialChildPosition >= 0) && (i > disallowPartialChildPosition) && (prevHeightWithoutPartialChild > 0)&& (returnedHeight != maxHeight) ? prevHeightWithoutPartialChild : maxHeight;" is 196.,449
+jackpf_ApkDownloader,com.actionbarsherlock.internal.widget,IcsListPopupWindow,measureScrapChild,Long Statement,The length of the statement "int childWidthSpec=ViewGroup.getChildMeasureSpec(widthMeasureSpec`mDropDownList.getPaddingLeft() + mDropDownList.getPaddingRight()`p.width);" is 140.,504
+jackpf_ApkDownloader,com.actionbarsherlock.view,MenuInflater,MenuInflater,Long Identifier,The length of the field mActionViewConstructorArguments is 31.,72
+jackpf_ApkDownloader,com.actionbarsherlock.view,MenuInflater,MenuInflater,Long Identifier,The length of the field mActionProviderConstructorArguments is 35.,72
+jackpf_ApkDownloader,com.actionbarsherlock.view,MenuInflater,MenuInflater,Long Identifier,The length of the field mActionViewConstructorArguments is 31.,84
+jackpf_ApkDownloader,com.actionbarsherlock.view,MenuInflater,MenuInflater,Long Identifier,The length of the field mActionProviderConstructorArguments is 35.,84
+jackpf_ApkDownloader,com.actionbarsherlock.view,MenuInflater,parseMenu,Complex Method,Cyclomatic complexity of the method is 18,122
+jackpf_ApkDownloader,com.actionbarsherlock.view,Menu,addIntentOptions,Long Parameter List,The method has 8 parameters. ,244
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,ActivityChooserView,Long Identifier,The length of the identifier expandActivityOverflowButtonDrawable is 36.,205
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,ActivityChooserView,Long Identifier,The length of the field mActivityChooserContentBackground is 33.,205
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,ActivityChooserView,Long Identifier,The length of the field mExpandActivityOverflowButtonImage is 34.,205
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,ActivityChooserView,Long Statement,The length of the statement "mInitialActivityCount=attributesArray.getInt(R.styleable.SherlockActivityChooserView_initialActivityCount`ActivityChooserViewAdapter.MAX_ACTIVITY_COUNT_DEFAULT);" is 161.,205
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,ActivityChooserView,Long Statement,The length of the statement "Drawable expandActivityOverflowButtonDrawable=attributesArray.getDrawable(R.styleable.SherlockActivityChooserView_expandActivityOverflowButtonDrawable);" is 152.,205
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,ActivityChooserView,Long Statement,The length of the statement "mListPopupMaxWidth=Math.max(resources.getDisplayMetrics().widthPixels / 2`resources.getDimensionPixelSize(R.dimen.abs__config_prefDialogWidth));" is 144.,205
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,ActivityChooserView,Magic Number,The method contains a magic number: 2,205
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,setExpandActivityOverflowButtonDrawable,Long Identifier,The length of the field mExpandActivityOverflowButtonImage is 34.,272
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,setExpandActivityOverflowButtonContentDescription,Long Identifier,The length of the field mExpandActivityOverflowButtonImage is 34.,287
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,showPopupUnchecked,Long Statement,The length of the statement "if (maxActivityCount != ActivityChooserViewAdapter.MAX_ACTIVITY_COUNT_UNLIMITED && activityCount > maxActivityCount + maxActivityCountOffset) {" is 143.,324
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,showPopupUnchecked,Long Statement,The length of the statement "popupWindow.getListView().setContentDescription(mContext.getString(R.string.abs__activitychooserview_choose_application));" is 122.,324
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,onAttachedToWindow,Empty catch clause,The method has an empty catch block.,393
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,onDetachedFromWindow,Empty catch clause,The method has an empty catch block.,407
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,onLayout,Long Parameter List,The method has 5 parameters. ,439
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,setDefaultActionButtonContentDescription,Long Identifier,The length of the field mDefaultActionButtonContentDescription is 38.,474
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,updateAppearance,Long Identifier,The length of the field mDefaultActionButtonContentDescription is 38.,505
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserView,updateAppearance,Long Identifier,The length of the field mActivityChooserContentBackground is 33.,505
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,getSuggestions,Long Statement,The length of the statement "Uri.Builder uriBuilder=new Uri.Builder().scheme(ContentResolver.SCHEME_CONTENT).authority(authority).query("").fragment("");" is 124.,203
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,updateSpinnerState,Long Statement,The length of the statement "Log.d(LOG_TAG`"updateSpinnerState - extra = " + (extras != null ? extras.getBoolean(SearchManager.CURSOR_EXTRA_KEY_IN_PROGRESS) : null));" is 137.,272
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,bindView,Complex Conditional,The conditional expression mQueryRefinement == REFINE_ALL || (mQueryRefinement == REFINE_BY_ENTRY && (flags & SearchManager.FLAG_QUERY_REFINEMENT) != 0) is complex.,349
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,bindView,Complex Method,Cyclomatic complexity of the method is 11,349
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,bindView,Long Statement,The length of the statement "if (mQueryRefinement == REFINE_ALL || (mQueryRefinement == REFINE_BY_ENTRY && (flags & SearchManager.FLAG_QUERY_REFINEMENT) != 0)) {" is 132.,349
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,bindView,Magic Number,The method contains a magic number: 2,349
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,getDrawableFromResourceValue,Complex Conditional,The conditional expression drawableId == null || drawableId.length() == 0 || "0".equals(drawableId) is complex.,525
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SuggestionsAdapter,getTheDrawable,Magic Number,The method contains a magic number: 2,618
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ShareActionProvider,setOnShareTargetSelectedListener,Long Identifier,The length of the field mOnShareTargetSelectedListener is 30.,142
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ShareActionProvider,onPrepareSubMenu,Long Statement,The length of the statement "subMenu.add(0`i`i`activity.loadLabel(packageManager)).setIcon(activity.loadIcon(packageManager)).setOnMenuItemClickListener(mOnMenuItemClickListener);" is 150.,191
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ShareActionProvider,onPrepareSubMenu,Long Statement,The length of the statement "SubMenu expandedSubMenu=subMenu.addSubMenu(Menu.NONE`collapsedActivityCount`collapsedActivityCount`mContext.getString(R.string.abs__activity_chooser_view_see_all));" is 164.,191
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ShareActionProvider,onPrepareSubMenu,Long Statement,The length of the statement "expandedSubMenu.add(0`i`i`activity.loadLabel(packageManager)).setIcon(activity.loadIcon(packageManager)).setOnMenuItemClickListener(mOnMenuItemClickListener);" is 158.,191
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ShareActionProvider,setActivityChooserPolicyIfNeeded,Long Identifier,The length of the field mOnShareTargetSelectedListener is 30.,288
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserModel,chooseActivity,Long Identifier,The length of the field DEFAULT_HISTORICAL_RECORD_WEIGHT is 32.,438
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserModel,chooseActivity,Long Statement,The length of the statement "ComponentName chosenName=new ComponentName(chosenActivity.resolveInfo.activityInfo.packageName`chosenActivity.resolveInfo.activityInfo.name);" is 141.,438
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserModel,chooseActivity,Long Statement,The length of the statement "HistoricalRecord historicalRecord=new HistoricalRecord(chosenName`System.currentTimeMillis()`DEFAULT_HISTORICAL_RECORD_WEIGHT);" is 127.,438
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserModel,setDefaultActivity,Long Identifier,The length of the field DEFAULT_HISTORICAL_RECORD_WEIGHT is 32.,509
+jackpf_ApkDownloader,com.actionbarsherlock.widget,ActivityChooserModel,setDefaultActivity,Long Statement,The length of the statement "ComponentName defaultName=new ComponentName(newDefaultActivity.resolveInfo.activityInfo.packageName`newDefaultActivity.resolveInfo.activityInfo.name);" is 150.,509
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,SearchView,Complex Method,Cyclomatic complexity of the method is 9,255
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,SearchView,Long Identifier,The length of the field mOnQueryTextFocusChangeListener is 31.,255
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,SearchView,Long Statement,The length of the statement "@Override public void onLayoutChange( View v` int left` int top` int right` int bottom` int oldLeft` int oldTop` int oldRight` int oldBottom){" is 142.,255
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,onFocusChange,Long Identifier,The length of the field mOnQueryTextFocusChangeListener is 31.,292
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,onLayoutChange,Long Parameter List,The method has 9 parameters. ,340
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,setOnQueryTextFocusChangeListener,Long Identifier,The length of the field mOnQueryTextFocusChangeListener is 31.,486
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,setQueryRefinementEnabled,Long Statement,The length of the statement "((SuggestionsAdapter)mSuggestionsAdapter).setQueryRefinement(enable ? SuggestionsAdapter.REFINE_ALL : SuggestionsAdapter.REFINE_BY_ENTRY);" is 138.,658
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,updateSubmitButton,Complex Conditional,The conditional expression mSubmitButtonEnabled && isSubmitAreaEnabled() && hasFocus()&& (hasText || !mVoiceButtonEnabled) is complex.,807
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,updateSubmitArea,Complex Conditional,The conditional expression isSubmitAreaEnabled() && (mSubmitButton.getVisibility() == VISIBLE || mVoiceButton.getVisibility() == VISIBLE) is complex.,816
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,onKey,Complex Method,Cyclomatic complexity of the method is 8,925
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,onSuggestionsKey,Complex Conditional,The conditional expression keyCode == KeyEvent.KEYCODE_ENTER || keyCode == KeyEvent.KEYCODE_SEARCH || keyCode == KeyEvent.KEYCODE_TAB is complex.,969
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,getDecoratedHint,Magic Number,The method contains a magic number: 1.25,1070
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,getDecoratedHint,Magic Number,The method contains a magic number: 2,1070
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,updateSearchAutoComplete,Long Statement,The length of the statement "((SuggestionsAdapter)mSuggestionsAdapter).setQueryRefinement(mQueryRefinement ? SuggestionsAdapter.REFINE_ALL : SuggestionsAdapter.REFINE_BY_ENTRY);" is 148.,1100
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,updateVoiceButton,Complex Conditional,The conditional expression mVoiceButtonEnabled && !isIconified() && empty is complex.,1141
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,adjustDropDownSizeAndPosition,Long Statement,The length of the statement "int iconOffset=mIconifiedByDefault ? res.getDimensionPixelSize(R.dimen.abs__dropdownitem_icon_width) + res.getDimensionPixelSize(R.dimen.abs__dropdownitem_text_padding_left) : 0;" is 178.,1305
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,adjustDropDownSizeAndPosition,Long Statement,The length of the statement "mQueryTextView.setDropDownWidth(mDropDownAnchor.getWidth() + dropDownPadding.left + dropDownPadding.right+ iconOffset - (anchorPadding));" is 137.,1305
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,createIntent,Long Parameter List,The method has 6 parameters. ,1453
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,createVoiceWebSearchIntent,Long Statement,The length of the statement "voiceIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE`searchActivity == null ? null : searchActivity.flattenToShortString());" is 131.,1495
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,createVoiceAppSearchIntent,Long Statement,The length of the statement "voiceIntent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE`searchActivity == null ? null : searchActivity.flattenToShortString());" is 131.,1506
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,forceSuggestionQuery,Empty catch clause,The method has an empty catch block.,1624
+jackpf_ApkDownloader,com.actionbarsherlock.widget,SearchView,ensureImeVisible,Empty catch clause,The method has an empty catch block.,1780
+jackpf_ApkDownloader,android.support.v4.app,Watson,onCreatePanelMenu,Complex Conditional,The conditional expression f != null && !f.mHidden && f.mHasMenu && f.mMenuVisible && f instanceof OnCreateOptionsMenuListener is complex.,39
+jackpf_ApkDownloader,android.support.v4.app,Watson,onCreatePanelMenu,Complex Method,Cyclomatic complexity of the method is 13,39
+jackpf_ApkDownloader,android.support.v4.app,Watson,onPreparePanel,Complex Conditional,The conditional expression f != null && !f.mHidden && f.mHasMenu && f.mMenuVisible && f instanceof OnPrepareOptionsMenuListener is complex.,84
+jackpf_ApkDownloader,android.support.v4.app,Watson,onPreparePanel,Complex Method,Cyclomatic complexity of the method is 9,84
+jackpf_ApkDownloader,android.support.v4.app,Watson,onMenuItemSelected,Complex Conditional,The conditional expression f != null && !f.mHidden && f.mHasMenu && f.mMenuVisible && f instanceof OnOptionsItemSelectedListener is complex.,113
+jackpf_ApkDownloader,android.support.v4.app,Watson,onMenuItemSelected,Complex Method,Cyclomatic complexity of the method is 8,113
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,valueOf,Magic Number,The method contains a magic number: 2,29
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,valueOf,Magic Number,The method contains a magic number: 3,29
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,valueOf,Magic Number,The method contains a magic number: 4,29
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,valueOf,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4df3ce36,29
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_AppsRequest_descriptor is 38.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_AppsRequest_fieldAccessorTable is 46.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_AppsResponse_descriptor is 39.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_AppsResponse_fieldAccessorTable is 47.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Category_descriptor is 35.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Category_fieldAccessorTable is 43.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CommentsRequest_descriptor is 42.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CommentsRequest_fieldAccessorTable is 50.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CommentsResponse_descriptor is 43.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CommentsResponse_fieldAccessorTable is 51.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_App_descriptor is 30.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_App_fieldAccessorTable is 38.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_App_ExtendedInfo_descriptor is 43.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_App_ExtendedInfo_fieldAccessorTable is 51.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Comment_descriptor is 34.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Comment_fieldAccessorTable is 42.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CategoriesRequest_descriptor is 44.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CategoriesRequest_fieldAccessorTable is 52.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CategoriesResponse_descriptor is 45.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_CategoriesResponse_fieldAccessorTable is 53.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_SubCategoriesRequest_descriptor is 47.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_SubCategoriesRequest_fieldAccessorTable is 55.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_SubCategoriesResponse_descriptor is 48.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_SubCategoriesResponse_fieldAccessorTable is 56.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_RequestContext_descriptor is 41.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_RequestContext_fieldAccessorTable is 49.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetImageRequest_descriptor is 42.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetImageRequest_fieldAccessorTable is 50.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetRequest_descriptor is 42.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetRequest_fieldAccessorTable is 50.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetImageResponse_descriptor is 43.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetImageResponse_fieldAccessorTable is 51.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_descriptor is 43.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_fieldAccessorTable is 51.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_InstallAsset_descriptor is 56.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_GetAssetResponse_InstallAsset_fieldAccessorTable is 64.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Request_descriptor is 34.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Request_fieldAccessorTable is 42.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Request_RequestGroup_descriptor is 47.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Request_RequestGroup_fieldAccessorTable is 55.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_ResponseContext_descriptor is 42.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_ResponseContext_fieldAccessorTable is 50.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Response_descriptor is 35.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Response_fieldAccessorTable is 43.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Response_ResponseGroup_descriptor is 49.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Identifier,The length of the field internal_static_Response_ResponseGroup_fieldAccessorTable is 57.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_AppsRequest_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_AppsRequest_descriptor`new java.lang.String[]{"AppType"`"Query"`"CategoryId"`"AppId"`"WithExtendedInfo"`"OrderType"`"StartIndex"`"EntriesCount"`"ViewType"}`com.gc.android.market.api.model.Market.AppsRequest.class`com.gc.android.market.api.model.Market.AppsRequest.Builder.class);" is 402.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_AppsResponse_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_AppsResponse_descriptor`new java.lang.String[]{"App"`"EntriesCount"}`com.gc.android.market.api.model.Market.AppsResponse.class`com.gc.android.market.api.model.Market.AppsResponse.Builder.class);" is 318.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_Category_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_Category_descriptor`new java.lang.String[]{"AppType"`"Title"`"CategoryId"`"Subtitle"`"SubCategories"}`com.gc.android.market.api.model.Market.Category.class`com.gc.android.market.api.model.Market.Category.Builder.class);" is 339.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_CommentsRequest_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_CommentsRequest_descriptor`new java.lang.String[]{"AppId"`"StartIndex"`"EntriesCount"}`com.gc.android.market.api.model.Market.CommentsRequest.class`com.gc.android.market.api.model.Market.CommentsRequest.Builder.class);" is 345.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_CommentsResponse_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_CommentsResponse_descriptor`new java.lang.String[]{"Comments"`"EntriesCount"}`com.gc.android.market.api.model.Market.CommentsResponse.class`com.gc.android.market.api.model.Market.CommentsResponse.Builder.class);" is 339.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_App_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_App_descriptor`new java.lang.String[]{"Id"`"Title"`"AppType"`"Creator"`"Version"`"Price"`"Rating"`"RatingsCount"`"ExtendedInfo"`"CreatorId"`"PackageName"`"VersionCode"`"PriceCurrency"`"PriceMicros"}`com.gc.android.market.api.model.Market.App.class`com.gc.android.market.api.model.Market.App.Builder.class);" is 421.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_App_ExtendedInfo_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_App_ExtendedInfo_descriptor`new java.lang.String[]{"Description"`"DownloadsCount"`"PermissionId"`"InstallSize"`"PackageName"`"Category"`"ContactEmail"`"DownloadsCountText"`"ContactPhone"`"ContactWebsite"`"ScreenshotsCount"`"PromoText"`"RecentChanges"`"PromotionalVideo"}`com.gc.android.market.api.model.Market.App.ExtendedInfo.class`com.gc.android.market.api.model.Market.App.ExtendedInfo.Builder.class);" is 532.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_Comment_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_Comment_descriptor`new java.lang.String[]{"Text"`"Rating"`"AuthorName"`"CreationTime"`"AuthorId"}`com.gc.android.market.api.model.Market.Comment.class`com.gc.android.market.api.model.Market.Comment.Builder.class);" is 332.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_CategoriesRequest_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_CategoriesRequest_descriptor`new java.lang.String[]{}`com.gc.android.market.api.model.Market.CategoriesRequest.class`com.gc.android.market.api.model.Market.CategoriesRequest.Builder.class);" is 318.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_CategoriesResponse_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_CategoriesResponse_descriptor`new java.lang.String[]{"Categories"}`com.gc.android.market.api.model.Market.CategoriesResponse.class`com.gc.android.market.api.model.Market.CategoriesResponse.Builder.class);" is 334.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_SubCategoriesRequest_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_SubCategoriesRequest_descriptor`new java.lang.String[]{"AppType"}`com.gc.android.market.api.model.Market.SubCategoriesRequest.class`com.gc.android.market.api.model.Market.SubCategoriesRequest.Builder.class);" is 339.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_SubCategoriesResponse_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_SubCategoriesResponse_descriptor`new java.lang.String[]{"Category"`"SubCategoryDisplay"`"SubCategoryId"}`com.gc.android.market.api.model.Market.SubCategoriesResponse.class`com.gc.android.market.api.model.Market.SubCategoriesResponse.Builder.class);" is 381.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_RequestContext_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_RequestContext_descriptor`new java.lang.String[]{"AuthSubToken"`"IsSecure"`"Version"`"AndroidId"`"DeviceAndSdkVersion"`"UserLanguage"`"UserCountry"`"OperatorAlpha"`"SimOperatorAlpha"`"OperatorNumeric"`"SimOperatorNumeric"}`com.gc.android.market.api.model.Market.RequestContext.class`com.gc.android.market.api.model.Market.RequestContext.Builder.class);" is 478.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_GetImageRequest_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_GetImageRequest_descriptor`new java.lang.String[]{"AppId"`"ImageUsage"`"ImageId"}`com.gc.android.market.api.model.Market.GetImageRequest.class`com.gc.android.market.api.model.Market.GetImageRequest.Builder.class);" is 340.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_GetAssetRequest_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_GetAssetRequest_descriptor`new java.lang.String[]{"AssetId"`"DirectDownloadKey"}`com.gc.android.market.api.model.Market.GetAssetRequest.class`com.gc.android.market.api.model.Market.GetAssetRequest.Builder.class);" is 339.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_GetImageResponse_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_GetImageResponse_descriptor`new java.lang.String[]{"ImageData"}`com.gc.android.market.api.model.Market.GetImageResponse.class`com.gc.android.market.api.model.Market.GetImageResponse.Builder.class);" is 325.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_GetAssetResponse_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_GetAssetResponse_descriptor`new java.lang.String[]{"InstallAsset"}`com.gc.android.market.api.model.Market.GetAssetResponse.class`com.gc.android.market.api.model.Market.GetAssetResponse.Builder.class);" is 328.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_GetAssetResponse_InstallAsset_descriptor=internal_static_GetAssetResponse_descriptor.getNestedTypes().get(0);" is 125.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_GetAssetResponse_InstallAsset_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_GetAssetResponse_InstallAsset_descriptor`new java.lang.String[]{"AssetId"`"AssetName"`"AssetType"`"AssetPackage"`"BlobUrl"`"AssetSignature"`"AssetSize"`"RefundTimeout"`"ForwardLocked"`"Secured"`"VersionCode"`"DownloadAuthCookieName"`"DownloadAuthCookieValue"}`com.gc.android.market.api.model.Market.GetAssetResponse.InstallAsset.class`com.gc.android.market.api.model.Market.GetAssetResponse.InstallAsset.Builder.class);" is 560.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_Request_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_Request_descriptor`new java.lang.String[]{"Context"`"RequestGroup"}`com.gc.android.market.api.model.Market.Request.class`com.gc.android.market.api.model.Market.Request.Builder.class);" is 302.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_Request_RequestGroup_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_Request_RequestGroup_descriptor`new java.lang.String[]{"AppsRequest"`"CommentsRequest"`"GetAssetRequest"`"ImageRequest"`"SubCategoriesRequest"`"CategoriesRequest"}`com.gc.android.market.api.model.Market.Request.RequestGroup.class`com.gc.android.market.api.model.Market.Request.RequestGroup.Builder.class);" is 437.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_ResponseContext_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_ResponseContext_descriptor`new java.lang.String[]{"Result"`"MaxAge"`"Etag"`"ServerVersion"}`com.gc.android.market.api.model.Market.ResponseContext.class`com.gc.android.market.api.model.Market.ResponseContext.Builder.class);" is 350.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_Response_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_Response_descriptor`new java.lang.String[]{"ResponseGroup"}`com.gc.android.market.api.model.Market.Response.class`com.gc.android.market.api.model.Market.Response.Builder.class);" is 297.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Long Statement,The length of the statement "internal_static_Response_ResponseGroup_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_Response_ResponseGroup_descriptor`new java.lang.String[]{"Context"`"AppsResponse"`"CommentsResponse"`"GetAssetResponse"`"ImageResponse"`"CategoriesResponse"`"SubCategoriesResponse"}`com.gc.android.market.api.model.Market.Response.ResponseGroup.class`com.gc.android.market.api.model.Market.Response.ResponseGroup.Builder.class);" is 461.,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 2,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 3,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 4,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 5,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 6,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 7,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 8,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 9,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 10,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 11,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 12,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 13,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 14,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 15,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 16,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 17,18469
+jackpf_ApkDownloader,com.gc.android.market.api.model,Market,assignDescriptors,Magic Number,The method contains a magic number: 18,18469
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,MarketSession,Magic Number,The method contains a magic number: 2009011,89
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,login,Complex Method,Cyclomatic complexity of the method is 8,158
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,login,Magic Number,The method contains a magic number: 403,158
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,queryCategories,Long Statement,The length of the statement "Response response=executeProtobuf(request.addRequestGroup(RequestGroup.newBuilder().setCategoriesRequest(CategoriesRequest.newBuilder().build())).setContext(ctxt).build());" is 172.,229
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,queryGetAssetRequest,Long Statement,The length of the statement "Response response=executeProtobuf(request.addRequestGroup(RequestGroup.newBuilder().setGetAssetRequest(GetAssetRequest.newBuilder().setAssetId(assetId).build())).setContext(ctxt).build());" is 188.,245
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,executeRawHttpQuery,Magic Number,The method contains a magic number: 400,335
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,executeRawHttpQuery,Magic Number,The method contains a magic number: 1024,335
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,executeRawHttpsQuery,Magic Number,The method contains a magic number: 400,410
+jackpf_ApkDownloader,com.gc.android.market.api,MarketSession,executeRawHttpsQuery,Magic Number,The method contains a magic number: 1024,410
+jackpf_ApkDownloader,com.gc.android.market.api,LoginException,getErrorMessage,Complex Method,Cyclomatic complexity of the method is 10,26
+jackpf_ApkDownloader,com.gc.android.market.api,LoginException,getErrorMessage,Long Statement,The length of the statement "if (errorCode.equals(ERROR_BAD_AUTHENTICATION)) return "The login request used a username or password that is not recognized.";" is 127.,26
+jackpf_ApkDownloader,com.gc.android.market.api,LoginException,getErrorMessage,Long Statement,The length of the statement "if (errorCode.equals(ERROR_NOT_VERIFIED)) return "The account email address has not been verified. The user will need to access their Google account directly to resolve the issue before logging in using a non-Google application.";" is 230.,26
+jackpf_ApkDownloader,com.gc.android.market.api,LoginException,getErrorMessage,Long Statement,The length of the statement "if (errorCode.equals(ERROR_TERMS_NOT_AGREED)) return "The user has not agreed to terms. The user will need to access their Google account directly to resolve the issue before logging in using a non-Google application.";" is 219.,26
+jackpf_ApkDownloader,com.gc.android.market.api,LoginException,getErrorMessage,Long Statement,The length of the statement "if (errorCode.equals(ERROR_CAPTCHA_REQUIRED)) return "A CAPTCHA is required. (A response with this error code will also contain an image URL and a CAPTCHA token.)";" is 164.,26
+jackpf_ApkDownloader,com.gc.android.market.api,LoginException,getErrorMessage,Long Statement,The length of the statement "if (errorCode.equals(ERROR_UNKNOWN)) return "The error is unknown or unspecified; the request contained invalid input or was malformed.";" is 137.,26
+jackpf_ApkDownloader,com.gc.android.market.api,LoginException,getErrorMessage,Long Statement,The length of the statement "if (errorCode.equals(ERROR_SERVICE_DISABLED)) return "The user's access to the specified service has been disabled. (The user account may still be valid.)";" is 156.,26
+jackpf_ApkDownloader,com.gc.android.market.api,Tools,postUrl,Magic Number,The method contains a magic number: 400,36
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Long Parameter List,The method has 6 parameters. ,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 24,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 8,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 24,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 16,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 2,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 2,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 24,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 24,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 3,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 18,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 12,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 2,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 6,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 3,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 2,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 18,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 12,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 2,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 6,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 3,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 18,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 12,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 0x3f,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 2,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Magic Number,The method contains a magic number: 3,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode3to4,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@63983b41,460
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 3,534
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 4,534
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 3,534
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 3,558
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 4,558
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 3,558
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 4,558
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encode,Magic Number,The method contains a magic number: 0xFF,558
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,611
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,611
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,611
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeObject,Empty catch clause,The method has an empty catch block.,611
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Complex Method,Cyclomatic complexity of the method is 11,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Empty catch clause,The method has an empty catch block.,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Empty catch clause,The method has an empty catch block.,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Empty catch clause,The method has an empty catch block.,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Cannot have offset of %d and length of %d with array of length %d"`off`len`source.length));" is 141.,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 2,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 3,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeBytesToBytes,Magic Number,The method contains a magic number: 4,856
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Long Parameter List,The method has 5 parameters. ,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Source array with length %d cannot have offset of %d and still process four bytes."`source.length`srcOffset));" is 160.,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Destination array with length %d cannot have offset of %d and still store three bytes."`destination.length`destOffset));" is 170.,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((DECODABET[source[srcOffset]] & 0xFF) << 18) | ((DECODABET[source[srcOffset + 1]] & 0xFF) << 12) | ((DECODABET[source[srcOffset + 2]] & 0xFF) << 6);" is 161.,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Long Statement,The length of the statement "int outBuff=((DECODABET[source[srcOffset]] & 0xFF) << 18) | ((DECODABET[source[srcOffset + 1]] & 0xFF) << 12) | ((DECODABET[source[srcOffset + 2]] & 0xFF) << 6)| ((DECODABET[source[srcOffset + 3]] & 0xFF));" is 206.,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 3,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 2,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 2,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 18,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 12,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 16,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 3,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 18,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 12,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 2,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 6,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 16,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 8,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 2,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 18,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 12,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 2,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 6,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 3,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 0xFF,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 16,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 8,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 2,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode4to3,Magic Number,The method contains a magic number: 3,986
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Complex Method,Cyclomatic complexity of the method is 10,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Long Statement,The length of the statement "throw new IllegalArgumentException(String.format("Source array with length %d cannot have offset of %d and process %d bytes."`source.length`off`len));" is 150.,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Long Statement,The length of the statement "throw new IllegalArgumentException("Base64-encoded string must have at least four characters` but length specified was " + len);" is 128.,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 4,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 3,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 4,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 4,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 0x7f,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 3,1114
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Complex Conditional,The conditional expression (bytes != null) && (bytes.length >= 4) && (!dontGunzip) is complex.,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Empty catch clause,The method has an empty catch block.,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Empty catch clause,The method has an empty catch block.,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Empty catch clause,The method has an empty catch block.,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 4,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 0xff,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 8,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 0xff00,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decode,Magic Number,The method contains a magic number: 2048,1214
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decodeToObject,Empty catch clause,The method has an empty catch block.,1305
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decodeToObject,Empty catch clause,The method has an empty catch block.,1305
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decodeToObject,Long Statement,The length of the statement "@SuppressWarnings("unchecked") @Override public Class<?> resolveClass( java.io.ObjectStreamClass streamClass) throws java.io.IOException` ClassNotFoundException {" is 162.,1305
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decodeFromFile,Empty catch clause,The method has an empty catch block.,1380
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,decodeFromFile,Magic Number,The method contains a magic number: 4096,1380
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeFromFile,Empty catch clause,The method has an empty catch block.,1441
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeFromFile,Magic Number,The method contains a magic number: 1.4,1441
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeFromFile,Magic Number,The method contains a magic number: 40,1441
+jackpf_ApkDownloader,com.gc.android.market.api,Base64,encodeFromFile,Magic Number,The method contains a magic number: 4096,1441
+jackpf_ApkDownloader,com.gc.android.market.api,Main,usage,Long Statement,The length of the statement "System.out.println("Usage :\n" + "market <email> <password> <androidId> <testId> <assetId> <query> \n" + "\temail` password : account linked to the specified android id\n"+ "\tandroiId : a valid android id (retrieved typing *#*#8255#*#* "+ "on device or emulator)\n"+ "\ttestId : test you want to run (1 to test different asyncronous methods; "+ "2 to test different syncronous call. Please note that if you run test 1 and 2 "+ "consecutively` you have to change account to avoid Bad request response; "+ " 3 to test download)\n\tassetId : application assetId to use for testing\n"+ "\tquery to test setQuery in testId 1");" is 623.,26
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 5,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 2,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 3,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 4,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 6,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 5,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 2,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Magic Number,The method contains a magic number: 3,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,main,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4f5c77dc,38
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testAsyncronousCalls,Long Parameter List,The method has 5 parameters. ,72
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testAsyncronousCalls,Long Statement,The length of the statement "AppsRequest appsRequest=AppsRequest.newBuilder().setQuery(query).setStartIndex(2).setEntriesCount(10).setWithExtendedInfo(true).build();" is 136.,72
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testAsyncronousCalls,Long Statement,The length of the statement "CommentsRequest commentsRequest=CommentsRequest.newBuilder().setAppId(assetId).setStartIndex(0).setEntriesCount(10).build();" is 124.,72
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testAsyncronousCalls,Long Statement,The length of the statement "GetImageRequest imgReq=GetImageRequest.newBuilder().setAppId(assetId).setImageUsage(AppImageUsage.SCREENSHOT).setImageId("1").build();" is 134.,72
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testAsyncronousCalls,Magic Number,The method contains a magic number: 2,72
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testAsyncronousCalls,Magic Number,The method contains a magic number: 10,72
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testAsyncronousCalls,Magic Number,The method contains a magic number: 10,72
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testSyncronousCalls,Long Statement,The length of the statement "AppsRequest appsRequest=AppsRequest.newBuilder().setAppType(AppType.GAME).setStartIndex(1).setEntriesCount(10).setWithExtendedInfo(true).setViewType(ViewType.FREE).build();" is 172.,130
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testSyncronousCalls,Magic Number,The method contains a magic number: 10,130
+jackpf_ApkDownloader,com.gc.android.market.api,Main,testDownload,Magic Number,The method contains a magic number: 1024,157

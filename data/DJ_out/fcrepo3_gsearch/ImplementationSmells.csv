@@ -1,0 +1,915 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+fcrepo3_gsearch,dk.defxws.fgszebra,Statement,executeQuery,Long Parameter List,The method has 5 parameters. ,39
+fcrepo3_gsearch,dk.defxws.fgszebra,Statement,executeQuery,Long Statement,The length of the statement "url=new URL(indexBase + queryParams + "&startRecord="+ startRecord+ "&maximumRecords="+ maxResults+ "&query="+ URLEncoder.encode(query`"UTF-8"));" is 145.,39
+fcrepo3_gsearch,dk.defxws.fgszebra,Statement,executeScan,Long Parameter List,The method has 5 parameters. ,90
+fcrepo3_gsearch,dk.defxws.fgszebra,Statement,executeScan,Long Statement,The length of the statement "url=new URL(indexBase + scanParams + "&maximumTerms="+ maxResults+ "&scanClause="+ URLEncoder.encode(fieldName + "=" + st.trim()`"UTF-8"));" is 139.,90
+fcrepo3_gsearch,dk.defxws.fgszebra,IndexModifier,runUpdate,Long Statement,The length of the statement "if (line.indexOf("Records:") > -1 || line.indexOf("temp_records/sb") > -1) if (logger.isDebugEnabled()) logger.debug("runupdate line=" + line);" is 143.,67
+fcrepo3_gsearch,dk.defxws.fgszebra,IndexModifier,runUpdate,Magic Number,The method contains a magic number: 6,67
+fcrepo3_gsearch,dk.defxws.fgszebra,IndexModifier,runUpdate,Magic Number,The method contains a magic number: 2,67
+fcrepo3_gsearch,dk.defxws.fgszebra,IndexModifier,setCounts,Magic Number,The method contains a magic number: 2,109
+fcrepo3_gsearch,dk.defxws.fgszebra,IndexModifier,getCounts,Magic Number,The method contains a magic number: 2,124
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,gfindObjects,Long Parameter List,The method has 8 parameters. ,39
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,gfindObjects,Long Statement,The length of the statement "ResultSet resultSet=(new Connection()).createStatement().executeQuery(query`hitPageStart`hitPageSize`config.getIndexBase(indexName)`config.getIndexName(indexName));" is 164.,39
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,gfindObjects,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getGfindObjectsResultXslt(indexName`resultPageXslt);" is 149.,39
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 12,39
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 13,39
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,browseIndex,Long Parameter List,The method has 5 parameters. ,68
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,browseIndex,Long Statement,The length of the statement "ResultSet resultSet=(new Connection()).createStatement().executeScan(startTerm`termPageSize`fieldName`config.getIndexBase(indexName)`config.getIndexName(indexName));" is 165.,68
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,browseIndex,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getBrowseIndexResultXslt(indexName`resultPageXslt);" is 148.,68
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,browseIndex,Magic Number,The method contains a magic number: 10,68
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,browseIndex,Magic Number,The method contains a magic number: 11,68
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,getIndexInfo,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getIndexInfoResultXslt(indexName`resultPageXslt);" is 146.,94
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Empty catch clause,The method has an empty catch block.,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Long Parameter List,The method has 6 parameters. ,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getUpdateIndexResultXslt(indexName`resultPageXslt);" is 148.,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 2,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 2,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 2,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 12,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 2,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 3,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 4,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 5,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 6,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 7,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 8,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 9,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 10,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 11,117
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,fromFoxmlFiles,Long Parameter List,The method has 5 parameters. ,203
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDocs,Long Parameter List,The method has 5 parameters. ,217
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,217
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,217
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,217
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,217
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDocs,Magic Number,The method contains a magic number: 100,217
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,fromPid,Long Parameter List,The method has 5 parameters. ,250
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,deletePid,Magic Number,The method contains a magic number: 2,261
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDoc,Long Parameter List,The method has 6 parameters. ,275
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDoc,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + indexName+ "/"+ config.getUpdateIndexDocXslt(indexName`indexDocXslt);" is 122.,275
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDoc,Long Statement,The length of the statement "(new GTransformer()).transformToFile(xsltPath`new StreamSource(foxmlStream)`new Object[]{"REPOSITORYNAME"`repositoryName`"OPERATIONSIMPL"`this}`config.getIndexDir(indexName) + "/temp_records/sb");" is 196.,275
+fcrepo3_gsearch,dk.defxws.fgszebra,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,275
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,Config,Complex Method,Cyclomatic complexity of the method is 9,210
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,Config,Long Statement,The length of the statement "updaterNameToProps.put(updaterName`getFgsConfigProps("/" + configName + "/updater/"+ updaterName+ "/updater.properties"));" is 122.,210
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,Config,Long Statement,The length of the statement "repositoryNameToProps.put(repositoryName`getFgsConfigProps("/" + configName + "/repository/"+ repositoryName+ "/repository.properties"));" is 137.,210
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Complex Conditional,The conditional expression !(xsltProcessor == null || xsltProcessor.equals("") || xsltProcessor.equals("xalan") || xsltProcessor.equals("saxon")) is complex.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Complex Conditional,The conditional expression searchResultFilteringTypeProperty == null || countTokens == 0 || countTokens > 1 is complex.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Complex Conditional,The conditional expression !("presearch".equals(token) || "insearch".equals(token) || "postsearch".equals(token)) is complex.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Complex Conditional,The conditional expression !f.fieldType().tokenized() && f.fieldType().indexed() && untokenizedFields.indexOf(f.name()) < 0 is complex.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Complex Conditional,The conditional expression !(allowLeadingWildcard == null || allowLeadingWildcard.equals("") || allowLeadingWildcard.equals("false") || allowLeadingWildcard.equals("true")) is complex.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Complex Conditional,The conditional expression !(lowercaseExpandedTerms == null || lowercaseExpandedTerms.equals("") || lowercaseExpandedTerms.equals("false") || lowercaseExpandedTerms.equals("true")) is complex.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Complex Method,Cyclomatic complexity of the method is 42,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Empty catch clause,The method has an empty catch block.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Identifier,The length of the identifier searchResultFilteringTypeProperty is 33.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Identifier,The length of the field defaultBrowseIndexTermPageSize is 30.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Identifier,The length of the field defaultGfindObjectsHitPageSize is 30.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Identifier,The length of the field defaultGfindObjectsSnippetsMax is 30.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Identifier,The length of the field defaultGfindObjectsFieldMaxLength is 33.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Identifier,The length of the field searchResultFilteringModuleProperty is 35.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Method,The method has 248 lines of code.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "String[] propNames={"fedoragsearch.deployFile"`"fedoragsearch.soapBase"`"fedoragsearch.soapUser"`"fedoragsearch.soapPass"`"fedoragsearch.defaultNoXslt"`"fedoragsearch.defaultGfindObjectsRestXslt"`"fedoragsearch.defaultUpdateIndexRestXslt"`"fedoragsearch.defaultBrowseIndexRestXslt"`"fedoragsearch.defaultGetRepositoryInfoRestXslt"`"fedoragsearch.defaultGetIndexInfoRestXslt"`"fedoragsearch.mimeTypes"`"fedoragsearch.maxPageSize"`"fedoragsearch.defaultBrowseIndexTermPageSize"`"fedoragsearch.defaultGfindObjectsHitPageSize"`"fedoragsearch.defaultGfindObjectsSnippetsMax"`"fedoragsearch.defaultGfindObjectsFieldMaxLength"`"fedoragsearch.repositoryNames"`"fedoragsearch.indexNames"`"fedoragsearch.updaterNames"`"fedoragsearch.searchResultFilteringModule"`"fedoragsearch.searchResultFilteringType"`"fedoragsearch.xsltProcessor"`"fedoragsearch.writeLimit"};" is 852.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "if (!(xsltProcessor == null || xsltProcessor.equals("") || xsltProcessor.equals("xalan") || xsltProcessor.equals("saxon"))) {" is 125.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "defaultGfindObjectsFieldMaxLength=Integer.parseInt(getProperty(fgsProps`"fedoragsearch.defaultGfindObjectsFieldMaxLength"));" is 124.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + ": fedoragsearch.searchResultFilteringType="+ searchResultFilteringTypeProperty+ ": one and only one of 'presearch'` 'insearch'` 'postsearch' must be stated.\n");" is 200.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + ": fedoragsearch.searchResultFilteringType="+ searchResultFilteringTypeProperty+ ": only 'presearch'` 'insearch'` 'postsearch' may be stated` not '"+ token+ "'.\n");" is 203.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "String[] reposPropNames={"fgsrepository.repositoryName"`"fgsrepository.fedoraSoap"`"fgsrepository.fedoraUser"`"fgsrepository.fedoraPass"`"fgsrepository.fedoraObjectDir"`"fgsrepository.fedoraVersion"`"fgsrepository.defaultGetRepositoryInfoResultXslt"`"fgsrepository.trustStorePath"`"fgsrepository.trustStorePass"};" is 313.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/repository/"+ repositoryName+ ": fgsrepository.repositoryName must be="+ repositoryName);" is 129.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/repository/"+ repositoryName+ ": fgsrepository.fedoraObjectDir="+ fedoraObjectDirName+ " not found");" is 141.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "String[] indexPropNames={"fgsindex.indexName"`"fgsindex.indexBase"`"fgsindex.indexUser"`"fgsindex.indexPass"`"fgsindex.operationsImpl"`"fgsindex.defaultUpdateIndexDocXslt"`"fgsindex.defaultUpdateIndexResultXslt"`"fgsindex.defaultGfindObjectsResultXslt"`"fgsindex.defaultBrowseIndexResultXslt"`"fgsindex.defaultGetIndexInfoResultXslt"`"fgsindex.indexDir"`"fgsindex.analyzer"`"fgsindex.fieldAnalyzers"`"fgsindex.stopwordsLocation"`"fgsindex.untokenizedFields"`"fgsindex.defaultQueryFields"`"fgsindex.allowLeadingWildcard"`"fgsindex.lowercaseExpandedTerms"`"fgsindex.snippetBegin"`"fgsindex.snippetEnd"`"fgsindex.maxBufferedDocs"`"fgsindex.mergeFactor"`"fgsindex.defaultWriteLockTimeout"`"fgsindex.defaultSortFields"`"fgsindex.uriResolver"};" is 738.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.operationsImpl must be set in "+ configName+ "/index/ "+ indexName+ ".properties");" is 155.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "GenericOperationsImpl ops=(GenericOperationsImpl)operationsImplClass.getConstructor(new Class[]{}).newInstance(new Object[]{});" is 127.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.operationsImpl="+ operationsImpl+ ": instantiation error.\n"+ e.toString());" is 148.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.operationsImpl="+ operationsImpl+ ": instantiation error.\n"+ e.toString());" is 148.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.operationsImpl="+ operationsImpl+ ": instantiation error.\n"+ e.toString());" is 148.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.operationsImpl="+ operationsImpl+ ": instantiation error.\n"+ e.toString());" is 148.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.operationsImpl="+ operationsImpl+ ": class not found.\n"+ e);" is 133.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ " fgsindex.indexDir="+ indexDir+ " must exist as a directory");" is 123.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "if (!(allowLeadingWildcard == null || allowLeadingWildcard.equals("") || allowLeadingWildcard.equals("false") || allowLeadingWildcard.equals("true"))) {" is 152.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "if (!(lowercaseExpandedTerms == null || lowercaseExpandedTerms.equals("") || lowercaseExpandedTerms.equals("false") || lowercaseExpandedTerms.equals("true"))) {" is 160.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ " "+ uriResolver+ ": fgsindex.uriResolver="+ uriResolver+ ": instantiation error.\n"+ e.toString());" is 160.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ " "+ uriResolver+ ": fgsindex.uriResolver="+ uriResolver+ ": instantiation error.\n"+ e.toString());" is 160.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ " "+ uriResolver+ ": fgsindex.uriResolver="+ uriResolver+ ": instantiation error.\n"+ e.toString());" is 160.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ " "+ uriResolver+ ": fgsindex.uriResolver="+ uriResolver+ ": instantiation error:\n"+ e.toString());" is 160.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.uriResolver="+ uriResolver+ ": class not found:\n"+ e.toString());" is 138.,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Magic Number,The method contains a magic number: 2,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Magic Number,The method contains a magic number: 10,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkConfig,Magic Number,The method contains a magic number: 10,272
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,deployWSDD,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("AdminClient()).process(soapBase=" + params[0] + " soapUser="+ params[2]+ " soapPass="+ params[3]+ " deployFile="+ params[1]+ ")");" is 173.,658
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,deployWSDD,Magic Number,The method contains a magic number: 4,658
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,deployWSDD,Magic Number,The method contains a magic number: 2,658
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,deployWSDD,Magic Number,The method contains a magic number: 3,658
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,deployWSDD,Magic Number,The method contains a magic number: 2,658
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,deployWSDD,Magic Number,The method contains a magic number: 3,658
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getMaxPageSize,Empty catch clause,The method has an empty catch block.,791
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsHitPageStart,Long Identifier,The length of the field defaultGfindObjectsHitPageStart is 31.,799
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsHitPageSize,Empty catch clause,The method has an empty catch block.,803
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsHitPageSize,Long Identifier,The length of the field defaultGfindObjectsHitPageSize is 30.,803
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsSnippetsMax,Empty catch clause,The method has an empty catch block.,811
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsSnippetsMax,Long Identifier,The length of the field defaultGfindObjectsSnippetsMax is 30.,811
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsFieldMaxLength,Empty catch clause,The method has an empty catch block.,819
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsFieldMaxLength,Long Identifier,The length of the field defaultGfindObjectsFieldMaxLength is 33.,819
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultGfindObjectsFieldMaxLength,Long Statement,The length of the statement "defaultGfindObjectsFieldMaxLength=Integer.parseInt(getProperty(fgsProps`"fedoragsearch.defaultGfindObjectsFieldMaxLength"));" is 124.,819
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultBrowseIndexTermPageSize,Empty catch clause,The method has an empty catch block.,831
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultBrowseIndexTermPageSize,Long Identifier,The length of the field defaultBrowseIndexTermPageSize is 30.,831
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getWriteLimit,Empty catch clause,The method has an empty catch block.,839
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getWriteLimit,Magic Number,The method contains a magic number: 100000,839
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getFedoraObjectDir,Long Statement,The length of the statement "String fedoraObjectDirName=insertSystemProperties(getRepositoryProps(repositoryName).getProperty("fgsrepository.fedoraObjectDir"));" is 131.,912
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getRepositoryInfoResultXslt,Long Statement,The length of the statement "if (resultPageXslt == null || resultPageXslt.equals("")) return (getRepositoryProps(getRepositoryName(repositoryName))).getProperty("fgsrepository.defaultGetRepositoryInfoResultXslt");" is 184.,926
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getUpdateIndexDocXslt,Long Statement,The length of the statement "if (indexDocXslt == null || indexDocXslt.equals("")) return (getIndexProps(indexName)).getProperty("fgsindex.defaultUpdateIndexDocXslt");" is 137.,961
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getUpdateIndexResultXslt,Long Statement,The length of the statement "if (resultPageXslt == null || resultPageXslt.equals("")) return (getIndexProps(indexName)).getProperty("fgsindex.defaultUpdateIndexResultXslt");" is 144.,968
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getGfindObjectsResultXslt,Long Statement,The length of the statement "if (resultPageXslt == null || resultPageXslt.equals("")) return (getIndexProps(indexName)).getProperty("fgsindex.defaultGfindObjectsResultXslt");" is 145.,975
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getBrowseIndexResultXslt,Long Statement,The length of the statement "if (resultPageXslt == null || resultPageXslt.equals("")) return (getIndexProps(indexName)).getProperty("fgsindex.defaultBrowseIndexResultXslt");" is 144.,994
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getIndexInfoResultXslt,Long Statement,The length of the statement "if (resultPageXslt == null || resultPageXslt.equals("")) return (getIndexProps(indexName)).getProperty("fgsindex.defaultGetIndexInfoResultXslt");" is 145.,1001
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,checkAnalyzerClass,Long Statement,The length of the statement "errors.append("\n*** " + configName + "/index/"+ indexName+ ": fgsindex.analyzer="+ analyzerClassName+ ": class not found:\n"+ e.toString());" is 141.,1027
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getMergeFactor,Empty catch clause,The method has an empty catch block.,1092
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getMaxBufferedDocs,Empty catch clause,The method has an empty catch block.,1101
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getDefaultWriteLockTimeout,Empty catch clause,The method has an empty catch block.,1110
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getSearchResultFiltering,Long Identifier,The length of the field searchResultFilteringModuleProperty is 35.,1119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getSearchResultFiltering,Long Statement,The length of the statement "throw new ConfigException("\n*** " + configName + ": fedoragsearch.searchResultFilteringModule="+ searchResultFilteringModuleProperty+ ": instantiation error.\n"+ e.toString());" is 177.,1119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getSearchResultFiltering,Long Statement,The length of the statement "throw new ConfigException("\n*** " + configName + ": fedoragsearch.searchResultFilteringModule="+ searchResultFilteringModuleProperty+ ": instantiation error.\n"+ e.toString());" is 177.,1119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getSearchResultFiltering,Long Statement,The length of the statement "throw new ConfigException("\n*** " + configName + ": fedoragsearch.searchResultFilteringModule="+ searchResultFilteringModuleProperty+ ": instantiation error.\n"+ e.toString());" is 177.,1119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getSearchResultFiltering,Long Statement,The length of the statement "throw new ConfigException("\n*** " + configName + ": fedoragsearch.searchResultFilteringModule="+ searchResultFilteringModuleProperty+ ": instantiation error.\n"+ e.toString());" is 177.,1119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getSearchResultFiltering,Long Statement,The length of the statement "throw new ConfigException("\n*** " + configName + ": fedoragsearch.searchResultFilteringModule="+ searchResultFilteringModuleProperty+ ": class not found.\n"+ e);" is 162.,1119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,insertSystemProperty,Magic Number,The method contains a magic number: 2,1236
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getProperty,Complex Conditional,The conditional expression !(props == null || propertyName == null || propertyName.length() == 0) is complex.,1254
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setProperty,Complex Conditional,The conditional expression props != null && propName != null && propName.length() > 0 is complex.,1295
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setProperty,Complex Method,Cyclomatic complexity of the method is 8,1295
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getFgsConfigObjectsClient,Long Statement,The length of the statement "fgsconfigObjectsClient=new FedoraClient(getProperty(fcoProps`"fgsconfigObjects.fedoraSoap")`getProperty(fcoProps`"fgsconfigObjects.fedoraUser")`getProperty(fcoProps`"fgsconfigObjects.fedoraPass"));" is 197.,1373
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getFgsConfigObjectsClient,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getFgsConfigObjectsClient new=" + getProperty(fcoProps`"fgsconfigObjects.fedoraSoap"));" is 130.,1373
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getFgsConfigObjectsClient,Long Statement,The length of the statement "if (trustStorePath != null && trustStorePath.length() > 0) System.setProperty("javax.net.ssl.trustStore"`trustStorePath);" is 121.,1373
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getFgsConfigObjectsClient,Long Statement,The length of the statement "if (trustStorePass != null && trustStorePass.length() > 0) System.setProperty("javax.net.ssl.trustStorePassword"`trustStorePass);" is 129.,1373
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,createObject,Long Statement,The length of the statement "objectXML.append("\nxsi:schemaLocation=\"info:fedora/fedora-system:def/foxml# http://www.fedora.info/definitions/1/0/foxml1-1.xsd\"");" is 134.,1424
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Complex Method,Cyclomatic complexity of the method is 10,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("setConfigFileAsDatastream pid=" + configRootObjectPid + " dsid="+ dsid+ " protocol="+ protocol+ " host="+ host+ " port="+ port+ " user="+ user+ " pwd="+ pwd);" is 201.,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("setConfigFileAsDatastream pid=" + configRootObjectPid + " dsid="+ dsid+ " mimeType="+ mimeType+ " dsLocation="+ dsLocation);" is 167.,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Long Statement,The length of the statement "getAPIM().modifyDatastreamByReference(configRootObjectPid`dsid`null`"contents of configuration file"`mimeType`null`dsLocation`"DISABLED"`null`"add datastream"`false);" is 166.,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Long Statement,The length of the statement "getAPIM().addDatastream(configRootObjectPid`dsid`null`"contents of configuration file"`true`mimeType`null`dsLocation`"M"`"A"`"DISABLED"`null`"add datastream");" is 159.,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Long Statement,The length of the statement "throw new ConfigException("modifyDatastream exception=\n" + e.toString() + "\naddDatastream exception=\n"+ e1.toString());" is 122.,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Magic Number,The method contains a magic number: 80,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Magic Number,The method contains a magic number: 3,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Magic Number,The method contains a magic number: 3,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,setConfigFileAsDatastream,Magic Number,The method contains a magic number: 3,1475
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Config,getFgsConfigObjects,Complex Method,Cyclomatic complexity of the method is 10,1536
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Operations,updateIndex,Long Parameter List,The method has 6 parameters. ,17
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Operations,gfindObjects,Long Parameter List,The method has 8 parameters. ,25
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,Operations,browseIndex,Long Parameter List,The method has 5 parameters. ,35
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFilteringDemoImpl,rewriteQueryForInsearch,Long Parameter List,The method has 5 parameters. ,69
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFilteringDemoImpl,filterResultsetForPostsearch,Complex Method,Cyclomatic complexity of the method is 10,91
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFilteringDemoImpl,filterResultsetForPostsearch,Long Statement,The length of the statement "FedoraAPIM apim=getAPIM(repositoryName`config.getFedoraSoap(repositoryName)`fgsUserName`fgsUserName`config.getTrustStorePath(repositoryName)`config.getTrustStorePass(repositoryName));" is 183.,91
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFilteringDemoImpl,filterResultsetForPostsearch,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("filterResultsetForPostsearch hitsDenied=" + hitsDenied + " pid="+ pid+ "\nexception="+ e.getMessage());" is 146.,91
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFilteringDemoImpl,getBaseURL,Long Statement,The length of the statement "throw new Exception("Unable to determine baseURL from fedoraSoap" + " value (expected it to end with '" + end + "'): "+ fedoraSoap);" is 132.,206
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFilteringDemoImpl,getAPIA,Long Parameter List,The method has 6 parameters. ,220
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFilteringDemoImpl,getAPIM,Long Parameter List,The method has 6 parameters. ,241
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GTransformer,transform,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("transform xsltPath=" + xsltPath + " sb="+ getDebugString(sb.toString())+ " systemId="+ systemId);" is 140.,104
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GTransformer,transform,Magic Number,The method contains a magic number: 2,104
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GTransformer,transform,Magic Number,The method contains a magic number: 2,167
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GTransformer,transformToFile,Magic Number,The method contains a magic number: 2,188
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,StopwordsAnalyzer,StopwordsAnalyzer,Long Statement,The length of the statement "new StandardAnalyzer(Version.LUCENE_42`new InputStreamReader(StopwordsAnalyzer.class.getResourceAsStream("/stopwords.txt")));" is 125.,16
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,URIResolverImpl,resolve,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("resolve back to XSLT processor MalformedURLException href=" + href + " base="+ base+ " exception="+ e);" is 146.,38
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,URIResolverImpl,resolve,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("resolve back to XSLT processor no reposName href=" + href + " base="+ base+ " url="+ url.toString());" is 144.,38
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,URIResolverImpl,resolve,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("resolve get from repository href=" + href + " base="+ base+ " url="+ url.toString()+ " reposName="+ reposName);" is 154.,38
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,URIResolverImpl,resolve,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("resolve get from reposName=" + reposName + " source=\n"+ client.getResponseAsString(href`false`new UsernamePasswordCredentials(config.getFedoraUser(reposName)`config.getFedoraPass(reposName))));" is 237.,38
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,URIResolverImpl,resolve,Long Statement,The length of the statement "throw new TransformerException("resolve get from reposName=" + reposName + " href="+ href+ " base="+ base+ " exception=\n"`e);" is 126.,38
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Complex Conditional,The conditional expression !("".equals(remoteUser) || "fedoraAdmin".equals(remoteUser) || remoteUser.startsWith("fgsAdmin")|| "fgsTester".equals(remoteUser)) && !(action == null || action.equals("")) is complex.,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Complex Conditional,The conditional expression !("fedoraAdmin".equals(remoteUser) || remoteUser.startsWith("fgsAdmin") || "fgsTester".equals(remoteUser)) is complex.,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Complex Method,Cyclomatic complexity of the method is 28,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Long Method,The method has 120 lines of code.,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("request=" + request.getQueryString() + " remoteUser="+ remoteUser+ uasb.toString());" is 125.,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Long Statement,The length of the statement "if (!("".equals(remoteUser) || "fedoraAdmin".equals(remoteUser) || remoteUser.startsWith("fgsAdmin")|| "fgsTester".equals(remoteUser)) && !(action == null || action.equals(""))) {" is 179.,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Long Statement,The length of the statement "resultXml=(new GTransformer()).transform(config.getConfigName() + "/rest/" + restXslt`resultXml`params`getServletContext().getRealPath("/WEB-INF/classes"));" is 156.,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Long Statement,The length of the statement "resultXml=(new GTransformer()).transform(config.getConfigName() + "/rest/" + restXslt`resultXml`params`getServletContext().getRealPath("/WEB-INF/classes"));" is 156.,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 10,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 2,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 3,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 3,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 4,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 5,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 6,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 7,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 8,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,doGet,Magic Number,The method contains a magic number: 9,84
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,gfindObjects,Empty catch clause,The method has an empty catch block.,216
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,gfindObjects,Empty catch clause,The method has an empty catch block.,216
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,gfindObjects,Empty catch clause,The method has an empty catch block.,216
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,gfindObjects,Empty catch clause,The method has an empty catch block.,216
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,gfindObjects,Long Statement,The length of the statement "String result=ops.gfindObjects(query`hitPageStart`hitPageSize`snippetsMax`fieldMaxLength`indexName`sortFields`resultPageXslt);" is 126.,216
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,RESTImpl,browseIndex,Empty catch clause,The method has an empty catch block.,256
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Complex Conditional,The conditional expression textIndexField != null && textIndexField.length() > 0 && i == names.length - 1 is complex.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Complex Conditional,The conditional expression c < 32 && c != 9 && c != 10 && c != 13 is complex.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Complex Method,Cyclomatic complexity of the method is 33,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Long Method,The method has 128 lines of code.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Long Parameter List,The method has 7 parameters. ,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Long Statement,The length of the statement "logger.debug("getFromTika" + " fullDsId=" + fullDsId + " indexFieldTagName="+ indexFieldTagName+ " textIndexField="+ textIndexField+ " indexFieldNamePrefix="+ indexFieldNamePrefix+ " selectedFields="+ selectedFields);" is 217.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Long Statement,The length of the statement "names[i]=names[i] + "=" + names[i].replace(' '`'_').replace(':'`'_').replace('/'`'_').replace('='`'_').replace('('`'_').replace(')'`'_').replace('&'`'_');" is 154.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Long Statement,The length of the statement "indexField.append("\n<IndexField IFname=\"" + indexFieldName + "\" index=\""+ index+ "\" store=\""+ store+ "\" termVector=\""+ termVector+ "\" boost=\""+ boost+ "\">");" is 168.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Long Statement,The length of the statement "indexField.append(indexFieldValue.toString().replaceAll("<"`"&lt;").replaceAll(">"`"&gt;").replaceAll("&"`"&amp;").replaceAll("\""`"&quot;"));" is 142.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getFromTika" + " metadataFieldName=" + fieldNameOrg + " indexField="+ indexField);" is 125.,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 2,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 2,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 2,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 3,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 3,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 3,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 4,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 4,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 4,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 32,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 9,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 10,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getFromTika,Magic Number,The method contains a magic number: 13,50
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromHTML,Long Statement,The length of the statement "DocData docData=htmlParser.parse(new DocData()`null`null`new InputSource(new ByteArrayInputStream(doc))`new TrecContentSource());" is 129.,242
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Complex Conditional,The conditional expression c < 32 && c != 9 && c != 10 && c != 13 is complex.,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Complex Method,Cyclomatic complexity of the method is 20,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getTextFromPDF new PDDocument isEncrypted=" + pdDoc.isEncrypted() + " getNumberOfPages="+ pdDoc.getNumberOfPages());" is 159.,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getTextFromPDF new PDFTextStripper getStartPage=" + stripper.getStartPage() + " getEndPage="+ stripper.getEndPage());" is 160.,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Magic Number,The method contains a magic number: 32,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Magic Number,The method contains a magic number: 9,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Magic Number,The method contains a magic number: 10,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,TransformerToText,getTextFromPDF,Magic Number,The method contains a magic number: 13,268
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,UpdateListener,init,Long Statement,The length of the statement "String warningMessage="Updater properties were not loaded so no " + "update listeners were created. Update messages will " + "not be received or processed.";" is 157.,58
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,UpdateListener,init,Long Statement,The length of the statement "String errorMessage="Messaging exception encountered " + "attempting to start messaging client with id " + clientId + ". Error message was: "+ me.getMessage();" is 159.,58
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,UpdateListener,destroy,Long Statement,The length of the statement "logger.warn("Messaging exception encountered stopping the " + "messaging client: " + me.getMessage() + ". This "+ "error is expected and can be ignored if the message "+ "broker was shut down prior to the UpdateListener.");" is 223.,115
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,gfindObjects,Long Parameter List,The method has 7 parameters. ,24
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,gfindObjects,Long Parameter List,The method has 8 parameters. ,37
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("gfindObjects" + " query=" + query + " hitPageStart="+ hitPageStart+ " hitPageSize="+ hitPageSize+ " indexName="+ indexName+ " resultPageXslt="+ resultPageXslt);" is 201.,37
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,gfindObjects,Long Statement,The length of the statement "String result=ops.gfindObjects(query`hitPageStart`hitPageSize`snippetsMax`fieldMaxLength`indexName`sortFields`resultPageXslt);" is 126.,37
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("gfindObjects" + " query=" + query + " hitPageStart="+ hitPageStart+ " hitPageSize="+ hitPageSize+ " indexName="+ indexName+ " resultPageXslt="+ resultPageXslt+ " timeusedms="+ timeusedms);" is 229.,37
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,browseIndex,Long Parameter List,The method has 5 parameters. ,69
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,browseIndex,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("browseIndex" + " startTerm=" + startTerm + " termPageSize="+ termPageSize+ " fieldName="+ fieldName+ " indexName="+ indexName+ " resultPageXslt="+ resultPageXslt);" is 204.,69
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,browseIndex,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("browseIndex" + " startTerm=" + startTerm + " termPageSize="+ termPageSize+ " fieldName="+ fieldName+ " indexName="+ indexName+ " resultPageXslt="+ resultPageXslt+ " timeusedms="+ timeusedms);" is 232.,69
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,getRepositoryInfo,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getRepositoryInfo" + " repositoryName=" + repositoryName + " resultPageXslt="+ resultPageXslt);" is 136.,98
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,getRepositoryInfo,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getRepositoryInfo" + " repositoryName=" + repositoryName + " resultPageXslt="+ resultPageXslt+ " timeusedms="+ timeusedms);" is 164.,98
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,getIndexInfo,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getIndexInfo" + " indexName=" + indexName + " resultPageXslt="+ resultPageXslt);" is 121.,119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,getIndexInfo,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getIndexInfo" + " indexName=" + indexName + " resultPageXslt="+ resultPageXslt+ " timeusedms="+ timeusedms);" is 149.,119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,updateIndex,Long Parameter List,The method has 6 parameters. ,139
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,updateIndex,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("updateIndex" + " action=" + action + " value="+ value+ " repositoryName="+ repositoryName+ " indexName="+ indexName+ " indexDocXslt="+ indexDocXslt+ " resultPageXslt="+ resultPageXslt);" is 226.,139
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SOAPImpl,updateIndex,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("updateIndex" + " action=" + action + " value="+ value+ " repositoryName="+ repositoryName+ " indexName="+ indexName+ " indexDocXslt="+ indexDocXslt+ " resultPageXslt="+ resultPageXslt+ " timeusedms="+ timeusedms);" is 254.,139
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFedoraClient,Long Parameter List,The method has 6 parameters. ,95
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFedoraClient,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getFedoraClient repositoryName=" + repositoryName + " fedoraSoap="+ fedoraSoap+ " fedoraUser="+ fedoraUser+ " fedoraPass="+ fedoraPass);" is 179.,95
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getBaseURL,Long Statement,The length of the statement "throw new Exception("Unable to determine baseURL from fedoraSoap" + " value (expected it to end with '" + end + "'): "+ fedoraSoap);" is 132.,129
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getAPIA,Long Parameter List,The method has 6 parameters. ,143
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getAPIM,Long Parameter List,The method has 6 parameters. ,160
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Long Parameter List,The method has 8 parameters. ,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("gfindObjects" + " query=" + query + " hitPageStart="+ hitPageStart+ " hitPageSize="+ hitPageSize+ " snippetsMax="+ snippetsMax+ " fieldMaxLength="+ fieldMaxLength+ " indexName="+ indexName+ " sortFields="+ sortFields+ " resultPageXslt="+ resultPageXslt);" is 297.,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 18,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 2,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 3,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 4,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 5,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 6,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 7,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 8,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 9,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 10,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 11,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 12,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 13,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 14,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 15,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 16,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 17,199
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,handleEmbeddedQueries,Complex Method,Cyclomatic complexity of the method is 8,245
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,handleEmbeddedQueries,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("handleEmbeddedQueries beginIndex=" + beginIndex + " endIndex="+ endIndex+ " newQuery=\n"+ newQuery);" is 143.,245
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,handleEmbeddedQueries,Long Statement,The length of the statement "throw new GenericSearchException("handleEmbeddedQueries: No end for embedType=" + embeddedEmbedType + " found."+ " newQuery=\n"+ newQuery);" is 139.,245
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,handleEmbeddedQueries,Long Statement,The length of the statement "newQuery=newQuery.substring(0`beginIndex) + newQueryPart + newQuery.substring(endIndex + (endBeginString + embeddedEmbedType + endString).length());" is 148.,245
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,handleEmbeddedQueries,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("handleEmbeddedQueries embeddedEmbedType=" + embeddedEmbedType + " beginIndex="+ beginIndex+ " endIndex="+ endIndex+ " newQuery=\n"+ newQuery);" is 185.,245
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Complex Method,Cyclomatic complexity of the method is 19,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Long Method,The method has 128 lines of code.,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("processEmbeddedQuery embedType=" + embedType + " embeddedQuery="+ embeddedQuery);" is 124.,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("processEmbeddedQuery embeddedRepositoryName=" + embeddedRepositoryName + " embeddedIndexName="+ embeddedIndexName+ " embeddedXsltName="+ embeddedXsltName);" is 198.,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Long Statement,The length of the statement "throw new GenericSearchException("processEmbeddedQuery SOLR embeddedIndexName=" + embeddedIndexName + " hasnoSolrserver exception=\n"+ e.toString());" is 149.,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Long Statement,The length of the statement "throw new GenericSearchException("processEmbeddedQuery SOLR embeddedIndexName=" + embeddedIndexName + " hasnoSolrserver baseUrl=null");" is 135.,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Long Statement,The length of the statement "StringBuffer resultXml=(new GTransformer()).transform(xsltPath`new StreamSource(content)`config.getURIResolver(embeddedIndexName)`params);" is 138.,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 12,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 2,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 3,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 4,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 5,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 6,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 7,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 8,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 9,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 10,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,processEmbeddedQuery,Magic Number,The method contains a magic number: 11,293
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Long Parameter List,The method has 5 parameters. ,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("browseIndex" + " startTerm=" + startTerm + " termPageSize="+ termPageSize+ " fieldName="+ fieldName+ " indexName="+ indexName+ " resultPageXslt="+ resultPageXslt);" is 206.,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 12,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 2,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 3,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 4,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 5,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 6,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 7,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 8,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,browseIndex,Magic Number,The method contains a magic number: 9,456
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getRepositoryInfo,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getRepositoryInfo" + " repositoryName=" + repositoryName + " resultPageXslt="+ resultPageXslt);" is 138.,485
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getRepositoryInfo,Long Statement,The length of the statement "String repositoryInfoPath="/" + config.getConfigName() + "/repository/"+ config.getRepositoryName(repositoryName)+ "/repositoryInfo.xml";" is 137.,485
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getRepositoryInfo,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/repository/" + config.getRepositoryName(repositoryName)+ "/"+ config.getRepositoryInfoResultXslt(repositoryName`resultPageXslt);" is 171.,485
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getIndexInfo,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getIndexInfo" + " indexName=" + indexName + " resultPageXslt="+ resultPageXslt);" is 123.,512
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,updateIndex,Long Parameter List,The method has 6 parameters. ,522
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,updateIndex,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("updateIndex" + " action=" + action + " value="+ value+ " repositoryName="+ repositoryNameParam+ " indexNames="+ indexNames+ " indexDocXslt="+ indexDocXslt+ " resultPageXslt="+ resultPageXslt);" is 235.,522
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,updateIndex,Long Statement,The length of the statement "if (repositoryNameParam == null || repositoryNameParam.equals("")) repositoryName=config.getRepositoryName(repositoryName);" is 123.,522
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFoxmlFromPid,Long Statement,The length of the statement "FedoraAPIM apim=getAPIM(repositoryName`config.getFedoraSoap(repositoryName)`config.getFedoraUser(repositoryName)`config.getFedoraPass(repositoryName)`config.getTrustStorePath(repositoryName)`config.getTrustStorePass(repositoryName));" is 233.,564
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamText,Long Statement,The length of the statement "return getDatastreamText(pid`repositoryName`dsId`config.getFedoraSoap(repositoryName)`config.getFedoraUser(repositoryName)`config.getFedoraPass(repositoryName)`config.getTrustStorePath(repositoryName)`config.getTrustStorePass(repositoryName));" is 243.,593
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamText,Complex Method,Cyclomatic complexity of the method is 10,606
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamText,Long Parameter List,The method has 8 parameters. ,606
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamText,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getDatastreamText" + " pid=" + pid + " repositoryName="+ repositoryName+ " dsId="+ dsId+ " fedoraSoap="+ fedoraSoap+ " fedoraUser="+ fedoraUser+ " fedoraPass="+ fedoraPass+ " trustStorePath="+ trustStorePath+ " trustStorePass="+ trustStorePass);" is 286.,606
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamText,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDatastreamText" + " pid=" + pid + " dsId="+ dsId+ " TransformerToText="+ transformerToText);" is 138.,606
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamText,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDatastreamText" + " pid=" + pid + " dsId="+ dsId+ " TransformerToText="+ transformerToText+ " Exception="+ e);" is 156.,606
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamText,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDatastreamText" + " pid=" + pid + " dsId="+ dsId+ " mimetype="+ mimetype+ " dsBuffer="+ getDebugString(dsBuffer.toString()));" is 171.,606
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFirstDatastreamText,Long Statement,The length of the statement "return getFirstDatastreamText(pid`repositoryName`dsMimetypes`config.getFedoraSoap(repositoryName)`config.getFedoraUser(repositoryName)`config.getFedoraPass(repositoryName)`config.getTrustStorePath(repositoryName)`config.getTrustStorePass(repositoryName));" is 255.,689
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFirstDatastreamText,Complex Method,Cyclomatic complexity of the method is 9,702
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFirstDatastreamText,Long Parameter List,The method has 8 parameters. ,702
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFirstDatastreamText,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getFirstDatastreamText" + " pid=" + pid + " dsMimetypes="+ dsMimetypes+ " fedoraSoap="+ fedoraSoap+ " fedoraUser="+ fedoraUser+ " fedoraPass="+ fedoraPass+ " trustStorePath="+ trustStorePath+ " trustStorePass="+ trustStorePass);" is 269.,702
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFirstDatastreamText,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getFirstDatastreamText" + " pid=" + pid + " dsID="+ dsID+ " mimetype="+ mimetype+ " dsBuffer="+ dsBuffer.toString());" is 160.,702
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getFirstDatastreamText,Magic Number,The method contains a magic number: 99999,702
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDisseminationText,Long Parameter List,The method has 6 parameters. ,781
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDisseminationText,Long Statement,The length of the statement "return getDisseminationText(pid`repositoryName`bDefPid`methodName`parameters`asOfDateTime`config.getFedoraSoap(repositoryName)`config.getFedoraUser(repositoryName)`config.getFedoraPass(repositoryName)`config.getTrustStorePath(repositoryName)`config.getTrustStorePass(repositoryName));" is 284.,781
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDisseminationText,Complex Method,Cyclomatic complexity of the method is 9,797
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDisseminationText,Long Parameter List,The method has 11 parameters. ,797
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDisseminationText,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getDisseminationText" + " pid=" + pid + " bDefPid="+ bDefPid+ " methodName="+ methodName+ " parameters="+ parameters+ " asOfDateTime="+ asOfDateTime+ " fedoraSoap="+ fedoraSoap+ " fedoraUser="+ fedoraUser+ " fedoraPass="+ fedoraPass+ " trustStorePath="+ trustStorePath+ " trustStorePass="+ trustStorePass);" is 347.,797
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDisseminationText,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDisseminationText" + " pid=" + pid + " bDefPid="+ bDefPid+ " mimetype="+ mimetype+ " dsBuffer="+ dsBuffer.toString());" is 164.,797
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamTextFromTika,Long Parameter List,The method has 10 parameters. ,870
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamTextFromTika,Long Statement,The length of the statement "return getDatastreamFromTika(pid`repositoryName`dsId`indexFieldTagName`textIndexField`null`null`fedoraSoap`fedoraUser`fedoraPass`trustStorePath`trustStorePass);" is 160.,870
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamMetadataFromTika,Long Parameter List,The method has 11 parameters. ,884
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamMetadataFromTika,Long Statement,The length of the statement "return getDatastreamFromTika(pid`repositoryName`dsId`indexFieldTagName`null`indexFieldNamePrefix`selectedFields`fedoraSoap`fedoraUser`fedoraPass`trustStorePath`trustStorePass);" is 176.,884
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Complex Method,Cyclomatic complexity of the method is 11,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Long Parameter List,The method has 12 parameters. ,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getDatastreamFromTika" + " pid=" + pid + " repositoryName="+ repositoryName+ " dsId="+ dsId+ " indexFieldTagName="+ indexFieldTagName+ " textIndexField="+ textIndexField+ " indexFieldNamePrefix="+ indexFieldNamePrefix+ " selectedFields="+ selectedFields+ " fedoraSoap="+ fedoraSoap+ " fedoraUser="+ fedoraUser+ " fedoraPass="+ fedoraPass+ " trustStorePath="+ trustStorePath+ " trustStorePass="+ trustStorePass);" is 452.,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDatastreamFromTika" + " pid=" + pid + " dsId="+ dsId+ " mimetype="+ mimetype);" is 124.,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDatastreamFromTika" + " pid=" + pid + " dsId="+ dsId+ " writeLimit="+ writeLimit+ " TransformerToText="+ transformerToText);" is 170.,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Long Statement,The length of the statement "dsBuffer=transformerToText.getFromTika(repositoryName + "/" + pid+ "/"+ dsId`ds`indexFieldTagName`textIndexField`indexFieldNamePrefix`selectedFields`writeLimit);" is 161.,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDatastreamFromTika" + " pid=" + pid + " dsId="+ dsId+ " TransformerToText="+ transformerToText+ " Exception="+ e);" is 160.,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getDatastreamFromTika" + " pid=" + pid + " dsId="+ dsId+ " mimetype="+ mimetype+ " dsBuffer="+ getDebugString(dsBuffer.toString()));" is 175.,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamFromTika,Magic Number,The method contains a magic number: 100000,899
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,emptyIndexField,Long Parameter List,The method has 5 parameters. ,998
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,emptyIndexField,Long Statement,The length of the statement "logger.warn("exception and empty index field from " + methodName + " pid="+ pid+ " dsId="+ dsId+ " mimetype="+ mimetype+ " exception="+ e.toString());" is 150.,998
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamXML,Long Parameter List,The method has 8 parameters. ,1030
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,getDatastreamXML,Long Statement,The length of the statement "if (logger.isInfoEnabled()) logger.info("getDatastreamXML" + " pid=" + pid + " repositoryName="+ repositoryName+ " dsId="+ dsId+ " fedoraSoap="+ fedoraSoap+ " fedoraUser="+ fedoraUser+ " fedoraPass="+ fedoraPass+ " trustStorePath="+ trustStorePath+ " trustStorePass="+ trustStorePass);" is 285.,1030
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,GenericOperationsImpl,encode,Complex Method,Cyclomatic complexity of the method is 8,1145
+fcrepo3_gsearch,dk.defxws.fedoragsearch.server,SearchResultFiltering,rewriteQueryForInsearch,Long Parameter List,The method has 5 parameters. ,26
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingImpl,updateIndex,Long Parameter List,The method has 6 parameters. ,11
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingImpl,browseIndex,Long Parameter List,The method has 5 parameters. ,15
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingImpl,gfindObjects,Long Parameter List,The method has 7 parameters. ,19
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingImpl,gfindObjects,Long Parameter List,The method has 8 parameters. ,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,Operations,updateIndex,Long Parameter List,The method has 6 parameters. ,11
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,Operations,browseIndex,Long Parameter List,The method has 5 parameters. ,12
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,Operations,gfindObjects,Long Parameter List,The method has 8 parameters. ,14
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,updateIndex,Long Parameter List,The method has 6 parameters. ,32
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,updateIndex,Long Statement,The length of the statement "doOp(restUrl + "?operation=updateIndex" + "&action="+ action+ "&value="+ value+ "&repositoryName="+ repositoryName+ "&indexName="+ indexName+ "&indexDocXslt="+ indexDocXslt+ "&restXslt=copyXml");" is 195.,32
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,browseIndex,Long Parameter List,The method has 6 parameters. ,49
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,browseIndex,Long Statement,The length of the statement "doOp(restUrl + "?operation=browseIndex" + "&startTerm="+ URLEncoder.encode(startTerm`"UTF-8")+ "&fieldName="+ fieldName+ "&indexName="+ indexName+ "&termPageSize="+ termPageSize+ "&restXslt=copyXml"+ "&resultPageXslt="+ resultPageXslt);" is 236.,49
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,gfindObjects,Long Parameter List,The method has 9 parameters. ,70
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,gfindObjects,Long Statement,The length of the statement "doOp(restUrl + "?operation=gfindObjects" + "&query="+ URLEncoder.encode(query`"UTF-8")+ "&indexName="+ indexName+ "&hitPageStart="+ hitPageStart+ "&hitPageSize="+ hitPageSize+ "&snippetsMax="+ snippetsMax+ "&fieldMaxLength="+ fieldMaxLength+ "&sortFields="+ sortFields+ "&restXslt=copyXml"+ "&resultPageXslt="+ resultPageXslt);" is 327.,70
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,getRepositoryInfo,Long Statement,The length of the statement "doOp(restUrl + "?operation=getRepositoryInfo" + "&repositoryName="+ repositoryName+ "&restXslt=copyXml"+ "&resultPageXslt="+ resultPageXslt);" is 141.,97
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,getIndexInfo,Long Statement,The length of the statement "doOp(restUrl + "?operation=getIndexInfo" + "&indexName="+ indexName+ "&restXslt=copyXml"+ "&resultPageXslt="+ resultPageXslt);" is 126.,108
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,configure,Long Statement,The length of the statement "doOp(restUrl + "?operation=configure" + "&configName="+ configName+ "&propertyName="+ propertyName+ "&propertyValue="+ propertyValue);" is 134.,119
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,doOp,Long Statement,The length of the statement "conn.setRequestProperty("Authorization"`"Basic " + (new BASE64Encoder()).encode((System.getProperty("fedoragsearch.fgsUserName") + ":" + System.getProperty("fedoragsearch.fgsPassword")).getBytes()));" is 199.,136
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Complex Method,Cyclomatic complexity of the method is 38,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Empty catch clause,The method has an empty catch block.,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Empty catch clause,The method has an empty catch block.,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Empty catch clause,The method has an empty catch block.,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Empty catch clause,The method has an empty catch block.,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Empty catch clause,The method has an empty catch block.,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Long Method,The method has 132 lines of code.,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Long Statement,The length of the statement "client.gfindObjects(restUrl`query`indexName`hitPageStart`hitPageSize`snippetsMax`fieldMaxLength`sortFields`resultPageXslt);" is 123.,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 5,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 5,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 6,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 6,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 20,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 5,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 5,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 6,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 6,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 5,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 5,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 6,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 6,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 50,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 7,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 7,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 8,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 8,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 9,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 9,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 2,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 3,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,main,Magic Number,The method contains a magic number: 4,173
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,usage,Long Statement,The length of the statement "System.out.println("host:port gfindObjects query [indexName [hitPageStart [hitPageSize [snippetsMax [fieldMaxLength [sortFields [resultPageXslt]]]]]]]");" is 153.,326
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,RESTClient,usage,Long Statement,The length of the statement "System.out.println("host:port may be [protocol://]host:port[/webappname/restname]` default is http://host:port/fedoragsearch/rest");" is 132.,326
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,OperationsServiceLocator,getFgsOperations,Long Statement,The length of the statement "dk.defxws.fedoragsearch.client.FgsOperationsSoapBindingStub _stub=new dk.defxws.fedoragsearch.client.FgsOperationsSoapBindingStub(portAddress`this);" is 148.,57
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,OperationsServiceLocator,getPort,Long Statement,The length of the statement "dk.defxws.fedoragsearch.client.FgsOperationsSoapBindingStub _stub=new dk.defxws.fedoragsearch.client.FgsOperationsSoapBindingStub(new java.net.URL(FgsOperations_address)`this);" is 176.,72
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,OperationsServiceLocator,getPort,Long Statement,The length of the statement "throw new javax.xml.rpc.ServiceException("There is no stub implementation for the interface: " + (serviceEndpointInterface == null ? "null" : serviceEndpointInterface.getName()));" is 179.,72
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,updateIndex,Long Parameter List,The method has 5 parameters. ,33
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,browseIndex,Long Parameter List,The method has 6 parameters. ,56
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,gfindObjects,Long Parameter List,The method has 9 parameters. ,80
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Complex Method,Cyclomatic complexity of the method is 32,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Empty catch clause,The method has an empty catch block.,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Empty catch clause,The method has an empty catch block.,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Empty catch clause,The method has an empty catch block.,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Empty catch clause,The method has an empty catch block.,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Empty catch clause,The method has an empty catch block.,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Long Method,The method has 116 lines of code.,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Long Statement,The length of the statement "String result=client.gfindObjects(restUrl`query`indexName`hitPageStart`hitPageSize`snippetsMax`fieldMaxLength`sortFields`resultPageXslt);" is 137.,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 4,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 4,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 4,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 5,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 5,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 4,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 4,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 20,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 5,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 5,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 6,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 6,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 4,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 4,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 5,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 5,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 6,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 6,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 50,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 7,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 7,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 8,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 8,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 9,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 9,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 2,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,main,Magic Number,The method contains a magic number: 3,149
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,usage,Long Statement,The length of the statement "System.out.println("host:port gfindObjects query [indexName [hitPageStart [hitPageSize [snippetsMax [fieldMaxLength [sortFields [resultPageXslt]]]]]]]");" is 153.,282
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,SOAPClient,usage,Long Statement,The length of the statement "System.out.println("host:port may be host:port/webappname/servicesname/operationsname` default is '/fedoragsearch/services/FgsOperations'");" is 140.,282
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"action")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/"`"string")`java.lang.String.class`false`false);" is 260.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"value")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/"`"string")`java.lang.String.class`false`false);" is 259.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"repositoryName")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/"`"string")`java.lang.String.class`false`false);" is 268.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"indexName")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/"`"string")`java.lang.String.class`false`false);" is 263.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"indexDocXslt")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/"`"string")`java.lang.String.class`false`false);" is 266.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"resultPageXslt")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://schemas.xmlsoap.org/soap/encoding/"`"string")`java.lang.String.class`false`false);" is 268.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"startTerm")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 254.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"termPageSize")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"int")`int.class`false`false);" is 241.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"fieldName")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 254.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"indexName")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 254.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"resultPageXslt")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 259.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"query")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 250.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"hitPageStart")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"int")`int.class`false`false);" is 241.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"hitPageSize")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"int")`int.class`false`false);" is 240.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"snippetsMax")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"int")`int.class`false`false);" is 240.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"fieldMaxLength")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"int")`int.class`false`false);" is 243.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"indexName")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 254.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"sortFields")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 255.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"resultPageXslt")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 259.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"repositoryName")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 259.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"resultPageXslt")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 259.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"indexName")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 254.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Long Statement,The length of the statement "param=new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName(""`"resultPageXslt")`org.apache.axis.description.ParameterDesc.IN`new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema"`"string")`java.lang.String.class`false`false);" is 259.,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Magic Number,The method contains a magic number: 2,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Magic Number,The method contains a magic number: 3,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,_initOperationDesc1,Magic Number,The method contains a magic number: 4,23
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,createCall,Complex Method,Cyclomatic complexity of the method is 8,137
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,updateIndex,Long Parameter List,The method has 6 parameters. ,170
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,updateIndex,Long Statement,The length of the statement "java.lang.Object _resp=_call.invoke(new java.lang.Object[]{action`value`repositoryName`indexName`indexDocXslt`resultPageXslt});" is 127.,170
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,browseIndex,Long Parameter List,The method has 5 parameters. ,201
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,browseIndex,Long Statement,The length of the statement "java.lang.Object _resp=_call.invoke(new java.lang.Object[]{startTerm`new java.lang.Integer(termPageSize)`fieldName`indexName`resultPageXslt});" is 142.,201
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,gfindObjects,Long Parameter List,The method has 7 parameters. ,232
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,gfindObjects,Long Parameter List,The method has 8 parameters. ,236
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,gfindObjects,Long Statement,The length of the statement "java.lang.Object _resp=_call.invoke(new java.lang.Object[]{query`new java.lang.Integer(hitPageStart)`new java.lang.Integer(hitPageSize)`new java.lang.Integer(snippetsMax)`new java.lang.Integer(fieldMaxLength)`indexName`sortFields`resultPageXslt});" is 247.,236
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,gfindObjects,Magic Number,The method contains a magic number: 2,236
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,getRepositoryInfo,Magic Number,The method contains a magic number: 3,267
+fcrepo3_gsearch,dk.defxws.fedoragsearch.client,FgsOperationsSoapBindingStub,getIndexInfo,Magic Number,The method contains a magic number: 4,298
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1019,TestConfigOnLuceneFgs24_1019,testFindXML_SOURCEs,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=dsmd_XML_SOURCE.Content-Type:\"application/xml\"&restXslt=copyXml");" is 124.,48
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1019,TestConfigOnLuceneFgs24_1019,testFindHasModels,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=RELS-EXT.hasModel:\"info:fedora/demo:DualResImage\"&restXslt=copyXml");" is 127.,60
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1019,TestConfigOnLuceneFgs24_1019,testFindIsMemberOfs,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=RELS-EXT.isMemberOf:\"info:fedora/demo:SmileyStuff\"&restXslt=copyXml");" is 128.,66
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1019,TestConfigOnLuceneFgs24_1019,testFindHasCoMembers,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=RELS-EXT.hasCoMember:\"info:fedora/demo:SmileyStuff/info:fedora/demo:SmileyBeerGlass\"&restXslt=copyXml");" is 162.,72
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1010,TestConfigOnLuceneFgs24_1010,testTikaExtractionLuceneIngest,Magic Number,The method contains a magic number: 5000,66
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1010,TestConfigOnLuceneFgs24_1010,testTikaExtractionLuceneIngest7,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs24_1010&propertyName=fedoragsearch.writeLimit&propertyValue=100&restXslt=copyXml");" is 162.,111
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1010,TestConfigOnLuceneFgs24_1010,testTikaExtractionLuceneIngest10,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs24_1010&propertyName=fedoragsearch.writeLimit&propertyValue=-1&restXslt=copyXml");" is 161.,129
+fcrepo3_gsearch,gsearch.test.lucene.fgs24_1010,TestConfigOnLuceneFgs24_1010,testTikaExtractionLuceneAfter,Magic Number,The method contains a magic number: 5000,147
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetOperationsImplToSolr,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.operationsImpl&propertyValue=dk.defxws.fgssolr.OperationsImpl&restXslt=copyXml");" is 194.,40
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetUriResolverForSolr,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.uriResolver&propertyValue=dk.defxws.fedoragsearch.server.URIResolverImpl&restXslt=copyXml");" is 205.,46
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetOperationsImplToLucene,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.operationsImpl&propertyValue=dk.defxws.fgslucene.OperationsImpl&restXslt=copyXml");" is 196.,52
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetUriResolverForLucene,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.uriResolver&propertyValue=dk.defxws.fedoragsearch.server.URIResolverImpl&restXslt=copyXml");" is 205.,58
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetOperationsImplToNotvalid,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.operationsImpl&propertyValue=dk.defxws.fgsnotvalid.OperationsImpl&restXslt=copyXml");" is 198.,64
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetUriResolverToNotvalid,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.uriResolver&propertyValue=dk.defxws.fedoragsearch.server.URIResolverImplNotvalid&restXslt=copyXml");" is 213.,70
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetUriResolverToNone,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.uriResolver&propertyValue=&restXslt=copyXml");" is 159.,76
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetAllowLeadingWildcard,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.allowLeadingWildcard&propertyValue=true&restXslt=copyXml");" is 172.,88
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetAllowLeadingWildcardNotvalid,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=FgsIndex/fgsindex.allowLeadingWildcard&propertyValue=notvalid&restXslt=copyXml");" is 176.,100
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetXsltProcessorToSaxon,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=fedoragsearch.xsltProcessor&propertyValue=saxon&restXslt=copyXml");" is 162.,106
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetXsltProcessorToXalan,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=fedoragsearch.xsltProcessor&propertyValue=xalan&restXslt=copyXml");" is 162.,112
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testSetXsltProcessorToNotvalid,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs23&propertyName=fedoragsearch.xsltProcessor&propertyValue=notvalid&restXslt=copyXml");" is 165.,118
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testManagedXmlDatastreamIngest,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=testMapplXml.meta.title:gsearch+and+testMapplXmlexts.meta.title:gsearch&restXslt=copyXml");" is 147.,130
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testManagedXmlDatastreamIngest,Magic Number,The method contains a magic number: 5000,130
+fcrepo3_gsearch,gsearch.test.fgs23,TestConfigFgs23,testManagedXmlDatastreamAfter,Magic Number,The method contains a magic number: 5000,144
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doOp,Long Statement,The length of the statement "StringBuffer result=new StringBuffer("<resultPage><error><message>System property fedoragsearch.clientType must be 'REST' or 'SOAP'</error></message></resultPage>");" is 165.,25
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doRESTOp,Long Statement,The length of the statement "if (p < 0) restUrl=System.getProperty("fedoragsearch.protocol") + "://" + System.getProperty("fedoragsearch.hostport")+ "/"+ System.getProperty("fedoragsearch.path")+ restUrl;" is 175.,36
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doRESTOp,Long Statement,The length of the statement "conn.setRequestProperty("Authorization"`"Basic " + (new BASE64Encoder()).encode((System.getProperty("fedoragsearch.fgsUserName") + ":" + System.getProperty("fedoragsearch.fgsPassword")).getBytes()));" is 199.,36
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Long Statement,The length of the statement "String restUrl=System.getProperty("fedoragsearch.protocol") + "://" + System.getProperty("fedoragsearch.hostport")+ "/fedoragsearch/services/FgsOperations";" is 156.,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Long Statement,The length of the statement "result=new StringBuffer(client.getRepositoryInfo(restUrl`getParamValue(params`"repositoryName")`getParamValue(params`"resultPageXslt")));" is 137.,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Long Statement,The length of the statement "result=new StringBuffer(client.getIndexInfo(restUrl`getParamValue(params`"indexName")`getParamValue(params`"resultPageXslt")));" is 127.,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Long Statement,The length of the statement "result=new StringBuffer(client.browseIndex(restUrl`getParamValue(params`"startTerm")`getParamInt(params`"termPageSize"`20)`getParamValue(params`"fieldName")`getParamValue(params`"indexName")`getParamValue(params`"resultPageXslt")));" is 232.,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Long Statement,The length of the statement "result=new StringBuffer(client.gfindObjects(restUrl`URLDecoder.decode(getParamValue(params`"query")`"UTF-8")`getParamValue(params`"indexName")`getParamInt(params`"hitPageStart"`1)`getParamInt(params`"hitPageSize"`10)`getParamInt(params`"snippetsMax"`3)`getParamInt(params`"fieldMaxLength"`100)`getParamValue(params`"sortFields")`getParamValue(params`"resultPageXslt")));" is 370.,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Long Statement,The length of the statement "result=new StringBuffer(client.updateIndex(restUrl`getParamValue(params`"action")`getParamValue(params`"value")`getParamValue(params`"repositoryName")`getParamValue(params`"indexName")));" is 187.,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Magic Number,The method contains a magic number: 20,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Magic Number,The method contains a magic number: 10,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Magic Number,The method contains a magic number: 3,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,doSOAPOp,Magic Number,The method contains a magic number: 100,63
+fcrepo3_gsearch,gsearch.test,FgsTestCase,getParamInt,Empty catch clause,The method has an empty catch block.,160
+fcrepo3_gsearch,gsearch.test,FgsTestCase,delay,Empty catch clause,The method has an empty catch block.,172
+fcrepo3_gsearch,gsearch.test.fgs242_1083,TestFgs242_1083,testSetUriResolverImpl,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLuceneFgs242_1083&propertyName=FgsIndex/fgsindex.uriResolver&propertyValue=dk.defxws.fedoragsearch.server.URIResolverImpl&restXslt=copyXml");" is 211.,55
+fcrepo3_gsearch,gsearch.test.fgs242_1083,TestFgs242_1083,testIngest,Magic Number,The method contains a magic number: 5000,73
+fcrepo3_gsearch,gsearch.test.fgs242_1083,TestFgs242_1083,testIngest,Magic Number,The method contains a magic number: 2000,73
+fcrepo3_gsearch,gsearch.test.fgs242_1083,TestFgs242_1083,testPurge,Magic Number,The method contains a magic number: 5000,95
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetPresearch,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringType&propertyValue=presearch&restXslt=copyXml");" is 186.,63
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetSrfModule,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringModule&propertyValue=dk.defxws.fedoragsearch.server.SearchResultFilteringDemoImpl&restXslt=copyXml");" is 239.,69
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetInsearch,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringType&propertyValue=insearch&restXslt=copyXml");" is 185.,99
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetPostsearch,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringType&propertyValue=postsearch&restXslt=copyXml");" is 187.,135
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testPostsearchFedoraAdmin,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=image+OR+smiley&indexName=AllObjectsIndex&hitPageSize=100&restXslt=copyXml");" is 133.,143
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testPostsearchSmileyAdmin,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=image+OR+smiley&indexName=AllObjectsIndex&hitPageSize=100&restXslt=copyXml");" is 133.,151
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testPostsearchSmileyUser,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=image+OR+smiley&indexName=AllObjectsIndex&hitPageSize=100&restXslt=copyXml");" is 133.,159
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetUnknownType,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringType&propertyValue=unknowntype&restXslt=copyXml");" is 188.,181
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetNoType,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringType&propertyValue=&restXslt=copyXml");" is 177.,189
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetMoreTypes,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringType&propertyValue=presearch+insearch&restXslt=copyXml");" is 195.,195
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetUnknownSrfModule,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringModule&propertyValue=unknown.Module&restXslt=copyXml");" is 193.,201
+fcrepo3_gsearch,gsearch.test.searchresultfiltering,TestSearchResultFiltering,testSetNoSrfModule,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configDemoSearchResultFiltering&propertyName=fedoragsearch.searchResultFilteringModule&propertyValue=&restXslt=copyXml");" is 179.,207
+fcrepo3_gsearch,gsearch.test.fgs242_1076,TestFgs242_1076,testSetLowercaseExpandedTerms,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLucene&propertyName=FgsIndex/fgsindex.lowercaseExpandedTerms&propertyValue=false&restXslt=copyXml");" is 170.,58
+fcrepo3_gsearch,gsearch.test.fgs242_1076,TestFgs242_1076,testSetLowercaseExpandedTermsNotvalid,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=configure&configName=configTestOnLucene&propertyName=FgsIndex/fgsindex.lowercaseExpandedTerms&propertyValue=notvalid&restXslt=copyXml");" is 173.,70
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testGfindObjectsSortSTRING,Long Statement,The length of the statement "assertXpathEvaluatesTo("demo:29"`"/resultPage/gfindObjects/objects/object[1]/field[@name='PID']/text()"`result.toString());" is 123.,39
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testGfindObjectsSortSTRINGreverse,Long Statement,The length of the statement "assertXpathEvaluatesTo("demo:5"`"/resultPage/gfindObjects/objects/object[1]/field[@name='PID']/text()"`result.toString());" is 122.,45
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testManagedXmlDatastreamIngest,Magic Number,The method contains a magic number: 8000,125
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testManagedXmlDatastreamIngest,Magic Number,The method contains a magic number: 8000,125
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testManagedXmlDatastreamAfter,Magic Number,The method contains a magic number: 5000,141
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testManagedXmlDatastreamAfter,Magic Number,The method contains a magic number: 8000,141
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testUpdateIndexInsertPid,Magic Number,The method contains a magic number: 5000,165
+fcrepo3_gsearch,gsearch.test.solr,TestConfigDemoOnSolr,testUpdateIndexInsertPid,Magic Number,The method contains a magic number: 5000,165
+fcrepo3_gsearch,gsearch.test.solr.fgs24_1010,TestConfigOnSolrFgs24_1010,testTikaExtractionSolrBefore,Magic Number,The method contains a magic number: 8000,38
+fcrepo3_gsearch,gsearch.test.solr.fgs24_1010,TestConfigOnSolrFgs24_1010,testTikaExtractionSolrIngest,Magic Number,The method contains a magic number: 8000,58
+fcrepo3_gsearch,gsearch.test.solr.fgs24_1010,TestConfigOnSolrFgs24_1010,testTikaExtractionSolrIngest,Magic Number,The method contains a magic number: 8000,58
+fcrepo3_gsearch,gsearch.test.solr.fgs24_1010,TestConfigOnSolrFgs24_1010,testTikaExtractionSolrAfter,Magic Number,The method contains a magic number: 8000,86
+fcrepo3_gsearch,gsearch.test.solr.fgs24_1010,TestConfigOnSolrFgs24_1010,testTikaExtractionSolrAfter,Magic Number,The method contains a magic number: 8000,86
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestSortFields,testGfindObjectsSortSTRING,Long Statement,The length of the statement "assertXpathEvaluatesTo("demo:29"`"/resultPage/gfindObjects/objects/object[1]/field[@name='PID']/text()"`result.toString());" is 123.,36
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestSortFields,testGfindObjectsSortSTRINGreverse,Long Statement,The length of the statement "assertXpathEvaluatesTo("demo:5"`"/resultPage/gfindObjects/objects/object[1]/field[@name='PID']/text()"`result.toString());" is 122.,42
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testUpdateIndexInsertPid,Magic Number,The method contains a magic number: 5000,44
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testUpdateIndexInsertPid,Magic Number,The method contains a magic number: 5000,44
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testUpdateIndexFromPidWithParamBefore,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=EXPLICITPARAM1:explicitvalue1+and+EXPLICITPARAM2:explicitvalue2&restXslt=copyXml");" is 139.,59
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testUpdateIndexFromPidWithParam,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=updateIndex&action=fromPid&value=demo:14&indexDocXslt=testFoxmlToLuceneWithExplicitParams(EXPLICITPARAM1=explicitvalue1`EXPLICITPARAM2=explicitvalue2)&restXslt=copyXml");" is 207.,65
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testUpdateIndexFromPidWithParamAfter,Long Statement,The length of the statement "StringBuffer result=doOp("?operation=gfindObjects&query=EXPLICITPARAM1:explicitvalue1+and+EXPLICITPARAM2:explicitvalue2&restXslt=copyXml");" is 139.,71
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testFedoraObjectLabelModifyAndAfter,Magic Number,The method contains a magic number: 5000,83
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testFedoraObjectStateModifyBefore,Magic Number,The method contains a magic number: 5000,94
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testFedoraObjectStateDelete,Magic Number,The method contains a magic number: 10000,101
+fcrepo3_gsearch,gsearch.test.testsonlucene,TestUpdates,testFedoraObjectStateActivate,Magic Number,The method contains a magic number: 10000,111
+fcrepo3_gsearch,gsearch.test.solrremote,TestConfigDemoOnSolrRemote,testUpdateIndexDocCount3,Magic Number,The method contains a magic number: 5000,58
+fcrepo3_gsearch,gsearch.test.solrremote,TestConfigDemoOnSolrRemote,testUpdateIndexDocCount3,Magic Number,The method contains a magic number: 5000,58
+fcrepo3_gsearch,gsearch.test.solrremote,TestConfigDemoOnSolrRemote,testUpdateIndexInsertPid,Magic Number,The method contains a magic number: 5000,67
+fcrepo3_gsearch,gsearch.test.solrremote,TestConfigDemoOnSolrRemote,testUpdateIndexInsertPid,Magic Number,The method contains a magic number: 5000,67
+fcrepo3_gsearch,gsearch.test.solrremote,TestConfigDemoOnSolrRemote,testUpdateIndexDocCount4,Magic Number,The method contains a magic number: 5000,76
+fcrepo3_gsearch,gsearch.test.solrremote,TestConfigDemoOnSolrRemote,testUpdateIndexDocCount4,Magic Number,The method contains a magic number: 5000,76
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,gfindObjects,Long Parameter List,The method has 8 parameters. ,45
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,gfindObjects,Long Statement,The length of the statement "throw new GenericSearchException("gfindObjects: The operation is not available in the SolrRemote plugin` use Solr operations.");" is 128.,45
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,browseIndex,Long Parameter List,The method has 5 parameters. ,58
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,browseIndex,Long Statement,The length of the statement "throw new GenericSearchException("browseIndex: The operation is not available in the SolrRemote plugin` use Solr operations.");" is 127.,58
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,getIndexInfo,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getIndexInfoResultXslt(indexName`resultPageXslt);" is 146.,68
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Long Parameter List,The method has 6 parameters. ,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getUpdateIndexResultXslt(indexName`resultPageXslt);" is 148.,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 10,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 10,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 12,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 2,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 3,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 4,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 5,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 6,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 7,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 8,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 9,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 10,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 11,91
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocExists,Magic Number,The method contains a magic number: 10,210
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocExists,Magic Number,The method contains a magic number: 10,210
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,optimize,Long Statement,The length of the statement "throw new GenericSearchException("optimize: The operation is not available in the SolrRemote plugin` use Solr operations.");" is 124.,228
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,fromFoxmlFiles,Long Parameter List,The method has 5 parameters. ,235
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,fromFoxmlFiles,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("fromFoxmlFiles filePath=" + filePath + " repositoryName="+ repositoryName+ " indexName="+ indexName);" is 144.,235
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocs,Long Parameter List,The method has 5 parameters. ,251
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocs,Long Statement,The length of the statement "indexDoc(getPidFromObjectFilename(file.getName())`repositoryName`indexName`new FileInputStream(file)`resultXml`indexDocXslt);" is 125.,251
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,251
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,251
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,251
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,251
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDocs,Magic Number,The method contains a magic number: 100,251
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,fromPid,Long Parameter List,The method has 5 parameters. ,284
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Complex Method,Cyclomatic complexity of the method is 11,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Parameter List,The method has 6 parameters. ,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (endParams < beginParams) throw new GenericSearchException("Format error (no ending ')') in indexDocXslt=" + indexDocXslt + ": ");" is 133.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (param == null || param.length() < 1) throw new GenericSearchException("Format error (empty param) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 165.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (eq < 0) throw new GenericSearchException("Format error (no '=') in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 131.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (pname == null || pname.length() < 1) throw new GenericSearchException("Format error (no param name) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 167.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (pvalue == null || pvalue.length() < 1) throw new GenericSearchException("Format error (no param value) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 170.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "StringBuffer sb=(new GTransformer()).transform(xsltPath`new StreamSource(foxmlStream)`config.getURIResolver(indexName)`params);" is 127.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "logger.info("IndexDocument=" + pid + " insertTotal="+ insertTotal+ " updateTotal="+ updateTotal+ " deleteTotal="+ deleteTotal+ " emptyTotal="+ emptyTotal+ " warnCount="+ warnCount+ " docCount="+ docCount);" is 205.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Long Statement,The length of the statement "logger.warn("IndexDocument " + pid + " does not contain any IndexFields!!! RepositoryName="+ repositoryName+ " IndexName="+ indexName);" is 135.,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 12,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 12,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 10,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 11,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 3,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 4,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 5,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 6,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 7,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 8,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 9,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 10,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 11,296
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,sendToSolr,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("sendToSolr solrCommand=" + solrCommand + "\nPost parameters=\n"+ postParameters);" is 124.,375
+fcrepo3_gsearch,dk.defxws.fgssolrremote,OperationsImpl,sendToSolr,Magic Number,The method contains a magic number: 1024,375
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Complex Method,Cyclomatic complexity of the method is 19,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Long Method,The method has 127 lines of code.,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Long Parameter List,The method has 15 parameters. ,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("executeQuery" + " query=" + queryString + " startRecord="+ startRecord+ " maxResults="+ maxResults+ " snippetsMax="+ snippetsMax+ " fieldMaxLength="+ fieldMaxLength+ " indexName="+ indexName+ " sortFields="+ sortFields+ " defaultQueryFields="+ defaultQueryFields+ " allowLeadingWildcard="+ allowLeadingWildcard+ " lowercaseExpandedTerms="+ lowercaseExpandedTerms);" is 407.,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("executeQuery queryParser" + " allowLeadingWildcard=" + queryParser.getAllowLeadingWildcard() + " lowercaseExpandedTerms="+ queryParser.getLowercaseExpandedTerms());" is 207.,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("executeQuery mfqueryParser" + " allowLeadingWildcard=" + queryParser.getAllowLeadingWildcard() + " lowercaseExpandedTerms="+ queryParser.getLowercaseExpandedTerms());" is 209.,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Long Statement,The length of the statement "resultXml.append("<lucenesearch " + " xmlns:dc=\"http://purl.org/dc/elements/1.1/" + "\" query=\"" + queryStringEncoded + "\" indexName=\""+ indexName+ "\" sortFields=\""+ sortFields+ "\" hitPageStart=\""+ startRecord+ "\" hitPageSize=\""+ maxResults+ "\" hitTotal=\""+ hits.totalHits+ "\">");" is 293.,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Magic Number,The method contains a magic number: 8,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,executeQuery,Magic Number,The method contains a magic number: 500,58
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,errorExit,Empty catch clause,The method has an empty catch block.,226
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Complex Method,Cyclomatic complexity of the method is 49,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Method,The method has 166 lines of code.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getHits" + " query=" + query + " numHits="+ numHits+ " sortFields="+ sortFields);" is 124.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (!stf.hasMoreTokens()) errorExit("getHits sortFields='" + sortFields + "' : empty sortFieldName string in '"+ sortFieldString+ "'");" is 135.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (sortFieldName.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty sortFieldName string in '"+ sortFieldString+ "'");" is 142.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (sortTypeOrLocaleOrCompString.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty sortType or locale or comparatorClass string in '"+ sortFieldString+ "'");" is 181.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (p < 3 || q < p + 1) errorExit("getHits sortFields='" + sortFields + "' : comparatorClass parameters malformed in '"+ compString+ "'.");" is 139.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "errorExit("getHits sortFields='" + sortFields + "' : comparatorClass '"+ compString+ "'"+ ": class not found:\n"+ e.toString());" is 128.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getHits sortFields='" + sortFields + "' : comparatorClass '"+ compString+ "'"+ ": constructor["+ j+ "]='"+ cj.toGenericString()+ "'");" is 177.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "errorExit("getHits sortFields='" + sortFields + "' : comparatorClass '"+ compString+ "'"+ ": no constructor applied:\n"+ errorMessage.toString());" is 146.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (reverseString.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty reverse string in '"+ sortFieldString+ "'");" is 136.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "else errorExit("getHits sortFields='" + sortFields + "' : unknown reverse string '"+ reverseString+ "' in '"+ sortFieldString+ "'");" is 132.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "else if (((sortTypeOrLocaleString.substring(0`1)).compareTo("A") >= 0) && ((sortTypeOrLocaleString.substring(0`1)).compareTo("Z") <= 0)) {" is 138.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "errorExit("getHits sortFields='" + sortFields + "' : unknown sortType string '"+ sortTypeOrLocaleString+ "' in '"+ sortFieldString+ "'");" is 137.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (stfl.countTokens() > 3) errorExit("getHits sortFields='" + sortFields + "' : unknown locale string '"+ sortTypeOrLocaleString+ "' in '"+ sortFieldString+ "'");" is 163.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (language.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty language string in '"+ sortFieldString+ "'");" is 132.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (language.length() > 2) errorExit("getHits sortFields='" + sortFields + "' : unknown language string '"+ language+ "' in '"+ sortFieldString+ "'");" is 150.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (country.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty country string in '"+ sortFieldString+ "'");" is 130.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (country.length() > 3) errorExit("getHits sortFields='" + sortFields + "' : unknown country string '"+ country+ "' in '"+ sortFieldString+ "'");" is 147.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (variant.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty variant string in '"+ sortFieldString+ "'");" is 130.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "if (reverseString.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty reverse string in '"+ sortFieldString+ "'");" is 136.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Long Statement,The length of the statement "else throw new GenericSearchException("getHits sortFields='" + sortFields + "' : unknown reverse string '"+ reverseString+ "' in '"+ sortFieldString+ "'");" is 155.,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Magic Number,The method contains a magic number: 3,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Magic Number,The method contains a magic number: 3,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Magic Number,The method contains a magic number: 2,243
+fcrepo3_gsearch,dk.defxws.fgslucene,Statement,getHits,Magic Number,The method contains a magic number: 3,243
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Complex Method,Cyclomatic complexity of the method is 9,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Long Parameter List,The method has 8 parameters. ,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("gfindObjects presearch" + " fgsUserName=" + fgsUserName + " usingIndexName="+ usingIndexName);" is 137.,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("gfindObjects insearch" + " fgsUserName=" + fgsUserName + " usingQuery="+ usingQuery);" is 128.,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Long Statement,The length of the statement "resultSet=(new Connection()).createStatement().executeQuery(searcher`usingQuery`hitPageStart`hitPageSize`snippetsMax`fieldMaxLength`getQueryAnalyzer(usingIndexName)`config.getDefaultQueryFields(usingIndexName)`config.getAllowLeadingWildcard(usingIndexName)`config.getLowercaseExpandedTerms(usingIndexName)`config.getIndexDir(usingIndexName)`usingIndexName`config.getSnippetBegin(usingIndexName)`config.getSnippetEnd(usingIndexName)`config.getSortFields(usingIndexName`sortFields));" is 481.,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Long Statement,The length of the statement "xsltPath=config.getConfigName() + "/index/" + usingIndexName+ "/"+ config.getGfindObjectsResultXslt(usingIndexName`resultPageXslt);" is 131.,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("gfindObjects postsearch" + " fgsUserName=" + fgsUserName + " resultXml=\n"+ resultXml);" is 130.,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 12,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 13,59
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,browseIndex,Complex Conditional,The conditional expression fields != null && fieldName != null && fieldName.length() > 0 is complex.,141
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,browseIndex,Long Parameter List,The method has 5 parameters. ,141
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,browseIndex,Long Statement,The length of the statement "resultXml.append("<term no=\"" + termNo + "\""+ " fieldtermhittotal=\""+ termsEnum.docFreq()+ "\">"+ encode(termString)+ "</term>");" is 132.,141
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,browseIndex,Long Statement,The length of the statement "resultXml.insert(0`"<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + "<lucenebrowseindex " + " xmlns:dc=\"http://purl.org/dc/elements/1.1/"+ "\" startTerm=\"" + encode(startTerm) + "\" termPageSize=\""+ termPageSize+ "\" fieldName=\""+ fieldName+ "\" indexName=\""+ indexName+ "\" termTotal=\""+ termNo+ "\">");" is 308.,141
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,browseIndex,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getBrowseIndexResultXslt(indexName`resultPageXslt);" is 148.,141
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,browseIndex,Magic Number,The method contains a magic number: 10,141
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,browseIndex,Magic Number,The method contains a magic number: 11,141
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getIndexInfo,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getIndexInfoResultXslt(indexName`resultPageXslt);" is 146.,230
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Long Parameter List,The method has 6 parameters. ,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Long Statement,The length of the statement "logger.info("updateIndex " + action + " indexName="+ indexName+ " indexDirSpace="+ indexDirSpace(new File(config.getIndexDir(indexName)))+ " docCount="+ docCount);" is 163.,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getUpdateIndexResultXslt(indexName`resultPageXslt);" is 148.,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 12,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 2,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 3,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 4,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 5,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 6,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 7,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 8,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 9,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 10,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 11,253
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,fromFoxmlFiles,Long Parameter List,The method has 5 parameters. ,382
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,fromFoxmlFiles,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("fromFoxmlFiles filePath=" + filePath + " repositoryName="+ repositoryName+ " indexName="+ indexName);" is 144.,382
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Long Parameter List,The method has 5 parameters. ,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Long Statement,The length of the statement "if (i % 100 == 0) logger.info("updateIndex fromFoxmlFiles " + file.getAbsolutePath() + " indexDirSpace="+ indexDirSpace(new File(config.getIndexDir(indexName)))+ " docCount="+ docCount);" is 186.,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Long Statement,The length of the statement "indexDoc(getPidFromObjectFilename(file.getName())`repositoryName`indexName`new FileInputStream(file)`resultXml`indexDocXslt);" is 125.,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDocs,Magic Number,The method contains a magic number: 100,398
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,fromPid,Long Parameter List,The method has 5 parameters. ,432
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Complex Conditional,The conditional expression !f.fieldType().tokenized() && f.fieldType().indexed() && untokenizedFields.indexOf(f.name()) < 0 is complex.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Complex Method,Cyclomatic complexity of the method is 13,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Parameter List,The method has 6 parameters. ,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (endParams < beginParams) throw new GenericSearchException("Format error (no ending ')') in indexDocXslt=" + indexDocXslt + ": ");" is 133.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (param == null || param.length() < 1) throw new GenericSearchException("Format error (empty param) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 165.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (eq < 0) throw new GenericSearchException("Format error (no '=') in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 131.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (pname == null || pname.length() < 1) throw new GenericSearchException("Format error (no param name) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 167.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (pvalue == null || pvalue.length() < 1) throw new GenericSearchException("Format error (no param value) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 170.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "StringBuffer sb=(new GTransformer()).transform(xsltPath`new StreamSource(foxmlStream)`config.getURIResolver(indexName)`params);" is 127.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "logger.info("IndexDocument=" + pid + " insertTotal="+ insertTotal+ " updateTotal="+ updateTotal+ " deleteTotal="+ deleteTotal+ " emptyTotal="+ emptyTotal+ " warnCount="+ warnCount+ " docCount="+ docCount);" is 205.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Long Statement,The length of the statement "logger.warn("IndexDocument " + pid + " does not contain any IndexFields!!! RepositoryName="+ repositoryName+ " IndexName="+ indexName);" is 135.,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 12,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 12,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 10,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 11,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 3,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 4,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 5,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 6,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 7,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 8,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 9,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 10,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 11,444
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getAnalyzer,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getAnalyzer analyzerClassName=" + analyzerClassName + " stopwordsLocation="+ stopwordsLocation);" is 139.,544
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getAnalyzer,Long Statement,The length of the statement "analyzer=(Analyzer)analyzerClass.getConstructor(new Class[]{Version.class`File.class}).newInstance(new Object[]{version`new File(stopwordsLocation)});" is 150.,544
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getQueryAnalyzer,Complex Method,Cyclomatic complexity of the method is 10,579
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getQueryAnalyzer,Long Statement,The length of the statement "throw new ConfigException("getQueryAnalyzer getAnalyzer fieldName=" + fieldName + " analyzerClassName="+ analyzerClassName+ " :\n"`e);" is 134.,579
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getQueryAnalyzer,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getQueryAnalyzer indexName=" + indexName + " untokenizedFields="+ untokenizedFields);" is 128.,579
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getQueryAnalyzer,Magic Number,The method contains a magic number: 2,579
+fcrepo3_gsearch,dk.defxws.fgslucene,OperationsImpl,getIndexReaderAndSearcher,Empty catch clause,The method has an empty catch block.,627
+fcrepo3_gsearch,dk.defxws.fgslucene,IndexDocumentHandler,IndexDocumentHandler,Long Statement,The length of the statement "throw new GenericSearchException("IndexDocument parse error pidOrFilename=" + pidOrFilename + " at line: "+ e.getLineNumber()+ " column "+ e.getColumnNumber()`e);" is 162.,58
+fcrepo3_gsearch,dk.defxws.fgslucene,IndexDocumentHandler,startElement,Complex Method,Cyclomatic complexity of the method is 33,94
+fcrepo3_gsearch,dk.defxws.fgslucene,IndexDocumentHandler,endElement,Complex Method,Cyclomatic complexity of the method is 8,183
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Complex Method,Cyclomatic complexity of the method is 19,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Long Method,The method has 129 lines of code.,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Long Parameter List,The method has 13 parameters. ,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("executeQuery" + " query=" + queryString + " startRecord="+ startRecord+ " maxResults="+ maxResults+ " snippetsMax="+ snippetsMax+ " fieldMaxLength="+ fieldMaxLength+ " indexName="+ indexName+ " sortFields="+ sortFields+ " defaultQueryFields="+ defaultQueryFields+ " allowLeadingWildcard="+ allowLeadingWildcard+ " lowercaseExpandedTerms="+ lowercaseExpandedTerms);" is 407.,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("executeQuery queryParser" + " allowLeadingWildcard=" + queryParser.getAllowLeadingWildcard() + " lowercaseExpandedTerms="+ queryParser.getLowercaseExpandedTerms());" is 207.,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("executeQuery mfqueryParser" + " allowLeadingWildcard=" + queryParser.getAllowLeadingWildcard() + " lowercaseExpandedTerms="+ queryParser.getLowercaseExpandedTerms());" is 209.,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Long Statement,The length of the statement "resultXml.append("<solrsearch " + " xmlns:dc=\"http://purl.org/dc/elements/1.1/" + "\" query=\"" + queryStringEncoded + "\" indexName=\""+ indexName+ "\" sortFields=\""+ sortFields+ "\" hitPageStart=\""+ startRecord+ "\" hitPageSize=\""+ maxResults+ "\" hitTotal=\""+ hits.totalHits+ "\">");" is 291.,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Magic Number,The method contains a magic number: 8,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,executeQuery,Magic Number,The method contains a magic number: 500,58
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,errorExit,Empty catch clause,The method has an empty catch block.,226
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Complex Method,Cyclomatic complexity of the method is 49,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Method,The method has 166 lines of code.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getHits" + " query=" + query + " numHits="+ numHits+ " sortFields="+ sortFields);" is 124.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (!stf.hasMoreTokens()) errorExit("getHits sortFields='" + sortFields + "' : empty sortFieldName string in '"+ sortFieldString+ "'");" is 135.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (sortFieldName.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty sortFieldName string in '"+ sortFieldString+ "'");" is 142.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (sortTypeOrLocaleOrCompString.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty sortType or locale or comparatorClass string in '"+ sortFieldString+ "'");" is 181.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (p < 3 || q < p + 1) errorExit("getHits sortFields='" + sortFields + "' : comparatorClass parameters malformed in '"+ compString+ "'.");" is 139.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "errorExit("getHits sortFields='" + sortFields + "' : comparatorClass '"+ compString+ "'"+ ": class not found:\n"+ e.toString());" is 128.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getHits sortFields='" + sortFields + "' : comparatorClass '"+ compString+ "'"+ ": constructor["+ j+ "]='"+ cj.toGenericString()+ "'");" is 177.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "errorExit("getHits sortFields='" + sortFields + "' : comparatorClass '"+ compString+ "'"+ ": no constructor applied:\n"+ errorMessage.toString());" is 146.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (reverseString.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty reverse string in '"+ sortFieldString+ "'");" is 136.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "else errorExit("getHits sortFields='" + sortFields + "' : unknown reverse string '"+ reverseString+ "' in '"+ sortFieldString+ "'");" is 132.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "else if (((sortTypeOrLocaleString.substring(0`1)).compareTo("A") >= 0) && ((sortTypeOrLocaleString.substring(0`1)).compareTo("Z") <= 0)) {" is 138.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "errorExit("getHits sortFields='" + sortFields + "' : unknown sortType string '"+ sortTypeOrLocaleString+ "' in '"+ sortFieldString+ "'");" is 137.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (stfl.countTokens() > 3) errorExit("getHits sortFields='" + sortFields + "' : unknown locale string '"+ sortTypeOrLocaleString+ "' in '"+ sortFieldString+ "'");" is 163.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (language.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty language string in '"+ sortFieldString+ "'");" is 132.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (language.length() > 2) errorExit("getHits sortFields='" + sortFields + "' : unknown language string '"+ language+ "' in '"+ sortFieldString+ "'");" is 150.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (country.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty country string in '"+ sortFieldString+ "'");" is 130.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (country.length() > 3) errorExit("getHits sortFields='" + sortFields + "' : unknown country string '"+ country+ "' in '"+ sortFieldString+ "'");" is 147.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (variant.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty variant string in '"+ sortFieldString+ "'");" is 130.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "if (reverseString.length() == 0) errorExit("getHits sortFields='" + sortFields + "' : empty reverse string in '"+ sortFieldString+ "'");" is 136.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Long Statement,The length of the statement "else throw new GenericSearchException("getHits sortFields='" + sortFields + "' : unknown reverse string '"+ reverseString+ "' in '"+ sortFieldString+ "'");" is 155.,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Magic Number,The method contains a magic number: 3,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Magic Number,The method contains a magic number: 3,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Magic Number,The method contains a magic number: 2,243
+fcrepo3_gsearch,dk.defxws.fgssolr,Statement,getHits,Magic Number,The method contains a magic number: 3,243
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Complex Method,Cyclomatic complexity of the method is 9,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Long Parameter List,The method has 8 parameters. ,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("gfindObjects presearch" + " fgsUserName=" + fgsUserName + " usingIndexName="+ usingIndexName);" is 137.,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("gfindObjects insearch" + " fgsUserName=" + fgsUserName + " usingQuery="+ usingQuery);" is 128.,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Long Statement,The length of the statement "resultSet=(new Connection()).createStatement().executeQuery(searcher`usingQuery`hitPageStart`hitPageSize`snippetsMax`fieldMaxLength`getQueryAnalyzer(usingIndexName)`config.getDefaultQueryFields(usingIndexName)`config.getIndexDir(usingIndexName)`usingIndexName`config.getSnippetBegin(usingIndexName)`config.getSnippetEnd(usingIndexName)`config.getSortFields(usingIndexName`sortFields));" is 385.,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Long Statement,The length of the statement "xsltPath=config.getConfigName() + "/index/" + usingIndexName+ "/"+ config.getGfindObjectsResultXslt(usingIndexName`resultPageXslt);" is 131.,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("gfindObjects postsearch" + " fgsUserName=" + fgsUserName + " resultXml=\n"+ resultXml);" is 130.,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 12,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,gfindObjects,Magic Number,The method contains a magic number: 13,62
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,browseIndex,Complex Conditional,The conditional expression fields != null && fieldName != null && fieldName.length() > 0 is complex.,142
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,browseIndex,Long Parameter List,The method has 5 parameters. ,142
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,browseIndex,Long Statement,The length of the statement "resultXml.append("<term no=\"" + termNo + "\""+ " fieldtermhittotal=\""+ termsEnum.docFreq()+ "\">"+ encode(termString)+ "</term>");" is 132.,142
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,browseIndex,Long Statement,The length of the statement "resultXml.insert(0`"<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + "<solrbrowseindex " + " xmlns:dc=\"http://purl.org/dc/elements/1.1/"+ "\" startTerm=\"" + encode(startTerm) + "\" termPageSize=\""+ termPageSize+ "\" fieldName=\""+ fieldName+ "\" indexName=\""+ indexName+ "\" termTotal=\""+ termNo+ "\">");" is 306.,142
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,browseIndex,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getBrowseIndexResultXslt(indexName`resultPageXslt);" is 148.,142
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,browseIndex,Magic Number,The method contains a magic number: 10,142
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,browseIndex,Magic Number,The method contains a magic number: 11,142
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getIndexInfo,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getIndexInfoResultXslt(indexName`resultPageXslt);" is 146.,226
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Long Parameter List,The method has 6 parameters. ,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Long Statement,The length of the statement "logger.info("updateIndex " + action + " indexName="+ indexName+ " indexDirSpace="+ indexDirSpace(new File(config.getIndexDir(indexName)))+ " docCount="+ docCount);" is 163.,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Long Statement,The length of the statement "String xsltPath=config.getConfigName() + "/index/" + config.getIndexName(indexName)+ "/"+ config.getUpdateIndexResultXslt(indexName`resultPageXslt);" is 148.,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 12,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 2,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 3,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 4,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 5,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 6,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 7,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 8,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 9,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 10,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,updateIndex,Magic Number,The method contains a magic number: 11,249
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,fromFoxmlFiles,Long Parameter List,The method has 5 parameters. ,364
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,fromFoxmlFiles,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("fromFoxmlFiles filePath=" + filePath + " repositoryName="+ repositoryName+ " indexName="+ indexName);" is 144.,364
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Long Parameter List,The method has 5 parameters. ,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Long Statement,The length of the statement "if (i % 100 == 0) logger.info("updateIndex fromFoxmlFiles " + file.getAbsolutePath() + " indexDirSpace="+ indexDirSpace(new File(config.getIndexDir(indexName)))+ " docCount="+ docCount);" is 186.,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Long Statement,The length of the statement "indexDoc(getPidFromObjectFilename(file.getName())`repositoryName`indexName`new FileInputStream(file)`resultXml`indexDocXslt);" is 125.,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Long Statement,The length of the statement "resultXml.append("<warning no=\"" + (++warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>\n");" is 133.,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Long Statement,The length of the statement "logger.warn("<warning no=\"" + (warnCount) + "\">file="+ file.getAbsolutePath()+ " exception="+ e.toString()+ "</warning>");" is 124.,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDocs,Magic Number,The method contains a magic number: 100,380
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,fromPid,Long Parameter List,The method has 5 parameters. ,414
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Complex Method,Cyclomatic complexity of the method is 11,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Parameter List,The method has 6 parameters. ,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (endParams < beginParams) throw new GenericSearchException("Format error (no ending ')') in indexDocXslt=" + indexDocXslt + ": ");" is 133.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (param == null || param.length() < 1) throw new GenericSearchException("Format error (empty param) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 165.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (eq < 0) throw new GenericSearchException("Format error (no '=') in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 131.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (pname == null || pname.length() < 1) throw new GenericSearchException("Format error (no param name) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 167.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "if (pvalue == null || pvalue.length() < 1) throw new GenericSearchException("Format error (no param value) in indexDocXslt=" + indexDocXslt + " params["+ i+ "]="+ param);" is 170.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "StringBuffer sb=(new GTransformer()).transform(xsltPath`new StreamSource(foxmlStream)`config.getURIResolver(indexName)`params);" is 127.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "logger.info("IndexDocument=" + pid + " insertTotal="+ insertTotal+ " updateTotal="+ updateTotal+ " deleteTotal="+ deleteTotal+ " emptyTotal="+ emptyTotal+ " warnCount="+ warnCount+ " docCount="+ docCount);" is 205.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Long Statement,The length of the statement "logger.warn("IndexDocument " + pid + " does not contain any IndexFields!!! RepositoryName="+ repositoryName+ " IndexName="+ indexName);" is 135.,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 12,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 12,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 10,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 11,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 2,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 3,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 4,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 5,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 6,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 7,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 8,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 9,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 10,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,indexDoc,Magic Number,The method contains a magic number: 11,426
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getAnalyzer,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getAnalyzer analyzerClassName=" + analyzerClassName + " stopwordsLocation="+ stopwordsLocation);" is 139.,506
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getAnalyzer,Long Statement,The length of the statement "analyzer=(Analyzer)analyzerClass.getConstructor(new Class[]{Version.class`File.class}).newInstance(new Object[]{version`new File(stopwordsLocation)});" is 150.,506
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getQueryAnalyzer,Complex Method,Cyclomatic complexity of the method is 10,541
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getQueryAnalyzer,Long Statement,The length of the statement "throw new ConfigException("getQueryAnalyzer getAnalyzer fieldName=" + fieldName + " analyzerClassName="+ analyzerClassName+ " :\n"`e);" is 134.,541
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getQueryAnalyzer,Long Statement,The length of the statement "if (logger.isDebugEnabled()) logger.debug("getQueryAnalyzer indexName=" + indexName + " untokenizedFields="+ untokenizedFields);" is 128.,541
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getQueryAnalyzer,Magic Number,The method contains a magic number: 2,541
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,postData,Complex Method,Cyclomatic complexity of the method is 8,589
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,pipe,Magic Number,The method contains a magic number: 1024,669
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,pipeString,Magic Number,The method contains a magic number: 1024,681
+fcrepo3_gsearch,dk.defxws.fgssolr,OperationsImpl,getIndexReaderAndSearcher,Empty catch clause,The method has an empty catch block.,694

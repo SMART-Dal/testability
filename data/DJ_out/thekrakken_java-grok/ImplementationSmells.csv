@@ -1,0 +1,75 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+thekrakken_java-grok,io.krakens.grok.api,GrokCompiler,register,Magic Number,The method contains a magic number: 2,94
+thekrakken_java-grok,io.krakens.grok.api,GrokCompiler,register,Long Statement,The length of the statement "new BufferedReader(input).lines().map(patternLinePattern::matcher).filter(Matcher::matches).forEach(m -> register(m.group(1)`m.group(2)));" is 138.,107
+thekrakken_java-grok,io.krakens.grok.api,GrokCompiler,register,Magic Number,The method contains a magic number: 2,107
+thekrakken_java-grok,io.krakens.grok.api,GrokCompiler,compile,Complex Method,Cyclomatic complexity of the method is 10,128
+thekrakken_java-grok,io.krakens.grok.api,GrokCompiler,compile,Magic Number,The method contains a magic number: 1000,128
+thekrakken_java-grok,io.krakens.grok.api,Converter,getConverters,Magic Number,The method contains a magic number: 3,67
+thekrakken_java-grok,io.krakens.grok.api,Converter,getConverters,Magic Number,The method contains a magic number: 2,67
+thekrakken_java-grok,io.krakens.grok.api,Converter,getGroupTypes,Long Statement,The length of the statement "return groupNames.stream().filter(Converter::containsDelimiter).map(Converter::splitGrokPattern).collect(Collectors.toMap(l -> l[0]`l -> getType(l[1])));" is 153.,81
+thekrakken_java-grok,io.krakens.grok.api,Converter,splitGrokPattern,Magic Number,The method contains a magic number: 3,99
+thekrakken_java-grok,io.krakens.grok.api,Discovery,discover,Complex Method,Cyclomatic complexity of the method is 8,80
+thekrakken_java-grok,io.krakens.grok.api,Discovery,discover,Empty catch clause,The method has an empty catch block.,80
+thekrakken_java-grok,io.krakens.grok.api,Discovery,discover,Magic Number,The method contains a magic number: 20,80
+thekrakken_java-grok,io.krakens.grok.api,Grok,Grok,Long Parameter List,The method has 5 parameters. ,63
+thekrakken_java-grok,io.krakens.grok.api,Match,Match,Long Parameter List,The method has 5 parameters. ,30
+thekrakken_java-grok,io.krakens.grok.api,Match,capture,Complex Method,Cyclomatic complexity of the method is 14,110
+thekrakken_java-grok,io.krakens.grok.api,Match,capture,Long Statement,The length of the statement "throw new GrokException(format("key '%s' has multiple non-null values` this is not allowed in flattened mode` values:'%s'` '%s'"`key`currentValue`value));" is 154.,110
+thekrakken_java-grok,io.krakens.grok.api,Match,cleanString,Complex Conditional,The conditional expression firstChar == lastChar && (firstChar == '"' || firstChar == '\'') is complex.,201
+thekrakken_java-grok,io.krakens.grok.api,Match,cleanString,Magic Number,The method contains a magic number: 2,201
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test011_combineApache,Long Statement,The length of the statement "Match gm=grok.match("112.169.19.192 - - [06/Mar/2013:01:36:30 +0900] \"GET / HTTP/1.1\" 200 44346 \"-\" " + "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML` like Gecko) " + "Chrome/25.0.1364.152 Safari/537.22\"");" is 241.,247
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test011_combineApache,Long Statement,The length of the statement "assertEquals(map.get("agent").toString()`"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML` like Gecko) " + "Chrome/25.0.1364.152 Safari/537.22");" is 170.,247
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test011_combineApache,Long Statement,The length of the statement "gm=grok.match("112.169.19.192 - - [06/Mar/2013:01:36:30 +0900] \"GET " + "/wp-content/plugins/easy-table/themes/default/style.css?ver=1.0 HTTP/1.1\" " + "304 - \"http://www.nflabs.com/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) "+ "AppleWebKit/537.22 (KHTML` like Gecko) Chrome/25.0.1364.152 Safari/537.22\"");" is 318.,247
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test011_combineApache,Long Statement,The length of the statement "assertEquals(map.get("agent").toString()`"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML` like Gecko) " + "Chrome/25.0.1364.152 Safari/537.22");" is 170.,247
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test013_IpSet,Long Statement,The length of the statement "try (FileReader fr=new FileReader(Resources.getResource(ResourceManager.IP).getFile());BufferedReader br=new BufferedReader(fr)){" is 129.,313
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test014_month,Long Statement,The length of the statement "String[] months={"Jan"`"January"`"Feb"`"February"`"Mar"`"March"`"Apr"`"April"`"May"`"Jun"`"June"`"Jul"`"July"`"Aug"`"August"`"Sep"`"September"`"Oct"`"October"`"Nov"`"November"`"Dec"`"December"};" is 194.,330
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test015_iso8601,Long Statement,The length of the statement "String[] times={"2001-01-01T00:00:00"`"1974-03-02T04:09:09"`"2010-05-03T08:18:18+00:00"`"2004-07-04T12:27:27-00:00"`"2001-09-05T16:36:36+0000"`"2001-11-06T20:45:45-0000"`"2001-12-07T23:54:54Z"`"2001-01-01T00:00:00.123456"`"1974-03-02T04:09:09.123456"`"2010-05-03T08:18:18.123456+00:00"`"2004-07-04T12:27:27.123456-00:00"`"2001-09-05T16:36:36.123456+0000"`"2001-11-06T20:45:45.123456-0000"`"2001-12-07T23:54:54.123456Z"};" is 420.,348
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test016_uri,Long Statement,The length of the statement "String[] uris={"http://www.google.com"`"telnet://helloworld"`"http://www.example.com/"`"http://www.example.com/test.html"`"http://www.example.com/test.html?foo=bar"`"http://www.example.com/test.html?foo=bar&fizzle=baz"`"http://www.example.com:80/test.html?foo=bar&fizzle=baz"`"https://www.example.com:443/test.html?foo=bar&fizzle=baz"`"https://user@www.example.com:443/test.html?foo=bar&fizzle=baz"`"https://user:pass@somehost/fetch.pl"`"puppet:///"`"http://www.foo.com"`"http://www.foo.com/"`"http://www.foo.com/?testing"`"http://www.foo.com/?one=two"`"http://www.foo.com/?one=two&foo=bar"`"foo://somehost.com:12345"`"foo://user@somehost.com:12345"`"foo://user@somehost.com:12345/"`"foo://user@somehost.com:12345/foo.bar/baz/fizz"`"foo://user@somehost.com:12345/foo.bar/baz/fizz?test"`"foo://user@somehost.com:12345/foo.bar/baz/fizz?test=1&sink&foo=4"`"http://www.google.com/search?hl=en&source=hp&q=hello+world+%5E%40%23%24&btnG=Google+Search"`"http://www.freebsd.org/cgi/url.cgi?ports/sysutils/grok/pkg-descr"`"http://www.google.com/search?q=CAPTCHA+ssh&start=0&ie=utf-8&oe=utf-8&client=firefox-a" + "&rls=org.mozilla:en-US:official"`"svn+ssh://somehost:12345/testing"};" is 1173.,378
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test017_nonMachingList,Magic Number,The method contains a magic number: 2,422
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test017_nonMachingList,Magic Number,The method contains a magic number: 4,422
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test025_datetime_pattern_with_slashes,Magic Number,The method contains a magic number: 2015,526
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test025_datetime_pattern_with_slashes,Magic Number,The method contains a magic number: 7,526
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test025_datetime_pattern_with_slashes,Magic Number,The method contains a magic number: 31,526
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test026_datetime_pattern_with_with_dots,Magic Number,The method contains a magic number: 2015,538
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test026_datetime_pattern_with_with_dots,Magic Number,The method contains a magic number: 7,538
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test026_datetime_pattern_with_with_dots,Magic Number,The method contains a magic number: 31,538
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test027_datetime_pattern_with_with_hyphens,Magic Number,The method contains a magic number: 2015,549
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test027_datetime_pattern_with_with_hyphens,Magic Number,The method contains a magic number: 7,549
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test027_datetime_pattern_with_with_hyphens,Magic Number,The method contains a magic number: 31,549
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test028_keep_empty_captures,Magic Number,The method contains a magic number: 2,560
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test029_datetime_pattern_with_with_commas,Magic Number,The method contains a magic number: 2015,576
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test029_datetime_pattern_with_with_commas,Magic Number,The method contains a magic number: 7,576
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,test029_datetime_pattern_with_with_commas,Magic Number,The method contains a magic number: 31,576
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,testIssue64,Long Statement,The length of the statement "String input="client id: \"name\" \"Mac OS X Mail\" \"version\" \"10.2 (3259)\" \"os\" \"Mac OS X\"" + "\"os-version\" \"10.12.3 (16D32)\" \"vendor\" \"Apple Inc.\"";" is 166.,587
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,testGroupTypes,Long Statement,The length of the statement "Grok grok=compiler.compile("%{HTTPDATE:timestamp;date;dd/MMM/yyyy:HH:mm:ss Z} %{USERNAME:username:text} " + "%{IPORHOST:host}:%{POSINT:port:integer}"`true);" is 156.,633
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,testGroupTypes,Magic Number,The method contains a magic number: 8080,633
+thekrakken_java-grok,io.krakens.grok.api,GrokTest,testTimeZone,Magic Number,The method contains a magic number: 8,652
+thekrakken_java-grok,io.krakens.grok.api,GrokDocumentationTest,assureCodeInReadmeWorks,Long Statement,The length of the statement "String log="112.169.19.192 - - [06/Mar/2013:01:36:30 +0900] \"GET / HTTP/1.1\" 200 44346 \"-\" " + "\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.22 (KHTML` like Gecko) " + "Chrome/25.0.1364.152 Safari/537.22\"";" is 231.,16
+thekrakken_java-grok,io.krakens.grok.api,GrokDocumentationTest,assureCodeInReadmeWorks,Long Statement,The length of the statement "final Object[] keywordArray=new Object[]{"COMBINEDAPACHELOG"`"COMMONAPACHELOG"`"clientip"`"ident"`"auth"`"timestamp"`"MONTHDAY"`"MONTH"`"YEAR"`"TIME"`"HOUR"`"MINUTE"`"SECOND"`"INT"`"verb"`"httpversion"`"rawrequest"`"request"`"response"`"bytes"`"referrer"`"agent"};" is 264.,16
+thekrakken_java-grok,io.krakens.grok.api,GrokDocumentationTest,assureCodeInReadmeWorks,Magic Number,The method contains a magic number: 22,16
+thekrakken_java-grok,io.krakens.grok.api,CaptureTest,test002_captureMathodMulti,Magic Number,The method contains a magic number: 2,45
+thekrakken_java-grok,io.krakens.grok.api,CaptureTest,test003_captureMathodNasted,Magic Number,The method contains a magic number: 2,60
+thekrakken_java-grok,io.krakens.grok.api,CaptureTest,test007_captureDuplicateName,Magic Number,The method contains a magic number: 2,114
+thekrakken_java-grok,io.krakens.grok.api,BasicTest,test006_testLoadPatternFromFileIso_8859_1,Long Statement,The length of the statement "try (FileOutputStream fis=new FileOutputStream(temp);BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(fis`StandardCharsets.ISO_8859_1))){" is 148.,107
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Long Statement,The length of the statement "Grok grok=compiler.compile("%{IPORHOST:clientip} %{USER:ident;boolean} %{USER:auth} " + "\\[%{HTTPDATE:timestamp;date;dd/MMM/yyyy:HH:mm:ss Z}\\] \"(?:%{WORD:verb;string} %{NOTSPACE:request}" + "(?: HTTP/%{NUMBER:httpversion;float})?|%{DATA:rawrequest})\" %{NUMBER:response;int} "+ "(?:%{NUMBER:bytes;long}|-)");" is 311.,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 2004,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 3,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 7,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 16,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 45,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 56,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 8,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 401,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 1.1f,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_semi,Magic Number,The method contains a magic number: 12846L,39
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Long Statement,The length of the statement "Grok grok=compiler.compile("%{IPORHOST:clientip} %{USER:ident:boolean} %{USER:auth} " + "\\[%{HTTPDATE:timestamp:date:dd/MMM/yyyy:HH:mm:ss Z}\\] \"(?:%{WORD:verb:string} %{NOTSPACE:request}" + "(?: HTTP/%{NUMBER:httpversion:float})?|%{DATA:rawrequest})\" %{NUMBER:response:int} "+ "(?:%{NUMBER:bytes:long}|-)");" is 311.,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 2004,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 3,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 7,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 16,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 45,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 56,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 8,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 401,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 1.1f,62
+thekrakken_java-grok,io.krakens.grok.api,ApacheDataTypeTest,test002_httpd_access_colon,Magic Number,The method contains a magic number: 12846L,62

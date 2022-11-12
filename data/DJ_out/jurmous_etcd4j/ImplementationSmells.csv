@@ -1,0 +1,190 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+jurmous_etcd4j,mousio.etcd4j.security,SecurityContextBuilder,forKeystoreAndTruststore,Long Parameter List,The method has 5 parameters. ,91
+jurmous_etcd4j,mousio.etcd4j.security,SecurityContextBuilder,forKeystoreAndTruststore,Long Statement,The length of the statement "return forKeystoreAndTruststore(new FileInputStream(keystorePath)`keystorePassword`new FileInputStream(truststorePath)`truststorePassword`keyManagerAlgorithm);" is 159.,91
+jurmous_etcd4j,mousio.etcd4j.security,SecurityContextBuilder,forKeystoreAndTruststore,Long Parameter List,The method has 5 parameters. ,111
+jurmous_etcd4j,mousio.etcd4j.security,EtcdKeystoreTest,cleanup,Empty catch clause,The method has an empty catch block.,49
+jurmous_etcd4j,mousio.etcd4j.security,EtcdKeystoreTest,testSslCliAgainstSslEtcd,Long Statement,The length of the statement "EtcdClient etcd=new EtcdClient(SecurityContextBuilder.forKeystoreAndTruststore(KEYSTORE_PATH`KEYSTORE_PASS`TRUSTSTORE_PATH`TRUSTSTORE_PASS)`new URI(SECURED_ETCD_SERVICE));" is 171.,83
+jurmous_etcd4j,mousio.etcd4j.security,EtcdKeystoreTest,testSslCliAgainstRegularEtcd,Long Statement,The length of the statement "EtcdClient etcd=new EtcdClient(SecurityContextBuilder.forKeystoreAndTruststore(KEYSTORE_PATH`KEYSTORE_PASS`TRUSTSTORE_PATH`TRUSTSTORE_PASS));" is 141.,99
+jurmous_etcd4j,mousio.etcd4j.security,EtcdKeystoreTest,testCliAgainstSslEtcd,Magic Number,The method contains a magic number: 1000,116
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClient,EtcdNettyClient,Long Statement,The length of the statement "this.bootstrap=new Bootstrap().group(eventLoopGroup).channel(config.getSocketChannelClass()).option(ChannelOption.ALLOCATOR`PooledByteBufAllocator.DEFAULT).option(ChannelOption.TCP_NODELAY`true).option(ChannelOption.CONNECT_TIMEOUT_MILLIS`config.getConnectTimeout()).resolver(new DnsAddressResolverGroup(NioDatagramChannel.class`DefaultDnsServerAddressStreamProvider.INSTANCE)).handler(new ChannelInitializer<SocketChannel>(){" is 426.,119
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClient,connect,Complex Conditional,The conditional expression eventLoopGroup.isShuttingDown() || eventLoopGroup.isShutdown() || eventLoopGroup.isTerminated() is complex.,210
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClient,connect,Complex Method,Cyclomatic complexity of the method is 14,210
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClient,operationComplete,Complex Method,Cyclomatic complexity of the method is 10,250
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyConfig,EtcdNettyConfig,Long Statement,The length of the statement "logger.warn("Setting mousio.etcd4j.maxFrameSize through system propery is deprecated. " + "Please use the EtcdNettyConfig class");" is 130.,45
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdResponseHandler,channelRead0,Complex Conditional,The conditional expression !status.equals(HttpResponseStatus.OK) && !status.equals(HttpResponseStatus.ACCEPTED) && !status.equals(HttpResponseStatus.CREATED) is complex.,98
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdResponseHandler,channelRead0,Complex Method,Cyclomatic complexity of the method is 9,98
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdResponseHandler,channelRead0,Long Statement,The length of the statement "if (!status.equals(HttpResponseStatus.OK) && !status.equals(HttpResponseStatus.ACCEPTED) && !status.equals(HttpResponseStatus.CREATED)) {" is 137.,98
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testConfig,Long Statement,The length of the statement "EtcdNettyConfig config=new EtcdNettyConfig().setConnectTimeout(100).setSocketChannelClass(NioSocketChannel.class).setMaxFrameSize(1024 * 1024).setEventLoopGroup(evl).setHostName("localhost");" is 191.,42
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testConfig,Magic Number,The method contains a magic number: 100,42
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testConfig,Magic Number,The method contains a magic number: 1024,42
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testConfig,Magic Number,The method contains a magic number: 1024,42
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testConfig,Magic Number,The method contains a magic number: 100,42
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testManagedEventLoopGroup,Long Statement,The length of the statement "EtcdNettyConfig config=new EtcdNettyConfig().setConnectTimeout(100).setSocketChannelClass(NioSocketChannel.class).setMaxFrameSize(1024 * 1024).setEventLoopGroup(evl`false).setHostName("localhost");" is 197.,66
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testManagedEventLoopGroup,Magic Number,The method contains a magic number: 100,66
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testManagedEventLoopGroup,Magic Number,The method contains a magic number: 1024,66
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testManagedEventLoopGroup,Magic Number,The method contains a magic number: 1024,66
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testCustomEtcdNettyClient,Long Statement,The length of the statement "EtcdNettyConfig config=new EtcdNettyConfig().setConnectTimeout(100).setSocketChannelClass(NioSocketChannel.class).setMaxFrameSize(1024 * 1024).setEventLoopGroup(evl).setHostName("localhost");" is 191.,86
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testCustomEtcdNettyClient,Magic Number,The method contains a magic number: 100,86
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testCustomEtcdNettyClient,Magic Number,The method contains a magic number: 1024,86
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testCustomEtcdNettyClient,Magic Number,The method contains a magic number: 1024,86
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Empty catch clause,The method has an empty catch block.,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Empty catch clause,The method has an empty catch block.,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Long Statement,The length of the statement "EtcdNettyConfig config=new EtcdNettyConfig().setConnectTimeout(100).setSocketChannelClass(NioSocketChannel.class).setMaxFrameSize(1024 * 1024).setEventLoopGroup(evl).setHostName("localhost");" is 191.,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Magic Number,The method contains a magic number: 100,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Magic Number,The method contains a magic number: 1024,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Magic Number,The method contains a magic number: 1024,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Magic Number,The method contains a magic number: 500,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdNettyClientTest,testEtcdClientClose,Magic Number,The method contains a magic number: 2,105
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdClientRetryPolicyTest,testSuccessWithoutRetrying,Magic Number,The method contains a magic number: 10,59
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdClientRetryPolicyTest,testFailureAfterRetrying,Magic Number,The method contains a magic number: 3,118
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdClientRetryPolicyTest,testFailureAfterRetrying,Magic Number,The method contains a magic number: 4,118
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdClientRetryPolicyTest,testSuccessAfterRetrying,Magic Number,The method contains a magic number: 10,150
+jurmous_etcd4j,mousio.etcd4j.transport,EtcdClientRetryPolicyTest,testSuccessAfterRetrying,Magic Number,The method contains a magic number: 2,150
+jurmous_etcd4j,mousio.etcd4j,EtcdSecurityContext,hasCredentials,Long Statement,The length of the statement "return this.username != null && !this.username.trim().isEmpty() && this.password != null && !this.password.trim().isEmpty();" is 124.,81
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,putAsJson,Long Statement,The length of the statement "Map<String`Object> flattened=new JsonFlattener(EtcdUtil.jsonToString(data)).withFlattenMode(FlattenMode.MONGODB).withSeparator('/').flattenAsMap();" is 147.,133
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,dotNotationToStandardJson,Long Statement,The length of the statement "String unflattened=new JsonUnflattener(jsonToString(flattenJson(etcdJson`""))).withFlattenMode(FlattenMode.MONGODB).withKeyTransformer(new KeyTransformer(){" is 156.,167
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,iterateOverNodes,Complex Method,Cyclomatic complexity of the method is 8,190
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,flattenJson,Complex Method,Cyclomatic complexity of the method is 10,226
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,numberType,Empty catch clause,The method has an empty catch block.,268
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,numberType,Empty catch clause,The method has an empty catch block.,268
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,numberType,Empty catch clause,The method has an empty catch block.,268
+jurmous_etcd4j,mousio.etcd4j,EtcdUtil,numberType,Empty catch clause,The method has an empty catch block.,268
+jurmous_etcd4j,mousio.etcd4j,EtcdClient,EtcdClient,Long Statement,The length of the statement "this(new EtcdNettyClient(securityContext`(baseUri.length == 0) ? new URI[]{URI.create("https://127.0.0.1:4001")} : baseUri));" is 125.,87
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,cleanup,Empty catch clause,The method has an empty catch block.,59
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,setUp,Magic Number,The method contains a magic number: 20,74
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,setUp,Magic Number,The method contains a magic number: 4,74
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,setUp,Magic Number,The method contains a magic number: 10000,74
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testTimeout,Empty catch clause,The method has an empty catch block.,182
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testTimeout,Empty catch clause,The method has an empty catch block.,182
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testKey,Magic Number,The method contains a magic number: 40,197
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testError,Magic Number,The method contains a magic number: 100,233
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testError,Magic Number,The method contains a magic number: 100,233
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testRefreshTtl,Magic Number,The method contains a magic number: 60,251
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testRefreshTtl,Magic Number,The method contains a magic number: 120,251
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testRefreshTtl,Magic Number,The method contains a magic number: 60,251
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testDir,Magic Number,The method contains a magic number: 20,277
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testRecursive,Magic Number,The method contains a magic number: 10,303
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testRecursive,Magic Number,The method contains a magic number: 3,303
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testRecursive,Magic Number,The method contains a magic number: 10,303
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testRecursive,Magic Number,The method contains a magic number: 3,303
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testInOrderKeys,Magic Number,The method contains a magic number: 20,327
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testInOrderKeys,Magic Number,The method contains a magic number: 2,327
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testWait,Magic Number,The method contains a magic number: 20,350
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testChunkedData,Magic Number,The method contains a magic number: 1000,381
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testChunkedData,Magic Number,The method contains a magic number: 15000,381
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testChunkedData,Magic Number,The method contains a magic number: 15000,381
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testIfCleanClose,Magic Number,The method contains a magic number: 20,392
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testIfCleanClose,Magic Number,The method contains a magic number: 4,392
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testIfCleanClose,Magic Number,The method contains a magic number: 1000,392
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testGetAll,Magic Number,The method contains a magic number: 30,410
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testGetAll,Magic Number,The method contains a magic number: 30,410
+jurmous_etcd4j,mousio.etcd4j,TestFunctionality,testGetAll,Magic Number,The method contains a magic number: 2,410
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,cleanup,Empty catch clause,The method has an empty catch block.,30
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,setUp,Magic Number,The method contains a magic number: 1024,45
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,setUp,Magic Number,The method contains a magic number: 1024,45
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,setUp,Magic Number,The method contains a magic number: 20,45
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,setUp,Magic Number,The method contains a magic number: 4,45
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,setUp,Magic Number,The method contains a magic number: 10000,45
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,testGetHugeDir,Magic Number,The method contains a magic number: 2000,73
+jurmous_etcd4j,mousio.etcd4j,TestHugeDir,testGetHugeDir,Magic Number,The method contains a magic number: 2000,73
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdException,getMessage,Long Statement,The length of the statement "return String.format("[%s]: %s%s%s"`errorCode`etcdMessage`((etcdCause != null) ? "` cause: " + etcdCause : "")`((index != null) ? "` at index: " + index : ""));" is 160.,56
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdSelfStatsResponse,EtcdSelfStatsResponse,Long Parameter List,The method has 9 parameters. ,30
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdStoreStatsResponse,EtcdStoreStatsResponse,Long Parameter List,The method has 14 parameters. ,48
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,setup,Magic Number,The method contains a magic number: 208,20
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,setup,Magic Number,The method contains a magic number: 5,20
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,setup,Magic Number,The method contains a magic number: 15,20
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKey,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"set\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 2`\n"+ " \"key\": \"/message\"`\n"+ " \"modifiedIndex\": 2`\n"+ " \"value\": \"Hello world\"\n"+ " }\n"+ "}").getBytes()));" is 284.,29
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKey,Magic Number,The method contains a magic number: 2,29
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKey,Magic Number,The method contains a magic number: 2,29
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKey,Magic Number,The method contains a magic number: 208,29
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKey,Magic Number,The method contains a magic number: 5,29
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKey,Magic Number,The method contains a magic number: 15,29
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetKey,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"get\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 2`\n"+ " \"key\": \"/message\"`\n"+ " \"modifiedIndex\": 2`\n"+ " \"value\": \"Hello world\"\n"+ " }\n"+ "}").getBytes()));" is 284.,53
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetKey,Magic Number,The method contains a magic number: 2,53
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetKey,Magic Number,The method contains a magic number: 2,53
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseChangeKey,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"set\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 3`\n"+ " \"key\": \"/message\"`\n"+ " \"modifiedIndex\": 3`\n"+ " \"value\": \"Hello etcd\"\n"+ " }`\n"+ " \"prevNode\": {\n"+ " \"createdIndex\": 2`\n"+ " \"key\": \"/message\"`\n"+ " \"value\": \"Hello world\"`\n"+ " \"modifiedIndex\": 2\n"+ " }\n"+ "}").getBytes()));" is 431.,72
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseChangeKey,Magic Number,The method contains a magic number: 3,72
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseChangeKey,Magic Number,The method contains a magic number: 3,72
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseChangeKey,Magic Number,The method contains a magic number: 2,72
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseChangeKey,Magic Number,The method contains a magic number: 2,72
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseDeleteKey,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"delete\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 3`\n"+ " \"key\": \"/message\"`\n"+ " \"modifiedIndex\": 4\n"+ " }`\n"+ " \"prevNode\": {\n"+ " \"key\": \"/message\"`\n"+ " \"value\": \"Hello etcd\"`\n"+ " \"modifiedIndex\": 3`\n"+ " \"createdIndex\": 3\n"+ " }\n"+ "}").getBytes()));" is 400.,102
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseDeleteKey,Magic Number,The method contains a magic number: 3,102
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseDeleteKey,Magic Number,The method contains a magic number: 4,102
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseDeleteKey,Magic Number,The method contains a magic number: 3,102
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseDeleteKey,Magic Number,The method contains a magic number: 3,102
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKeyTtl,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"set\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 5`\n"+ " \"expiration\": \"2013-12-04T12:01:21.874888581-08:00\"`\n"+ " \"key\": \"/foo\"`\n"+ " \"modifiedIndex\": 5`\n"+ " \"ttl\": 5`\n"+ " \"value\": \"bar\"\n"+ " }\n"+ "}").getBytes()));" is 353.,130
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKeyTtl,Magic Number,The method contains a magic number: 5,130
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKeyTtl,Magic Number,The method contains a magic number: 5,130
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseSetKeyTtl,Magic Number,The method contains a magic number: 5,130
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseTtlExpiredException,Long Statement,The length of the statement "EtcdException e=EtcdException.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"cause\": \"/foo\"`\n" + " \"errorCode\": 100`\n"+ " \"index\": 6`\n"+ " \"message\": \"Key Not Found\"\n"+ "}").getBytes()));" is 213.,153
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseTtlExpiredException,Magic Number,The method contains a magic number: 100,153
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseTtlExpiredException,Magic Number,The method contains a magic number: 6,153
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseUpdateKeyTtl,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"update\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 5`\n"+ " \"key\": \"/foo\"`\n"+ " \"modifiedIndex\": 6`\n"+ " \"value\": \"bar\"\n"+ " }`\n"+ " \"prevNode\": {\n"+ " \"createdIndex\": 5`\n"+ " \"expiration\": \"2013-12-04T12:01:21.874888581-08:00\"`\n"+ " \"key\": \"/foo\"`\n"+ " \"modifiedIndex\": 5`\n"+ " \"ttl\": 3`\n"+ " \"value\": \"bar\"\n"+ " }\n"+ "}").getBytes()));" is 492.,168
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseUpdateKeyTtl,Magic Number,The method contains a magic number: 5,168
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseUpdateKeyTtl,Magic Number,The method contains a magic number: 6,168
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseUpdateKeyTtl,Magic Number,The method contains a magic number: 5,168
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseUpdateKeyTtl,Magic Number,The method contains a magic number: 5,168
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseUpdateKeyTtl,Magic Number,The method contains a magic number: 3,168
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCreateKey,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"create\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 6`\n"+ " \"key\": \"/queue/6\"`\n"+ " \"modifiedIndex\": 6`\n"+ " \"value\": \"Job1\"\n"+ " }\n"+ "}").getBytes()));" is 280.,202
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCreateKey,Magic Number,The method contains a magic number: 6,202
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCreateKey,Magic Number,The method contains a magic number: 6,202
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"get\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 2`\n"+ " \"dir\": true`\n"+ " \"key\": \"/queue\"`\n"+ " \"modifiedIndex\": 2`\n"+ " \"nodes\": [\n"+ " {\n"+ " \"createdIndex\": 2`\n"+ " \"key\": \"/queue/2\"`\n"+ " \"modifiedIndex\": 2`\n"+ " \"value\": \"Job1\"\n"+ " }`\n"+ " {\n"+ " \"createdIndex\": 3`\n"+ " \"key\": \"/queue/3\"`\n"+ " \"modifiedIndex\": 3`\n"+ " \"value\": \"Job2\"\n"+ " }\n"+ " ]\n"+ " }\n"+ "}").getBytes()));" is 550.,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Magic Number,The method contains a magic number: 2,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Magic Number,The method contains a magic number: 2,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Magic Number,The method contains a magic number: 2,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Magic Number,The method contains a magic number: 2,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Magic Number,The method contains a magic number: 2,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Magic Number,The method contains a magic number: 3,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseGetOrderedKeys,Magic Number,The method contains a magic number: 3,221
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseExpiredDir,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"expire\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 8`\n"+ " \"key\": \"/dir\"`\n"+ " \"modifiedIndex\": 15\n"+ " }`\n"+ " \"prevNode\": {\n"+ " \"createdIndex\": 8`\n"+ " \"key\": \"/dir\"`\n"+ " \"dir\":true`\n"+ " \"modifiedIndex\": 17`\n"+ " \"expiration\": \"2013-12-11T10:39:35.689275857-08:00\"\n"+ " }\n"+ "}").getBytes()));" is 444.,267
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseExpiredDir,Magic Number,The method contains a magic number: 8,267
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseExpiredDir,Magic Number,The method contains a magic number: 15,267
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseExpiredDir,Magic Number,The method contains a magic number: 8,267
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseExpiredDir,Magic Number,The method contains a magic number: 17,267
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndSwap,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"compareAndSwap\"`\n" + " \"node\": {\n"+ " \"createdIndex\": 8`\n"+ " \"key\": \"/foo\"`\n"+ " \"modifiedIndex\": 9`\n"+ " \"value\": \"two\"\n"+ " }`\n"+ " \"prevNode\": {\n"+ " \"createdIndex\": 8`\n"+ " \"key\": \"/foo\"`\n"+ " \"modifiedIndex\": 8`\n"+ " \"value\": \"one\"\n"+ " }\n"+ "}").getBytes()));" is 419.,299
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndSwap,Magic Number,The method contains a magic number: 8,299
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndSwap,Magic Number,The method contains a magic number: 9,299
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndSwap,Magic Number,The method contains a magic number: 8,299
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndSwap,Magic Number,The method contains a magic number: 8,299
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndDelete,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"compareAndDelete\"`\n" + " \"node\": {\n"+ " \"key\": \"/foo\"`\n"+ " \"modifiedIndex\": 9`\n"+ " \"createdIndex\": 8\n"+ " }`\n"+ " \"prevNode\": {\n"+ " \"key\": \"/foo\"`\n"+ " \"value\": \"one\"`\n"+ " \"modifiedIndex\": 8`\n"+ " \"createdIndex\": 8\n"+ " }\n"+ "}").getBytes()));" is 395.,329
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndDelete,Magic Number,The method contains a magic number: 8,329
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndDelete,Magic Number,The method contains a magic number: 9,329
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndDelete,Magic Number,The method contains a magic number: 8,329
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseCompareAndDelete,Magic Number,The method contains a magic number: 8,329
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseRecursiveGet,Long Statement,The length of the statement "EtcdKeysResponse action=EtcdKeysResponse.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"action\": \"get\"`\n" + " \"node\": {\n"+ " \"dir\": true`\n"+ " \"key\": \"/\"`\n"+ " \"nodes\": [\n"+ " {\n"+ " \"createdIndex\": 2`\n"+ " \"dir\": true`\n"+ " \"key\": \"/foo_dir\"`\n"+ " \"modifiedIndex\": 2`\n"+ " \"nodes\": [\n"+ " {\n"+ " \"createdIndex\": 2`\n"+ " \"key\": \"/foo_dir/foo\"`\n"+ " \"modifiedIndex\": 2`\n"+ " \"value\": \"bar\"\n"+ " }\n"+ " ]\n"+ " }\n"+ " ]\n"+ " }\n"+ "}").getBytes()));" is 514.,357
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseRecursiveGet,Magic Number,The method contains a magic number: 2,357
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseRecursiveGet,Magic Number,The method contains a magic number: 2,357
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseRecursiveGet,Magic Number,The method contains a magic number: 2,357
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testParseRecursiveGet,Magic Number,The method contains a magic number: 2,357
+jurmous_etcd4j,mousio.etcd4j.responses,EtcdKeysResponseParserTest,testErrorCode,Long Statement,The length of the statement "EtcdException e=EtcdException.DECODER.decode(headers`Unpooled.copiedBuffer(("{\n" + " \"errorCode\": 105`\n" + " \"message\": \"Key already exists\"`\n"+ " \"cause\": \"/foo/bar\"`\n"+ " \"index\": 1024\n"+ "}").getBytes()));" is 225.,399
+jurmous_etcd4j,mousio.etcd4j.requests,AbstractEtcdRequest,AbstractEtcdRequest,Long Parameter List,The method has 5 parameters. ,32
+jurmous_etcd4j,mousio.client.util,SRV2URIs,fromDNSName,Magic Number,The method contains a magic number: 2,46
+jurmous_etcd4j,mousio.client.util,SRV2URIs,fromDNSName,Magic Number,The method contains a magic number: 3,46
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,cleanup,Empty catch clause,The method has an empty catch block.,53
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,setUp,Magic Number,The method contains a magic number: 20,68
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,setUp,Magic Number,The method contains a magic number: 4,68
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,setUp,Magic Number,The method contains a magic number: 10000,68
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testPutJson,Magic Number,The method contains a magic number: 5,87
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testGetPartialJson,Magic Number,The method contains a magic number: 2,114
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testGetAndPut,Long Statement,The length of the statement "Map<String`Object> rootFlat=new JsonFlattener(EtcdUtil.jsonToString(original)).withFlattenMode(FlattenMode.MONGODB).withSeparator('/').flattenAsMap();" is 150.,122
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testGetAndPut,Long Statement,The length of the statement "Map<String`Object> testFlat=new JsonFlattener(EtcdUtil.jsonToString(fromEtcd)).withFlattenMode(FlattenMode.MONGODB).withSeparator('/').flattenAsMap();" is 150.,122
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testGetAndPut,Magic Number,The method contains a magic number: 1024,122
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testGetAndPut,Magic Number,The method contains a magic number: 1024,122
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testGetJsonArray,Magic Number,The method contains a magic number: 2,155
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testRemoveJsonArray,Magic Number,The method contains a magic number: 2,166
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testRemoveConfigurationObject,Magic Number,The method contains a magic number: 2,185
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testUpdateJsonValues,Long Statement,The length of the statement "assertEquals(EtcdUtil.jsonToString(fromEtcd.at("/widget/window"))`EtcdUtil.jsonToString(EtcdUtil.getAsJson("/etcd4j_test/widget/window"`etcd)));" is 144.,202
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testUpdateJsonValues,Long Statement,The length of the statement "assertEquals(EtcdUtil.jsonToString(fromEtcd.at("/widget/text"))`EtcdUtil.jsonToString(EtcdUtil.getAsJson("/etcd4j_test/widget/text"`etcd)));" is 140.,202
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testUpdateConfigurationArray,Magic Number,The method contains a magic number: 2,246
+jurmous_etcd4j,mousio.client.util,EtcdJsonTest,testUpdateConfigurationArray,Magic Number,The method contains a magic number: 4,246
+jurmous_etcd4j,mousio.client.util,SRV2URIsTest,testFromDNSName,Long Statement,The length of the statement "List<URI> toFind=new ArrayList<>(Arrays.asList(URI.create("http://test1.nl:4001")`URI.create("http://test2.nl:4001")`URI.create("http://test3.nl:4001")));" is 154.,15
+jurmous_etcd4j,mousio.client,ConnectionState,toString,Long Statement,The length of the statement "StringBuilder builder=new StringBuilder("ConnectionState [").append("\nretryCount=").append(retryCount).append("` ").append("\nuriIndex=").append(uriIndex).append("` ").append("\nmsBeforeRetry=").append(msBeforeRetry).append("` ").append("\nstartTime=").append(startTime);" is 272.,49
+jurmous_etcd4j,mousio.client.retry,RetryWithExponentialBackOff,RetryWithExponentialBackOff,Magic Number,The method contains a magic number: 5000,29
+jurmous_etcd4j,mousio.client.retry,RetryWithExponentialBackOff,shouldRetry,Magic Number,The method contains a magic number: 2,59
+jurmous_etcd4j,mousio.etcd4j.support,EtcdContainer,EtcdContainer,Long Parameter List,The method has 6 parameters. ,53
+jurmous_etcd4j,mousio.etcd4j.support,EtcdContainer,EtcdContainer,Long Statement,The length of the statement "this.container.withClasspathResourceMapping("ssl/cert/" + name + ".pem"`"/etc/ssl/etcd/server.pem"`BindMode.READ_ONLY`SelinuxContext.SHARED);" is 141.,53
+jurmous_etcd4j,mousio.etcd4j.support,EtcdContainer,EtcdContainer,Long Statement,The length of the statement "this.container.withClasspathResourceMapping("ssl/cert/" + name + "-key.pem"`"/etc/ssl/etcd/server-key.pem"`BindMode.READ_ONLY`SelinuxContext.SHARED);" is 149.,53
+jurmous_etcd4j,mousio.etcd4j.support,EtcdContainer,waitStrategy,Long Statement,The length of the statement "waitingConsumer.waitUntil(f -> f.getUtf8String().contains("etcdserver: published")`startupTimeout.getSeconds()`TimeUnit.SECONDS`1);" is 131.,147
+jurmous_etcd4j,mousio.etcd4j.support,EtcdContainer,waitUntilReady,Long Statement,The length of the statement "waitingConsumer.waitUntil(f -> f.getUtf8String().contains("etcdserver: published")`startupTimeout.getSeconds()`TimeUnit.SECONDS`1);" is 131.,149
+jurmous_etcd4j,mousio.etcd4j.support,EtcdContainer,logConsumer,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@27ae4c06,170
+jurmous_etcd4j,mousio.etcd4j.support,EtcdClusterFactory,buildCluster,Long Statement,The length of the statement "final List<EtcdContainer> containers=endpoints.stream().map(e -> new EtcdContainer(network`listener`ssl`clusterName`e`endpoints)).collect(toList());" is 148.,31

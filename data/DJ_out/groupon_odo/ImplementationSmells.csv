@@ -1,0 +1,727 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+groupon_odo,com.groupon.odo.sample,SampleClient,getHistory,Magic Number,The method contains a magic number: 100,96
+groupon_odo,com.groupon.odo.sample,Status,http404,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`"{\"error\":{\"httpCode\":404`\"message\":\"Testing http 404 Error message here\"}}");" is 129.,25
+groupon_odo,com.groupon.odo.sample,Status,http404,Magic Number,The method contains a magic number: 404,25
+groupon_odo,com.groupon.odo.sample,Common,http302,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusFound`"\"<html><body>You are being redirected.</body></html>\""));" is 144.,41
+groupon_odo,com.groupon.odo.sample,Common,http400,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusBadReq`String.format(Constants.defaultErrorMessage`Constants.statusBadReq)));" is 155.,51
+groupon_odo,com.groupon.odo.sample,Common,http401,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusUnauthorized`String.format(Constants.defaultErrorMessage`Constants.statusUnauthorized)));" is 167.,62
+groupon_odo,com.groupon.odo.sample,Common,http403,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusForbidden`String.format(Constants.defaultErrorMessage`Constants.statusForbidden)));" is 161.,73
+groupon_odo,com.groupon.odo.sample,Common,http404,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusNotFound`String.format(Constants.defaultErrorMessage`Constants.statusNotFound)));" is 159.,84
+groupon_odo,com.groupon.odo.sample,Common,http408,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusRequestTimeOut`String.format(Constants.defaultErrorMessage`Constants.statusRequestTimeOut)));" is 171.,95
+groupon_odo,com.groupon.odo.sample,Common,http500,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusInternalServerError`String.format(Constants.defaultErrorMessage`Constants.statusInternalServerError)));" is 181.,106
+groupon_odo,com.groupon.odo.sample,Common,http503,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusServiceUnavailable`"\"<html><body><h1>\" + Constants.statusServiceUnavailable + \" Service Unavailable</h1> No server is available to handle this request.</body></html>\""));" is 252.,117
+groupon_odo,com.groupon.odo.sample,Common,http201,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusCreated`String.format(Constants.defaultErrorMessage`Constants.statusCreated)));" is 157.,128
+groupon_odo,com.groupon.odo.sample,Common,malformed_json,Long Statement,The length of the statement "PluginHelper.writeResponseContent(response`createErrorMessage(Constants.statusCreated`"\"{\"hello\": [thisismalformedjson}\""));" is 128.,148
+groupon_odo,com.groupon.odo.sample,Common,process_json_value,Complex Conditional,The conditional expression startIndex == -1 || endIndex == -1 || endIndex <= startIndex is complex.,201
+groupon_odo,com.groupon.odo.sample,Common,process_json_value,Empty catch clause,The method has an empty catch block.,201
+groupon_odo,com.groupon.odo.sample,Common,process_json_value,Empty catch clause,The method has an empty catch block.,201
+groupon_odo,com.groupon.odo.sample,Common,process_json_value,Long Parameter List,The method has 5 parameters. ,201
+groupon_odo,com.groupon.odo,RemoveHeaderFilter,doFilter,Long Statement,The length of the statement "if (r1.getAttribute("com.groupon.odo.removeHeaders") != null) headersToRemove=(ArrayList<String>)r1.getAttribute("com.groupon.odo.removeHeaders");" is 146.,25
+groupon_odo,com.groupon.odo,RemoveHeaderFilter,setHeader,Long Statement,The length of the statement "if (r1.getAttribute("com.groupon.odo.removeHeaders") != null) headersToRemove=(ArrayList<String>)r1.getAttribute("com.groupon.odo.removeHeaders");" is 146.,32
+groupon_odo,com.groupon.odo,HttpUtilities,getHostNameFromURL,Magic Number,The method contains a magic number: 2,87
+groupon_odo,com.groupon.odo,HttpUtilities,getPortFromURL,Magic Number,The method contains a magic number: 80,107
+groupon_odo,com.groupon.odo,HttpUtilities,getPortFromURL,Magic Number,The method contains a magic number: 443,107
+groupon_odo,com.groupon.odo,HttpUtilities,getPortFromURL,Magic Number,The method contains a magic number: 2,107
+groupon_odo,com.groupon.odo,HttpUtilities,mapUrlEncodedParameters,Complex Method,Cyclomatic complexity of the method is 9,146
+groupon_odo,com.groupon.odo,HttpUtilities,handleMultipartPost,Long Identifier,The length of the field STRING_CONTENT_TYPE_HEADER_NAME is 31.,341
+groupon_odo,com.groupon.odo,HttpUtilities,handleMultipartPost,Long Statement,The length of the statement "postMethodProxyRequestBuilder.setHeader(STRING_CONTENT_TYPE_HEADER_NAME`httpServletRequest.getHeader(STRING_CONTENT_TYPE_HEADER_NAME));" is 135.,341
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Complex Conditional,The conditional expression httpServletRequest.getContentType() != null && httpServletRequest.getContentType().contains(STRING_CONTENT_TYPE_FORM_URLENCODED) && httpServletRequest.getHeader("content-encoding") == null is complex.,367
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Complex Method,Cyclomatic complexity of the method is 11,367
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Long Identifier,The length of the field STRING_CONTENT_TYPE_FORM_URLENCODED is 35.,367
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Long Identifier,The length of the field STRING_CONTENT_TYPE_MESSAGEPACK is 31.,367
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Long Statement,The length of the statement "if (httpServletRequest.getContentType() != null && httpServletRequest.getContentType().contains(STRING_CONTENT_TYPE_FORM_URLENCODED) && httpServletRequest.getHeader("content-encoding") == null) {" is 195.,367
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Long Statement,The length of the statement "else if (httpServletRequest.getContentType() != null && httpServletRequest.getContentType().contains(STRING_CONTENT_TYPE_MESSAGEPACK)) {" is 136.,367
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Long Statement,The length of the statement "String requestBodyString=PluginHelper.getByteArrayDataAsString(httpServletRequest.getHeader("content-encoding")`requestByteArray);" is 130.,367
+groupon_odo,com.groupon.odo,HttpUtilities,handleStandardPost,Long Statement,The length of the statement "if (httpServletRequest.getContentType() != null && httpServletRequest.getContentType().contains(STRING_CONTENT_TYPE_MESSAGEPACK)) {" is 131.,367
+groupon_odo,com.groupon.odo,Proxy,doGet,Empty catch clause,The method has an empty catch block.,156
+groupon_odo,com.groupon.odo,Proxy,doGet,Long Statement,The length of the statement "response.sendRedirect("http://" + Utils.getPublicIPAddress() + ":"+ Utils.getSystemPort(Constants.SYS_API_PORT)+ "/testproxy/cert");" is 132.,156
+groupon_odo,com.groupon.odo,Proxy,doPost,Empty catch clause,The method has an empty catch block.,225
+groupon_odo,com.groupon.odo,Proxy,doPut,Empty catch clause,The method has an empty catch block.,274
+groupon_odo,com.groupon.odo,Proxy,doDelete,Empty catch clause,The method has an empty catch block.,322
+groupon_odo,com.groupon.odo,Proxy,doPatch,Empty catch clause,The method has an empty catch block.,355
+groupon_odo,com.groupon.odo,Proxy,setProxyRequestHeaders,Complex Method,Cyclomatic complexity of the method is 9,435
+groupon_odo,com.groupon.odo,Proxy,setProxyRequestHeaders,Long Identifier,The length of the field STRING_CONTENT_LENGTH_HEADER_NAME is 33.,435
+groupon_odo,com.groupon.odo,Proxy,setProxyRequestHeaders,Long Statement,The length of the statement "if (stringHeaderName.equalsIgnoreCase("ODO-POST-TYPE") && httpServletRequest.getHeader("ODO-POST-TYPE").startsWith("content-length:")) {" is 136.,435
+groupon_odo,com.groupon.odo,Proxy,processClientId,Long Statement,The length of the statement "if (httpServletRequest.getHeader(Constants.PROFILE_CLIENT_HEADER_NAME) != null && !httpServletRequest.getHeader(Constants.PROFILE_CLIENT_HEADER_NAME).equals("")) {" is 163.,556
+groupon_odo,com.groupon.odo,Proxy,getApplicablePathNames,Long Statement,The length of the statement "applicablePaths=PathOverrideService.getInstance().getSelectedPaths(Constants.OVERRIDE_TYPE_REQUEST`requestInfo.client`requestInfo.profile`requestUrl + "?" + requestInfo.originalRequestInfo.getQueryString()`requestType`true);" is 224.,574
+groupon_odo,com.groupon.odo,Proxy,getProxyURL,Complex Conditional,The conditional expression (trySelectedRequestPaths.size() > 0 || trySelectedResponsePaths.size() > 0) || tryClient.getIsActive() || requestInfo.profile == null is complex.,601
+groupon_odo,com.groupon.odo,Proxy,getProxyURL,Complex Method,Cyclomatic complexity of the method is 8,601
+groupon_odo,com.groupon.odo,Proxy,getProxyURL,Long Statement,The length of the statement "if (ServerRedirectService.getInstance().canHandleRequest(HttpUtilities.getHostNameFromURL(httpServletRequest.getRequestURL().toString()))) {" is 140.,601
+groupon_odo,com.groupon.odo,Proxy,getProxyURL,Long Statement,The length of the statement "List<EndpointOverride> trySelectedRequestPaths=PathOverrideService.getInstance().getSelectedPaths(Constants.OVERRIDE_TYPE_REQUEST`tryClient`tryProfile`httpServletRequest.getRequestURL() + queryString`requestType`false);" is 219.,601
+groupon_odo,com.groupon.odo,Proxy,getProxyURL,Long Statement,The length of the statement "List<EndpointOverride> trySelectedResponsePaths=PathOverrideService.getInstance().getSelectedPaths(Constants.OVERRIDE_TYPE_RESPONSE`tryClient`tryProfile`httpServletRequest.getRequestURL() + queryString`requestType`false);" is 221.,601
+groupon_odo,com.groupon.odo,Proxy,getProxyURL,Long Statement,The length of the statement "if ((trySelectedRequestPaths.size() > 0 || trySelectedResponsePaths.size() > 0) || tryClient.getIsActive() || requestInfo.profile == null) {" is 140.,601
+groupon_odo,com.groupon.odo,Proxy,getProxyURL,Long Statement,The length of the statement "logger.info("Selected {}` {}` " + httpServletRequest.getRequestURL() + "?"+ httpServletRequest.getQueryString()`tryProfile.getName()`tryClient.getId());" is 152.,601
+groupon_odo,com.groupon.odo,Proxy,processQueryStrings,Complex Method,Cyclomatic complexity of the method is 15,742
+groupon_odo,com.groupon.odo,Proxy,processQueryStrings,Long Statement,The length of the statement "List<EnabledEndpoint> overrides=OverrideService.getInstance().getEnabledEndpoints(selectedPath.getPathId()`selectedPath.getClientUUID()`null);" is 142.,742
+groupon_odo,com.groupon.odo,Proxy,hasRequestBlock,Long Statement,The length of the statement "com.groupon.odo.proxylib.models.Method methodInfo=PathOverrideService.getInstance().getMethodForEnabledId(endpoint.getOverrideId());" is 132.,861
+groupon_odo,com.groupon.odo,Proxy,executeProxyRequest,Long Statement,The length of the statement "logger.error("Request has looped back into the proxy. This will not be executed: {}"`httpServletRequest.getRequestURL());" is 121.,919
+groupon_odo,com.groupon.odo,Proxy,executeRequest,Complex Method,Cyclomatic complexity of the method is 10,982
+groupon_odo,com.groupon.odo,Proxy,executeRequest,Long Statement,The length of the statement "RequestConfig.Builder requestConfigBuilder=RequestConfig.custom().setCookieSpec(CookieSpecs.DEFAULT).setRedirectsEnabled(false).setSocketTimeout(60000);" is 152.,982
+groupon_odo,com.groupon.odo,Proxy,executeRequest,Long Statement,The length of the statement "CloseableHttpClient httpClient=HttpClientBuilder.create().disableAutomaticRetries().setDefaultRequestConfig(requestConfigBuilder.build()).build();" is 146.,982
+groupon_odo,com.groupon.odo,Proxy,executeRequest,Magic Number,The method contains a magic number: 60000,982
+groupon_odo,com.groupon.odo,Proxy,executeRequest,Magic Number,The method contains a magic number: 504,982
+groupon_odo,com.groupon.odo,Proxy,executeRequest,Magic Number,The method contains a magic number: 1000,982
+groupon_odo,com.groupon.odo,Proxy,logRequestHistory,Long Statement,The length of the statement "String queryString=parameters.size() == 0 ? "" : parameters.stream().map((nameValuePair -> nameValuePair.getName() + " :" + nameValuePair.getValue())).collect(Collectors.joining("`"));" is 184.,1122
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Complex Conditional,The conditional expression endpoint.getMethodInformation() != null && (endpoint.getMethodInformation().getMethodType().equals(Constants.PLUGIN_TYPE_RESPONSE_OVERRIDE) || endpoint.getMethodInformation().getMethodType().equals(Constants.PLUGIN_TYPE_RESPONSE_OVERRIDE_V2)) is complex.,1160
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Complex Method,Cyclomatic complexity of the method is 12,1160
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Long Statement,The length of the statement "else if (endpoint.getMethodInformation() != null && (endpoint.getMethodInformation().getMethodType().equals(Constants.PLUGIN_TYPE_RESPONSE_OVERRIDE) || endpoint.getMethodInformation().getMethodType().equals(Constants.PLUGIN_TYPE_RESPONSE_OVERRIDE_V2))) {" is 254.,1160
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Long Statement,The length of the statement "com.groupon.odo.proxylib.models.Method methodInfo=PathOverrideService.getInstance().getMethodForEnabledId(endpoint.getOverrideId());" is 132.,1160
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Long Statement,The length of the statement "String responseOutput=(String)PluginManager.getInstance().callFunction(methodInfo.getClassName()`methodInfo.getMethodName()`httpServletResponse.getContentString()`endpoint.getArguments());" is 188.,1160
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Long Statement,The length of the statement "PluginArguments pluginArgs=new PluginArguments(httpServletResponse`requestInfo.originalRequestInfo`httpMethodProxyRequestBuilder);" is 130.,1160
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Long Statement,The length of the statement "PluginManager.getInstance().callFunction(methodInfo.getClassName()`methodInfo.getMethodName()`pluginArgs`endpoint.getArguments());" is 130.,1160
+groupon_odo,com.groupon.odo,Proxy,applyResponseOverrides,Magic Number,The method contains a magic number: 2,1160
+groupon_odo,com.groupon.odo,Proxy,writeResponseOutput,Long Statement,The length of the statement "if (httpServletResponse.containsHeader(HttpUtilities.STRING_TRANSFER_ENCODING) && httpServletResponse.getHeader(HttpUtilities.STRING_TRANSFER_ENCODING).compareTo("chunked") == 0) {" is 180.,1253
+groupon_odo,com.groupon.odo,Proxy,getProxyHostAndPort,Magic Number,The method contains a magic number: 80,1296
+groupon_odo,com.groupon.odo,Proxy,stripJSONPToOutstr,Magic Number,The method contains a magic number: 2,1336
+groupon_odo,com.groupon.odo.proxylib,Utils,getJQGridJSON,Long Parameter List,The method has 5 parameters. ,81
+groupon_odo,com.groupon.odo.proxylib,Utils,copyResourceToLocalFile,Magic Number,The method contains a magic number: 512,93
+groupon_odo,com.groupon.odo.proxylib,Utils,getPublicIPAddress,Complex Conditional,The conditional expression (!i.isLoopbackAddress() && i.isSiteLocalAddress()) || i.getHostAddress().matches(IPV4_REGEX) is complex.,157
+groupon_odo,com.groupon.odo.proxylib,ClientService,findAllClients,Empty catch clause,The method has an empty catch block.,53
+groupon_odo,com.groupon.odo.proxylib,ClientService,findAllClients,Empty catch clause,The method has an empty catch block.,53
+groupon_odo,com.groupon.odo.proxylib,ClientService,findAllClients,Long Statement,The length of the statement "query=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_CLIENT + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?");" is 133.,53
+groupon_odo,com.groupon.odo.proxylib,ClientService,getClient,Empty catch clause,The method has an empty catch block.,95
+groupon_odo,com.groupon.odo.proxylib,ClientService,getClient,Empty catch clause,The method has an empty catch block.,95
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClient,Complex Method,Cyclomatic complexity of the method is 9,138
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClient,Empty catch clause,The method has an empty catch block.,138
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClient,Empty catch clause,The method has an empty catch block.,138
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClient,Long Statement,The length of the statement "if (clientUUID.compareTo(Constants.PROFILE_CLIENT_DEFAULT_ID) != 0 && !clientUUID.matches("[\\w]{8}-[\\w]{4}-[\\w]{4}-[\\w]{4}-[\\w]{12}")) {" is 141.,138
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClient,Magic Number,The method contains a magic number: 2,138
+groupon_odo,com.groupon.odo.proxylib,ClientService,getUniqueClientUUID,Empty catch clause,The method has an empty catch block.,229
+groupon_odo,com.groupon.odo.proxylib,ClientService,getUniqueClientUUID,Empty catch clause,The method has an empty catch block.,229
+groupon_odo,com.groupon.odo.proxylib,ClientService,getUniqueClientUUID,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_CLIENT + " WHERE "+ Constants.GENERIC_CLIENT_UUID+ " = ?");" is 138.,229
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Complex Method,Cyclomatic complexity of the method is 9,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Empty catch clause,The method has an empty catch block.,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Empty catch clause,The method has an empty catch block.,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT COUNT(" + Constants.GENERIC_ID + ") FROM "+ Constants.DB_TABLE_CLIENT+ " WHERE "+ Constants.GENERIC_PROFILE_ID+ "=?");" is 167.,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Long Statement,The length of the statement "throw new Exception("Profile(" + profileId + ") already contains 50 clients. Please remove clients before adding new ones.");" is 125.,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_CLIENT + " ("+ Constants.CLIENT_CLIENT_UUID+ "` "+ Constants.CLIENT_IS_ACTIVE+ "` "+ Constants.CLIENT_PROFILE_ID+ ")"+ " VALUES (?` ?` ?)"`Statement.RETURN_GENERATED_KEYS);" is 249.,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_REQUEST_RESPONSE + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ " = ?");" is 195.,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Magic Number,The method contains a magic number: 2,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Magic Number,The method contains a magic number: 3,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,add,Magic Number,The method contains a magic number: 2,266
+groupon_odo,com.groupon.odo.proxylib,ClientService,setFriendlyName,Empty catch clause,The method has an empty catch block.,373
+groupon_odo,com.groupon.odo.proxylib,ClientService,setFriendlyName,Empty catch clause,The method has an empty catch block.,373
+groupon_odo,com.groupon.odo.proxylib,ClientService,setFriendlyName,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_CLIENT + " SET "+ Constants.CLIENT_FRIENDLY_NAME+ " = ?"+ " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = ?"+ " AND "+ Constants.GENERIC_PROFILE_ID+ " = ?");" is 226.,373
+groupon_odo,com.groupon.odo.proxylib,ClientService,setFriendlyName,Magic Number,The method contains a magic number: 2,373
+groupon_odo,com.groupon.odo.proxylib,ClientService,setFriendlyName,Magic Number,The method contains a magic number: 3,373
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClientFromFriendlyName,Empty catch clause,The method has an empty catch block.,421
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClientFromFriendlyName,Empty catch clause,The method has an empty catch block.,421
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClientFromFriendlyName,Long Statement,The length of the statement "String queryString="SELECT * FROM " + Constants.DB_TABLE_CLIENT + " WHERE "+ Constants.CLIENT_FRIENDLY_NAME+ " = ?"+ " AND "+ Constants.GENERIC_PROFILE_ID+ " = ?";" is 163.,421
+groupon_odo,com.groupon.odo.proxylib,ClientService,findClientFromFriendlyName,Magic Number,The method contains a magic number: 2,421
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_CLIENT + " WHERE "+ Constants.GENERIC_CLIENT_UUID+ " = ?"+ " AND "+ Constants.CLIENT_PROFILE_ID+ "= ?");" is 183.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Long Statement,The length of the statement "String queryString="DELETE FROM " + Constants.DB_TABLE_CLIENT + " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = ? "+ " AND "+ Constants.CLIENT_PROFILE_ID+ " = ?";" is 159.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_REQUEST_RESPONSE + " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = ? "+ " AND "+ Constants.CLIENT_PROFILE_ID+ " = ?");" is 192.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = ? "+ " AND "+ Constants.CLIENT_PROFILE_ID+ " = ?");" is 192.,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Magic Number,The method contains a magic number: 2,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Magic Number,The method contains a magic number: 2,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Magic Number,The method contains a magic number: 2,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,remove,Magic Number,The method contains a magic number: 2,472
+groupon_odo,com.groupon.odo.proxylib,ClientService,updateActive,Empty catch clause,The method has an empty catch block.,572
+groupon_odo,com.groupon.odo.proxylib,ClientService,updateActive,Empty catch clause,The method has an empty catch block.,572
+groupon_odo,com.groupon.odo.proxylib,ClientService,updateActive,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_CLIENT + " SET "+ Constants.CLIENT_IS_ACTIVE+ "= ?"+ " WHERE "+ Constants.GENERIC_CLIENT_UUID+ "= ? "+ " AND "+ Constants.GENERIC_PROFILE_ID+ "= ?");" is 221.,572
+groupon_odo,com.groupon.odo.proxylib,ClientService,updateActive,Magic Number,The method contains a magic number: 2,572
+groupon_odo,com.groupon.odo.proxylib,ClientService,updateActive,Magic Number,The method contains a magic number: 3,572
+groupon_odo,com.groupon.odo.proxylib,ClientService,reset,Empty catch clause,The method has an empty catch block.,605
+groupon_odo,com.groupon.odo.proxylib,ClientService,reset,Long Statement,The length of the statement "String queryString="DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.GENERIC_CLIENT_UUID+ "= ? "+ " AND "+ Constants.GENERIC_PROFILE_ID+ " = ?";" is 170.,605
+groupon_odo,com.groupon.odo.proxylib,ClientService,reset,Long Statement,The length of the statement "queryString="UPDATE " + Constants.DB_TABLE_REQUEST_RESPONSE + " SET "+ Constants.REQUEST_RESPONSE_CUSTOM_REQUEST+ "=?` "+ Constants.REQUEST_RESPONSE_CUSTOM_RESPONSE+ "=?` "+ Constants.REQUEST_RESPONSE_REPEAT_NUMBER+ "=-1` "+ Constants.REQUEST_RESPONSE_REQUEST_ENABLED+ "=0` "+ Constants.REQUEST_RESPONSE_RESPONSE_ENABLED+ "=0 "+ "WHERE "+ Constants.GENERIC_CLIENT_UUID+ "=? "+ " AND "+ Constants.GENERIC_PROFILE_ID+ "=?";" is 421.,605
+groupon_odo,com.groupon.odo.proxylib,ClientService,reset,Magic Number,The method contains a magic number: 2,605
+groupon_odo,com.groupon.odo.proxylib,ClientService,reset,Magic Number,The method contains a magic number: 2,605
+groupon_odo,com.groupon.odo.proxylib,ClientService,reset,Magic Number,The method contains a magic number: 3,605
+groupon_odo,com.groupon.odo.proxylib,ClientService,reset,Magic Number,The method contains a magic number: 4,605
+groupon_odo,com.groupon.odo.proxylib,ClientService,getIdFromClientUUID,Long Statement,The length of the statement "return (Integer)sqlService.getFromTable(Constants.GENERIC_ID`Constants.CLIENT_CLIENT_UUID`uuid`Constants.DB_TABLE_CLIENT);" is 122.,661
+groupon_odo,com.groupon.odo.proxylib,BackupService,getProfiles,Long Statement,The length of the statement "profile.setPaths(PathOverrideService.getInstance().getPaths(sourceProfile.getId()`Constants.PROFILE_CLIENT_DEFAULT_ID`null));" is 125.,102
+groupon_odo,com.groupon.odo.proxylib,BackupService,getProfileBackupData,Long Statement,The length of the statement "ServerGroup activeServerGroup=ServerRedirectService.getInstance().getServerGroup(backupClient.getActiveServerGroup()`profileID);" is 128.,125
+groupon_odo,com.groupon.odo.proxylib,BackupService,restoreBackupData,Complex Method,Cyclomatic complexity of the method is 23,200
+groupon_odo,com.groupon.odo.proxylib,BackupService,restoreBackupData,Long Method,The method has 129 lines of code.,200
+groupon_odo,com.groupon.odo.proxylib,BackupService,restoreBackupData,Long Statement,The length of the statement "if (originalMethod.getClassName().equals(importMethod.getClassName()) && originalMethod.getMethodName().equals(importMethod.getMethodName())) {" is 143.,200
+groupon_odo,com.groupon.odo.proxylib,BackupService,restoreBackupData,Long Statement,The length of the statement "ServerRedirectService.getInstance().addServerRedirect(server.getRegion()`server.getSrcUrl()`server.getDestUrl()`server.getHostHeader()`newProfile.getId()`0);" is 157.,200
+groupon_odo,com.groupon.odo.proxylib,BackupService,restoreBackupData,Long Statement,The length of the statement "ServerRedirectService.getInstance().addServerRedirect(server.getRegion()`server.getSrcUrl()`server.getDestUrl()`server.getHostHeader()`newProfile.getId()`groupId);" is 163.,200
+groupon_odo,com.groupon.odo.proxylib,BackupService,restoreBackupData,Long Statement,The length of the statement "for ( EndpointOverride path : PathOverrideService.getInstance().getPaths(newProfile.getId()`Constants.PROFILE_CLIENT_DEFAULT_ID`null)) {" is 136.,200
+groupon_odo,com.groupon.odo.proxylib,BackupService,restoreBackupData,Long Statement,The length of the statement "httpClient.getConnectionManager().getSchemeRegistry().register(new org.apache.http.conn.scheme.Scheme("https"`Integer.parseInt(parts[parts.length - 1])`sslsf));" is 160.,200
+groupon_odo,com.groupon.odo.proxylib,BackupService,getServerForName,Empty catch clause,The method has an empty catch block.,390
+groupon_odo,com.groupon.odo.proxylib,BackupService,getConnectorStrings,Empty catch clause,The method has an empty catch block.,416
+groupon_odo,com.groupon.odo.proxylib,BackupService,setProfileFromBackup,Complex Method,Cyclomatic complexity of the method is 10,462
+groupon_odo,com.groupon.odo.proxylib,BackupService,setProfileFromBackup,Long Statement,The length of the statement "errors.put(formErrorJson("Server Error"`"Cannot change to '" + activeServerGroup.getString(Constants.NAME) + "' - Check Server Group Exists"));" is 143.,462
+groupon_odo,com.groupon.odo.proxylib,BackupService,setProfileFromBackup,Long Statement,The length of the statement "errors.put(formErrorJson("Path Error"`"Cannot update path: '" + path.getString(Constants.PATH_NAME) + "' - Check Path Exists"));" is 128.,462
+groupon_odo,com.groupon.odo.proxylib,BackupService,setProfileFromBackup,Long Statement,The length of the statement "overrideId=overrideService.getOverrideIdForMethod(methodInformation.getString(Constants.CLASS_NAME)`methodInformation.getString(Constants.METHOD_NAME));" is 152.,462
+groupon_odo,com.groupon.odo.proxylib,BackupService,setProfileFromBackup,Long Statement,The length of the statement "overrideService.updateRepeatNumber(overrideId`pathId`overrideOrdinal`override.getInt(Constants.REPEAT_NUMBER)`clientUUID);" is 122.,462
+groupon_odo,com.groupon.odo.proxylib,BackupService,setProfileFromBackup,Long Statement,The length of the statement "overrideService.updateResponseCode(overrideId`pathId`overrideOrdinal`override.getString(Constants.RESPONSE_CODE)`clientUUID);" is 125.,462
+groupon_odo,com.groupon.odo.proxylib,BackupService,setProfileFromBackup,Long Statement,The length of the statement "errors.put(formErrorJson("Override Error"`"Cannot add/update override: '" + overrideNameForError + "' - Check Override Exists"));" is 129.,462
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,findAllGroups,Empty catch clause,The method has an empty catch block.,65
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,findAllGroups,Empty catch clause,The method has an empty catch block.,65
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,findAllGroups,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_GROUPS + " ORDER BY "+ Constants.GROUPS_GROUP_NAME);" is 136.,65
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Empty catch clause,The method has an empty catch block.,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Empty catch clause,The method has an empty catch block.,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_PATH + "("+ Constants.PATH_PROFILE_PATHNAME+ "`"+ Constants.PATH_PROFILE_ACTUAL_PATH+ "`"+ Constants.PATH_PROFILE_GROUP_IDS+ "`"+ Constants.PATH_PROFILE_PROFILE_ID+ "`"+ Constants.PATH_PROFILE_PATH_ORDER+ "`"+ Constants.PATH_PROFILE_CONTENT_TYPE+ "`"+ Constants.PATH_PROFILE_REQUEST_TYPE+ "`"+ Constants.PATH_PROFILE_GLOBAL+ ")"+ " VALUES (?` ?` ?` ?` ?` ?` ?` ?);"`PreparedStatement.RETURN_GENERATED_KEYS);" is 484.,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Magic Number,The method contains a magic number: 2,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Magic Number,The method contains a magic number: 3,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Magic Number,The method contains a magic number: 4,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Magic Number,The method contains a magic number: 5,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Magic Number,The method contains a magic number: 6,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Magic Number,The method contains a magic number: 7,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathnameToProfile,Magic Number,The method contains a magic number: 8,105
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Empty catch clause,The method has an empty catch block.,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_REQUEST_RESPONSE + "("+ Constants.REQUEST_RESPONSE_PATH_ID+ "`"+ Constants.GENERIC_PROFILE_ID+ "`"+ Constants.GENERIC_CLIENT_UUID+ "`"+ Constants.REQUEST_RESPONSE_REPEAT_NUMBER+ "`"+ Constants.REQUEST_RESPONSE_RESPONSE_ENABLED+ "`"+ Constants.REQUEST_RESPONSE_REQUEST_ENABLED+ "`"+ Constants.REQUEST_RESPONSE_CUSTOM_RESPONSE+ "`"+ Constants.REQUEST_RESPONSE_CUSTOM_REQUEST+ ")"+ " VALUES (?` ?` ?` ?` ?` ?` ?` ?);");" is 493.,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Magic Number,The method contains a magic number: 2,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Magic Number,The method contains a magic number: 3,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Magic Number,The method contains a magic number: 4,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Magic Number,The method contains a magic number: 5,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Magic Number,The method contains a magic number: 6,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Magic Number,The method contains a magic number: 7,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addPathToRequestResponseTable,Magic Number,The method contains a magic number: 8,178
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathOrder,Empty catch clause,The method has an empty catch block.,221
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathOrder,Empty catch clause,The method has an empty catch block.,221
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathOrder,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_PATH + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ? "+ " ORDER BY "+ Constants.PATH_PROFILE_PATH_ORDER+ " ASC");" is 198.,221
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getGroupIdsInPathProfile,Long Statement,The length of the statement "return (String)sqlService.getFromTable(Constants.PATH_PROFILE_GROUP_IDS`Constants.GENERIC_ID`pathId`Constants.DB_TABLE_PATH);" is 125.,319
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addGroup,Empty catch clause,The method has an empty catch block.,331
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addGroup,Empty catch clause,The method has an empty catch block.,331
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,addGroup,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_GROUPS + "("+ Constants.GROUPS_GROUP_NAME+ ")"+ " VALUES (?)"`PreparedStatement.RETURN_GENERATED_KEYS);" is 185.,331
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getGroupIdFromName,Long Statement,The length of the statement "return (Integer)sqlService.getFromTable(Constants.GENERIC_ID`Constants.GROUPS_GROUP_NAME`groupName`Constants.DB_TABLE_GROUPS);" is 126.,381
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,createOverride,Long Statement,The length of the statement "PreparedStatement statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_OVERRIDE + "("+ Constants.OVERRIDE_METHOD_NAME+ "`"+ Constants.OVERRIDE_CLASS_NAME+ "`"+ Constants.OVERRIDE_GROUP_ID+ ")"+ " VALUES (?` ?` ?)");" is 239.,392
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,createOverride,Magic Number,The method contains a magic number: 2,392
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,createOverride,Magic Number,The method contains a magic number: 3,392
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getGroupNameFromId,Long Statement,The length of the statement "return (String)sqlService.getFromTable(Constants.GROUPS_GROUP_NAME`Constants.GENERIC_ID`groupId`Constants.DB_TABLE_GROUPS);" is 123.,427
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,updateGroupName,Empty catch clause,The method has an empty catch block.,438
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,updateGroupName,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_GROUPS + " SET "+ Constants.GROUPS_GROUP_NAME+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 169.,438
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,updateGroupName,Magic Number,The method contains a magic number: 2,438
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroup,Empty catch clause,The method has an empty catch block.,468
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroup,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_GROUPS + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 127.,468
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroup,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.OVERRIDE_GROUP_ID+ " = ?");" is 136.,468
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroupIdFromTablePaths,Complex Method,Cyclomatic complexity of the method is 8,505
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroupIdFromTablePaths,Empty catch clause,The method has an empty catch block.,505
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroupIdFromTablePaths,Empty catch clause,The method has an empty catch block.,505
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroupIdFromTablePaths,Empty catch clause,The method has an empty catch block.,505
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroupIdFromTablePaths,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ Constants.PATH_PROFILE_GROUP_IDS+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 172.,505
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeGroupIdFromTablePaths,Magic Number,The method contains a magic number: 2,505
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeOverride,Empty catch clause,The method has an empty catch block.,572
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeOverride,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 129.,572
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeOverride,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_OVERRIDE_ID+ " = ?");" is 156.,572
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeOverride,Long Statement,The length of the statement "String statementString="DELETE FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.OVERRIDE_GROUP_ID+ " = ? AND "+ Constants.OVERRIDE_CLASS_NAME+ " = ? AND "+ Constants.OVERRIDE_METHOD_NAME+ " = ?";" is 206.,606
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeOverride,Magic Number,The method contains a magic number: 2,606
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removeOverride,Magic Number,The method contains a magic number: 3,606
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removePath,Empty catch clause,The method has an empty catch block.,633
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removePath,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ " = ?");" is 152.,633
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removePath,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_PATH + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 125.,633
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,removePath,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_REQUEST_RESPONSE + " WHERE "+ Constants.REQUEST_RESPONSE_PATH_ID+ " = ?");" is 151.,633
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForEnabledId,Empty catch clause,The method has an empty catch block.,680
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForEnabledId,Empty catch clause,The method has an empty catch block.,680
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForEnabledId,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_OVERRIDE_ID+ " = ?");" is 163.,680
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForEnabledId,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 136.,680
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForOverrideId,Complex Conditional,The conditional expression method.getId() == Constants.PLUGIN_RESPONSE_OVERRIDE_CUSTOM || method.getId() == Constants.PLUGIN_RESPONSE_HEADER_OVERRIDE_ADD || method.getId() == Constants.PLUGIN_RESPONSE_HEADER_OVERRIDE_REMOVE is complex.,745
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForOverrideId,Empty catch clause,The method has an empty catch block.,745
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForOverrideId,Empty catch clause,The method has an empty catch block.,745
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForOverrideId,Long Statement,The length of the statement "if (method.getId() == Constants.PLUGIN_RESPONSE_OVERRIDE_CUSTOM || method.getId() == Constants.PLUGIN_RESPONSE_HEADER_OVERRIDE_ADD || method.getId() == Constants.PLUGIN_RESPONSE_HEADER_OVERRIDE_REMOVE) {" is 203.,745
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getMethodForOverrideId,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 136.,745
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathId,Empty catch clause,The method has an empty catch block.,908
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathId,Empty catch clause,The method has an empty catch block.,908
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathId,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT " + Constants.GENERIC_ID + " FROM "+ Constants.DB_TABLE_PATH+ " WHERE "+ Constants.PATH_PROFILE_PATHNAME+ "= ? "+ " AND "+ Constants.GENERIC_PROFILE_ID+ "= ?");" is 214.,908
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathId,Magic Number,The method contains a magic number: 2,908
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getCustomData,Empty catch clause,The method has an empty catch block.,963
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getCustomData,Empty catch clause,The method has an empty catch block.,963
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getCustomData,Empty catch clause,The method has an empty catch block.,963
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getCustomData,Long Statement,The length of the statement "String queryString="SELECT " + type + " FROM "+ Constants.DB_TABLE_REQUEST_RESPONSE+ " WHERE "+ Constants.REQUEST_RESPONSE_PATH_ID+ " = ? "+ " AND "+ Constants.GENERIC_CLIENT_UUID+ " = ?";" is 188.,963
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getCustomData,Magic Number,The method contains a magic number: 2,963
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPathSelectString,Long Statement,The length of the statement "String queryString="SELECT " + Constants.DB_TABLE_REQUEST_RESPONSE + "."+ Constants.GENERIC_CLIENT_UUID+ "`"+ Constants.DB_TABLE_PATH+ "."+ Constants.GENERIC_ID+ "`"+ Constants.PATH_PROFILE_PATHNAME+ "`"+ Constants.PATH_PROFILE_ACTUAL_PATH+ "`"+ Constants.PATH_PROFILE_BODY_FILTER+ "`"+ Constants.PATH_PROFILE_GROUP_IDS+ "`"+ Constants.DB_TABLE_PATH+ "."+ Constants.PATH_PROFILE_PROFILE_ID+ "`"+ Constants.PATH_PROFILE_PATH_ORDER+ "`"+ Constants.REQUEST_RESPONSE_REPEAT_NUMBER+ "`"+ Constants.REQUEST_RESPONSE_REQUEST_ENABLED+ "`"+ Constants.REQUEST_RESPONSE_RESPONSE_ENABLED+ "`"+ Constants.PATH_PROFILE_CONTENT_TYPE+ "`"+ Constants.PATH_PROFILE_REQUEST_TYPE+ "`"+ Constants.PATH_PROFILE_GLOBAL+ " FROM "+ Constants.DB_TABLE_PATH+ " JOIN "+ Constants.DB_TABLE_REQUEST_RESPONSE+ " ON "+ Constants.DB_TABLE_PATH+ "."+ Constants.GENERIC_ID+ "="+ Constants.DB_TABLE_REQUEST_RESPONSE+ "."+ Constants.REQUEST_RESPONSE_PATH_ID+ " AND "+ Constants.DB_TABLE_REQUEST_RESPONSE+ "."+ Constants.GENERIC_CLIENT_UUID+ " = ?";" is 1011.,1011
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPath,Empty catch clause,The method has an empty catch block.,1065
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPath,Empty catch clause,The method has an empty catch block.,1065
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setName,Empty catch clause,The method has an empty catch block.,1111
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setName,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ Constants.PATH_PROFILE_PATHNAME+ " = ?"+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 170.,1111
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setName,Magic Number,The method contains a magic number: 2,1111
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setPath,Empty catch clause,The method has an empty catch block.,1141
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setPath,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ Constants.PATH_PROFILE_ACTUAL_PATH+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 174.,1141
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setPath,Magic Number,The method contains a magic number: 2,1141
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setBodyFilter,Empty catch clause,The method has an empty catch block.,1171
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setBodyFilter,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ Constants.PATH_PROFILE_BODY_FILTER+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 174.,1171
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setBodyFilter,Magic Number,The method contains a magic number: 2,1171
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setContentType,Empty catch clause,The method has an empty catch block.,1201
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setContentType,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ Constants.PATH_PROFILE_CONTENT_TYPE+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 175.,1201
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setContentType,Magic Number,The method contains a magic number: 2,1201
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestType,Empty catch clause,The method has an empty catch block.,1231
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestType,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ Constants.PATH_PROFILE_REQUEST_TYPE+ " = ?"+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 174.,1231
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestType,Magic Number,The method contains a magic number: 2,1231
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setGlobal,Empty catch clause,The method has an empty catch block.,1264
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setGlobal,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ Constants.PATH_PROFILE_GLOBAL+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 169.,1264
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setGlobal,Magic Number,The method contains a magic number: 2,1264
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPaths,Empty catch clause,The method has an empty catch block.,1294
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPaths,Empty catch clause,The method has an empty catch block.,1294
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPaths,Long Statement,The length of the statement "queryString+=" AND " + Constants.DB_TABLE_PATH + "."+ Constants.GENERIC_PROFILE_ID+ "=? "+ " ORDER BY "+ Constants.PATH_PROFILE_PATH_ORDER+ " ASC";" is 147.,1294
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getPaths,Magic Number,The method contains a magic number: 2,1294
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setResponseEnabled,Empty catch clause,The method has an empty catch block.,1343
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setResponseEnabled,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_REQUEST_RESPONSE + " SET "+ Constants.DB_TABLE_PATH_RESPONSE_ENABLED+ "= ?"+ " WHERE "+ Constants.GENERIC_PROFILE_ID+ "= ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "= ?"+ " AND "+ Constants.REQUEST_RESPONSE_PATH_ID+ "= ?");" is 296.,1343
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setResponseEnabled,Magic Number,The method contains a magic number: 2,1343
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setResponseEnabled,Magic Number,The method contains a magic number: 3,1343
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setResponseEnabled,Magic Number,The method contains a magic number: 4,1343
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestEnabled,Empty catch clause,The method has an empty catch block.,1379
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestEnabled,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_REQUEST_RESPONSE + " SET "+ Constants.DB_TABLE_PATH_REQUEST_ENABLED+ "= ?"+ " WHERE "+ Constants.GENERIC_PROFILE_ID+ "= ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "= ?"+ " AND "+ Constants.REQUEST_RESPONSE_PATH_ID+ "= ?");" is 295.,1379
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestEnabled,Magic Number,The method contains a magic number: 2,1379
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestEnabled,Magic Number,The method contains a magic number: 3,1379
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setRequestEnabled,Magic Number,The method contains a magic number: 4,1379
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomResponse,Empty catch clause,The method has an empty catch block.,1415
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomResponse,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_REQUEST_RESPONSE + " SET "+ Constants.REQUEST_RESPONSE_CUSTOM_RESPONSE+ "= ?"+ " WHERE "+ Constants.GENERIC_PROFILE_ID+ "= ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "= ?"+ " AND "+ Constants.REQUEST_RESPONSE_PATH_ID+ "= ?");" is 298.,1415
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomResponse,Magic Number,The method contains a magic number: 2,1415
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomResponse,Magic Number,The method contains a magic number: 3,1415
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomResponse,Magic Number,The method contains a magic number: 4,1415
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomRequest,Empty catch clause,The method has an empty catch block.,1451
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomRequest,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_REQUEST_RESPONSE + " SET "+ Constants.REQUEST_RESPONSE_CUSTOM_REQUEST+ "= ?"+ " WHERE "+ Constants.GENERIC_PROFILE_ID+ "= ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "= ?"+ " AND "+ Constants.REQUEST_RESPONSE_PATH_ID+ "= ?");" is 297.,1451
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomRequest,Magic Number,The method contains a magic number: 2,1451
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomRequest,Magic Number,The method contains a magic number: 3,1451
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,setCustomRequest,Magic Number,The method contains a magic number: 4,1451
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getSelectedPaths,Complex Conditional,The conditional expression requestType != -1 && path.getRequestType() != requestType && path.getRequestType() != Constants.REQUEST_TYPE_ALL is complex.,1514
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getSelectedPaths,Complex Conditional,The conditional expression pathTest || (path.getEnabledEndpoints().size() > 0 && ((overrideType == Constants.OVERRIDE_TYPE_RESPONSE && path.getResponseEnabled()) || (overrideType == Constants.OVERRIDE_TYPE_REQUEST && path.getRequestEnabled()))) is complex.,1514
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getSelectedPaths,Complex Method,Cyclomatic complexity of the method is 8,1514
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getSelectedPaths,Empty catch clause,The method has an empty catch block.,1514
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getSelectedPaths,Long Parameter List,The method has 6 parameters. ,1514
+groupon_odo,com.groupon.odo.proxylib,PathOverrideService,getSelectedPaths,Long Statement,The length of the statement "if (pathTest || (path.getEnabledEndpoints().size() > 0 && ((overrideType == Constants.OVERRIDE_TYPE_RESPONSE && path.getResponseEnabled()) || (overrideType == Constants.OVERRIDE_TYPE_REQUEST && path.getRequestEnabled())))) {" is 224.,1514
+groupon_odo,com.groupon.odo.proxylib,EditService,makeAllRepeatUnlimited,Empty catch clause,The method has an empty catch block.,70
+groupon_odo,com.groupon.odo.proxylib,EditService,makeAllRepeatUnlimited,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_REQUEST_RESPONSE + " SET "+ Constants.REQUEST_RESPONSE_REPEAT_NUMBER+ " = ?"+ " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ " = ?");" is 247.,70
+groupon_odo,com.groupon.odo.proxylib,EditService,makeAllRepeatUnlimited,Magic Number,The method contains a magic number: 2,70
+groupon_odo,com.groupon.odo.proxylib,EditService,makeAllRepeatUnlimited,Magic Number,The method contains a magic number: 3,70
+groupon_odo,com.groupon.odo.proxylib,EditService,disableAll,Empty catch clause,The method has an empty catch block.,114
+groupon_odo,com.groupon.odo.proxylib,EditService,disableAll,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.CLIENT_PROFILE_ID+ " = ?"+ " AND "+ Constants.CLIENT_CLIENT_UUID+ " =? ");" is 191.,114
+groupon_odo,com.groupon.odo.proxylib,EditService,disableAll,Magic Number,The method contains a magic number: 2,114
+groupon_odo,com.groupon.odo.proxylib,EditService,removePathnameFromProfile,Empty catch clause,The method has an empty catch block.,144
+groupon_odo,com.groupon.odo.proxylib,EditService,removePathnameFromProfile,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ " = ?");" is 152.,144
+groupon_odo,com.groupon.odo.proxylib,EditService,removePathnameFromProfile,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_PATH + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 125.,144
+groupon_odo,com.groupon.odo.proxylib,EditService,getMethodsFromGroupId,Complex Method,Cyclomatic complexity of the method is 9,179
+groupon_odo,com.groupon.odo.proxylib,EditService,getMethodsFromGroupId,Empty catch clause,The method has an empty catch block.,179
+groupon_odo,com.groupon.odo.proxylib,EditService,getMethodsFromGroupId,Empty catch clause,The method has an empty catch block.,179
+groupon_odo,com.groupon.odo.proxylib,EditService,getMethodsFromGroupId,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.OVERRIDE_GROUP_ID+ " = ?");" is 138.,179
+groupon_odo,com.groupon.odo.proxylib,EditService,updateRequestResponseTables,Empty catch clause,The method has an empty catch block.,254
+groupon_odo,com.groupon.odo.proxylib,EditService,updateRequestResponseTables,Long Parameter List,The method has 5 parameters. ,254
+groupon_odo,com.groupon.odo.proxylib,EditService,updateRequestResponseTables,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_REQUEST_RESPONSE + " SET "+ columnName+ " = ?"+ " WHERE "+ Constants.GENERIC_PROFILE_ID+ "= ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "= ?"+ " AND "+ Constants.REQUEST_RESPONSE_PATH_ID+ "= ?");" is 267.,254
+groupon_odo,com.groupon.odo.proxylib,EditService,updateRequestResponseTables,Magic Number,The method contains a magic number: 2,254
+groupon_odo,com.groupon.odo.proxylib,EditService,updateRequestResponseTables,Magic Number,The method contains a magic number: 3,254
+groupon_odo,com.groupon.odo.proxylib,EditService,updateRequestResponseTables,Magic Number,The method contains a magic number: 4,254
+groupon_odo,com.groupon.odo.proxylib,EditService,updatePathTable,Empty catch clause,The method has an empty catch block.,282
+groupon_odo,com.groupon.odo.proxylib,EditService,updatePathTable,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_PATH + " SET "+ columnName+ " = ?"+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 149.,282
+groupon_odo,com.groupon.odo.proxylib,EditService,updatePathTable,Magic Number,The method contains a magic number: 2,282
+groupon_odo,com.groupon.odo.proxylib,EditService,getProfileIdFromPathID,Long Statement,The length of the statement "return (Integer)SQLService.getInstance().getFromTable(Constants.GENERIC_PROFILE_ID`Constants.GENERIC_ID`path_id`Constants.DB_TABLE_PATH);" is 137.,324
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Complex Method,Cyclomatic complexity of the method is 9,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Empty catch clause,The method has an empty catch block.,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Long Statement,The length of the statement "HashMap<String`Object> priorities=sqlService.getFirstResult("SELECT * FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.REQUEST_RESPONSE_PATH_ID+ "="+ pathId+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "='"+ clientUUID+ "' ORDER BY + "+ Constants.ENABLED_OVERRIDES_PRIORITY+ " DESC");" is 299.,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Long Statement,The length of the statement "query=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 127.,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_ENABLED_OVERRIDE + "("+ Constants.GENERIC_PROFILE_ID+ "`"+ Constants.GENERIC_CLIENT_UUID+ "`"+ Constants.REQUEST_RESPONSE_PATH_ID+ "`"+ Constants.ENABLED_OVERRIDES_OVERRIDE_ID+ "`"+ Constants.ENABLED_OVERRIDES_PRIORITY+ "`"+ Constants.ENABLED_OVERRIDES_ARGUMENTS+ "`"+ Constants.ENABLED_OVERRIDES_RESPONSE_CODE+ ")"+ " VALUES (?` ?` ?` ?` ?` ?` ?);");" is 428.,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Magic Number,The method contains a magic number: 2,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Magic Number,The method contains a magic number: 3,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Magic Number,The method contains a magic number: 4,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Magic Number,The method contains a magic number: 5,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Magic Number,The method contains a magic number: 6,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Magic Number,The method contains a magic number: 6,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,enableOverride,Magic Number,The method contains a magic number: 7,48
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateArguments,Empty catch clause,The method has an empty catch block.,139
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateArguments,Long Parameter List,The method has 5 parameters. ,139
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateArguments,Long Statement,The length of the statement "String queryString="UPDATE " + Constants.DB_TABLE_ENABLED_OVERRIDE + " SET "+ Constants.ENABLED_OVERRIDES_ARGUMENTS+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?";" is 166.,139
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateArguments,Magic Number,The method contains a magic number: 2,139
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateRepeatNumber,Long Parameter List,The method has 5 parameters. ,179
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateRepeatNumber,Empty catch clause,The method has an empty catch block.,202
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateRepeatNumber,Long Statement,The length of the statement "String queryString="UPDATE " + Constants.DB_TABLE_ENABLED_OVERRIDE + " SET "+ Constants.ENABLED_OVERRIDES_REPEAT_NUMBER+ "= ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?";" is 169.,202
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateRepeatNumber,Magic Number,The method contains a magic number: 2,202
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateResponseCode,Long Parameter List,The method has 5 parameters. ,231
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateResponseCode,Empty catch clause,The method has an empty catch block.,254
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateResponseCode,Long Statement,The length of the statement "String queryString="UPDATE " + Constants.DB_TABLE_ENABLED_OVERRIDE + " SET "+ Constants.ENABLED_OVERRIDES_RESPONSE_CODE+ "= ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?";" is 169.,254
+groupon_odo,com.groupon.odo.proxylib,OverrideService,updateResponseCode,Magic Number,The method contains a magic number: 2,254
+groupon_odo,com.groupon.odo.proxylib,OverrideService,removeOverride,Empty catch clause,The method has an empty catch block.,283
+groupon_odo,com.groupon.odo.proxylib,OverrideService,removeOverride,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 137.,283
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Complex Method,Cyclomatic complexity of the method is 8,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Empty catch clause,The method has an empty catch block.,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Empty catch clause,The method has an empty catch block.,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Empty catch clause,The method has an empty catch block.,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Empty catch clause,The method has an empty catch block.,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ " = ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ " = ?"+ " ORDER BY "+ Constants.ENABLED_OVERRIDES_PRIORITY);" is 254.,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_ENABLED_OVERRIDE + " SET "+ Constants.ENABLED_OVERRIDES_PRIORITY+ "=?"+ " WHERE "+ Constants.GENERIC_ID+ "=?");" is 183.,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_ENABLED_OVERRIDE + " SET "+ Constants.ENABLED_OVERRIDES_PRIORITY+ "=?"+ " WHERE "+ Constants.GENERIC_ID+ "=?");" is 183.,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Magic Number,The method contains a magic number: 2,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Magic Number,The method contains a magic number: 2,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,increasePriority,Magic Number,The method contains a magic number: 2,314
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Complex Method,Cyclomatic complexity of the method is 9,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Empty catch clause,The method has an empty catch block.,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Empty catch clause,The method has an empty catch block.,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Empty catch clause,The method has an empty catch block.,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Empty catch clause,The method has an empty catch block.,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ " = ?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ " = ?"+ " ORDER BY "+ Constants.ENABLED_OVERRIDES_PRIORITY);" is 259.,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_ENABLED_OVERRIDE + " SET "+ Constants.ENABLED_OVERRIDES_PRIORITY+ "=?"+ " WHERE "+ Constants.GENERIC_ID+ "=?");" is 183.,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_ENABLED_OVERRIDE + " SET "+ Constants.ENABLED_OVERRIDES_PRIORITY+ "=?"+ " WHERE "+ Constants.GENERIC_ID+ "=?");" is 183.,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Magic Number,The method contains a magic number: 2,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Magic Number,The method contains a magic number: 2,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,decreasePriority,Magic Number,The method contains a magic number: 2,406
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Empty catch clause,The method has an empty catch block.,522
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ " = ? "+ " AND "+ Constants.GENERIC_CLIENT_UUID+ " = ? ");" is 202.,522
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Magic Number,The method contains a magic number: 2,522
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Empty catch clause,The method has an empty catch block.,552
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ " = ? "+ " AND "+ Constants.GENERIC_CLIENT_UUID+ " = ? "+ " AND "+ Constants.ENABLED_OVERRIDES_OVERRIDE_ID+ (overrideType == Constants.OVERRIDE_TYPE_RESPONSE ? " NOT" : "")+ " IN ( "+ overridePlaceholders+ " )");" is 356.,552
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Magic Number,The method contains a magic number: 2,552
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Magic Number,The method contains a magic number: 3,552
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Magic Number,The method contains a magic number: 2,552
+groupon_odo,com.groupon.odo.proxylib,OverrideService,disableAllOverrides,Magic Number,The method contains a magic number: 3,552
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoints,Complex Method,Cyclomatic complexity of the method is 11,597
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoints,Empty catch clause,The method has an empty catch block.,597
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoints,Empty catch clause,The method has an empty catch block.,597
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoints,Long Statement,The length of the statement "query=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ "=?"+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "=?"+ " ORDER BY "+ Constants.ENABLED_OVERRIDES_PRIORITY);" is 246.,597
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoints,Long Statement,The length of the statement "com.groupon.odo.proxylib.models.Method m=PathOverrideService.getInstance().getMethodForOverrideId(endpoint.getOverrideId());" is 124.,597
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoints,Long Statement,The length of the statement "com.groupon.odo.proxylib.models.Method m=PathOverrideService.getInstance().getMethodForOverrideId(endpoint.getOverrideId());" is 124.,597
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoints,Magic Number,The method contains a magic number: 2,597
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Complex Conditional,The conditional expression endpoint.getOverrideId() == Constants.PLUGIN_REQUEST_OVERRIDE_CUSTOM || endpoint.getOverrideId() == Constants.PLUGIN_RESPONSE_OVERRIDE_CUSTOM || endpoint.getOverrideId() == Constants.PLUGIN_REQUEST_OVERRIDE_CUSTOM_POST_BODY is complex.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Complex Method,Cyclomatic complexity of the method is 16,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Empty catch clause,The method has an empty catch block.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Empty catch clause,The method has an empty catch block.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Long Statement,The length of the statement "String queryString="SELECT * FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.ENABLED_OVERRIDES_PATH_ID+ "=? "+ " AND "+ Constants.ENABLED_OVERRIDES_OVERRIDE_ID+ "=? "+ " AND "+ Constants.GENERIC_CLIENT_UUID+ "=? "+ "ORDER BY "+ Constants.PRIORITY+ " LIMIT 1 OFFSET ?";" is 288.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Long Statement,The length of the statement "com.groupon.odo.proxylib.models.Method m=PathOverrideService.getInstance().getMethodForOverrideId(endpoint.getOverrideId());" is 124.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Long Statement,The length of the statement "else if (endpoint.getOverrideId() == Constants.PLUGIN_RESPONSE_HEADER_OVERRIDE_ADD || endpoint.getOverrideId() == Constants.PLUGIN_REQUEST_HEADER_OVERRIDE_ADD) {" is 161.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Long Statement,The length of the statement "else if (endpoint.getOverrideId() == Constants.PLUGIN_RESPONSE_HEADER_OVERRIDE_REMOVE || endpoint.getOverrideId() == Constants.PLUGIN_REQUEST_HEADER_OVERRIDE_REMOVE) {" is 167.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Long Statement,The length of the statement "else if (endpoint.getOverrideId() == Constants.PLUGIN_REQUEST_OVERRIDE_CUSTOM || endpoint.getOverrideId() == Constants.PLUGIN_RESPONSE_OVERRIDE_CUSTOM || endpoint.getOverrideId() == Constants.PLUGIN_REQUEST_OVERRIDE_CUSTOM_POST_BODY) {" is 235.,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Magic Number,The method contains a magic number: 2,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Magic Number,The method contains a magic number: 3,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getEnabledEndpoint,Magic Number,The method contains a magic number: 4,703
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getPartialEnabledEndpointFromResultset,Empty catch clause,The method has an empty catch block.,821
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getOverrideIdForMethod,Empty catch clause,The method has an empty catch block.,854
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getOverrideIdForMethod,Empty catch clause,The method has an empty catch block.,854
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getOverrideIdForMethod,Long Statement,The length of the statement "query=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_OVERRIDE + " WHERE "+ Constants.OVERRIDE_CLASS_NAME+ " = ?"+ " AND "+ Constants.OVERRIDE_METHOD_NAME+ " = ?");" is 185.,854
+groupon_odo,com.groupon.odo.proxylib,OverrideService,getOverrideIdForMethod,Magic Number,The method contains a magic number: 2,854
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScript,Empty catch clause,The method has an empty catch block.,59
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScript,Empty catch clause,The method has an empty catch block.,59
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScript,Empty catch clause,The method has an empty catch block.,59
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScripts,Empty catch clause,The method has an empty catch block.,108
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScripts,Empty catch clause,The method has an empty catch block.,108
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScripts,Empty catch clause,The method has an empty catch block.,108
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScripts,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_SCRIPT + " ORDER BY "+ Constants.GENERIC_ID);" is 124.,108
+groupon_odo,com.groupon.odo.proxylib,ScriptService,getScripts,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_SCRIPT + " WHERE "+ Constants.SCRIPT_TYPE+ "= ?"+ " ORDER BY "+ Constants.GENERIC_ID);" is 165.,108
+groupon_odo,com.groupon.odo.proxylib,ScriptService,addScript,Empty catch clause,The method has an empty catch block.,156
+groupon_odo,com.groupon.odo.proxylib,ScriptService,addScript,Empty catch clause,The method has an empty catch block.,156
+groupon_odo,com.groupon.odo.proxylib,ScriptService,addScript,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_SCRIPT + "("+ Constants.SCRIPT_NAME+ "`"+ Constants.SCRIPT_SCRIPT+ "`"+ Constants.SCRIPT_TYPE+ ")"+ " VALUES (?` ?` ?)"`PreparedStatement.RETURN_GENERATED_KEYS);" is 238.,156
+groupon_odo,com.groupon.odo.proxylib,ScriptService,addScript,Magic Number,The method contains a magic number: 2,156
+groupon_odo,com.groupon.odo.proxylib,ScriptService,addScript,Magic Number,The method contains a magic number: 3,156
+groupon_odo,com.groupon.odo.proxylib,ScriptService,updateName,Empty catch clause,The method has an empty catch block.,210
+groupon_odo,com.groupon.odo.proxylib,ScriptService,updateName,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_SCRIPT + " SET "+ Constants.SCRIPT_NAME+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 163.,210
+groupon_odo,com.groupon.odo.proxylib,ScriptService,updateName,Magic Number,The method contains a magic number: 2,210
+groupon_odo,com.groupon.odo.proxylib,ScriptService,updateScript,Empty catch clause,The method has an empty catch block.,244
+groupon_odo,com.groupon.odo.proxylib,ScriptService,updateScript,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_SCRIPT + " SET "+ Constants.SCRIPT_SCRIPT+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 165.,244
+groupon_odo,com.groupon.odo.proxylib,ScriptService,updateScript,Magic Number,The method contains a magic number: 2,244
+groupon_odo,com.groupon.odo.proxylib,ScriptService,removeScript,Empty catch clause,The method has an empty catch block.,278
+groupon_odo,com.groupon.odo.proxylib,ScriptService,removeScript,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_SCRIPT + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 127.,278
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServers,Empty catch clause,The method has an empty catch block.,78
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServers,Empty catch clause,The method has an empty catch block.,78
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServers,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_SERVERS + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?"+ " AND "+ Constants.SERVER_REDIRECT_GROUP_ID+ " = ?");" is 196.,78
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServers,Long Statement,The length of the statement "ServerRedirect curServer=new ServerRedirect(results.getInt(Constants.GENERIC_ID)`results.getString(Constants.SERVER_REDIRECT_REGION)`results.getString(Constants.SERVER_REDIRECT_SRC_URL)`results.getString(Constants.SERVER_REDIRECT_DEST_URL)`results.getString(Constants.SERVER_REDIRECT_HOST_HEADER));" is 298.,78
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServers,Magic Number,The method contains a magic number: 2,78
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServerGroups,Empty catch clause,The method has an empty catch block.,129
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServerGroups,Empty catch clause,The method has an empty catch block.,129
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServerGroups,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_SERVER_GROUPS + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ? "+ "ORDER BY "+ Constants.GENERIC_NAME);" is 187.,129
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,tableServerGroups,Long Statement,The length of the statement "ServerGroup curServerGroup=new ServerGroup(results.getInt(Constants.GENERIC_ID)`results.getString(Constants.GENERIC_NAME)`results.getInt(Constants.GENERIC_PROFILE_ID));" is 168.,129
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getRedirect,Empty catch clause,The method has an empty catch block.,174
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getRedirect,Empty catch clause,The method has an empty catch block.,174
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getRedirect,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_SERVERS + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 135.,174
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getRedirect,Long Statement,The length of the statement "ServerRedirect curServer=new ServerRedirect(results.getInt(Constants.GENERIC_ID)`results.getString(Constants.SERVER_REDIRECT_REGION)`results.getString(Constants.SERVER_REDIRECT_SRC_URL)`results.getString(Constants.SERVER_REDIRECT_DEST_URL)`results.getString(Constants.SERVER_REDIRECT_HOST_HEADER));" is 298.,174
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getServerGroup,Empty catch clause,The method has an empty catch block.,222
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getServerGroup,Empty catch clause,The method has an empty catch block.,222
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getServerGroup,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_SERVER_GROUPS + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 141.,222
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getServerGroup,Long Statement,The length of the statement "ServerGroup curGroup=new ServerGroup(results.getInt(Constants.GENERIC_ID)`results.getString(Constants.GENERIC_NAME)`results.getInt(Constants.GENERIC_PROFILE_ID));" is 162.,222
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirectToProfile,Long Parameter List,The method has 6 parameters. ,270
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Empty catch clause,The method has an empty catch block.,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Empty catch clause,The method has an empty catch block.,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Long Parameter List,The method has 6 parameters. ,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_SERVERS + "("+ Constants.SERVER_REDIRECT_REGION+ "`"+ Constants.SERVER_REDIRECT_SRC_URL+ "`"+ Constants.SERVER_REDIRECT_DEST_URL+ "`"+ Constants.SERVER_REDIRECT_HOST_HEADER+ "`"+ Constants.SERVER_REDIRECT_PROFILE_ID+ "`"+ Constants.SERVER_REDIRECT_GROUP_ID+ ")"+ " VALUES (?` ?` ?` ?` ?` ?);"`PreparedStatement.RETURN_GENERATED_KEYS);" is 411.,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Magic Number,The method contains a magic number: 2,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Magic Number,The method contains a magic number: 3,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Magic Number,The method contains a magic number: 4,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Magic Number,The method contains a magic number: 5,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerRedirect,Magic Number,The method contains a magic number: 6,295
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerGroup,Empty catch clause,The method has an empty catch block.,357
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerGroup,Empty catch clause,The method has an empty catch block.,357
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerGroup,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_SERVER_GROUPS + "("+ Constants.GENERIC_NAME+ "`"+ Constants.GENERIC_PROFILE_ID+ ")"+ " VALUES (?` ?);"`PreparedStatement.RETURN_GENERATED_KEYS);" is 221.,357
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,addServerGroup,Magic Number,The method contains a magic number: 2,357
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setGroupName,Empty catch clause,The method has an empty catch block.,407
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setGroupName,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_SERVER_GROUPS + " SET "+ Constants.GENERIC_NAME+ " = ?"+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 170.,407
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setGroupName,Magic Number,The method contains a magic number: 2,407
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,activateServerGroup,Empty catch clause,The method has an empty catch block.,438
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,activateServerGroup,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_CLIENT + " SET "+ Constants.CLIENT_ACTIVESERVERGROUP+ " = ? "+ " WHERE "+ Constants.GENERIC_ID+ " = ? ");" is 177.,438
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,activateServerGroup,Magic Number,The method contains a magic number: 2,438
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setSourceUrl,Empty catch clause,The method has an empty catch block.,470
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setSourceUrl,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_SERVERS + " SET "+ Constants.SERVER_REDIRECT_SRC_URL+ " = ?"+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 175.,470
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setSourceUrl,Magic Number,The method contains a magic number: 2,470
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setDestinationUrl,Empty catch clause,The method has an empty catch block.,501
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setDestinationUrl,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_SERVERS + " SET "+ Constants.SERVER_REDIRECT_DEST_URL+ " = ?"+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 176.,501
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setDestinationUrl,Magic Number,The method contains a magic number: 2,501
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setHostHeader,Empty catch clause,The method has an empty catch block.,532
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setHostHeader,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("UPDATE " + Constants.DB_TABLE_SERVERS + " SET "+ Constants.SERVER_REDIRECT_HOST_HEADER+ " = ?"+ " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 179.,532
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,setHostHeader,Magic Number,The method contains a magic number: 2,532
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,deleteServerGroup,Long Statement,The length of the statement "sqlService.executeUpdate("DELETE FROM " + Constants.DB_TABLE_SERVER_GROUPS + " WHERE "+ Constants.GENERIC_ID+ " = "+ id+ ";");" is 126.,577
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,deleteServerGroup,Long Statement,The length of the statement "sqlService.executeUpdate("DELETE FROM " + Constants.DB_TABLE_SERVERS + " WHERE "+ Constants.SERVER_REDIRECT_GROUP_ID+ " = "+ id);" is 129.,577
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getProfilesForServerName,Empty catch clause,The method has an empty catch block.,594
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getProfilesForServerName,Empty catch clause,The method has an empty catch block.,594
+groupon_odo,com.groupon.odo.proxylib,ServerRedirectService,getProfilesForServerName,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT " + Constants.GENERIC_PROFILE_ID + " FROM "+ Constants.DB_TABLE_SERVERS+ " WHERE "+ Constants.SERVER_REDIRECT_SRC_URL+ " = ? GROUP BY "+ Constants.GENERIC_PROFILE_ID);" is 221.,594
+groupon_odo,com.groupon.odo.proxylib,ProfileService,isActive,Empty catch clause,The method has an empty catch block.,56
+groupon_odo,com.groupon.odo.proxylib,ProfileService,isActive,Long Statement,The length of the statement "queryStatement=sqlConnection.prepareStatement("SELECT " + Constants.CLIENT_IS_ACTIVE + " FROM "+ Constants.DB_TABLE_CLIENT+ " WHERE "+ Constants.GENERIC_CLIENT_UUID+ "= '-1' "+ " AND "+ Constants.GENERIC_PROFILE_ID+ "= ? ");" is 224.,56
+groupon_odo,com.groupon.odo.proxylib,ProfileService,findAllProfiles,Empty catch clause,The method has an empty catch block.,91
+groupon_odo,com.groupon.odo.proxylib,ProfileService,findAllProfiles,Empty catch clause,The method has an empty catch block.,91
+groupon_odo,com.groupon.odo.proxylib,ProfileService,findProfile,Empty catch clause,The method has an empty catch block.,127
+groupon_odo,com.groupon.odo.proxylib,ProfileService,findProfile,Empty catch clause,The method has an empty catch block.,127
+groupon_odo,com.groupon.odo.proxylib,ProfileService,findProfile,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_PROFILE + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 130.,127
+groupon_odo,com.groupon.odo.proxylib,ProfileService,add,Empty catch clause,The method has an empty catch block.,184
+groupon_odo,com.groupon.odo.proxylib,ProfileService,add,Empty catch clause,The method has an empty catch block.,184
+groupon_odo,com.groupon.odo.proxylib,ProfileService,add,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_PROFILE + "("+ Constants.PROFILE_PROFILE_NAME+ ") "+ " VALUES (?)"`PreparedStatement.RETURN_GENERATED_KEYS);" is 185.,184
+groupon_odo,com.groupon.odo.proxylib,ProfileService,add,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_CLIENT + "("+ Constants.CLIENT_CLIENT_UUID+ "`"+ Constants.CLIENT_IS_ACTIVE+ "`"+ Constants.CLIENT_PROFILE_ID+ ") "+ " VALUES (?` ?` ?)");" is 215.,184
+groupon_odo,com.groupon.odo.proxylib,ProfileService,add,Magic Number,The method contains a magic number: 2,184
+groupon_odo,com.groupon.odo.proxylib,ProfileService,add,Magic Number,The method contains a magic number: 3,184
+groupon_odo,com.groupon.odo.proxylib,ProfileService,remove,Empty catch clause,The method has an empty catch block.,251
+groupon_odo,com.groupon.odo.proxylib,ProfileService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_PROFILE + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 128.,251
+groupon_odo,com.groupon.odo.proxylib,ProfileService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_SERVERS + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?");" is 136.,251
+groupon_odo,com.groupon.odo.proxylib,ProfileService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_PATH + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?");" is 133.,251
+groupon_odo,com.groupon.odo.proxylib,ProfileService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_ENABLED_OVERRIDE + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?");" is 145.,251
+groupon_odo,com.groupon.odo.proxylib,ProfileService,remove,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_CLIENT + " WHERE "+ Constants.GENERIC_PROFILE_ID+ " = ?");" is 135.,251
+groupon_odo,com.groupon.odo.proxylib,ProfileService,getNamefromId,Long Statement,The length of the statement "return (String)sqlService.getFromTable(Constants.PROFILE_PROFILE_NAME`Constants.GENERIC_ID`id`Constants.DB_TABLE_PROFILE);" is 122.,301
+groupon_odo,com.groupon.odo.proxylib,ProfileService,getIdFromName,Empty catch clause,The method has an empty catch block.,315
+groupon_odo,com.groupon.odo.proxylib,ProfileService,getIdFromName,Empty catch clause,The method has an empty catch block.,315
+groupon_odo,com.groupon.odo.proxylib,ProfileService,getIdFromName,Long Statement,The length of the statement "query=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_PROFILE + " WHERE "+ Constants.PROFILE_PROFILE_NAME+ " = ?");" is 136.,315
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Complex Method,Cyclomatic complexity of the method is 9,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Empty catch clause,The method has an empty catch block.,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT " + Constants.GENERIC_ID + " FROM "+ Constants.DB_TABLE_HISTORY+ " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = \'"+ clientUUID+ "\'"+ " AND "+ Constants.CLIENT_PROFILE_ID+ " = "+ profileId+ " ORDER BY "+ Constants.GENERIC_ID+ " ASC LIMIT 1");" is 290.,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Long Statement,The length of the statement "PreparedStatement deleteStatement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_HISTORY + " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = \'"+ clientUUID+ "\'"+ " AND "+ Constants.CLIENT_PROFILE_ID+ " = "+ profileId+ " AND "+ Constants.GENERIC_ID+ " < "+ currentSpot);" is 286.,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Magic Number,The method contains a magic number: 10000,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Magic Number,The method contains a magic number: 100,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Magic Number,The method contains a magic number: 10000,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,cullHistory,Magic Number,The method contains a magic number: 100,73
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Complex Method,Cyclomatic complexity of the method is 8,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Empty catch clause,The method has an empty catch block.,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("SELECT " + Constants.GENERIC_ID + " FROM "+ Constants.DB_TABLE_HISTORY+ " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = \'"+ clientUUID+ "\'"+ " AND "+ Constants.CLIENT_PROFILE_ID+ " = "+ profileId+ " ORDER BY "+ Constants.GENERIC_ID+ " ASC LIMIT 1");" is 290.,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Long Statement,The length of the statement "PreparedStatement deleteStatement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_HISTORY + " WHERE "+ Constants.CLIENT_CLIENT_UUID+ " = \'"+ clientUUID+ "\'"+ " AND "+ Constants.CLIENT_PROFILE_ID+ " = "+ profileId+ " AND "+ Constants.GENERIC_ID+ " < "+ currentSpot);" is 286.,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Magic Number,The method contains a magic number: 10000,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Magic Number,The method contains a magic number: 100,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Magic Number,The method contains a magic number: 10000,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,run,Magic Number,The method contains a magic number: 100,91
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Empty catch clause,The method has an empty catch block.,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_HISTORY + "("+ Constants.GENERIC_PROFILE_ID+ "`"+ Constants.GENERIC_CLIENT_UUID+ "`"+ Constants.HISTORY_CREATED_AT+ "`"+ Constants.GENERIC_REQUEST_TYPE+ "`"+ Constants.HISTORY_REQUEST_URL+ "`"+ Constants.HISTORY_REQUEST_PARAMS+ "`"+ Constants.HISTORY_REQUEST_POST_DATA+ "`"+ Constants.HISTORY_REQUEST_HEADERS+ "`"+ Constants.HISTORY_RESPONSE_CODE+ "`"+ Constants.HISTORY_RESPONSE_HEADERS+ "`"+ Constants.HISTORY_RESPONSE_CONTENT_TYPE+ "`"+ Constants.HISTORY_RESPONSE_DATA+ "`"+ Constants.HISTORY_ORIGINAL_REQUEST_URL+ "`"+ Constants.HISTORY_ORIGINAL_REQUEST_PARAMS+ "`"+ Constants.HISTORY_ORIGINAL_REQUEST_POST_DATA+ "`"+ Constants.HISTORY_ORIGINAL_REQUEST_HEADERS+ "`"+ Constants.HISTORY_ORIGINAL_RESPONSE_CODE+ "`"+ Constants.HISTORY_ORIGINAL_RESPONSE_HEADERS+ "`"+ Constants.HISTORY_ORIGINAL_RESPONSE_CONTENT_TYPE+ "`"+ Constants.HISTORY_ORIGINAL_RESPONSE_DATA+ "`"+ Constants.HISTORY_MODIFIED+ "`"+ Constants.HISTORY_REQUEST_SENT+ "`"+ Constants.HISTORY_REQUEST_BODY_DECODED+ "`"+ Constants.HISTORY_RESPONSE_BODY_DECODED+ "`"+ Constants.HISTORY_EXTRA_INFO+ "`"+ Constants.HISTORY_RAW_POST_DATA+ ")"+ " VALUES (?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?` ?);");" is 1272.,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 2,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 3,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 4,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 5,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 6,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 7,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 8,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 9,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 10,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 11,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 12,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 13,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 14,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 15,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 16,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 17,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 18,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 19,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 20,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 21,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 22,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 23,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 24,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 25,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,addHistory,Magic Number,The method contains a magic number: 26,153
+groupon_odo,com.groupon.odo.proxylib,HistoryService,historyFromSQLResult,Empty catch clause,The method has an empty catch block.,222
+groupon_odo,com.groupon.odo.proxylib,HistoryService,historyFromSQLResult,Long Statement,The length of the statement "List<?> gresult=GroovyService.getInstance().runGroovy(script.getScript()`history.getRequestType()`history.getRequestURL()`history.getRequestParams()`history.getRequestPostData()`history.getRequestHeaders()`history.getResponseCode()`history.getResponseContentType()`history.getResponseHeaders()`history.getOriginalRequestURL()`history.getOriginalRequestParams()`history.getOriginalRequestPostData()`history.getOriginalRequestHeaders()`history.getOriginalResponseData()`history.getOriginalResponseContentType()`history.getOriginalResponseHeaders()`history.isModified());" is 568.,222
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistoryCount,Empty catch clause,The method has an empty catch block.,303
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistoryCount,Empty catch clause,The method has an empty catch block.,303
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistoryCount,Empty catch clause,The method has an empty catch block.,303
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistory,Complex Method,Cyclomatic complexity of the method is 16,359
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistory,Empty catch clause,The method has an empty catch block.,359
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistory,Empty catch clause,The method has an empty catch block.,359
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistory,Long Parameter List,The method has 7 parameters. ,359
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistory,Long Statement,The length of the statement "Matcher matcher=pattern.matcher(results.getString(Constants.HISTORY_REQUEST_URL) + "?" + results.getString(Constants.HISTORY_REQUEST_PARAMS));" is 142.,359
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistory,Magic Number,The method contains a magic number: 1000,359
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistoryForID,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistoryForID,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistoryForID,Empty catch clause,The method has an empty catch block.,472
+groupon_odo,com.groupon.odo.proxylib,HistoryService,getHistoryForID,Long Statement,The length of the statement "query=sqlConnection.prepareStatement("SELECT * FROM " + Constants.DB_TABLE_HISTORY + " WHERE "+ Constants.GENERIC_ID+ "=?");" is 124.,472
+groupon_odo,com.groupon.odo.proxylib,HistoryService,clearHistory,Empty catch clause,The method has an empty catch block.,512
+groupon_odo,com.groupon.odo.proxylib,HistoryService,clearHistory,Empty catch clause,The method has an empty catch block.,512
+groupon_odo,com.groupon.odo.proxylib,SQLService,stopServer,Empty catch clause,The method has an empty catch block.,79
+groupon_odo,com.groupon.odo.proxylib,SQLService,stopServer,Empty catch clause,The method has an empty catch block.,79
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Long Statement,The length of the statement "String connectString="jdbc:h2:tcp://" + _instance.databaseHost + ":"+ _instance.port+ "/./"+ _instance.databaseName+ "/proxydb;MULTI_THREADED=true;AUTO_RECONNECT=TRUE;AUTOCOMMIT=ON";" is 182.,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 20,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 5000,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 30000,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 5,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 30000,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 60,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 30000,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,getInstance,Magic Number,The method contains a magic number: 10,98
+groupon_odo,com.groupon.odo.proxylib,SQLService,releaseConnection,Empty catch clause,The method has an empty catch block.,169
+groupon_odo,com.groupon.odo.proxylib,SQLService,updateSchema,Long Statement,The length of the statement "HashMap<String`Object> configuration=getFirstResult("SELECT * FROM " + Constants.DB_TABLE_CONFIGURATION + " WHERE "+ Constants.DB_TABLE_CONFIGURATION_NAME+ " = \'"+ Constants.DB_TABLE_CONFIGURATION_DATABASE_VERSION+ "\'");" is 222.,182
+groupon_odo,com.groupon.odo.proxylib,SQLService,updateSchema,Long Statement,The length of the statement "executeUpdate("CREATE TABLE " + Constants.DB_TABLE_CONFIGURATION + " ("+ Constants.GENERIC_ID+ " INTEGER IDENTITY`"+ Constants.DB_TABLE_CONFIGURATION_NAME+ " VARCHAR(256)`"+ Constants.DB_TABLE_CONFIGURATION_VALUE+ " VARCHAR(1024));");" is 234.,182
+groupon_odo,com.groupon.odo.proxylib,SQLService,updateSchema,Long Statement,The length of the statement "executeUpdate("INSERT INTO " + Constants.DB_TABLE_CONFIGURATION + "("+ Constants.DB_TABLE_CONFIGURATION_NAME+ "`"+ Constants.DB_TABLE_CONFIGURATION_VALUE+ ")"+ " VALUES (\'"+ Constants.DB_TABLE_CONFIGURATION_DATABASE_VERSION+ "\'` '0');");" is 239.,182
+groupon_odo,com.groupon.odo.proxylib,SQLService,updateSchema,Long Statement,The length of the statement "executeUpdate("UPDATE " + Constants.DB_TABLE_CONFIGURATION + " SET "+ Constants.DB_TABLE_CONFIGURATION_VALUE+ "='"+ current_version+ "' WHERE "+ Constants.DB_TABLE_CONFIGURATION_NAME+ "='"+ Constants.DB_TABLE_CONFIGURATION_DATABASE_VERSION+ "';");" is 247.,182
+groupon_odo,com.groupon.odo.proxylib,SQLService,executeUpdate,Empty catch clause,The method has an empty catch block.,250
+groupon_odo,com.groupon.odo.proxylib,SQLService,executeUpdate,Empty catch clause,The method has an empty catch block.,250
+groupon_odo,com.groupon.odo.proxylib,SQLService,getFirstResult,Empty catch clause,The method has an empty catch block.,277
+groupon_odo,com.groupon.odo.proxylib,SQLService,getFirstResult,Empty catch clause,The method has an empty catch block.,277
+groupon_odo,com.groupon.odo.proxylib,SQLService,getFirstResult,Empty catch clause,The method has an empty catch block.,277
+groupon_odo,com.groupon.odo.proxylib,SQLService,getFromTable,Empty catch clause,The method has an empty catch block.,364
+groupon_odo,com.groupon.odo.proxylib,SQLService,getFromTable,Empty catch clause,The method has an empty catch block.,364
+groupon_odo,com.groupon.odo.proxylib,PluginManager,identifyClasses,Empty catch clause,The method has an empty catch block.,111
+groupon_odo,com.groupon.odo.proxylib,PluginManager,onFile,Empty catch clause,The method has an empty catch block.,125
+groupon_odo,com.groupon.odo.proxylib,PluginManager,getMethod,Complex Method,Cyclomatic complexity of the method is 11,314
+groupon_odo,com.groupon.odo.proxylib,PluginManager,getMethod,Magic Number,The method contains a magic number: 2,314
+groupon_odo,com.groupon.odo.proxylib,PluginManager,getMethods,Long Statement,The length of the statement "if (methodInfo.getMethodType().endsWith(Constants.PLUGIN_RESPONSE_OVERRIDE_CLASS) || methodInfo.getMethodType().endsWith(Constants.PLUGIN_RESPONSE_OVERRIDE_V2_CLASS)) {" is 168.,471
+groupon_odo,com.groupon.odo.proxylib,PluginManager,getAllMethods,Empty catch clause,The method has an empty catch block.,528
+groupon_odo,com.groupon.odo.proxylib,PluginManager,getAllMethods,Empty catch clause,The method has an empty catch block.,528
+groupon_odo,com.groupon.odo.proxylib,PluginManager,getMethodsNotInGroup,Long Statement,The length of the statement "if ((methodName.equals(methodsInGroup.get(j).getMethodName())) && (className.equals(methodsInGroup.get(j).getClassName()))) {" is 125.,555
+groupon_odo,com.groupon.odo.proxylib,PluginManager,getPlugins,Long Statement,The length of the statement "Configuration[] configurations=ConfigurationService.getInstance().getConfigurations(Constants.DB_TABLE_CONFIGURATION_PLUGIN_PATH);" is 130.,585
+groupon_odo,com.groupon.odo.proxylib,ConfigurationService,getConfigurations,Empty catch clause,The method has an empty catch block.,80
+groupon_odo,com.groupon.odo.proxylib,ConfigurationService,getConfigurations,Empty catch clause,The method has an empty catch block.,80
+groupon_odo,com.groupon.odo.proxylib,ConfigurationService,addValue,Empty catch clause,The method has an empty catch block.,140
+groupon_odo,com.groupon.odo.proxylib,ConfigurationService,addValue,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("INSERT INTO " + Constants.DB_TABLE_CONFIGURATION + "("+ Constants.DB_TABLE_CONFIGURATION_NAME+ "`"+ Constants.DB_TABLE_CONFIGURATION_VALUE+ ") VALUES (?` ?)");" is 201.,140
+groupon_odo,com.groupon.odo.proxylib,ConfigurationService,addValue,Magic Number,The method contains a magic number: 2,140
+groupon_odo,com.groupon.odo.proxylib,ConfigurationService,deleteValue,Empty catch clause,The method has an empty catch block.,170
+groupon_odo,com.groupon.odo.proxylib,ConfigurationService,deleteValue,Long Statement,The length of the statement "statement=sqlConnection.prepareStatement("DELETE FROM " + Constants.DB_TABLE_CONFIGURATION + " WHERE "+ Constants.GENERIC_ID+ " = ?");" is 134.,170
+groupon_odo,com.groupon.odo.proxylib.hostsedit.rmi,Client,enableHost,Long Statement,The length of the statement "com.groupon.odo.proxylib.hostsedit.rmi.Message impl=(com.groupon.odo.proxylib.hostsedit.rmi.Message)myRegistry.lookup(SERVICE_NAME);" is 132.,27
+groupon_odo,com.groupon.odo.proxylib.hostsedit.rmi,Client,disableHost,Long Statement,The length of the statement "com.groupon.odo.proxylib.hostsedit.rmi.Message impl=(com.groupon.odo.proxylib.hostsedit.rmi.Message)myRegistry.lookup(SERVICE_NAME);" is 132.,40
+groupon_odo,com.groupon.odo.proxylib.hostsedit.rmi,Client,removeHost,Long Statement,The length of the statement "com.groupon.odo.proxylib.hostsedit.rmi.Message impl=(com.groupon.odo.proxylib.hostsedit.rmi.Message)myRegistry.lookup(SERVICE_NAME);" is 132.,53
+groupon_odo,com.groupon.odo.proxylib.hostsedit.rmi,Client,exists,Long Statement,The length of the statement "com.groupon.odo.proxylib.hostsedit.rmi.Message impl=(com.groupon.odo.proxylib.hostsedit.rmi.Message)myRegistry.lookup(SERVICE_NAME);" is 132.,66
+groupon_odo,com.groupon.odo.proxylib.hostsedit.rmi,Client,isEnabled,Long Statement,The length of the statement "com.groupon.odo.proxylib.hostsedit.rmi.Message impl=(com.groupon.odo.proxylib.hostsedit.rmi.Message)myRegistry.lookup(SERVICE_NAME);" is 132.,80
+groupon_odo,com.groupon.odo.proxylib.hostsedit.rmi,Client,isAvailable,Long Statement,The length of the statement "com.groupon.odo.proxylib.hostsedit.rmi.Message impl=(com.groupon.odo.proxylib.hostsedit.rmi.Message)myRegistry.lookup(SERVICE_NAME);" is 132.,94
+groupon_odo,com.groupon.odo.proxylib.hostsedit.rmi,Server,getInstance,Magic Number,The method contains a magic number: 1298,34
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Complex Method,Cyclomatic complexity of the method is 17,62
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Long Parameter List,The method has 6 parameters. ,62
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Magic Number,The method contains a magic number: 3,62
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Magic Number,The method contains a magic number: 3,62
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Magic Number,The method contains a magic number: 4,62
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Magic Number,The method contains a magic number: 2,62
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Magic Number,The method contains a magic number: 3,62
+groupon_odo,com.groupon.odo.proxylib.hostsedit,HostsFileUtils,changeHost,Magic Number,The method contains a magic number: 4,62
+groupon_odo,com.groupon.odo.proxylib.models,ServerRedirect,ServerRedirect,Long Parameter List,The method has 5 parameters. ,32
+groupon_odo,com.groupon.odo.proxylib.models,History,History,Long Parameter List,The method has 26 parameters. ,67
+groupon_odo,com.groupon.odo.proxylib.models,History,setFormattedResponseData,Complex Conditional,The conditional expression data != null && !data.equals("") && responseContentType != null && responseContentType.toLowerCase().indexOf("application/json") != -1 is complex.,160
+groupon_odo,com.groupon.odo.proxylib.models,History,setFormattedResponseData,Empty catch clause,The method has an empty catch block.,160
+groupon_odo,com.groupon.odo.proxylib.models,History,setFormattedResponseData,Long Statement,The length of the statement "if (data != null && !data.equals("") && responseContentType != null && responseContentType.toLowerCase().indexOf("application/json") != -1) {" is 141.,160
+groupon_odo,com.groupon.odo.proxylib.models,History,setFormattedOriginalResponseData,Complex Conditional,The conditional expression originalResponseData != null && !originalResponseData.equals("") && originalResponseContentType != null && originalResponseContentType.toLowerCase().indexOf("application/json") != -1 is complex.,317
+groupon_odo,com.groupon.odo.proxylib.models,History,setFormattedOriginalResponseData,Empty catch clause,The method has an empty catch block.,317
+groupon_odo,com.groupon.odo.proxylib.models,History,setFormattedOriginalResponseData,Long Statement,The length of the statement "if (originalResponseData != null && !originalResponseData.equals("") && originalResponseContentType != null && originalResponseContentType.toLowerCase().indexOf("application/json") != -1) {" is 189.,317
+groupon_odo,com.groupon.odo.proxylib.models,EndpointOverride,getPossibleEndpoints,Long Statement,The length of the statement "possibleEndpoints=EditService.getInstance().getMethodsFromGroupIds(Utils.arrayFromStringOfIntegers(this.getGroupIds())`filters);" is 128.,120
+groupon_odo,com.groupon.odo.proxylib.models,EndpointOverride,getCustomResponse,Long Statement,The length of the statement "this.customResponse=PathOverrideService.getInstance().getCustomData(this.pathId`this.clientUUID`Constants.REQUEST_RESPONSE_CUSTOM_RESPONSE);" is 140.,172
+groupon_odo,com.groupon.odo.proxylib.models,EndpointOverride,getCustomRequest,Long Statement,The length of the statement "this.customRequest=PathOverrideService.getInstance().getCustomData(this.pathId`this.clientUUID`Constants.REQUEST_RESPONSE_CUSTOM_REQUEST);" is 138.,188
+groupon_odo,com.groupon.odo.proxylib.models,Plugin,getClasses,Empty catch clause,The method has an empty catch block.,70
+groupon_odo,com.groupon.odo.plugin,PluginHelper,writeResponseContent,Complex Method,Cyclomatic complexity of the method is 11,65
+groupon_odo,com.groupon.odo.plugin,PluginHelper,writeResponseContent,Long Statement,The length of the statement "if (response.containsHeader(PluginHelper.STRING_TRANSFER_ENCODING) && response.getHeader(PluginHelper.STRING_TRANSFER_ENCODING).compareTo("chunked") == 0) {" is 156.,65
+groupon_odo,com.groupon.odo.plugin,PluginHelper,writeResponseContent,Magic Number,The method contains a magic number: 1024,65
+groupon_odo,com.groupon.odo.plugin,PluginHelper,getByteArrayDataAsString,Empty catch clause,The method has an empty catch block.,131
+groupon_odo,com.groupon.odo.plugin,PluginHelper,getByteArrayDataAsString,Empty catch clause,The method has an empty catch block.,131
+groupon_odo,com.groupon.odo.plugin,PluginHelper,getByteArrayDataAsString,Magic Number,The method contains a magic number: 1024,131
+groupon_odo,com.groupon.odo.plugin,PluginHelper,getByteArrayDataAsString,Magic Number,The method contains a magic number: 1024,131
+groupon_odo,com.groupon.odo.controllers,BackupController,processBackup,Empty catch clause,The method has an empty catch block.,79
+groupon_odo,com.groupon.odo.controllers,BackupController,getSingleProfileConfiguration,Long Parameter List,The method has 5 parameters. ,107
+groupon_odo,com.groupon.odo.controllers,ServerMappingController,addRedirectToProfile,Long Parameter List,The method has 7 parameters. ,55
+groupon_odo,com.groupon.odo.controllers,ServerMappingController,addRedirectToProfile,Long Statement,The length of the statement "int redirectId=ServerRedirectService.getInstance().addServerRedirectToProfile(""`srcUrl`destUrl`hostHeader`profileId`clientId);" is 127.,55
+groupon_odo,com.groupon.odo.controllers,ServerMappingController,getjqRedirects,Long Statement,The length of the statement "HashMap<String`Object> returnJson=Utils.getJQGridJSON(ServerRedirectService.getInstance().tableServers(clientId)`"servers");" is 124.,90
+groupon_odo,com.groupon.odo.controllers,ServerMappingController,updateServerGroup,Long Parameter List,The method has 7 parameters. ,232
+groupon_odo,com.groupon.odo.controllers,ServerMappingController,deleteServerGroup,Long Parameter List,The method has 5 parameters. ,349
+groupon_odo,com.groupon.odo.controllers,ClientController,updateClient,Long Parameter List,The method has 6 parameters. ,130
+groupon_odo,com.groupon.odo.controllers,ClientController,deleteClient,Long Statement,The length of the statement "if (clientUUID.compareTo(Constants.PROFILE_CLIENT_DEFAULT_ID) == 0) throw new Exception("Default client cannot be deleted");" is 124.,186
+groupon_odo,com.groupon.odo.controllers,ClientController,deleteClient,Long Statement,The length of the statement "if (clientUUID[i].compareTo(Constants.PROFILE_CLIENT_DEFAULT_ID) == 0) throw new Exception("Default client cannot be deleted");" is 127.,213
+groupon_odo,com.groupon.odo.controllers,PluginController,reloadPlugins,Empty catch clause,The method has an empty catch block.,75
+groupon_odo,com.groupon.odo.controllers,PluginController,deletePluginPath,Empty catch clause,The method has an empty catch block.,93
+groupon_odo,com.groupon.odo.controllers,ControllerUtils,convertProfileAndPathIdentifier,Empty catch clause,The method has an empty catch block.,114
+groupon_odo,com.groupon.odo.controllers,HomeController,servletContainer,Magic Number,The method contains a magic number: 10,90
+groupon_odo,com.groupon.odo.controllers,HistoryController,list,Long Parameter List,The method has 7 parameters. ,35
+groupon_odo,com.groupon.odo.controllers,HistoryController,list,Magic Number,The method contains a magic number: 20,35
+groupon_odo,com.groupon.odo.controllers,HistoryController,getHistory,Long Parameter List,The method has 9 parameters. ,62
+groupon_odo,com.groupon.odo.controllers,GroupController,newOverride,Long Parameter List,The method has 6 parameters. ,130
+groupon_odo,com.groupon.odo.controllers,PathController,getPathsForProfile,Long Statement,The length of the statement "FilterProvider filters=new SimpleFilterProvider().addFilter("Filter properties from the PathController GET"`SimpleBeanPropertyFilter.serializeAllExcept(ignorableFieldNames));" is 174.,59
+groupon_odo,com.groupon.odo.controllers,PathController,addPath,Long Parameter List,The method has 10 parameters. ,81
+groupon_odo,com.groupon.odo.controllers,PathController,testPath,Long Statement,The length of the statement "List<EndpointOverride> trySelectedRequestPaths=PathOverrideService.getInstance().getSelectedPaths(Constants.OVERRIDE_TYPE_REQUEST`ClientService.getInstance().findClient("-1"`profileId)`ProfileService.getInstance().findProfile(profileId)`url`requestType`true);" is 259.,134
+groupon_odo,com.groupon.odo.controllers,PathController,testPath,Long Statement,The length of the statement "FilterProvider filters=new SimpleFilterProvider().addFilter("Filter properties from the PathController GET"`SimpleBeanPropertyFilter.serializeAllExcept(ignorableFieldNames));" is 174.,134
+groupon_odo,com.groupon.odo.controllers,PathController,getPath,Long Parameter List,The method has 5 parameters. ,157
+groupon_odo,com.groupon.odo.controllers,PathController,setPath,Complex Method,Cyclomatic complexity of the method is 21,201
+groupon_odo,com.groupon.odo.controllers,PathController,setPath,Long Parameter List,The method has 22 parameters. ,201
+groupon_odo,com.groupon.odo.controllers,PathController,setOverrideArgsWithEnabledId,Long Parameter List,The method has 9 parameters. ,373
+groupon_odo,com.groupon.odo.controllers,PathController,setOverrideArgsWithEnabledId,Long Statement,The length of the statement "OverrideService.getInstance().updateArguments(overrideId`identifiers.getPathId()`ordinal`serializer.serialize(httpRequest.getParameterValues("arguments[]"))`clientUUID);" is 169.,373
+groupon_odo,com.groupon.odo.controllers,PathController,setOverrideArgsWithEnabledId,Long Statement,The length of the statement "returnMap.put("enabledEndpoint"`OverrideService.getInstance().getEnabledEndpoint(identifiers.getPathId()`overrideId`ordinal`clientUUID));" is 137.,373
+groupon_odo,com.groupon.odo.controllers,PathController,deleteOverride,Long Parameter List,The method has 6 parameters. ,426
+groupon_odo,com.groupon.odo.controllers,PathController,deleteOverride,Long Statement,The length of the statement "returnMap.put("enabledEndpoint"`OverrideService.getInstance().getEnabledEndpoint(identifiers.getPathId()`overrideId`ordinal`clientUUID));" is 137.,426
+groupon_odo,com.groupon.odo.controllers,PathController,getOverrideInformationWithEnabledId,Long Parameter List,The method has 6 parameters. ,458
+groupon_odo,com.groupon.odo.controllers,PathController,getOverrideInformationWithEnabledId,Long Statement,The length of the statement "returnMap.put("enabledEndpoint"`OverrideService.getInstance().getEnabledEndpoint(identifiers.getPathId()`overrideId`ordinal`clientUUID));" is 137.,458
+groupon_odo,com.groupon.odo.controllers,ConfigurationInterceptor,preHandle,Complex Conditional,The conditional expression ConfigurationService.getInstance().isValid() || request.getServletPath().startsWith("/configuration") || request.getServletPath().startsWith("/resources")|| queryString.contains("requestFromConfiguration=true") is complex.,34
+groupon_odo,com.groupon.odo.controllers,ConfigurationInterceptor,preHandle,Long Statement,The length of the statement "if (ConfigurationService.getInstance().isValid() || request.getServletPath().startsWith("/configuration") || request.getServletPath().startsWith("/resources")|| queryString.contains("requestFromConfiguration=true")) {" is 217.,34
+groupon_odo,com.groupon.odo.containers,HttpProxyContainer,servletContainer,Magic Number,The method contains a magic number: 10,41
+groupon_odo,com.groupon.odo.tests,HttpUtils,doProxyHttpsGet,Empty catch clause,The method has an empty catch block.,74
+groupon_odo,com.groupon.odo.tests,HttpTests,setUpBeforeClass,Magic Number,The method contains a magic number: 8080,44
+groupon_odo,com.groupon.odo.tests,HistoryTests,setUp,Long Statement,The length of the statement "History testHistory=new History(newProfile.getId()`"-1"`"createdAt"`"requestType"`"requestURL"`"requestParams"`"requestPostData"`"requestHeaders"`"responseCode"`"responseHeaders"`"responseContentType"`"responseData"`"originalRequestURL"`"originalRequestParams"`"originalRequestPostData"`"originalRequestHeaders"`"originalResponseCode"`"originalResponseHeaders"`"originalResponseContentType"`"originalResponseData"`true`true`false`false`"{}"`new byte[0]);" is 454.,42
+groupon_odo,com.groupon.odo.tests,HistoryTests,getHistory,Magic Number,The method contains a magic number: 100,59
+groupon_odo,com.groupon.odo.tests,ServerRedirectTest,setUp,Long Statement,The length of the statement "ServerRedirectService.getInstance().addServerRedirectToProfile("en"`"api.groupon.com"`"blah.com"`null`newProfile.getId()`-1);" is 125.,36
+groupon_odo,com.groupon.odo.tests.TestServer,TestHttpProxyContainer,servletContainer,Magic Number,The method contains a magic number: 10,32
+groupon_odo,com.groupon.odo.tests.TestServer,TestHttpsProxyContainer,servletContainer,Magic Number,The method contains a magic number: 10,37
+groupon_odo,com.groupon.odo.client,Client,constructHistory,Complex Method,Cyclomatic complexity of the method is 26,233
+groupon_odo,com.groupon.odo.client,Client,refreshHistory,Magic Number,The method contains a magic number: 15,343
+groupon_odo,com.groupon.odo.client,Client,getDefaultProfile,Magic Number,The method contains a magic number: 60000,888
+groupon_odo,com.groupon.odo.client,Client,uploadConfigurationAndProfile,Long Statement,The length of the statement "RequestBody requestBody=new MultipartBody.Builder().setType(MultipartBody.FORM).addFormDataPart("file"`fileName`RequestBody.create(MediaType.parse("application/octet-stream")`new File(fileName))).addFormDataPart("odoImport"`odoImport).build();" is 243.,1333
+groupon_odo,com.groupon.odo.client,Client,uploadConfigurationAndProfile,Long Statement,The length of the statement "Request request=new Request.Builder().url(fullUrl).addHeader("Content-Type"`"multipart/form-data; boundary=" + boundary).post(requestBody).build();" is 147.,1333
+groupon_odo,com.groupon.odo.client,Client,doGet,Long Statement,The length of the statement "OkHttpClient okHttpClient=new OkHttpClient().newBuilder().readTimeout(timeout`TimeUnit.SECONDS).connectTimeout(timeout`TimeUnit.SECONDS).build();" is 145.,1403
+groupon_odo,com.groupon.odo.client,Client,doPost,Long Statement,The length of the statement "Request.Builder formBody=new Request.Builder().url(fullUrl).post(body).addHeader("Content-Type"`"application/json; charset=utf-8");" is 131.,1477
+groupon_odo,com.groupon.odo.bmp,Utils,getKeyStoreRoot,Long Statement,The length of the statement "com.groupon.odo.proxylib.Utils.copyResourceToLocalFile("cybervillainsCA.jks"`root.getAbsolutePath() + File.separator + "cybervillainsCA.jks");" is 142.,59
+groupon_odo,com.groupon.odo.bmp,Utils,getKeyStoreRoot,Long Statement,The length of the statement "com.groupon.odo.proxylib.Utils.copyResourceToLocalFile("cybervillainsCA.cer"`root.getAbsolutePath() + File.separator + "cybervillainsCA.cer");" is 142.,59
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,BrowserMobProxyHandler,Magic Number,The method contains a magic number: 300000,304
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,handleConnectOriginal,Magic Number,The method contains a magic number: 443,368
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,handleConnectOriginal,Magic Number,The method contains a magic number: 30000,368
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,wireUpSslWithCyberVilliansCAOdo,Long Statement,The length of the statement "listener.setKeystore(new File("seleniumSslSupport" + File.separator + escapedHost+ File.separator+ "cybervillainsCA.jks").getAbsolutePath());" is 141.,444
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,startRelayWithPortTollerance,Magic Number,The method contains a magic number: 5,520
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,newHttpTunnel,Long Parameter List,The method has 5 parameters. ,538
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,getUnsafeOkHttpClient,Long Statement,The length of the statement "@Override public void checkClientTrusted( java.security.cert.X509Certificate[] chain` String authType) throws CertificateException {" is 132.,546
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,getUnsafeOkHttpClient,Long Statement,The length of the statement "@Override public void checkServerTrusted( java.security.cert.X509Certificate[] chain` String authType) throws CertificateException {" is 132.,546
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Complex Conditional,The conditional expression !isGet && HttpFields.__ContentLength.equals(hdr) && Integer.parseInt(val) > 0 is complex.,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Complex Conditional,The conditional expression "POST".equals(request.getMethod()) || "PUT".equals(request.getMethod()) || "DELETE".equals(request.getMethod())|| "PATCH".equals(request.getMethod()) is complex.,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Complex Method,Cyclomatic complexity of the method is 22,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Empty catch clause,The method has an empty catch block.,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Long Method,The method has 117 lines of code.,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Long Parameter List,The method has 5 parameters. ,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Long Statement,The length of the statement "else if ("POST".equals(request.getMethod()) || "PUT".equals(request.getMethod()) || "DELETE".equals(request.getMethod())|| "PATCH".equals(request.getMethod())) {" is 161.,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Magic Number,The method contains a magic number: 60,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Magic Number,The method contains a magic number: 60,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,proxyPlainTextRequest,Magic Number,The method contains a magic number: 60,592
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,reportError,Complex Method,Cyclomatic complexity of the method is 9,742
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,adjustListenerBuffers,Magic Number,The method contains a magic number: 512,778
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,adjustListenerBuffers,Magic Number,The method contains a magic number: 512,778
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,adjustListenerBuffers,Magic Number,The method contains a magic number: 8192,778
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,adjustListenerBuffers,Magic Number,The method contains a magic number: 8192,778
+groupon_odo,com.groupon.odo.bmp,BrowserMobProxyHandler,getHostNameFromURL,Magic Number,The method contains a magic number: 2,856
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Long Identifier,The length of the identifier typicalSSLServerExtendedKeyUsages is 33.,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Long Statement,The length of the statement "v3CertGen.addExtension(X509Extensions.AuthorityKeyIdentifier`false`new AuthorityKeyIdentifierStructure(caCert.getPublicKey()));" is 127.,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 30L,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 60,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 60,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 24,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 30,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 12,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 1000L,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 60,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 60,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 24,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 30,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,generateStdSSLServerCertificate,Magic Number,The method contains a magic number: 12,330
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,mitmDuplicateCertificate,Complex Method,Cyclomatic complexity of the method is 8,434
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,mitmDuplicateCertificate,Long Parameter List,The method has 5 parameters. ,434
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,mitmDuplicateCertificate,Long Statement,The length of the statement "v3CertGen.addExtension(X509Extensions.AuthorityKeyIdentifier`false`new AuthorityKeyIdentifierStructure(caCert.getPublicKey()));" is 127.,434
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,mitmDuplicateCertificate,Long Identifier,The length of the field clientCertDefaultOidsNotToCopy is 30.,546
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Long Statement,The length of the statement "X509Principal issuer=new X509Principal("CN=CyberVillains CA`OU=CyberVillains Certification Authority`O=CyberVillains.com`C=US");" is 128.,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Long Statement,The length of the statement "v3CertGen.addExtension(X509Extensions.SubjectKeyIdentifier`false`new SubjectKeyIdentifierStructure(keyPair.getPublic()));" is 121.,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 12,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 1000L,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 60,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 60,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 24,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 30,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 240,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 1000L,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 60,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 60,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 24,575
+groupon_odo,com.groupon.odo.bmp,CertificateCreator,createTypicalMasterCert,Magic Number,The method contains a magic number: 30,575
+groupon_odo,com.groupon.odo.bmp,KeyStoreManager,KeyStoreManager,Long Method,The method has 104 lines of code.,305
+groupon_odo,com.groupon.odo.bmp,KeyStoreManager,KeyStoreManager,Magic Number,The method contains a magic number: 2,305
+groupon_odo,com.groupon.odo.bmp,KeyStoreManager,getMappedCertificate,Long Statement,The length of the statement "X509Certificate replacementCert=CertificateCreator.mitmDuplicateCertificate(cert`mappedPk`getSigningCert()`getSigningPrivateKey());" is 131.,663
+groupon_odo,com.groupon.odo.bmp,KeyStoreManager,getMappedCertificateForHostname,Long Statement,The length of the statement "X509Certificate newCert=CertificateCreator.generateStdSSLServerCertificate(kp.getPublic()`getSigningCert()`getSigningPrivateKey()`subject);" is 139.,756
+groupon_odo,com.groupon.odo.bmp,ProxyServer,start,Magic Number,The method contains a magic number: 100,272
+groupon_odo,com.groupon.odo.bmp,ProxyServer,setLocalHost,Complex Conditional,The conditional expression localHost.isAnyLocalAddress() || localHost.isLoopbackAddress() || NetworkInterface.getByInetAddress(localHost) != null is complex.,334
+groupon_odo,com.groupon.odo.bmp,ProxyServer,setLocalHost,Long Statement,The length of the statement "if (localHost.isAnyLocalAddress() || localHost.isLoopbackAddress() || NetworkInterface.getByInetAddress(localHost) != null) {" is 125.,334

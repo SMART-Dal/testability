@@ -1,0 +1,303 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpeg,codecs,Magic Number,The method contains a magic number: 2,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpeg,codecs,Magic Number,The method contains a magic number: 3,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpeg,formats,Magic Number,The method contains a magic number: 2,143
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpeg,formats,Magic Number,The method contains a magic number: 3,143
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobe,probe,Long Statement,The length of the statement "args.add("-print_format"`"json").add("-show_error").add("-show_format").add("-show_streams").add("-show_chapters").add(mediaPath);" is 130.,81
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtils,fromTimecode,Magic Number,The method contains a magic number: 2,72
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtils,fromTimecode,Magic Number,The method contains a magic number: 3,72
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtils,parseBitrate,Magic Number,The method contains a magic number: 1000,93
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testVideoEncoding,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput(inFilename).setInput(in).overrideOutputFiles(true).addOutput("output.mp4").setFormat("mp4").setTargetSize(250_000).disableSubtitle().setAudioChannels(1).setAudioCodec("aac").setAudioSampleRate(48_000).setAudioBitRate(32768).setVideoCodec("libx264").setVideoFrameRate(24`1).setVideoResolution(640`480).setStrict(FFmpegBuilder.Strict.EXPERIMENTAL).done();" is 404.,37
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testVideoEncoding,Magic Number,The method contains a magic number: 250_000,37
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testVideoEncoding,Magic Number,The method contains a magic number: 48_000,37
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testVideoEncoding,Magic Number,The method contains a magic number: 32768,37
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testVideoEncoding,Magic Number,The method contains a magic number: 24,37
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testVideoEncoding,Magic Number,The method contains a magic number: 640,37
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testVideoEncoding,Magic Number,The method contains a magic number: 480,37
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testGetMediaInformation,Long Statement,The length of the statement "String line1=String.format(locale`"File: '%s' ; Format: '%s' ; Duration: %.3fs"`format.filename`format.format_long_name`format.duration);" is 137.,71
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testGetMediaInformation,Long Statement,The length of the statement "String line2=String.format(locale`"Codec: '%s' ; Width: %dpx ; Height: %dpx"`stream.codec_long_name`stream.width`stream.height);" is 128.,71
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testGetMediaInformation,Long Statement,The length of the statement "assertThat(line1`is("File: 'src/test/resources/net/bramp/ffmpeg/samples/big_buck_bunny_720p_1mb.mp4' ; Format: 'QuickTime / MOV' ; Duration: 5.312s"));" is 151.,71
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testProgress,Long Statement,The length of the statement "System.out.println(String.format(locale`"[%.0f%%] status:%s frame:%d time:%s fps:%.0f speed:%.2fx"`percentage * 100`progress.status`progress.frame`FFmpegUtils.toTimecode(progress.out_time_ns`TimeUnit.NANOSECONDS)`progress.fps.doubleValue()`progress.speed));" is 257.,102
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,testProgress,Magic Number,The method contains a magic number: 100,102
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,progress,Long Statement,The length of the statement "System.out.println(String.format(locale`"[%.0f%%] status:%s frame:%d time:%s fps:%.0f speed:%.2fx"`percentage * 100`progress.status`progress.frame`FFmpegUtils.toTimecode(progress.out_time_ns`TimeUnit.NANOSECONDS)`progress.fps.doubleValue()`progress.speed));" is 257.,122
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ReadmeTest,progress,Magic Number,The method contains a magic number: 100,122
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,startWebserver,Magic Number,The method contains a magic number: 10000,56
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,startWebserver,Magic Number,The method contains a magic number: 60000,56
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testNormal,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setVerbosity(FFmpegBuilder.Verbosity.DEBUG).setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML` like Gecko) Chrome/52.0.2743.82 Safari/537.36").setInput(getWebserverRoot() + Samples.base_big_buck_bunny_720p_1mb).addExtraArgs("-probesize"`"1000000").overrideOutputFiles(true).addOutput(Samples.output_mp4).setFrames(100).setFormat("mp4").setStartOffset(500`TimeUnit.MILLISECONDS).setAudioCodec("aac").setAudioChannels(1).setAudioSampleRate(48000).setAudioBitStreamFilter("chomp").setAudioFilter("aecho=0.8:0.88:6:0.4").setAudioQuality(1).setVideoCodec("libx264").setVideoFrameRate(FPS_30).setVideoResolution(320`240).setVideoQuality(2).setStrict(FFmpegBuilder.Strict.EXPERIMENTAL).done();" is 766.,79
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testNormal,Magic Number,The method contains a magic number: 100,79
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testNormal,Magic Number,The method contains a magic number: 500,79
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testNormal,Magic Number,The method contains a magic number: 48000,79
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testNormal,Magic Number,The method contains a magic number: 320,79
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testNormal,Magic Number,The method contains a magic number: 240,79
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testNormal,Magic Number,The method contains a magic number: 2,79
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testTwoPass,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput(in).overrideOutputFiles(true).addOutput(Samples.output_mp4).setFormat("mp4").disableAudio().setVideoCodec("mpeg4").setVideoFrameRate(FFmpeg.FPS_30).setVideoResolution(320`240).setTargetSize(1024 * 1024).done();" is 261.,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testTwoPass,Magic Number,The method contains a magic number: 320,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testTwoPass,Magic Number,The method contains a magic number: 240,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testTwoPass,Magic Number,The method contains a magic number: 1024,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testTwoPass,Magic Number,The method contains a magic number: 1024,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testFilter,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput(Samples.big_buck_bunny_720p_1mb).overrideOutputFiles(true).addOutput(Samples.output_mp4).setFormat("mp4").disableAudio().setVideoCodec("mpeg4").setVideoFilter("scale=320:trunc(ow/a/2)*2").done();" is 246.,140
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testMetaTags,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput(Samples.big_buck_bunny_720p_1mb).overrideOutputFiles(true).addOutput(Samples.output_mp4).setFormat("mp4").disableAudio().setVideoCodec("mpeg4").addMetaTag("comment"`"This=Nice!").addMetaTag("title"`"Big Buck Bunny").done();" is 274.,160
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testStdout,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput(Samples.big_buck_bunny_720p_1mb).addStdoutOutput().setFormat("s8").setAudioChannels(1).done();" is 145.,181
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testStdout,Magic Number,The method contains a magic number: 254976,181
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testProgress,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().readAtNativeFrameRate().setInput(in).overrideOutputFiles(true).addOutput(Samples.output_mp4).done();" is 142.,214
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testProgress,Magic Number,The method contains a magic number: 2,214
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testIssue112,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput(Samples.testscreen_jpg).addInput(Samples.test_mp3).addExtraArgs("-loop"`"1").overrideOutputFiles(true).addOutput(Samples.output_mp4).setFormat("mp4").addExtraArgs("-shortest").setAudioCodec("aac").setAudioSampleRate(48_000).setAudioBitRate(32768).setVideoCodec("libx264").setVideoFrameRate(24`1).setVideoResolution(640`480).setStrict(FFmpegBuilder.Strict.EXPERIMENTAL).done();" is 427.,243
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testIssue112,Magic Number,The method contains a magic number: 48_000,243
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testIssue112,Magic Number,The method contains a magic number: 32768,243
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testIssue112,Magic Number,The method contains a magic number: 24,243
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testIssue112,Magic Number,The method contains a magic number: 640,243
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegExecutorTest,testIssue112,Magic Number,The method contains a magic number: 480,243
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,PreconditionsCheckInvalidStreamTest,data,Long Statement,The length of the statement "return Arrays.asList("http://www.example.com/"`"https://live.twitch.tv/app/live_"`"ftp://236.0.0.1:2000"`"udp://10.1.0.102/"`"tcp://127.0.0.1/");" is 145.,14
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,PreconditionsCheckValidStreamTest,data,Long Statement,The length of the statement "return Arrays.asList("udp://10.1.0.102:1234"`"tcp://127.0.0.1:2000"`"udp://236.0.0.1:2000"`"rtmp://live.twitch.tv/app/live_"`"rtmp:///live/myStream.sdp"`"rtp://127.0.0.1:1234"`"rtsp://localhost:8888/live.sdp"`"rtsp://localhost:8888/live.sdp?tcp"`"UDP://10.1.0.102:1234");" is 271.,14
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testMillisecondsToString,Magic Number,The method contains a magic number: 63123,16
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testMillisecondsToString,Magic Number,The method contains a magic number: 63000,16
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testMillisecondsToString,Magic Number,The method contains a magic number: 5025678,16
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testFromTimecode,Magic Number,The method contains a magic number: 63123000000L,49
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testFromTimecode,Magic Number,The method contains a magic number: 63000000000L,49
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testFromTimecode,Magic Number,The method contains a magic number: 5025678000000L,49
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testParseBitrate,Magic Number,The method contains a magic number: 12300,57
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testParseBitrate,Magic Number,The method contains a magic number: 1000,57
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFmpegUtilsTest,testParseBitrate,Magic Number,The method contains a magic number: 123,57
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample1,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().addExtraArgs("-rtbufsize"`"1500M").addExtraArgs("-re").setFormat("dshow").setInput("video=\"Microsoft Camera Rear\":audio=\"Microphone Array (Realtek High Definition Audio(SST))\"").addOutput("rtmp://a.rtmp.youtube.com/live2/1234-5678").setFormat("flv").addExtraArgs("-bufsize"`"4000k").addExtraArgs("-maxrate"`"1000k").setAudioCodec("libmp3lame").setAudioSampleRate(FFmpeg.AUDIO_SAMPLE_44100).setAudioBitRate(1_000_000).addExtraArgs("-profile:v"`"baseline").setVideoCodec("libx264").setVideoPixelFormat("yuv420p").setVideoResolution(426`240).setVideoBitRate(2_000_000).setVideoFrameRate(30).addExtraArgs("-deinterlace").addExtraArgs("-preset"`"medium").addExtraArgs("-g"`"30").done();" is 727.,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample1,Long Statement,The length of the statement "String expected="ffmpeg\\win64\\bin\\ffmpeg.exe -y -v error" + " -f dshow -rtbufsize 1500M -re" + " -i video=\"Microsoft Camera Rear\":audio=\"Microphone Array (Realtek High Definition Audio(SST))\""+ " -f flv"+ " -vcodec libx264 -pix_fmt yuv420p -s 426x240 -r 30/1 -b:v 2000000"+ " -acodec libmp3lame -ar 44100 -b:a 1000000 -bufsize 4000k -maxrate 1000k"+ " -profile:v baseline -deinterlace -preset medium -g 30"+ " rtmp://a.rtmp.youtube.com/live2/1234-5678";" is 460.,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample1,Magic Number,The method contains a magic number: 1_000_000,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample1,Magic Number,The method contains a magic number: 426,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample1,Magic Number,The method contains a magic number: 240,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample1,Magic Number,The method contains a magic number: 2_000_000,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample1,Magic Number,The method contains a magic number: 30,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample2,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput("input.mkv").addOutput("output.ogv").setVideoCodec("libtheora").addExtraArgs("-qscale:v"`"7").setAudioCodec("libvorbis").addExtraArgs("-qscale:a"`"5").done();" is 209.,84
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample2,Long Statement,The length of the statement "String expected="ffmpeg -y -v error" + " -i input.mkv" + " -vcodec libtheora"+ " -acodec libvorbis"+ " -qscale:v 7"+ " -qscale:a 5"+ " output.ogv";" is 147.,84
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample3,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput("sample.avi").addOutput("thumbnail.png").setFrames(1).setVideoFilter("select='gte(n\\`10)'`scale=200:-1").done();" is 164.,109
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample3,Long Statement,The length of the statement "String expected="ffmpeg -y -v error" + " -i sample.avi" + " -vframes 1 -vf select='gte(n\\`10)'`scale=200:-1"+ " thumbnail.png";" is 128.,109
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample4,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput("rtsp://192.168.1.1:1234/").addOutput("img%03d.jpg").setFormat("image2").done();" is 131.,130
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample6,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().addInput("image%03d.png").addOutput("output.mp4").setVideoFrameRate(FFmpeg.FPS_24).done();" is 132.,164
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample7,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().addInput("original.mp4").addInput("spot.mp4").setComplexFilter("[1:v]scale=368:207`setpts=PTS-STARTPTS+5/TB [ov]; " + "[0:v][ov] overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2:enable='between(t`5`15)' [v]").addOutput("with-video.mp4").addExtraArgs("-map"`"[v]").addExtraArgs("-map"`"0:a").setVideoCodec("libx264").setPreset("ultrafast").setConstantRateFactor(20).setAudioCodec("copy").addExtraArgs("-shortest").done();" is 467.,179
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample7,Long Statement,The length of the statement "String expected="ffmpeg -y -v error" + " -i original.mp4" + " -i spot.mp4"+ " -filter_complex [1:v]scale=368:207`setpts=PTS-STARTPTS+5/TB [ov]; [0:v][ov] overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2:enable='between(t`5`15)' [v]"+ " -preset ultrafast"+ " -crf 20"+ " -vcodec libx264"+ " -acodec copy"+ " -map [v]"+ " -map 0:a"+ " -shortest"+ " with-video.mp4";" is 368.,179
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample7,Magic Number,The method contains a magic number: 20,179
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample8,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().addInput("original.mp4").setVideoFilter("select='gte(n\\`10)'`scale=200:-1").addOutput("hevc-video.mp4").addExtraArgs("-tag:v"`"hvc1").setVideoCodec("libx265").done();" is 209.,217
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample8,Long Statement,The length of the statement "String expected="ffmpeg -y -v error" + " -i original.mp4" + " -vf select='gte(n\\`10)'`scale=200:-1"+ " -vcodec libx265"+ " -tag:v hvc1"+ " hevc-video.mp4";" is 156.,217
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample9,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setVerbosity(FFmpegBuilder.Verbosity.DEBUG).setInput("input.mp3").overrideOutputFiles(true).addOutput("left.mp3").addExtraArgs("-map_channel"`"0.0.0").done().addOutput("right.mp3").addExtraArgs("-map_channel"`"0.0.1").done();" is 267.,241
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample9,Long Statement,The length of the statement "String expected="ffmpeg -y -v debug " + "-i input.mp3 " + "-map_channel 0.0.0 left.mp3 "+ "-map_channel 0.0.1 right.mp3";" is 121.,241
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample10,Long Statement,The length of the statement "String expected="ffmpeg -y -v error" + " -f webm_dash_manifest" + " -i audio.webm"+ " -i video_1.webm"+ " -i video_2.webm"+ " -i video_3.webm"+ " -vcodec copy -acodec copy"+ " -map 0 -map 1 -map 2 -map 3"+ " -adaptation_sets \"id=0`streams=0 id=1`streams=1`2`3\""+ " output.mpd";" is 279.,266
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample10,Long Statement,The length of the statement "FFmpegOutputBuilder out=builder.addOutput("output.mpd").setVideoCodec("copy").setAudioCodec("copy").addExtraArgs("-map"`"0");" is 125.,266
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample10,Long Statement,The length of the statement "out.addExtraArgs("-adaptation_sets"`String.format("\"id=0`streams=0 id=1`streams=%s\""`Joiner.on("`").join(streams))).done();" is 125.,266
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample10,Magic Number,The method contains a magic number: 3,266
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExample11,Magic Number,The method contains a magic number: 1000,311
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,ExamplesTest,testExampleExample,Long Statement,The length of the statement "FFmpegBuilder builder=new FFmpegBuilder().setInput("input.mp4").setStartOffset(1`TimeUnit.MINUTES).addOutput("output.mp4").setDuration(1`TimeUnit.MINUTES).setVideoCodec("copy").setAudioCodec("copy").done();" is 206.,330
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,before,Long Statement,The length of the statement "when(runFunc.run(argThatHasItem(Samples.big_buck_bunny_720p_1mb))).thenAnswer(new NewProcessAnswer("ffprobe-big_buck_bunny_720p_1mb.mp4"));" is 139.,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,before,Long Statement,The length of the statement "when(runFunc.run(argThatHasItem(Samples.always_on_my_mind))).thenAnswer(new NewProcessAnswer("ffprobe-Always On My Mind [Program Only] - Adelén.mp4"));" is 151.,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,before,Long Statement,The length of the statement "when(runFunc.run(argThatHasItem(Samples.book_with_chapters))).thenAnswer(new NewProcessAnswer("book_with_chapters.m4b"));" is 121.,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeVideo,Magic Number,The method contains a magic number: 2,66
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeVideo,Magic Number,The method contains a magic number: 6,66
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeVideo,Magic Number,The method contains a magic number: 48_000,66
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeBookWithChapters,Magic Number,The method contains a magic number: 24,83
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeBookWithChapters,Magic Number,The method contains a magic number: 11951309L,83
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeBookWithChapters,Magic Number,The method contains a magic number: 237875790L,83
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeBookWithChapters,Magic Number,The method contains a magic number: 248628224L,83
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeVideo2,Magic Number,The method contains a magic number: 2,106
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeVideo2,Magic Number,The method contains a magic number: 2,106
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeVideo2,Magic Number,The method contains a magic number: 48_000,106
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg,FFprobeTest,testProbeStartPts,Magic Number,The method contains a magic number: 8570867078L,127
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,TcpProgressParserRunnable,run,Empty catch clause,The method has an empty catch block.,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,TcpProgressParserRunnable,run,Empty catch clause,The method has an empty catch block.,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,UdpProgressParserRunnable,run,Empty catch clause,The method has an empty catch block.,27
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,UdpProgressParserRunnable,run,Empty catch clause,The method has an empty catch block.,27
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,Progress,Progress,Long Parameter List,The method has 9 parameters. ,83
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,Progress,parseLine,Complex Method,Cyclomatic complexity of the method is 17,104
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,Progress,parseLine,Magic Number,The method contains a magic number: 2,104
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,Progress,parseLine,Magic Number,The method contains a magic number: 2,104
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,Progress,parseLine,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2f2de6e0,104
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,Progress,equals,Long Statement,The length of the statement "return frame == progress1.frame && bitrate == progress1.bitrate && total_size == progress1.total_size && out_time_ns == progress1.out_time_ns && dup_frames == progress1.dup_frames && drop_frames == progress1.drop_frames && Float.compare(progress1.speed`speed) == 0 && Objects.equals(fps`progress1.fps) && Objects.equals(status`progress1.status);" is 345.,205
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,Progress,toString,Long Statement,The length of the statement "return MoreObjects.toStringHelper(this).add("frame"`frame).add("fps"`fps).add("bitrate"`bitrate).add("total_size"`total_size).add("out_time_ns"`out_time_ns).add("dup_frames"`dup_frames).add("drop_frames"`drop_frames).add("speed"`speed).add("status"`status).toString();" is 268.,227
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,TcpProgressParserTest,testNormal,Magic Number,The method contains a magic number: 100,27
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.progress,UdpProgressParserTest,testNormal,Magic Number,The method contains a magic number: 100,26
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.modelmapper,Mapper,newModelMapper,Long Statement,The length of the statement "Configuration config=mapper.getConfiguration().copy().setFieldMatchingEnabled(true).setPropertyCondition(notDefault).setSourceNameTokenizer(NameTokenizers.UNDERSCORE);" is 167.,39
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.modelmapper,MapperTest,testMapping,Long Statement,The length of the statement "VideoEncodingOptions video=new VideoEncodingOptions(true`null`null`320`240`1000`null`"scale='320:trunc(ow/a/2)*2'"`null);" is 121.,12
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.modelmapper,MapperTest,testMapping,Magic Number,The method contains a magic number: 320,12
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.modelmapper,MapperTest,testMapping,Magic Number,The method contains a magic number: 240,12
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.modelmapper,MapperTest,testMapping,Magic Number,The method contains a magic number: 1000,12
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.io,HexOutputStream,write,Magic Number,The method contains a magic number: 0xFF,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.io,HexOutputStream,write,Magic Number,The method contains a magic number: 16,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.job,TwoPassFFmpegJob,run,Magic Number,The method contains a magic number: 2,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,StreamHeaderPacket,readBody,Complex Conditional,The conditional expression (sampleWidth == 0 || sampleHeight == 0) && sampleWidth != sampleHeight is complex.,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,StreamHeaderPacket,readBody,Magic Number,The method contains a magic number: 2,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,StreamHeaderPacket,readBody,Magic Number,The method contains a magic number: 4,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,StreamHeaderPacket,readBody,Magic Number,The method contains a magic number: 16,40
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,StreamHeaderPacket,toString,Long Statement,The length of the statement "return MoreObjects.toStringHelper(this).add("header"`header).add("id"`id).add("type"`type).add("fourcc"`fourccToString(fourcc)).add("timeBaseId"`timeBaseId).add("msbPtsShift"`msbPtsShift).add("maxPtsDistance"`maxPtsDistance).add("decodeDelay"`decodeDelay).add("flags"`flags).add("codecSpecificData"`codecSpecificData).add("width"`width).add("height"`height).add("sampleWidth"`sampleWidth).add("sampleHeight"`sampleHeight).add("colorspaceType"`colorspaceType).add("sampleRate"`sampleRate).add("channels"`channels).add("footer"`footer).toString();" is 545.,90
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarInt,Magic Number,The method contains a magic number: 0x80,41
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarInt,Magic Number,The method contains a magic number: 0x80,41
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarInt,Magic Number,The method contains a magic number: 128,41
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarInt,Magic Number,The method contains a magic number: 0x7F,41
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarLong,Magic Number,The method contains a magic number: 0x80,56
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarLong,Magic Number,The method contains a magic number: 0x80,56
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarLong,Magic Number,The method contains a magic number: 128,56
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readVarLong,Magic Number,The method contains a magic number: 0x7F,56
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Long Statement,The length of the statement "return (((long)buffer[0] << 56) + ((long)(buffer[1] & 255) << 48) + ((long)(buffer[2] & 255) << 40)+ ((long)(buffer[3] & 255) << 32)+ ((long)(buffer[4] & 255) << 24)+ ((buffer[5] & 255) << 16)+ ((buffer[6] & 255) << 8)+ ((buffer[7] & 255) << 0));" is 246.,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 0xff,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 8,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 7,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 56,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 255,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 48,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 2,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 255,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 40,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 3,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 255,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 32,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 4,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 255,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 24,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 5,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 255,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 16,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 6,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 255,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 8,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 7,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutDataInputStream,readStartCode,Magic Number,The method contains a magic number: 255,88
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,FrameCode,toString,Long Statement,The length of the statement "return MoreObjects.toStringHelper(this).add("flags"`flags).add("id"`streamId).add("dataSizeMul"`dataSizeMul).add("dataSizeLsb"`dataSizeLsb).add("ptsDelta"`ptsDelta).add("reservedCount"`reservedCount).add("matchTimeDelta"`matchTimeDelta).add("headerIdx"`headerIdx).toString();" is 275.,16
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,PacketHeader,read,Magic Number,The method contains a magic number: 4096,14
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,PacketHeader,read,Magic Number,The method contains a magic number: 4,14
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,PacketHeader,toString,Long Statement,The length of the statement "MoreObjects.ToStringHelper helper=MoreObjects.toStringHelper(this).add("startcode"`Packet.Startcode.toString(startcode)).add("forwardPtr"`forwardPtr);" is 150.,31
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,PacketHeader,toString,Magic Number,The method contains a magic number: 4096,31
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Complex Method,Cyclomatic complexity of the method is 29,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Long Method,The method has 128 lines of code.,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 3,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 250,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 65536,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 65536,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 62,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 256,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 16384,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 2,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 3,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 4,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 256,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 5,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 6,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 7,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 8,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 256,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 256,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 256,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 16384,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 1024,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 4,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 128,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 256,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 3,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,readBody,Magic Number,The method contains a magic number: 4,25
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,MainHeaderPacket,toString,Long Statement,The length of the statement "return MoreObjects.toStringHelper(this).add("header"`header).add("version"`version).add("minorVersion"`minorVersion).add("streamCount"`streamCount).add("maxDistance"`maxDistance).add("timeBase"`timeBase).add("flags"`flags).add("frameCodes"`frameCodes.size()).add("elision"`elision).add("footer"`footer).toString();" is 314.,175
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Packet,isPossibleStartcode,Magic Number,The method contains a magic number: 0xFFL,48
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutReader,read,Complex Method,Cyclomatic complexity of the method is 10,77
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,readMetaData,Magic Number,The method contains a magic number: 2,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,readMetaData,Magic Number,The method contains a magic number: 3,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,readMetaData,Magic Number,The method contains a magic number: 4,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,readMetaData,Magic Number,The method contains a magic number: 4,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,readMetaData,Magic Number,The method contains a magic number: 4,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,read,Complex Method,Cyclomatic complexity of the method is 18,74
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,read,Magic Number,The method contains a magic number: 2,74
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,read,Magic Number,The method contains a magic number: 4096,74
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,read,Magic Number,The method contains a magic number: 4,74
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,Frame,toString,Long Statement,The length of the statement "return MoreObjects.toStringHelper(this).add("id"`stream.header.id).add("pts"`pts).add("data"`String.format("(%d bytes)"`data.length)).toString();" is 145.,180
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Complex Method,Cyclomatic complexity of the method is 10,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Magic Number,The method contains a magic number: 8,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Magic Number,The method contains a magic number: 4,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Magic Number,The method contains a magic number: 2,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Magic Number,The method contains a magic number: 3,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Magic Number,The method contains a magic number: 3,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Magic Number,The method contains a magic number: 2,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Magic Number,The method contains a magic number: 8,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandler,streamToAudioFormat,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@22057f80,50
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{"ALAW"`48000`1`2`new AudioFormat(ALAW`48000`8`2`2`48000`false)}`{"ULAW"`48000`1`3`new AudioFormat(ULAW`48000`8`3`3`48000`false)}`{"PSD\u0008"`48000`1`4`new AudioFormat(PCM_SIGNED`48000`8`4`4`48000`false)}`{"\u0010DUP"`48000`1`6`new AudioFormat(PCM_UNSIGNED`48000`16`6`12`48000`true)}`{"PFD\u0020"`48000`1`8`new AudioFormat(PCM_FLOAT`48000`32`8`32`48000`false)}});" is 400.,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 8,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 2,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 2,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 8,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 3,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 3,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 8,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 4,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 4,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 16,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 6,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 12,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 32,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 8,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 32,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,data,Magic Number,The method contains a magic number: 48000,19
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,RawHandlerStreamToAudioFormatTest,RawHandlerStreamToAudioFormatTest,Long Parameter List,The method has 5 parameters. ,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutReaderTest,testNutReader,Complex Method,Cyclomatic complexity of the method is 8,36
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.nut,NutReaderTest,testNutReader,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput(Samples.big_buck_bunny_720p_1mb).addStdoutOutput().setFormat("nut").setVideoCodec("rawvideo").setVideoPixelFormat("argb").setAudioCodec("pcm_s32le").done().build();" is 211.,36
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.gson,NamedBitsetAdapter,readBoolean,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7b0fce68,47
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.gson,NamedBitsetAdapter,setField,Empty catch clause,The method has an empty catch block.,60
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,AbstractFFmpegStreamBuilder,build,Complex Method,Cyclomatic complexity of the method is 10,536
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,AbstractFFmpegStreamBuilder,addVideoFlags,Complex Method,Cyclomatic complexity of the method is 9,642
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,AbstractFFmpegStreamBuilder,addVideoFlags,Long Statement,The length of the statement "checkArgument(video_width == 0 && video_height == 0`"Can not specific width or height` as well as an abbreviatied video size");" is 127.,642
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilder,build,Complex Method,Cyclomatic complexity of the method is 13,274
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegOutputBuilder,buildOptions,Long Statement,The length of the statement "return new EncodingOptions(new MainEncodingOptions(format`startOffset`duration)`new AudioEncodingOptions(audio_enabled`audio_codec`audio_channels`audio_sample_rate`audio_sample_format`audio_bit_rate`audio_quality)`new VideoEncodingOptions(video_enabled`video_codec`video_frame_rate`video_width`video_height`video_bit_rate`video_frames`video_filter`video_preset));" is 363.,178
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegOutputBuilder,build,Long Statement,The length of the statement "checkArgument(targetSize != 0 || video_bit_rate != 0`"Target size` or video bitrate must be specified when using two-pass");" is 124.,220
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegOutputBuilder,build,Magic Number,The method contains a magic number: 8,220
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegOutputBuilder,addAudioFlags,Complex Conditional,The conditional expression audio_bit_rate > 0 && audio_quality != null && throwWarnings is complex.,321
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,StreamSpecTest,testStreamSpec,Magic Number,The method contains a magic number: 2,12
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FormatDecimalIntegerTest,data,Long Statement,The length of the statement "return Arrays.asList(new Object[][]{{0.0`"0"}`{1.0`"1"}`{-1.0`"-1"}`{0.1`"0.1"}`{1.1`"1.1"}`{1.10`"1.1"}`{1.001`"1.001"}`{100`"100"}`{100.01`"100.01"}});" is 153.,15
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setVerbosity(Verbosity.DEBUG).setUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML` like Gecko) Chrome/52.0.2743.82 Safari/537.36").setInput("input").setStartOffset(1500`TimeUnit.MILLISECONDS).overrideOutputFiles(true).addOutput("output").setFormat("mp4").setStartOffset(500`TimeUnit.MILLISECONDS).setAudioCodec("aac").setAudioChannels(1).setAudioSampleRate(48000).setAudioBitStreamFilter("bar").setAudioQuality(1).setVideoCodec("libx264").setVideoFrameRate(FPS_30).setVideoResolution(320`240).setVideoBitStreamFilter("foo").setVideoQuality(2).done().build();" is 632.,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"debug"`"-user_agent"`"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML` like Gecko) Chrome/52.0.2743.82 Safari/537.36"`"-ss"`"00:00:01.5"`"-i"`"input"`"-f"`"mp4"`"-ss"`"00:00:00.5"`"-vcodec"`"libx264"`"-s"`"320x240"`"-r"`"30/1"`"-qscale:v"`"2"`"-bsf:v"`"foo"`"-acodec"`"aac"`"-ac"`"1"`"-ar"`"48000"`"-qscale:a"`"1"`"-bsf:a"`"bar"`"output"));" is 412.,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Magic Number,The method contains a magic number: 1500,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Magic Number,The method contains a magic number: 500,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Magic Number,The method contains a magic number: 48000,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Magic Number,The method contains a magic number: 320,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Magic Number,The method contains a magic number: 240,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testNormal,Magic Number,The method contains a magic number: 2,33
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testDisabled,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput("input").addOutput("output").disableAudio().disableSubtitle().disableVideo().done().build();" is 139.,99
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testFilter,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput("input").addOutput("output").disableAudio().disableSubtitle().setVideoFilter("scale='trunc(ow/a/2)*2:320'").done().build();" is 170.,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testFilter,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"error"`"-i"`"input"`"-vf"`"scale='trunc(ow/a/2)*2:320'"`"-an"`"-sn"`"output"));" is 125.,116
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testFilterAndScale,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput("input").addOutput("output").setVideoResolution(320`240).setVideoFilter("scale='trunc(ow/a/2)*2:320'").done().build();" is 165.,144
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testFilterAndScale,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"error"`"-i"`"input"`"-s"`"320x240"`"-vf"`"scale='trunc(ow/a/2)*2:320'"`"output"));" is 128.,144
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testFilterAndScale,Magic Number,The method contains a magic number: 320,144
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testFilterAndScale,Magic Number,The method contains a magic number: 240,144
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testSetOptions,Long Statement,The length of the statement "EncodingOptions options=new FFmpegBuilder().setInput("input").addOutput("output").useOptions(main).useOptions(audio).useOptions(video).buildOptions();" is 150.,171
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testSetOptions,Magic Number,The method contains a magic number: 1500L,171
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testSetOptions,Magic Number,The method contains a magic number: 2L,171
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testSetOptions,Magic Number,The method contains a magic number: 2.0,171
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testSetOptions,Magic Number,The method contains a magic number: 320,171
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testSetOptions,Magic Number,The method contains a magic number: 240,171
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMultipleOutputs,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput("input").addOutput("output1").setVideoResolution(320`240).done().addOutput("output2").setVideoResolution(640`480).done().addOutput("output3").setVideoResolution("ntsc").done().build();" is 231.,194
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMultipleOutputs,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"error"`"-i"`"input"`"-s"`"320x240"`"output1"`"-s"`"640x480"`"output2"`"-s"`"ntsc"`"output3"));" is 140.,194
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMultipleOutputs,Magic Number,The method contains a magic number: 320,194
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMultipleOutputs,Magic Number,The method contains a magic number: 240,194
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMultipleOutputs,Magic Number,The method contains a magic number: 640,194
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMultipleOutputs,Magic Number,The method contains a magic number: 480,194
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testConflictingVideoSize,Long Statement,The length of the statement "List<String> unused=new FFmpegBuilder().setInput("input").addOutput("output").setVideoResolution(320`240).setVideoResolution("ntsc").done().build();" is 148.,218
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testConflictingVideoSize,Magic Number,The method contains a magic number: 320,218
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testConflictingVideoSize,Magic Number,The method contains a magic number: 240,218
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testURIOutput,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput("input").addOutput(URI.create("udp://10.1.0.102:1234")).setVideoResolution(320`240).done().build();" is 146.,230
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testURIOutput,Magic Number,The method contains a magic number: 320,230
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testURIOutput,Magic Number,The method contains a magic number: 240,230
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testURIAndFilenameOutput,Long Statement,The length of the statement "List<String> unused=new FFmpegBuilder().setInput("input").addOutput(URI.create("udp://10.1.0.102:1234")).setFilename("filename").done().build();" is 144.,247
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMetaTags,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput("input").addOutput("output").addMetaTag("comment"`"My Comment").addMetaTag("title"`"\"Video\"").addMetaTag("author"`"a=b:c").done().build();" is 187.,269
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMetaTags,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"error"`"-i"`"input"`"-metadata"`"comment=My Comment"`"-metadata"`"title=\"Video\""`"-metadata"`"author=a=b:c"`"output"));" is 167.,269
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMetaTagsWithSpecifier,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().setInput("input").addOutput("output").addMetaTag("title"`"Movie Title").addMetaTag(chapter(0)`"author"`"Bob").addMetaTag(program(0)`"comment"`"Awesome").addMetaTag(stream(0)`"copyright"`"Megacorp").addMetaTag(stream(Video)`"framerate"`"24fps").addMetaTag(stream(Video`0)`"artist"`"Joe").addMetaTag(stream(Audio`0)`"language"`"eng").addMetaTag(stream(Subtitle`0)`"language"`"fre").addMetaTag(stream(usable())`"year"`"2010").addMetaTag(stream(tag("key"))`"a"`"b").addMetaTag(stream(tag("key"`"value"))`"a"`"b").done().build();" is 562.,299
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testMetaTagsWithSpecifier,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"error"`"-i"`"input"`"-metadata"`"title=Movie Title"`"-metadata:c:0"`"author=Bob"`"-metadata:p:0"`"comment=Awesome"`"-metadata:s:0"`"copyright=Megacorp"`"-metadata:s:v"`"framerate=24fps"`"-metadata:s:v:0"`"artist=Joe"`"-metadata:s:a:0"`"language=eng"`"-metadata:s:s:0"`"language=fre"`"-metadata:s:u"`"year=2010"`"-metadata:s:m:key"`"a=b"`"-metadata:s:m:key:value"`"a=b"`"output"));" is 426.,299
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testExtraArgs,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().addExtraArgs("-a"`"b").setInput("input").addOutput("output").addExtraArgs("-c"`"d").disableAudio().disableSubtitle().done().build();" is 170.,353
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testAlternativeBuilderPattern,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().addInput("input").addOutput(new FFmpegOutputBuilder().setFilename("output.mp4").setVideoCodec("libx264")).addOutput(new FFmpegOutputBuilder().setFilename("output.flv").setVideoCodec("flv")).build();" is 236.,391
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testAlternativeBuilderPattern,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"error"`"-i"`"input"`"-vcodec"`"libx264"`"output.mp4"`"-vcodec"`"flv"`"output.flv"));" is 130.,391
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testPresets,Long Statement,The length of the statement "List<String> args=new FFmpegBuilder().addInput("input").addOutput("output").setPreset("a").setPresetFilename("b").setVideoPreset("c").setAudioPreset("d").setSubtitlePreset("e").done().build();" is 192.,416
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.builder,FFmpegBuilderTest,testPresets,Long Statement,The length of the statement "assertEquals(args`ImmutableList.of("-y"`"-v"`"error"`"-i"`"input"`"-preset"`"a"`"-fpre"`"b"`"-vpre"`"c"`"-apre"`"d"`"-spre"`"e"`"output"));" is 139.,416
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.info,Format,Format,Magic Number,The method contains a magic number: 2,21
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.info,Codec,Codec,Magic Number,The method contains a magic number: 6,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.info,Codec,Codec,Magic Number,The method contains a magic number: 2,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.info,Codec,Codec,Magic Number,The method contains a magic number: 3,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.info,Codec,Codec,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@60b7dc7c,34
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.options,AudioEncodingOptions,AudioEncodingOptions,Long Parameter List,The method has 7 parameters. ,20
+bramp_ffmpeg-cli-wrapper,net.bramp.ffmpeg.options,VideoEncodingOptions,VideoEncodingOptions,Long Parameter List,The method has 9 parameters. ,22

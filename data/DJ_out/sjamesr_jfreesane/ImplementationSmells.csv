@@ -1,0 +1,138 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+sjamesr_jfreesane,au.com.southsky.jfreesane,SanePasswordProvider,usingSanePassFile,Long Statement,The length of the statement "return passwordFile == null || passwordFile.isEmpty() ? new SaneClientAuthentication() : new SaneClientAuthentication(passwordFile);" is 132.,66
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOptionDescriptor,SaneOptionDescriptor,Long Parameter List,The method has 12 parameters. ,28
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,optionsFor,Complex Conditional,The conditional expression i > 0 && (option.getName() == null || option.getName().isEmpty()) is complex.,155
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,optionsFor,Complex Conditional,The conditional expression !(option.isWriteable() || option.isReadable() || option.isHardSelectable()) is complex.,155
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,optionsFor,Complex Method,Cyclomatic complexity of the method is 8,155
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,getValueCount,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5de15ce1,253
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,toString,Long Statement,The length of the statement "return String.format("Option: %s` %s` value type: %s` units: %s"`descriptor.getName()`descriptor.getTitle()`descriptor.getValueType()`descriptor.getUnits());" is 157.,310
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,getIntegerValue,Long Statement,The length of the statement "Preconditions.checkState(result.getValueSize() == SaneWord.SIZE_IN_BYTES`"unexpected value size " + result.getValueSize() + "` expecting "+ SaneWord.SIZE_IN_BYTES);" is 164.,338
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,readOption,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@33544cc5,428
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,setFixedValue,Long Statement,The length of the statement "Preconditions.checkState(result.getType() == OptionValueType.FIXED`"setFixedValue is not appropriate for option of type " + result.getType());" is 142.,488
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,setFixedValue,Magic Number,The method contains a magic number: 32768,488
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,setFixedValue,Magic Number,The method contains a magic number: 32767.9999,488
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,fixedValueToWord,Magic Number,The method contains a magic number: 32768,504
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,fixedValueToWord,Magic Number,The method contains a magic number: 32767.9999,504
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,setStringValue,Long Statement,The length of the statement "Preconditions.checkState(newValue.length() < getSize()`"string value '" + newValue + "' (length="+ newValue.length()+ ") exceeds maximum size of "+ (getSize() - 1)+ " byte(s) for option "+ getName());" is 200.,528
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,setStringValue,Long Statement,The length of the statement "Preconditions.checkState(result.getInfo().contains(OptionWriteInfo.INEXACT) ^ newValue.equals(optionValueFromServer)`"new option value does not match when it should");" is 167.,528
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,writeWordListOption,Long Statement,The length of the statement "if (result.getInfo().contains(OptionWriteInfo.RELOAD_OPTIONS) || result.getInfo().contains(OptionWriteInfo.RELOAD_PARAMETERS)) {" is 128.,601
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneOption,writeOption,Long Statement,The length of the statement "Preconditions.checkState(getValueType() == OptionValueType.INT`"option %s is %s-typed` you must use the corresponding methods to set the value"`getName()`getValueType());" is 170.,659
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,frameSortOrder,Magic Number,The method contains a magic number: 2,39
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,frameSortOrder,Magic Number,The method contains a magic number: 3,39
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,frameSortOrder,Magic Number,The method contains a magic number: 4,39
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,frameSortOrder,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@550ce3a9,39
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,SaneImage,Long Parameter List,The method has 5 parameters. ,56
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Long Statement,The length of the statement "WritableRaster raster=Raster.createBandedRaster(buffer`getWidth()`getHeight()`getBytesPerLine()`new int[]{0`1`2}`new int[]{0`0`0}`new Point(0`0));" is 146.,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Long Statement,The length of the statement "ColorModel model=new ComponentColorModel(ColorSpace.getInstance(ColorSpace.CS_sRGB)`false`false`Transparency.OPAQUE`DataBuffer.TYPE_BYTE);" is 138.,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Long Statement,The length of the statement "WritableRaster raster=Raster.createInterleavedRaster(buffer`width`height`bytesPerLine * Byte.SIZE / depthPerPixel`scanlineStride`bandOffsets`new Point(0`0));" is 157.,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Long Statement,The length of the statement "ColorModel model=new ComponentColorModel(colorSpace`false`false`Transparency.OPAQUE`getDepthPerPixel() == 8 ? DataBuffer.TYPE_BYTE : DataBuffer.TYPE_USHORT);" is 157.,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Magic Number,The method contains a magic number: 8,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Magic Number,The method contains a magic number: 16,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Magic Number,The method contains a magic number: 3,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,toBufferedImage,Magic Number,The method contains a magic number: 8,91
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitGrayscaleImage,Long Statement,The length of the statement "return new BufferedImage(new IndexColorModel(1`2`new byte[]{(byte)0xff`0}`new byte[]{(byte)0xff`0}`new byte[]{(byte)0xff`0})`raster`false`null);" is 144.,165
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitGrayscaleImage,Magic Number,The method contains a magic number: 2,165
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitGrayscaleImage,Magic Number,The method contains a magic number: 0xff,165
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitGrayscaleImage,Magic Number,The method contains a magic number: 0xff,165
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitGrayscaleImage,Magic Number,The method contains a magic number: 0xff,165
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitColorImage,Magic Number,The method contains a magic number: 3,179
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitColorImage,Magic Number,The method contains a magic number: 2,179
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitColorImage,Magic Number,The method contains a magic number: 0xff0000,179
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitColorImage,Magic Number,The method contains a magic number: 0x00ff00,179
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,decodeSingleBitColorImage,Magic Number,The method contains a magic number: 0x0000ff,179
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,asDataBuffer,Magic Number,The method contains a magic number: 8,207
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,asDataBuffer,Magic Number,The method contains a magic number: 0xFF,207
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneImage,asDataBuffer,Magic Number,The method contains a magic number: 0xFF,207
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneDevice,SaneDevice,Long Parameter List,The method has 5 parameters. ,32
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneParameters,SaneParameters,Long Parameter List,The method has 6 parameters. ,20
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneParameters,toString,Long Statement,The length of the statement "return "SaneParameters{" + "frameType=" + frameType + "` lastFrame="+ lastFrame+ "` bytesPerLine="+ bytesPerLine+ "` pixelsPerLine="+ pixelsPerLine+ "` lineCount="+ lineCount+ "` depthPerPixel="+ depthPerPixel+ '}';" is 215.,77
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWord,forSaneVersion,Magic Number,The method contains a magic number: 0xff,63
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWord,forSaneVersion,Magic Number,The method contains a magic number: 24,63
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWord,forSaneVersion,Magic Number,The method contains a magic number: 0xff,63
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWord,forSaneVersion,Magic Number,The method contains a magic number: 16,63
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWord,forSaneVersion,Magic Number,The method contains a magic number: 0xffff,63
+sjamesr_jfreesane,au.com.southsky.jfreesane,FrameReader,FrameReader,Long Parameter List,The method has 5 parameters. ,23
+sjamesr_jfreesane,au.com.southsky.jfreesane,FrameReader,readFrame,Complex Method,Cyclomatic complexity of the method is 8,36
+sjamesr_jfreesane,au.com.southsky.jfreesane,FrameReader,readFrame,Magic Number,The method contains a magic number: 256,36
+sjamesr_jfreesane,au.com.southsky.jfreesane,FrameReader,readFrame,Magic Number,The method contains a magic number: 16,36
+sjamesr_jfreesane,au.com.southsky.jfreesane,FrameReader,readFrame,Magic Number,The method contains a magic number: 2,36
+sjamesr_jfreesane,au.com.southsky.jfreesane,FrameReader,readFrame,Magic Number,The method contains a magic number: 2,36
+sjamesr_jfreesane,au.com.southsky.jfreesane,FrameReader,readRecord,Magic Number,The method contains a magic number: 0xffffffff,92
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneInputStream,readOptionDescriptor,Complex Method,Cyclomatic complexity of the method is 12,142
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneInputStream,readOptionDescriptor,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@56554e7,142
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneInputStream,readOptionDescriptor,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2f19ab6,142
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,withRemoteSane,Long Parameter List,The method has 5 parameters. ,71
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,withRemoteSane,Long Parameter List,The method has 6 parameters. ,119
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,withRemoteSane,Long Parameter List,The method has 5 parameters. ,146
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,withRemoteSane,Long Statement,The length of the statement "Preconditions.checkArgument(connectTimeoutMillis >= 0 && connectTimeoutMillis <= Integer.MAX_VALUE`"Timeout must be between 0 and Integer.MAX_VALUE milliseconds");" is 163.,146
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,withRemoteSane,Long Statement,The length of the statement "Logger.getLogger(SaneSession.class.getName()).log(Level.WARNING`"Specified timeout of {0} {1} rounds to 0ms and was clamped to 1ms"`new Object[]{timeout`timeUnit});" is 164.,146
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,withRemoteSane,Long Statement,The length of the statement "Preconditions.checkArgument(soTimeoutMillis >= 0 && soTimeoutMillis <= Integer.MAX_VALUE`"Socket timeout must be between 0 and Integer.MAX_VALUE milliseconds");" is 160.,146
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,acquireImage,Long Statement,The length of the statement "FrameReader frameStream=new FrameReader(device`parameters`new BufferedInputStream(imageSocket.getInputStream()`READ_BUFFER_SIZE)`0x4321 == byteOrder.integerValue()`listener);" is 174.,267
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,acquireImage,Magic Number,The method contains a magic number: 0x4321,267
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,getLikelyTotalFrameCount,Magic Number,The method contains a magic number: 3,346
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,getLikelyTotalFrameCount,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@305230ea,346
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSession,initSane,Magic Number,The method contains a magic number: 3,379
+sjamesr_jfreesane,au.com.southsky.jfreesane,SanePasswordEncoder,encodeAsHex,Magic Number,The method contains a magic number: 0xff,37
+sjamesr_jfreesane,au.com.southsky.jfreesane,RateLimitingScanListeners,noMoreFrequentlyThan,Long Statement,The length of the statement "@Override public void frameAcquisitionStarted( SaneDevice device` SaneParameters parameters` int currentFrame` int likelyTotalFrames){" is 134.,41
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneClientAuthentication,SaneClientAuthentication,Magic Number,The method contains a magic number: 4,59
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneClientAuthentication,SaneClientAuthentication,Magic Number,The method contains a magic number: 4,59
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneClientAuthentication,SaneClientAuthentication,Magic Number,The method contains a magic number: 4,59
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,initSession,Long Statement,The length of the statement "this.session=SaneSession.withRemoteSane(InetAddress.getByName(hostAndPort.getHost())`hostAndPort.getPort() == -1 ? 6566 : hostAndPort.getPort());" is 145.,64
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,initSession,Magic Number,The method contains a magic number: 6566,64
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,getOptionValueSucceeds,Complex Conditional,The conditional expression option.getType() == OptionValueType.INT && option.getValueCount() == 1 && option.isActive() is complex.,134
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,adfAcquisitionSucceeds,Magic Number,The method contains a magic number: 20,178
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,acquireImageSucceedsAfterOutOfPaperCondition,Magic Number,The method contains a magic number: 20,200
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readsFixedPrecisionCorrectly,Magic Number,The method contains a magic number: 123,245
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readsFixedPrecisionCorrectly,Magic Number,The method contains a magic number: 123.456,245
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readsFixedPrecisionCorrectly,Magic Number,The method contains a magic number: 0.0001,245
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readsFixedPrecisionCorrectly,Magic Number,The method contains a magic number: 123,245
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readsFixedPrecisionCorrectly,Magic Number,The method contains a magic number: 0.0001,245
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readsStringListConstraintsCorrectly,Long Statement,The length of the statement "assertThat(option.getStringConstraints()).has().exactly("First entry"`"Second entry"`"This is the very long third entry. Maybe the frontend has an idea how to display it");" is 172.,271
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 42,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 8,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 17,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 42,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 256,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 65536,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 16777216,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 1073741824,290
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 32.7d,305
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 12.1d,305
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 42d,305
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 129.5d,305
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedValueListConstraintsCorrectly,Magic Number,The method contains a magic number: 0.00001,305
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerConstraintRangeCorrectly,Magic Number,The method contains a magic number: 4,324
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerConstraintRangeCorrectly,Magic Number,The method contains a magic number: 192,324
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readIntegerConstraintRangeCorrectly,Magic Number,The method contains a magic number: 2,324
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedConstraintRangeCorrectly,Magic Number,The method contains a magic number: 42.17,339
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedConstraintRangeCorrectly,Magic Number,The method contains a magic number: 0.00001,339
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedConstraintRangeCorrectly,Magic Number,The method contains a magic number: 32767.9999,339
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedConstraintRangeCorrectly,Magic Number,The method contains a magic number: 0.00001,339
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedConstraintRangeCorrectly,Magic Number,The method contains a magic number: 2.0,339
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,readFixedConstraintRangeCorrectly,Magic Number,The method contains a magic number: 0.00001,339
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,threePassScanning,Magic Number,The method contains a magic number: 5,412
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,reducedArea,Magic Number,The method contains a magic number: 200,428
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,reducedArea,Magic Number,The method contains a magic number: 105.0,428
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,reducedArea,Magic Number,The method contains a magic number: 149.0,428
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,listenerReceivesScanStartedEvent,Long Statement,The length of the statement "@Override public void frameAcquisitionStarted( SaneDevice device` SaneParameters parameters` int currentFrame` int likelyTotalFrames){" is 134.,508
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,listenerReceivesScanStartedEvent,Magic Number,The method contains a magic number: 1200,508
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneSessionTest,listenerReceivesScanStartedEvent,Magic Number,The method contains a magic number: 3,508
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,testFixedPrecisionValue,Magic Number,The method contains a magic number: 216.069,25
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,testFixedPrecisionValue,Magic Number,The method contains a magic number: 216.069,25
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,testFixedPrecisionValue,Magic Number,The method contains a magic number: 0.0001,25
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromArrayWithOffset,Magic Number,The method contains a magic number: 4,30
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromArrayWithOffset,Magic Number,The method contains a magic number: 2,30
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromArrayWithOffset,Magic Number,The method contains a magic number: 8,30
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromArrayWithOffset,Magic Number,The method contains a magic number: 3,30
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromArrayWithOffset,Magic Number,The method contains a magic number: 12,30
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromArrayWithOffset,Magic Number,The method contains a magic number: 4,30
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromArrayWithOffset,Magic Number,The method contains a magic number: 16,30
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromStream,Magic Number,The method contains a magic number: 2,40
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromStream,Magic Number,The method contains a magic number: 3,40
+sjamesr_jfreesane,au.com.southsky.jfreesane,SaneWordTest,fromStream,Magic Number,The method contains a magic number: 4,40
+sjamesr_jfreesane,au.com.southsky.jfreesane,ImageAcquisitionTest,initSession,Long Statement,The length of the statement "this.session=SaneSession.withRemoteSane(InetAddress.getByName(hostAndPort.getHost())`hostAndPort.getPort() == -1 ? 6566 : hostAndPort.getPort()`20`TimeUnit.SECONDS`20`TimeUnit.SECONDS);" is 185.,35
+sjamesr_jfreesane,au.com.southsky.jfreesane,ImageAcquisitionTest,initSession,Magic Number,The method contains a magic number: 6566,35
+sjamesr_jfreesane,au.com.southsky.jfreesane,ImageAcquisitionTest,initSession,Magic Number,The method contains a magic number: 20,35
+sjamesr_jfreesane,au.com.southsky.jfreesane,ImageAcquisitionTest,initSession,Magic Number,The method contains a magic number: 20,35
+sjamesr_jfreesane,au.com.southsky.jfreesane,ImageAcquisitionTest,parameters,Magic Number,The method contains a magic number: 8,53
+sjamesr_jfreesane,au.com.southsky.jfreesane,ImageAcquisitionTest,parameters,Magic Number,The method contains a magic number: 16,53

@@ -1,0 +1,23 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+socrata_soda-android-sdk,com.socrata.android.example.activities,MainActivity,onCreate,Long Statement,The length of the statement "list.setAdapter(new ArrayAdapter<String>(this`android.R.layout.simple_list_item_1`getResources().getStringArray(R.array.menu)));" is 128.,31
+socrata_soda-android-sdk,com.socrata.android.example.activities,MainActivity,onCreate,Magic Number,The method contains a magic number: 2,31
+socrata_soda-android-sdk,com.socrata.android.example.activities,MainActivity,onItemClick,Magic Number,The method contains a magic number: 2,38
+socrata_soda-android-sdk,com.socrata.android.example.fragments,MapExampleFragment,getQuery,Magic Number,The method contains a magic number: 100,61
+socrata_soda-android-sdk,com.socrata.android.example.fragments,MapExampleFragment,toMarkerOptions,Long Statement,The length of the statement "return new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.pushpin_default)).position(latLng).title(earthquake.getRegion()).snippet(getString(R.string.magnitude`earthquake.getMagnitude()));" is 210.,70
+socrata_soda-android-sdk,com.socrata.android.soql.clauses,Select,build,Long Statement,The length of the statement "return expressions.length == 0 ? "select *" : String.format("select %s"`BuildUtils.join("` "`BuildUtils.buildAll(expressions)));" is 128.,22
+socrata_soda-android-sdk,com.socrata.android.soql.clauses,GroupBy,build,Long Statement,The length of the statement "return expressions.length == 0 ? "" : String.format("group by %s"`BuildUtils.join("` "`BuildUtils.buildAll(expressions)));" is 122.,22
+socrata_soda-android-sdk,com.socrata.android.soql.clauses,OrderBy,build,Long Statement,The length of the statement "return expressions.length == 0 ? "" : String.format("order by %s"`BuildUtils.join("` "`BuildUtils.buildAll(expressions)));" is 122.,22
+socrata_soda-android-sdk,com.socrata.android.soql,Query,build,Long Statement,The length of the statement "BuildCapable[] parts=new BuildCapable[]{getSelect()`getWhere()`getGroupBy()`getOrderBy()`new Offset(getOffset())`new Limit(getLimit())};" is 136.,282
+socrata_soda-android-sdk,com.socrata.android.client.converters,EmbeddedSodaEntityConverter,getValue,Long Statement,The length of the statement "String sodaFieldName=innerField.isAnnotationPresent(SodaField.class) ? innerField.getAnnotation(SodaField.class).value() : innerField.getName();" is 144.,32
+socrata_soda-android-sdk,com.socrata.android.client.converters,DateTimeStampConverter,getValue,Magic Number,The method contains a magic number: 1000,25
+socrata_soda-android-sdk,com.socrata.android.client,SodaCallbackResponseHandler,onFailure,Long Statement,The length of the statement "ResponseError responseError=new ResponseError(jsonObject.optString("code")`jsonObject.optString("message")`jsonObject.optJSONObject("data"));" is 141.,123
+socrata_soda-android-sdk,com.socrata.android.ui.map,SodaMapFragment,reload,Long Statement,The length of the statement "GeoBox box=Query.box(bounds.northeast.latitude`bounds.northeast.longitude`bounds.southwest.latitude`bounds.southwest.longitude);" is 128.,159
+socrata_soda-android-sdk,com.socrata.android.ui.list,MoreFooterView,init,Magic Number,The method contains a magic number: 20,67
+socrata_soda-android-sdk,com.socrata.android.ui.list,MoreFooterView,init,Magic Number,The method contains a magic number: 20,67
+socrata_soda-android-sdk,com.socrata.android.ui.list,MoreFooterView,init,Magic Number,The method contains a magic number: 20,67
+socrata_soda-android-sdk,com.socrata.android.ui.list,MoreFooterView,init,Magic Number,The method contains a magic number: 20,67
+socrata_soda-android-sdk,com.socrata.android.tests,SOSQLTest,testLocationWithinGeoBox,Long Statement,The length of the statement "assertExpression("within_box(withinBox` 47.712585` -122.464676` 47.510759` -122.249756)"`withinBox("withinBox"`box(47.712585`-122.464676`47.510759`-122.249756)));" is 162.,191
+socrata_soda-android-sdk,com.socrata.android.tests,SOSQLTest,testLocationWithinGeoBox,Magic Number,The method contains a magic number: 47.712585,191
+socrata_soda-android-sdk,com.socrata.android.tests,SOSQLTest,testLocationWithinGeoBox,Magic Number,The method contains a magic number: 122.464676,191
+socrata_soda-android-sdk,com.socrata.android.tests,SOSQLTest,testLocationWithinGeoBox,Magic Number,The method contains a magic number: 47.510759,191
+socrata_soda-android-sdk,com.socrata.android.tests,SOSQLTest,testLocationWithinGeoBox,Magic Number,The method contains a magic number: 122.249756,191

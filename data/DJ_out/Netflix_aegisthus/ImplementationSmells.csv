@@ -1,0 +1,138 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoadCaster,bytesToInteger,Empty catch clause,The method has an empty catch block.,88
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoadCaster,getNumber,Magic Number,The method contains a magic number: 2,105
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoadCaster,getNumber,Magic Number,The method contains a magic number: 4,105
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoadCaster,getNumber,Magic Number,The method contains a magic number: 8,105
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoadCaster,bytesToLong,Empty catch clause,The method has an empty catch block.,123
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,cleanse,Complex Conditional,The conditional expression deletedAt > (Long)values.get(2) || (values.size() > 3 && "d".equals(values.get(3))) is complex.,69
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,cleanse,Magic Number,The method contains a magic number: 2,69
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,cleanse,Magic Number,The method contains a magic number: 3,69
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,cleanse,Magic Number,The method contains a magic number: 3,69
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,getNext,Complex Method,Cyclomatic complexity of the method is 9,97
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,getNext,Empty catch clause,The method has an empty catch block.,97
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,getNext,Magic Number,The method contains a magic number: 2,97
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,tuple,Magic Number,The method contains a magic number: 2,247
+Netflix_aegisthus,com.netflix.aegisthus.pig,AegisthusLoader,tuple,Magic Number,The method contains a magic number: 3,247
+Netflix_aegisthus,com.netflix,Aegisthus,logAegisthusVersion,Long Statement,The length of the statement "System.out.println("Running Aegisthus version " + attr.getValue("Implementation-Version") + " built from change "+ attr.getValue("Change")+ " on host "+ attr.getValue("Build-Host")+ " on "+ attr.getValue("Build-Date")+ " with Java "+ attr.getValue("Build-Java-Version"));" is 271.,68
+Netflix_aegisthus,com.netflix,Aegisthus,getDataFiles,Long Statement,The length of the statement "Iterable<Path> paths=DirectoryWalker.with(conf).add(dir).recursive(true).omitHidden(true).manifest(false).threaded().paths();" is 125.,113
+Netflix_aegisthus,com.netflix,Aegisthus,getOptions,Long Identifier,The length of the field CMD_ARG_SSTABLE_OUTPUT_VERSION is 30.,132
+Netflix_aegisthus,com.netflix,Aegisthus,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_INPUT_FILE).withDescription("Each input location").hasArgs().create(Feature.CMD_ARG_INPUT_FILE));" is 154.,132
+Netflix_aegisthus,com.netflix,Aegisthus,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_OUTPUT_DIR).isRequired().withDescription("output location").hasArg().create(Feature.CMD_ARG_OUTPUT_DIR));" is 162.,132
+Netflix_aegisthus,com.netflix,Aegisthus,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_INPUT_DIR).withDescription("a directory from which we will recursively pull sstables").hasArgs().create(Feature.CMD_ARG_INPUT_DIR));" is 189.,132
+Netflix_aegisthus,com.netflix,Aegisthus,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_PRODUCE_SSTABLE).withDescription("produces sstable output (default is to produce json)").create(Feature.CMD_ARG_PRODUCE_SSTABLE));" is 187.,132
+Netflix_aegisthus,com.netflix,Aegisthus,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_COMBINE_SPLITS).withDescription("combine together small input splits (default is to not combine input splits)").create(Feature.CMD_ARG_COMBINE_SPLITS));" is 209.,132
+Netflix_aegisthus,com.netflix,Aegisthus,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_SSTABLE_OUTPUT_VERSION).withDescription("version of sstable to produce (default is to produce " + Descriptor.Version.current_version + ")").hasArg().create(Feature.CMD_ARG_SSTABLE_OUTPUT_VERSION));" is 254.,132
+Netflix_aegisthus,com.netflix,Aegisthus,run,Complex Method,Cyclomatic complexity of the method is 13,179
+Netflix_aegisthus,com.netflix,Aegisthus,run,Long Identifier,The length of the field CMD_ARG_SSTABLE_OUTPUT_VERSION is 30.,179
+Netflix_aegisthus,com.netflix,Aegisthus,run,Long Identifier,The length of the field CONF_MAX_CORRUPT_FILES_TO_SKIP is 30.,179
+Netflix_aegisthus,com.netflix.aegisthus.mapreduce,CassSSTableReducer,reduce,Long Statement,The length of the statement "if (value.getAtom() != null && rowReducer.getAtomTotalSize() + value.getAtom().serializedSizeForSSTable() > maxRowSize) {" is 121.,70
+Netflix_aegisthus,com.netflix.aegisthus.mapreduce,CassSSTableReducer,reduce,Long Statement,The length of the statement "LOG.warn("Skipping part of row {} that is too big` current size is already {}."`formattedKey`rowReducer.getAtomTotalSize());" is 124.,70
+Netflix_aegisthus,com.netflix.aegisthus.mapreduce,CassSSTableReducer,updateCounter,Magic Number,The method contains a magic number: 100,107
+Netflix_aegisthus,com.netflix.aegisthus.input.splits,AegCompressedSplit,createAegCompressedSplit,Long Parameter List,The method has 6 parameters. ,25
+Netflix_aegisthus,com.netflix.aegisthus.input.splits,AegCompressedSplit,getCompressionMetadata,Long Statement,The length of the statement "try (FSDataInputStream cmIn=fs.open(compressionMetadataPath);BufferedInputStream inputStream=new BufferedInputStream(cmIn)){" is 124.,42
+Netflix_aegisthus,com.netflix.aegisthus.input.readers,SSTableRecordReader,initialize,Empty catch clause,The method has an empty catch block.,80
+Netflix_aegisthus,com.netflix.aegisthus.input.readers,SSTableRecordReader,nextKeyValue,Long Statement,The length of the statement "key=AegisthusKey.createKeyForRowColumnPair(ByteBuffer.wrap(value.getKey())`traceDataFromSource ? sourcePath : ""`value.getAtom().name()`value.getAtom().maxTimestamp());" is 168.,125
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSSTableSplitsForFile,Complex Method,Cyclomatic complexity of the method is 10,114
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSSTableSplitsForFile,Long Statement,The length of the statement "return ImmutableList.of((InputSplit)AegCompressedSplit.createAegCompressedSplit(path`0`length`blkLocations[blkLocations.length - 1].getHosts()`compressionPath.get()`conf));" is 172.,114
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSSTableSplitsForFile,Long Statement,The length of the statement "splits.add(AegSplit.createSplit(path`length - bytesRemaining`bytesRemaining`blkLocations[blkLocations.length - 1].getHosts()));" is 127.,114
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSSTableSplitsForFile,Magic Number,The method contains a magic number: .99,114
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSSTableSplitsForFile,Magic Number,The method contains a magic number: 1.2,114
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSSTableSplitsForFile,Magic Number,The method contains a magic number: 2,114
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSplits,Magic Number,The method contains a magic number: 20,189
+Netflix_aegisthus,com.netflix.aegisthus.input,AegisthusInputFormat,getSplits,Magic Number,The method contains a magic number: 2,189
+Netflix_aegisthus,com.netflix.aegisthus.output,JsonOutputFormat,getRecordWriter,Complex Method,Cyclomatic complexity of the method is 13,69
+Netflix_aegisthus,com.netflix.aegisthus.output,JsonOutputFormat,getRecordWriter,Long Method,The method has 100 lines of code.,69
+Netflix_aegisthus,com.netflix.aegisthus.output,JsonOutputFormat,getRecordWriter,Magic Number,The method contains a magic number: 100,69
+Netflix_aegisthus,com.netflix.aegisthus.output,JsonOutputFormat,getString,Magic Number,The method contains a magic number: 100,92
+Netflix_aegisthus,com.netflix.aegisthus.output,JsonOutputFormat,write,Complex Method,Cyclomatic complexity of the method is 12,108
+Netflix_aegisthus,com.netflix.aegisthus.output,SSTableOutputFormat,getCustomFileName,Long Statement,The length of the statement "return context.getConfiguration().get(Aegisthus.Feature.CONF_DATASET`"keyspace-dataset") + "-" + sstableVersion+ "-"+ NUMBER_FORMAT.format(partition)+ "-Data.db";" is 162.,49
+Netflix_aegisthus,com.netflix.aegisthus.output,SSTableOutputFormat,getRecordWriter,Magic Number,The method contains a magic number: 16,60
+Netflix_aegisthus,com.netflix.aegisthus.output,SSTableOutputFormat,getRecordWriter,Magic Number,The method contains a magic number: 1000,60
+Netflix_aegisthus,com.netflix.aegisthus.output,SSTableOutputFormat,getRecordWriter,Magic Number,The method contains a magic number: 1000,60
+Netflix_aegisthus,com.netflix.aegisthus.output,SSTableOutputFormat,writeVersion_1_2_5,Magic Number,The method contains a magic number: 16,83
+Netflix_aegisthus,com.netflix.aegisthus.output,SSTableOutputFormat,writeVersion_1_2_5,Magic Number,The method contains a magic number: 1000,83
+Netflix_aegisthus,com.netflix.aegisthus.output,SSTableOutputFormat,writeVersion_2_0,Magic Number,The method contains a magic number: 1000,101
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AtomWritable,equals,Long Statement,The length of the statement "return Objects.equals(this.serializer`other.serializer) && Objects.equals(this.atom`other.atom) && Objects.equals(this.deletedAt`other.deletedAt)&& Objects.equals(this.key`other.key);" is 183.,59
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AegisthusKey,compareTo,Long Statement,The length of the statement "return ComparisonChain.start().compare(this.name`other.name`nameComparator).compare(this.timestamp`other.timestamp).result();" is 125.,83
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AegisthusKey,equals,Long Statement,The length of the statement "return Objects.equals(this.key`other.key) && Objects.equals(this.sourcePath`other.sourcePath) && Objects.equals(this.name`other.name)&& Objects.equals(this.timestamp`other.timestamp);" is 183.,108
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AegisthusKey,readFields,Magic Number,The method contains a magic number: 4,169
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AegisthusKey,readFields,Magic Number,The method contains a magic number: 4,169
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AegisthusKey,readFields,Magic Number,The method contains a magic number: 4,169
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AegisthusKey,toString,Long Statement,The length of the statement "return com.google.common.base.Objects.toStringHelper(this).add("key"`key).add("name"`name).add("timestamp"`timestamp).toString();" is 129.,208
+Netflix_aegisthus,com.netflix.aegisthus.io.writable,AegisthusKeySortingComparator,compare,Long Parameter List,The method has 6 parameters. ,34
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,IndexDatabaseScanner,close,Empty catch clause,The method has an empty catch block.,41
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,close,Empty catch clause,The method has an empty catch block.,60
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserialize,Long Statement,The length of the statement "String message="Out of memory while reading row for key " + keyToString(rowKey) + "this may be caused by a corrupt file";" is 121.,71
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserialize,Long Statement,The length of the statement "String message="Out of memory while reading row wth size " + keysize + " for key "+ keyToString(rowKey)+ "this may be caused by a corrupt file";" is 144.,71
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserialize,Magic Number,The method contains a magic number: 2,71
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserialize,Magic Number,The method contains a magic number: 8,71
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserialize,Magic Number,The method contains a magic number: 4,71
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserialize,Magic Number,The method contains a magic number: 8,71
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,keyToString,Magic Number,The method contains a magic number: 32,132
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserializeColumns,Long Parameter List,The method has 5 parameters. ,141
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserializeColumns,Long Statement,The length of the statement "OnDiskAtom atom=serializer.deserializeFromSSTable(columns`ColumnSerializer.Flag.PRESERVE_SIZE`Integer.MIN_VALUE`version);" is 121.,141
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable,SSTableColumnScanner,deserializeColumns,Magic Number,The method contains a magic number: 2,141
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable.compression,CompressionMetadata,readChunkLengths,Magic Number,The method contains a magic number: 4,94
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable.compression,CompressionMetadata,readChunkLengths,Magic Number,The method contains a magic number: 4,94
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable.compression,CompressionInputStream,CompressionInputStream,Magic Number,The method contains a magic number: 2,40
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable.compression,CompressionInputStream,CompressionInputStream,Magic Number,The method contains a magic number: 2,40
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable.compression,CompressionInputStream,read,Magic Number,The method contains a magic number: 0xFF,86
+Netflix_aegisthus,com.netflix.aegisthus.io.sstable.compression,CompressionInputStream,readInput,Magic Number,The method contains a magic number: 4,116
+Netflix_aegisthus,com.netflix.aegisthus.util,ObservableToIterator,toIterator,Magic Number,The method contains a magic number: 25,18
+Netflix_aegisthus,com.netflix.aegisthus.util,ObservableToIterator,toIterator,Long Statement,The length of the statement "final BlockingQueue<Notification<? extends T>> notifications=new LinkedBlockingQueue<Notification<? extends T>>(bufferSize);" is 124.,22
+Netflix_aegisthus,org.coursera.mapreducer,CQLMapper,initBuilder,Long Statement,The length of the statement "cgmBuilder=new ColumnGroupMap.Builder((CompositeType)cfMetaData.comparator`cfDef.hasCollections`System.currentTimeMillis());" is 124.,87
+Netflix_aegisthus,org.coursera.mapreducer,CQLMapper,flushCgm,Long Statement,The length of the statement "ByteBuffer[] keyComponents=cfDef.hasCompositeKey ? ((CompositeType)cfMetaData.getKeyValidator()).split(currentKey) : new ByteBuffer[]{currentKey};" is 146.,93
+Netflix_aegisthus,org.coursera,SSTableExport,checkVersionFromFilename,Long Statement,The length of the statement "throw new IllegalStateException("All files must have the same sstable version. File '" + filename + "' has version '"+ descriptor.version+ "' and we have already seen a file with version '"+ version+ "'");" is 205.,56
+Netflix_aegisthus,org.coursera,SSTableExport,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_INPUT_FILE).withDescription("Each input location").hasArgs().create(Feature.CMD_ARG_INPUT_FILE));" is 154.,97
+Netflix_aegisthus,org.coursera,SSTableExport,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_INPUT_DIR).withDescription("a directory from which we will recursively pull sstables").hasArgs().create(Feature.CMD_ARG_INPUT_DIR));" is 189.,97
+Netflix_aegisthus,org.coursera,SSTableExport,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_AVRO_SCHEMA_FILE).withDescription("location of avro schema").isRequired().hasArgs().create(Feature.CMD_ARG_AVRO_SCHEMA_FILE));" is 183.,97
+Netflix_aegisthus,org.coursera,SSTableExport,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(Feature.CMD_ARG_OUTPUT_DIR).isRequired().withDescription("output location").hasArg().create(Feature.CMD_ARG_OUTPUT_DIR));" is 162.,97
+Netflix_aegisthus,com.netflix.aegisthus.tools,Utils,copy,Magic Number,The method contains a magic number: 65536,33
+Netflix_aegisthus,com.netflix.aegisthus.tools,Utils,copy,Magic Number,The method contains a magic number: 65536,56
+Netflix_aegisthus,com.netflix.aegisthus.tools,Utils,copy,Magic Number,The method contains a magic number: 50,56
+Netflix_aegisthus,com.netflix.aegisthus.tools,StorageHelper,moveTaskOutputToFinal,Long Statement,The length of the statement "List<String> relativePaths=Lists.newArrayList(DirectoryWalker.with(config).threaded().omitHidden().add(path).relativePathStrings());" is 132.,200
+Netflix_aegisthus,com.netflix.aegisthus.tools,StorageHelper,readCommitLogs,Magic Number,The method contains a magic number: 1000,219
+Netflix_aegisthus,com.netflix.aegisthus.tools,DirectoryWalker,filterBatch,Complex Conditional,The conditional expression batched && files.length > 0 && batch.matcher(files[0].getPath().toString()).find() is complex.,167
+Netflix_aegisthus,com.netflix.aegisthus.tools,DirectoryWalker,addAll,Empty catch clause,The method has an empty catch block.,252
+Netflix_aegisthus,com.netflix.aegisthus.tools,DirectoryWalker,awaitTermination,Empty catch clause,The method has an empty catch block.,295
+Netflix_aegisthus,com.netflix.aegisthus.tools,DirectoryWalker,cache,Complex Conditional,The conditional expression (recursive || !file.isDir()) && !cache(child) is complex.,310
+Netflix_aegisthus,com.netflix.aegisthus.tools,DirectoryWalker,cache,Complex Method,Cyclomatic complexity of the method is 9,310
+Netflix_aegisthus,com.netflix.aegisthus.tools,DirectoryWalker,process,Empty catch clause,The method has an empty catch block.,419
+Netflix_aegisthus,com.netflix.aegisthus.tools,DirectoryWalker,threaded,Magic Number,The method contains a magic number: 25,478
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializer,serializeColumns,Magic Number,The method contains a magic number: 2,105
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializer,serializeColumns,Magic Number,The method contains a magic number: 3,105
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializer,serializeColumns,Magic Number,The method contains a magic number: 3,105
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializer,serializeColumns,Magic Number,The method contains a magic number: 4,105
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializerTest,agent,Long Statement,The length of the statement "BufferedReader br=new BufferedReader(new InputStreamReader(AegisthusSerializerTest.class.getResourceAsStream("/agent.json")));" is 126.,22
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializerTest,json,Long Statement,The length of the statement "return new Object[][]{{"{\"556e6b6e6f776e3a3738383838\": {\"deletedAt\": -9223372036854775808` \"columns\": [[\"ticketId\"`\"d115046000bd11e1b27112313925158b\"`1319735105450`\"e\"`604800`1320339905]]}}"}`{"{\"556e6b6e6f776e3a3738383838\": {\"deletedAt\": -9223372036854775808` \"columns\": [[\"\\\\N\"`\"d115046000bd11e1b27112313925158b\"`1319735105450`\"e\"`604800`1320339905]]}}"}`{"{\"556e6b6e6f776e3a3738383838\": {\"deletedAt\": -9223372036854775808` \"columns\": [[\"ticketId\"`\"d115046000bd11e1b27112313925158b\"`1319735105450`\"c\"`604800]]}}"}};" is 555.,43
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializerTest,serialize,Long Statement,The length of the statement "String value="{\"uid\": {\"deletedAt\": 10` \"columns\": [[\"cell\"`\"00000002\"`1312400480243000]` [\"enabled\"`\"59\"`1312400475129004]` [\"newcolumn\"`\"59\"`1312400533649004]]}}";" is 183.,54
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializerTest,serialize,Magic Number,The method contains a magic number: 10L,54
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializerTest,values,Magic Number,The method contains a magic number: 2,79
+Netflix_aegisthus,com.netflix.aegisthus.tools,AegisthusSerializerTest,values,Magic Number,The method contains a magic number: 2,79
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,readHeader,Long Statement,The length of the statement "throw new IOException(String.format("compressed with imcompatible codec version %d. At least version %d is required"`codec.version`SnappyCodec.MINIMUM_COMPATIBLE_VERSION));" is 172.,79
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,readFully,Magic Number,The method contains a magic number: 8,112
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,readFully,Magic Number,The method contains a magic number: 1024,112
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,readFully,Magic Number,The method contains a magic number: 2,112
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 8,177
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 8,177
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 8,206
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 8,206
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 4,247
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 4,247
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 4,264
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 4,264
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 2,293
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 2,293
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,hasNextChunk,Complex Method,Cyclomatic complexity of the method is 10,322
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,hasNextChunk,Magic Number,The method contains a magic number: 4,322
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,hasNextChunk,Magic Number,The method contains a magic number: 4,322
+Netflix_aegisthus,org.xerial.snappy,SnappyInputStream2,read,Magic Number,The method contains a magic number: 0xFF,371
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OPT_INPUT_FILE).withDescription("Each input location").hasArgs().create(OPT_INPUT_FILE));" is 130.,100
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OPT_PRIAM).withDescription("the input is snappy stream compressed and should be decompressed (priam backup)").create(OPT_PRIAM));" is 170.,100
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OPT_RECURSIVE).withDescription("retain directory structure under this directory").hasArg().create(OPT_RECURSIVE));" is 155.,100
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OPT_MANIFEST_IN).withDescription("a manifest of the files to be copied").hasArg().create(OPT_MANIFEST_IN));" is 148.,100
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OPT_MANIFEST_IN).withDescription("a manifest of the files to be copied").hasArg().create(OPT_MANIFEST_IN));" is 148.,100
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OPT_MANIFEST_OUT).withDescription("write out a manifest file of movement").create(OPT_MANIFEST_OUT));" is 142.,100
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OPT_OVERWRITE).withDescription("overwrite the target directory if it exists.").create(OPT_OVERWRITE));" is 143.,100
+Netflix_aegisthus,(default package),Distcp,getOptions,Long Statement,The length of the statement "opts.addOption(OptionBuilder.withArgName(OUTPUT).isRequired().withDescription("output location").hasArg().create(OUTPUT));" is 122.,100
+Netflix_aegisthus,(default package),Distcp,setupInput,Magic Number,The method contains a magic number: 2,227

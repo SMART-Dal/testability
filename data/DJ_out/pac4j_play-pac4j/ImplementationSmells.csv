@@ -1,0 +1,27 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+pac4j_play-pac4j,org.pac4j.play.java,SecureAction,call,Long Parameter List,The method has 5 parameters. ,83
+pac4j_play-pac4j,org.pac4j.play.java,SecureAction,internalCall,Long Parameter List,The method has 6 parameters. ,87
+pac4j_play-pac4j,org.pac4j.play.java,SecureAction,internalCall,Long Statement,The length of the statement "final HttpActionAdapter actionAdapterWrapper=(action`webCtx) -> CompletableFuture.completedFuture(bestAdapter.adapt(action`webCtx));" is 132.,87
+pac4j_play-pac4j,org.pac4j.play.java,SecureAction,internalCall,Long Statement,The length of the statement "return (CompletionStage<Result>)bestLogic.perform(webContext`sessionStore`config`(webCtx`session`profiles`parameters) -> {" is 122.,87
+pac4j_play-pac4j,org.pac4j.play.http,PlayHttpActionAdapterTests,testUnauthorized,Magic Number,The method contains a magic number: 401,49
+pac4j_play-pac4j,org.pac4j.play.http,PlayHttpActionAdapterTests,testForbidden,Magic Number,The method contains a magic number: 403,55
+pac4j_play-pac4j,org.pac4j.play.http,PlayHttpActionAdapterTests,testBadRequest,Magic Number,The method contains a magic number: 400,75
+pac4j_play-pac4j,org.pac4j.play.http,PlayHttpActionAdapterTests,testOk,Magic Number,The method contains a magic number: 200,81
+pac4j_play-pac4j,org.pac4j.play,PlayWebContext,getBody,Complex Conditional,The conditional expression scalaRequest != null && scalaRequest.hasBody() && scalaRequest instanceof Request is complex.,110
+pac4j_play-pac4j,org.pac4j.play,PlayWebContext,addResponseCookie,Long Statement,The length of the statement "final Http.CookieBuilder cookieBuilder=Http.Cookie.builder(cookie.getName()`cookie.getValue()).withPath(cookie.getPath()).withDomain(cookie.getDomain()).withSecure(cookie.isSecure()).withHttpOnly(cookie.isHttpOnly());" is 217.,204
+pac4j_play-pac4j,org.pac4j.play,PlayWebContext,supplementRequest,Long Statement,The length of the statement "return request.withAttrs(this.javaRequest.attrs()).addAttr(RequestAttrKey.Session().asJava()`new AssignedCell<>(session.asScala()));" is 132.,248
+pac4j_play-pac4j,org.pac4j.play,PlayWebContext,supplementRequest,Long Statement,The length of the statement "return request.withAttrs(this.javaRequest.attrs()).addAttr(RequestAttrKey.Session().asJava()`new AssignedCell<>(session.asScala()));" is 132.,253
+pac4j_play-pac4j,org.pac4j.play,LogoutController,logout,Long Statement,The length of the statement "return CompletableFuture.supplyAsync(() -> (Result)bestLogic.perform(context`sessionStore`config`bestAdapter`this.defaultUrl`this.logoutUrlPattern`this.localLogout`this.destroySession`this.centralLogout)`ec.current());" is 218.,49
+pac4j_play-pac4j,org.pac4j.play,CallbackController,callback,Long Statement,The length of the statement "return CompletableFuture.supplyAsync(() -> (Result)bestLogic.perform(context`sessionStore`config`bestAdapter`this.defaultUrl`this.renewSession`this.defaultClient)`ec.current());" is 177.,46
+pac4j_play-pac4j,org.pac4j.play,PlayWebContextTests,testRandomNonSecureServerPort,Magic Number,The method contains a magic number: 9000,37
+pac4j_play-pac4j,org.pac4j.play,PlayWebContextTests,testRandomSecureServerPort,Magic Number,The method contains a magic number: 9000,48
+pac4j_play-pac4j,org.pac4j.play,PlayWebContextTests,testNonSecureServerPort,Magic Number,The method contains a magic number: 80,59
+pac4j_play-pac4j,org.pac4j.play,PlayWebContextTests,testSecureServerPort,Magic Number,The method contains a magic number: 443,67
+pac4j_play-pac4j,org.pac4j.play.store,PlayCacheSessionStore,setDefaultTimeout,Magic Number,The method contains a magic number: 3600,216
+pac4j_play-pac4j,org.pac4j.play.store,ShiroAesDataEncrypter,ShiroAesDataEncrypter,Magic Number,The method contains a magic number: 16,27
+pac4j_play-pac4j,org.pac4j.play.store,PlayCookieSessionStore,uncompressBytes,Magic Number,The method contains a magic number: 8192,152
+pac4j_play-pac4j,org.pac4j.play.store,ShiroAesDataEncrypterTests,testCanUseKey0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Magic Number,The method contains a magic number: 16,21
+pac4j_play-pac4j,org.pac4j.play.store,ShiroAesDataEncrypterTests,testCanUseKey0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Magic Number,The method contains a magic number: 0xAA,21
+pac4j_play-pac4j,org.pac4j.play.store,ShiroAesDataEncrypterTests,testCanUseKey0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Magic Number,The method contains a magic number: 256,21
+pac4j_play-pac4j,org.pac4j.play.deadbolt2,Pac4jHandler,Pac4jHandler,Long Parameter List,The method has 5 parameters. ,58
+pac4j_play-pac4j,org.pac4j.play.deadbolt2,Pac4jHandlerCache,toString,Long Statement,The length of the statement "return CommonHelper.toNiceString(this.getClass()`"handlers"`handlers`"config"`config`"httpExecutionContext"`httpExecutionContext`"playSessionStore"`sessionStore);" is 162.,69

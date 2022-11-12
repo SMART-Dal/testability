@@ -1,0 +1,503 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+greenmail-mail-test_greenmail,com.icegreen.greenmail.docker,DockerServiceIT,testAllServices,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("foo@localhost"`"bar@localhost"`"test1"`"Test GreenMail Docker service"`ServerSetupTest.SMTP.createCopy(bindAddress));" is 146.,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.docker,DockerServiceIT,testAllServices,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("foo@localhost"`"bar@localhost"`"test2"`"Test GreenMail Docker service"`ServerSetupTest.SMTPS.createCopy(bindAddress));" is 147.,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.docker,DockerServiceIT,testAllServices,Long Statement,The length of the statement "for ( ServerSetup setup : Arrays.asList(ServerSetupTest.IMAP.createCopy(bindAddress)`ServerSetupTest.IMAPS.createCopy(bindAddress)`ServerSetupTest.POP3.createCopy(bindAddress)`ServerSetupTest.POP3S.createCopy(bindAddress))) {" is 225.,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.docker,DockerServiceIT,testAllServices,Magic Number,The method contains a magic number: 2,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.junit5,MultipleSetupsTests,testReceive,Magic Number,The method contains a magic number: 2,18
+greenmail-mail-test_greenmail,com.icegreen.greenmail.spring,GreenMailBeanDefinitionParser,extractServerStartupTimeout,Long Identifier,The length of the field DEFAULT_SERVER_STARTUP_TIMEOUT is 30.,43
+greenmail-mail-test_greenmail,com.icegreen.greenmail.spring,GreenMailBeanTest,testCreate,Magic Number,The method contains a magic number: 25,24
+greenmail-mail-test_greenmail,com.icegreen.greenmail.spring,GreenMailBeanTest,testCreate,Magic Number,The method contains a magic number: 110,24
+greenmail-mail-test_greenmail,com.icegreen.greenmail.spring,GreenMailNamespaceHandlerTest,testCreate,Magic Number,The method contains a magic number: 5000,22
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ServiceFactory,create,Long Statement,The length of the statement "service=new SmtpServer(new ServerSetup(getPort(pConf`pServiceConfiguration)`getHost(pConf`pServiceConfiguration)`ServerSetup.PROTOCOL_SMTP)`pManagers);" is 151.,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ServiceFactory,create,Long Statement,The length of the statement "service=new SmtpServer(new ServerSetup(getPort(pConf`pServiceConfiguration)`getHost(pConf`pServiceConfiguration)`ServerSetup.PROTOCOL_SMTPS)`pManagers);" is 152.,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ServiceFactory,create,Long Statement,The length of the statement "service=new Pop3Server(new ServerSetup(getPort(pConf`pServiceConfiguration)`getHost(pConf`pServiceConfiguration)`ServerSetup.PROTOCOL_POP3)`pManagers);" is 151.,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ServiceFactory,create,Long Statement,The length of the statement "service=new Pop3Server(new ServerSetup(getPort(pConf`pServiceConfiguration)`getHost(pConf`pServiceConfiguration)`ServerSetup.PROTOCOL_POP3S)`pManagers);" is 152.,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ServiceFactory,create,Long Statement,The length of the statement "service=new ImapServer(new ServerSetup(getPort(pConf`pServiceConfiguration)`getHost(pConf`pServiceConfiguration)`ServerSetup.PROTOCOL_IMAP)`pManagers);" is 151.,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ServiceFactory,create,Long Statement,The length of the statement "service=new ImapServer(new ServerSetup(getPort(pConf`pServiceConfiguration)`getHost(pConf`pServiceConfiguration)`ServerSetup.PROTOCOL_IMAPS)`pManagers);" is 152.,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ConfigurationFactory,configure,Complex Method,Cyclomatic complexity of the method is 10,26
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ApiIT,setUp,Magic Number,The method contains a magic number: 18080,28
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ApiIT,testGetConfiguration,Long Statement,The length of the statement "assertEquals("{" + "'defaultHostname':'localhost'`" + "'portOffset':10000`"+ "'users':["+ "{'login':'user1'`'email':'user1@localhost'}`"+ "{'login':'user2'`'email':'user2@localhost'}"+ "]`"+ "'serviceConfigurations':["+ "{'protocol':'POP3'`'hostname':'127.0.0.1'`'port':10110}`"+ "{'protocol':'SMTP'`'hostname':'127.0.0.1'`'port':10025}"+ "]"+ "}"`response.readEntity(String.class).replaceAll("\""`"'"));" is 404.,53
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ApiIT,testGetConfiguration,Magic Number,The method contains a magic number: 200,53
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ConfigurationFactoryTest,testCreate,Magic Number,The method contains a magic number: 20000,16
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ConfigurationFactoryTest,testCreate,Magic Number,The method contains a magic number: 1110,16
+greenmail-mail-test_greenmail,com.icegreen.greenmail.webapp,ConfigurationFactoryTest,testCreate,Magic Number,The method contains a magic number: 3,16
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailApiResource,createUsers,Long Statement,The length of the statement "return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorMessage("Can not create user : " + e.getMessage())).build();" is 128.,123
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunner,doRun,Long Statement,The length of the statement "log.info("Starting GreenMail standalone v{} using {}"`BuildInfo.INSTANCE.getProjectVersion()`Arrays.toString(serverSetups));" is 124.,31
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunner,printUsage,Long Statement,The length of the statement "String[][] options={{"-Dgreenmail.setup.<protocol|all>"`"Specifies mail server to start using default port and bind " + "address 127.0.0.1"}`{"Note: Protocol can be one of smtp`smtps`imap`imaps`pop3`pop3s or api"}`{"-Dgreenmail.setup.test.<protocol|all>"`"Specifies mail server to start using default port plus " + "offset 3000 and bind address 127.0.0.1"}`{"-Dgreenmail.<protocol|all>.hostname=..."`"Specifies bind address. Requires additional port parameter."}`{"-Dgreenmail.<protocol>.port=..."`"Specifies port. Requires additional hostname parameter."}`{"-Dgreenmail.users=<logon:pwd@domain>[`...]"`"Specifies mail users` eg foo:pwd@bar.com`foo2:pwd@bar2.com."}`{"Note: domain must be DNS resolvable!"}`{"-Dgreenmail.users.login=(local_part|email)"`"Configures if local_part (default) or full email should be used for login when" + " configuring users via -Dgreenmail.users=foo@bar.com`...."}`{"Note: Only has effect if configured user is of type email (i.e. contains '@')"}`{"-Dgreenmail.auth.disabled "`"Disables authentication check so that any password works."}`{"Also automatically provisions previously non-existent users."}`{"-Dgreenmail.verbose "`"Enables verbose mode` including JavaMail debug output"}`{"-Dgreenmail.startup.timeout=<TIMEOUT_IN_MILLISECONDS>"`"Overrides the default server startup timeout of 1000ms."}};" is 1333.,104
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunner,printUsage,Long Statement,The length of the statement "out.println(" Starts SMTP`SMTPS`IMAP`IMAPS`POP3`POP3S" + "with default ports plus offset 3000 on 127.0.0.1 and user foo@bar.com.");" is 131.,104
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunner,printUsage,Long Statement,The length of the statement "out.println(" java -Dgreenmail.setup.test.smtp -Dgreenmail.setup.test.imap -Dgreenmail.auth.disabled -jar greenmail.jar");" is 122.,104
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunner,printUsage,Long Statement,The length of the statement "out.println(" java -Dgreenmail.smtp.hostname=0.0.0.0 -Dgreenmail.smtp.port=3025 " + "-Dgreenmail.imap.hostname=0.0.0.0 -Dgreenmail.imap.port=3143 -jar greenmail.jar");" is 167.,104
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailApiServerBuilder,configure,Complex Conditional,The conditional expression properties.containsKey(GREENMAIL_API_HOSTNAME) || properties.containsKey(GREENMAIL_SETUP_ALL) || properties.containsKey(GREENMAIL_SETUP_TEST_ALL)|| properties.containsKey(GREENMAIL_HOSTNAME) is complex.,80
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailApiServerBuilder,configure,Long Statement,The length of the statement "if (properties.containsKey(GREENMAIL_API_HOSTNAME) || properties.containsKey(GREENMAIL_SETUP_ALL) || properties.containsKey(GREENMAIL_SETUP_TEST_ALL)|| properties.containsKey(GREENMAIL_HOSTNAME)) {" is 197.,80
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailApiServerBuilder,configure,Long Statement,The length of the statement "throw new IllegalArgumentException("Can not parse port address value " + properties.getProperty(GREENMAIL_API_PORT) + " of system property "+ GREENMAIL_API_PORT`ex);" is 165.,80
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailApiServerBuilder,build,Long Statement,The length of the statement "throw new IllegalStateException("GreenMail API service is not enabled` please configure " + GREENMAIL_API_HOSTNAME + " and "+ GREENMAIL_API_PORT);" is 146.,115
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testDoRun,Long Statement,The length of the statement "assertThatThrownBy(() -> api.path("/").request(MediaType.TEXT_HTML).get(Response.class)).isInstanceOf(ProcessingException.class);" is 129.,30
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Long Statement,The length of the statement "assertThat(configResponse.readEntity(String.class)).isEqualTo("{\"serverSetups\":[" + "{\"port\":3025`\"address\":\"127.0.0.1\"`\"protocol\":\"smtp\"`\"isSecure\":false`\"readTimeout\":-1`" + "\"writeTimeout\":-1`\"connectionTimeout\":-1`\"serverStartupTimeout\":2000`\"isDynamicPort\":false}`"+ "{\"port\":3143`\"address\":\"127.0.0.1\"`\"protocol\":\"imap\"`\"isSecure\":false`\"readTimeout\":-1`"+ "\"writeTimeout\":-1`\"connectionTimeout\":-1`\"serverStartupTimeout\":2000`\"isDynamicPort\":false}]`\"authenticationDisabled\":false"+ "}");" is 543.,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Long Statement,The length of the statement "assertThat(userListResponse.readEntity(String.class)).isEqualTo("[" + "{\"login\":\"test2\"`\"email\":\"test2@localhost\"}`" + "{\"login\":\"test1\"`\"email\":\"test1\"}"+ "]");" is 177.,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Long Statement,The length of the statement "final Response userCreateResponse=api.path("/api/user").request(MediaType.APPLICATION_JSON).post(Entity.entity("{\"email\":\"foo.bar@localhost\"` \"login\":\"" + userId + "\"` \"password\":\"xxx\"}"`MediaType.APPLICATION_JSON));" is 228.,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Long Statement,The length of the statement "assertThat(userCreateResponse.readEntity(String.class)).isEqualTo("{\"login\":\"" + userId + "\"`\"email\":\"foo.bar@localhost\"}");" is 132.,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Long Statement,The length of the statement "final Response readinessResponse=api.path("/api/service/readiness").request(MediaType.APPLICATION_JSON).get(Response.class);" is 124.,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Magic Number,The method contains a magic number: 200,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Magic Number,The method contains a magic number: 200,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Magic Number,The method contains a magic number: 200,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Magic Number,The method contains a magic number: 200,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Magic Number,The method contains a magic number: 200,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Magic Number,The method contains a magic number: 400,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.standalone,GreenMailStandaloneRunnerTest,testApi,Magic Number,The method contains a magic number: 200,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap,ImapSessionFolder,setFlags,Long Parameter List,The method has 5 parameters. ,254
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap,ImapHandler,prepareInputStream,Magic Number,The method contains a magic number: 512,72
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap,ImapHandler,prepareOutputStream,Magic Number,The method contains a magic number: 1024,80
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap,ImapHostManagerImpl,createMailbox,Magic Number,The method contains a magic number: 2,96
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRange,idRangeToString,Long Statement,The length of the statement "return idRange.getHighVal() == idRange.getLowVal() ? Long.toString(idRange.getLowVal()) : idRange.getLowVal() + ":" + idRange.getHighVal();" is 139.,169
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,FetchCommand,doProcess,Complex Conditional,The conditional expression (useUids && includes(idSet`uid)) || (!useUids && includes(idSet`msn)) is complex.,55
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,FetchCommand,doProcess,Complex Conditional,The conditional expression mailbox.getMessageCount() > 0 && includes(idSet`Long.MAX_VALUE) && !includes(idSet`lastMessageUid) is complex.,55
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,FetchCommand,outputMessage,Complex Method,Cyclomatic complexity of the method is 12,100
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,FetchCommand,handleBodyFetch,Complex Method,Cyclomatic complexity of the method is 15,188
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,FetchCommand,handleBodyFetch,Long Statement,The length of the statement "log.debug("Fetching body part for section specifier {} and mime message (contentType={})"`sectionSpecifier`mimeMessage.getContentType());" is 137.,188
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,FetchCommand,addLiteral,Magic Number,The method contains a magic number: 0xFF,295
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,FetchCommand,addHeaders,Magic Number,The method contains a magic number: 2,330
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ListCommand,doProcess,Complex Method,Cyclomatic complexity of the method is 11,41
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,CommandParser,astring,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3a8bb29c,60
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,CommandParser,string,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2dce0ec8,75
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,CommandParser,nstring,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@5f91ad,92
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,CommandParser,isCHAR,Magic Number,The method contains a magic number: 0x7f,393
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,CommandParser,isAtomSpecial,Long Statement,The length of the statement "return next == '(' || next == ')' || next == '{' || next == ' ' || next == '%' || next == '*' || next <= 1F || next == 7F || next == '"' || next == ']';" is 152.,498
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,CommandParser,isAtomSpecial,Magic Number,The method contains a magic number: 7F,498
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,StoredMessageSorter,compare,Complex Method,Cyclomatic complexity of the method is 11,28
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,StoredMessageSorter,compare,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4d452f6f,28
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,CopyCommand,generateCopyUidResponseCode,Long Statement,The length of the statement "return "COPYUID" + SP + destinationFolder.getUidValidity()+ SP+ IdRange.uidsToRangeString(copiedUidsFrom)+ SP+ IdRange.uidsToRangeString(copiedUidsTo);" is 151.,84
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SortCommandParser,sortTerm,Complex Conditional,The conditional expression next != '(' && next != ')' && next != 32 && next != 13 is complex.,15
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SortCommandParser,sortTerm,Magic Number,The method contains a magic number: 32,15
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SortCommandParser,sortTerm,Magic Number,The method contains a magic number: 13,15
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParser,searchTerm,Complex Method,Cyclomatic complexity of the method is 13,44
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParser,handleOperators,Complex Method,Cyclomatic complexity of the method is 9,137
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,StoreCommand,doProcess,Complex Conditional,The conditional expression (useUids && includes(idSet`uid)) || (!useUids && includes(idSet`msn)) is complex.,40
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchTermBuilder,create,Complex Method,Cyclomatic complexity of the method is 36,52
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchTermBuilder,create,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2abd7b09,52
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchTermBuilder,createTextSearchTermBuilder,Long Statement,The length of the statement "SearchTerm[] terms={new RecipientStringTerm(Message.RecipientType.TO`query)`new RecipientStringTerm(Message.RecipientType.CC`query)`new RecipientStringTerm(Message.RecipientType.BCC`query)`new FromStringTerm(query)`new SubjectTerm(query)`new BodyTerm(query)};" is 259.,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchTermBuilder,build,Long Statement,The length of the statement "SearchTerm[] terms={new RecipientStringTerm(Message.RecipientType.TO`query)`new RecipientStringTerm(Message.RecipientType.CC`query)`new RecipientStringTerm(Message.RecipientType.BCC`query)`new FromStringTerm(query)`new SubjectTerm(query)`new BodyTerm(query)};" is 259.,300
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchTermBuilder,toFlag,Complex Method,Cyclomatic complexity of the method is 8,387
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchTermBuilderTest,testUidSearchTerm,Long Statement,The length of the statement "Data[] data=new Data[]{new Data("1"`new long[]{1L}`new long[]{0L`2L})`new Data("1:*"`new long[]{1L`2L}`new long[]{0L})`new Data("4:*"`new long[]{5L`10L}`new long[]{3L})};" is 170.,23
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,beforeEachTest,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("foo@localhost"`"bar@localhost"`"Test search " + i`"Test message content" + i`greenMail.getSmtp().getServerSetup());" is 144.,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,beforeEachTest,Magic Number,The method contains a magic number: 10,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testListAndStatusWithNonExistingFolder,Long Statement,The length of the statement "for ( final String cmd : new String[]{"STATUS \"non existent folder\" (MESSAGES UIDNEXT UIDVALIDITY UNSEEN)"`"SELECT \"non existent folder\""}) {" is 145.,50
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchUidsAndSize,Magic Number,The method contains a magic number: 2,71
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 3,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 2,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 50,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 2,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 30,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 2,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 30,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 10,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 10,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testFetchSpaceBeforeSize,Magic Number,The method contains a magic number: 30,94
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 3,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 4,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 5,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 6,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 7,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 8,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 9,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 10,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 2,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 2,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 3,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 4,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 2,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 3,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 4,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchSequenceSet,Magic Number,The method contains a magic number: 8,200
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testSearchNotFlags,Long Statement,The length of the statement "Response[] ret=(Response[])folder.doCommand(protocol -> protocol.command("SEARCH NOT (ANSWERED) NOT (DELETED) NOT (SEEN) NOT (FLAGGED) ALL"`null));" is 147.,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testGetMessageByUnknownUidInEmptyINBOX,Magic Number,The method contains a magic number: 666,263
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchText,Magic Number,The method contains a magic number: 2,280
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchTextWithCharset,Long Statement,The length of the statement "final MimeMessage email=GreenMailUtil.createTextEmail("foo2@localhost"`"foo@localhost"`"some subject"`"some content"`greenMail.getSmtp().getServerSetup());" is 155.,384
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchTextWithCharset,Magic Number,The method contains a magic number: 2,384
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchTextWithCharset,Magic Number,The method contains a magic number: 2,384
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,searchAndValidateWithCharset,Long Statement,The length of the statement "Response[] ret=(Response[])folder.doCommand(protocol -> protocol.command("UID SEARCH CHARSET " + charset + " TEXT"`arg));" is 121.,422
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,ImapProtocolTest,testUidSearchAll,Long Statement,The length of the statement "GreenMailUtil.createTextEmail("foo2@localhost"`"foo@localhost"`"some subject"`"some content"`greenMail.getSmtp().getServerSetup());" is 131.,432
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParserTest,testHeader,Long Statement,The length of the statement "SearchTerm expectedTerm=new AndTerm(new AndTerm(new SearchTerm[]{new HeaderTerm("Message-ID"`"<1627010197.0.1593681191102@[192.168.242.10]>")`new FlagTerm(new Flags(Flags.Flag.SEEN)`true)})`SearchTermBuilder.create(SearchKey.ALL).build());" is 239.,17
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParserTest,testSmallerParseCommand,Magic Number,The method contains a magic number: 5,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParserTest,testLargerParseCommand,Magic Number,The method contains a magic number: 5,40
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParserTest,testSmallerAndLargerParseCommand,Magic Number,The method contains a magic number: 5,48
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParserTest,testSmallerAndLargerParseCommand,Magic Number,The method contains a magic number: 3,48
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,SearchCommandParserTest,testAndSubjectOrToFrom,Long Statement,The length of the statement "SearchTerm expectedTerm=new AndTerm(new SearchTerm[]{new SubjectTerm("Greenmail")`new OrTerm(new RecipientTerm(Message.RecipientType.TO`new InternetAddress("to@localhost"))`new FromTerm(new InternetAddress("from@localhost")))`SearchTermBuilder.create(SearchKey.ALL).build()});" is 276.,56
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 2,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 5,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 2,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 3,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 2,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 4,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 8,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 2,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 4,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 3,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 2,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 4,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 2,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.imap.commands,IdRangeTest,testParseRangeSequence,Magic Number,The method contains a magic number: 8,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.server,AbstractServer,closeServerSocket,Long Statement,The length of the statement "log.trace("Closed server socket " + serverSocket + "/ref="+ Integer.toHexString(System.identityHashCode(serverSocket))+ " for "+ getName());" is 140.,131
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilder,extractAndAddUser,Magic Number,The method contains a magic number: 2,96
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilder,extractAndAddUser,Magic Number,The method contains a magic number: 3,96
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilder,extractAndAddUser,Magic Number,The method contains a magic number: 2,96
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilder,extractAndAddUser,Magic Number,The method contains a magic number: 2,96
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilder,extractAndAddUser,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@775888d8,96
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,UserBean,hashCode,Magic Number,The method contains a magic number: 31,69
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,UserBean,hashCode,Magic Number,The method contains a magic number: 31,69
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilderTest,testBuildForListOfUsers,Long Statement,The length of the statement "Properties props=createPropertiesFor(PropertiesBasedGreenMailConfigurationBuilder.GREENMAIL_USERS`"foo1:pwd1@bar.com`foo2:pwd2`foo3:pwd3@bar3.com");" is 148.,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilderTest,testBuildForListOfUsers,Magic Number,The method contains a magic number: 3,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilderTest,testBuildForListOfUsers,Magic Number,The method contains a magic number: 2,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilderTest,testBuildForListOfUsersWithEmailAsLogin,Long Statement,The length of the statement "Properties props=createPropertiesFor(PropertiesBasedGreenMailConfigurationBuilder.GREENMAIL_USERS`"foo1:pwd1@bar.com`foo2:pwd2`foo3:pwd3@bar3.com");" is 148.,34
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilderTest,testBuildForListOfUsersWithEmailAsLogin,Magic Number,The method contains a magic number: 3,34
+greenmail-mail-test_greenmail,com.icegreen.greenmail.configuration,PropertiesBasedGreenMailConfigurationBuilderTest,testBuildForListOfUsersWithEmailAsLogin,Magic Number,The method contains a magic number: 2,34
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,MapBasedStoredMessageCollection,expunge,Complex Conditional,The conditional expression messageEntry.getValue().isSet(Flags.Flag.DELETED) && (idRanges == null || IdRange.containsUid(idRanges`messageEntry.getValue().getUid())) is complex.,120
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,MapBasedStoredMessageCollection,expunge,Long Statement,The length of the statement "for (final Iterator<Map.Entry<Long`StoredMessage>> messageEntryIt=mailMessages.entrySet().iterator(); messageEntryIt.hasNext(); ) {" is 131.,120
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,MapBasedStoredMessageCollection,expunge,Long Statement,The length of the statement "if (messageEntry.getValue().isSet(Flags.Flag.DELETED) && (idRanges == null || IdRange.containsUid(idRanges`messageEntry.getValue().getUid()))) {" is 144.,120
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,HierarchicalFolder,HierarchicalFolder,Long Statement,The length of the statement "throw new IllegalStateException("UIDVALIDITY value " + uidValidity + " does not fit as unsigned 32 bit int "+ 2L * Integer.MAX_VALUE);" is 134.,46
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,HierarchicalFolder,HierarchicalFolder,Magic Number,The method contains a magic number: 1000L,46
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,HierarchicalFolder,HierarchicalFolder,Magic Number,The method contains a magic number: 2L,46
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,HierarchicalFolder,HierarchicalFolder,Magic Number,The method contains a magic number: 2L,46
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,HierarchicalFolder,setFlags,Long Parameter List,The method has 5 parameters. ,264
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,MailFolder,setFlags,Long Parameter List,The method has 5 parameters. ,92
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,ListBasedStoredMessageCollection,expunge,Complex Conditional,The conditional expression message.isSet(Flags.Flag.DELETED) && (idRanges == null || IdRange.containsUid(idRanges`message.getUid())) is complex.,125
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Complex Method,Cyclomatic complexity of the method is 14,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Empty catch clause,The method has an empty catch block.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseMimePart,Long Method,The method has 141 lines of code.,122
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseEnvelope,Magic Number,The method contains a magic number: 16,273
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,addAddressToEnvelopeIfAvailableWithNetscapeFeature,Magic Number,The method contains a magic number: 3,322
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,addAddressToEnvelopeIfAvailableWithNetscapeFeature,Magic Number,The method contains a magic number: 3,322
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,SimpleMessageAttributes,parseBodyStructure,Complex Method,Cyclomatic complexity of the method is 12,465
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,MessageFlags,format,Complex Method,Cyclomatic complexity of the method is 11,43
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,InMemoryStore,listMailboxes,Complex Conditional,The conditional expression (starIndex > -1 && starIndex < searchPattern.length() - 1) || (percentIndex > -1 && percentIndex < searchPattern.length() - 1) is complex.,143
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,InMemoryStore,listMailboxes,Complex Method,Cyclomatic complexity of the method is 9,143
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,InMemoryStore,listMailboxes,Long Statement,The length of the statement "if ((starIndex > -1 && starIndex < searchPattern.length() - 1) || (percentIndex > -1 && percentIndex < searchPattern.length() - 1)) {" is 133.,143
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,InMemoryStore,listMailboxes,Long Statement,The length of the statement "throw new FolderException("Wildcard characters <" + searchPattern + "> are only handled as the last character of a list argument");" is 131.,143
+greenmail-mail-test_greenmail,com.icegreen.greenmail.store,InMemoryStore,updateQuota,Long Statement,The length of the statement "MailFolder folder=getMailbox(ImapConstants.USER_NAMESPACE + ImapConstants.HIERARCHY_DELIMITER + pQualifiedRootPrefix+ ImapConstants.HIERARCHY_DELIMITER+ quota.quotaRoot);" is 170.,222
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMail,GreenMail,Long Statement,The length of the statement "log.debug("{} {} {}"`System.getProperty("java.vm.name"`"java.vm.name")`System.getProperty("java.vm.vendor"`"java.vm.vendor")`System.getProperty("java.runtime.version"`"java.runtime.version"));" is 192.,58
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMail,start,Long Statement,The length of the statement "throw new IllegalStateException("Could not start mail server " + service + "` try to set server startup timeout > "+ service.getServerSetup().getServerStartupTimeout()+ " via "+ ServerSetup.class.getSimpleName()+ ".setServerStartupTimeout(timeoutInMs) or "+ "-Dgreenmail.startup.timeout");" is 289.,92
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMail,waitForIncomingEmail,Empty catch clause,The method has an empty catch block.,213
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMail,waitForIncomingEmail,Magic Number,The method contains a magic number: 5000L,231
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,DummySSLSocketFactory,trySetFakeRemoteHost,Magic Number,The method contains a magic number: 130,103
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,DummySSLSocketFactory,trySetFakeRemoteHost,Magic Number,The method contains a magic number: 32,103
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,copyStream,Magic Number,The method contains a magic number: 1024,41
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,getBody,Magic Number,The method contains a magic number: 4,116
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,random,Magic Number,The method contains a magic number: 3,166
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,random,Magic Number,The method contains a magic number: 5,166
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,createTextEmail,Long Parameter List,The method has 5 parameters. ,229
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,sendTextEmail,Long Parameter List,The method has 5 parameters. ,246
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,sendMessageBody,Long Parameter List,The method has 6 parameters. ,287
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,sendAttachmentEmail,Long Parameter List,The method has 9 parameters. ,312
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailUtil,createMultipartWithAttachment,Long Parameter List,The method has 5 parameters. ,320
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,PropertiesBasedServerSetupBuilder,addTestSetups,Complex Method,Cyclomatic complexity of the method is 9,101
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,PropertiesBasedServerSetupBuilder,addDefaultSetups,Complex Method,Cyclomatic complexity of the method is 9,127
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,LineLoggingBuffer,append,Complex Conditional,The conditional expression b < 0 || b == '\n' || isLineLengthExceeded() is complex.,33
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,LineLoggingBuffer,isLineLengthExceeded,Magic Number,The method contains a magic number: 128,80
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,Retriever,Retriever,Long Statement,The length of the statement "if (!(server.getProtocol().startsWith(ServerSetup.PROTOCOL_IMAP) || server.getProtocol().startsWith(ServerSetup.PROTOCOL_POP3))) {" is 130.,23
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,Retriever,Retriever,Long Statement,The length of the statement "throw new IllegalArgumentException("Requires a " + ServerSetup.PROTOCOL_POP3 + " or "+ ServerSetup.PROTOCOL_IMAP+ " server but got "+ server.getProtocol());" is 156.,23
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,SaslMessage,parse,Long Statement,The length of the statement "throw new IllegalArgumentException("Expected authorization-id\\0authentication-id\\0passwd but got only " + parts.length + " parts : "+ message);" is 145.,31
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,SaslMessage,parse,Magic Number,The method contains a magic number: 3,31
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,SaslMessage,parse,Magic Number,The method contains a magic number: 2,31
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,DummySSLServerSocketFactory,DummySSLServerSocketFactory,Long Identifier,The length of the field GREENMAIL_KEYSTORE_PASSWORD_PROPERTY is 36.,68
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,DummySSLServerSocketFactory,loadKeyStore,Long Identifier,The length of the field GREENMAIL_KEYSTORE_FILE_PROPERTY is 32.,87
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,EncodingUtil,toString,Magic Number,The method contains a magic number: 1024,40
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,configureJavaMailSessionProperties,Long Statement,The length of the statement "props.setProperty(MAIL_DOT + getProtocol() + ".connectiontimeout"`Long.toString(getConnectionTimeout() < 0L ? ServerSetup.CONNECTION_TIMEOUT : getConnectionTimeout()));" is 168.,215
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,configureJavaMailSessionProperties,Long Statement,The length of the statement "props.setProperty(MAIL_DOT + getProtocol() + ".timeout"`Long.toString(getReadTimeout() < 0L ? ServerSetup.READ_TIMEOUT : getReadTimeout()));" is 140.,215
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,equals,Complex Method,Cyclomatic complexity of the method is 9,282
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 31,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 31,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 31,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 32,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 31,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 32,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 31,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 32,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 31,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,hashCode,Magic Number,The method contains a magic number: 32,298
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,ServerSetup,toString,Long Statement,The length of the statement "return "ServerSetup{" + "port=" + port + "` bindAddress='"+ bindAddress+ '\''+ "` protocol='"+ protocol+ '\''+ "` readTimeout="+ readTimeout+ "` connectionTimeout="+ connectionTimeout+ "` writeTimeout="+ writeTimeout+ "` serverStartupTimeout="+ serverStartupTimeout+ "` verbose="+ isVerbose()+ '}';" is 298.,310
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,MaxSizeLinkedHashMapTest,shouldNotExceedMaxSize,Magic Number,The method contains a magic number: 2,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,RetrieverTest,testCreateRetriever,Empty catch clause,The method has an empty catch block.,20
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,RetrieverTest,testCreateRetriever,Empty catch clause,The method has an empty catch block.,20
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailTest,testWaitForIncomingEmailWithTimeout,Magic Number,The method contains a magic number: 2000L,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailTest,testWaitForIncomingEmailWithTimeout,Magic Number,The method contains a magic number: 1.1f,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.util,GreenMailTest,testWaitForIncomingEmailWithTimeout,Magic Number,The method contains a magic number: 0.9f,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.user,UserManager,checkPassword,Long Statement,The length of the statement "return (null != expectedPassword && expectedPassword.equals(password)) || (null == password && expectedPassword == null);" is 121.,100
+greenmail-mail-test_greenmail,com.icegreen.greenmail.user,UserManagerTest,testListUsers,Magic Number,The method contains a magic number: 2,25
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3,Pop3Handler,run,Long Statement,The length of the statement "conn.println("421 Service shutting down and closing transmission channel " + "(socket timeout` SO_TIMEOUT: " + getSoTimeout() + "ms)");" is 135.,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,TopCommand,execute,Magic Number,The method contains a magic number: 3,30
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,TopCommand,execute,Magic Number,The method contains a magic number: 2,30
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,UserCommand,execute,Magic Number,The method contains a magic number: 2,22
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,PassCommand,execute,Magic Number,The method contains a magic number: 2,22
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,execute,Long Statement,The length of the statement "conn.println("-ERR Required syntax: AUTH mechanism <" + mechanism + "> not supported` expected one of "+ Arrays.toString(Pop3SaslAuthMechanism.values()));" is 154.,59
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,execute,Magic Number,The method contains a magic number: 2,59
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,authPlain,Complex Conditional,The conditional expression args.length == 2 || args.length == 3 && "=".equals(args[2]) is complex.,81
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,authPlain,Magic Number,The method contains a magic number: 2,81
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,authPlain,Magic Number,The method contains a magic number: 3,81
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,authPlain,Magic Number,The method contains a magic number: 2,81
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,authPlain,Magic Number,The method contains a magic number: 3,81
+greenmail-mail-test_greenmail,com.icegreen.greenmail.pop3.commands,AuthCommand,authPlain,Magic Number,The method contains a magic number: 2,81
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpHandler,run,Long Statement,The length of the statement "conn.send("421 Service shutting down and closing transmission channel " + "(socket timeout` SO_TIMEOUT: " + getSoTimeout() + "ms)");" is 132.,37
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpHandler,sendGreetings,Long Statement,The length of the statement "conn.send("220 " + conn.getServerGreetingsName() + " GreenMail SMTP Service v"+ BuildInfo.INSTANCE.getProjectVersion()+ " ready");" is 130.,65
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpHandler,handleCommand,Magic Number,The method contains a magic number: 4,70
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpHandler,commandLegalSize,Magic Number,The method contains a magic number: 4,95
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpHandler,commandLegalSize,Magic Number,The method contains a magic number: 4,95
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpHandler,commandLegalSize,Magic Number,The method contains a magic number: 4,95
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpHandler,commandLegalSize,Magic Number,The method contains a magic number: 1000,95
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpConnection,readLine,Magic Number,The method contains a magic number: 256,59
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpConnection,dotLimitedInputStream,Magic Number,The method contains a magic number: 1024,89
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpConnection,dotLimitedInputStream,Magic Number,The method contains a magic number: 4,89
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpConnection,dotLimitedInputStream,Magic Number,The method contains a magic number: 0xffffff,89
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp,SmtpConnection,dotLimitedInputStream,Magic Number,The method contains a magic number: 8,89
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,HeloCommand,extractHeloName,Magic Number,The method contains a magic number: 5,34
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,HeloCommand,extractHeloName,Magic Number,The method contains a magic number: 5,34
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,DataCommand,execute,Long Statement,The length of the statement "String initialContent="Return-Path: <" + msg.getReturnPath() + ">\r\n"+ "Received: from "+ conn.getClientAddress()+ " (HELO "+ conn.getHeloName()+ "); "+ new java.util.Date()+ "\r\n";" is 183.,28
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,AuthCommand,execute,Long Statement,The length of the statement "conn.send(SMTP_SYNTAX_ERROR + " : Unsupported auth mechanism " + authMechanismValue+ ". Only auth mechanism <"+ Arrays.toString(AuthMechanism.values())+ "> supported.");" is 169.,49
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,AuthCommand,execute,Magic Number,The method contains a magic number: 2,49
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,AuthCommand,authPlain,Magic Number,The method contains a magic number: 2,77
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,AuthCommand,authPlain,Magic Number,The method contains a magic number: 2,77
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,AuthCommand,authLogin,Long Parameter List,The method has 6 parameters. ,99
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,AuthCommand,authLogin,Long Statement,The length of the statement "conn.send(SMTP_SYNTAX_ERROR + " : Unsupported auth mechanism " + authMechanismValue+ " with unexpected values. Line is: <"+ commandLine+ ">");" is 142.,99
+greenmail-mail-test_greenmail,com.icegreen.greenmail.smtp.commands,AuthCommand,authLogin,Magic Number,The method contains a magic number: 2,99
+greenmail-mail-test_greenmail,com.icegreen.greenmail.foedus.util,StreamUtils,toString,Magic Number,The method contains a magic number: 1024,19
+greenmail-mail-test_greenmail,com.icegreen.greenmail.foedus.util,StreamUtils,copy,Magic Number,The method contains a magic number: 1024,31
+greenmail-mail-test_greenmail,com.icegreen.greenmail.foedus.util,MsgRangeFilter,MsgRangeFilter,Magic Number,The method contains a magic number: 2,20
+greenmail-mail-test_greenmail,com.icegreen.greenmail.foedus.util,MsgRangeFilter,MsgRangeFilter,Magic Number,The method contains a magic number: 2,20
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleSendTest,testSendWithAvailablePortDetection,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("to@localhost"`"from@localhost"`"some subject"`"Sent using available port detection"`greenMailWithDynamicPort.getSmtp().getServerSetup());" is 166.,28
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleReceiveTest,testReceive,Magic Number,The method contains a magic number: 2,18
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleReceiveTest,createMimeMessage,Long Statement,The length of the statement "return GreenMailUtil.createTextEmail("to@localhost"`"from@localhost"`"subject"`"body"`greenMail.getImap().getServerSetup());" is 124.,28
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleFindUserByAuthLoginTest,testSend,Long Statement,The length of the statement "@Override public GreenMailUser handle( MovingMessage msg` MailAddress mailAddress) throws MessagingException` UserException {" is 125.,38
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleFindUserByAuthLoginTest,testSend,Long Statement,The length of the statement "MimeMessage message=GreenMailUtil.createTextEmail("john@example.com"`"mary@example.com"`"some subject"`"some body"`ServerSetupTest.SMTP);" is 137.,38
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleFindUserByAuthLoginTest,testSend,Long Statement,The length of the statement "assertThat(inbox.getMessages().get(0).getMimeMessage().getRecipients(RecipientType.TO)[0].toString()).isEqualTo("john@example.com");" is 132.,38
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleUndeliverableTest,testSend,Long Statement,The length of the statement "@Override public GreenMailUser handle( MovingMessage msg` MailAddress mailAddress) throws MessagingException` UserException {" is 125.,25
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleUndeliverableTest,testSend,Long Statement,The length of the statement "assertThat(greenMail.getReceivedMessages()[0].getRecipients(RecipientType.TO)[0].toString()).isEqualTo("from@localhost");" is 121.,25
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleSendNoRuleAdvTest,testSend,Magic Number,The method contains a magic number: 5000,17
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleSendNoRuleAdvTest,testSend,Magic Number,The method contains a magic number: 2,17
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleSendNoRuleAdvTest,testSend,Magic Number,The method contains a magic number: 2,17
+greenmail-mail-test_greenmail,com.icegreen.greenmail.examples,ExampleSendNoRuleAdvTest,testSend,Magic Number,The method contains a magic number: 2,17
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SendReceiveWithDifferentEncodingsTest,testSendingAndRetrievingMaintainsEncoding,Magic Number,The method contains a magic number: 1000,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerTimeout,Magic Number,The method contains a magic number: 500,54
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerTimeout,Magic Number,The method contains a magic number: 500,54
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveWithSetup,Magic Number,The method contains a magic number: 1500,64
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveInThread,Magic Number,The method contains a magic number: 700,79
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveInThread,Magic Number,The method contains a magic number: 3000,79
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveInThread,Magic Number,The method contains a magic number: 10000,79
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveMultipart,Long Statement,The length of the statement "GreenMailUtil.sendAttachmentEmail("test@localhost"`"from@localhost"`subject`body`new byte[]{0`1`2}`"image/gif"`"testimage_filename"`"testimage_description"`ServerSetupTest.SMTP);" is 178.,98
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveMultipart,Magic Number,The method contains a magic number: 1500,98
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveMultipart,Magic Number,The method contains a magic number: 2,98
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendAndWaitForIncomingMailsInBcc,Long Statement,The length of the statement "final MimeMessage message=createTextEmail("test@localhost"`"from@localhost"`subject`body`greenMail.getSmtp().getServerSetup());" is 127.,140
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendAndWaitForIncomingMailsInBcc,Magic Number,The method contains a magic number: 1500,140
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendAndWaitForIncomingMailsInBcc,Magic Number,The method contains a magic number: 3,140
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendAndWaitForIncomingMailsInBcc,Magic Number,The method contains a magic number: 3,140
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendWithReusedConnection,Long Statement,The length of the statement "final MimeMessage message=createTextEmail("test@localhost"`"from@localhost"`subject`body`greenMail.getSmtp().getServerSetup());" is 127.,158
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendWithReusedConnection,Magic Number,The method contains a magic number: 2000,158
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendWithReusedConnection,Magic Number,The method contains a magic number: 4000,158
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendWithReusedConnection,Magic Number,The method contains a magic number: 1000,158
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendWithReusedConnection,Magic Number,The method contains a magic number: 2,158
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSendWithReusedConnection,Magic Number,The method contains a magic number: 2,158
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testAuth,Long Statement,The length of the statement "final MimeMessage message=GreenMailUtil.createTextEmail("test@localhost"`"from@localhost"`subject`body`greenMail.getSmtp().getServerSetup());" is 141.,193
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testAuth,Magic Number,The method contains a magic number: 1500,193
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testAuth,Magic Number,The method contains a magic number: 3,193
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testAuth,Magic Number,The method contains a magic number: 2,193
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpServerTest,testSmtpServerReceiveWithAUTHSuffix,Magic Number,The method contains a magic number: 1500,219
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,Pop3ServerTest,testRetrieve,Magic Number,The method contains a magic number: 5000,50
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,Pop3ServerTest,testPop3sReceive,Magic Number,The method contains a magic number: 5000,72
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,Pop3ServerTest,testRetrieveWithNonDefaultPassword,Long Statement,The length of the statement "assertThatThrownBy(() -> retriever.getMessages(to`"wrongpassword")).isInstanceOf(RuntimeException.class).hasCauseInstanceOf(AuthenticationFailedException.class);" is 161.,89
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,Pop3ServerTest,testRetrieveWithNonDefaultPassword,Magic Number,The method contains a magic number: 5000,89
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,Pop3ServerTest,testRetrieveMultipart,Long Statement,The length of the statement "GreenMailUtil.sendAttachmentEmail(to`"from@localhost"`subject`body`new byte[]{0`1`2}`"image/gif"`"testimage_filename"`"testimage_description"`ServerSetupTest.SMTP);" is 164.,112
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,Pop3ServerTest,testRetrieveMultipart,Magic Number,The method contains a magic number: 5000,112
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,Pop3ServerTest,testRetrieveMultipart,Magic Number,The method contains a magic number: 2,112
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testGetEmptyBodyAndHeader,Long Statement,The length of the statement "GreenMailUtil.sendAttachmentEmail(to`"from@localhost"`subject`body`gifAttachment`"image/gif"`"testimage_filename"`"testimage_description"`greenMail.getSmtp().getServerSetup());" is 176.,42
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testGetEmptyBodyAndHeader,Long Statement,The length of the statement "assertThat("Content-Type: text/plain; charset=us-ascii\r\n" + "Content-Transfer-Encoding: 7bit").isEqualTo(GreenMailUtil.getHeaders(bp).trim());" is 144.,42
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testGetEmptyBodyAndHeader,Long Statement,The length of the statement "assertThat("Content-Type: image/gif; name=testimage_filename\r\n" + "Content-Transfer-Encoding: base64\r\n" + "Content-Disposition: attachment; filename=testimage_filename\r\n"+ "Content-Description: testimage_description").isEqualTo(GreenMailUtil.getHeaders(bp));" is 264.,42
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testGetEmptyBodyAndHeader,Magic Number,The method contains a magic number: 5000,42
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testSendTextEmailTest,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("\"Foo` Bar\" <foo@localhost>"`"\"Bar` Foo\" <bar@localhost>"`"Test subject"`"Test message"`ServerSetupTest.SMTP);" is 142.,84
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testSetAndGetQuota,Magic Number,The method contains a magic number: 1024L,119
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testSetAndGetQuota,Magic Number,The method contains a magic number: 42L,119
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testSetAndGetQuota,Magic Number,The method contains a magic number: 5L,119
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,GreenMailUtilTest,testSetAndGetQuota,Magic Number,The method contains a magic number: 2,119
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,CatchAllTest,testSmtpServerBasic,Magic Number,The method contains a magic number: 6,20
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,CatchAllTest,testSmtpServerBasic,Magic Number,The method contains a magic number: 2,20
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,CatchAllTest,testSmtpServerBasic,Magic Number,The method contains a magic number: 3,20
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ConcurrentCloseIT,concurrentCloseTest,Magic Number,The method contains a magic number: 5000,14
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ConcurrentCloseIT,testThis,Magic Number,The method contains a magic number: 3000,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ConcurrentCloseIT,testThis,Magic Number,The method contains a magic number: 10000,21
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,SmtpSecureServerTest,testSmtpsServerReceive,Magic Number,The method contains a magic number: 1500,18
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ServerStartStopTest,testServerStartupTimeout,Magic Number,The method contains a magic number: 3000L,33
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders,Magic Number,The method contains a magic number: 20,91
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders,Magic Number,The method contains a magic number: 2,91
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders,Magic Number,The method contains a magic number: 15000,91
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders,Magic Number,The method contains a magic number: 1000,91
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4Retrievers,Magic Number,The method contains a magic number: 20,102
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4Retrievers,Magic Number,The method contains a magic number: 2,102
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4Retrievers,Magic Number,The method contains a magic number: 15000,102
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4Retrievers,Magic Number,The method contains a magic number: 20000,102
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4Retrievers,Magic Number,The method contains a magic number: 4,102
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4Retrievers,Magic Number,The method contains a magic number: 5000,102
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4RetrieversAtTheSameTime,Magic Number,The method contains a magic number: 20,125
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4RetrieversAtTheSameTime,Magic Number,The method contains a magic number: 30000,125
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4RetrieversAtTheSameTime,Magic Number,The method contains a magic number: 2,125
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4RetrieversAtTheSameTime,Magic Number,The method contains a magic number: 4,125
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,test20Senders20x4RetrieversAtTheSameTime,Magic Number,The method contains a magic number: 5000,125
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,MultiRequestTest,waitForThreadGroup,Magic Number,The method contains a magic number: 200,207
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,AuthenticationDisabledTest,testSendMailAndReceiveWithAuthDisabled,Magic Number,The method contains a magic number: 5000,32
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,AuthenticationDisabledTest,testReceiveWithAuthDisabled,Magic Number,The method contains a magic number: 500,53
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,AuthenticationDisabledTest,testReceiveWithAuthDisabledAndProvisionedUser,Magic Number,The method contains a magic number: 500,65
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testRetrieveSimple,Magic Number,The method contains a magic number: 5000,39
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testImapsReceive,Magic Number,The method contains a magic number: 5000,71
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testRetrieveSimpleWithNonDefaultPassword,Long Statement,The length of the statement "assertThatThrownBy(() -> retriever.getMessages(to`"wrongpassword")).isInstanceOf(RuntimeException.class).hasCauseInstanceOf(AuthenticationFailedException.class);" is 161.,88
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testRetrieveSimpleWithNonDefaultPassword,Magic Number,The method contains a magic number: 5000,88
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testRetrieveMultipart,Long Statement,The length of the statement "GreenMailUtil.sendAttachmentEmail(to`"from@localhost"`subject`body`new byte[]{0`1`2}`"image/gif"`"testimage_filename"`"testimage_description"`ServerSetupTest.SMTP);" is 164.,111
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testRetrieveMultipart,Magic Number,The method contains a magic number: 5000,111
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testRetrieveMultipart,Magic Number,The method contains a magic number: 2,111
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testQuota,Magic Number,The method contains a magic number: 1024L,144
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testQuota,Magic Number,The method contains a magic number: 42L,144
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testQuota,Magic Number,The method contains a magic number: 5L,144
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testQuota,Magic Number,The method contains a magic number: 2,144
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testQuotaCapability,Magic Number,The method contains a magic number: 1024L,184
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testQuotaCapability,Magic Number,The method contains a magic number: 42L,184
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testQuotaCapability,Magic Number,The method contains a magic number: 5L,184
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testRenameINBOXFolder,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("foo@localhost"`"bar@localhost"`"Test subject"`"Test message"`greenMail.getSmtp().getServerSetup());" is 128.,276
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testFolderMoveMessages,Magic Number,The method contains a magic number: 3,370
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testFolderMoveMessages,Magic Number,The method contains a magic number: 3,370
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testFolderMoveUIDMessages,Magic Number,The method contains a magic number: 3,412
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testFolderMoveUIDMessages,Magic Number,The method contains a magic number: 3,412
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDFolder,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("foo@localhost"`"bar@localhost"`"Test UIDFolder"`"Test message"`greenMail.getSmtp().getServerSetup());" is 130.,483
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDExpunge,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("foo@localhost"`"bar@localhost"`"Test UID expunge #" + i`"Test message"`greenMail.getSmtp().getServerSetup());" is 138.,514
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDExpunge,Magic Number,The method contains a magic number: 10,514
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDExpunge,Magic Number,The method contains a magic number: 2,514
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDExpunge,Magic Number,The method contains a magic number: 2,514
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDExpunge,Magic Number,The method contains a magic number: 2,514
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDExpunge,Magic Number,The method contains a magic number: 2,514
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testAppend,Long Statement,The length of the statement "GreenMailUtil.sendTextEmail("foo@localhost"`"bar@localhost"`"Test Append"`"Test message"`greenMail.getSmtp().getServerSetup());" is 127.,564
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testAppend,Magic Number,The method contains a magic number: 2,564
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testAppend,Magic Number,The method contains a magic number: 3,564
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testUIDFetchWithWildcard,Magic Number,The method contains a magic number: 2,606
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 6,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 6,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 2,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 3,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 4,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 5,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 6,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 2,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 2,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 4,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 2,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testExpunge,Magic Number,The method contains a magic number: 3,640
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testIdle,Empty catch clause,The method has an empty catch block.,679
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testIdle,Magic Number,The method contains a magic number: 10000,679
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test,ImapServerTest,testIdle,Magic Number,The method contains a magic number: 100,679
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,POP3CommandTest,withConnection,Long Statement,The length of the statement "try (PrintStream printStream=new PrintStream(socket.getOutputStream());final BufferedReader reader=new BufferedReader(new InputStreamReader(socket.getInputStream()))){" is 167.,39
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,POP3CommandTest,authPlain,Long Statement,The length of the statement "assertThat(reader.readLine()).isEqualTo("-ERR Authentication failed` expected base64 encoding : Last unit does not have enough valid bits");" is 140.,51
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSubjectLineTest,testLongSubjectLine,Long Statement,The length of the statement "String longSubjectLine="test subject line jumped over the lazy lorem ipsum looking dog` after which the subject line became long enough to trigger some folding. it was a dark and stormy night` after all. pretty sure the initial trigger " + "for this test case did not have a subject line longer than 1000 chars` but there you go. not sure what exactly what wouldve caused the folding` but maybe it happened on a somewhat shorter subject line. whatever.";" is 454.,30
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSubjectLineTest,testSubjectWithEmbeddedSpaces,Long Statement,The length of the statement "String subjectWithEmbeddedSpaces="test subject line jumped over the lazy lorem ipsum looking dog` after which the subject line became long enough to trigger some folding. it was a dark and stormy night` after all. pretty sure the initial trigger " + "for this test case did not have a subject line longer than 1000 chars` but there you go. not sure what exactly what would've caused the folding` but maybe it happened on a somewhat shorter subject line. whatever.";" is 465.,38
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSubjectLineTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 2,98
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSubjectLineTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 2,98
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSubjectLineTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 2,98
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Long Method,The method has 102 lines of code.,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 6,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 3,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 4,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 5,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 5,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 3,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearch,Magic Number,The method contains a magic number: 2,35
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearchIssue319,Magic Number,The method contains a magic number: 4,173
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSearchIssue319,Magic Number,The method contains a magic number: 2,173
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeMessage,Long Parameter List,The method has 6 parameters. ,211
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 2,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 3,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 4,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 5,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 2,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 3,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 4,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 2,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 5,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 2,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testSentDateTerms,Magic Number,The method contains a magic number: 5,221
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 2,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 3,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 4,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 5,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 2,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 3,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 5,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 4,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 2,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 3,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 5,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 2,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 4,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 2,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testReceivedDateTerms,Magic Number,The method contains a magic number: 4,245
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,testUnsupportedSearchWarnsButDoesNotThrowException,Empty catch clause,The method has an empty catch block.,261
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 2,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 2,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 2,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 3,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 3,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 3,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 3,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 4,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 5,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 3,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 4,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSearchTest,storeSearchTestMessages,Magic Number,The method contains a magic number: 5,291
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,SMTPCommandTest,authLogin,Magic Number,The method contains a magic number: 334,88
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,SMTPCommandTest,authLogin,Magic Number,The method contains a magic number: 334,88
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSortTest,testSort,Long Statement,The length of the statement "imapMessages=imapFolder.getSortedMessages(new SortTerm[]{SortTerm.TO}`new FlagTerm(new Flags(Flags.Flag.ANSWERED)`true));" is 121.,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSortTest,testSort,Magic Number,The method contains a magic number: 2,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSortTest,testSort,Magic Number,The method contains a magic number: 2,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSortTest,testSort,Magic Number,The method contains a magic number: 2,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.commands,ImapSortTest,testSort,Magic Number,The method contains a magic number: 2,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,ReplyToTest,testReplyToFromAddress,Magic Number,The method contains a magic number: 5000,58
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,ReplyToTest,testReplyToSpecificAddress,Magic Number,The method contains a magic number: 5000,86
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,DateTest,testDatesCorrect,Long Statement,The length of the statement "final MimeMessage mail=GreenMailUtil.createTextEmail(to`"from@localhost"`"Subject"`"msg"`greenMail.getSmtp().getServerSetup());" is 127.,27
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,DateTest,testDatesCorrect,Magic Number,The method contains a magic number: 2000,27
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,DateTest,testDatesCorrect,Magic Number,The method contains a magic number: 5000,27
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,DateTest,retrieveAndCheck,Magic Number,The method contains a magic number: 3000L,44
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,DateTest,retrieveAndCheck,Magic Number,The method contains a magic number: 3000L,44
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,Rfc822MessageTest,testForwardWithRfc822,Long Statement,The length of the statement "Message msgToBeForwarded=GreenMailUtil.createTextEmail("foo@localhost"`"foo@localhost"`"test newMessageWithForward"`"forwarded mail content"`greenMail.getSmtp().getServerSetup());" is 179.,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,Rfc822MessageTest,testForwardWithRfc822,Long Statement,The length of the statement "assertThat(msgAttached.getRecipients(Message.RecipientType.TO)).isEqualTo(msgToBeForwarded.getRecipients(Message.RecipientType.TO));" is 132.,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,EscapingTest,testEscapeSubject,Magic Number,The method contains a magic number: 5000,25
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,EscapingTest,testEscapeMessageID,Magic Number,The method contains a magic number: 5000,38
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,EncodingTest,testTextPlainWithUTF8,Long Statement,The length of the statement "html.setContent(MimeUtility.encodeText("<!doctype html>" + "<html lang=en>" + "<head>"+ "<meta charset=utf-8>"+ "<title>Title with Umlaut \u00FC</title>"+ "</head>"+ "<body>"+ "<p>8BIT Content with umlaut ü</p>"+ "</body>"+ "</html>"`"UTF-8"`"B")`"text/html; charset=utf-8");" is 275.,27
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,EncodingTest,testTextPlainWithUTF8,Long Statement,The length of the statement "assertThat(textQP.getContent()).isEqualTo(EncodingUtil.toString((InputStream)bodyPart0.getContent()`StandardCharsets.UTF_8));" is 125.,27
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,EncodingTest,testTextPlainWithUTF8,Magic Number,The method contains a magic number: 2,27
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,EncodingTest,testTextPlainWithUTF8,Magic Number,The method contains a magic number: 3,27
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,testLargeMessageTextAndAttachment,Long Statement,The length of the statement "GreenMailUtil.sendAttachmentEmail(to`"from@localhost"`"Subject"`createLargeString()`createLargeByteArray()`"application/blubb"`"file"`"descr"`greenMail.getSmtp().getServerSetup());" is 180.,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,testLargeMessageTextAndAttachment,Magic Number,The method contains a magic number: 5000,29
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,testLargeMessageBody,Long Statement,The length of the statement "GreenMailUtil.sendMessageBody(to`"from@localhost"`"Subject"`createLargeByteArray()`"application/blubb"`greenMail.getSmtp().getServerSetup());" is 141.,41
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,testLargeMessageBody,Magic Number,The method contains a magic number: 5000,41
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,retrieveAndCheck,Magic Number,The method contains a magic number: 2,52
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,toByteArray,Magic Number,The method contains a magic number: 1024,104
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,createLargeByteArray,Magic Number,The method contains a magic number: 100,118
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,createLargeByteArray,Magic Number,The method contains a magic number: 1024,118
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,createLargeByteArray,Magic Number,The method contains a magic number: 100,118
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,createLargeByteArray,Magic Number,The method contains a magic number: 100,118
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,LargeMessageTest,createLargeString,Magic Number,The method contains a magic number: 100000,127
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,SenderRecipientTest,testSendersAndRecipients,Long Statement,The length of the statement "assertThat(greenMail.waitForIncomingEmail(5000`TO_ADDRESSES.length + CC_ADDRESSES.length + BCC_ADDRESSES.length)).isTrue();" is 123.,59
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,SenderRecipientTest,testSendersAndRecipients,Magic Number,The method contains a magic number: 5000,59
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,SenderRecipientTest,testSendAndReceiveWithQuotedAddress,Long Statement,The length of the statement "String[] toList={"\"John..Doe\"@localhost"`"abc.\"defghi\".xyz@localhost"`"\"abcdefghixyz\"@localhost"`"\"Foo Bar\"admin@localhost"};" is 133.,95
+greenmail-mail-test_greenmail,com.icegreen.greenmail.test.specificmessages,SenderRecipientTest,testSendAndReceiveWithQuotedAddress,Magic Number,The method contains a magic number: 5000,95

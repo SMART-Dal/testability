@@ -1,0 +1,205 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+lyogavin_Pistachio,com.yahoo.ads.pb,DefaultDataInterpreter,getDataInterpreter,Empty catch clause,The method has an empty catch block.,23
+lyogavin_Pistachio,com.yahoo.ads.pb,DefaultDataInterpreter,interpretId,Magic Number,The method contains a magic number: 8,39
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosServer,getKafkaProducerInstance,Long Statement,The length of the statement "props.put("metadata.broker.list"`Joiner.on("`").join(ConfigurationManager.getConfiguration().getStringArray("Kafka.Broker")));" is 126.,164
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosServer,getKafkaProducerInstance,Long Statement,The length of the statement "props.put("queue.buffering.max.messages"`ConfigurationManager.getConfiguration().getString("queue.buffering.max.messages"`"10000"));" is 132.,164
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosServer,main,Long Statement,The length of the statement "helixManager=HelixManagerFactory.getZKHelixManager("PistachiosCluster"`NativeUtils.getHostname()`InstanceType.CONTROLLER`conf.getString(ZOOKEEPER_SERVER));" is 155.,443
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosServer,init,Long Statement,The length of the statement "profileStore=new LocalStorageEngine(conf.getString(PROFILE_BASE_DIR)`(int)totalParition`8`conf.getInt("StorageEngine.KC.RecordsPerPartition")`conf.getLong("StorageEngine.KC.MemoryPerPartition"));" is 195.,516
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosServer,init,Long Statement,The length of the statement "logger.info("creating helix partition sepctator {} {} {}"`conf.getString(ZOOKEEPER_SERVER`"EMPTY")`"PistachiosCluster"`conf.getString(PROFILE_HELIX_INSTANCE_ID`"EMPTY"));" is 170.,516
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosServer,init,Long Statement,The length of the statement "helixPartitionSpectator=HelixPartitionSpectator.getInstance(conf.getString(ZOOKEEPER_SERVER)`"PistachiosCluster"`NativeUtils.getHostname());" is 140.,516
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosServer,init,Magic Number,The method contains a magic number: 8,516
+lyogavin_Pistachio,com.yahoo.ads.pb,DefaultPartitioner,getPartition,Long Identifier,The length of the identifier customizedPartitionerClassName is 30.,14
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,getClusterInfo,Long Statement,The length of the statement "logger.info("num partitions: {}` num Replicas: {}` hostList: {}."`info.numPartitions`info.numReplicas`Joiner.on("`").join(info.hostList.toArray()));" is 148.,102
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,setConstraints,Long Statement,The length of the statement "admin.setConstraint("PistachiosCluster"`ConstraintType.STATE_CONSTRAINT`"PistachiosPartitionTransitionConstraint" + constraintId`new ConstraintItem(attributes`"1"));" is 165.,122
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Complex Method,Cyclomatic complexity of the method is 10,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Long Method,The method has 127 lines of code.,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Long Parameter List,The method has 8 parameters. ,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Long Statement,The length of the statement "StateModelDefinition stateModel=new StateModelDefinition.Builder("MasterSlave").initialState("OFFLINE").addState("MASTER"`1).addState("SLAVE"`2).addState("OFFLINE").addState(HelixDefinedState.DROPPED.toString()).upperBound("MASTER"`1).dynamicUpperBound("SLAVE"`"R").addTransition("SLAVE"`"MASTER"`1).addTransition("OFFLINE"`"SLAVE"`2).addTransition("MASTER"`"SLAVE"`3).addTransition("SLAVE"`"OFFLINE"`3).addTransition("OFFLINE"`HelixDefinedState.DROPPED.toString()).build();" is 474.,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Long Statement,The length of the statement "logger.info("preference list for {} is {}"`"PistachiosResource_" + i`org.apache.commons.lang3.StringUtils.join(preferenceList`"`"));" is 132.,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Long Statement,The length of the statement "admin.setConstraint("PistachiosCluster"`ConstraintType.STATE_CONSTRAINT`"PistachiosPartitionTransitionConstraint" + constraintId`new ConstraintItem(attributes`"1"));" is 165.,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Magic Number,The method contains a magic number: 2,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Magic Number,The method contains a magic number: 2,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Magic Number,The method contains a magic number: 3,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,format,Magic Number,The method contains a magic number: 3,144
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,cleanup,Long Parameter List,The method has 7 parameters. ,319
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "options.addOption(Option.builder("h").longOpt("hostlist").required(true).desc("comma seperated list of hosts of the cluster").hasArg().type(new String().getClass()).build());" is 174.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "options.addOption(Option.builder("p").longOpt("partitionnumber").required(true).desc("number of partitions").hasArg().type(new Integer(0).getClass()).build());" is 159.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "options.addOption(Option.builder("r").longOpt("replicanumber").required(true).desc("number of replicas").hasArg().type(new Integer(0).getClass()).build());" is 155.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "options.addOption(Option.builder("k").longOpt("kafkaidlist").required(true).desc("comma seperated list of the kafka ids in the order of the host list` the command will make sure kafka and pistachio master and slaves will be co-located to reduce the network transfer").hasArg().type(new String().getClass()).build());" is 316.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "options.addOption(Option.builder("z").longOpt("kafkazkpath").required(false).desc("the zk chroot path for kafka").hasArg().type(new String().getClass()).build());" is 162.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "zkClient=new ZkClient(zookeeperConnStr + (cmd.hasOption("kafkazkpath") ? "/" + cmd.getOptionValue("kafkazkpath") : "")`30000`30000`ZKStringSerializer$.MODULE$);" is 160.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "logger.info("calling format with parameters: hostlist {}` num partition {}` num replicas {}` kafka prefix {}` kafka path {}` kafka id list {}"`cmd.getOptionValues("hostlist")`numPartitions`numReplicas`kafkaTopicPrefix`cmd.getOptionValue("kafkazkpath")`cmd.getOptionValues("kafkaidlist"));" is 288.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Long Statement,The length of the statement "format(admin`zkClient`cmd.getOptionValue("hostlist").split("`")`numPartitions`numReplicas`kafkaTopicPrefix`(cmd.hasOption("kafkazkpath") ? "/" + cmd.getOptionValue("kafkazkpath") : "")`cmd.getOptionValue("kafkaidlist").split("`"));" is 231.,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Magic Number,The method contains a magic number: 30000,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleFormatCommand,Magic Number,The method contains a magic number: 30000,335
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Long Statement,The length of the statement "options.addOption(Option.builder("h").longOpt("hostlist").required(true).desc("comma seperated list of hosts of the cluster").hasArg().type(new String().getClass()).build());" is 174.,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Long Statement,The length of the statement "options.addOption(Option.builder("p").longOpt("partitionnumber").required(true).desc("number of partitions").hasArg().type(new Integer(0).getClass()).build());" is 159.,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Long Statement,The length of the statement "options.addOption(Option.builder("r").longOpt("replicanumber").required(true).desc("number of replicas").hasArg().type(new Integer(0).getClass()).build());" is 155.,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Long Statement,The length of the statement "options.addOption(Option.builder("z").longOpt("kafkazkpath").required(false).desc("the zk chroot path for kafka").hasArg().type(new String().getClass()).build());" is 162.,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Long Statement,The length of the statement "zkClient=new ZkClient(zookeeperConnStr + (cmd.hasOption("kafkazkpath") ? "/" + cmd.getOptionValue("kafkazkpath") : "")`30000`30000`ZKStringSerializer$.MODULE$);" is 160.,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Long Statement,The length of the statement "cleanup(admin`zkClient`cmd.getOptionValue("hostlist").split("`")`numPartitions`numReplicas`kafkaTopicPrefix`(cmd.hasOption("kafkazkpath") ? "/" + cmd.getOptionValue("kafkazkpath") : ""));" is 187.,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Magic Number,The method contains a magic number: 30000,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosFormatter,handleCleanupCommand,Magic Number,The method contains a magic number: 30000,411
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,setZkRegistryData,Empty catch clause,The method has an empty catch block.,134
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,setZkRegistryData,Long Statement,The length of the statement "zk.create(currentPath`value.getBytes()`org.apache.zookeeper.ZooDefs.Ids.OPEN_ACL_UNSAFE`org.apache.zookeeper.CreateMode.PERSISTENT);" is 132.,134
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,multiLookUpAsync,Long Identifier,The length of the field multiLookupAsyncFailureRequests is 31.,306
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,multiProcessAsync,Long Identifier,The length of the field multiProcessAsyncFailureRequests is 32.,410
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Complex Method,Cyclomatic complexity of the method is 16,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Empty catch clause,The method has an empty catch block.,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Long Method,The method has 101 lines of code.,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Long Statement,The length of the statement "System.out.println("client.lookup(" + DefaultDataInterpreter.getDataInterpreter().interpretId(entry.getKey()) + ")"+ DefaultDataInterpreter.getDataInterpreter().interpretData(entry.getValue()));" is 194.,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Long Statement,The length of the statement "System.out.println("client.lookup(" + DefaultDataInterpreter.getDataInterpreter().interpretId(entry.getKey()) + ") "+ (entry.getValue() ? "Succeed" : "Failure"));" is 162.,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 3,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 3,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 3,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 3,488
+lyogavin_Pistachio,com.yahoo.ads.pb,PistachiosClient,main,Magic Number,The method contains a magic number: 2,488
+lyogavin_Pistachio,com.yahoo.ads.pb.customization,CustomizationRegistry,init,Long Statement,The length of the statement "client=CuratorFrameworkFactory.newClient(ConfigurationManager.getConfiguration().getString(ZOOKEEPER_SERVER)`new ExponentialBackoffRetry(1000`3));" is 146.,43
+lyogavin_Pistachio,com.yahoo.ads.pb.customization,CustomizationRegistry,init,Magic Number,The method contains a magic number: 1000,43
+lyogavin_Pistachio,com.yahoo.ads.pb.customization,CustomizationRegistry,init,Magic Number,The method contains a magic number: 3,43
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,KafkaSimpleConsumer,Magic Number,The method contains a magic number: 2,162
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,ensureConsumer,Long Statement,The length of the statement "logger.info("create SimpleConsumer for {} - {}` leader broker {}:{}"`topic`partitionId`leaderBroker.host()`leaderBroker.port());" is 128.,229
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,ensureConsumer,Long Statement,The length of the statement "consumer=new SimpleConsumer(leaderBroker.host()`leaderBroker.port()`conf.getInt("kafka.soTimeout")`conf.getInt("kafka.bufferSize")`clientId);" is 141.,229
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,getOffset,Long Statement,The length of the statement "Map<TopicAndPartition`PartitionOffsetRequestInfo> requestInfo=new HashMap<TopicAndPartition`PartitionOffsetRequestInfo>();" is 122.,289
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,getOffset,Long Statement,The length of the statement "requestInfo.put(topicAndPartition`new PartitionOffsetRequestInfo(earliest ? kafka.api.OffsetRequest.EarliestTime() : kafka.api.OffsetRequest.LatestTime()`1));" is 158.,289
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,getOffset,Long Statement,The length of the statement "logger.info("catch exception of {} with interrupted in getOffset({}) for {} - {}"`e.getClass().getName()`earliest`topic`partitionId);" is 133.,289
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,getOffset,Long Statement,The length of the statement "logger.error("error fetching data Offset from the Broker {}. reason: {}"`leaderBroker.host()`response.errorCode(topic`partitionId));" is 132.,289
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,fetch,Complex Method,Cyclomatic complexity of the method is 9,320
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,fetch,Long Statement,The length of the statement "FetchRequest request=new FetchRequestBuilder().clientId(clientId).addFetch(topic`partitionId`offset`100000000).maxWait(timeoutMs).minBytes(1).build();" is 150.,320
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,fetch,Long Statement,The length of the statement "logger.info("catch exception of {} with interrupted in fetch for {} - {} with offset {}"`e.getClass().getName()`topic`partitionId`offset);" is 138.,320
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,fetch,Long Statement,The length of the statement "return response != null ? filterAndDecode(response.messageSet(topic`partitionId)`offset) : (newOffsetMsg.size() > 0 ? newOffsetMsg : EMPTY_MSGS);" is 145.,320
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,fetch,Magic Number,The method contains a magic number: 100000000,320
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findLeader,Complex Method,Cyclomatic complexity of the method is 8,412
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findLeader,Empty catch clause,The method has an empty catch block.,412
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findLeader,Long Statement,The length of the statement "consumer=new SimpleConsumer(broker.host`broker.port`conf.getInt("kafka.soTimeout")`conf.getInt("kafka.bufferSize")`clientId + "leaderLookup");" is 142.,412
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findLeader,Long Statement,The length of the statement "logger.info("catch exception of {} with interrupted in find leader for {} - {}"`e.getClass().getName()`topic`partitionId);" is 122.,412
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findNewLeader,Complex Conditional,The conditional expression metadata != null && metadata.leader() != null && (oldLeader == null || (!(oldLeader.host().equalsIgnoreCase(metadata.leader().host()) && (oldLeader.port() == metadata.leader().port())) || retryCnt != 0)) is complex.,458
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findNewLeader,Long Statement,The length of the statement "if (metadata != null && metadata.leader() != null && (oldLeader == null || (!(oldLeader.host().equalsIgnoreCase(metadata.leader().host()) && (oldLeader.port() == metadata.leader().port())) || retryCnt != 0))) {" is 210.,458
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findNewLeader,Magic Number,The method contains a magic number: 1000L,458
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findNewLeader,Magic Number,The method contains a magic number: 3,458
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findNewLeader,Magic Number,The method contains a magic number: 3,458
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,findNewLeader,Magic Number,The method contains a magic number: 5,458
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,getLastOffset,Long Statement,The length of the statement "Map<TopicAndPartition`PartitionOffsetRequestInfo> requestInfo=new HashMap<TopicAndPartition`PartitionOffsetRequestInfo>();" is 122.,483
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,getLastOffset,Long Statement,The length of the statement "kafka.javaapi.OffsetRequest request=new kafka.javaapi.OffsetRequest(requestInfo`kafka.api.OffsetRequest.CurrentVersion()`clientId);" is 131.,483
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,getLastOffset,Long Statement,The length of the statement "logger.info("catch exception of {} with interrupted in getLastOffset for {} - {}"`e.getClass().getName()`topic`partitionId);" is 124.,483
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,main,Empty catch clause,The method has an empty catch block.,524
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,main,Magic Number,The method contains a magic number: 3,524
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,main,Magic Number,The method contains a magic number: 2,524
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,main,Magic Number,The method contains a magic number: 1000,524
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KafkaSimpleConsumer,main,Magic Number,The method contains a magic number: 1000L,524
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KeyValueEncoder,initialValue,Magic Number,The method contains a magic number: 10240,27
+lyogavin_Pistachio,com.yahoo.ads.pb.kafka,KeyValue,equals,Long Statement,The length of the statement "return Arrays.equals(key`that.key) && (seqId == that.seqId) && Arrays.equals(value`that.value)&& (callback == that.callback)&& (op == that.op);" is 143.,25
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,startServing,Long Statement,The length of the statement "consumer=new KafkaSimpleConsumer(partitionTopic`0`ConfigurationManager.getConfiguration().getString("Profile.Helix.InstanceId")`false);" is 135.,136
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,run,Long Statement,The length of the statement "consumer=new KafkaSimpleConsumer(partitionTopic`0`ConfigurationManager.getConfiguration().getString("Profile.Helix.InstanceId")`false);" is 135.,149
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,serving,Complex Conditional,The conditional expression offsetChecking && (receivedMsgCnt == 0 || consumer.getLastOffset() - readOffset < offsetThreadHold) is complex.,170
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,serving,Complex Method,Cyclomatic complexity of the method is 14,170
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,serving,Magic Number,The method contains a magic number: 1000,170
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,stopServing,Empty catch clause,The method has an empty catch block.,280
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,stopServing,Magic Number,The method contains a magic number: 3000L,280
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,selfBootstraping,Empty catch clause,The method has an empty catch block.,297
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,selfBootstraping,Long Statement,The length of the statement "KafkaSimpleConsumer consumer1=new KafkaSimpleConsumer(partitionTopic`0`ConfigurationManager.getConfiguration().getString("Profile.Helix.InstanceId")`false);" is 156.,297
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,selfBootstraping,Long Statement,The length of the statement "logger.info("partition:" + partitionId + " caught up` start to serving as master ` setting next seq to: {}"`kafkaOffset);" is 121.,297
+lyogavin_Pistachio,com.yahoo.ads.pb.store,StorePartition,selfBootstraping,Magic Number,The method contains a magic number: 1000,297
+lyogavin_Pistachio,com.yahoo.ads.pb.store,LocalStorageEngine,LocalStorageEngine,Long Parameter List,The method has 5 parameters. ,58
+lyogavin_Pistachio,com.yahoo.ads.pb.store,LocalStorageEngine,LocalStorageEngine,Long Parameter List,The method has 6 parameters. ,68
+lyogavin_Pistachio,com.yahoo.ads.pb.store,LocalStorageEngine,getOffset,Long Identifier,The length of the field ignoreHistoryWhenNoOffsetFoundInStore is 37.,175
+lyogavin_Pistachio,com.yahoo.ads.pb.store,PistachiosTkIterator,initialValue,Magic Number,The method contains a magic number: 10240,24
+lyogavin_Pistachio,com.yahoo.ads.pb.store,TKStore,add,Long Statement,The length of the statement "logger.error("interrupte exception while add to queue` key {} value {}` offset {}"`DefaultDataInterpreter.getDataInterpreter().interpretId(keyValue.key)`DefaultDataInterpreter.getDataInterpreter().interpretData(keyValue.value)`offset`e);" is 237.,211
+lyogavin_Pistachio,com.yahoo.ads.pb.store,TKStore,add,Long Statement,The length of the statement "logger.debug("queued {}:{}` seq id:{}"`DefaultDataInterpreter.getDataInterpreter().interpretId(keyValue.key)`DefaultDataInterpreter.getDataInterpreter().interpretData(keyValue.value)`keyValue.seqId);" is 199.,211
+lyogavin_Pistachio,com.yahoo.ads.pb.store,TKStore,open,Long Statement,The length of the statement "metrics.register(MetricRegistry.name(TKStore.class`"TKStore_incoming_queue" + partitionId + "/"+ i`"size")`new incomequeueSizeGauge(incomequeues[i]));" is 150.,348
+lyogavin_Pistachio,com.yahoo.ads.pb.util,NativeUtils,loadLibraryFromJar,Magic Number,The method contains a magic number: 2,66
+lyogavin_Pistachio,com.yahoo.ads.pb.util,NativeUtils,loadLibraryFromJar,Magic Number,The method contains a magic number: 3,66
+lyogavin_Pistachio,com.yahoo.ads.pb.util,NativeUtils,loadLibraryFromJar,Magic Number,The method contains a magic number: 1024,66
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,longToBytes,Magic Number,The method contains a magic number: 8,26
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,longToBytes,Magic Number,The method contains a magic number: 8,26
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,bytesToLong,Magic Number,The method contains a magic number: 8,51
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,bytesToLong,Magic Number,The method contains a magic number: 0xFF,51
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,intToBytes,Magic Number,The method contains a magic number: 24,72
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,intToBytes,Magic Number,The method contains a magic number: 16,72
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,intToBytes,Magic Number,The method contains a magic number: 8,72
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,bytesToInt,Magic Number,The method contains a magic number: 8,86
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,bytesToInt,Magic Number,The method contains a magic number: 0xFF,86
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromStrIP,Magic Number,The method contains a magic number: 4,104
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromStrIP,Magic Number,The method contains a magic number: 4,104
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromStrIP,Magic Number,The method contains a magic number: 4,104
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPBytes,Magic Number,The method contains a magic number: 4,128
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPBytes,Magic Number,The method contains a magic number: 256L,128
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPBytes,Magic Number,The method contains a magic number: 3,128
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPBytes,Magic Number,The method contains a magic number: 8,128
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPNBytes,Magic Number,The method contains a magic number: 4,146
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPNBytes,Magic Number,The method contains a magic number: 4,146
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPNBytes,Magic Number,The method contains a magic number: 256L,146
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPNBytes,Magic Number,The method contains a magic number: 3,146
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToLongFromIPNBytes,Magic Number,The method contains a magic number: 8,146
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStringFromIPNBytes,Magic Number,The method contains a magic number: 256,166
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertIPIntToIPLong,Magic Number,The method contains a magic number: 2,203
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStrIPFromLong,Magic Number,The method contains a magic number: 0xFF,217
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStrIPFromLong,Magic Number,The method contains a magic number: 0xFF00,217
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStrIPFromLong,Magic Number,The method contains a magic number: 8,217
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStrIPFromLong,Magic Number,The method contains a magic number: 0xFF0000,217
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStrIPFromLong,Magic Number,The method contains a magic number: 16,217
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStrIPFromLong,Magic Number,The method contains a magic number: 0xFF000000,217
+lyogavin_Pistachio,com.yahoo.ads.pb.util,Convert,convertToStrIPFromLong,Magic Number,The method contains a magic number: 24,217
+lyogavin_Pistachio,com.yahoo.ads.pb.helix,BootstrapOnlineOfflineStateModel,awaitAllResetThreads,Magic Number,The method contains a magic number: 1000000000L,155
+lyogavin_Pistachio,com.yahoo.ads.pb.helix,HelixPartitionSpectator,HelixPartitionSpectator,Long Statement,The length of the statement "logger.info("init HelixPartitionSpectator with zkAddr @{}` clusterName {}` instanceName {}"`zkAddr`clusterName`instanceName);" is 125.,51
+lyogavin_Pistachio,com.yahoo.ads.pb.helix,HelixPartitionSpectator,getAllInstance,Long Statement,The length of the statement "List<InstanceConfig> instances=routingTableProvider.getInstances(resource`String.format("%s_%d"`resource`partition)`state);" is 123.,130
+lyogavin_Pistachio,com.yahoo.ads.pb.helix,HelixPartitionSpectator,getAllInstance,Long Statement,The length of the statement "List<InstanceConfig> instancesSet=routingTableProvider.getInstances(resource`String.format("%s_%d"`resource`partition)`"SLAVE");" is 128.,130
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClientInitializer,initChannel,Long Statement,The length of the statement "p.addLast(new ReadTimeoutHandler(ConfigurationManager.getConfiguration().getInt("Network.Netty.ClientReadTimeoutMillis"`10000)`TimeUnit.MILLISECONDS));" is 151.,41
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClientInitializer,initChannel,Magic Number,The method contains a magic number: 10000,41
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Complex Method,Cyclomatic complexity of the method is 9,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Magic Number,The method contains a magic number: 2,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Magic Number,The method contains a magic number: 3,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Magic Number,The method contains a magic number: 4,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Magic Number,The method contains a magic number: 5,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Magic Number,The method contains a magic number: 6,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Magic Number,The method contains a magic number: 7,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Magic Number,The method contains a magic number: 8,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,valueOf,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@21b0f557,86
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_com_yahoo_ads_pb_network_netty_Request_descriptor is 65.,3384
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_com_yahoo_ads_pb_network_netty_Request_fieldAccessorTable is 73.,3384
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_com_yahoo_ads_pb_network_netty_Response_descriptor is 66.,3384
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,assignDescriptors,Long Identifier,The length of the field internal_static_com_yahoo_ads_pb_network_netty_Response_fieldAccessorTable is 74.,3384
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,assignDescriptors,Long Statement,The length of the statement "internal_static_com_yahoo_ads_pb_network_netty_Request_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_com_yahoo_ads_pb_network_netty_Request_descriptor`new java.lang.String[]{"Type"`"Id"`"RequestId"`"ThreadId"`"Partition"`"Data"`"Events"`"JarServerUrl"`"ProcessClass"`"Callback"`"Ids"`"Requests"`"Versionid"});" is 358.,3384
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioProtocol,assignDescriptors,Long Statement,The length of the statement "internal_static_com_yahoo_ads_pb_network_netty_Response_fieldAccessorTable=new com.google.protobuf.GeneratedMessage.FieldAccessorTable(internal_static_com_yahoo_ads_pb_network_netty_Response_descriptor`new java.lang.String[]{"Id"`"Succeeded"`"ErrorMessage"`"Data"`"RequestId"`"ThreadId"`"Responses"});" is 301.,3384
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioServer,startServer,Long Statement,The length of the statement "b.group(bossGroup`workerGroup).channel(NioServerSocketChannel.class).handler(new LoggingHandler(LogLevel.INFO)).childHandler(new NettyPistachioServerInitializer(sslCtx`handler));" is 178.,42
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,NettyPistachioClient,Long Statement,The length of the statement "helixPartitionSpectator=HelixPartitionSpectator.getInstance(conf.getString(ZOOKEEPER_SERVER)`"PistachiosCluster"`NativeUtils.getHostname());" is 140.,87
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,isLocalCall,Complex Conditional,The conditional expression (ip != null) && ip.equals(localHostAddress) && PistachiosServer.servingAsServer() is complex.,108
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,isLocalCall,Long Statement,The length of the statement "logger.debug("islocal {}` ip {}` localAddr {}` serving {}"`partition`ip`localHostAddress`PistachiosServer.servingAsServer());" is 125.,108
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,getHandlerForPartition,Long Statement,The length of the statement "b.group(eventLoopGroup).channel(NioSocketChannel.class).option(ChannelOption.CONNECT_TIMEOUT_MILLIS`conf.getInt("Network.Netty.ClientConnectionTimeoutMillis"`100000)).option(ChannelOption.SO_SNDBUF`1048576).option(ChannelOption.SO_RCVBUF`1048576).handler(new NettyPistachioClientInitializer(sslCtx));" is 300.,133
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,getHandlerForPartition,Magic Number,The method contains a magic number: 100000,133
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,getHandlerForPartition,Magic Number,The method contains a magic number: 1048576,133
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,getHandlerForPartition,Magic Number,The method contains a magic number: 1048576,133
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,delete,Long Statement,The length of the statement "Response res=handler.sendRequest(builder.setId(ByteString.copyFrom(id)).setType(RequestType.DELETE).setPartition(partition));" is 125.,195
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,lookup,Long Statement,The length of the statement "Response res=handler.sendRequest(builder.setId(ByteString.copyFrom(id)).setType(RequestType.LOOKUP).setPartition(partition).setCallback(callback));" is 147.,230
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,store,Long Statement,The length of the statement "Response res=handler.sendRequest(builder.setId(ByteString.copyFrom(id)).setType(RequestType.STORE).setPartition(partition).setData(ByteString.copyFrom(value)).setCallback(callback));" is 182.,253
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,processBatch,Long Statement,The length of the statement "if ((conf.getString("pistachio.process.jar.server.url") != null) && (conf.getString("pistachio.process.class") != null)) {" is 122.,279
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,multiLookup,Magic Number,The method contains a magic number: 100,308
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,multiLookup,Magic Number,The method contains a magic number: 1000L,308
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,multiLookupAsync,Complex Method,Cyclomatic complexity of the method is 14,320
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,storeAsync,Long Identifier,The length of the field BooleanResponseTransformFunction is 32.,404
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,storeAsync,Long Statement,The length of the statement "ListenableFuture<Response> res=handler.sendRequestAsync(builder.setId(ByteString.copyFrom(id)).setType(RequestType.STORE).setPartition(partition).setData(ByteString.copyFrom(value)));" is 183.,404
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,multiProcessAsync,Complex Method,Cyclomatic complexity of the method is 13,441
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,main,Magic Number,The method contains a magic number: 1000,611
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,main,Magic Number,The method contains a magic number: 1000,611
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,main,Magic Number,The method contains a magic number: 1000,611
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClient,main,Magic Number,The method contains a magic number: 1000,611
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioServerHandler,channelRead0,Complex Method,Cyclomatic complexity of the method is 16,36
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioServerHandler,channelRead0,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@3688df81,36
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioServerInitializer,initChannel,Long Statement,The length of the statement "p.addLast(new ReadTimeoutHandler(ConfigurationManager.getConfiguration().getInt("Network.Netty.ServerReadTimeoutMillis"`10000)`TimeUnit.MILLISECONDS));" is 151.,44
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioServerInitializer,initChannel,Magic Number,The method contains a magic number: 10000,44
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClientHandler,sendRequest,Magic Number,The method contains a magic number: 0xffff,98
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClientHandler,sendRequest,Magic Number,The method contains a magic number: 100,98
+lyogavin_Pistachio,com.yahoo.ads.pb.network.netty,NettyPistachioClientHandler,sendRequestAsync,Magic Number,The method contains a magic number: 0xffff,150
+lyogavin_Pistachio,com.yahoo.ads.pb.mttf,PistachiosMTTFTest,run,Long Statement,The length of the statement "if (Arrays.equals(value.getBytes()`clientValue) || !remoteValue.contains(NativeUtils.getHostname() + Thread.currentThread().getId())) {" is 135.,65
+lyogavin_Pistachio,com.yahoo.ads.pb.mttf,PistachiosMTTFTest,run,Magic Number,The method contains a magic number: 30,65
+lyogavin_Pistachio,com.yahoo.ads.pb.mttf,PistachiosMTTFTest,run,Magic Number,The method contains a magic number: 100,65
+lyogavin_Pistachio,com.yahoo.ads.pb.mttf,PistachiosMTTFTest,run,Magic Number,The method contains a magic number: 10,65
+lyogavin_Pistachio,com.yahoo.ads.pb.mttf,PistachiosBenchmarking,main,Magic Number,The method contains a magic number: 50,69
+lyogavin_Pistachio,com.yahoo.ads.pb.mttf,PistachiosBenchmarking,main,Magic Number,The method contains a magic number: 2,69

@@ -1,0 +1,1070 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+kiselev-dv_gazetteer,me.osm.gazetter,Options,getAddrParser,Long Statement,The length of the statement "adrParser=factory.newAddressesParser(new AddressesSchemesParserImpl()`addrLevelComparator`new NamesMatcherImpl()`Arrays.asList("place:hamlet"`"place:village"`"place:town"`"place:city"`"boundary:8")`new AddrTextFormatterImpl()`sorting`skippInFullText`findLangs);" is 261.,114
+kiselev-dv_gazetteer,me.osm.gazetter,Options,getAddrParser,Long Statement,The length of the statement "adrParser=defFactory.newAddressesParser(new AddressesSchemesParserImpl()`addrLevelComparator`new NamesMatcherImpl()`Arrays.asList("place:hamlet"`"place:village"`"place:town"`"place:city"`"boundary:8")`new AddrTextFormatterImpl()`sorting`skippInFullText`findLangs);" is 264.,114
+kiselev-dv_gazetteer,me.osm.gazetter,Options,setJoinHandlers,Complex Method,Cyclomatic complexity of the method is 10,272
+kiselev-dv_gazetteer,me.osm.gazetter,Options,setJoinHandlers,Long Statement,The length of the statement "joinHandlers.add(predefinedJoinOutHandlers.get(GazetteerOutWriter.NAME).initialize(new GazetteerOutWriter().parseHandlerOptions(new ArrayList<String>())));" is 155.,272
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Complex Conditional,The conditional expression args.length == 1 && ("-v".equals(args[0]) || "--version".equals(args[0])) is complex.,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Complex Conditional,The conditional expression lvl == null || lvl < 0 || lvl > 22 is complex.,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Complex Method,Cyclomatic complexity of the method is 16,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Long Statement,The length of the statement "Options.initialize(AddrLevelsSorting.valueOf(namespace.getString(ADDR_ORDER))`namespace.getString(ADDR_FORMATTER)`new HashSet(list(namespace.getList("skip_in_text")))`namespace.getBoolean("find_langs"));" is 203.,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Long Statement,The length of the statement "new Slicer(data_dir`namespace.getBoolean("use_partitions")`maxFiles).run(namespace.getString(POI_CATALOG)`types`list(namespace.getList(EXCCLUDE_POI_BRANCH))`list(namespace.getList(NAMED_POI_BRANCH))`list(namespace.getList("drop"))`namespace.getString(BOUNDARIES_FALLBACK)`list(namespace.getList(BOUNDARIES_FALLBACK_TYPES))`namespace.getBoolean("x10")`namespace.getBoolean("skip_interpolation")`namespace.getBoolean("disk_index")`!namespace.getBoolean("skip_point_to_boundary_merge")`!namespace.getBoolean("skip_nearest_city"));" is 527.,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Long Statement,The length of the statement "new JoinExecutor(namespace.getBoolean("skip_hghnets")`namespace.getBoolean("keep_hghnets_geometry")`namespace.getBoolean("clean_stripes")`new HashSet(list(namespace.getList("check_boundaries")))`namespace.getInt("throttle_mem_threshold")).run(data_dir`namespace.getString(JOIN_COMMON));" is 286.,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Long Statement,The length of the statement "Diff diffExecutor=new Diff(namespace.getString("old")`namespace.getString("new")`namespace.getString("out_file")`full`namespace.getBoolean("disk_index")`namespace.getBoolean("only_key_length"));" is 194.,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Magic Number,The method contains a magic number: 22,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,main,Magic Number,The method contains a magic number: 13,162
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,parseHandlers,Complex Conditional,The conditional expression handlers.isEmpty() && outJson == null && outCSV == null is complex.,321
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "ArgumentParser parser=ArgumentParsers.newArgumentParser("gazetter").defaultHelp(true).description("Create alphabetical index of osm file features.");" is 149.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "parser.addArgument("--threads").required(false).help("set number of threads avaible. By default will be used runtime.availableProcessors value.");" is 146.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "parser.addArgument(NO_COMPRESS).required(false).action(Arguments.storeFalse()).help("Do not cmpress tepmlorary stored data").setDefault(Boolean.TRUE);" is 150.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "parser.addArgument(LOG_FILE_ONLY).required(false).action(Arguments.storeTrue()).setDefault(Boolean.TRUE).help("Mute console output");" is 133.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "parser.addArgument("--version"`"-v").required(false).help("Print version and exit.").action(Arguments.storeTrue()).setDefault(Boolean.FALSE);" is 141.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "split.addArgument("osm_file").required(true).help("Path to osm file. *.osm *.osm.bz2 *.osm.gz supported. Use - to read from STDIN");" is 132.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "split.addArgument("compression").required(false).nargs("?").choices("none"`"gzip"`"bz2").setConst("none").setDefault("bz2").help("Use with \"osm_file -\" allow to read compressed stream from STDIN.");" is 200.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument(POI_CATALOG).setDefault("jar").help("Path to osm-doc catalog xml file. By default internal osm-doc.xml will be used.");" is 137.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument(EXCCLUDE_POI_BRANCH).nargs("*").help("Exclude branch of osm-doc features hierarchy. " + "Eg: osm-ru:transport where osm-ru is a name of the hierarchy` " + "and transport is a name of the branch");" is 214.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument(FEATURE_TYPES_VAL).help("Parse and slice axact feature(s) type.").choices(Slicer.sliceTypes).nargs("*").setDefault("all").setConst("all");" is 156.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument(BOUNDARIES_FALLBACK_TYPES).nargs("*").help("List of boundaries to keep in boundaries fallback file. Eg. boundary:2");" is 135.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument("--x10").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Slice ten times thinner stripes");" is 154.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument("--skip-interpolation").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Do not parse addr:interpolation lines");" is 175.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument("--disk-index").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Use off RAM index for points/ways/relations build");" is 179.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument("--skip-point-to-boundary-merge").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Don't merge place point to it's boundary");" is 188.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument("--skip-nearest-city").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Use only polygonal boundaries for cities");" is 177.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument("--use-partitions").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Instead of appending to slice files` create a new file.");" is 189.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "slice.addArgument(MAX_OPEN_FILES).type(Integer.class).setDefault(0).help("Set how many simultainesly open files to use. " + "Use 0 for unbound number of files. Default is 0. " + "Cause error at this moment.");" is 209.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument(JOIN_COMMON).help("Path for *.json with array of features which will be added to boundaries " + "list for every feature.");" is 140.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument(ADDR_ORDER).choices("HN_STREET_CITY"`"STREET_HN_CITY"`"CITY_STREET_HN").setDefault("HN_STREET_CITY").help("How to sort addr levels in full addr text");" is 168.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument("--check-boundaries").nargs("*").help("Filter only addresses inside any of boundary given as osm id. eg. r12345 w123456 ");" is 140.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument("--find-langs").setDefault(Boolean.FALSE).nargs("?").setConst(Boolean.TRUE).help("Search for translated address rows. \n" + "Eg. if street and all upper addr levels \n" + "have name name:uk name:ru name:en \n"+ "generate 4 address rows.\n"+ "If one of [name:uk name:ru name:en] is equals \n"+ "to name still generate additional row. \n"+ "(You can filter it later with simple distinct check).");" is 412.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument("--skip-hghnets").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Do not build highway networks.");" is 161.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument("--clean-stripes").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Remove stripes intermediate files` right after usage");" is 184.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument("--keep-hghnets-geometry").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Do not drop highway networks geometries.");" is 180.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument("--throttle-mem-threshold").setDefault(-1).nargs("?").help("Throttle join tasks execution if available mameory is less then threshold im mb.");" is 160.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument("--handlers").nargs("*").help("You can export data in different formats in one run. " + "Handler is eighter out-gazetteer or out-csv or path to groovy script." + "Handlers itself gets arguments in form name=value "+ "add usage or help to handler options for details");" is 285.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument(OUT_JSON).setConst("-").setDefault((String)null).nargs("?").help("Write data as json to specified file.");" is 123.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "join.addArgument(OUT_CSV).setConst("-").setDefault((String)null).nargs("?").help("Write data as csv to specified file.");" is 121.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "diff.addArgument("--full").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Print full object data for deleted and old rows.");" is 171.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "diff.addArgument("--disk-index").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Print full object data for deleted and old rows.");" is 177.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "diff.addArgument("--only-key-length").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Print full object data for deleted and old rows.");" is 182.,448
+kiselev-dv_gazetteer,me.osm.gazetter,Gazetteer,getArgumentsParser,Long Statement,The length of the statement "tileBuildings.addArgument("--disk-index").setConst(Boolean.TRUE).setDefault(Boolean.FALSE).action(new StoreTrueArgumentAction()).help("Use index files instead of in memory indexes.");" is 183.,448
+kiselev-dv_gazetteer,me.osm.gazetter.sortupdate,SortAndUpdateTask,run,Complex Conditional,The conditional expression prevId != null && prevTimestamp != null && id.equals(prevId) && timestamp.isBefore(prevTimestamp) is complex.,30
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,TileBuildings,Long Parameter List,The method has 5 parameters. ,38
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,getTileNumber,Long Statement,The length of the statement "int ytile=(int)Math.floor((1 - Math.log(Math.tan(Math.toRadians(lat)) + 1 / Math.cos(Math.toRadians(lat))) / Math.PI) / 2 * (1 << zoom));" is 137.,159
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,getTileNumber,Magic Number,The method contains a magic number: 180,159
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,getTileNumber,Magic Number,The method contains a magic number: 360,159
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,getTileNumber,Magic Number,The method contains a magic number: 2,159
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,tile2lon,Magic Number,The method contains a magic number: 2.0,180
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,tile2lon,Magic Number,The method contains a magic number: 360.0,180
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,tile2lon,Magic Number,The method contains a magic number: 180,180
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,tile2lat,Magic Number,The method contains a magic number: 2.0,184
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,TileBuildings,tile2lat,Magic Number,The method contains a magic number: 2.0,184
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 2,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,BuildingsBuilder,Magic Number,The method contains a magic number: 8,57
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 2,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 2,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,buildRelation,Magic Number,The method contains a magic number: 8,96
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,138
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,138
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,138
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,138
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,138
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,138
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,handleIndexedWay,Magic Number,The method contains a magic number: 8,169
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,handleIndexedWay,Magic Number,The method contains a magic number: 8,169
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,handleIndexedWay,Magic Number,The method contains a magic number: 2,169
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,handleIndexedWay,Magic Number,The method contains a magic number: 8,169
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,handleIndexedWay,Magic Number,The method contains a magic number: 8,169
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,handleIndexedWay,Magic Number,The method contains a magic number: 2,169
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,handleIndexedWay,Magic Number,The method contains a magic number: 8,169
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,202
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,202
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,202
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,202
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,compare,Magic Number,The method contains a magic number: 8,209
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,compare,Magic Number,The method contains a magic number: 8,209
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,compare,Magic Number,The method contains a magic number: 8,209
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,compare,Magic Number,The method contains a magic number: 8,209
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexLine,Magic Number,The method contains a magic number: 8,227
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexLine,Magic Number,The method contains a magic number: 8,227
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexLine,Magic Number,The method contains a magic number: 2,227
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexLine,Magic Number,The method contains a magic number: 8,227
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexLine,Magic Number,The method contains a magic number: 8,227
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,264
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,264
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 2,264
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,264
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,264
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 2,264
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,264
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Relation,Magic Number,The method contains a magic number: 8,277
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Relation,Magic Number,The method contains a magic number: 8,277
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Relation,Magic Number,The method contains a magic number: 8,277
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Relation,Magic Number,The method contains a magic number: 8,277
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,BuildingsBuilder,indexNode2Relation,Magic Number,The method contains a magic number: 8,277
+kiselev-dv_gazetteer,me.osm.gazetter.tilebuildings,OSMXMLWriter,writeWay,Complex Conditional,The conditional expression writtenWays.contains(id) || nodes == null || nodes.isEmpty() is complex.,127
+kiselev-dv_gazetteer,me.osm.gazetter.utils,MultipolygonBuilder,joinWays,Complex Method,Cyclomatic complexity of the method is 11,167
+kiselev-dv_gazetteer,me.osm.gazetter.utils,MultipolygonBuilder,joinWays,Magic Number,The method contains a magic number: 2,167
+kiselev-dv_gazetteer,me.osm.gazetter.utils,MultipolygonBuilder,joinWays,Magic Number,The method contains a magic number: 2,167
+kiselev-dv_gazetteer,me.osm.gazetter.utils,MultipolygonBuilder,makeFromPolygons,Magic Number,The method contains a magic number: 2,248
+kiselev-dv_gazetteer,me.osm.gazetter.utils,MultipolygonBuilder,findOuterWaysMultiThread,Magic Number,The method contains a magic number: 32,304
+kiselev-dv_gazetteer,me.osm.gazetter.utils,MultipolygonBuilder,findOuterWaysMultiThread,Magic Number,The method contains a magic number: 3,304
+kiselev-dv_gazetteer,me.osm.gazetter.utils,GeometryUtils,split,Long Statement,The length of the statement "LineString[] newLineStrings=new LineString[]{lengthSubstring.getSubstring(0`lengthToPoint.getLength())`lengthSubstring.getSubstring(lengthToPoint.getLength()`lineString.getLength())};" is 183.,93
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,encode,Magic Number,The method contains a magic number: 16,56
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,decodeL,Magic Number,The method contains a magic number: 16,64
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,encode,Magic Number,The method contains a magic number: 2,71
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,decode,Magic Number,The method contains a magic number: 2,92
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,decode,Magic Number,The method contains a magic number: 3,92
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,decode,Magic Number,The method contains a magic number: 2,92
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,intCoordinates,Long Statement,The length of the statement "return new int[]{(int)(new Double((x + 180.0) * FFFFFFFF / 360.0).longValue() & FFFFFFFF)`(int)(new Double((y + 90.0) * FFFFFFFF / 180.0).longValue() & FFFFFFFF)};" is 163.,117
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,intCoordinates,Magic Number,The method contains a magic number: 180.0,117
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,intCoordinates,Magic Number,The method contains a magic number: 360.0,117
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,intCoordinates,Magic Number,The method contains a magic number: 90.0,117
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,intCoordinates,Magic Number,The method contains a magic number: 180.0,117
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,doubleCoordinates,Magic Number,The method contains a magic number: 360.0d,127
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,doubleCoordinates,Magic Number,The method contains a magic number: 0xFFFFFFFF,127
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,doubleCoordinates,Magic Number,The method contains a magic number: 180.0,127
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,doubleCoordinates,Magic Number,The method contains a magic number: 180.0d,127
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,doubleCoordinates,Magic Number,The method contains a magic number: 0xFFFFFFFF,127
+kiselev-dv_gazetteer,me.osm.gazetter.utils,HilbertCurveHasher,doubleCoordinates,Magic Number,The method contains a magic number: 90.0,127
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,getPrintWriter,Complex Conditional,The conditional expression file.getName().endsWith(".gz") && file.exists() && append is complex.,199
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,getPrintWriterWithGZAppendTrick,Complex Conditional,The conditional expression !file.getName().endsWith(".gz") || !append || !file.exists() is complex.,284
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,readableFileSize,Magic Number,The method contains a magic number: 1024,338
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,readableFileSize,Magic Number,The method contains a magic number: 1024,338
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,binarySearch,Long Parameter List,The method has 6 parameters. ,362
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,binarySearch,Magic Number,The method contains a magic number: 2,362
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,searchAround,Long Parameter List,The method has 5 parameters. ,393
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,findLine,Magic Number,The method contains a magic number: 8,420
+kiselev-dv_gazetteer,me.osm.gazetter.utils,FileUtils,findLine,Magic Number,The method contains a magic number: 1024,420
+kiselev-dv_gazetteer,me.osm.gazetter.utils,Pair,toArrayList,Magic Number,The method contains a magic number: 2,45
+kiselev-dv_gazetteer,me.osm.gazetter.utils.index,MMapBBIndex,find,Complex Method,Cyclomatic complexity of the method is 9,96
+kiselev-dv_gazetteer,me.osm.gazetter.utils.index,MMapBBIndex,find,Magic Number,The method contains a magic number: 2,96
+kiselev-dv_gazetteer,me.osm.gazetter.utils.index,MMapBBIndex,find,Magic Number,The method contains a magic number: 2,96
+kiselev-dv_gazetteer,me.osm.gazetter.utils.index,MMapBBIndex,getCachePage,Complex Conditional,The conditional expression page != null && mode != IndexLineAccessMode.IGNORE && page.mode != mode is complex.,213
+kiselev-dv_gazetteer,me.osm.gazetter.utils.index,MMapBBIndex,getCachePage,Long Identifier,The length of the field USE_READ_FOR_READONLY_FILE_ACCESS is 33.,213
+kiselev-dv_gazetteer,me.osm.gazetter.utils.index,MMapBBIndex,mergeSorted,Magic Number,The method contains a magic number: 11,376
+kiselev-dv_gazetteer,me.osm.gazetter.utils.index,MMapBBIndex,synchronize,Empty catch clause,The method has an empty catch block.,559
+kiselev-dv_gazetteer,me.osm.gazetter.addresses,AddressesParser,parse,Long Parameter List,The method has 6 parameters. ,16
+kiselev-dv_gazetteer,me.osm.gazetter.addresses,AddressesParserFactory,newAddressesParser,Long Parameter List,The method has 8 parameters. ,13
+kiselev-dv_gazetteer,me.osm.gazetter.addresses,AddressesUtils,foldASCII,Magic Number,The method contains a magic number: 4,16
+kiselev-dv_gazetteer,me.osm.gazetter.addresses,AddressesLevelsMatcher,streetAsJSON,Long Parameter List,The method has 5 parameters. ,50
+kiselev-dv_gazetteer,me.osm.gazetter.addresses,AddressesLevelsMatcher,cityAsJSON,Long Parameter List,The method has 5 parameters. ,88
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserImpl,AddressesParserImpl,Long Parameter List,The method has 6 parameters. ,70
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserImpl,parse,Complex Method,Cyclomatic complexity of the method is 14,135
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserImpl,parse,Long Parameter List,The method has 6 parameters. ,135
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserImpl,parse,Long Statement,The length of the statement "JSONObject streetAsJSON=levelsMatcher.streetAsJSON(addrPoint`addrRow`associatedStreet`nearbyStreets`hashBoundaries(boundaries));" is 128.,135
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserImpl,getLangs,Complex Method,Cyclomatic complexity of the method is 11,257
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserImpl,filterForFullText,Magic Number,The method contains a magic number: 55,322
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesSchemesParserImpl,parseSchemes,Complex Method,Cyclomatic complexity of the method is 17,24
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesSchemesParserImpl,parseSchemes,Magic Number,The method contains a magic number: 2,24
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesSchemesParserImpl,parseSchemes,Magic Number,The method contains a magic number: 2,24
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesSchemesParserImpl,searchHNn,Magic Number,The method contains a magic number: 2,158
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesLevelsMatcherImpl,streetAsJSON,Complex Method,Cyclomatic complexity of the method is 12,74
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesLevelsMatcherImpl,streetAsJSON,Long Parameter List,The method has 5 parameters. ,74
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesLevelsMatcherImpl,streetAsJSON,Magic Number,The method contains a magic number: 2,74
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesLevelsMatcherImpl,cityAsJSON,Complex Conditional,The conditional expression obj == null && tagCityName != null && nearestPlace != null is complex.,204
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesLevelsMatcherImpl,cityAsJSON,Complex Method,Cyclomatic complexity of the method is 11,204
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesLevelsMatcherImpl,cityAsJSON,Long Parameter List,The method has 5 parameters. ,204
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddrTextFormatterImpl,simpleJoin,Magic Number,The method contains a magic number: 2,28
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddrTextFormatterImpl,simpleJoin,Magic Number,The method contains a magic number: 2,28
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserFactoryImpl,newAddressesParser,Long Parameter List,The method has 8 parameters. ,20
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,AddressesParserFactoryImpl,newAddressesParser,Long Statement,The length of the statement "return new AddressesParserImpl(addressesSchemesParser`new AddressesLevelsMatcherImpl(addrLevelComparator`namesMatcherImpl`cityBoundaryes)`addrTextFormatter`sorting`skippInFullText`findLangsLevel);" is 196.,20
+kiselev-dv_gazetteer,me.osm.gazetter.addresses.impl,NamesMatcherImpl,doesStreetsMatch,Long Statement,The length of the statement "return name1.contains(name2) || name2.contains(name1) || o2names.values().contains(name1)|| o1names.values().contains(name2);" is 125.,37
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,JoinSliceRunable,Long Parameter List,The method has 8 parameters. ,140
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,run,Complex Method,Cyclomatic complexity of the method is 11,203
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,run,Long Statement,The length of the statement "log.info("{} done in {}. {} left"`FileUtils.findStripeName(this.src.get(0))`DurationFormatUtils.formatDurationHMS(new Date().getTime() - total)`this.stripesCounter.decrementAndGet());" is 183.,203
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,debug,Long Statement,The length of the statement "log.trace(msg + " d:" + DurationFormatUtils.formatDurationHMS(f - s)+ " m:"+ ((runtime.totalMemory() - runtime.freeMemory()) / MB + "mb"));" is 139.,347
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,mergePois,Complex Method,Cyclomatic complexity of the method is 16,356
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,initializeMaps,Magic Number,The method contains a magic number: 2,497
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,initializeMaps,Magic Number,The method contains a magic number: 10,497
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,readFeatures,Complex Method,Cyclomatic complexity of the method is 15,514
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,readFeatures,Magic Number,The method contains a magic number: 10000,514
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,handle,Complex Method,Cyclomatic complexity of the method is 14,520
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,handle,Magic Number,The method contains a magic number: 10000,520
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,checkNecesaryBoundaries,Magic Number,The method contains a magic number: 2,707
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,joinStreets2Addresses,Magic Number,The method contains a magic number: 2,728
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,copyWithAddrJoin,Long Statement,The length of the statement "handler.handle(r`boundaries`nearbyStreets`addr2PlaceVoronoy.get(adr)`addr2NeighbourVoronoy.get(adr)`addrPnt2AsStreet.get(assStreetAddrKey));" is 140.,819
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,copyWithAddrJoin,Magic Number,The method contains a magic number: 2,819
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,distanceSortStreets,Long Statement,The length of the statement "return Math.round(1000000.0 * GeoJsonWriter.getLineStringGeometry(json.getJSONObject("geometry").getJSONArray("coordinates")).distance(pnt));" is 141.,848
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,distanceSortStreets,Magic Number,The method contains a magic number: 1000000.0,848
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,write,Complex Method,Cyclomatic complexity of the method is 14,922
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,write,Long Statement,The length of the statement "handler.handle(adr`boundaries`nearbyStreets`addr2PlaceVoronoy.get(adr)`addr2NeighbourVoronoy.get(adr)`addrPnt2AsStreet.get(assStreetAddrKey));" is 142.,922
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,write,Magic Number,The method contains a magic number: 2,922
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,joinJunctionsWithStreets,Complex Method,Cyclomatic complexity of the method is 8,1042
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinSliceRunable,highwaysJoin,Complex Method,Cyclomatic complexity of the method is 11,1089
+kiselev-dv_gazetteer,me.osm.gazetter.join,AddrJointHandler,handle,Long Parameter List,The method has 6 parameters. ,15
+kiselev-dv_gazetteer,me.osm.gazetter.join,AddrPointFormatter,handle,Long Parameter List,The method has 6 parameters. ,20
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,JoinExecutor,Long Parameter List,The method has 5 parameters. ,46
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,joinStripes,Complex Method,Cyclomatic complexity of the method is 8,134
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,joinStripes,Magic Number,The method contains a magic number: 5,134
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Empty catch clause,The method has an empty catch block.,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Long Parameter List,The method has 5 parameters. ,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Long Statement,The length of the statement "executorService.execute(new JoinSliceRunable(addrPointFormatter`stripeF`common`filter`buildStreetNetworks`dropHghNetGeometries`this`this));" is 139.,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Long Statement,The length of the statement "executorService.execute(new JoinSliceRunable(addrPointFormatter`stripeF`common`filter`buildStreetNetworks`dropHghNetGeometries`this`this));" is 139.,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Long Statement,The length of the statement "executorService.execute(new JoinSliceRunable(addrPointFormatter`stripeF`common`filter`buildStreetNetworks`dropHghNetGeometries`this`this));" is 139.,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Magic Number,The method contains a magic number: 10,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Magic Number,The method contains a magic number: 1000,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinExecutor,tryToExecute,Magic Number,The method contains a magic number: 10,194
+kiselev-dv_gazetteer,me.osm.gazetter.join,StreetsSorterByNameAndBoundaries,compare,Long Statement,The length of the statement "String bhash1=String.valueOf(o1.optInt("boundariesHash")) + AddressesUtils.foldASCII(StringUtils.stripToEmpty(o1.getJSONObject("properties").optString("name"))).toLowerCase();" is 175.,15
+kiselev-dv_gazetteer,me.osm.gazetter.join,StreetsSorterByNameAndBoundaries,compare,Long Statement,The length of the statement "String bhash2=String.valueOf(o2.optInt("boundariesHash")) + AddressesUtils.foldASCII(StringUtils.stripToEmpty(o2.getJSONObject("properties").optString("name"))).toLowerCase();" is 175.,15
+kiselev-dv_gazetteer,me.osm.gazetter.join,PoiAddrJoinBuilder,getBestAddress,Complex Conditional,The conditional expression "way".equals(addrMeta.getString("type")) && poiSharedBuildingWay != null && poiSharedBuildingWay.equals(addrMeta.getLong("id")) is complex.,67
+kiselev-dv_gazetteer,me.osm.gazetter.join,PoiAddrJoinBuilder,getBestAddress,Complex Method,Cyclomatic complexity of the method is 16,67
+kiselev-dv_gazetteer,me.osm.gazetter.join,PoiAddrJoinBuilder,getBestAddress,Long Statement,The length of the statement "if ("way".equals(addrMeta.getString("type")) && poiSharedBuildingWay != null && poiSharedBuildingWay.equals(addrMeta.getLong("id"))) {" is 134.,67
+kiselev-dv_gazetteer,me.osm.gazetter.join,PoiAddrJoinBuilder,getBestAddress,Magic Number,The method contains a magic number: 10,67
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Complex Conditional,The conditional expression filter == null || filter.isEmpty() || checkById(obj`uppers`filter) is complex.,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Complex Method,Cyclomatic complexity of the method is 15,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Long Statement,The length of the statement "List<File> l=ExternalSort.sortInBatch(binxReader`binxFile.length() * 10`ADM_LVL_COMPARATOR`100`100 * 1024 * 1024`Charset.forName("UTF8")`new File(stripesFolder)`distinct`0`true);" is 178.,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Long Statement,The length of the statement "int sorted=ExternalSort.mergeSortedFiles(l`binxFile`ADM_LVL_COMPARATOR`Charset.forName("UTF8")`distinct`false`true`null);" is 121.,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Long Statement,The length of the statement "log.info("Fill down hierarcy from level {}. For {} uppers` and {} downs."`new Object[]{top`layer.getValue().size()`index.size()});" is 130.,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 10,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 100,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 100,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 1024,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 1024,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 100,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 4,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 20,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 8,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,joinBoundaries,Magic Number,The method contains a magic number: 0.0001,132
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,handle,Complex Conditional,The conditional expression filter == null || filter.isEmpty() || checkById(obj`uppers`filter) is complex.,237
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,asJsonRefs,Magic Number,The method contains a magic number: 2,275
+kiselev-dv_gazetteer,me.osm.gazetter.join,JoinBoundariesExecutor,covers,Magic Number,The method contains a magic number: 0.005,323
+kiselev-dv_gazetteer,me.osm.gazetter.join,HighwayNetworksJoiner,fillHghNetEndPointsToObjMap,Long Identifier,The length of the field HGHNET_COPY_KEYS_DROP_GEOMETRY is 30.,73
+kiselev-dv_gazetteer,me.osm.gazetter.join,HighwayNetworksJoiner,fillHghNetEndPointsToObjMap,Long Statement,The length of the statement "Coordinate last=new Coordinate(coords.getJSONArray(coords.length() - 1).getDouble(0)`coords.getJSONArray(coords.length() - 1).getDouble(1));" is 140.,73
+kiselev-dv_gazetteer,me.osm.gazetter.join,HighwayNetworksJoiner,fillHghNetEndPointsToObjMap,Magic Number,The method contains a magic number: 2,73
+kiselev-dv_gazetteer,me.osm.gazetter.join,HighwayNetworksJoiner,joinStreetsNet,Magic Number,The method contains a magic number: 0.5,123
+kiselev-dv_gazetteer,me.osm.gazetter.join,HighwayNetworksJoiner,fillHigHwaysThread,Long Parameter List,The method has 5 parameters. ,202
+kiselev-dv_gazetteer,me.osm.gazetter.join,HighwayNetworksJoiner,fillByNode,Long Parameter List,The method has 7 parameters. ,219
+kiselev-dv_gazetteer,me.osm.gazetter.join,HighwayNetworksJoiner,getEndPoints,Long Statement,The length of the statement "return new Coordinate[]{new Coordinate(segment.getJSONArray("pointA").getDouble(0)`segment.getJSONArray("pointA").getDouble(1))`new Coordinate(segment.getJSONArray("pointZ").getDouble(0)`segment.getJSONArray("pointZ").getDouble(1))};" is 233.,243
+kiselev-dv_gazetteer,me.osm.gazetter.join.util,MemorySupervizor,checkMemory,Magic Number,The method contains a magic number: 250,13
+kiselev-dv_gazetteer,me.osm.gazetter.join.util,MemorySupervizor,checkMemory,Magic Number,The method contains a magic number: 250,13
+kiselev-dv_gazetteer,me.osm.gazetter.join.util,ExportTagsStatisticCollector,success,Long Parameter List,The method has 6 parameters. ,26
+kiselev-dv_gazetteer,me.osm.gazetter.join.util,ExportTagsStatisticCollector,asJson,Magic Number,The method contains a magic number: 2,90
+kiselev-dv_gazetteer,me.osm.gazetter.join.util,ExportTagsStatisticCollector,asJson,Magic Number,The method contains a magic number: 2,90
+kiselev-dv_gazetteer,me.osm.gazetter.join.util,ExportTagsStatisticCollector,asJson,Magic Number,The method contains a magic number: 2,90
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,initialize,Long Statement,The length of the statement "fillAddrOpts=new HashSet<String>(parsedOpts.getList("fill_addresses"`Arrays.asList("ref"`"levels"`"nearest"`"obj"`"trans"`"alt_names")));" is 137.,151
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,initialize,Long Statement,The length of the statement "localityKeys=parsedOpts.getList("locality"`Arrays.asList("place:city"`"place:town"`"place:village"`"place:hamlet"`"boundary:8"));" is 129.,151
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,initialize,Long Statement,The length of the statement "neighborhoodKeys=parsedOpts.getList("locality"`Arrays.asList("place:town"`"place:village"`"place:hamlet"`"place:neighbour"`"boundary:9"`"boundary:10"));" is 152.,151
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,printUsage,Long Statement,The length of the statement "usage.append("\tout=<file | - > - File where to store results. Use - for stdout. ").append("Files with .gz or .bz2 extensions will be compressed.");" is 148.,232
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,printUsage,Long Statement,The length of the statement "usage.append("\tlocal_admin=boundary:1 boundary:2 place:town - Boundary levels` which will be matched as local_admin addr level.");" is 131.,232
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,printUsage,Long Statement,The length of the statement "usage.append("\tneighborhood=... Same as local_admin. Boundary levels` which will be matched as neighborhood addr level.");" is 123.,232
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,printUsage,Long Statement,The length of the statement "usage.append("\tpoi_catalog=<jar | no | path> Path to file .xml or folder with osm-doc poi classificator.").append("jar - default value` (use embedded catalog)` no - skip poi classificator processing and poi readig.");" is 218.,232
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,printUsage,Long Statement,The length of the statement "usage.append("\texport_all_names [=true|false] Export or not all object tags with 'name' in key name. False if missed.");" is 121.,232
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,printUsage,Long Statement,The length of the statement "usage.append("\t\tsort - Type of sort [NONE (Skip sorting) | ID (Sort by id type-ghash-osmid) | " + "HIERARCHICAL (Sort with dependencies) | UNIQUE (Do not sort results` but skip duplicates) ].");" is 196.,232
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,printUsage,Magic Number,The method contains a magic number: 3,232
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,fillObject,Complex Method,Cyclomatic complexity of the method is 15,452
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,fillPOI,Complex Method,Cyclomatic complexity of the method is 9,581
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,getCentroid,Complex Conditional,The conditional expression Double.isInfinite(lon) || Double.isNaN(lon) || Double.isInfinite(lat)|| Double.isNaN(lat) is complex.,679
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,getCentroid,Long Statement,The length of the statement "LineString ls=GeoJsonWriter.getLineStringGeometry(jsonObject.getJSONObject(GeoJsonWriter.GEOMETRY).getJSONArray(GeoJsonWriter.COORDINATES));" is 140.,679
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,getCentroid,Magic Number,The method contains a magic number: 0.5,679
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putAddrParts,Complex Method,Cyclomatic complexity of the method is 11,739
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putAddrParts,Long Parameter List,The method has 5 parameters. ,739
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putAddrLevel,Complex Conditional,The conditional expression translations != null && translations.length() > 0 && fillAddrOpts.contains("trans") is complex.,835
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putAddrLevel,Long Parameter List,The method has 5 parameters. ,835
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putNearbyPlaces,Complex Method,Cyclomatic complexity of the method is 13,906
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putNearbyPlaces,Long Parameter List,The method has 5 parameters. ,906
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putNearbyPlaces,Long Statement,The length of the statement "place.put(GAZETTEER_SCHEME_ID`StringUtils.replace(place.getString(GAZETTEER_SCHEME_ID)`FeatureTypes.PLACE_DELONEY_FTYPE`FeatureTypes.PLACE_POINT_FTYPE));" is 153.,906
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putNearbyPlaces,Long Statement,The length of the statement "place.put(GAZETTEER_SCHEME_ID`StringUtils.replace(place.getString(GAZETTEER_SCHEME_ID)`FeatureTypes.PLACE_DELONEY_FTYPE`FeatureTypes.PLACE_POINT_FTYPE));" is 153.,906
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putNearbyPlaces,Long Statement,The length of the statement "place.put(GAZETTEER_SCHEME_ID`StringUtils.replace(place.getString(GAZETTEER_SCHEME_ID)`FeatureTypes.PLACE_DELONEY_FTYPE`FeatureTypes.PLACE_POINT_FTYPE));" is 153.,906
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putNearbyStreets,Long Parameter List,The method has 5 parameters. ,961
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,asIdNameNames,Complex Conditional,The conditional expression translations != null && translations.length() > 0 && fillAddrOpts.contains("trans") is complex.,982
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putNameTranslations,Long Parameter List,The method has 6 parameters. ,1008
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putAltNames,Long Parameter List,The method has 5 parameters. ,1022
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,putName,Long Parameter List,The method has 5 parameters. ,1036
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,sortResults,Long Statement,The length of the statement "Comparator<String> cmp=OutGazetteerSort.HIERARCHICAL == sort ? new JSONHComparator(isort) : new JSONByIdComparator(isort);" is 122.,1128
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,sortResults,Long Statement,The length of the statement "List<File> batch=ExternalSort.sortInBatch(fbr`file.length()`cmp`ExternalSort.DEFAULTMAXTEMPFILES`ExternalSort.estimateAvailableMemory()`Charset.forName("utf-8")`null`true`0`true);" is 179.,1128
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,mergeAndSortHghnets,Long Statement,The length of the statement "Comparator<String> cmp=OutGazetteerSort.HIERARCHICAL == sort ? new JSONHComparator(isort) : new JSONByIdComparator(isort);" is 122.,1164
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,GazetteerOutWriter,mergeAndSortHghnets,Long Statement,The length of the statement "List<File> batch=ExternalSort.sortInBatch(fbr`this.hghNetFile.length()`ExternalSort.defaultcomparator`ExternalSort.DEFAULTMAXTEMPFILES`ExternalSort.estimateAvailableMemory()`Charset.forName("utf-8")`null`false`0`true);" is 218.,1164
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,AddressPerRowJOHBase,handle,Complex Method,Cyclomatic complexity of the method is 9,55
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,AddressPerRowJOHBase,listAddresses,Complex Method,Cyclomatic complexity of the method is 17,158
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,HgnetMergerFakeWriter,mergeBatch,Complex Method,Cyclomatic complexity of the method is 8,41
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,HgnetMergerFakeWriter,mergeBatch,Magic Number,The method contains a magic number: 100,41
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,HgnetMergerFakeWriter,mergeBatch,Magic Number,The method contains a magic number: 100,41
+kiselev-dv_gazetteer,me.osm.gazetter.join.out_handlers,HgnetMergerFakeWriter,mergeBatch,Magic Number,The method contains a magic number: 100,41
+kiselev-dv_gazetteer,me.osm.gazetter.dao,FileWriteDao,FileWriteDao,Magic Number,The method contains a magic number: 0.75f,60
+kiselev-dv_gazetteer,me.osm.gazetter.dao,FileWriteDao,nextPartitionNumber,Long Statement,The length of the statement "List<Integer> existing=Files.walk(dir.toPath()).filter(Files::isRegularFile).map(p -> p.getFileName().toString()).filter(name -> name.startsWith(key)).map(name -> name.replace(key`"").replace(".gz"`"").replace("."`"")).map(name -> {" is 232.,114
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Complex Conditional,The conditional expression FeatureTypes.HIGHWAY_FEATURE_TYPE.equals(ftype) || FeatureTypes.POI_FTYPE.equals(ftype) || FeatureTypes.ADDR_POINT_FTYPE.equals(ftype) is complex.,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Complex Method,Cyclomatic complexity of the method is 33,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Long Method,The method has 113 lines of code.,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Long Statement,The length of the statement "LineString ls=GeoJsonWriter.getLineStringGeometry(jsonObject.getJSONObject(GeoJsonWriter.GEOMETRY).getJSONArray(GeoJsonWriter.COORDINATES));" is 140.,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Long Statement,The length of the statement "LineString ls=GeoJsonWriter.getLineStringGeometry(jsonObject.getJSONObject(GeoJsonWriter.GEOMETRY).getJSONArray(GeoJsonWriter.COORDINATES));" is 140.,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Long Statement,The length of the statement "LineString ls=GeoJsonWriter.getLineStringGeometry(jsonObject.getJSONObject(GeoJsonWriter.GEOMETRY).getJSONArray(GeoJsonWriter.COORDINATES));" is 140.,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Long Statement,The length of the statement "if (FeatureTypes.HIGHWAY_FEATURE_TYPE.equals(ftype) || FeatureTypes.POI_FTYPE.equals(ftype) || FeatureTypes.ADDR_POINT_FTYPE.equals(ftype)) {" is 141.,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Magic Number,The method contains a magic number: 0.5,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Magic Number,The method contains a magic number: 0.5,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,FeatureValueExctractorImpl,getValue,Magic Number,The method contains a magic number: 0.5,54
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutLineHandler,handle,Long Parameter List,The method has 6 parameters. ,10
+kiselev-dv_gazetteer,me.osm.gazetter.out,AddrRowValueExctractorImpl,getValue,Complex Method,Cyclomatic complexity of the method is 12,63
+kiselev-dv_gazetteer,me.osm.gazetter.out,AddrRowValueExctractorImpl,getUID,Magic Number,The method contains a magic number: 2,130
+kiselev-dv_gazetteer,me.osm.gazetter.out,AddrRowValueExctractorImpl,getSupportedKeys,Long Statement,The length of the statement "return Arrays.asList(POSTCODE`LETTER`HOUSENUMBER`STREET`STREET_ID`PLACE_QUARTER`PLACE_QUARTER_ID`PLACE_NEIGHBOURHOOD`PLACE_NEIGHBOURHOOD_ID`PLACE_SUBURB`PLACE_SUBURB_ID`PLACE_ALLOTMENTS`PLACE_ALLOTMENTS_ID`PLACE_LOCALITY`PLACE_LOCALITY_ID`PLACE_ISOLATED_DWELLING`PLACE_ISOLATED_DWELLING_ID`PLACE_VILLAGE`PLACE_VILLAGE_ID`PLACE_HAMLET`PLACE_HAMLET_ID`PLACE_CITY`PLACE_CITY_ID`PLACE_TOWN`PLACE_TOWN_ID`BOUNDARY_8`BOUNDARY_8_ID`BOUNDARY_6`BOUNDARY_6_ID`BOUNDARY_5`BOUNDARY_5_ID`BOUNDARY_4`BOUNDARY_4_ID`BOUNDARY_3`BOUNDARY_3_ID`BOUNDARY_2`BOUNDARY_2_ID`ADDR_TEXT`ADDR_LONG_TEXT`UID`STREET_UID);" is 591.,174
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,initialize,Magic Number,The method contains a magic number: 2,73
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,printUsage,Magic Number,The method contains a magic number: 3,112
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,createComparator,Complex Method,Cyclomatic complexity of the method is 9,159
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,checkColumnsKeys,Complex Conditional,The conditional expression featureEXT != null && !featureEXT.supports(key) && poiEXT != null && !poiEXT.supports(key) && addrRowEXT != null && !addrRowEXT.supports(key) is complex.,197
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,checkColumnsKeys,Long Statement,The length of the statement "if (featureEXT != null && !featureEXT.supports(key) && poiEXT != null && !poiEXT.supports(key) && addrRowEXT != null && !addrRowEXT.supports(key)) {" is 148.,197
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,parseColumns,Complex Conditional,The conditional expression !" ".equals(token) && !"`".equals(token) && !";".equals(token) is complex.,215
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,getColumn,Long Parameter List,The method has 5 parameters. ,301
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,allDone,Long Statement,The length of the statement "List<File> batch=ExternalSort.sortInBatch(new File(tmpFile)`defaultcomparator`ExternalSort.DEFAULTMAXTEMPFILES`Charset.forName("utf8")`null`true);" is 146.,329
+kiselev-dv_gazetteer,me.osm.gazetter.out,CSVOutWriter,allDone,Long Statement,The length of the statement "ExternalSort.mergeSortedFiles(batch`new File(outFile)`defaultcomparator`Charset.forName("utf-8")`true`false`false`getHeaderString());" is 133.,329
+kiselev-dv_gazetteer,me.osm.gazetter.out,PoiValueExctractorImpl,getValue,Complex Method,Cyclomatic complexity of the method is 25,33
+kiselev-dv_gazetteer,me.osm.gazetter.out,PoiValueExctractorImpl,getValue,Magic Number,The method contains a magic number: 2,33
+kiselev-dv_gazetteer,me.osm.gazetter.out,PoiValueExctractorImpl,getValue,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2aac8c91,33
+kiselev-dv_gazetteer,me.osm.gazetter.split,Split,handle,Complex Method,Cyclomatic complexity of the method is 13,124
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,saveBoundary,Magic Number,The method contains a magic number: 2,99
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,buildCache,Magic Number,The method contains a magic number: 3,136
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,buildCache,Magic Number,The method contains a magic number: 2,136
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,sortAndMerge,Magic Number,The method contains a magic number: 3,170
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,sortAndMerge,Magic Number,The method contains a magic number: 2,170
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,sortAndMerge,Magic Number,The method contains a magic number: 2,170
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,handle,Magic Number,The method contains a magic number: 3,184
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,handle,Magic Number,The method contains a magic number: 2,184
+kiselev-dv_gazetteer,me.osm.gazetter.striper,BoundariesFallbacker,handle,Magic Number,The method contains a magic number: 2,184
+kiselev-dv_gazetteer,me.osm.gazetter.striper,GeoJsonWriter,geometryToJSON,Long Statement,The length of the statement "geomJSON.put(COORDINATES`new JsonStringWrapper("[" + String.format(Locale.US`"%.8f"`((Point)g).getX()) + "`"+ String.format(Locale.US`"%.8f"`((Point)g).getY())+ "]"));" is 167.,85
+kiselev-dv_gazetteer,me.osm.gazetter.striper,GeoJsonWriter,featureAsGeoJSON,Long Parameter List,The method has 5 parameters. ,123
+kiselev-dv_gazetteer,me.osm.gazetter.striper,GeoJsonWriter,createFeature,Long Parameter List,The method has 5 parameters. ,131
+kiselev-dv_gazetteer,me.osm.gazetter.striper,GeoJsonWriter,asJsonString,Long Statement,The length of the statement "sb.append("`[").append(String.format(Locale.US`"%.8f"`c.x)).append("`").append(String.format(Locale.US`"%.8f"`c.y)).append("]");" is 128.,164
+kiselev-dv_gazetteer,me.osm.gazetter.striper,GeoJsonWriter,getId,Long Statement,The length of the statement "String mainPart=type + "-" + String.format("%010d"`hash)+ "-"+ meta.getString(GEOMETRY_TYPE).charAt(0)+ meta.optLong("id");" is 123.,174
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Long Statement,The length of the statement "int i1="id".equals(o1) ? 0 : "ftype".equals(o1) ? 1 : GeoJsonWriter.TIMESTAMP.equals(o1) ? 2 : "action".equals(o1) ? 3 : "md5".equals(o2) ? 4 : "hhash".equals(o2) ? 5 : 10;" is 172.,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Long Statement,The length of the statement "int i2="id".equals(o2) ? 0 : "ftype".equals(o2) ? 1 : GeoJsonWriter.TIMESTAMP.equals(o2) ? 2 : "action".equals(o2) ? 3 : "md5".equals(o2) ? 4 : "hhash".equals(o2) ? 5 : 10;" is 172.,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 2,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 3,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 4,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 5,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 10,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 2,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 3,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 4,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 5,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 10,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 10,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,keys,Magic Number,The method contains a magic number: 10,33
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Long Statement,The length of the statement "int i1="id".equals(o1) ? 0 : "ftype".equals(o1) ? 1 : GeoJsonWriter.TIMESTAMP.equals(o1) ? 2 : "action".equals(o1) ? 3 : "md5".equals(o2) ? 4 : "hhash".equals(o2) ? 5 : 10;" is 172.,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Long Statement,The length of the statement "int i2="id".equals(o2) ? 0 : "ftype".equals(o2) ? 1 : GeoJsonWriter.TIMESTAMP.equals(o2) ? 2 : "action".equals(o2) ? 3 : "md5".equals(o2) ? 4 : "hhash".equals(o2) ? 5 : 10;" is 172.,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 2,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 3,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 4,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 5,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 10,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 2,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 3,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 4,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 5,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 10,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 10,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,compare,Magic Number,The method contains a magic number: 10,39
+kiselev-dv_gazetteer,me.osm.gazetter.striper,JSONFeature,hashCode,Magic Number,The method contains a magic number: 123,126
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,run,Complex Conditional,The conditional expression (typesSet.contains("all") || typesSet.contains("pois")) && !typesSet.contains("no-pois") is complex.,88
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,run,Complex Method,Cyclomatic complexity of the method is 9,88
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,run,Long Parameter List,The method has 12 parameters. ,88
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,run,Long Statement,The length of the statement "builders.add(new BoundariesBuilder(this`indexesFactory`BoundariesFallbacker.getInstance(boundariesFallbackIndex`boundariesFallbackTypes)));" is 139.,88
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,run,Long Statement,The length of the statement "PlaceBuilder placeBuilder=new PlaceBuilder(this`this`BoundariesFallbacker.getInstance(boundariesFallbackIndex`boundariesFallbackTypes)`indexesFactory`new File(this.osmSlicesPath`"city_nodes.csv")`mergeCityPointsToBoundary`doNearestCityLookup);" is 243.,88
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,run,Magic Number,The method contains a magic number: 10,88
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,stripeBoundary,Complex Method,Cyclomatic complexity of the method is 13,184
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,stripeBoundary,Long Statement,The length of the statement "log.warn("Can't slice {} {}.\nError: {}\nPolygon:\n{}"`new Object[]{meta.getString("type")`meta.getLong("id")`validationError.getMessage()`new WKTWriter().write(p)});" is 166.,184
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,stripe,Long Statement,The length of the statement "List<Polygon> splitPolygon=GeometryUtils.splitPolygon(p`factory.createLineString(new Coordinate[]{new Coordinate(snapX`89.0)`new Coordinate(snapX`-89.0)}));" is 156.,292
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,stripe,Magic Number,The method contains a magic number: 89.0,292
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,stripe,Magic Number,The method contains a magic number: 89.0,292
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,stripe,Long Statement,The length of the statement "Geometry intersection=l.intersection(factory.createLineString(new Coordinate[]{new Coordinate(x`bbox.getMinY())`new Coordinate(x`bbox.getMaxY())}));" is 148.,314
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handleAddrPoint,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(geoJSONString).equals(FeatureTypes.ADDR_POINT_FTYPE) : "Failed getFtype for " + geoJSONString;" is 124.,348
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handlePlacePoint,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(geoJSONString).equals(FeatureTypes.PLACE_POINT_FTYPE) : "Failed getFtype for " + geoJSONString;" is 125.,373
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handleJunction,Long Statement,The length of the statement "@SuppressWarnings("unchecked") JSONObject r=GeoJsonWriter.createFeature(fid`FeatureTypes.JUNCTION_FTYPE`Collections.EMPTY_MAP`pnt`meta);" is 136.,389
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handleJunction,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(geoJSONString).equals(FeatureTypes.JUNCTION_FTYPE) : "Failed getFtype for " + geoJSONString;" is 122.,389
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handleHighway,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(geoJSONString).equals(FeatureTypes.HIGHWAY_FEATURE_TYPE) : "Failed getFtype for " + geoJSONString;" is 128.,419
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handleHighway,Long Statement,The length of the statement "List<LineString> filtered=segments.stream().filter(s -> !s.isEmpty()).filter(s -> !s.getCentroid().isEmpty()).collect(Collectors.toList());" is 139.,419
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handleHighway,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(featureAsGeoJSON).equals(FeatureTypes.HIGHWAY_FEATURE_TYPE) : "Failed getFtype for " + featureAsGeoJSON;" is 134.,419
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,freeThreadPool,Magic Number,The method contains a magic number: 10,512
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,writePnt2Building,Long Parameter List,The method has 5 parameters. ,546
+kiselev-dv_gazetteer,me.osm.gazetter.striper,Slicer,handleAssociatedStreet,Long Parameter List,The method has 6 parameters. ,574
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 0.1,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 4,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 10,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 4,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 10,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 180.0,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 4,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 10,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 2,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,FileNameKeyGenerator,Magic Number,The method contains a magic number: 10,43
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getFilePrefix,Magic Number,The method contains a magic number: 180.0,71
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getFilePrefix,Magic Number,The method contains a magic number: 90.0,71
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Long Statement,The length of the statement "polygons.add(factory.createPolygon(new Coordinate[]{new Coordinate(x1`bbox.getMinY() - 0.00001)`new Coordinate(x2`bbox.getMinY() - 0.00001)`new Coordinate(x2`bbox.getMaxY() + 0.00001)`new Coordinate(x1`bbox.getMaxY() + 0.00001)`new Coordinate(x1`bbox.getMinY() - 0.00001)}));" is 275.,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Long Statement,The length of the statement "polygons.add(factory.createPolygon(new Coordinate[]{new Coordinate(x1`bbox.getMinY() - 0.00001)`new Coordinate(x2`bbox.getMinY() - 0.00001)`new Coordinate(x2`bbox.getMaxY() + 0.00001)`new Coordinate(x1`bbox.getMaxY() + 0.00001)`new Coordinate(x1`bbox.getMinY() - 0.00001)}));" is 275.,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getBladePolygons,Magic Number,The method contains a magic number: 0.00001,78
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getMinX,Magic Number,The method contains a magic number: 180.0,127
+kiselev-dv_gazetteer,me.osm.gazetter.striper,FileNameKeyGenerator,getMaxX,Magic Number,The method contains a magic number: 180.0,131
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders.handlers,HighwaysHandler,handleAssociatedStreet,Long Parameter List,The method has 6 parameters. ,15
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Long Parameter List,The method has 5 parameters. ,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Magic Number,The method contains a magic number: 8,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Magic Number,The method contains a magic number: 8,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Magic Number,The method contains a magic number: 8,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Magic Number,The method contains a magic number: 8,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Magic Number,The method contains a magic number: 2,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Magic Number,The method contains a magic number: 8,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,PoisBuilder,Magic Number,The method contains a magic number: 8,80
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Complex Conditional,The conditional expression mp != null && !mp.isEmpty() && mp.isValid() is complex.,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Complex Method,Cyclomatic complexity of the method is 12,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,147
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,147
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,147
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,147
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexRelation,Complex Conditional,The conditional expression rm.type == ReferenceType.WAY && (StringUtils.isEmpty(rm.role) || "outer".equals(rm.role)) is complex.,222
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexRelation,Magic Number,The method contains a magic number: 8,222
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexRelation,Magic Number,The method contains a magic number: 8,222
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,handle,Magic Number,The method contains a magic number: 16,243
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,271
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,271
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,271
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,271
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,278
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,278
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,278
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,278
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Complex Method,Cyclomatic complexity of the method is 11,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 4,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,288
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,299
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,299
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,299
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,compare,Magic Number,The method contains a magic number: 8,299
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexLine,Magic Number,The method contains a magic number: 8,377
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexLine,Magic Number,The method contains a magic number: 8,377
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexLine,Magic Number,The method contains a magic number: 2,377
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexLine,Magic Number,The method contains a magic number: 8,377
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexLine,Magic Number,The method contains a magic number: 8,377
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,handle,Magic Number,The method contains a magic number: 180.0,397
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,handle,Magic Number,The method contains a magic number: 10.0,397
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,handle,Magic Number,The method contains a magic number: 16,397
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,432
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,432
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexNode2Way,Magic Number,The method contains a magic number: 2,432
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,432
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,432
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexNode2Way,Magic Number,The method contains a magic number: 2,432
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PoisBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,432
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 2,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 2,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,AddrPointsBuilder,Magic Number,The method contains a magic number: 8,69
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Complex Conditional,The conditional expression mp != null && !mp.isEmpty() && mp.isValid() is complex.,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Complex Method,Cyclomatic complexity of the method is 11,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Long Statement,The length of the statement "log.error(LOGMarkers.E_NO_POINTS_FOR_RELATION`"Failed to build geometry for relation rel_osm_id({}). No points found."`rel.id);" is 127.,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 2,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoint4Relation,Magic Number,The method contains a magic number: 8,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexRelation,Complex Conditional,The conditional expression rm.type == ReferenceType.WAY && (StringUtils.isEmpty(rm.role) || "outer".equals(rm.role)) is complex.,195
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,195
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexRelation,Magic Number,The method contains a magic number: 8,195
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,handle,Magic Number,The method contains a magic number: 16,216
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Complex Method,Cyclomatic complexity of the method is 8,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Long Statement,The length of the statement "log.warn(LOGMarkers.E_INTRPLTN_NO_ADDR_POINT`"Broken interpolation at point node_osm_id({}). " + "First point has no recognizeable addr:housenumber"`pid);" is 154.,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Long Statement,The length of the statement "log.warn(LOGMarkers.E_INTRPLTN_NO_ADDR_POINT`"Broken interpolation at point node_osm_id({}). " + "Last point has no recognizeable addr:housenumber"`prevPID);" is 157.,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Long Statement,The length of the statement "log.warn(LOGMarkers.E_INTRPLTN_UNSPRTED_TYPE`"Unsupported interpolation type: {} for way way_osm_id({})"`interpolation`line.id);" is 128.,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Magic Number,The method contains a magic number: 8,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Magic Number,The method contains a magic number: 8,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Magic Number,The method contains a magic number: 2,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Magic Number,The method contains a magic number: 8,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Magic Number,The method contains a magic number: 8,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Magic Number,The method contains a magic number: 2,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPoints4Interpolation,Magic Number,The method contains a magic number: 8,247
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,interpolateSegment,Long Parameter List,The method has 8 parameters. ,304
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getInterpolationPointHN,Magic Number,The method contains a magic number: 8,355
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getInterpolationStep,Empty catch clause,The method has an empty catch block.,365
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getInterpolationStep,Magic Number,The method contains a magic number: 2,365
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,385
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,385
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,385
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getWayPoints,Magic Number,The method contains a magic number: 8,385
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,391
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,391
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,391
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,391
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Complex Method,Cyclomatic complexity of the method is 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Long Statement,The length of the statement "log.error(LOGMarkers.E_NO_POINTS_FOR_WAY`"Failed to build geometry for way way_osm_id({}). " + "No points found."`line.id);" is 123.,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Long Statement,The length of the statement "log.warn(LOGMarkers.E_NO_POINTS_FOR_WAY`"Failed to build geometry for way way_osm_id({}). " + "Some points wasn't found."`line.id);" is 131.,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 4,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 2,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,buildAddrPointForWay,Magic Number,The method contains a magic number: 8,400
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,411
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,411
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,411
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,compare,Magic Number,The method contains a magic number: 8,411
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 8,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 8,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 2,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 8,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 8,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 8,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 2,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 8,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 8,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexWay,Magic Number,The method contains a magic number: 2,469
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexLine,Magic Number,The method contains a magic number: 8,491
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexLine,Magic Number,The method contains a magic number: 8,491
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexLine,Magic Number,The method contains a magic number: 2,491
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexLine,Magic Number,The method contains a magic number: 8,491
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexLine,Magic Number,The method contains a magic number: 8,491
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,handle,Magic Number,The method contains a magic number: 180.0,512
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,handle,Magic Number,The method contains a magic number: 10.0,512
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,handle,Magic Number,The method contains a magic number: 16,512
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNodeInterpolation,Long Statement,The length of the statement "log.warn(LOGMarkers.E_INTRPLTN_DIF_STREETS`"Different streets on addr interpolated nodes. " + "Interpolation way id: {} street: {} ({}) Node: {}"`new Object[]{intWayId`street`interpolation2Street.get(intWayId)`node.id});" is 220.,543
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNodeInterpolation,Magic Number,The method contains a magic number: 8,543
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNodeInterpolation,Magic Number,The method contains a magic number: 8,543
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNodeInterpolation,Magic Number,The method contains a magic number: 2,543
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getHN,Empty catch clause,The method has an empty catch block.,567
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getHN,Magic Number,The method contains a magic number: 2,567
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,getHN,Magic Number,The method contains a magic number: 2,567
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,582
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,582
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 2,582
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,582
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,582
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 2,582
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,AddrPointsBuilder,indexNode2Way,Magic Number,The method contains a magic number: 8,582
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,buildMultyPolygon,Long Statement,The length of the statement "if (!validOptions.isValid() && validOptions.getValidationError().getErrorType() == TopologyValidationError.DISCONNECTED_INTERIOR) {" is 131.,47
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,buildOuterGeometry,Complex Conditional,The conditional expression mended == null || !mended.isValid() || mended.isEmpty() is complex.,92
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,buildOuterGeometry,Complex Method,Cyclomatic complexity of the method is 10,92
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,buildOuterGeometry,Long Statement,The length of the statement "if (errorType == TopologyValidationError.SELF_INTERSECTION || errorType == TopologyValidationError.RING_SELF_INTERSECTION) {" is 124.,92
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,buildOuterGeometry,Long Statement,The length of the statement "log.info(LOGMarkers.E_POLYGON_BUID_ERR`"Polygon for rel_osm_id({}) mended. Error is {}"`rel.id`validationError.toString());" is 123.,92
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,polygonizeLinestrings,Complex Method,Cyclomatic complexity of the method is 9,215
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,polygonizeLinestrings,Long Statement,The length of the statement "log.warn(LOGMarkers.E_POLYGON_BUID_ERR`"Cant polygonize relation: rel_osm_id({}) \nLines ({}):{}\nCause: {}"`new Object[]{rel.id`linestrings.size()`sb.toString()`e.getMessage()});" is 179.,215
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,polygonizeLinestrings,Magic Number,The method contains a magic number: 2,215
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BuildUtils,buildWayGeometry,Long Parameter List,The method has 5 parameters. ,269
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,moveTo,Magic Number,The method contains a magic number: 360,106
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,moveBack,Magic Number,The method contains a magic number: 360,113
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,PlaceBuilder,Long Parameter List,The method has 7 parameters. ,120
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,filterByTags,Long Statement,The length of the statement "return tags.containsKey("place") && (PLACE_CITY.contains(tags.get("place")) || PLACE_NEIGHBOUR.contains(tags.get("place")));" is 124.,146
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,loadCityNodesIndex,Long Statement,The length of the statement "cityNodesFileIndex=new FileLinesOffsetsIndex(new RandomAccessFile(this.cityNodesIndex`"r")`new FileLinesOffsetsIndex.Accessor(){" is 128.,252
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,loadCityNodesIndex,Magic Number,The method contains a magic number: 3000,252
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,loadCityNodesIndex,Magic Number,The method contains a magic number: 2,252
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,loadCityNodesIndex,Magic Number,The method contains a magic number: 3,252
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,getKey,Magic Number,The method contains a magic number: 2,266
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,getKey,Magic Number,The method contains a magic number: 3,266
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,buildVoronoyDiagrams,Complex Method,Cyclomatic complexity of the method is 10,295
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,buildVoronoyDiagrams,Magic Number,The method contains a magic number: 0.0001,295
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,buildVoronoyDiagrams,Magic Number,The method contains a magic number: 2,295
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,buildVoronoyDiagrams,Magic Number,The method contains a magic number: 2,295
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,getCityById,Magic Number,The method contains a magic number: 4,389
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,handleCityVoronoy,Long Statement,The length of the statement "assert GeoJsonWriter.getId(rfeature.toString()).equals(rfeature.optString("id")) : "Failed getId for " + rfeature.toString();" is 125.,462
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,handleCityVoronoy,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(rfeature.toString()).equals(FeatureTypes.PLACE_DELONEY_FTYPE) : "Failed getFtype for " + rfeature.toString();" is 139.,462
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,buildNighboursVoronoiPolygons,Complex Method,Cyclomatic complexity of the method is 9,491
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,handleNeighbour,Long Statement,The length of the statement "assert GeoJsonWriter.getId(rfeature.toString()).equals(rfeature.optString("id")) : "Failed getId for " + rfeature.toString();" is 125.,552
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,handleNeighbour,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(rfeature.toString()).equals(FeatureTypes.NEIGHBOUR_DELONEY_FTYPE) : "Failed getFtype for " + rfeature.toString();" is 143.,552
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 10.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 10.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 10.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 10.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 10.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 180.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,writePolygonToExistFiles,Magic Number,The method contains a magic number: 10.0,577
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,doneRelation,Long Statement,The length of the statement "assert GeoJsonWriter.getId(featureWithoutGeometry.toString()).equals(id) : "Failed getId for " + featureWithoutGeometry.toString();" is 131.,667
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,doneRelation,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(featureWithoutGeometry.toString()).equals(FeatureTypes.PLACE_BOUNDARY_FTYPE) : "Failed getFtype " + featureWithoutGeometry.toString();" is 164.,667
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,doneWay,Long Statement,The length of the statement "assert GeoJsonWriter.getId(featureWithoutGeometry.toString()).equals(id) : "Failed getId for " + featureWithoutGeometry.toString();" is 131.,690
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,doneWay,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(featureWithoutGeometry.toString()).equals(FeatureTypes.PLACE_BOUNDARY_FTYPE) : "Failed getFtype for " + featureWithoutGeometry.toString();" is 168.,690
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,mergeWithCenter,Complex Method,Cyclomatic complexity of the method is 8,718
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,mergeWithCenter,Long Statement,The length of the statement "HashSet<String> pbNamesSet=new HashSet<>(AddressesUtils.filterNameTags(featureWithoutGeometry.getJSONObject(GeoJsonWriter.PROPERTIES)).values());" is 145.,718
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,PlaceBuilder,handlePlaceMatch,Long Statement,The length of the statement "placePointRefer.put("id"`placePointRefer.getString("id").replace(FeatureTypes.PLACE_DELONEY_FTYPE`FeatureTypes.PLACE_POINT_FTYPE));" is 131.,755
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,ABuilder,binarySearchWithMask,Magic Number,The method contains a magic number: 2,28
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,ABuilder,binarySearchWithMask,Magic Number,The method contains a magic number: 16,28
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,BoundariesBuilder,Magic Number,The method contains a magic number: 8,89
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,BoundariesBuilder,Magic Number,The method contains a magic number: 8,89
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,BoundariesBuilder,Magic Number,The method contains a magic number: 8,89
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,BoundariesBuilder,Magic Number,The method contains a magic number: 4,89
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,BoundariesBuilder,Magic Number,The method contains a magic number: 8,89
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,BoundariesBuilder,Magic Number,The method contains a magic number: 8,89
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,doneRelation,Long Statement,The length of the statement "assert GeoJsonWriter.getId(featureWithoutGeometry.toString()).equals(id) : "Failed getId for " + featureWithoutGeometry.toString();" is 131.,155
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,doneRelation,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(featureWithoutGeometry.toString()).equals(FeatureTypes.ADMIN_BOUNDARY_FTYPE) : "Failed getFtype for " + featureWithoutGeometry.toString();" is 168.,155
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Complex Method,Cyclomatic complexity of the method is 12,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Long Statement,The length of the statement "log.warn("Some memmbers of admin boundary relation {} ({}) are missed.\n{}"`rel.id`rel.tags.get("name")`StringUtils.join(notFound`"` "));" is 137.,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Magic Number,The method contains a magic number: 16,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Magic Number,The method contains a magic number: 16,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Magic Number,The method contains a magic number: 2,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Magic Number,The method contains a magic number: 20,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Magic Number,The method contains a magic number: 28,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildRelationGeometry,Magic Number,The method contains a magic number: 2,183
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,compare,Magic Number,The method contains a magic number: 16,213
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,compare,Magic Number,The method contains a magic number: 16,213
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildWayGeometry,Magic Number,The method contains a magic number: 20,272
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,buildWayGeometry,Magic Number,The method contains a magic number: 28,272
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addRelIndex,Magic Number,The method contains a magic number: 8,285
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,isOuter,Complex Conditional,The conditional expression "outer".equals(m.role) || "".equals(m.role) || m.role == null || "exclave".equals(m.role) is complex.,300
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,filterByTags,Long Statement,The length of the statement "return ("administrative".equals(tags.get("boundary")) && ADMIN_LEVELS.contains(tags.get("admin_level")) && (tags.get("maritime") == null || !tags.get("maritime").equals("yes")));" is 178.,311
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,handle,Complex Conditional,The conditional expression i >= 0 || (line.isClosed() && filterByTags(line.tags)) is complex.,317
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,handle,Magic Number,The method contains a magic number: 3,317
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,doneWay,Long Statement,The length of the statement "assert GeoJsonWriter.getId(featureWithoutGeometry.toString()).equals(id) : "Failed getId for " + featureWithoutGeometry.toString();" is 131.,358
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,doneWay,Long Statement,The length of the statement "assert GeoJsonWriter.getFtype(featureWithoutGeometry.toString()).equals(FeatureTypes.ADMIN_BOUNDARY_FTYPE) : "Failed getFtype for " + featureWithoutGeometry.toString();" is 168.,358
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addWayToIndex,Magic Number,The method contains a magic number: 8,386
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addWayToIndex,Magic Number,The method contains a magic number: 8,386
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addWayToIndex,Magic Number,The method contains a magic number: 4,386
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addWayToIndex,Magic Number,The method contains a magic number: 8,386
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addWayToIndex,Magic Number,The method contains a magic number: 8,386
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addWayToIndex,Magic Number,The method contains a magic number: 8,386
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,addWayToIndex,Magic Number,The method contains a magic number: 16,386
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,handle,Magic Number,The method contains a magic number: 20,426
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,BoundariesBuilder,handle,Magic Number,The method contains a magic number: 28,426
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,HighwaysBuilder,Magic Number,The method contains a magic number: 8,76
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,HighwaysBuilder,Magic Number,The method contains a magic number: 8,76
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,HighwaysBuilder,Magic Number,The method contains a magic number: 8,76
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,HighwaysBuilder,Magic Number,The method contains a magic number: 8,76
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,HighwaysBuilder,Magic Number,The method contains a magic number: 2,76
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Complex Conditional,The conditional expression m.type == ReferenceType.WAY && ("street".equals(m.role) || !("house".equals(m.role))) is complex.,94
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,buildAssociatedStreet,Complex Conditional,The conditional expression m.type == ReferenceType.WAY && ("street".equals(m.role) || !("house".equals(m.role))) is complex.,110
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,buildAssociatedStreet,Long Statement,The length of the statement "log.warn(LOGMarkers.E_NO_ASSOCIATED_STREET_FOUND`"No streets found for associated street relation` rel_osm_id({})"`rel.id);" is 123.,110
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,buildAssociatedStreet,Magic Number,The method contains a magic number: 0x0000FFFF,110
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,buildAssociatedStreet,Magic Number,The method contains a magic number: 16,110
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,buildAssociatedStreet,Magic Number,The method contains a magic number: 10,110
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 2,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handle,Magic Number,The method contains a magic number: 8,143
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,isHighway,Long Statement,The length of the statement "return line.tags.containsKey(HIGHWAY_TAG) && !line.tags.get(HIGHWAY_TAG).equals("bus_stop") && !line.tags.get(HIGHWAY_TAG).equals("platform");" is 142.,172
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,buildLine,Magic Number,The method contains a magic number: 8,182
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,buildLine,Magic Number,The method contains a magic number: 2,182
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,findJunctions,Magic Number,The method contains a magic number: 8,282
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,findJunctions,Magic Number,The method contains a magic number: 8,282
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handleHighway,Magic Number,The method contains a magic number: 180.0,316
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handleHighway,Magic Number,The method contains a magic number: 10.0,316
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handleHighway,Magic Number,The method contains a magic number: 16,316
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handleHighway,Magic Number,The method contains a magic number: 180.0,316
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handleHighway,Magic Number,The method contains a magic number: 10.0,316
+kiselev-dv_gazetteer,me.osm.gazetter.striper.builders,HighwaysBuilder,handleAssociatedStreet,Long Parameter List,The method has 6 parameters. ,333
+kiselev-dv_gazetteer,me.osm.gazetter.diff,Diff,Diff,Long Parameter List,The method has 6 parameters. ,90
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,parse,Magic Number,The method contains a magic number: 2,24
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Complex Method,Cyclomatic complexity of the method is 11,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 4,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 10,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 61,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 8,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 2,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 4,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 2,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 128,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 62,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 2,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 4,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 2,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,decode,Magic Number,The method contains a magic number: 4,44
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,resetHighestByte,Magic Number,The method contains a magic number: 63,131
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,resetHighestByte,Magic Number,The method contains a magic number: 62,131
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,resetHighestByte,Magic Number,The method contains a magic number: 61,131
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,remainingWithoutTail,Magic Number,The method contains a magic number: 4,138
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,remainingWithoutTail,Magic Number,The method contains a magic number: 5,138
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,remainingWithoutTail,Magic Number,The method contains a magic number: 3,138
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encode,Complex Method,Cyclomatic complexity of the method is 11,155
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encode,Magic Number,The method contains a magic number: 8,155
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encode,Magic Number,The method contains a magic number: 2,155
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,interpolationAsBytes,Magic Number,The method contains a magic number: 8,220
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,interpolationAsBytes,Magic Number,The method contains a magic number: 224,220
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,interpolationAsBytes,Magic Number,The method contains a magic number: 128,220
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,interpolationAsBytes,Magic Number,The method contains a magic number: 8,220
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,interpolationAsBytes,Magic Number,The method contains a magic number: 0xFF,220
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,interpolationAsBytes,Magic Number,The method contains a magic number: 0xFF,220
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,hashAsBytes,Magic Number,The method contains a magic number: 4,247
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,osmIdAsBytes,Magic Number,The method contains a magic number: 8,265
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,osmIdAsBytes,Magic Number,The method contains a magic number: 192,265
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,osmIdAsBytes,Magic Number,The method contains a magic number: 128,265
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encodeTail,Magic Number,The method contains a magic number: 4,292
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encodeTail,Magic Number,The method contains a magic number: 2,292
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encodeTail,Magic Number,The method contains a magic number: 8,292
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encodeTail,Magic Number,The method contains a magic number: 0xFF,292
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,ByteUtils,encodeTail,Magic Number,The method contains a magic number: 0xFF,292
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,DiffMapFileIndex,remove,Magic Number,The method contains a magic number: 128,110
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,DiffMapFileIndex,cleanRemoved,Magic Number,The method contains a magic number: 128,140
+kiselev-dv_gazetteer,me.osm.gazetter.diff.indx,DiffMapFileIndex,rowsIterator,Magic Number,The method contains a magic number: 2,157
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterRing,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(1`1)`new Coordinate(1`2)`new Coordinate(2`2)`new Coordinate(2`1)`new Coordinate(1`1)}));" is 150.,32
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterRing,Magic Number,The method contains a magic number: 2,32
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterRing,Magic Number,The method contains a magic number: 2,32
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterRing,Magic Number,The method contains a magic number: 2,32
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterRing,Magic Number,The method contains a magic number: 2,32
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(0`0)`new Coordinate(10`0)`new Coordinate(10`10)`new Coordinate(0`10)`new Coordinate(0`0)}));" is 154.,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Long Statement,The length of the statement "inners.add(f.createLineString(new Coordinate[]{new Coordinate(2`2)`new Coordinate(8`2)`new Coordinate(8`8)`new Coordinate(2`8)`new Coordinate(2`2)}));" is 150.,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 10,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 10,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 10,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 10,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 2,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 2,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 8,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 2,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 8,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 8,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 2,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 8,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 2,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,oneOuterAndOneInnerRing,Magic Number,The method contains a magic number: 2,51
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,multipleWaysFormingRing,Magic Number,The method contains a magic number: 2,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,multipleWaysFormingRing,Magic Number,The method contains a magic number: 2,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,multipleWaysFormingRing,Magic Number,The method contains a magic number: 2,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,multipleWaysFormingRing,Magic Number,The method contains a magic number: 2,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,multipleWaysFormingRing,Magic Number,The method contains a magic number: 2,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,multipleWaysFormingRing,Magic Number,The method contains a magic number: 2,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(0`0)`new Coordinate(10`0)`new Coordinate(10`10)`new Coordinate(0`10)`new Coordinate(0`0)}));" is 154.,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(20`0)`new Coordinate(30`0)`new Coordinate(30`10)`new Coordinate(20`10)`new Coordinate(20`0)}));" is 157.,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 10,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 10,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 10,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 10,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 20,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 30,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 30,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 10,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 20,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 10,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRings,Magic Number,The method contains a magic number: 20,101
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(0`0)`new Coordinate(10`0)`new Coordinate(10`10)`new Coordinate(0`10)`new Coordinate(0`0)}));" is 154.,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(20`0)`new Coordinate(30`0)`new Coordinate(30`10)`new Coordinate(20`10)`new Coordinate(20`0)}));" is 157.,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Long Statement,The length of the statement "inners.add(f.createLineString(new Coordinate[]{new Coordinate(22`2)`new Coordinate(28`2)`new Coordinate(28`8)`new Coordinate(22`8)`new Coordinate(22`2)}));" is 155.,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 10,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 10,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 10,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 10,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 20,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 30,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 30,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 10,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 20,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 10,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 20,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 22,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 28,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 28,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 22,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 8,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 22,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,twoDisjunctOuterRingsAndMultipleWaysFormingRing,Magic Number,The method contains a magic number: 2,128
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(0`0)`new Coordinate(10`0)`new Coordinate(10`10)`new Coordinate(0`10)`new Coordinate(0`0)}));" is 154.,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Long Statement,The length of the statement "inners.add(f.createLineString(new Coordinate[]{new Coordinate(2`2)`new Coordinate(8`2)`new Coordinate(8`5)`new Coordinate(2`5)`new Coordinate(2`2)}));" is 150.,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Long Statement,The length of the statement "inners.add(f.createLineString(new Coordinate[]{new Coordinate(2`5)`new Coordinate(8`5)`new Coordinate(8`8)`new Coordinate(2`8)`new Coordinate(2`5)}));" is 150.,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 10,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 10,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 10,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 10,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 8,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 8,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 5,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 5,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 5,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 8,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 5,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 8,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 8,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 8,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 2,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,touchingInnerRings,Magic Number,The method contains a magic number: 5,176
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(0`0)`new Coordinate(10`0)`new Coordinate(10`10)`new Coordinate(0`10)`new Coordinate(0`0)}));" is 154.,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Long Statement,The length of the statement "inners.add(f.createLineString(new Coordinate[]{new Coordinate(2`2)`new Coordinate(8`2)`new Coordinate(8`8)`new Coordinate(2`8)`new Coordinate(2`2)}));" is 150.,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(4`4)`new Coordinate(6`4)`new Coordinate(6`6)`new Coordinate(4`6)`new Coordinate(4`4)}));" is 150.,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 10,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 10,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 10,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 10,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 2,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 2,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 8,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 2,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 8,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 8,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 2,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 8,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 2,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 2,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 4,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 4,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 6,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 4,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 6,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 6,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 4,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 6,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 4,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHole,Magic Number,The method contains a magic number: 4,212
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(0`0)`new Coordinate(10`0)`new Coordinate(10`10)`new Coordinate(0`10)`new Coordinate(0`0)}));" is 154.,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Long Statement,The length of the statement "inners.add(f.createLineString(new Coordinate[]{new Coordinate(2`2)`new Coordinate(8`2)`new Coordinate(8`8)`new Coordinate(2`8)`new Coordinate(2`2)}));" is 150.,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(4`4)`new Coordinate(6`4)`new Coordinate(6`6)`new Coordinate(4`6)`new Coordinate(4`4)}));" is 150.,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Long Statement,The length of the statement "outers.add(f.createLineString(new Coordinate[]{new Coordinate(20`0)`new Coordinate(30`0)`new Coordinate(30`10)`new Coordinate(20`10)`new Coordinate(20`0)}));" is 157.,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 10,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 10,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 10,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 10,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 2,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 2,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 8,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 2,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 8,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 8,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 2,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 8,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 2,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 2,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 4,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 4,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 6,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 4,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 6,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 6,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 4,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 6,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 4,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 4,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 20,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 30,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 30,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 10,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 20,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 10,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,islandWithinHoleWithDisjuncOuter,Magic Number,The method contains a magic number: 20,248
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,realWorldExample1,Long Statement,The length of the statement "outers.add((LineString)reader.read("LINESTRING (42.8211884 45.3375219` 42.821406 45.3375338` " + " 42.821478 45.3375392` 42.8214348 45.3379158` 42.8214215 45.3379422)"));" is 170.,292
+kiselev-dv_gazetteer,me.osm.gazetter.test,MultiPolygonBuilderTest,realWorldExample1,Long Statement,The length of the statement "outers.add((LineString)reader.read("LINESTRING (42.8214215 45.3379422` 42.821046 45.3378754` " + "42.8208881 45.3378474` 42.8206616 45.3378149` 42.8205843 45.3378055` 42.8206528 45.3374546` " + "42.8208394 45.3374756` 42.8211884 45.3375219)"));" is 244.,292
+kiselev-dv_gazetteer,me.osm.gazetter.test,FileUtilsTest,testFileBinarySearch1,Magic Number,The method contains a magic number: 3,30
+kiselev-dv_gazetteer,me.osm.gazetter.test,FileUtilsTest,testFileBinarySearch2,Magic Number,The method contains a magic number: 2,46
+kiselev-dv_gazetteer,me.osm.gazetter.test,FileUtilsTest,testFileBinarySearch5,Magic Number,The method contains a magic number: 5,58
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 90.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 90.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 170.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 100,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 100.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 170.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 80.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 170,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 170.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 80.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 100,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 170,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 170.0,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 100,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testMoveToAndBack,Magic Number,The method contains a magic number: 0.001,11
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOXDx,Magic Number,The method contains a magic number: 10.0,26
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOXDx,Magic Number,The method contains a magic number: 10.0,26
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOXDx,Magic Number,The method contains a magic number: 0.001,26
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180,Magic Number,The method contains a magic number: 170.0,37
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180,Magic Number,The method contains a magic number: 170.0,37
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180,Magic Number,The method contains a magic number: 340.0,37
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180,Magic Number,The method contains a magic number: 0.001,37
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180Translated,Magic Number,The method contains a magic number: 170.0,49
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180Translated,Magic Number,The method contains a magic number: 170.0,49
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180Translated,Magic Number,The method contains a magic number: 20.0,49
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180Translated,Magic Number,The method contains a magic number: 0.001,49
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180Translated,Magic Number,The method contains a magic number: 190.0,49
+kiselev-dv_gazetteer,me.osm.gazetter.test,PlacePointsBuilderTest,testBBOX180Translated,Magic Number,The method contains a magic number: 0.001,49
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 55.0,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 55,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 180,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 10,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 10,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 22.0,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 22,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 180,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,SlicerTest,testAddrPoint,Magic Number,The method contains a magic number: 100,64
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSequentialWrite,Magic Number,The method contains a magic number: 4,50
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSequentialWrite,Magic Number,The method contains a magic number: 4,50
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSequentialWrite,Magic Number,The method contains a magic number: 4,50
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSequentialWrite,Magic Number,The method contains a magic number: 4,50
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSequentialRead,Magic Number,The method contains a magic number: 4,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSequentialRead,Magic Number,The method contains a magic number: 4,78
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingInOneChunk,Magic Number,The method contains a magic number: 4,100
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingInOneChunk,Magic Number,The method contains a magic number: 4,100
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingInOneChunk,Magic Number,The method contains a magic number: 1024,100
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingInOneChunk,Magic Number,The method contains a magic number: 8,100
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingInOneChunk,Magic Number,The method contains a magic number: 4,100
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingInOneChunk,Magic Number,The method contains a magic number: 4,100
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunksPageWrite,Magic Number,The method contains a magic number: 4,150
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunksPageWrite,Magic Number,The method contains a magic number: 4,150
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunksPageWrite,Magic Number,The method contains a magic number: 2,150
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunksPageWrite,Magic Number,The method contains a magic number: 4,150
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunksPageWrite,Magic Number,The method contains a magic number: 4,150
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Complex Method,Cyclomatic complexity of the method is 10,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 512,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 512,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 512,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 512,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 2,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 2,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 2,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 4,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 1024,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageRewrite,Magic Number,The method contains a magic number: 2,214
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunks,Magic Number,The method contains a magic number: 4,339
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunks,Magic Number,The method contains a magic number: 4,339
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunks,Magic Number,The method contains a magic number: 2,339
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunks,Magic Number,The method contains a magic number: 4,339
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testSortingManyChunks,Magic Number,The method contains a magic number: 4,339
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testRowsSynchronization,Magic Number,The method contains a magic number: 4,371
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testRowsSynchronization,Magic Number,The method contains a magic number: 4,371
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testRowsSynchronization,Magic Number,The method contains a magic number: 2,371
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testRowsSynchronization,Magic Number,The method contains a magic number: 4,371
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testRowsSynchronization,Magic Number,The method contains a magic number: 4,371
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageCalculation,Magic Number,The method contains a magic number: 7750127,407
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageCalculation,Magic Number,The method contains a magic number: 120,407
+kiselev-dv_gazetteer,me.osm.gazetter.test,MMapIndexTest,testPageCalculation,Magic Number,The method contains a magic number: 363286,407
+kiselev-dv_gazetteer,me.osm.gzetteer,App,main,Complex Method,Cyclomatic complexity of the method is 8,29
+kiselev-dv_gazetteer,me.osm.gzetteer,App,main,Magic Number,The method contains a magic number: 3,29
+kiselev-dv_gazetteer,me.osm.gzetteer,App,main,Magic Number,The method contains a magic number: 30,29
+kiselev-dv_gazetteer,me.osm.gzetteer,App,generateDiff,Long Statement,The length of the statement "String cmd=String.format("java -jar %s --log-prefix %s diff --old %s --new %s --out-file %s"`binPath`logPrefix`oldPath`newPath`outFilePath);" is 140.,124

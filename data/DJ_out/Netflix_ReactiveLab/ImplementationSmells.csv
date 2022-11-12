@@ -1,0 +1,232 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+Netflix_ReactiveLab,com.netflix.hystrix.dashboard.stream,ProxyStreamServlet,doGet,Complex Method,Cyclomatic complexity of the method is 14,37
+Netflix_ReactiveLab,com.netflix.hystrix.dashboard.stream,ProxyStreamServlet,doGet,Empty catch clause,The method has an empty catch block.,37
+Netflix_ReactiveLab,com.netflix.hystrix.dashboard.stream,ProxyStreamServlet,doGet,Magic Number,The method contains a magic number: 500,37
+Netflix_ReactiveLab,com.netflix.hystrix.dashboard.stream,ProxyStreamServlet,doGet,Magic Number,The method contains a magic number: 10,37
+Netflix_ReactiveLab,com.netflix.hystrix.dashboard.stream,MockStreamServlet,doGet,Complex Method,Cyclomatic complexity of the method is 8,29
+Netflix_ReactiveLab,com.netflix.hystrix.dashboard.stream,MockStreamServlet,doGet,Empty catch clause,The method has an empty catch block.,29
+Netflix_ReactiveLab,com.netflix.hystrix.dashboard.stream,MockStreamServlet,doGet,Magic Number,The method contains a magic number: 500,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway,StartGatewayServer,main,Long Statement,The length of the statement "System.out.println("Server => Request [" + request.getPath() + "] => "+ HystrixRequestLog.getCurrentRequest().getExecutedCommandsAsString());" is 141.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway,StartGatewayServer,main,Magic Number,The method contains a magic number: 8080,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway,StartGatewayServer,startHystrixMetricsStream,Magic Number,The method contains a magic number: 1000,87
+Netflix_ReactiveLab,io.reactivex.lab.gateway,StartGatewayServer,startHystrixMetricsStream,Magic Number,The method contains a magic number: 9999,87
+Netflix_ReactiveLab,io.reactivex.lab.gateway.loadbalancer,LoadBalancerFactory,forVip,Long Statement,The length of the statement "Observable<MembershipEvent<Host>> eurekaHostSource=membershipSource.forInterest(Interests.forVips(targetVip)`instanceInfo -> {" is 126.,42
+Netflix_ReactiveLab,io.reactivex.lab.gateway.loadbalancer,LoadBalancerFactory,forVip,Long Statement,The length of the statement "String ipAddress=instanceInfo.getDataCenterInfo().getAddresses().stream().filter(na -> na.getProtocolType() == ProtocolType.IPv4).collect(Collectors.toList()).get(0).getIpAddress();" is 181.,42
+Netflix_ReactiveLab,io.reactivex.lab.gateway.loadbalancer,LoadBalancerFactory,forVip,Long Statement,The length of the statement ")).withWeightingStrategy(new LinearWeightingStrategy<>(new RxNettyPendingRequests<>())).withName(lbName).withFailureDetector(new RxNettyFailureDetector<>()).build();" is 165.,42
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,VideoMetadataCommand,construct,Long Statement,The length of the statement "return loadBalancer.choose().map(holder -> holder.getClient()).<VideoMetadata>flatMap(client -> client.submit(request).flatMap(r -> r.getContent().map(( ServerSentEvent sse) -> VideoMetadata.fromJson(sse.contentAsString())))).retry(1);" is 235.,38
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,UserCommand,construct,Long Statement,The length of the statement "return loadBalancer.choose().map(holder -> holder.getClient()).<User>flatMap(client -> client.submit(request).flatMap(r -> r.getContent().map(( ServerSentEvent sse) -> {" is 169.,31
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,RatingsCommand,construct,Long Statement,The length of the statement "return loadBalancer.choose().map(holder -> holder.getClient()).<Rating>flatMap(client -> client.submit(request).flatMap(r -> r.getContent().map(( ServerSentEvent sse) -> Rating.fromJson(sse.contentAsString())))).retry(1);" is 221.,37
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,RatingsCommand,resumeWithFallback,Magic Number,The method contains a magic number: 3.5,48
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,RatingsCommand,resumeWithFallback,Magic Number,The method contains a magic number: 4,48
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,RatingsCommand,resumeWithFallback,Magic Number,The method contains a magic number: 3.1,48
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,MockServiceCommand,MockServiceCommand,Long Statement,The length of the statement "super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("MiddleTier")).andCommandKey(HystrixCommandKey.Factory.asKey("MiddleTier")).andCommandPropertiesDefaults(HystrixCommandProperties.Setter().withExecutionIsolationSemaphoreMaxConcurrentRequests(5).withExecutionTimeoutInMilliseconds(200)));" is 300.,23
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,MockServiceCommand,MockServiceCommand,Magic Number,The method contains a magic number: 5,23
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,MockServiceCommand,MockServiceCommand,Magic Number,The method contains a magic number: 200,23
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,MockServiceCommand,construct,Long Statement,The length of the statement "return RxNetty.createHttpClient("localhost"`9100).submit(HttpClientRequest.createGet("/mock.json?numItems=" + numItems + "&itemSize="+ itemSize+ "&delay="+ delay+ "&id="+ id)).flatMap(( HttpClientResponse<ByteBuf> r) -> r.getContent().map(b -> BackendResponse.fromJson(new ByteBufInputStream(b))));" is 298.,35
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,MockServiceCommand,construct,Magic Number,The method contains a magic number: 9100,35
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,GeoCommand,construct,Long Statement,The length of the statement "return loadBalancer.choose().map(holder -> holder.getClient()).<GeoIP>flatMap(client -> client.submit(request).flatMap(r -> r.getContent().map(( ServerSentEvent sse) -> GeoIP.fromJson(sse.contentAsString())))).retry(1);" is 219.,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,BookmarksCommand,construct,Long Statement,The length of the statement "return loadBalancer.choose().map(holder -> holder.getClient()).<Bookmark>flatMap(client -> client.submit(request).flatMap(r -> r.getContent().map(( ServerSentEvent sse) -> Bookmark.fromJson(sse.contentAsString())))).retry(1);" is 225.,37
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,PersonalizedCatalogCommand,construct,Long Statement,The length of the statement "return loadBalancer.choose().map(holder -> holder.getClient()).<Catalog>flatMap(client -> client.submit(request).flatMap(r -> r.getContent().map(( ServerSentEvent sse) -> Catalog.fromJson(sse.contentAsString())))).retry(1);" is 223.,38
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,PersonalizedCatalogCommand,resumeWithFallback,Magic Number,The method contains a magic number: 12345,49
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,PersonalizedCatalogCommand,resumeWithFallback,Magic Number,The method contains a magic number: 23456,49
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,PersonalizedCatalogCommand,resumeWithFallback,Magic Number,The method contains a magic number: 34567,49
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,PersonalizedCatalogCommand,resumeWithFallback,Magic Number,The method contains a magic number: 45678,49
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,PersonalizedCatalogCommand,resumeWithFallback,Magic Number,The method contains a magic number: 56789,49
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,PersonalizedCatalogCommand,resumeWithFallback,Magic Number,The method contains a magic number: 67890,49
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,SocialCommand,construct,Long Statement,The length of the statement "return loadBalancer.choose().map(holder -> holder.getClient()).<Social>flatMap(client -> client.submit(request).flatMap(r -> r.getContent().map(( ServerSentEvent sse) -> {" is 171.,39
+Netflix_ReactiveLab,io.reactivex.lab.gateway.clients,SocialCommand,randomUser,Magic Number,The method contains a magic number: 10000,60
+Netflix_ReactiveLab,io.reactivex.lab.gateway.common,RxNettyResponseWriter,write,Complex Conditional,The conditional expression (off < 0) || (off > cbuf.length) || (len < 0)|| ((off + len) > cbuf.length)|| ((off + len) < 0) is complex.,23
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountCollapsedRequests"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.COLLAPSED));" is 123.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountExceptionsThrown"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.EXCEPTION_THROWN));" is 129.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountFallbackFailure"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.FALLBACK_FAILURE));" is 128.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountFallbackRejection"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.FALLBACK_REJECTION));" is 132.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountFallbackSuccess"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.FALLBACK_SUCCESS));" is 128.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountResponsesFromCache"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.RESPONSE_FROM_CACHE));" is 134.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountSemaphoreRejected"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.SEMAPHORE_REJECTED));" is 132.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountShortCircuited"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.SHORT_CIRCUITED));" is 126.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountThreadPoolRejected"`commandMetrics.getRollingCount(HystrixRollingNumberEvent.THREAD_POOL_REJECTED));" is 135.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_circuitBreakerRequestVolumeThreshold"`commandProperties.circuitBreakerRequestVolumeThreshold().get());" is 139.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_circuitBreakerSleepWindowInMilliseconds"`commandProperties.circuitBreakerSleepWindowInMilliseconds().get());" is 145.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_circuitBreakerErrorThresholdPercentage"`commandProperties.circuitBreakerErrorThresholdPercentage().get());" is 143.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeStringField("propertyValue_executionIsolationStrategy"`commandProperties.executionIsolationStrategy().get().name());" is 126.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_executionTimeoutInMilliseconds"`commandProperties.executionTimeoutInMilliseconds().get());" is 127.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeBooleanField("propertyValue_executionIsolationThreadInterruptOnTimeout"`commandProperties.executionIsolationThreadInterruptOnTimeout().get());" is 152.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeStringField("propertyValue_executionIsolationThreadPoolKeyOverride"`commandProperties.executionIsolationThreadPoolKeyOverride().get());" is 145.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_executionIsolationSemaphoreMaxConcurrentRequests"`commandProperties.executionIsolationSemaphoreMaxConcurrentRequests().get());" is 163.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_fallbackIsolationSemaphoreMaxConcurrentRequests"`commandProperties.fallbackIsolationSemaphoreMaxConcurrentRequests().get());" is 161.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_metricsRollingStatisticalWindowInMilliseconds"`commandProperties.metricsRollingStatisticalWindowInMilliseconds().get());" is 157.,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 25,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 50,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 75,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 90,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 95,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 99,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 99.5,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 100,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 25,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 50,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 75,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 90,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 95,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 99,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 99.5,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Magic Number,The method contains a magic number: 100,28
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_queueSizeRejectionThreshold"`threadPoolMetrics.getProperties().queueSizeRejectionThreshold().get());" is 137.,136
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("propertyValue_metricsRollingStatisticalWindowInMilliseconds"`threadPoolMetrics.getProperties().metricsRollingStatisticalWindowInMilliseconds().get());" is 173.,136
+Netflix_ReactiveLab,io.reactivex.lab.gateway.hystrix,HystrixMetricsStreamHandler,handleHystrixRequest,Long Statement,The length of the statement "Subscription actionSubscription=Observable.timer(0`interval`TimeUnit.MILLISECONDS`Schedulers.computation()).subscribe(new Action1<Long>(){" is 138.,73
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> acd=getDataFromBackend("/mock.json?numItems=2&itemSize=50&delay=50&id=" + id).<List<BackendResponse>>flatMap(responseA -> {" is 157.,30
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseC=getDataFromBackend("/mock.json?numItems=1&itemSize=5000&delay=80&id=" + responseA.getResponseKey());" is 138.,30
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseD=getDataFromBackend("/mock.json?numItems=1&itemSize=1000&delay=1&id=" + responseA.getResponseKey());" is 137.,30
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> be=getDataFromBackend("/mock.json?numItems=25&itemSize=30&delay=150&id=" + id).<List<BackendResponse>>flatMap(responseB -> {" is 158.,30
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseE=getDataFromBackend("/mock.json?numItems=100&itemSize=30&delay=4&id=" + responseB.getResponseKey());" is 137.,30
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,handle,Magic Number,The method contains a magic number: 2,30
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,getDataFromBackend,Long Statement,The length of the statement "return RxNetty.createHttpClient("localhost"`9999).submit(HttpClientRequest.createGet(url)).timeout(50`TimeUnit.MILLISECONDS).flatMap(( HttpClientResponse<ByteBuf> r) -> {" is 170.,72
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,getDataFromBackend,Magic Number,The method contains a magic number: 9999,72
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithSimpleFaultTolerance,getDataFromBackend,Magic Number,The method contains a magic number: 50,72
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,BackendResponse,BackendResponse,Long Parameter List,The method has 5 parameters. ,25
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,BackendResponse,parseBackendResponse,Complex Method,Cyclomatic complexity of the method is 11,66
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> acd=getDataFromBackend("/mock.json?numItems=2&itemSize=50&delay=50&id=" + id).<List<BackendResponse>>flatMap(responseA -> {" is 157.,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseC=getDataFromBackend("/mock.json?numItems=1&itemSize=5000&delay=80&id=" + responseA.getResponseKey());" is 138.,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseD=getDataFromBackend("/mock.json?numItems=1&itemSize=1000&delay=1&id=" + responseA.getResponseKey());" is 137.,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> be=getDataFromBackend("/mock.json?numItems=25&itemSize=30&delay=150&id=" + id).<List<BackendResponse>>flatMap(responseB -> {" is 158.,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,handle,Long Statement,The length of the statement "Observable<BackendResponse> responseE=getDataFromBackend("/mock.json?numItems=100&itemSize=30&delay=4&id=" + responseB.getResponseKey());" is 137.,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,handle,Magic Number,The method contains a magic number: 2,29
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,getDataFromBackend,Long Statement,The length of the statement "return RxNetty.createHttpClient("localhost"`9100).submit(HttpClientRequest.createGet(url)).flatMap(( HttpClientResponse<ByteBuf> r) -> {" is 136.,71
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteBasic,getDataFromBackend,Magic Number,The method contains a magic number: 9100,71
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,ResponseBuilder,writeTestResponse,Long Parameter List,The method has 6 parameters. ,26
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,ResponseBuilder,writeTestResponse,Long Parameter List,The method has 7 parameters. ,31
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,ResponseBuilder,buildTestResponse,Long Parameter List,The method has 5 parameters. ,46
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,ResponseBuilder,generateResponse,Long Parameter List,The method has 6 parameters. ,59
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,ResponseBuilder,generateResponse,Long Statement,The length of the statement "jsonGenerator.writeNumberField("responseKey"`responseC.getResponseKey() + responseD.getResponseKey() + responseE.getResponseKey());" is 131.,59
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,ResponseBuilder,getPerfResponseHeaders,Magic Number,The method contains a magic number: 4,129
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,ResponseBuilder,getPerfResponseHeaders,Magic Number,The method contains a magic number: 4,129
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> acd=new MockServiceCommand(id`2`50`50).observe().<List<BackendResponse>>flatMap(responseA -> {" is 128.,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Long Statement,The length of the statement "Observable<List<BackendResponse>> be=new MockServiceCommand(id`25`30`15).observe().<List<BackendResponse>>flatMap(responseB -> {" is 128.,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 2,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 50,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 50,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 5000,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 80,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 1000,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 25,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 30,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 15,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 100,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 30,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 4,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes.mock,TestRouteWithHystrix,handle,Magic Number,The method contains a magic number: 2,17
+Netflix_ReactiveLab,io.reactivex.lab.gateway.routes,RouteForDeviceHome,handle,Long Statement,The length of the statement "Observable<Map<String`Object>> catalog=new PersonalizedCatalogCommand(user).observe().flatMap(catalogList -> catalogList.videos().<Map<String`Object>>flatMap(video -> {" is 168.,27
+Netflix_ReactiveLab,io.reactivex.lab.gateway.mock,BackendResponseTest,testJsonParse,Long Statement,The length of the statement "BackendResponse r=BackendResponse.fromJson("{ \"responseKey\": 9999` \"delay\": 50` \"itemSize\": 128` \"numItems\": 2` \"items\": [ \"Lorem\"` \"Ipsum\" ]}");" is 159.,10
+Netflix_ReactiveLab,io.reactivex.lab.gateway.mock,BackendResponseTest,testJsonParse,Magic Number,The method contains a magic number: 9999,10
+Netflix_ReactiveLab,io.reactivex.lab.gateway.mock,BackendResponseTest,testJsonParse,Magic Number,The method contains a magic number: 50,10
+Netflix_ReactiveLab,io.reactivex.lab.gateway.mock,BackendResponseTest,testJsonParse,Magic Number,The method contains a magic number: 128,10
+Netflix_ReactiveLab,io.reactivex.lab.gateway.mock,BackendResponseTest,testJsonParse,Magic Number,The method contains a magic number: 2,10
+Netflix_ReactiveLab,io.reactivex.lab.gateway.mock,BackendResponseTest,testJsonParse,Magic Number,The method contains a magic number: 2,10
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithLoadBalancer,main,Magic Number,The method contains a magic number: 7007,35
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithLoadBalancer,main,Magic Number,The method contains a magic number: 7008,35
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithLoadBalancer,main,Magic Number,The method contains a magic number: 8089,35
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithLoadBalancer,createRequestFromLB,Long Statement,The length of the statement ")).choose().flatMap(client -> client.submit(HttpClientRequest.createGet("/")).flatMap((Func1<HttpClientResponse<ByteBuf>`Observable<ByteBuf>>)response -> {" is 155.,84
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithLoadBalancer,createRequestFromLB,Long Statement,The length of the statement "System.out.println(response.getHttpVersion().text() + ' ' + response.getStatus().code()+ ' '+ response.getStatus().reasonPhrase());" is 131.,84
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithLoadBalancer,createEurekaHostStream,Long Statement,The length of the statement "String ipAddress=instanceInfo.getDataCenterInfo().getAddresses().stream().filter(na -> na.getProtocolType() == NetworkAddress.ProtocolType.IPv4).collect(Collectors.toList()).get(0).getIpAddress();" is 196.,145
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServer,main,Magic Number,The method contains a magic number: 8088,17
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServer,createRequest,Long Statement,The length of the statement "System.out.println(response.getHttpVersion().text() + ' ' + response.getStatus().code()+ ' '+ response.getStatus().reasonPhrase());" is 131.,58
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithResiliencePatterns,main,Long Statement,The length of the statement "Observable<MembershipEvent<Host>> eurekaHostSource=ClientServerWithLoadBalancer.createEurekaHostStream(eurekaClient`vipAddress);" is 128.,23
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithResiliencePatterns,main,Magic Number,The method contains a magic number: 7008,23
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithResiliencePatterns,main,Magic Number,The method contains a magic number: 7010,23
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithResiliencePatterns,main,Magic Number,The method contains a magic number: 8089,23
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,main,Magic Number,The method contains a magic number: 7005,49
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,main,Magic Number,The method contains a magic number: 7006,49
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,main,Magic Number,The method contains a magic number: 8089,49
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,getServerHostAndPort,Long Statement,The length of the statement "String ipAddress=serverInfo.getDataCenterInfo().getAddresses().stream().filter(na -> na.getProtocolType() == NetworkAddress.ProtocolType.IPv4).collect(Collectors.toList()).get(0).getIpAddress();" is 194.,102
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,getServerInfo,Long Statement,The length of the statement ").filter(notification -> notification.getKind() == ChangeNotification.Kind.Add).map(ChangeNotification::getData).toBlocking().first();" is 134.,113
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,startEurekaServer,Long Statement,The length of the statement "builder.withReadServerPort(eurekaReadServerPort).withWriteServerPort(eurekaWriteServerPort).withReplicationPort(8888).withWriteClusterAddresses(new String[]{"127.0.01"}).withCodec(EurekaTransports.Codec.Avro).withDataCenterType(LocalDataCenterInfo.DataCenterType.Basic);" is 270.,125
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,startEurekaServer,Magic Number,The method contains a magic number: 8888,125
+Netflix_ReactiveLab,io.reactivex.lab.tutorial,ClientServerWithDiscovery,registerWithEureka,Long Statement,The length of the statement "InstanceInfo instance=new InstanceInfo.Builder().withId(String.valueOf(serverPort)).withApp("mock_server").withStatus(InstanceInfo.Status.UP).withVipAddress(vipAddress).withPorts(ports).withDataCenterInfo(BasicDataCenterInfo.fromSystemData()).build();" is 251.,144
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,Metrics,isMaxUpdater,Magic Number,The method contains a magic number: 2,54
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("rollingCountExceptionsThrown"`commandMetrics.getRollingNumber().getRollingSum(Metrics.EventType.EXCEPTION_THROWN));" is 138.,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Long Statement,The length of the statement "json.writeNumberField("currentConcurrentExecutionCount"`commandMetrics.getRollingNumber().getRollingMaxValue(Metrics.EventType.CONCURRENCY_MAX_ACTIVE));" is 152.,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 100,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 25,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 50,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 75,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 90,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 95,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 99,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 99.5,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 100,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 25,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 50,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 75,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 90,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 95,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 99,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 99.5,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 100,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,JsonMapper,toJson,Magic Number,The method contains a magic number: 10000,19
+Netflix_ReactiveLab,io.reactivex.lab.services.metrics,HystrixMetricsStreamHandler,handleHystrixRequest,Long Statement,The length of the statement "Subscription actionSubscription=Observable.timer(0`interval`TimeUnit.MILLISECONDS`Schedulers.computation()).subscribe(new Action1<Long>(){" is 138.,61
+Netflix_ReactiveLab,io.reactivex.lab.services,StartMiddleTierServices,main,Long Statement,The length of the statement "ServerResolver.Server discoveryServer=new ServerResolver.Server(StartEurekaServer.EUREKA_SERVER_HOST`StartEurekaServer.EUREKA_SERVER_READ_PORT);" is 144.,20
+Netflix_ReactiveLab,io.reactivex.lab.services,StartMiddleTierServices,main,Long Statement,The length of the statement "ServerResolver.Server registrationServer=new ServerResolver.Server(StartEurekaServer.EUREKA_SERVER_HOST`StartEurekaServer.EUREKA_SERVER_WRITE_PORT);" is 148.,20
+Netflix_ReactiveLab,io.reactivex.lab.services,StartMiddleTierServices,main,Long Statement,The length of the statement "EurekaClient eurekaClient=Eureka.newClientBuilder(ServerResolvers.from(discoveryServer)`ServerResolvers.from(registrationServer)).build();" is 138.,20
+Netflix_ReactiveLab,io.reactivex.lab.services,StartMiddleTierServices,main,Magic Number,The method contains a magic number: 9190,20
+Netflix_ReactiveLab,io.reactivex.lab.services,StartTurbineServer,main,Long Statement,The length of the statement "EurekaClient eurekaClient=Eureka.newClient(ServerResolvers.just(StartEurekaServer.EUREKA_SERVER_HOST`StartEurekaServer.EUREKA_SERVER_READ_PORT)`null);" is 150.,11
+Netflix_ReactiveLab,io.reactivex.lab.services,StartTurbineServer,main,Long Statement,The length of the statement "Turbine.startServerSentEventServer(4444`EurekaStreamDiscovery.create("reactive-lab"`"http://{HOSTNAME}/hystrix.stream"`eurekaClient));" is 134.,11
+Netflix_ReactiveLab,io.reactivex.lab.services,StartTurbineServer,main,Magic Number,The method contains a magic number: 4444,11
+Netflix_ReactiveLab,io.reactivex.lab.services,StartEurekaServer,main,Long Statement,The length of the statement "builder.withReadServerPort(EUREKA_SERVER_READ_PORT).withWriteServerPort(EUREKA_SERVER_WRITE_PORT).withWriteClusterAddresses(new String[]{EUREKA_SERVER_HOST}).withCodec(Codec.Avro).withDataCenterType(LocalDataCenterInfo.DataCenterType.Basic);" is 241.,40
+Netflix_ReactiveLab,io.reactivex.lab.services,StartEurekaServer,main,Long Statement,The length of the statement "EurekaClient client=Eureka.newClientBuilder(ServerResolvers.from(new ServerResolver.Server(EUREKA_SERVER_HOST`EUREKA_SERVER_READ_PORT))).build();" is 145.,40
+Netflix_ReactiveLab,io.reactivex.lab.services,StartEurekaServer,main,Long Statement,The length of the statement "String ipAddress=n.getData().getDataCenterInfo().getAddresses().stream().filter(na -> na.getProtocolType() == ProtocolType.IPv4).collect(Collectors.toList()).get(0).getIpAddress();" is 180.,40
+Netflix_ReactiveLab,io.reactivex.lab.services,StartEurekaServer,main,Long Statement,The length of the statement "System.out.println("Eureka => " + n.getKind() + " => App: "+ app+ " VIP: "+ vip+ " Name: "+ name+ " IP: "+ ipAddress+ " Port: "+ port+ " ID: "+ id);" is 148.,40
+Netflix_ReactiveLab,io.reactivex.lab.services,StartEurekaServer,main,Magic Number,The method contains a magic number: 8888,40
+Netflix_ReactiveLab,io.reactivex.lab.services.common,Random,randomIntFrom0to100,Magic Number,The method contains a magic number: 21,5
+Netflix_ReactiveLab,io.reactivex.lab.services.common,Random,randomIntFrom0to100,Magic Number,The method contains a magic number: 35,5
+Netflix_ReactiveLab,io.reactivex.lab.services.common,Random,randomIntFrom0to100,Magic Number,The method contains a magic number: 4,5
+Netflix_ReactiveLab,io.reactivex.lab.services.common,Random,randomIntFrom0to100,Magic Number,The method contains a magic number: 100,5
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,BookmarksService,handleRequest,Long Statement,The length of the statement ").flatMap(video -> response.writeStringAndFlush("data: " + SimpleJson.mapToJson(video) + "\n")).delay(latency`TimeUnit.MILLISECONDS).doOnCompleted(response::close);" is 164.,23
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,BookmarksService,handleRequest,Magic Number,The method contains a magic number: 80,23
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,BookmarksService,handleRequest,Magic Number,The method contains a magic number: 10,23
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,BookmarksService,handleRequest,Magic Number,The method contains a magic number: 5000,23
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Long Statement,The length of the statement ").flatMap(list -> response.writeStringAndFlush("data: " + SimpleJson.mapToJson(list) + "\n")).delay(((long)(Math.random() * 100) + 20)`TimeUnit.MILLISECONDS).doOnCompleted(response::close);" is 189.,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 12345,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 23456,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 34567,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 45678,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 56789,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 67890,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 100,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,PersonalizedCatalogService,handleRequest,Magic Number,The method contains a magic number: 20,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,GeoService,handleRequest,Magic Number,The method contains a magic number: 10,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Long Statement,The length of the statement "return writeError(request`response`"Please provide a numerical 'id' value. It can be a random number (uuid). Received => " + _id);" is 130.,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Long Statement,The length of the statement "return MockResponse.generateJson(id`delay`itemSize`numItems).flatMap(json -> response.writeStringAndFlush("data:" + json + "\n")).doOnCompleted(response::close);" is 161.,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Magic Number,The method contains a magic number: 50,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Magic Number,The method contains a magic number: 128,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Magic Number,The method contains a magic number: 10,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Magic Number,The method contains a magic number: 100,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Magic Number,The method contains a magic number: 1024,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Magic Number,The method contains a magic number: 50,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockService,handleRequest,Magic Number,The method contains a magic number: 60000,19
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,UserService,handleRequest,Long Statement,The length of the statement ").flatMap(user -> response.writeStringAndFlush("data: " + SimpleJson.mapToJson(user) + "\n").doOnCompleted(response::close)).delay(((long)(Math.random() * 500) + 500)`TimeUnit.MILLISECONDS);" is 190.,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,UserService,handleRequest,Magic Number,The method contains a magic number: 500,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,UserService,handleRequest,Magic Number,The method contains a magic number: 500,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,AbstractMiddleTierService,createServer,Long Statement,The length of the statement "HystrixMetricsStreamHandler<ByteBuf`ServerSentEvent> handlerChain=new HystrixMetricsStreamHandler<>(metrics`"/hystrix.stream"`1000`(request`response) -> {" is 154.,44
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,AbstractMiddleTierService,createServer,Long Statement,The length of the statement "return handleRequest(request`response).doOnCompleted(() -> System.out.println("Response => " + request.getPath() + " Time => "+ (int)(System.currentTimeMillis() - startTime)+ "ms")).doOnCompleted(() -> metrics.getRollingPercentile().addValue((int)(System.currentTimeMillis() - startTime))).doOnCompleted(() -> metrics.getRollingNumber().add(Metrics.EventType.SUCCESS`1)).doOnError(t -> metrics.getRollingNumber().add(Metrics.EventType.FAILURE`1));" is 447.,44
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,AbstractMiddleTierService,createServer,Magic Number,The method contains a magic number: 1000,44
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,AbstractMiddleTierService,createInstanceInfo,Long Statement,The length of the statement "return new InstanceInfo.Builder().withId(hostAddress + "-" + port).withApp("reactive-lab").withStatus(InstanceInfo.Status.UP).withVipAddress(eurekaVipAddress).withPorts(ports).withDataCenterInfo(BasicDataCenterInfo.fromSystemData()).build();" is 241.,100
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,SocialService,handleRequest,Long Statement,The length of the statement ").flatMap(list -> response.writeStringAndFlush("data: " + SimpleJson.mapToJson(list) + "\n")).delay(((long)(Math.random() * 100) + 20)`TimeUnit.MILLISECONDS).doOnCompleted(response::close);" is 189.,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,SocialService,handleRequest,Magic Number,The method contains a magic number: 100,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,SocialService,handleRequest,Magic Number,The method contains a magic number: 20,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,SocialService,randomUser,Magic Number,The method contains a magic number: 10000,33
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponse,getResponseKey,Magic Number,The method contains a magic number: 37,92
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponse,getResponseKey,Magic Number,The method contains a magic number: 5739375,92
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponse,getResponseKey,Magic Number,The method contains a magic number: 7,92
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,VideoMetadataService,handleRequest,Long Statement,The length of the statement ").flatMap(video -> response.writeStringAndFlush("data: " + SimpleJson.mapToJson(video) + "\n").doOnCompleted(response::close)).delay(((long)(Math.random() * 20) + 20)`TimeUnit.MILLISECONDS);" is 190.,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,VideoMetadataService,handleRequest,Magic Number,The method contains a magic number: 20,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,VideoMetadataService,handleRequest,Magic Number,The method contains a magic number: 20,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,RatingsService,handleRequest,Long Statement,The length of the statement ").flatMap(video -> response.writeStringAndFlush("data: " + SimpleJson.mapToJson(video) + "\n")).delay(20`TimeUnit.MILLISECONDS).doOnCompleted(response::close);" is 159.,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,RatingsService,handleRequest,Magic Number,The method contains a magic number: 3.5,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,RatingsService,handleRequest,Magic Number,The method contains a magic number: 4,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,RatingsService,handleRequest,Magic Number,The method contains a magic number: 3.1,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,RatingsService,handleRequest,Magic Number,The method contains a magic number: 20,22
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponseTest,testJson,Long Statement,The length of the statement "assertTrue(json.startsWith("{\"responseKey\":" + MockResponse.getResponseKey(736L) + "`\"delay\":1`\"itemSize\":1000`\"numItems\":5`\"items\""));" is 145.,12
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponseTest,testJson,Magic Number,The method contains a magic number: 736L,12
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponseTest,testJson,Magic Number,The method contains a magic number: 1000,12
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponseTest,testJson,Magic Number,The method contains a magic number: 5,12
+Netflix_ReactiveLab,io.reactivex.lab.services.impls,MockResponseTest,testJson,Magic Number,The method contains a magic number: 736L,12

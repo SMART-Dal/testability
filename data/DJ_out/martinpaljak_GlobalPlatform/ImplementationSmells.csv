@@ -1,0 +1,581 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+martinpaljak_GlobalPlatform,(default package),MavenWrapperDownloader,main,Empty catch clause,The method has an empty catch block.,48
+martinpaljak_GlobalPlatform,(default package),MavenWrapperDownloader,main,Long Identifier,The length of the identifier mavenWrapperPropertyFileInputStream is 35.,48
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeysProvider,getCardKeys,Empty catch clause,The method has an empty catch block.,35
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommandLineInterface,parseArguments,Long Statement,The length of the statement "System.err.println("Invalid non-option arguments: " + args.nonOptionArguments().stream().map(e -> e.toString()).collect(Collectors.joining(" ")));" is 146.,172
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,showPreamble,Complex Conditional,The conditional expression args.has(OPT_VERBOSE) || args.has(OPT_DEBUG) || args.has(OPT_INFO) is complex.,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,showPreamble,Complex Conditional,The conditional expression args.has(OPT_VERBOSE) || args.has(OPT_DEBUG) || args.has(OPT_INFO)|| args.has(OPT_VERSION) is complex.,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,showPreamble,Long Statement,The length of the statement "List<String> gpenv=System.getenv().entrySet().stream().filter(e -> e.getKey().startsWith("GP_")).map(e -> String.format("%s=%s"`e.getKey()`e.getValue())).collect(Collectors.toList());" is 183.,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,showPreamble,Long Statement,The length of the statement "System.out.printf("# Running on %s %s %s"`System.getProperty("os.name")`System.getProperty("os.version")`System.getProperty("os.arch"));" is 136.,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,showPreamble,Magic Number,The method contains a magic number: 128,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,main,Empty catch clause,The method has an empty catch block.,124
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,main,Long Statement,The length of the statement "Optional<CardTerminal> reader=TerminalManager.getLucky(TerminalManager.dwimify(readers`useReader`ignoreReader)`terminalManager.terminals());" is 140.,124
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Complex Conditional,The conditional expression args.has(OPT_KEY_ENC) && args.has(OPT_KEY_MAC) && args.has(OPT_KEY_DEK) is complex.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Complex Conditional,The conditional expression args.has(OPT_FORCE) && (reg.getDefaultSelectedAID().isPresent() && privs.contains(Privilege.CardReset)) is complex.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Complex Conditional,The conditional expression parameters != null || args.has(OPT_ALLOW_TO) || args.has(OPT_ALLOW_FROM) is complex.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Complex Conditional,The conditional expression args.has(OPT_LOCK) || args.has(OPT_LOCK_ENC) || args.has(OPT_LOCK_MAC)|| args.has(OPT_LOCK_DEK) is complex.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Complex Method,Cyclomatic complexity of the method is 124,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Method,The method has 520 lines of code.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "cliKeys=Optional.of(PlaintextKeys.fromKeys(args.valueOf(OPT_KEY_ENC).v()`args.valueOf(OPT_KEY_MAC).v()`args.valueOf(OPT_KEY_DEK).v()));" is 135.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "String presented=deprecated.stream().filter(args::has).map(OptionSpec::options).flatMap(Collection::stream).map(e -> "--" + e).collect(Collectors.joining("` "));" is 161.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "System.err.printf("# Warning: deprecated options detected (%s) please use \"--key <kdf_name>:<master_key_in_hex>\"%n"`presented);" is 129.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "String allowed=kdfs.stream().map(OptionSpec::options).flatMap(Collection::stream).map(e -> "--" + e).collect(Collectors.joining("` "));" is 135.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "String presented=present.stream().map(OptionSpec::options).flatMap(Collection::stream).map(e -> "--" + e).collect(Collectors.joining("` "));" is 140.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "System.err.printf("Unknown profile '%s'` known profiles: %s%n"`args.valueOf(OPT_PROFILE)`String.join("` "`GPCardProfile.profiles.keySet()));" is 140.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "System.err.println("Failed to open secure channel: " + e.getMessage() + "\nRead more from https://github.com/martinpaljak/GlobalPlatformPro/wiki/Keys");" is 152.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "System.err.println(GPKeyInfo.keyVersionPurposes.entrySet().stream().map(e -> String.format("%s - %s"`GPUtils.intString(e.getKey())`e.getValue())).collect(Collectors.joining("\n")));" is 181.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "throw new IllegalArgumentException("There should be only one applet in CAP. Use --" + OPT_APPLET + " to specify one of "+ cap.getAppletAIDs());" is 143.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "if (packageAID == null || appletAID == null) throw new IllegalArgumentException("Need --" + OPT_PACKAGE + " and --"+ OPT_APPLET+ " or --"+ OPT_CAP);" is 148.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "if (args.has(OPT_ALLOW_FROM) || args.has(OPT_ALLOW_TO)) throw new IllegalArgumentException(OPT_ALLOW_FROM + " and " + OPT_ALLOW_TO+ " not available` could not parse parameters: "+ HexUtils.bin2hex(params));" is 206.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "packageAID=gp.getRegistry().allPackageAIDs().contains(new AID("A0000000035350")) ? new AID("A0000000035350") : new AID("A0000001515350");" is 137.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "appletAID=gp.getRegistry().allPackageAIDs().contains(new AID("A0000000035350")) ? new AID("A000000003535041") : new AID("A000000151535041");" is 140.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "params=GPUtils.concatenate(params`new byte[]{(byte)0x81`0x02`gp.getSecureChannel().scp.getValue()`(byte)gp.getSecureChannel().i});" is 130.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "GPRegistryEntry isd=gp.getRegistry().getISD().orElseThrow(() -> new GPException("ISD not present` are you in a subtree?"));" is 123.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "newKeys=lockKey.orElseGet(() -> PlaintextKeys.fromBytes(args.valueOf(OPT_LOCK_ENC).value()`args.valueOf(OPT_LOCK_MAC).value()`args.valueOf(OPT_LOCK_DEK).value()`HexBytes.v(args.valueOf(OPT_LOCK)).v()`args.valueOf(OPT_LOCK_KDF)`null`args.valueOf(OPT_NEW_KEY_VERSION)).orElseThrow(() -> new IllegalArgumentException("Can not lock without keys :)")));" is 348.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Long Statement,The length of the statement "if (pk.getMasterKey().isPresent()) System.out.println(gp.getAID() + " locked with: " + HexUtils.bin2hex(pk.getMasterKey().get()));" is 130.,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 2,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x04,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x6985,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x7F,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 16,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x81,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x81,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x82,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x82,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x87,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x87,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 255,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 255,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 255,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x10,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x1F,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x20,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x2F,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x30,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 0x3F,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 2,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 2,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 2,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,run,Magic Number,The method contains a magic number: 2,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,loadCAP,Magic Number,The method contains a magic number: 0x6A80,890
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,loadCAP,Magic Number,The method contains a magic number: 0x6985,890
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,loadCAP,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@45399fae,890
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,getPrivileges,Long Statement,The length of the statement "for ( String p : args.valuesOf(OPT_PRIVS)) for ( String s : p.split("`")) privs.add(Privilege.lookup(s.trim()).orElseThrow(() -> new IllegalArgumentException("Unknown privilege: " + s.trim() + "\nValid values are: "+ Arrays.stream(Privilege.values()).map(Enum::toString).collect(Collectors.joining("` ")))));" is 308.,912
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPTool,needsAuthentication,Long Statement,The length of the statement "OptionSpec<?>[] yes=new OptionSpec<?>[]{OPT_CONNECT`OPT_LIST`OPT_LOAD`OPT_INSTALL`OPT_DELETE`OPT_DELETE_KEY`OPT_CREATE`OPT_LOCK`OPT_UNLOCK`OPT_LOCK_ENC`OPT_LOCK_MAC`OPT_LOCK_DEK`OPT_MAKE_DEFAULT`OPT_UNINSTALL`OPT_SECURE_APDU`OPT_DOMAIN`OPT_LOCK_CARD`OPT_UNLOCK_CARD`OPT_LOCK_APPLET`OPT_UNLOCK_APPLET`OPT_STORE_DATA`OPT_STORE_DATA_CHUNK`OPT_INITIALIZE_CARD`OPT_SECURE_CARD`OPT_RENAME_ISD`OPT_SET_PERSO`OPT_SET_PRE_PERSO`OPT_MOVE`OPT_PUT_KEY`OPT_REPLACE_KEY};" is 457.,932
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,validateKey,Complex Conditional,The conditional expression k.length != 16 && k.length != 24 && k.length != 32 is complex.,103
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,validateKey,Magic Number,The method contains a magic number: 16,103
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,validateKey,Magic Number,The method contains a magic number: 24,103
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,validateKey,Magic Number,The method contains a magic number: 32,103
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromBytes,Complex Conditional,The conditional expression (enc != null || mac != null || dek != null) && (enc == null || mac == null || dek == null || mk != null) is complex.,110
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromBytes,Complex Conditional,The conditional expression enc != null && mac != null && dek != null is complex.,110
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromBytes,Complex Method,Cyclomatic complexity of the method is 9,110
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromBytes,Long Parameter List,The method has 7 parameters. ,110
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromBytes,Long Statement,The length of the statement "throw new IllegalArgumentException("Either all or nothing of enc/mac/dek keys must be set` and no mk at the same time!");" is 121.,110
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromStrings,Complex Conditional,The conditional expression (enc != null || mac != null || dek != null) && (enc == null || mac == null || dek == null || mk != null) is complex.,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromStrings,Complex Conditional,The conditional expression enc != null && mac != null && dek != null is complex.,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromStrings,Complex Method,Cyclomatic complexity of the method is 9,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromStrings,Long Parameter List,The method has 7 parameters. ,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fromStrings,Long Statement,The length of the statement "throw new IllegalArgumentException("Either all or nothing of enc/mac/dek keys must be set` and no mk at the same time!");" is 121.,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 16,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 2,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 4,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 2,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 4,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 6,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 0xF0,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 7,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 8,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 2,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 4,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 10,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 4,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 14,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 0x0F,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa2,Magic Number,The method contains a magic number: 15,253
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 16,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 4,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 8,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 4,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 2,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 6,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 0xF0,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 7,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 8,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 4,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 8,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 12,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 2,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 14,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 0x0F,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillVisa,Magic Number,The method contains a magic number: 15,267
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 16,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 4,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 6,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 6,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 0xF0,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 7,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 4,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 8,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 6,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 14,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 0x0F,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,fillEmv,Magic Number,The method contains a magic number: 15,280
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,getKeyInfo,Magic Number,The method contains a magic number: 16,296
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,encryptKey,Magic Number,The method contains a magic number: 16,321
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,encryptKey,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@10b87c58,321
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,getSessionKey,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@7203a784,349
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,kcv,Magic Number,The method contains a magic number: 16,370
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 16,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 12,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 4,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 4,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 4,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 8,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 8,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 4,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 4,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 12,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP01,Magic Number,The method contains a magic number: 4,393
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP02,Magic Number,The method contains a magic number: 16,414
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP02,Magic Number,The method contains a magic number: 2,414
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP02,Magic Number,The method contains a magic number: 2,414
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP02,Magic Number,The method contains a magic number: 2,414
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,deriveSessionKeySCP03,Magic Number,The method contains a magic number: 8,429
+martinpaljak_GlobalPlatform,pro.javacard.gp,PlaintextKeys,toString,Long Statement,The length of the statement "return String.format("ENC=%s (KCV: %s) MAC=%s (KCV: %s) DEK=%s (KCV: %s) for %s%s"`enc`enc_kcv`mac`mac_kcv`dek`dek_kcv`scp`kdf == null ? "" : String.format(" with %s"`kdf));" is 173.,454
+martinpaljak_GlobalPlatform,pro.javacard.gp,Key,valueOf,Complex Conditional,The conditional expression k.length == 16 || k.length == 24 || k.length == 32 is complex.,67
+martinpaljak_GlobalPlatform,pro.javacard.gp,Key,valueOf,Magic Number,The method contains a magic number: 16,67
+martinpaljak_GlobalPlatform,pro.javacard.gp,Key,valueOf,Magic Number,The method contains a magic number: 24,67
+martinpaljak_GlobalPlatform,pro.javacard.gp,Key,valueOf,Magic Number,The method contains a magic number: 32,67
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,storeDGI,Magic Number,The method contains a magic number: 0x80,40
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,setPrePerso,Magic Number,The method contains a magic number: 8,47
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,setPrePerso,Magic Number,The method contains a magic number: 0x9f,47
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,setPerso,Magic Number,The method contains a magic number: 8,54
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,setPerso,Magic Number,The method contains a magic number: 0x9f,54
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,listRegistry,Complex Method,Cyclomatic complexity of the method is 10,61
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,getImplicitString,Long Statement,The length of the statement "Optional<String> contactless=entry.getImplicitlySelectedContactless().isEmpty() ? Optional.empty() : Optional.of(String.format("Contactless(%s)"`entry.getImplicitlySelectedContactless().stream().map(Object::toString).collect(Collectors.joining("` "))));" is 253.,101
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,getImplicitString,Long Statement,The length of the statement "Optional<String> contact=entry.getImplicitlySelectedContact().isEmpty() ? Optional.empty() : Optional.of(String.format("Contact(%s)"`entry.getImplicitlySelectedContact().stream().map(Object::toString).collect(Collectors.joining("` "))));" is 237.,101
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,load,Complex Conditional,The conditional expression targetDomain.hasPrivilege(Privilege.DelegatedManagement) || dapRequired || hash != null is complex.,108
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,load,Long Parameter List,The method has 5 parameters. ,108
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCommands,load,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@2cbd2385,108
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPException,check,Magic Number,The method contains a magic number: 0x9000,53
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCardKeys,getValue,Magic Number,The method contains a magic number: 0xFF,58
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCardKeys,toString,Long Statement,The length of the statement "return String.format("KCV-s (%s) ENC=%s MAC=%s DEK=%s"`scp`HexUtils.bin2hex(kcv(KeyPurpose.ENC))`HexUtils.bin2hex(kcv(KeyPurpose.MAC))`HexUtils.bin2hex(kcv(KeyPurpose.DEK)));" is 174.,98
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Complex Method,Cyclomatic complexity of the method is 20,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Long Statement,The length of the statement "System.out.println("-> GP card is uniquely identified by the Issuer Identification Number (IIN) and Card Image Number (CIN)");" is 126.,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x66,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x73,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x06,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x60,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x63,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x64,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 2,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 2,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x65,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x66,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x67,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_data,Magic Number,The method contains a magic number: 0x68,86
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,fromBytes,Long Statement,The length of the statement "r.add(Arrays.stream(values()).filter(e -> e.value == (v[j] & 0xFF)).findFirst().orElseThrow(() -> new GPDataException("Invalid value"`v)));" is 139.,167
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,fromBytes,Magic Number,The method contains a magic number: 0xFF,167
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,toUnsignedList,Magic Number,The method contains a magic number: 0xFF,217
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Complex Method,Cyclomatic complexity of the method is 20,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Long Statement,The length of the statement "String hashes=toUnsignedList(t.getBytesValue()).stream().map(e -> LFDBH.byValue(e).get().toString()).collect(Collectors.joining("` "));" is 135.,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x67,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 2,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x67,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 2,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x67,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0xA0,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x80,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x81,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x82,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x02,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x02,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x04,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x04,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x81,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x82,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x83,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x85,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x86,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x87,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,pretty_print_card_capabilities,Magic Number,The method contains a magic number: 0x88,224
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,dump,Complex Method,Cyclomatic complexity of the method is 9,315
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,dump,Magic Number,The method contains a magic number: 0x42,315
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,dump,Magic Number,The method contains a magic number: 0x45,315
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,dump,Magic Number,The method contains a magic number: 0xCF,315
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,dump,Magic Number,The method contains a magic number: 0xC1,315
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,dump,Magic Number,The method contains a magic number: 0x66,315
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,dump,Magic Number,The method contains a magic number: 0x67,315
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,fetchCPLC,Magic Number,The method contains a magic number: 0x9f,363
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,fetchCPLC,Magic Number,The method contains a magic number: 0x7f,363
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,fetchKeyInfoTemplate,Magic Number,The method contains a magic number: 0xE0,367
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,oid2string,Magic Number,The method contains a magic number: 0x06,379
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,logAndGetOidFromByteArray,Magic Number,The method contains a magic number: 16,395
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,getData,Long Parameter List,The method has 5 parameters. ,406
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,getData,Long Statement,The length of the statement "if (failsafe && resp.getSW() != GPSession.SW_NO_ERROR) resp=channel.transmit(new CommandAPDU(0x00`GPSession.INS_GET_DATA`p1`p2`256));" is 133.,406
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,getData,Magic Number,The method contains a magic number: 256,406
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,getData,Magic Number,The method contains a magic number: 256,406
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPData,getData,Magic Number,The method contains a magic number: 0x6A88,406
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getVersionString,Magic Number,The method contains a magic number: 2,89
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getVersionString,Magic Number,The method contains a magic number: 0xFF,89
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getVersionString,Magic Number,The method contains a magic number: 0xFF,89
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Complex Method,Cyclomatic complexity of the method is 20,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x07,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x0F,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x7F,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0xFF,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x3,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x7F,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x78,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x83,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x3,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x7,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0xF,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x83,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Magic Number,The method contains a magic number: 0x83,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@4d5f1c98,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,getLifeCycleString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@17e6e65,107
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,toShortString,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@76ad3ab9,229
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,fromBytes,Magic Number,The method contains a magic number: 3,281
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,fromBytes,Magic Number,The method contains a magic number: 3,281
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,fromBytes,Magic Number,The method contains a magic number: 2,281
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,fromBytes,Magic Number,The method contains a magic number: 0x0F,281
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistryEntry,toBytes,Magic Number,The method contains a magic number: 3,305
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,wrap,Magic Number,The method contains a magic number: 0x4,49
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,wrap,Magic Number,The method contains a magic number: 16,49
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,wrap,Magic Number,The method contains a magic number: 0x4,49
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,wrap,Magic Number,The method contains a magic number: 8,49
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,wrap,Magic Number,The method contains a magic number: 128,49
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,wrap,Magic Number,The method contains a magic number: 8,49
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Complex Conditional,The conditional expression response.getSW() == 0x9000 || response.getSW1() == 0x62 || response.getSW1() == 0x63 is complex.,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 8,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 0x9000,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 0x62,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 0x63,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 8,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 8,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 8,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 128,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 8,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP03Wrapper,unwrap,Magic Number,The method contains a magic number: 0x80,126
+martinpaljak_GlobalPlatform,pro.javacard.gp,SecureChannelWrapper,getBlockSize,Magic Number,The method contains a magic number: 8,47
+martinpaljak_GlobalPlatform,pro.javacard.gp,SecureChannelWrapper,getBlockSize,Magic Number,The method contains a magic number: 8,47
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,SCP02Wrapper,Magic Number,The method contains a magic number: 0x55,50
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,clearBits,Magic Number,The method contains a magic number: 0xFF,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,setBits,Magic Number,The method contains a magic number: 0xFF,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Complex Method,Cyclomatic complexity of the method is 14,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 0x07,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 8,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 8,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 0x04,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 8,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 0x04,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 8,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,wrap,Magic Number,The method contains a magic number: 8,68
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,unwrap,Magic Number,The method contains a magic number: 8,173
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,unwrap,Magic Number,The method contains a magic number: 8,173
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,unwrap,Magic Number,The method contains a magic number: 8,173
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,unwrap,Magic Number,The method contains a magic number: 8,173
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP02Wrapper,unwrap,Magic Number,The method contains a magic number: 8,173
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Complex Method,Cyclomatic complexity of the method is 9,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x04,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 256,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x6A82,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x04,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 256,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 15,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 14,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x6A87,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x6283,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x6283,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x6F,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,discover,Magic Number,The method contains a magic number: 0x84,127
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,select,Magic Number,The method contains a magic number: 0x04,248
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,select,Magic Number,The method contains a magic number: 256,248
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,select,Magic Number,The method contains a magic number: 0x6283,248
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,select,Magic Number,The method contains a magic number: 0x6283,248
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Complex Method,Cyclomatic complexity of the method is 12,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Long Statement,The length of the statement "logger.warn(String.format("SD AID in FCI (%s) does not match the requested AID (%s). Using reported AID!"`detectedAID`sdAID));" is 126.,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x6F,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x84,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0xA5,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x73,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x06,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x60,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x06,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x9F,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x6E,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x9F,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,parse_select_response,Magic Number,The method contains a magic number: 0x65,262
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getKeyInfoTemplate,Magic Number,The method contains a magic number: 0xE0,340
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getKeyInfoTemplate,Magic Number,The method contains a magic number: 256,340
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Complex Conditional,The conditional expression update_response.length != 28 && update_response.length != 29 && update_response.length != 32 is complex.,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Complex Method,Cyclomatic complexity of the method is 17,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Long Identifier,The length of the field SW_SECURITY_STATUS_NOT_SATISFIED is 32.,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Long Identifier,The length of the field SW_AUTHENTICATION_METHOD_BLOCKED is 32.,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 8,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 256,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 28,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 29,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 32,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 10,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 0xFF,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 0xFF,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 0x03,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 8,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 8,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 12,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 14,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 32,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 32,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 64,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Magic Number,The method contains a magic number: 64,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,openSecureChannel,Missing default,The following switch statement is missing a default case: !org.eclipse.jdt.core.dom.SwitchStatement@61fe303d,366
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,loadCapFile,Long Parameter List,The method has 5 parameters. ,567
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,loadCapFile,Magic Number,The method contains a magic number: 256,567
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,loadCapFile,Magic Number,The method contains a magic number: 0xE2,567
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,loadCapFile,Magic Number,The method contains a magic number: 3,567
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,loadCapFile,Magic Number,The method contains a magic number: 0x4F,567
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,loadCapFile,Magic Number,The method contains a magic number: 0xC3,567
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,loadCapFile,Magic Number,The method contains a magic number: 0xC4,567
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,installAndMakeSelectable,Long Identifier,The length of the field P1_INSTALL_AND_MAKE_SELECTABLE is 30.,633
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,installAndMakeSelectable,Long Parameter List,The method has 5 parameters. ,633
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,buildInstallData,Long Parameter List,The method has 5 parameters. ,645
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,buildInstallData,Magic Number,The method contains a magic number: 0xC9,645
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,buildInstallData,Magic Number,The method contains a magic number: 0xC9,645
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,buildInstallData,Magic Number,The method contains a magic number: 2,645
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,buildInstallData,Magic Number,The method contains a magic number: 0xC9,645
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,buildInstallData,Magic Number,The method contains a magic number: 2,645
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,extradite,Magic Number,The method contains a magic number: 0x10,685
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,installForPersonalization,Magic Number,The method contains a magic number: 0x20,711
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,installForPersonalization,Magic Number,The method contains a magic number: 256,711
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,storeDataSingle,Long Statement,The length of the statement "throw new IllegalArgumentException("block size is bigger than possibility to send: " + data.length + ">"+ wrapper.getBlockSize());" is 130.,750
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,storeData,Magic Number,The method contains a magic number: 0x80,764
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,storeData,Magic Number,The method contains a magic number: 0x7F,764
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,storeData,Magic Number,The method contains a magic number: 256,764
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,storeDataSingle,Magic Number,The method contains a magic number: 256,774
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,makeDefaultSelected,Magic Number,The method contains a magic number: 0x08,779
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,lockUnlockApplet,Magic Number,The method contains a magic number: 0x40,804
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,lockUnlockApplet,Magic Number,The method contains a magic number: 0x80,804
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,setCardStatus,Magic Number,The method contains a magic number: 0x80,811
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,deleteAID,Magic Number,The method contains a magic number: 0x4f,823
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,deleteAID,Magic Number,The method contains a magic number: 0x80,823
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,deleteKey,Magic Number,The method contains a magic number: 0xd2,839
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,renameISD,Long Statement,The length of the statement "CommandAPDU rename=new CommandAPDU(CLA_GP`INS_STORE_DATA`0x90`0x00`GPUtils.concatenate(new byte[]{0x4f`(byte)newaid.getLength()}`newaid.getBytes()));" is 149.,849
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,renameISD,Magic Number,The method contains a magic number: 0x90,849
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,encodeKey,Magic Number,The method contains a magic number: 16,855
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,putKeys,Magic Number,The method contains a magic number: 0x80,917
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,encodeRSAKey,Magic Number,The method contains a magic number: 0xA1,946
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,encodeRSAKey,Magic Number,The method contains a magic number: 0xA0,946
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,encodeECKey,Long Statement,The length of the statement "byte[] key=ECNamedCurveTable.getByName("secp256r1").getCurve().createPoint(pubkey.getW().getAffineX()`pubkey.getW().getAffineY()).getEncoded(false);" is 148.,966
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,encodeECKey,Magic Number,The method contains a magic number: 0xB0,966
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,encodeECKey,Magic Number,The method contains a magic number: 0xF0,966
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,putKey,Magic Number,The method contains a magic number: 16,986
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,putKey,Magic Number,The method contains a magic number: 256,986
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getCurrentDomain,Long Statement,The length of the statement "return getRegistry().getDomain(getAID()).orElseThrow(() -> new IllegalStateException("Current domain not in registry?"));" is 121.,1017
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x02,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 256,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x80,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x6A86,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x02,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x6310,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x6A88,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x6310,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 256,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getConcatenatedStatus,Magic Number,The method contains a magic number: 0x6310,1025
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x80,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x80,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x40,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x40,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x10,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x10,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x20,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSession,getStatus,Magic Number,The method contains a magic number: 0x20,1072
+martinpaljak_GlobalPlatform,pro.javacard.gp,DMTokenizer,tokenize,Magic Number,The method contains a magic number: 0xE4,41
+martinpaljak_GlobalPlatform,pro.javacard.gp,DMTokenizer,tokenize,Magic Number,The method contains a magic number: 0x9E,41
+martinpaljak_GlobalPlatform,pro.javacard.gp,DMTokenizer,tokenize,Magic Number,The method contains a magic number: 0xE4,41
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,intValue,Magic Number,The method contains a magic number: 2,42
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,intValue,Magic Number,The method contains a magic number: 16,42
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,intValue,Magic Number,The method contains a magic number: 10,42
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,byteArrayToReadableString,Magic Number,The method contains a magic number: 0x20,54
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,byteArrayToReadableString,Magic Number,The method contains a magic number: 0x7f,54
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0x80,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0xFF,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0x81,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0xFFFF,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0x82,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0xFF00,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 8,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0xFF,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0x83,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0xFF0000,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 16,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0xFF00,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 8,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLength,Magic Number,The method contains a magic number: 0xFF,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0xFF,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0x80,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0xFF,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0x81,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0xFF,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0x82,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0xFF,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 8,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 2,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 0xFF,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLength,Magic Number,The method contains a magic number: 3,117
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLenLen,Magic Number,The method contains a magic number: 0xFF,130
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLenLen,Magic Number,The method contains a magic number: 0x80,130
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLenLen,Magic Number,The method contains a magic number: 0xFF,130
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,getLenLen,Magic Number,The method contains a magic number: 0x7F,130
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLcLength,Magic Number,The method contains a magic number: 255,138
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLcLength,Magic Number,The method contains a magic number: 256,138
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLcLength,Magic Number,The method contains a magic number: 4,138
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,encodeLcLength,Magic Number,The method contains a magic number: 4,138
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,positive,Magic Number,The method contains a magic number: 2,147
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPUtils,trace_lv,Long Statement,The length of the statement "logger.trace(String.format("[%s] %s"`HexUtils.bin2hex(Arrays.copyOfRange(data`i`i + lenLen))`HexUtils.bin2hex(Arrays.copyOfRange(data`i + lenLen`i + lenLen + l))));" is 164.,160
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPSecureChannelVersion,getValue,Magic Number,The method contains a magic number: 0xFF,37
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,SCP01Wrapper,Magic Number,The method contains a magic number: 0x15,40
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,setBits,Magic Number,The method contains a magic number: 0xFF,45
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,setVariant,Magic Number,The method contains a magic number: 0x05,49
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Complex Method,Cyclomatic complexity of the method is 13,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Magic Number,The method contains a magic number: 8,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Magic Number,The method contains a magic number: 0x04,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Magic Number,The method contains a magic number: 8,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Magic Number,The method contains a magic number: 0x04,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Magic Number,The method contains a magic number: 8,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Magic Number,The method contains a magic number: 8,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,SCP01Wrapper,wrap,Magic Number,The method contains a magic number: 8,55
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,GPKeyInfo,Long Parameter List,The method has 5 parameters. ,54
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,GPKeyInfo,Long Statement,The length of the statement "Optional<GPKeyInfoElement> ecc=valid.stream().filter(e -> (e.key == GPKey.EC_PRIV) || (e.key == GPKey.EC_PUB)).findFirst();" is 123.,54
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Complex Method,Cyclomatic complexity of the method is 8,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Magic Number,The method contains a magic number: 0xE0,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Magic Number,The method contains a magic number: 0xC0,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Magic Number,The method contains a magic number: 4,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Magic Number,The method contains a magic number: 0xFF,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Magic Number,The method contains a magic number: 0xFF,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Magic Number,The method contains a magic number: 0xFF,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,parseTemplate,Magic Number,The method contains a magic number: 4,96
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,getTypeDescription,Complex Conditional,The conditional expression k.getType() == GPKey.RSA_PUB_E || k.getType() == GPKey.RSA_PUB_N && k.getLength() > 0 is complex.,164
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,getTypeDescription,Magic Number,The method contains a magic number: 8,164
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,getTypeDescription,Magic Number,The method contains a magic number: 8,164
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,getKeyDescription,Magic Number,The method contains a magic number: 0xFF,173
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,toString,Long Statement,The length of the statement "sb.append(String.format("Version: %3d (0x%02X) ID: %3d (0x%02X) type: %-12s length: %3d%s%n"`k.getVersion()`k.getVersion()`k.getID()`k.getID()`k.getType()`k.getLength()`description));" is 183.,183
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,toString,Magic Number,The method contains a magic number: 0x7f,209
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,toString,Magic Number,The method contains a magic number: 0x7F,209
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Complex Conditional,The conditional expression type == 0x86 || type == 0x87 || ((0x89 <= type) && (type <= 0x8F)) || ((0x92 <= type) && (type <= 0x9F)) is complex.,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Long Statement,The length of the statement "else if (type == 0x86 || type == 0x87 || ((0x89 <= type) && (type <= 0x8F)) || ((0x92 <= type) && (type <= 0x9F))) result=RFU_SYMMETRICAL;" is 138.,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0x7f,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0x86,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0x87,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0x89,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0x8F,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0x92,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0x9F,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0xA9,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0xAF,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0xB8,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0xEF,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0xF1,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPKeyInfo,get,Magic Number,The method contains a magic number: 0xFE,346
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,getDefaultSelectedAID,Long Statement,The length of the statement "return allApplets().stream().filter(e -> e.hasPrivilege(Privilege.CardReset)).map(GPRegistryEntry::getAID).reduce(onlyOne());" is 125.,93
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,getDefaultSelectedPackageAID,Long Statement,The length of the statement "return allPackages().stream().filter(e -> e.getModules().contains(defaultAID.get())).map(GPRegistryEntry::getAID).reduce(onlyOne());" is 132.,97
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_legacy,Magic Number,The method contains a magic number: 0xFF,111
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_legacy,Magic Number,The method contains a magic number: 0xFF,111
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_legacy,Magic Number,The method contains a magic number: 0x20,111
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_legacy,Magic Number,The method contains a magic number: 0xFF,111
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Complex Method,Cyclomatic complexity of the method is 14,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xE3,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x4f,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x9F,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x70,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xFF,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xC5,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xCF,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xFF,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x1F,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x80,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x80,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x40,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x40,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xC4,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xCE,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0x84,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPRegistry,populate_tags,Magic Number,The method contains a magic number: 0xCC,152
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,pad80,Magic Number,The method contains a magic number: 0x80,78
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,unpad80,Magic Number,The method contains a magic number: 0x80,85
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,buffer_increment,Magic Number,The method contains a magic number: 0xFF,98
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_3des,Magic Number,The method contains a magic number: 8,115
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_3des,Magic Number,The method contains a magic number: 24,115
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_3des,Long Parameter List,The method has 5 parameters. ,125
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_3des,Magic Number,The method contains a magic number: 8,125
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_3des,Magic Number,The method contains a magic number: 8,125
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_3des,Magic Number,The method contains a magic number: 8,125
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,139
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Long Parameter List,The method has 5 parameters. ,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,mac_des_3des,Magic Number,The method contains a magic number: 8,144
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,scp03_mac,Magic Number,The method contains a magic number: 8,168
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,scp03_kdf,Magic Number,The method contains a magic number: 8,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,scp03_kdf,Magic Number,The method contains a magic number: 0xFF,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,scp03_kdf,Magic Number,The method contains a magic number: 0xFF,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,scp03_kdf,Magic Number,The method contains a magic number: 8,180
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,scp03_kdf,Magic Number,The method contains a magic number: 8,200
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,kcv_aes,Magic Number,The method contains a magic number: 3,212
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,kcv_aes0,Magic Number,The method contains a magic number: 3,223
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,kcv_3des,Magic Number,The method contains a magic number: 3,234
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,des3key,Magic Number,The method contains a magic number: 24,245
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,resizeDES,Magic Number,The method contains a magic number: 24,300
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,resizeDES,Magic Number,The method contains a magic number: 24,300
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,resizeDES,Magic Number,The method contains a magic number: 16,300
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,resizeDES,Magic Number,The method contains a magic number: 16,300
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,resizeDES,Magic Number,The method contains a magic number: 8,300
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,resizeDES,Magic Number,The method contains a magic number: 8,300
+martinpaljak_GlobalPlatform,pro.javacard.gp,GPCrypto,resizeDES,Magic Number,The method contains a magic number: 8,300
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestGPKeyInfo,testRSAKeyTemplate,Magic Number,The method contains a magic number: 5,14
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestGPKeyInfo,testExtendedRSAKeyTemplate,Magic Number,The method contains a magic number: 4,22
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestGPKeyInfo,testExtendedKeyTypeTemplateWithZeroLengths,Long Statement,The length of the statement "byte[] t=HexUtils.hex2bin("E081B0C00A0120FF80001001000100C00A0220FF80001001000100C00A0320FF80001001000100C00A0101FF80001001000100C00A0201FF80001001000100C00A0301FF80001001000100C00A0102FF88001001000100C00E0202FF880010FF10000101000100C00A0302FF88001001000100C00A0103FF88001001000100C00E0203FF880010FF10000101000100C00A0303FF88001001000100C00A1403FF85001001000100C00A1503FF88001001000100");" is 388.,30
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestGPKeyInfo,testExtendedKeyTypeTemplateWithZeroLengths,Magic Number,The method contains a magic number: 14,30
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testParsePartialISD,Long Statement,The length of the statement "byte[] data=HexUtils.hex2bin("E3464F08A0000000030000009F700101C5039EFE80CF0140CF0141CF0142CF0143CF0180CF0181CF0182CF0183C40BD276000005AAFFCAFE0001CE020001CC08A000000003000000");" is 177.,30
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testParsePartialISD,Magic Number,The method contains a magic number: 0x80,30
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testOther,Long Statement,The length of the statement "byte[] data=HexUtils.hex2bin("664C734A06072A864886FC6B01600C060A2A864886FC6B02020101630906072A864886FC6B03640B06092A864886FC6B040215650B06092B8510864864020103660C060A2B060104012A026E0102");" is 189.,38
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testOther,Long Statement,The length of the statement "data=HexUtils.hex2bin("6657735506072A864886FC6B01600B06092A864886FC6B020202630906072A864886FC6B03640B06092A864886FC6B040370640B06092A864886FC6B048000650A06082A864886FC6B0504660C060A2B060104012A026E0103");" is 204.,38
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testPrintCardCapabilities,Long Statement,The length of the statement "byte[] data=HexUtils.hex2bin("6735A00E8001038106001020306070820107A007800102810215558103FF9E0082031E160083010284018F8502FF028602FF028702FF02");" is 143.,46
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testBrokenPrintCardCapabilities,Long Statement,The length of the statement "byte[] data=HexUtils.hex2bin("673A6738A006800102810155A00A8001038102001082010781039EFE8082031E03008301028504010208408602040887040102084088050102030405");" is 153.,52
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 2021,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 07,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 29,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 2021,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 07,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 30,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 2021,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 07,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 29,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 2021,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 07,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 29,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 2011,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 07,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 29,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 2021,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 07,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCPLCDateParse,Magic Number,The method contains a magic number: 28,59
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testParseISD,Magic Number,The method contains a magic number: 0x80,77
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testCardCapabilities,Magic Number,The method contains a magic number: 5,104
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testLFDBH,Magic Number,The method contains a magic number: 2,112
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testPrivileges,Magic Number,The method contains a magic number: 3,120
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testPrivileges,Magic Number,The method contains a magic number: 13,120
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestParseTags,testLV,Long Statement,The length of the statement "byte[] data=Hex.decode("05060906090608D233000000444F4D20DADFAD3ABBEFC249B1C878566C24ECB072289A15D06F4539E4AF03E876F763F0 00 81804861F702FE0C7E2FDA2F993A19C93F6326A4AE5E0DA72500E4754F7C1A82DA07554D2E084799AFA7037A25CF9E2A7EA67066C4FDCC0DC2C5FD096BA4BEB3C7A4462E040A3F8AC9FF870DA2A4CF624466A43BE8D75713F3D4A7263A1A4C1B6E819FE73A80B46E4F03C20A6FBE44B55A036923D2F9C3090CA3EA2E463B83A13DB7");" is 387.,136
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestDMTokenizer,testTokenizeDelete,Magic Number,The method contains a magic number: 0x02,24
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestDMTokenizer,testTokenizeDelete,Magic Number,The method contains a magic number: 132,24
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestDMTokenizer,testTokenizeDelete,Magic Number,The method contains a magic number: 0xFF,24
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestDMTokenizer,testTokenizeDelete,Magic Number,The method contains a magic number: 0x9E,24
+martinpaljak_GlobalPlatform,pro.javacard.gp,TestDMTokenizer,testNullToken,Magic Number,The method contains a magic number: 0x02,33

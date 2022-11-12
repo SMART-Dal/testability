@@ -1,0 +1,56 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+wb14123_bard,com.bardframework.bard.core,Servlet,Servlet,Abstract Function Call From Constructor,The constructor Servlet calls a virtual method getPackageNames.,30
+wb14123_bard,com.bardframework.bard.core,Servlet,Servlet,Complex Method,Cyclomatic complexity of the method is 9,30
+wb14123_bard,com.bardframework.bard.core,Servlet,service,Magic Number,The method contains a magic number: 404,113
+wb14123_bard,com.bardframework.bard.core,HandlerMethodRunner,before,Complex Method,Cyclomatic complexity of the method is 10,50
+wb14123_bard,com.bardframework.bard.core,HandlerMethodRunner,before,Long Statement,The length of the statement "adapter.isFinal=adapterLoop++ >= handlerMethod.annotatedServletAdapters.size() + handlerMethod.annotatedClassAdapters.size();" is 125.,50
+wb14123_bard,com.bardframework.bard.core,HandlerMeta,get,Complex Conditional,The conditional expression annotationClass == Before.class || annotationClass == After.class || annotationClass == Match.class is complex.,49
+wb14123_bard,com.bardframework.bard.core,HandlerMeta,newHandlerMethod,Complex Method,Cyclomatic complexity of the method is 12,153
+wb14123_bard,com.bardframework.bard.core.doc,DocParameter,compareTo,Complex Conditional,The conditional expression equal(o.name`name) && equal(o.belongs`belongs) && equal(o.description`description) is complex.,48
+wb14123_bard,com.bardframework.plugin,BardStandaloneMojo,execute,Long Statement,The length of the statement "executeMojo(plugin(groupId("org.apache.maven.plugins")`artifactId("maven-dependency-plugin")`version("2.9"))`goal("copy-dependencies")`configuration(element(name("outputDirectory")`toFileName + "/lib"))`executionEnvironment(mavenProject`mavenSession`pluginManager));" is 266.,33
+wb14123_bard,com.bardframework.plugin,BardTesterMojo,execute,Long Statement,The length of the statement "mavenProject.addTestCompileSourceRoot(mavenProject.getBasedir().getAbsolutePath() + "/target/generated-test-sources/java/");" is 124.,44
+wb14123_bard,com.bardframework.plugin,BardTesterMojo,createDirForPackage,Long Statement,The length of the statement "String filename=mavenProject.getBasedir().getAbsolutePath() + "/target/generated-test-sources/java/" + packageName.replace("."`"/");" is 132.,119
+wb14123_bard,com.bardframework.plugin,BardTesterMojo,covertNameToParam,Complex Conditional,The conditional expression !((chars[i] >= 'A' && chars[i] <= 'Z') || (chars[i] >= 'a' && chars[i] <= 'z') || (chars[i] >= '0' && chars[i] <= '9')) is complex.,130
+wb14123_bard,com.bardframework.plugin,BardTesterMojo,covertNameToParam,Long Statement,The length of the statement "if (!((chars[i] >= 'A' && chars[i] <= 'Z') || (chars[i] >= 'a' && chars[i] <= 'z') || (chars[i] >= '0' && chars[i] <= '9'))) {" is 126.,130
+wb14123_bard,com.bardframework.plugin,BardWarMojo,execute,Long Statement,The length of the statement "executeMojo(plugin(groupId("org.apache.maven.plugins")`artifactId("maven-war-plugin")`version("2.5"))`goal("war")`configuration(element(name("outputDirectory")`outputDirectory))`executionEnvironment(mavenProject`mavenSession`pluginManager));" is 241.,38
+wb14123_bard,com.bardframework.plugin,BardWarMojo,writeWebXml,Long Statement,The length of the statement "w.write("<web-app xmlns=\"http://java.sun.com/xml/ns/javaee\" version=\"2.5\">\n" + " <servlet>\n" + " <servlet-name>bard</servlet-name>\n"+ " <servlet-class>" + servletClass + "</servlet-class>\n"+ " </servlet>\n"+ " <servlet-mapping>\n"+ " <servlet-name>bard</servlet-name>\n"+ " <url-pattern>/*</url-pattern>\n"+ " </servlet-mapping>\n"+ "</web-app>\n");" is 357.,60
+wb14123_bard,com.bardframework.bard.basic.injector,QueryParamInjector,getParams,Magic Number,The method contains a magic number: 400,16
+wb14123_bard,com.bardframework.bard.basic.injector,JsonParamInjector,getJsonParam,Magic Number,The method contains a magic number: 400,22
+wb14123_bard,com.bardframework.bard.basic.injector,PathParamInjector,getParam,Magic Number,The method contains a magic number: 400,16
+wb14123_bard,com.bardframework.bard.basic.injector,MultipartParamInjector,getMultipart,Magic Number,The method contains a magic number: 400,24
+wb14123_bard,com.bardframework.bard.basic.injector,FormParamInjector,getParam,Magic Number,The method contains a magic number: 400,21
+wb14123_bard,com.bardframework.bard.basic.server,BardServer,getServer,Long Statement,The length of the statement "Server server=new Server(new QueuedThreadPool(Util.getConfig().getInt("bard.server.threads.max"`100)`Util.getConfig().getInt("bard.server.threads.min"`10)));" is 157.,26
+wb14123_bard,com.bardframework.bard.basic.server,BardServer,getServer,Long Statement,The length of the statement "ServerConnector connector=new ServerConnector(server`Util.getConfig().getInt("bard.server.acceptors"`-1)`Util.getConfig().getInt("bard.server.selectors"`-1));" is 158.,26
+wb14123_bard,com.bardframework.bard.basic.server,BardServer,getServer,Magic Number,The method contains a magic number: 100,26
+wb14123_bard,com.bardframework.bard.basic.server,BardServer,getServer,Magic Number,The method contains a magic number: 10,26
+wb14123_bard,com.bardframework.bard.basic.server,BardServer,start,Magic Number,The method contains a magic number: 8080,51
+wb14123_bard,com.bardframework.bard.basic.server,BardServer,startForTest,Magic Number,The method contains a magic number: 10000,56
+wb14123_bard,com.bardframework.bard.basic.server,BardServer,isPortAvailable,Empty catch clause,The method has an empty catch block.,74
+wb14123_bard,com.bardframework.bard.basic.filter,ProduceFilter,filterResult,Magic Number,The method contains a magic number: 500,30
+wb14123_bard,com.bardframework.bard.basic.filter,ProduceFilter,filterResult,Magic Number,The method contains a magic number: 500,30
+wb14123_bard,com.bardframework.bard.basic.filter,ProduceFilter,generateDoc,Magic Number,The method contains a magic number: 200,61
+wb14123_bard,com.bardframework.bard.basic.filter,APIDocFilter,getOneApi,Complex Method,Cyclomatic complexity of the method is 12,46
+wb14123_bard,com.bardframework.bard.basic.filter,APIDocFilter,getOneApi,Long Parameter List,The method has 5 parameters. ,46
+wb14123_bard,com.bardframework.bard.basic.filter,APIDocFilter,generateDoc,Magic Number,The method contains a magic number: 200,127
+wb14123_bard,com.bardframework.bard.basic.filter,LogRequestFilter,after,Long Statement,The length of the statement "Util.getLogger().info("Request complete` method: {}` URI: {}{}` time: {}ms"`context.getRequest().getMethod()`context.getRequest().getRequestURI()`queryString`timeDiff);" is 168.,20
+wb14123_bard,com.bardframework.bard.basic.filter,HandleErrorsFilter,handleError,Complex Conditional,The conditional expression context.getException() != null && context.getException().getClass() == handleError.exception() && !context.isExceptionHandled() is complex.,14
+wb14123_bard,com.bardframework.bard.basic.filter,HandleErrorsFilter,handleError,Long Statement,The length of the statement "if (context.getException() != null && context.getException().getClass() == handleError.exception() && !context.isExceptionHandled()) {" is 134.,14
+wb14123_bard,com.bardframework.bard.basic.filter,HandleErrorsFilter,handleError,Magic Number,The method contains a magic number: 600,14
+wb14123_bard,com.bardframework.bard.basic.filter,HandleErrorsFilter,handleError,Magic Number,The method contains a magic number: 200,14
+wb14123_bard,com.bardframework.bard.basic.filter,HandleErrorsFilter,handleError,Magic Number,The method contains a magic number: 400,14
+wb14123_bard,com.bardframework.bard.basic.filter,ProduceFilterTest,otherTest,Magic Number,The method contains a magic number: 500,33
+wb14123_bard,com.bardframework.bard.util.db,DBManager,getEntityManager,Long Statement,The length of the statement "Object statisticsMBean=Proxy.newProxyInstance(DBManager.class.getClassLoader()`new Class<?>[]{StatisticsMXBean.class}`new InvocationHandler(){" is 142.,21
+wb14123_bard,com.bardframework.bard.util.user,LoginUserInjector,getUser,Magic Number,The method contains a magic number: 403,15
+wb14123_bard,com.bardframework.bard.util.user,PasswordEncrypter,encrypt,Magic Number,The method contains a magic number: 130,9
+wb14123_bard,com.bardframework.bard.util.user,PasswordEncrypter,encrypt,Magic Number,The method contains a magic number: 32,9
+wb14123_bard,org.apache.saltedpeanuts,SimpleServlet,getPackageNames,Long Statement,The length of the statement "return new String[]{"com.bardframework.bard.core"`"com.bardframework.bard.basic"`"com.bardframework.bard.util"`"org.apache.saltedpeanuts"};" is 139.,16
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandler,signup,Magic Number,The method contains a magic number: 20000,27
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandler,login,Magic Number,The method contains a magic number: 20001,56
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandler,login,Magic Number,The method contains a magic number: 60,56
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandler,login,Magic Number,The method contains a magic number: 60,56
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandler,login,Magic Number,The method contains a magic number: 24,56
+wb14123_bard,org.apache.saltedpeanuts.handler,ArticleHandler,getArticle,Magic Number,The method contains a magic number: 20010,36
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandlerTest,testDuplicateSignup,Magic Number,The method contains a magic number: 20000,20
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandlerTest,testLoginInvalidatePassword,Magic Number,The method contains a magic number: 20001,35
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandlerTest,testLoginNoUsername,Magic Number,The method contains a magic number: 20001,42
+wb14123_bard,org.apache.saltedpeanuts.handler,UserHandlerTest,testInfoNoAuth,Magic Number,The method contains a magic number: 403,58

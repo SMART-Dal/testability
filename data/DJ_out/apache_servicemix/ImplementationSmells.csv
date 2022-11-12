@@ -1,0 +1,81 @@
+Project Name,Package Name,Type Name,Method Name,Implementation Smell,Cause of the Smell,Method start line no
+apache_servicemix,org.apache.servicemix.examples.activiti,ActivitiRouteBuilder,configure,Long Statement,The length of the statement "from("file:var/activiti-camel/order").setBody(bean(helper)).setProperty(PROCESS_KEY_PROPERTY`simple("file:name")).to("activiti:OrderProcess").log("Process to handle incoming order file has been started (process instance id ${body})");" is 234.,39
+apache_servicemix,org.apache.servicemix.examples.activiti,ActivitiRouteBuilder,configure,Long Statement,The length of the statement "from("file:var/activiti-camel/delivery").log("Notifying process about delivery for order ${file:name}").setBody(bean(helper)).setProperty(PROCESS_KEY_PROPERTY`simple("file:name")).to("activiti:OrderProcess:receiveDelivery");" is 224.,39
+apache_servicemix,org.apache.servicemix.examples.activiti,ActivitiRouteBuilder,configure,Long Statement,The length of the statement "from("activiti:OrderProcess:processOrder?copyVariablesToProperties=true").log("Processing order ${property.orderid} created on ${property.timestamp}").log(" original message: ${property.message}");" is 197.,39
+apache_servicemix,org.apache.servicemix.examples.activiti,ActivitiRouteBuilder,configure,Long Statement,The length of the statement "from("activiti:OrderProcess:processDelivery?copyVariablesToProperties=true").log("Processing delivery for order ${property.orderid} created on ${property.timestamp}").log(" original message: ${property.message}");" is 213.,39
+apache_servicemix,org.apache.servicemix.examples.camel.soap,ServiceHandler,init,Magic Number,The method contains a magic number: 100,34
+apache_servicemix,org.apache.servicemix.examples.camel.soap.client,Client,main,Magic Number,The method contains a magic number: 21,36
+apache_servicemix,org.apache.servicemix.examples.camel,Person,isRich,Magic Number,The method contains a magic number: 80000,81
+apache_servicemix,org.apache.servicemix.examples.camel,Person,getName,Magic Number,The method contains a magic number: 21,85
+apache_servicemix,org.apache.servicemix.examples.camel,Person,toString,Long Statement,The length of the statement "return "Person{" + "age=" + age + "` canDrink="+ canDrink+ "` sex="+ sex+ "` income="+ getIncome()+ "` isRich="+ isRich()+ "` isVip="+ isVip+ "` drink="+ drink+ '}';" is 165.,110
+apache_servicemix,org.apache.servicemix.examples.camel,PersonHelper,createTestPerson,Magic Number,The method contains a magic number: 70,25
+apache_servicemix,org.apache.servicemix.examples.camel,PersonHelper,createTestPerson,Magic Number,The method contains a magic number: 100000,25
+apache_servicemix,org.apache.servicemix.examples.camel,DroolsBlueprintBean,createKnowledgeBase,Long Statement,The length of the statement "PackageBuilderConfiguration kconf=(PackageBuilderConfiguration)KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration(null`DroolsBlueprintBean.class.getClassLoader());" is 169.,44
+apache_servicemix,org.apache.servicemix.examples.camel,DroolsBlueprintBean,createKnowledgeBase,Long Statement,The length of the statement "KnowledgeBaseConfiguration kbaseConfig=KnowledgeBaseFactory.newKnowledgeBaseConfiguration(null`DroolsBlueprintBean.class.getClassLoader());" is 139.,44
+apache_servicemix,org.apache.servicemix.examples.camel,Person,isRich,Magic Number,The method contains a magic number: 80000,78
+apache_servicemix,org.apache.servicemix.examples.camel,Person,getName,Magic Number,The method contains a magic number: 21,82
+apache_servicemix,org.apache.servicemix.examples.camel,Person,toString,Long Statement,The length of the statement "return "Person{" + "age=" + age + "` canDrink="+ canDrink+ "` sex="+ sex+ "` income="+ getIncome()+ "` isRich="+ isRich()+ "` isVip="+ isVip+ "` drink="+ drink+ '}';" is 165.,107
+apache_servicemix,org.apache.servicemix.examples.camel,PersonHelper,createTestPerson,Magic Number,The method contains a magic number: 70,25
+apache_servicemix,org.apache.servicemix.examples.camel,PersonHelper,createTestPerson,Magic Number,The method contains a magic number: 100000,25
+apache_servicemix,org.apache.servicemix.examples.camel.rest.client,Client,main,Magic Number,The method contains a magic number: 21,33
+apache_servicemix,org.apache.servicemix.examples.camel.rest.client,Client,getPerson,Magic Number,The method contains a magic number: 100,65
+apache_servicemix,org.apache.servicemix.examples.camel.rest.client,Client,getPerson,Magic Number,The method contains a magic number: 2,65
+apache_servicemix,org.apache.servicemix.examples.camel.rest.client,Client,deletePerson,Magic Number,The method contains a magic number: 100,77
+apache_servicemix,org.apache.servicemix.examples.camel.rest.client,Client,deletePerson,Magic Number,The method contains a magic number: 2,77
+apache_servicemix,org.apache.servicemix.examples.camel.rest,ServiceHandler,init,Magic Number,The method contains a magic number: 100,35
+apache_servicemix,org.apache.servicemix.examples.camel.sql,DatabaseBeanPgSQL,create,Long Statement,The length of the statement "sta.executeUpdate("CREATE TABLE orders ( id INT NOT NULL PRIMARY KEY DEFAULT nextval('order_id_seq')` item VARCHAR(50)` amount INT` description VARCHAR(300)` processed BOOLEAN` consumed BOOLEAN);");" is 198.,36
+apache_servicemix,org.apache.servicemix.examples.camel.sql,OrderBean,init,Magic Number,The method contains a magic number: 50,48
+apache_servicemix,org.apache.servicemix.examples.camel.sql,OrderBean,init,Magic Number,The method contains a magic number: 10,48
+apache_servicemix,org.apache.servicemix.examples.camel.sql,OrderBean,init,Magic Number,The method contains a magic number: 100,48
+apache_servicemix,org.apache.servicemix.examples.camel.sql,OrderBean,init,Magic Number,The method contains a magic number: 800,48
+apache_servicemix,org.apache.servicemix.examples.camel.sql,DatabaseBeanH2,create,Long Statement,The length of the statement "sta.executeUpdate("CREATE TABLE orders ( id INT NOT NULL PRIMARY KEY AUTO_INCREMENT` item VARCHAR(50)` amount INT` description VARCHAR(300)` processed BOOLEAN` consumed BOOLEAN);");" is 181.,37
+apache_servicemix,org.apache.servicemix.examples.camel.sql,DatabaseBeanDerby,create,Long Statement,The length of the statement "sta.executeUpdate("CREATE TABLE orders (id INT generated by default as identity` item VARCHAR(50)` amount INT` description VARCHAR(300)` processed BOOLEAN` consumed BOOLEAN)");" is 176.,36
+apache_servicemix,org.apache.servicemix.examples.cxf.notifier,SpamGenerator,init,Long Statement,The length of the statement "spam[0]=new Email("free@cookieman.com"`youradress`"Free Cookies!"`"Send us 10 dollar for a FREE basket full of delicious cookies!");" is 132.,28
+apache_servicemix,org.apache.servicemix.examples.cxf.notifier,SpamGenerator,init,Long Statement,The length of the statement "spam[1]=new Email("youwon@lottery.com"`youradress`"You are a WINNER!"`"You won the jackpot 100.000.000` please claim your price at our HQ in Atlantis.");" is 153.,28
+apache_servicemix,org.apache.servicemix.examples.cxf.notifier,SpamGenerator,init,Long Statement,The length of the statement "spam[2]=new Email("gold@theshinymarket.com"`youradress`"Buy cheap gold now!"`"Please send us your credit card number and receive gold at very cheap prices!");" is 158.,28
+apache_servicemix,org.apache.servicemix.examples.cxf.notifier,SpamGenerator,init,Magic Number,The method contains a magic number: 3,28
+apache_servicemix,org.apache.servicemix.examples.cxf.notifier,SpamGenerator,init,Magic Number,The method contains a magic number: 2,28
+apache_servicemix,org.apache.servicemix.examples.cxf.client,Client,main,Long Statement,The length of the statement "NotificationBroker notificationBroker=new NotificationBroker("http://localhost:" + wsnPort + "/wsn/NotificationBroker"`Email.class);" is 132.,31
+apache_servicemix,org.apache.servicemix.examples.cxf.client,Client,main,Long Statement,The length of the statement "Email mail=new Email("standalone@client.com"`"you@gotmail.com"`"This is the standalone client speaking"`"This thing works!");" is 125.,31
+apache_servicemix,org.apache.servicemix.examples.cxf.client,Client,main,Magic Number,The method contains a magic number: 5000,31
+apache_servicemix,org.apache.servicemix.samples.cxf_ws_rm,MessageLossSimulator,handleMessage,Magic Number,The method contains a magic number: 2,54
+apache_servicemix,org.apache.servicemix.samples.cxf_ws_rm,Client,main,Magic Number,The method contains a magic number: 4,44
+apache_servicemix,org.apache.servicemix.samples.cxf_ws_rm,Client,main,Magic Number,The method contains a magic number: 60,44
+apache_servicemix,org.apache.servicemix.samples.cxf_ws_rm,Client,main,Magic Number,The method contains a magic number: 1000,44
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,Order,init,Magic Number,The method contains a magic number: 323,65
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,getCustomer,Magic Number,The method contains a magic number: 500,60
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,getCustomer,Magic Number,The method contains a magic number: 204,60
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,updateCustomer,Magic Number,The method contains a magic number: 500,84
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,updateCustomer,Magic Number,The method contains a magic number: 204,84
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,addCustomer,Magic Number,The method contains a magic number: 500,117
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,deleteCustomer,Magic Number,The method contains a magic number: 500,144
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,deleteCustomer,Magic Number,The method contains a magic number: 204,144
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,init,Magic Number,The method contains a magic number: 123,192
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,init,Magic Number,The method contains a magic number: 223,192
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,Order,init,Magic Number,The method contains a magic number: 323,65
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,init,Magic Number,The method contains a magic number: 123,106
+apache_servicemix,org.apache.servicemix.examples.cxf.jaxrs,CustomerService,init,Magic Number,The method contains a magic number: 223,106
+apache_servicemix,org.apache.servicemix.examples.cxf.wsaddressing,GreeterImpl,pingMe,Magic Number,The method contains a magic number: 2,69
+apache_servicemix,org.apache.servicemix.examples.cxf.wsaddressing,Client,sendRequest,Long Statement,The length of the statement "InputStream fis=getClass().getClassLoader().getResourceAsStream("org/apache/servicemix/examples/cxf/wsaddressing/request.xml");" is 127.,37
+apache_servicemix,org.apache.servicemix.examples.drools.camel.blueprint.osgi,Utils,customer,Magic Number,The method contains a magic number: 9999,35
+apache_servicemix,org.apache.servicemix.examples.drools.camel.blueprint.osgi,Utils,insertAndFireAll,Magic Number,The method contains a magic number: 2,40
+apache_servicemix,org.apache.servicemix.examples.drools.camel.cxf.server.osgi,Utils,customer,Magic Number,The method contains a magic number: 9999,34
+apache_servicemix,org.apache.servicemix.examples.drools.camel.cxf.server.osgi,CommandMessageBodyRW,getSize,Long Parameter List,The method has 5 parameters. ,44
+apache_servicemix,org.apache.servicemix.examples.drools.camel.cxf.server.osgi,CommandMessageBodyRW,writeTo,Long Parameter List,The method has 7 parameters. ,63
+apache_servicemix,org.apache.servicemix.examples.drools.simple.osgi,Utils,customerPoor,Magic Number,The method contains a magic number: 1000,25
+apache_servicemix,org.apache.servicemix.examples.drools.simple.osgi,Utils,customerNormal,Magic Number,The method contains a magic number: 5000,30
+apache_servicemix,org.apache.servicemix.examples.drools.simple.osgi,Utils,customerVip,Magic Number,The method contains a magic number: 9001,35
+apache_servicemix,org.apache.servicemix.examples.drools.spring.osgi,Utils,customer,Magic Number,The method contains a magic number: 9999,31
+apache_servicemix,org.apache.servicemix.examples.drools.spring.osgi,SimpleRuleBean,start,Magic Number,The method contains a magic number: 10,47
+apache_servicemix,org.apache.servicemix.logging.jms,JMSAppenderTest,testReconnectToBroker,Magic Number,The method contains a magic number: 2,76
+apache_servicemix,org.apache.servicemix.logging.jms,LogstashEventFormatTest,testBasicLogstashFormat,Long Statement,The length of the statement "assertEquals(MockEvents.LOG_PROPERTY_VALUE`object.getJsonObject(LogstashEventFormat.FIELDS).getString(MockEvents.LOG_PROPERTY_ID));" is 131.,37
+apache_servicemix,org.apache.servicemix.activiti.config,CamelAwareELResolver,getValue,Complex Conditional,The conditional expression base == null && property != null && property instanceof String is complex.,39
+apache_servicemix,$,PersonImpl,getPerson,Long Statement,The length of the statement "org.apache.servicemix.samples.wsdl_first.types.UnknownPersonFault fault=new org.apache.servicemix.samples.wsdl_first.types.UnknownPersonFault();" is 144.,30
+apache_servicemix,$,Client,main,Complex Conditional,The conditional expression args != null && args.length > 0 && !"".equals(args[0]) is complex.,27
+apache_servicemix,$,Client,main,Long Statement,The length of the statement "javax.xml.ws.Holder<java.lang.String> _getPerson_personId=new javax.xml.ws.Holder<java.lang.String>(_getPerson_personIdVal);" is 124.,27
+apache_servicemix,org.apache.servicemix.itests,ExamplesCXFTest,config,Long Statement,The length of the statement "return options(composite(super.config())`editConfigurationFilePut("etc/org.apache.cxf.wsn.cfg"`"cxf.wsn.activemq.username"`"smx")`editConfigurationFilePut("etc/org.apache.cxf.wsn.cfg"`"cxf.wsn.activemq.password"`"smx"));" is 220.,38
+apache_servicemix,org.apache.servicemix.itests.base,ServiceMixDistroTest,baseConfig,Long Statement,The length of the statement "examples=maven().groupId("org.apache.servicemix.features").artifactId("servicemix-examples").type("xml").classifier("features").versionAsInProject();" is 149.,71
+apache_servicemix,org.apache.servicemix.itests.base,ServiceMixDistroTest,baseConfig,Long Statement,The length of the statement "return CoreOptions.composite(karafDistributionConfiguration().frameworkUrl(karafUrl).name("Apache Servicemix").unpackDirectory(new File("target/exam")).useDeployFolder(false)`systemProperty("pax.exam.osgi.unresolved.fail").value("true")`configureSecurity().disableKarafMBeanServerBuilder()`keepRuntimeFolder()`logLevel(LogLevel.INFO)`editConfigurationFilePut("etc/custom.properties"`"karaf.delay.console"`"false")`editConfigurationFilePut("etc/org.ops4j.pax.logging.cfg"`"log4j.logger.org.apache.karaf.features"`"WARN")`editConfigurationFilePut("etc/org.ops4j.pax.logging.cfg"`"log4j.logger.org.apache.aries.spifly"`"WARN")`KarafDistributionOption.features(examples`"transaction")`when(null != LOCAL_REPOSITORY && LOCAL_REPOSITORY.length() > 0).useOptions(editConfigurationFilePut("etc/org.ops4j.pax.url.mvn.cfg"`"org.ops4j.pax.url.mvn.localRepository"`LOCAL_REPOSITORY)));" is 873.,71
+apache_servicemix,org.apache.servicemix.itests.base,LogCollector,expectContains,Magic Number,The method contains a magic number: 10,47
+apache_servicemix,org.apache.servicemix.itests.base,LogCollector,expectContains,Magic Number,The method contains a magic number: 2000,47
+apache_servicemix,org.apache.servicemix.itests.base,LogCollector,expectContains,Magic Number,The method contains a magic number: 100,47
