@@ -13,6 +13,8 @@ The corresponding repository has the following directories:
     * survey (all the data regarding our survey study)
 
 
+## Download and analyze repositories
+- `scripts\repos.csv` contains selected repositories. `
 ## Collecting issues marked as bugs for RQ3 
 The `dockerfile.issues` creates an environment to run the DesigniteJava on one of the projects (selected based on high number of commits), 
 and collect data regarding testability smells and number of reported bug issues for the corresponding project.
