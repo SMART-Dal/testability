@@ -24,11 +24,11 @@ Execute as follows:
 
     $ docker build -t bug_issues . --build-arg personal_access_token="personal_access_token" --build-arg github_account="forcedotcom" --build-arg github_repo="wsc" --build-arg label="Work Created" --build-arg license_key="academic_license_key_for_DesigniteJava" --build-arg branch="branch to collect results from" -f scripts/dockerfile.issues
 
-The above script analyze each commit found in the `rq4_commits.csv` file; for each commit
+The above script analyze each commit found in the `rq3_commits.csv` file; for each commit
 will obtain the testability smells and GitHub issues given by the _label_ argument in the above step.
 Moreover, the arguments of `github_account` and `github_repo` denote the owner and the repository's name.
 Also, we provide four license keys (see section below) for the tool, however, one can be using for each execution of the dockerfiles.
-For instance, the above will analyze commits for the https://github.com/forcedotcom/wsc.git repository.
+For instance, the above will analyze commits for the [wsc](https://github.com/forcedotcom/wsc.git) repository.
 Once the experiment is done, all the results can be found in the `/commits_and_bugs.csv` directories.
 Access the container with the following command:
 
