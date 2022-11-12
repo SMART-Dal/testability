@@ -15,22 +15,18 @@ maxlag = 3
 test = 'ssr_chi2test'
 
 INPUT_FILES = [
-    r'rq4/rq4_data_xp.csv',
-    # r'rq4/rq4_data_closure-compiler.csv',
-    # r'rq4/rq4_data_crate.csv',
-    r'rq4/rq4_data_magarena.csv',
-    r'rq4/rq4_data_myrobotlab.csv',
-    r'rq4/rq4_data_ontrack.csv',
-    r'rq4/rq4_data_rundeck.csv'
+    r'rq3/rq3_data_xp.csv',
+    r'rq3/rq3_data_magarena.csv',
+    r'rq3/rq3_data_myrobotlab.csv',
+    r'rq3/rq3_data_ontrack.csv',
+    r'rq3/rq3_data_rundeck.csv'
 ]
 OUTPUT_FILES = [
-    r'rq4_causality_matrix_xp.csv',
-                # r'rq4_causality_matrix_closure-compiler.csv',
-    # r'rq4_causality_matrix_crate.csv',
-                r'rq4_causality_matrix_magarena.csv',
-                r'rq4_causality_matrix_myrobotlab.csv',
-                r'rq4_causality_matrix_ontrack.csv',
-                r'rq4_causality_matrix_rundeck.csv'
+    r'rq3_causality_matrix_xp.csv',
+    r'rq3_causality_matrix_magarena.csv',
+    r'rq3_causality_matrix_myrobotlab.csv',
+    r'rq3_causality_matrix_ontrack.csv',
+    r'rq3_causality_matrix_rundeck.csv'
 ]
 
 
@@ -40,6 +36,7 @@ def _check_autocorrection(df):
     ax[0] = plot_acf(df.TotalTestabilitySmells, ax=ax[0])
     ax[1] = plot_pacf(df.TotalIssues, ax=ax[1])
     # fig.show()
+
 
 # Commit,LOC,TotalTestabilitySmells,TySmellDensity,OpenIssues,ClosedIssues,TotalIssues
 def _adFuller_test_all(df, is_post_change=False):
@@ -95,6 +92,7 @@ def _grangers_causality(data, variables, out_file, test=test):
     print(np.matrix(X_train))
     write_to_file(X_train, out_file)
     return X_train
+
 
 # Commit,LOC,TotalTestabilitySmells,TySmellDensity,OpenIssues,ClosedIssues,TotalIssues
 def write_to_file(df, out_file):

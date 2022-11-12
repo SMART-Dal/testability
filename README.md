@@ -1,7 +1,5 @@
 # Replication package for testability study
 
-# Testability study
-
 This study explores the correlation between software developers' perspectives and empirical evidence about testability smells.
 We conduct a large-scale empirical study on 1,115 Java repositories containing approximately 46 million lines of code.
 
@@ -17,7 +15,7 @@ The corresponding repository has the following directories:
 -  Run `repo_download.py` to download the selected repositories in `repos.csv`.
 - Analyze all the downloaded repositories using [DesigniteJava](https://www.designite-tools.com/designitejava/) (Enterprise edition). First, download the tool from its website and request a free academic license. After the license is registered, run `scripts\designite_runner.py` script.
 
-## Collecting issues marked as bugs for RQ3 
+### Collecting issues marked as bugs for RQ3 
 The `scripts\dockerfile.issues` creates an environment to run the DesigniteJava on one of the projects (selected based on high number of commits), 
 and collect data regarding testability smells and number of reported bug issues for the corresponding project.
 Execute as follows:
@@ -36,7 +34,7 @@ Access the container with the following command:
 
 
 ## Preparing data for analysis
-Once we complete the analysis of repositories using docker files (that run DesigniteJava, DesigniteJava, and JNose), we prepare the data for final correlation analysis by following the steps given below.
+Once we complete the analysis of repositories using DesigniteJava, we prepare the data for final correlation/causation analysis by following the steps given below.
 
 - For RQ1 results:
     - Run `summarize_testability_smells.py` (`summary_for_rq1` method)
@@ -50,17 +48,13 @@ Once we complete the analysis of repositories using docker files (that run Desig
     - Run `summarize_tests_mells_by_class.py`
     - Run `prepare_rq1_data_class.py`
 - For RQ2 results:
-    - Run `summarize_codesmells.py`
     - Run `prepare_rq2_data.py`
     - Run `rq2.R`
+    - Run `prepare_rq2_data_by_prod_class.py`
+    - Run `rq2_class.R`
 - For RQ3 results:
+    - Run `summarize_testability_smells.py` (`summary_for_rq3` method)
+    - Run `merge_issues_ts.py`
     - Run `prepare_rq3_data.py`
     - Run `rq3.R`
-    - Run `prepare_rq3_data_by_prod_class.py`
-    - Run `rq3_class.R`
-- For RQ4 results:
-    - Run `summarize_testability_smells.py` (`summary_for_rq4` method)
-    - Run `merge_issues_ts.py`
-    - Run `prepare_rq4_data.py`
-    - Run `rq4.R`
-    - Run `rq4_causality.py`
+    - Run `rq3_causality.py`

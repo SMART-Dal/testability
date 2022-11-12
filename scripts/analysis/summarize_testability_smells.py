@@ -2,10 +2,10 @@
 import os
 
 SMELLS_OUT_PATH = r'../../data/DJ_out'
-SMELLS_OUT_PATH_RQ4 = r'../data/rq4/'
+SMELLS_OUT_PATH_RQ3 = r'../data/rq3/'
 RESULT_PATH = r'tys_summary.csv'
 # RESULT_PATH = r'ts_summary_type.csv'
-RESULT_FOLDER = r'rq4'  # used for rq4 specific summary of testability smells
+RESULT_FOLDER = r'rq3'  # used for rq3 specific summary of testability smells
 FINE_GRAINED_SMELLS = True
 
 # constants
@@ -131,15 +131,15 @@ def summary_for_rq1():
 def summary_for_rq4():
     if not os.path.isdir(RESULT_FOLDER):
         os.makedirs(RESULT_FOLDER)
-    for repo in os.listdir(SMELLS_OUT_PATH_RQ4):
-        if not os.path.isdir(os.path.join(SMELLS_OUT_PATH_RQ4, repo)):
+    for repo in os.listdir(SMELLS_OUT_PATH_RQ3):
+        if not os.path.isdir(os.path.join(SMELLS_OUT_PATH_RQ3, repo)):
             continue
         repo_name = repo.replace('out_', '')
         print('processing ' + repo_name)
         with open(os.path.join(RESULT_FOLDER, repo_name + '.csv'), "w") as file:
             file.write("Commit,HWD,GS,ED,LDV,Total\n")
-            for commit in os.listdir(os.path.join(SMELLS_OUT_PATH_RQ4, repo)):
-                cur_folder_path = os.path.join(SMELLS_OUT_PATH_RQ4, repo, commit, repo_name)
+            for commit in os.listdir(os.path.join(SMELLS_OUT_PATH_RQ3, repo)):
+                cur_folder_path = os.path.join(SMELLS_OUT_PATH_RQ3, repo, commit, repo_name)
                 if os.path.isdir(cur_folder_path):
                     testability_smells = TestabilitySmell()
                     testability_smells.count_testability_smells(cur_folder_path)

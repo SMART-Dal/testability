@@ -1,16 +1,16 @@
 # This script takes summary of testability smells detected in all the analyzed repos and
-# summary of code smells in all the analyzed repos.
-# The result of this script is a consolidated csv where both the kinds of smells info is
+# number of test methods in all the analyzed repos.
+# The result of this script is a consolidated csv where both testability smells  and test count info is
 # combined by the repo name.
 import os.path
 
-CODE_SMELLS_SUMMARY_FILE = r'codesmells_summary.csv'
-TESTABILITY_SMELLS_SUMMARY_FILE = r'ts_summary.csv'
-RQ2_FILE = r'rq2_data.csv'
-TEST_SMELLS_SUMMARY_FILE = r'../../data/test_smells/test_smells_per_repo.csv'
-SMELLS_OUT_PATH = r'../../data/code_and_testability_smells'
+TEST_SMELLS_SUMMARY_FILE = r'test_smells_per_repo.csv'
+SMELLS_OUT_PATH = r'../../data/DJ_out'
+TESTABILITY_SMELLS_SUMMARY_FILE = r'tys_summary.csv'
+RQ3_FILE = r'rq3_data.csv'
+LOC_THRESHOLD = -1
 
-# This is for keeping only those repos that have been analyzed by Jnose as well.
+
 def _read_test_smells():
     my_dict = dict()
     with open(TEST_SMELLS_SUMMARY_FILE, 'r') as reader:
@@ -20,11 +20,8 @@ def _read_test_smells():
                 is_header = False
                 continue
             tokens = line.strip('\n').strip().split(',')
-            if len(tokens) > 21:
-                total_smells = 0
-                for i in range(1, 22):
-                    total_smells += int(tokens[i].strip())
-                my_dict[tokens[0].strip()] = total_smells
+            if len(tokens) > 9:
+                my_dict[tokens[0].strip()] = int(tokens[9].strip())
     return my_dict
 
 
@@ -45,17 +42,27 @@ def _read_testability_smells():
     return my_dict
 
 
-def _read_code_smells():
+# Project Name	Package Name	Type Name	Method Name	LOC	CC	PC	Line no	IsTest
+def _read_no_of_tests():
     my_dict = dict()
-    with open(CODE_SMELLS_SUMMARY_FILE, 'r') as reader:
-        is_header = True
-        for line in reader:
-            if is_header:
-                is_header = False
+    for repo in os.listdir(SMELLS_OUT_PATH):
+        cur_folder_path = os.path.join(SMELLS_OUT_PATH, repo)
+        if os.path.isdir(cur_folder_path):
+            method_metrics_file = os.path.join(cur_folder_path, 'MethodMetrics.csv')
+            if not os.path.isfile(method_metrics_file):
                 continue
-            tokens = line.strip('\n').strip().split(',')
-            if len(tokens) > 4:
-                my_dict[tokens[0].strip()] = line
+            no_of_tests = 0
+            with open(method_metrics_file, 'r') as reader:
+                is_header = True
+                for line in reader:
+                    if is_header:
+                        is_header = False
+                        continue
+                    tokens = line.strip('\n').strip().split(',')
+                    if len(tokens) > 8:  # isTest
+                        if not tokens[8] == '0':
+                            no_of_tests += 1
+                my_dict[repo] = no_of_tests
     return my_dict
 
 
@@ -80,39 +87,39 @@ def _read_repo_loc():
     return my_dict
 
 
-def _normalize(smell_count, loc):
-    if loc > 0:
-        return str((int(smell_count) * 1000.0) / loc)
-    return '0'
+def is_repo_to_include(key, loc_dict):
+    if LOC_THRESHOLD == -1:
+        return True
+    if key in loc_dict and loc_dict[key] < LOC_THRESHOLD:
+        return True
+    return False
 
 
-def _combine(testability_smells_dict, code_smells_dict, loc_dict):
-    with open(RQ2_FILE, "w") as writer:
-        writer.write(
-            'Repo,TotalTestabilitySmells,TotalArchSmells,TotalDesignSmells,TotalImplSmells,TotalCodeSmells,LOC,TyS_normalized,AS_normalized,DS_normalized,IS_normalized,All_normalized\n')
+def _combine(testability_smells_dict, tests_dict, loc_dict):
+    with open(RQ3_FILE, "w") as writer:
+        writer.write('Repo,TotalTestabilitySmells,TestabilitySmellsDensity,TotalTests,TestDensity\n')
         for key in testability_smells_dict:
-            if key in code_smells_dict:
-                if testability_smells_dict[key] > 0:
-                    code_smell_line = code_smells_dict[key]
-                    tokens = code_smell_line.strip('\n').strip().split(',')
-                    if len(tokens) > 4:
-                        line = key + ',' + str(testability_smells_dict[key]) + ',' \
-                               + str(tokens[1]) + ',' + str(tokens[2]) + ',' \
-                               + str(tokens[3]) + ',' + str(tokens[4]) + ',' \
-                               + str(loc_dict[key]) + ',' \
-                               + _normalize(testability_smells_dict[key], loc_dict[key]) + ',' \
-                               + _normalize(tokens[1], loc_dict[key]) + ',' \
-                               + _normalize(tokens[2], loc_dict[key]) + ',' \
-                               + _normalize(tokens[3], loc_dict[key]) + ',' \
-                               + _normalize(tokens[4], loc_dict[key]) + '\n'
-                        writer.write(line)
+            if key in tests_dict and key in loc_dict:
+                if testability_smells_dict[key] > 0 and tests_dict[key] > 0:
+                    if is_repo_to_include(key, loc_dict):
+                        test_density = 0
+                        ts_density = 0
+                        if loc_dict[key] > 0:
+                            test_density = "{:.2f}".format(float(tests_dict[key]) / float(loc_dict[key]) * 1000.0)
+                            ts_density = "{:.2f}".format(
+                                float(testability_smells_dict[key]) / float(loc_dict[key]) * 1000.0)
+                        # change the loc to change the dataset variations
+                        if loc_dict[key] < 50000:
+                            line = key + ',' + str(testability_smells_dict[key]) + ',' + str(ts_density) + ',' + str(
+                                tests_dict[key]) + ',' + str(test_density) + '\n'
+                            writer.write(line)
 
 
 def generate():
     testability_smells_dict = _read_testability_smells()
-    code_smells_dict = _read_code_smells()
+    tests_dict = _read_no_of_tests()
     loc_dict = _read_repo_loc()
-    _combine(testability_smells_dict, code_smells_dict, loc_dict)
+    _combine(testability_smells_dict, tests_dict, loc_dict)
 
 
 if __name__ == "__main__":

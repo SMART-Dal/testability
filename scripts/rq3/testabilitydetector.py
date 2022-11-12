@@ -8,19 +8,19 @@ from subprocess import Popen, PIPE
 MAVEN_PATH = 'mvn'
 GRADLE_PATH = 'gradle'
 ANT_PATH = 'ant'
-TESTABILITYDETECTOR_PATH = '/testabilityDetector/TestabilityDetector.jar'
+DJ_PATH = '../DesigniteJava.jar'
 
 
-def analyze_using_testabilitydetector(folder_name,
+def analyze_using_designitejava(folder_name,
                                  folder_path,
-                                 testabilityDetector_jar_path,
+                                 designitejava_jar_path,
                                  smells_results_folder):
     _build_project(folder_name, folder_path)
     out_folder = os.path.join(smells_results_folder, folder_name)
     if not os.path.exists(out_folder):
         os.makedirs(out_folder)
     # logfile = os.path.join(out_folder, "log.txt")
-    proc = Popen(["java", "-jar", testabilityDetector_jar_path, "-i", folder_path, "-o", out_folder, "-d"])
+    proc = Popen(["java", "-jar", designitejava_jar_path, "-i", folder_path, "-o", out_folder, "-d"])
     proc.wait()
 
 

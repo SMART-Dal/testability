@@ -7,7 +7,7 @@ import os.path
 TEST_SMELLS_SUMMARY_FILE = r'testsmells_summary_by_prod_class.csv'
 SMELLS_OUT_PATH = r'../../data/DJ_out'
 TESTABILITY_SMELLS_SUMMARY_FILE = r'tys_summary_by_class.csv'
-RQ3_FILE = r'rq3_data_by_class.csv'
+RQ2_FILE = r'rq2_data_by_class.csv'
 LOC_THRESHOLD = 2000
 
 def _read_testability_smells(test_count_for_test_classes_dict, loc_dict):
