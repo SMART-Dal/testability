@@ -3,6 +3,8 @@
 This study explores the correlation between software developers' perspectives and empirical evidence about testability smells.
 We conduct a large-scale empirical study on 1,115 Java repositories containing approximately 46 million lines of code.
 
+You may find the published article [here](https://link.springer.com/article/10.1007/s10664-023-10373-0).
+
 The corresponding repository has the following directories:
 
 * `data` (where one can find all of our data)
